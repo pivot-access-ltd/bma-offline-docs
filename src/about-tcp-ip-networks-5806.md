@@ -30,9 +30,7 @@ Issues with ladder networks drove the development of cloud network architectures
 
 [Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading) is a very large topic unto itself.  It's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading), [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading), and bonded NICs, aka [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation#firstHeading).  All of these come into play every time a MAAS network is modified.
 
-<a href="#heading--borrowed-from-ma-bell"><h3 id="heading--borrowed-from-ma-bell">Network Lore: We borrowed it all from the phone system</h3></a>
-
-<details><summary>Yesterday's phone network is today's Internet</summary>
+<a href="#heading--borrowed-from-ma-bell"><h3 id="heading--borrowed-from-ma-bell">Yesterday's phone network is today's Internet</h3></a>
 
 Most of today's modern networking is a direct translation of the landline telephone system into the digital space.  Network switching is really just an outgrowth of [crossbar](https://en.wikipedia.org/wiki/Number_Five_Crossbar_Switching_System#firstHeading), which is how local phone calls were "switched" or "routed" to the correct telephone line.  In most cases, every number dialled closed one more relay, with all seven relays making a connection to the target phone line.
 
@@ -47,7 +45,6 @@ In the very early days of long-haul networking, most of the repeaters were owned
 T1 wasn't designed for network traffic, exactly,  The idea was to multiplex phone calls on one line via Time-Division Multiplexing.  TDM split up the call traffic into little digital packets that were sent on a rotating basis.  The first T1 lines, which showed up around 1962, could handle about 24 calls without the average telephone user noticing.  Telephone linemen generally could tell by the "clipped" nature of the call, as there is a distinctive flatness to the conversation over a digital TDM circuit.  These "little digital packets" formed the model for the packet networking we have today.
 
 The T1 lines used ordinary, double-twisted-pair copper wiring, with repeaters at roughly one-mile intervals (about every fourth pedestal). When WAN and MAN networking became a thing, the phone company just repurposed some of those pairs to carry data traffic.  Many other key elements of TCP/IP, like twisted-pair Ethernet cables, packet-based messaging, and multiplexing, are all just holdovers of the original telephone system, repurposed for computer networking.
-</details>
 
 <a href="#heading--internet-infrastructure"><h3 id="heading--internet-infrastructure">More about Internet infrastructure</h3></a>
 
@@ -204,7 +201,8 @@ As you can see in the modified P/Q frame, the following fields replace part of t
 
 This matters when we're building complex MAAS networks with lots of VLANS that probably cross over switches.  After all, VLANs were initially controlled with ports and switches, although they more commonly use tags now.  When more than one VLAN spans multiple switches, frames need to carry VLAN information that can be used by switches to sort or "trunk" the traffic.
 
-<details><summary>Network Lore: The origin of "trunking"</summary>
+<a href="#heading--origin-of-trunking"><h3 id="heading--origin-of-trunking">The origin of "trunking"</h3></a>
+
 The word "trunking" is derived from the telephone network term trunk lines, which are lines connecting switchboards.
 
 In the original telephone company model, each telephone had a subscriber line, which was a wire that went straight from the local Central Office (CO) to that subscriber's telephone.  Each CO had one switchboard, though it might have many seats.
@@ -214,7 +212,6 @@ Connections between Central Offices were handled by trunk lines, because they ra
 At the CO, the wires would "branch" and run all over the place: First to junction points (those five-foot-tall boxes you see from time to time on the road), then to interface points (the square cans beside the road every half mile or so, also called "pedestals") and from there to subscriber homes.  When you draw out this network, it looks like a tree, where the bundles of cables between COs look like the trunks of trees.
 
 With VLAN trunking, by the way, we're not just multiplexing packets, we're actually multiplexing LAN channels, so to speak.  
-</details>
 
 In the parlance of networks, especially VLANs, the term "trunking" is used to indicate the sharing of network routes.  This sharing is made possible by the Ethernet VLAN tags, which make the VLAN-bound messages less dependent on switches and routers to get the traffic to the right place.  Otherwise, you'd have to designate complicated port configurations for switches, which is particularly easy to misconfigure.
 
@@ -238,11 +235,7 @@ A subnet is a range or collection of IP addresses.  A subnet just means "sub-net
 
 Subnets are defined in CIDR (Classless Inter-Domain Routing) notation. If you want to use the addresses from 192.168.13.0 to 192.168.13.255 in a subnet, you can specify that with 192.168.13.0/24.  The "24" refers to the number of bits in the subnet address, with the remainder out of 32 bits free to address hosts.  Since 8 bits can represent 256 things, that means /24 gives you the last octet, or 255 host IP addresses.
 
-<details><summary>Network Lore: Whatever happened to subnet classes?</summary>
-
-Subnets used to be defined in terms of subnet classes, like A, B, and C. That got to be a limitation, because those three classes define a fixed number of bits of the IP address that represent the split between subnet addresses and host addresses.  In other words, the class defined how many hosts could be in the network, and three classes wasn't really adequate to address all the possible permutations that network architects needed.  The change to CIDR notation made subnets more granular, allowing many more subnets from the same network.
-
-</details>
+**Whatever happened to subnet classes?**  Subnets used to be defined in terms of subnet classes, like A, B, and C. That got to be a limitation, because those three classes define a fixed number of bits of the IP address that represent the split between subnet addresses and host addresses.  In other words, the class defined how many hosts could be in the network, and three classes wasn't really adequate to address all the possible permutations that network architects needed.  The change to CIDR notation made subnets more granular, allowing many more subnets from the same network.
 
 **VLANs**
 
@@ -295,13 +288,7 @@ The network layer does not guarantee delivery.  Essentially, it makes every effo
 
 It's also a connectionless layer, meaning the packets making up a message aren't part of an ongoing conversation.  They can be split up, encoded, and sent separately, by different routes, and arrive completely out of order.  And packets can get duplicated or corrupted.  Figuring all this out is the job of the protocol stack (e.g., TCP) in layer 4.  The network layer, L3, just delivers packets.  
 
-<details><summary>Network Lore: Network byte order</summary>
-
-A rarely needed (but useful) fact is that the network sends bytes in big endian order.  That means bytes are transmitted starting with bit 0 and working down to bit 31, usually eight bits at a time.  A lot of the computers on the Internet use little endian encoding, which starts at the other end of the word.  In those cases, the byte order has to be reversed somewhere between the computer's memory and Layer 3.
-
-For most situations, that fact isn't particularly useful, but there is the occasional fault that involves failure to reverse byte order along the path from RAM to NIC.
-
-</details>
+**Network byte order**: A rarely needed (but useful) fact is that the network sends bytes in big endian order.  That means bytes are transmitted starting with bit 0 and working down to bit 31, usually eight bits at a time.  A lot of the computers on the Internet use little endian encoding, which starts at the other end of the word.  In those cases, the byte order has to be reversed somewhere between the computer's memory and Layer 3. For most situations, that fact isn't particularly useful, but there is the occasional fault that involves failure to reverse byte order along the path from RAM to NIC.
 
 <a href="#heading--about-packets"><h4 id="heading--about-packets">About packets</h3></a>
 
@@ -637,15 +624,13 @@ The code bits can indicate the following things:
 
 - **NS/CWR/ECE**: used to provide Explicit Congestion Notification; note that OSI provides several methods for endpoints to know that the network is congested.
 
-<details><summary>Network Lore: TCP is like a phone call</summary>
+<a href="#heading--tcp-is-like-a-phone-call"><h3 id="heading--tcp-is-like-a-phone-call">TCP is like a phone call</h3></a>
 
 As you can see from the bytes above, TCP is all about the state of a connection, which is basically the same as a phone call.  When you pick up the receiver, you and the caller exchange information.  You say "bye" when the call is over.  If it's a bad connection or one end suddenly gets noisy (think jack-hammers outside), one of you can reset the connection by saying, "Let me call you back in a minute."  Take a minute and try to see how the other header bytes fit this analogy.
 
 Also like a telephone call, TCP provides a connection (the call, however long it lasts), flow control (provided by the two parties on the call), multiplexing (handled by the two handsets, basically letting through multiple frequencies and sounds, so that you can get the tone and breath sounds of the other person, not just their raw words).  Likewise, the two parties try to handle the reliability of the connection by making sure you understand each other.
 
 The analogy spreads a little because some of the items (connection, multiplexing) are handled by the telephone, and some are handled by the people operating the telephone (flow control, reliability).  In the network, the Level 4 protocol stack handles it all.
-
-</details>
 
 There is a lot more to know about TCP, but most of it isn't directly relevant for MAAS networking.  Instead, we direct you to the excellent [Wikipedia article about TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol).  Going forward, we'll only bring up specific transport layer elements as we need them.
 
