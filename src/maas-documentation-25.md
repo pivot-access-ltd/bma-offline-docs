@@ -71,8 +71,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Mirror images locally](/t/-/5927)
 - [Manage VMWare images](/t/-/5144)
 
-### How to deploy MAAS
-
+### [How to deploy MAAS](/t/-/6193)
 - [Manage controllers](/t/-/5172)
 - [Manage machines](/t/-/5160)
 - [Deploy machines](/t/-/5112)
@@ -137,6 +136,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6193|/docs/how-to-deploy-maas|
 |https://discourse.maas.io/t/-/6192|/docs/how-to-choose-images|
 |https://discourse.maas.io/t/-/6174|/docs/how-to-configure-networking|
 |https://discourse.maas.io/t/-/6178|/docs/maas-performance|
