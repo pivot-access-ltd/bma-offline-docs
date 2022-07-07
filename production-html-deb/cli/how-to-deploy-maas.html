@@ -376,7 +376,26 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to deploy MAAS</h1><!-- "How to deploy MAAS" -->
 
-<p><a href="#heading--Permuted-index"><h2 id="heading--Permuted-index">Permuted index</h2></a></p>
+<p>With your network properly configured, and suitable images selected and downloaded, you&rsquo;re ready to enlist, commission, and deploy machines.  This major section will help you sort out the theoretical aspects and procedures regarding the MAAS machine life-cycle.  You can search for the <a href="#heading--the-big-picture-of-deploying-machines">big picture topics</a>, or consult the <a href="#heading--life-cycle-permuted-index">life-cycle permuted index</a>.</p>
+<p><a href="#heading--the-big-picture-of-deploying-machines"><h2 id="heading--the-big-picture-of-deploying-machines">The big picture of deploying machines</h2></a></p>
+<p>Here are some theoretical aspects of machines to consider:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="about-controllers.html">About controllers</a>: Most of the functionality of MAAS is contained in a series of controllers. There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines. In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.  Knowing how these controllers communicate &ndash; and divvy up the workload &ndash; can be very useful when operating MAAS.</li>
+<li><a href="about-machines.html">About machines</a>: Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers.</li>
+<li><a href="about-customising-machines.html">About customising machines</a>: Prior to deployment, MAAS machines can be customised in a number of ways. Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.</li>
+<li><a href="about-vm-hosting.html">About VM hosting</a>: MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores). You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.</li>
+</ul>
+<p>On the other hand, if you need to get machines deployed, you can consult these practical guides:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="how-to-manage-controllers.html">How to manage controllers</a>: Managing region and rack controllers &ndash; how many and how they&rsquo;re arranged &ndash; is a critical skill for designing and managing larger MAAS instances.</li>
+<li><a href="how-to-manage-machines.html">How to manage machines</a>: Most of the day-to-day work of managing machines is covered here.  </li>
+<li><a href="how-to-deploy-machines.html">How to deploy machines</a>: The ultimate purpose of MAAS is to enlist, commission, and deploy machines.  This article covers these core operations.</li>
+<li><a href="how-to-customise-machines.html">How to customise machines</a>: MAAS provides the capability to customise machines in many different ways: resources, images, pre-deployment scripting, and much more.</li>
+<li><a href="how-to-manage-vm-hosts.html">How to manage VM hosts</a>: Virtual machine hosts provide a way to extend machines to users without having large racks of individual machines.  This article details the steps required to make this happen with MAAS.</li>
+<li><a href="how-to-manage-vms.html">How to manage VMs</a>: This article covers a few rudimentary procedures for managing generic virtual machines.  </li>
+<li><a href="how-to-use-lxd.html">How to use LXD</a>: The LXD container system provides much greater flexibility in deploying virtual machines. LXD and MAAS are separate products, and it’s useful to allow them to interact as equals, covering a much wider range of use cases.  This article devotes quite a bit of detailed instruction to this useful topic.</li>
+</ul>
+<p><a href="#heading--life-cycle-permuted-index"><h2 id="heading--life-cycle-permuted-index">Permuted index</h2></a></p>
 <table>
 <thead>
 <tr>
@@ -387,374 +406,10 @@
 <tbody>
 <tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--newer-lxd">20.04</a></td>
-<td align="left">R\How to refresh LXD on</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-adding-machines">About adding machines</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-allocation-and-deployment">About allocation and deployment</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--projects-big-picture">About alternatives to LXD projects in MAAS</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-annotations">About annotations</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-automatic-script-selection-by-hardware-type">About automatic script selection by hardware type</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-block-devices">About block devices</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-block-devices">About block devices</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-bmc-enlistment">About BMC enlistment</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--using-kernels">About choosing a kernel</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-cloning-machines">About cloning machines</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-commissioning-machines">About commissioning machines</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-numa-sriov-commissioning">About commissioning NUMA and SR-IOV nodes</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-controllers.html#heading--about-contr-comm">About controller communication</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-customising-deployed-machines">About customising deployed machines</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-customising-machine-storage">About customising machine storage</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-debugging-script-failures">About debugging script failures</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--projects-history">About design choices</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-disabling-individual-boot-methods">About disabling individual boot methods</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-disk-erasure">About disk erasure</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-disk-erasure">About disk erasure</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-disk-erasure-types">About disk erasure types</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-disk-erasure-types">About disk erasure types</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--enlisting-deployed-machines">About enlisting deployed machines</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-enlistment">About enlistment</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-erasure-order-of-preference">About erasure order of preference</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--final-storage-modifications">About final storage modifications</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--final-storage-modifications">About final storage modifications</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--general-availability-kernels">About general availability kernels</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--hardware-enablement-kernels">About hardware enablement kernels</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-hardware-sync">About hardware sync</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-kernel-boot-options">About kernel boot options</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--low-latency-kernels">About low latency kernels</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-lxd-vs-libvirt">About LXD (Beta) vs. libvirt</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-vm-hosts.html#heading--about-lxd-clusters">About LXD clusters</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--projects-explanation">About LXD projects and MAAS</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--projects-big-picture">About LXD projects</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-lxd-vm-host-auth">About LXD VM host authentication</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--vm-host-project-summary">About LXD VM host project summaries</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--vm-host-resource-details">About LXD VM host resource details</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-lxd-vm-hosts">About LXD VM hosts</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--commissioning-log">About machine commissioning logs</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--machine-config">About machine configuration info</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--event-logs">About machine event logs</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--hardware-tests">About machine hardware &amp; test logs</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-machine-interfaces">About machine network info</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-machine-states">About machine states</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--machine-storage">About machine storage info</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-controllers.html#heading--about-moving-rack-controller">About moving a rack controller from one MAAS instance to another</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--overcommit-resources">About over-committed resources</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-partitions">About partitions</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-partitions">About partitions</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-post-commission-configuration">About post-commission configuration</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--hardware-enablement-kernels-pre-release">About pre-release hardware enablement kernels</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-pre-seeding">About pre-seeding</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-quick-erasure">About quick erasure</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-controllers.html#heading--rack-controllers">About rack controllers</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-controllers.html#heading--region-controller">About region controllers</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-resource-pools">About resource pools</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-resource-pools">About resource pools</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-script-results">About script results</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-secure-erasure">About secure erasure</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-standard-erase">About standard erasure</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-storage-restrictions">About storage restrictions</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-storage-restrictions">About storage restrictions</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-storage">About storage</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-support-for-numa-et-al">About support for NUMA, SR-IOV, and hugepages</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-tags-and-scripts">About tags and scripts</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-tags">About tags</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--template-naming">About template naming</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--templates">About templates</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-testing-hardware">About testing hardware</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-testing-machine-networking">About testing machine networking</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-the-enlistment-process">About the enlistment process</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-the-machine-life-cycle">About the machine life-cycle</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-the-machine-list">About the machine list</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-the-machine-summary">About the machine summary</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-controllers.html#heading--dangers-moving-rack-controller">About the potential dangers of moving a rack controller</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-ubuntu-kernels">About Ubuntu kernels</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-uefi-booting">About UEFI booting</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-uefi-booting">About UEFI booting</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-updating-hardware">About updating hardware</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-vmfs-datastores">About VMFS datastores</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-vmfs-datastores">About VMFS datastores</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--configuration">About VM host settings</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-vm-hosts">About VM hosts</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-vm-host-storage-pools">About VM host storage pools</a></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-vms-and-numa">About VMs and NUMA</a></td>
-<td align="left"></td>
+<td align="left">How to refresh LXD on</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-add-a-machine-manually">add a machine manually</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-machine-to-a-resource-pool">add a machine to a resource pool</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-node-to-a-resource-pool">add a machine to a resource pool</a></td>
 <td align="left">How to</td>
 </tr>
 <tr>
@@ -762,15 +417,7 @@
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--add-a-node-to-a-resource-pool">add a machine to a resource pool</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-controllers.html#heading--adding-a-new-region-host">add a new region host</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-resource-pool">add a resource pool</a></td>
 <td align="left">How to</td>
 </tr>
 <tr>
@@ -782,19 +429,15 @@
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-vm-host-to-a-resource-pool">add a VM host to a resource pool</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--add-a-vm-host-to-a-resource-pool">add a VM host to a resource pool</a></td>
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-vms.html#heading--adding-a-vm-from-the-cli">add a VM</a></td>
+<td align="right"><a href="how-to-manage-vms.html#heading--adding-a-vm-from-the-cli">add a VM (CLI)</a></td>
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-vms.html#heading--add-vm-from-ui">add a VM</a></td>
+<td align="right"><a href="how-to-manage-vms.html#heading--add-vm-from-ui">add a VM (UI)</a></td>
 <td align="left">How to</td>
 </tr>
 <tr>
@@ -826,14 +469,6 @@
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--list-dynamic-annotations-for-all-machines">all machines</a></td>
-<td align="left">How to list dynamic annotations for</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--list-static-annotations-for-all-machines">all machines</a></td>
-<td align="left">How to list static annotations for</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--allocate-machines">allocate machines</a></td>
 <td align="left">How to</td>
 </tr>
@@ -844,18 +479,6 @@
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--list-dynamic-annotations-for-one-machine">allocations for one machine</a></td>
 <td align="left">How to list dynamic</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--how-to-run-all-scripts-manually">all scripts manually</a></td>
-<td align="left">How to run</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--how-to-list-all-uploaded-hardware-testing-scripts">all uploaded hardware testing scripts</a></td>
-<td align="left">How to list</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-vm-hosts.html#heading--list-resources-of-all-vm-hosts">all VM hosts</a></td>
-<td align="left">How to list the resources of</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--enlisted-deployed-machines">already running a workload</a></td>
@@ -918,14 +541,6 @@
 <td align="left">How to move LXD entities to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-controllers.html#heading--about-moving-rack-controller">another</a></td>
-<td align="left">About moving a rack controller from one MAAS instance to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-controllers.html#heading--move-rack-controller">another</a></td>
-<td align="left">How to move a rack controller from one MAAS instance to</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-vm-hosts.html#heading--maas-bridge-cli">API to configure a bridge</a></td>
 <td align="left">How to use the MAAS</td>
 </tr>
@@ -944,10 +559,6 @@
 <tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--projects-s2-move-vm-into-vm-host-project">associated with a VM host</a></td>
 <td align="left">How to move an existing VM into the LXD project</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--maas-control-at-project-level">at a project level</a></td>
-<td align="left">MAAS now controls VMs</td>
 </tr>
 <tr>
 <td align="right"><a href="about-machines.html#heading--usb-pci-devices">attached USB and PCI devices</a></td>
@@ -986,14 +597,6 @@
 <td align="left"></td>
 </tr>
 <tr>
-<td align="right"><a href="about-vm-hosting.html#heading--about-lxd-vs-libvirt">(Beta) vs. libvirt</a></td>
-<td align="left">About LXD</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--projects-s1-switch">between LXD projects</a></td>
-<td align="left">How to switch</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--blank-storage-layout-reference">Blank storage layout reference</a></td>
 <td align="left"></td>
 </tr>
@@ -1024,38 +627,6 @@
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-manage-block-devices">block devices</a></td>
 <td align="left">How to manage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--format-block-device">block device</a></td>
-<td align="left">How to format a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-create-a-block-device">block device</a></td>
-<td align="left">How to create a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-delete-a-block-device">block device</a></td>
-<td align="left">How to delete a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-mount-a-block-device">block device</a></td>
-<td align="left">How to mount a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-read-a-block-device">block device</a></td>
-<td align="left">How to read a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-unformat-a-block-device">block device</a></td>
-<td align="left">How to unformat a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-unmount-a-block-device">block device</a></td>
-<td align="left">How to unmount a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-update-a-block-device">block device</a></td>
-<td align="left">How to update a</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--format-block-device">block device</a></td>
@@ -1164,10 +735,6 @@
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-add-machines-via-a-chassis">chassis</a></td>
 <td align="left">How to add machines via a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--projects-history">choices</a></td>
-<td align="left">About design</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-customise-machines.html#heading--how-to-choose-ubuntu-kernels">choose Ubuntu kernels</a></td>
@@ -1770,15 +1337,7 @@
 <td align="left">About</td>
 </tr>
 <tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-disk-erasure">disk erasure</a></td>
-<td align="left">About</td>
-</tr>
-<tr>
 <td align="right"><a href="about-machines.html#heading--about-disk-erasure">disk erasure</a></td>
-<td align="left">About</td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-disk-erasure-types">disk erasure types</a></td>
 <td align="left">About</td>
 </tr>
 <tr>
@@ -1786,16 +1345,8 @@
 <td align="left">About</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-erase-disks">disks</a></td>
-<td align="left">How to erase</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-erase-disks">disks</a></td>
 <td align="left">How to erase</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-set-a-block-device-as-a-boot-disk">disk</a></td>
-<td align="left">How to set a block device as a boot</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-set-a-block-device-as-a-boot-disk">disk</a></td>
@@ -1808,10 +1359,6 @@
 <tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--how-to-download-built-in-scripts">download built-in scripts</a></td>
 <td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--set-a-specific-kernel-during-machine-deployment">during machine deployment</a></td>
-<td align="left">How to set a specific kernel</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--list-dynamic-annotations-for-one-machine">dynamic allocations for one machine</a></td>
@@ -1886,16 +1433,8 @@
 <td align="left">How to move LXD</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-erase-disks">erase disks</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-erase-disks">erase disks</a></td>
 <td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-set-default-erasure-configuration">erasure configuration</a></td>
-<td align="left">How to set the default</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-set-default-erasure-configuration">erasure configuration</a></td>
@@ -1904,10 +1443,6 @@
 <tr>
 <td align="right"><a href="about-machines.html#heading--about-erasure-order-of-preference">erasure order of preference</a></td>
 <td align="left">About</td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-disk-erasure">erasure</a></td>
-<td align="left">About disk</td>
 </tr>
 <tr>
 <td align="right"><a href="about-machines.html#heading--about-disk-erasure">erasure</a></td>
@@ -1924,10 +1459,6 @@
 <tr>
 <td align="right"><a href="about-machines.html#heading--about-standard-erase">erasure</a></td>
 <td align="left">About standard</td>
-</tr>
-<tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-disk-erasure-types">erasure types</a></td>
-<td align="left">About disk</td>
 </tr>
 <tr>
 <td align="right"><a href="about-machines.html#heading--about-disk-erasure-types">erasure types</a></td>
@@ -1968,14 +1499,6 @@
 <tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--how-to-debug-script-failures">failures</a></td>
 <td align="left">How to debug script</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--how-to-locate-log-files">files</a></td>
-<td align="left">How to locate log</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--how-to-locate-script-files">files</a></td>
-<td align="left">How to locate script</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--how-to-filter-script-results">filter script results</a></td>
@@ -2026,15 +1549,7 @@
 <td align="left"></td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--format-block-device">format a block device</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--format-block-device">format a block device</a></td>
-<td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-format-a-partition">format a partition</a></td>
 <td align="left">How to</td>
 </tr>
 <tr>
@@ -2051,10 +1566,6 @@
 </tr>
 <tr>
 <td align="right"><a href="how-to-customise-machines.html#heading--how-to-set-global-kernel-boot-options">global kernel boot options</a></td>
-<td align="left">How to set</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-set-global-storage-layouts">global storage layouts</a></td>
 <td align="left">How to set</td>
 </tr>
 <tr>
@@ -2794,6 +2305,10 @@
 <td align="left"></td>
 </tr>
 <tr>
+<td align="right"><a href="how-to-use-lxd.html#heading--newer-lxd">How to refresh LXD on 20.04</a></td>
+<td align="left"></td>
+</tr>
+<tr>
 <td align="right"><a href="how-to-customise-machines.html#heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</a></td>
 <td align="left"></td>
 </tr>
@@ -3122,32 +2637,8 @@
 <td align="left">About disabling</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--machine-interfaces">info for a machine</a></td>
-<td align="left">How to find network</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--update-deployed-hw-info">information for a deployed machine</a></td>
 <td align="left">How to update hardware</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-machine-interfaces">info</a></td>
-<td align="left">About machine network</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--machine-config">info</a></td>
-<td align="left">About machine configuration</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--machine-storage">info</a></td>
-<td align="left">About machine storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--how-to-find-machine-storage-info">info</a></td>
-<td align="left">How to find machine storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--machine-config">info</a></td>
-<td align="left">How to find machine configuration</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--lxd-init">initialise LXD prior to use</a></td>
@@ -3158,24 +2649,8 @@
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-controllers.html#heading--about-moving-rack-controller">instance to another</a></td>
-<td align="left">About moving a rack controller from one MAAS</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-controllers.html#heading--move-rack-controller">instance to another</a></td>
-<td align="left">How to move a rack controller from one MAAS</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--projects-s2-create-with-vm-host">instantiating a VM host</a></td>
 <td align="left">How to create a new project for MAAS when</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-vms.html#heading--interfaces">interfaces while adding a VM</a></td>
-<td align="left">How to specify</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-configure-hardware-sync-interval">interval</a></td>
-<td align="left">How to configure hardware sync</td>
 </tr>
 <tr>
 <td align="right"><a href="about-customising-machines.html#heading--about-kernel-boot-options">kernel boot options</a></td>
@@ -3232,62 +2707,6 @@
 <tr>
 <td align="right"><a href="about-customising-machines.html#heading--low-latency-kernels">latency kernels</a></td>
 <td align="left">About low</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--bcache-storage-layout-reference">layout reference</a></td>
-<td align="left">bcache storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--blank-storage-layout-reference">layout reference</a></td>
-<td align="left">Blank storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--lvm-storage-layout-reference">layout reference</a></td>
-<td align="left">LVM storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--vmfs6-storage-layout-reference">layout reference</a></td>
-<td align="left">VMFS6 storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--storage-layouts-reference">layouts reference</a></td>
-<td align="left">Storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-set-global-storage-layouts">layouts</a></td>
-<td align="left">How to set global storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--how-to-set-per-machine-storage-layouts">layouts</a></td>
-<td align="left">How to set per-machine storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--how-to-define-custom-storage-layouts">layouts</a></td>
-<td align="left">How to define custom storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--how-to-set-global-storage-layouts">layouts</a></td>
-<td align="left">How to set global storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--how-to-set-per-machine-storage-layouts">layouts</a></td>
-<td align="left">How to set per-machine storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--flat-storage-layout-reference">layout storage reference</a></td>
-<td align="left">Flat</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--maas-control-at-project-level">level</a></td>
-<td align="left">MAAS now controls VMs at a project</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-vm-hosts.html#heading--libvirt-ssh">(libvirt only)</a></td>
-<td align="left">How to set up SSH</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-vm-hosts.html#heading--set-up-ssah-lv">(libvirt only)</a></td>
-<td align="left">How to set up SSH</td>
 </tr>
 <tr>
 <td align="right"><a href="about-vm-hosting.html#heading--about-lxd-vs-libvirt">libvirt</a></td>
@@ -3487,7 +2906,7 @@
 </tr>
 <tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--newer-lxd">LXD on 20.04</a></td>
-<td align="left">R\How to refresh</td>
+<td align="left">How to refresh</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--lxd-init">LXD prior to use</a></td>
@@ -3934,10 +3353,6 @@
 <td align="left">About the potential dangers of</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-vm-hosts.html#heading--change-vm-host-name">name</a></td>
-<td align="left">How to change a VM host&rsquo;s</td>
-</tr>
-<tr>
 <td align="right"><a href="about-customising-machines.html#heading--template-naming">naming</a></td>
 <td align="left">About template</td>
 </tr>
@@ -4306,18 +3721,6 @@
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-customising-machines-prior-to-deployment">prior to deployment</a></td>
-<td align="left">About customising machines</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--lxd-init">prior to use</a></td>
-<td align="left">How to initialise LXD</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-the-enlistment-process">process</a></td>
-<td align="left">About the enlistment</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--projects-s2-create-vm-in-vm-host-project">project associated with a VM host</a></td>
 <td align="left">How to create a new VM in the LXD</td>
 </tr>
@@ -4446,32 +3849,8 @@
 <td align="left">How to identify machines that can</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--bcache-storage-layout-reference">reference</a></td>
-<td align="left">bcache storage layout</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--blank-storage-layout-reference">reference</a></td>
-<td align="left">Blank storage layout</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--flat-storage-layout-reference">reference</a></td>
-<td align="left">Flat layout storage</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--lvm-storage-layout-reference">reference</a></td>
-<td align="left">LVM storage layout</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--storage-layouts-reference">reference</a></td>
-<td align="left">Storage layouts</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-machines.html#heading--vmfs6-storage-layout-reference">reference</a></td>
-<td align="left">VMFS6 storage layout</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--newer-lxd">refresh LXD on 20.04</a></td>
-<td align="left">R\How to</td>
+<td align="left">How to</td>
 </tr>
 <tr>
 <td align="right"><a href="about-controllers.html#heading--rackregion">region and rack controllers communicate</a></td>
@@ -4546,50 +3925,6 @@
 <td align="left">How to list available</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-machine-to-a-resource-pool">resource pool</a></td>
-<td align="left">How to add a machine to a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-node-to-a-resource-pool">resource pool</a></td>
-<td align="left">How to add a machine to a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-resource-pool">resource pool</a></td>
-<td align="left">How to add a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--add-a-vm-host-to-a-resource-pool">resource pool</a></td>
-<td align="left">How to add a VM host to a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--creating-a-resource-pool">resource pool</a></td>
-<td align="left">How to create a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--delete-a-resource-pool">resource pool</a></td>
-<td align="left">How to delete a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--deleting-a-resource-pool">resource pool</a></td>
-<td align="left">How to delete a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--list-a-single-resource-pool">resource pool</a></td>
-<td align="left">How to list a single</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--removing-a-node-from-a-resource-pool">resource pool</a></td>
-<td align="left">How to remove a machine from a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--removing-a-vm-host-from-a-resource-pool">resource pool</a></td>
-<td align="left">How to remove a VM host from a</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-customise-machines.html#heading--update-a-resource-pool">resource pool</a></td>
-<td align="left">How to update a</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--add-a-machine-to-a-resource-pool">resource pool</a></td>
 <td align="left">How to add a machine to a</td>
 </tr>
@@ -4654,40 +3989,8 @@
 <td align="left">How to set</td>
 </tr>
 <tr>
-<td align="right"><a href="about-customising-machines.html#heading--about-storage-restrictions">restrictions</a></td>
-<td align="left">About storage</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-storage-restrictions">restrictions</a></td>
-<td align="left">About storage</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-script-results">results</a></td>
-<td align="left">About script</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--how-to-filter-script-results">results</a></td>
-<td align="left">How to filter script</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--how-to-suppress-failed-results">results</a></td>
-<td align="left">How to suppress failed</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--how-to-view-script-results">results</a></td>
-<td align="left">How to view script</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--results">results</a></td>
-<td align="left">How to view testing</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--how-to-revert-hardware-testing-scripts">revert hardware testing scripts</a></td>
 <td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--newer-lxd">How to refresh LXD on 20.04</a></td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--how-to-run-all-scripts-manually">run all scripts manually</a></td>
@@ -4856,10 +4159,6 @@
 <tr>
 <td align="right"><a href="how-to-manage-machines.html#heading--how-to-set-default-erasure-configuration">set the default erasure configuration</a></td>
 <td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="about-vm-hosting.html#heading--configuration">settings</a></td>
-<td align="left">About VM host</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-manage-vm-hosts.html#heading--maas-bridge-libvirt">set up a VM host bridge with libvirt</a></td>
@@ -5066,16 +4365,8 @@
 <td align="left">How to use machine</td>
 </tr>
 <tr>
-<td align="right"><a href="about-vm-hosting.html#heading--vm-host-project-summary">summaries</a></td>
-<td align="left">About LXD VM host project</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-use-lxd.html#heading--projects-s1-resource">summary of LXD project resources</a></td>
 <td align="left">How to get a</td>
-</tr>
-<tr>
-<td align="right"><a href="about-machines.html#heading--about-the-machine-summary">summary</a></td>
-<td align="left">About the machine</td>
 </tr>
 <tr>
 <td align="right"><a href="about-vm-hosting.html#heading--about-support-for-numa-et-al">support for NUMA, SR-IOV, and hugepages</a></td>
@@ -5186,14 +4477,6 @@
 <td align="left">How to</td>
 </tr>
 <tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--upload-test-scripts">test scripts</a></td>
-<td align="left">How to upload hardware</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-deploy-machines.html#heading--apply-a-hardware-test">test</a></td>
-<td align="left">How to apply a hardware</td>
-</tr>
-<tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--configure-deployment-timeout">timeout</a></td>
 <td align="left">Configure deployment</td>
 </tr>
@@ -5236,10 +4519,6 @@
 <tr>
 <td align="right"><a href="about-machines.html#heading--about-uefi-booting">UEFI booting</a></td>
 <td align="left">About</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-manage-vm-hosts.html#heading--maas-bridge-web-ui">UI</a></td>
-<td align="left">How to set up a VM host bridge with the web</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-customise-machines.html#heading--how-to-unformat-a-block-device">unformat a block device</a></td>
@@ -5376,10 +4655,6 @@
 <tr>
 <td align="right"><a href="how-to-manage-vm-hosts.html#heading--maas-bridge-cli">use the MAAS API to configure a bridge</a></td>
 <td align="left">How to</td>
-</tr>
-<tr>
-<td align="right"><a href="how-to-use-lxd.html#heading--lxd-init">use</a></td>
-<td align="left">How to initialise LXD prior to</td>
 </tr>
 <tr>
 <td align="right"><a href="how-to-deploy-machines.html#heading--network-validation-scripts-and-testing">validation and testing scripts</a></td>

@@ -1,112 +1,39 @@
 <!-- "How to deploy MAAS" -->
 
-<a href="#heading--Permuted-index"><h2 id="heading--Permuted-index">Permuted index</h2></a>
+With your network properly configured, and suitable images selected and downloaded, you're ready to enlist, commission, and deploy machines.  This major section will help you sort out the theoretical aspects and procedures regarding the MAAS machine life-cycle.  You can search for the [big picture topics](#heading--the-big-picture-of-deploying-machines), or consult the [life-cycle permuted index](#heading--life-cycle-permuted-index).
+
+<a href="#heading--the-big-picture-of-deploying-machines"><h2 id="heading--the-big-picture-of-deploying-machines">The big picture of deploying machines</h2></a>
+
+Here are some theoretical aspects of machines to consider:
+
+- [About controllers](/t/about-controllers/5072): Most of the functionality of MAAS is contained in a series of controllers. There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines. In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.  Knowing how these controllers communicate -- and divvy up the workload -- can be very useful when operating MAAS.
+- [About machines](/t/about-machines/5080): Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers.
+- [About customising machines](/t/about-customising-machines/5976): Prior to deployment, MAAS machines can be customised in a number of ways. Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.
+- [About VM hosting](/t/about-vm-hosting/5068): MAAS VM hosts allow for the dynamic composition of nodes from a pool of available hardware resources (e.g. disk space, memory, cores). You can create virtual machines (VMs) as needed within the limits of your resources, without concern for physical hardware.
+
+On the other hand, if you need to get machines deployed, you can consult these practical guides:
+
+- [How to manage controllers](/t/how-to-manage-controllers/5172): Managing region and rack controllers -- how many and how they're arranged -- is a critical skill for designing and managing larger MAAS instances.
+- [How to manage machines](/t/how-to-manage-machines/5160): Most of the day-to-day work of managing machines is covered here.  
+- [How to deploy machines](/t/how-to-deploy-machines/5112): The ultimate purpose of MAAS is to enlist, commission, and deploy machines.  This article covers these core operations.
+- [How to customise machines](/t/how-to-customise-machines/5108): MAAS provides the capability to customise machines in many different ways: resources, images, pre-deployment scripting, and much more.
+- [How to manage VM hosts](/t/how-to-manage-vm-hosts/5140): Virtual machine hosts provide a way to extend machines to users without having large racks of individual machines.  This article details the steps required to make this happen with MAAS.
+- [How to manage VMs](/t/how-to-manage-vms/5148): This article covers a few rudimentary procedures for managing generic virtual machines.  
+- [How to use LXD](/t/how-to-use-lxd/5208): The LXD container system provides much greater flexibility in deploying virtual machines. LXD and MAAS are separate products, and it’s useful to allow them to interact as equals, covering a much wider range of use cases.  This article devotes quite a bit of detailed instruction to this useful topic.
+
+<a href="#heading--life-cycle-permuted-index"><h2 id="heading--life-cycle-permuted-index">Permuted index</h2></a>
 
 |  |  |
 |------:|:------|
 | [20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) | How to refresh LXD on |
-| [About adding machines](/t/about-machines/5080#heading--about-adding-machines) | |
-| [About allocation and deployment](/t/about-machines/5080#heading--about-allocation-and-deployment) | |
-| [About alternatives to LXD projects in MAAS](/t/how-to-use-lxd/5208#heading--projects-big-picture) | |
-| [About annotations](/t/about-machines/5080#heading--about-annotations) | |
-| [About automatic script selection by hardware type](/t/about-machines/5080#heading--about-automatic-script-selection-by-hardware-type) | |
-| [About block devices](/t/about-customising-machines/5976#heading--about-block-devices) | |
-| [About block devices](/t/about-machines/5080#heading--about-block-devices) | |
-| [About BMC enlistment](/t/about-machines/5080#heading--about-bmc-enlistment) | |
-| [About choosing a kernel](/t/about-customising-machines/5976#heading--using-kernels) | |
-| [About cloning machines](/t/about-machines/5080#heading--about-cloning-machines) | |
-| [About commissioning machines](/t/about-machines/5080#heading--about-commissioning-machines) | |
-| [About commissioning NUMA and SR-IOV nodes](/t/about-machines/5080#heading--about-numa-sriov-commissioning) | |
-| [About controller communication](/t/about-controllers/5072#heading--about-contr-comm) | |
-| [About customising deployed machines](/t/about-customising-machines/5976#heading--about-customising-deployed-machines) | |
-| [About customising machines prior to deployment](/t/about-customising-machines/5976#heading--about-customising-machines-prior-to-deployment) | |
-| [About customising machine storage](/t/about-customising-machines/5976#heading--about-customising-machine-storage) | |
-| [About debugging script failures](/t/about-machines/5080#heading--about-debugging-script-failures) | |
-| [About design choices](/t/how-to-use-lxd/5208#heading--projects-history) | |
-| [About disabling individual boot methods](/t/about-machines/5080#heading--about-disabling-individual-boot-methods) | |
-| [About disk erasure](/t/about-customising-machines/5976#heading--about-disk-erasure) | |
-| [About disk erasure](/t/about-machines/5080#heading--about-disk-erasure) | |
-| [About disk erasure types](/t/about-customising-machines/5976#heading--about-disk-erasure-types) | |
-| [About disk erasure types](/t/about-machines/5080#heading--about-disk-erasure-types) | |
-| [About enlisting deployed machines](/t/about-machines/5080#heading--enlisting-deployed-machines) | |
-| [About enlistment](/t/about-machines/5080#heading--about-enlistment) | |
-| [About erasure order of preference](/t/about-machines/5080#heading--about-erasure-order-of-preference) | |
-| [About final storage modifications](/t/about-customising-machines/5976#heading--final-storage-modifications) | |
-| [About final storage modifications](/t/about-machines/5080#heading--final-storage-modifications) | |
-| [About general availability kernels](/t/about-customising-machines/5976#heading--general-availability-kernels) | |
-| [About hardware enablement kernels](/t/about-customising-machines/5976#heading--hardware-enablement-kernels) | |
-| [About hardware sync](/t/about-customising-machines/5976#heading--about-hardware-sync) | |
-| [About kernel boot options](/t/about-customising-machines/5976#heading--about-kernel-boot-options) | |
-| [About low latency kernels](/t/about-customising-machines/5976#heading--low-latency-kernels) | |
-| [About LXD (Beta) vs. libvirt](/t/about-vm-hosting/5068#heading--about-lxd-vs-libvirt) | |
-| [About LXD clusters](/t/how-to-manage-vm-hosts/5140#heading--about-lxd-clusters) | |
-| [About LXD projects and MAAS](/t/how-to-use-lxd/5208#heading--projects-explanation) | |
-| [About LXD projects](/t/how-to-use-lxd/5208#heading--projects-big-picture) | |
-| [About LXD VM host authentication](/t/about-vm-hosting/5068#heading--about-lxd-vm-host-auth) | |
-| [About LXD VM host project summaries](/t/about-vm-hosting/5068#heading--vm-host-project-summary) | |
-| [About LXD VM host resource details](/t/about-vm-hosting/5068#heading--vm-host-resource-details) | |
-| [About LXD VM hosts](/t/about-vm-hosting/5068#heading--about-lxd-vm-hosts) | |
-| [About MAAS commissioning scripts](/t/about-machines/5080#heading--about-maas-commissioning-scripts) | |
-| [About machine commissioning logs](/t/about-machines/5080#heading--commissioning-log) | |
-| [About machine configuration info](/t/about-machines/5080#heading--machine-config) | |
-| [About machine event logs](/t/about-machines/5080#heading--event-logs) | |
-| [About machine hardware & test logs](/t/about-machines/5080#heading--hardware-tests) | |
-| [About machine network info](/t/about-machines/5080#heading--about-machine-interfaces) | |
-| [About machine states](/t/about-machines/5080#heading--about-machine-states) | |
-| [About machine storage info](/t/about-machines/5080#heading--machine-storage) | |
-| [About moving a rack controller from one MAAS instance to another](/t/how-to-manage-controllers/5172#heading--about-moving-rack-controller) | |
-| [About over-committed resources](/t/about-vm-hosting/5068#heading--overcommit-resources) | |
-| [About partitions](/t/about-customising-machines/5976#heading--about-partitions) | |
-| [About partitions](/t/about-machines/5080#heading--about-partitions) | |
-| [About post-commission configuration](/t/about-machines/5080#heading--about-post-commission-configuration) | |
-| [About pre-release hardware enablement kernels](/t/about-customising-machines/5976#heading--hardware-enablement-kernels-pre-release) | |
-| [About pre-seeding](/t/about-customising-machines/5976#heading--about-pre-seeding) | |
-| [About quick erasure](/t/about-machines/5080#heading--about-quick-erasure) | |
-| [About rack controllers](/t/about-controllers/5072#heading--rack-controllers) | |
-| [About region controllers](/t/about-controllers/5072#heading--region-controller) | |
-| [About resource pools](/t/about-customising-machines/5976#heading--about-resource-pools) | |
-| [About resource pools](/t/about-machines/5080#heading--about-resource-pools) | |
-| [About script results](/t/about-machines/5080#heading--about-script-results) | |
-| [About secure erasure](/t/about-machines/5080#heading--about-secure-erasure) | |
-| [About standard erasure](/t/about-machines/5080#heading--about-standard-erase) | |
-| [About storage restrictions](/t/about-customising-machines/5976#heading--about-storage-restrictions) | |
-| [About storage restrictions](/t/about-machines/5080#heading--about-storage-restrictions) | |
-| [About storage](/t/about-machines/5080#heading--about-storage) | |
-| [About support for NUMA, SR-IOV, and hugepages](/t/about-vm-hosting/5068#heading--about-support-for-numa-et-al) | |
-| [About tags and scripts](/t/about-machines/5080#heading--about-tags-and-scripts) | |
-| [About tags](/t/about-machines/5080#heading--about-tags) | |
-| [About template naming](/t/about-customising-machines/5976#heading--template-naming) | |
-| [About templates](/t/about-customising-machines/5976#heading--templates) | |
-| [About testing hardware](/t/about-machines/5080#heading--about-testing-hardware) | |
-| [About testing machine networking](/t/about-machines/5080#heading--about-testing-machine-networking) | |
-| [About the enlistment process](/t/about-machines/5080#heading--about-the-enlistment-process) | |
-| [About the machine life-cycle](/t/about-machines/5080#heading--about-the-machine-life-cycle) | |
-| [About the machine list](/t/about-machines/5080#heading--about-the-machine-list) | |
-| [About the machine summary](/t/about-machines/5080#heading--about-the-machine-summary) | |
-| [About the potential dangers of moving a rack controller](/t/how-to-manage-controllers/5172#heading--dangers-moving-rack-controller) | |
-| [About Ubuntu kernels](/t/about-customising-machines/5976#heading--about-ubuntu-kernels) | |
-| [About UEFI booting](/t/about-customising-machines/5976#heading--about-uefi-booting) | |
-| [About UEFI booting](/t/about-machines/5080#heading--about-uefi-booting) | |
-| [About updating hardware](/t/about-customising-machines/5976#heading--about-updating-hardware) | |
-| [About VMFS datastores](/t/about-customising-machines/5976#heading--about-vmfs-datastores) | |
-| [About VMFS datastores](/t/about-machines/5080#heading--about-vmfs-datastores) | |
-| [About VM host settings](/t/about-vm-hosting/5068#heading--configuration) | |
-| [About VM hosts](/t/about-vm-hosting/5068#heading--about-vm-hosts) | |
-| [About VM host storage pools](/t/about-vm-hosting/5068#heading--about-vm-host-storage-pools) | |
-| [About VMs and NUMA](/t/about-vm-hosting/5068#heading--about-vms-and-numa) | |
 | [add a machine manually](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually) |How to |
-| [add a machine to a resource pool](/t/how-to-customise-machines/5108#heading--add-a-machine-to-a-resource-pool) |How to |
-| [add a machine to a resource pool](/t/how-to-customise-machines/5108#heading--add-a-node-to-a-resource-pool) |How to |
 | [add a machine to a resource pool](/t/how-to-manage-machines/5160#heading--add-a-machine-to-a-resource-pool) |How to |
-| [add a machine to a resource pool](/t/how-to-manage-machines/5160#heading--add-a-node-to-a-resource-pool) |How to |
 | [add a new region host](/t/how-to-manage-controllers/5172#heading--adding-a-new-region-host) |How to |
-| [add a resource pool](/t/how-to-customise-machines/5108#heading--add-a-resource-pool) |How to |
 | [add a resource pool](/t/how-to-manage-machines/5160#heading--add-a-resource-pool) |How to |
 | [add a VM host](/t/how-to-manage-vm-hosts/5140#heading--adding-a-vm-host) |How to |
-| [add a VM host to a resource pool](/t/how-to-customise-machines/5108#heading--add-a-vm-host-to-a-resource-pool) |How to |
 | [add a VM host to a resource pool](/t/how-to-manage-machines/5160#heading--add-a-vm-host-to-a-resource-pool) |How to |
-| [add a VM](/t/how-to-manage-vms/5148#heading--adding-a-vm-from-the-cli) |How to |
-| [add a VM](/t/how-to-manage-vms/5148#heading--add-vm-from-ui) |How to |
+| [add a VM (CLI)](/t/how-to-manage-vms/5148#heading--adding-a-vm-from-the-cli) |How to |
+| [add a VM (UI)](/t/how-to-manage-vms/5148#heading--add-vm-from-ui) |How to |
 | [adding a VM](/t/how-to-manage-vms/5148#heading--architecture) |How to set the architecture while |
 | [adding a VM](/t/how-to-manage-vms/5148#heading--interfaces) |How to specify interfaces while |
 | [adding a VM](/t/how-to-manage-vms/5148#heading--set-resources) |How to set resources while |
@@ -114,14 +41,9 @@
 | [adding machines](/t/about-machines/5080#heading--about-adding-machines) |About |
 | [add LXD clusters](/t/how-to-manage-vm-hosts/5140#heading--how-to-add-lxd-clusters) |How to |
 | [add machines via a chassis](/t/how-to-manage-machines/5160#heading--how-to-add-machines-via-a-chassis) |How to |
-| [all machines](/t/how-to-manage-machines/5160#heading--list-dynamic-annotations-for-all-machines) |How to list dynamic annotations for |
-| [all machines](/t/how-to-manage-machines/5160#heading--list-static-annotations-for-all-machines) |How to list static annotations for |
 | [allocate machines](/t/how-to-deploy-machines/5112#heading--allocate-machines) |How to |
 | [allocation and deployment](/t/about-machines/5080#heading--about-allocation-and-deployment) |About |
 | [allocations for one machine](/t/how-to-manage-machines/5160#heading--list-dynamic-annotations-for-one-machine) |How to list dynamic |
-| [all scripts manually](/t/how-to-deploy-machines/5112#heading--how-to-run-all-scripts-manually) |How to run |
-| [all uploaded hardware testing scripts](/t/how-to-deploy-machines/5112#heading--how-to-list-all-uploaded-hardware-testing-scripts) |How to list |
-| [all VM hosts](/t/how-to-manage-vm-hosts/5140#heading--list-resources-of-all-vm-hosts) |How to list the resources of |
 | [already running a workload](/t/how-to-deploy-machines/5112#heading--enlisted-deployed-machines) |How to enlist a machine that’s |
 | [alternatives to LXD projects in MAAS](/t/how-to-use-lxd/5208#heading--projects-big-picture) |About |
 | [annotation for a machine](/t/how-to-manage-machines/5160#heading--change-or-clear-a-static-annotation-for-a-machine) |How to change or clear a static |
@@ -137,14 +59,11 @@
 | [annotations](/t/how-to-manage-machines/5160#heading--work-with-dynamic-workload-annotations) |How to use dynamic (workload) |
 | [annotations](/t/how-to-manage-machines/5160#heading--work-with-static-annotations) |How to use static |
 | [another project to hide them from MAAS](/t/how-to-use-lxd/5208#heading--projects-s2-move-non-maas-items) |How to move LXD entities to |
-| [another](/t/how-to-manage-controllers/5172#heading--about-moving-rack-controller) |About moving a rack controller from one MAAS instance to |
-| [another](/t/how-to-manage-controllers/5172#heading--move-rack-controller) |How to move a rack controller from one MAAS instance to |
 | [API to configure a bridge](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-cli) |How to use the MAAS |
 | [apply a hardware test](/t/how-to-deploy-machines/5112#heading--apply-a-hardware-test) |How to |
 | [architecture while adding a VM](/t/how-to-manage-vms/5148#heading--architecture) |How to set the |
 | [associated with a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-create-vm-in-vm-host-project) |How to create a new VM in the LXD project |
 | [associated with a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-move-vm-into-vm-host-project) |How to move an existing VM into the LXD project |
-| [at a project level](/t/how-to-use-lxd/5208#heading--maas-control-at-project-level) |MAAS now controls VMs |
 | [attached USB and PCI devices](/t/about-machines/5080#heading--usb-pci-devices) |Handling |
 | [attached USB and PCI devices](/t/how-to-manage-machines/5160#heading--usb-pci-devices) |How to manage |
 | [authentication](/t/about-vm-hosting/5068#heading--about-lxd-vm-host-auth) |About LXD VM host |
@@ -154,8 +73,6 @@
 | [available resource pools](/t/how-to-customise-machines/5108#heading--list-available-resource-pools) |How to list |
 | [available resource pools](/t/how-to-manage-machines/5160#heading--list-available-resource-pools) |How to list |
 | [bcache storage layout reference](/t/how-to-manage-machines/5160#heading--bcache-storage-layout-reference) | |
-| [(Beta) vs. libvirt](/t/about-vm-hosting/5068#heading--about-lxd-vs-libvirt) |About LXD |
-| [between LXD projects](/t/how-to-use-lxd/5208#heading--projects-s1-switch) |How to switch |
 | [Blank storage layout reference](/t/how-to-manage-machines/5160#heading--blank-storage-layout-reference) | |
 | [block device as a boot disk](/t/how-to-customise-machines/5108#heading--how-to-set-a-block-device-as-a-boot-disk) |How to set a |
 | [block device as a boot disk](/t/how-to-manage-machines/5160#heading--how-to-set-a-block-device-as-a-boot-disk) |How to set a |
@@ -164,14 +81,6 @@
 | [block devices](/t/how-to-customise-machines/5108#heading--how-to-list-block-devices) |How to list |
 | [block devices](/t/how-to-manage-machines/5160#heading--how-to-list-block-devices) |How to list |
 | [block devices](/t/how-to-manage-machines/5160#heading--how-to-manage-block-devices) |How to manage |
-| [block device](/t/how-to-customise-machines/5108#heading--format-block-device) |How to format a |
-| [block device](/t/how-to-customise-machines/5108#heading--how-to-create-a-block-device) |How to create a |
-| [block device](/t/how-to-customise-machines/5108#heading--how-to-delete-a-block-device) |How to delete a |
-| [block device](/t/how-to-customise-machines/5108#heading--how-to-mount-a-block-device) |How to mount a |
-| [block device](/t/how-to-customise-machines/5108#heading--how-to-read-a-block-device) |How to read a |
-| [block device](/t/how-to-customise-machines/5108#heading--how-to-unformat-a-block-device) |How to unformat a |
-| [block device](/t/how-to-customise-machines/5108#heading--how-to-unmount-a-block-device) |How to unmount a |
-| [block device](/t/how-to-customise-machines/5108#heading--how-to-update-a-block-device) |How to update a |
 | [block device](/t/how-to-manage-machines/5160#heading--format-block-device) |How to format a |
 | [block device](/t/how-to-manage-machines/5160#heading--how-to-create-a-block-device) |How to create a |
 | [block device](/t/how-to-manage-machines/5160#heading--how-to-delete-a-block-device) |How to delete a |
@@ -199,7 +108,6 @@
 | [change dynamic annotations for a machine](/t/how-to-manage-machines/5160#heading--clear-and-change-dynamic-annotations-for-a-machine) |How to clear and |
 | [change or clear a static annotation for a machine](/t/how-to-manage-machines/5160#heading--change-or-clear-a-static-annotation-for-a-machine) |How to |
 | [chassis](/t/how-to-manage-machines/5160#heading--how-to-add-machines-via-a-chassis) |How to add machines via a |
-| [choices](/t/how-to-use-lxd/5208#heading--projects-history) |About design |
 | [choose Ubuntu kernels](/t/how-to-customise-machines/5108#heading--how-to-choose-ubuntu-kernels) |How to |
 | [choosing a kernel](/t/about-customising-machines/5976#heading--using-kernels) |About |
 | [clear and change dynamic annotations for a machine](/t/how-to-manage-machines/5160#heading--clear-and-change-dynamic-annotations-for-a-machine) |How to |
@@ -350,17 +258,12 @@
 | [device](/t/how-to-manage-machines/5160#heading--how-to-unmount-a-block-device) |How to unmount a block |
 | [device](/t/how-to-manage-machines/5160#heading--how-to-update-a-block-device) |How to update a block |
 | [disabling individual boot methods](/t/about-machines/5080#heading--about-disabling-individual-boot-methods) |About |
-| [disk erasure](/t/about-customising-machines/5976#heading--about-disk-erasure) |About |
 | [disk erasure](/t/about-machines/5080#heading--about-disk-erasure) |About |
-| [disk erasure types](/t/about-customising-machines/5976#heading--about-disk-erasure-types) |About |
 | [disk erasure types](/t/about-machines/5080#heading--about-disk-erasure-types) |About |
-| [disks](/t/how-to-customise-machines/5108#heading--how-to-erase-disks) |How to erase |
 | [disks](/t/how-to-manage-machines/5160#heading--how-to-erase-disks) |How to erase |
-| [disk](/t/how-to-customise-machines/5108#heading--how-to-set-a-block-device-as-a-boot-disk) |How to set a block device as a boot |
 | [disk](/t/how-to-manage-machines/5160#heading--how-to-set-a-block-device-as-a-boot-disk) |How to set a block device as a boot |
 | [download a script](/t/how-to-deploy-machines/5112#heading--how-to-download-a-script) |How to |
 | [download built-in scripts](/t/how-to-deploy-machines/5112#heading--how-to-download-built-in-scripts) |How to |
-| [during machine deployment](/t/how-to-customise-machines/5108#heading--set-a-specific-kernel-during-machine-deployment) |How to set a specific kernel |
 | [dynamic allocations for one machine](/t/how-to-manage-machines/5160#heading--list-dynamic-annotations-for-one-machine) |How to list |
 | [dynamic annotations for all machines](/t/how-to-manage-machines/5160#heading--list-dynamic-annotations-for-all-machines) |How to list |
 | [dynamic annotations for a machine](/t/how-to-manage-machines/5160#heading--clear-and-change-dynamic-annotations-for-a-machine) |How to clear and change |
@@ -379,17 +282,13 @@
 | [enlistment](/t/about-machines/5080#heading--about-bmc-enlistment) |About BMC |
 | [enlistment](/t/about-machines/5080#heading--about-enlistment) |About |
 | [entities to another project to hide them from MAAS](/t/how-to-use-lxd/5208#heading--projects-s2-move-non-maas-items) |How to move LXD |
-| [erase disks](/t/how-to-customise-machines/5108#heading--how-to-erase-disks) |How to |
 | [erase disks](/t/how-to-manage-machines/5160#heading--how-to-erase-disks) |How to |
-| [erasure configuration](/t/how-to-customise-machines/5108#heading--how-to-set-default-erasure-configuration) |How to set the default |
 | [erasure configuration](/t/how-to-manage-machines/5160#heading--how-to-set-default-erasure-configuration) |How to set the default |
 | [erasure order of preference](/t/about-machines/5080#heading--about-erasure-order-of-preference) |About |
-| [erasure](/t/about-customising-machines/5976#heading--about-disk-erasure) |About disk |
 | [erasure](/t/about-machines/5080#heading--about-disk-erasure) |About disk |
 | [erasure](/t/about-machines/5080#heading--about-quick-erasure) |About quick |
 | [erasure](/t/about-machines/5080#heading--about-secure-erasure) |About secure |
 | [erasure](/t/about-machines/5080#heading--about-standard-erase) |About standard |
-| [erasure types](/t/about-customising-machines/5976#heading--about-disk-erasure-types) |About disk |
 | [erasure types](/t/about-machines/5080#heading--about-disk-erasure-types) |About disk |
 | [erasure types](/t/how-to-customise-machines/5108#heading--how-to-specify-conditional-erasure-types) |How to specify conditional |
 | [erasure types](/t/how-to-manage-machines/5160#heading--how-to-specify-conditional-erasure-types) |How to specify conditional |
@@ -400,8 +299,6 @@
 | [failed results](/t/how-to-deploy-machines/5112#heading--how-to-suppress-failed-results) |How to suppress |
 | [failures](/t/about-machines/5080#heading--about-debugging-script-failures) |About debugging script |
 | [failures](/t/how-to-deploy-machines/5112#heading--how-to-debug-script-failures) |How to debug script |
-| [files](/t/how-to-deploy-machines/5112#heading--how-to-locate-log-files) |How to locate log |
-| [files](/t/how-to-deploy-machines/5112#heading--how-to-locate-script-files) |How to locate script |
 | [filter script results](/t/how-to-deploy-machines/5112#heading--how-to-filter-script-results) |How to |
 | [final storage modifications](/t/about-customising-machines/5976#heading--final-storage-modifications) |About |
 | [final storage modifications](/t/about-machines/5080#heading--final-storage-modifications) |About |
@@ -414,14 +311,11 @@
 | [find network info for a machine](/t/how-to-manage-machines/5160#heading--machine-interfaces) |How to |
 | [find raw log output for a machine](/t/how-to-manage-machines/5160#heading--raw-log-output) |How to |
 | [Flat layout storage reference](/t/how-to-manage-machines/5160#heading--flat-storage-layout-reference) | |
-| [format a block device](/t/how-to-customise-machines/5108#heading--format-block-device) |How to |
 | [format a block device](/t/how-to-manage-machines/5160#heading--format-block-device) |How to |
-| [format a partition](/t/how-to-customise-machines/5108#heading--how-to-format-a-partition) |How to |
 | [format a partition](/t/how-to-manage-machines/5160#heading--how-to-format-a-partition) |How to |
 | [general availability kernels](/t/about-customising-machines/5976#heading--general-availability-kernels) |About |
 | [get a summary of LXD project resources](/t/how-to-use-lxd/5208#heading--projects-s1-resource) |How to |
 | [global kernel boot options](/t/how-to-customise-machines/5108#heading--how-to-set-global-kernel-boot-options) |How to set |
-| [global storage layouts](/t/how-to-customise-machines/5108#heading--how-to-set-global-storage-layouts) |How to set |
 | [global storage layouts](/t/how-to-manage-machines/5160#heading--how-to-set-global-storage-layouts) |How to set |
 | [group commissioning and testing scripts](/t/how-to-deploy-machines/5112#heading--tags-group-scripts) |How to use tags to |
 | [Handling attached USB and PCI devices](/t/about-machines/5080#heading--usb-pci-devices) | |
@@ -606,6 +500,7 @@
 | [How to pre-seed with curtin](/t/how-to-customise-machines/5108#heading--how-to-pre-seed-with-curtin) | |
 | [How to read a block device](/t/how-to-customise-machines/5108#heading--how-to-read-a-block-device) | |
 | [How to read a block device](/t/how-to-manage-machines/5160#heading--how-to-read-a-block-device) | |
+| [How to refresh LXD on 20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) | |
 | [How to remove a machine from a resource pool](/t/how-to-customise-machines/5108#heading--removing-a-node-from-a-resource-pool) | |
 | [How to remove a machine from a resource pool](/t/how-to-manage-machines/5160#heading--removing-a-node-from-a-resource-pool) | |
 | [How to remove a VM host from a resource pool](/t/how-to-customise-machines/5108#heading--removing-a-vm-host-from-a-resource-pool) | |
@@ -688,20 +583,10 @@
 | [ID](/t/how-to-manage-vms/5148#heading--find-vm-host-ids) |How to find a VM host |
 | [improve region controller performance](/t/how-to-manage-controllers/5172#heading--increasing-regiond-daemon-workers) |How to |
 | [individual boot methods](/t/about-machines/5080#heading--about-disabling-individual-boot-methods) |About disabling |
-| [info for a machine](/t/how-to-manage-machines/5160#heading--machine-interfaces) |How to find network |
 | [information for a deployed machine](/t/how-to-deploy-machines/5112#heading--update-deployed-hw-info) |How to update hardware |
-| [info](/t/about-machines/5080#heading--about-machine-interfaces) |About machine network |
-| [info](/t/about-machines/5080#heading--machine-config) |About machine configuration |
-| [info](/t/about-machines/5080#heading--machine-storage) |About machine storage |
-| [info](/t/how-to-manage-machines/5160#heading--how-to-find-machine-storage-info) |How to find machine storage |
-| [info](/t/how-to-manage-machines/5160#heading--machine-config) |How to find machine configuration |
 | [initialise LXD prior to use](/t/how-to-use-lxd/5208#heading--lxd-init) |How to |
 | [install a rack controller](/t/how-to-manage-controllers/5172#heading--install-a-rack-controller) |How to |
-| [instance to another](/t/how-to-manage-controllers/5172#heading--about-moving-rack-controller) |About moving a rack controller from one MAAS |
-| [instance to another](/t/how-to-manage-controllers/5172#heading--move-rack-controller) |How to move a rack controller from one MAAS |
 | [instantiating a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-create-with-vm-host) |How to create a new project for MAAS when |
-| [interfaces while adding a VM](/t/how-to-manage-vms/5148#heading--interfaces) |How to specify |
-| [interval](/t/how-to-customise-machines/5108#heading--how-to-configure-hardware-sync-interval) |How to configure hardware sync |
 | [kernel boot options](/t/about-customising-machines/5976#heading--about-kernel-boot-options) |About |
 | [kernel boot options](/t/how-to-customise-machines/5108#heading--how-to-set-global-kernel-boot-options) |How to set global |
 | [kernel during machine deployment](/t/how-to-customise-machines/5108#heading--set-a-specific-kernel-during-machine-deployment) |How to set a specific |
@@ -716,20 +601,6 @@
 | [kernels](/t/how-to-customise-machines/5108#heading--how-to-choose-ubuntu-kernels) |How to choose Ubuntu |
 | [kernel](/t/about-customising-machines/5976#heading--using-kernels) |About choosing a |
 | [latency kernels](/t/about-customising-machines/5976#heading--low-latency-kernels) |About low |
-| [layout reference](/t/how-to-manage-machines/5160#heading--bcache-storage-layout-reference) |bcache storage |
-| [layout reference](/t/how-to-manage-machines/5160#heading--blank-storage-layout-reference) |Blank storage |
-| [layout reference](/t/how-to-manage-machines/5160#heading--lvm-storage-layout-reference) |LVM storage |
-| [layout reference](/t/how-to-manage-machines/5160#heading--vmfs6-storage-layout-reference) |VMFS6 storage |
-| [layouts reference](/t/how-to-manage-machines/5160#heading--storage-layouts-reference) |Storage |
-| [layouts](/t/how-to-customise-machines/5108#heading--how-to-set-global-storage-layouts) |How to set global storage |
-| [layouts](/t/how-to-customise-machines/5108#heading--how-to-set-per-machine-storage-layouts) |How to set per-machine storage |
-| [layouts](/t/how-to-manage-machines/5160#heading--how-to-define-custom-storage-layouts) |How to define custom storage |
-| [layouts](/t/how-to-manage-machines/5160#heading--how-to-set-global-storage-layouts) |How to set global storage |
-| [layouts](/t/how-to-manage-machines/5160#heading--how-to-set-per-machine-storage-layouts) |How to set per-machine storage |
-| [layout storage reference](/t/how-to-manage-machines/5160#heading--flat-storage-layout-reference) |Flat |
-| [level](/t/how-to-use-lxd/5208#heading--maas-control-at-project-level) |MAAS now controls VMs at a project |
-| [(libvirt only)](/t/how-to-manage-vm-hosts/5140#heading--libvirt-ssh) |How to set up SSH |
-| [(libvirt only)](/t/how-to-manage-vm-hosts/5140#heading--set-up-ssah-lv) |How to set up SSH |
 | [libvirt](/t/about-vm-hosting/5068#heading--about-lxd-vs-libvirt) |About LXD (Beta) vs. |
 | [libvirt](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-libvirt) |How to set up a VM host bridge with |
 | [libvirt](/t/how-to-manage-vm-hosts/5140#heading--set-up-ssh) |How to set up SSH for use by |
@@ -891,7 +762,6 @@
 | [move LXD entities to another project to hide them from MAAS](/t/how-to-use-lxd/5208#heading--projects-s2-move-non-maas-items) |How to |
 | [moving a rack controller from one MAAS instance to another](/t/how-to-manage-controllers/5172#heading--about-moving-rack-controller) |About |
 | [moving a rack controller](/t/how-to-manage-controllers/5172#heading--dangers-moving-rack-controller) |About the potential dangers of |
-| [name](/t/how-to-manage-vm-hosts/5140#heading--change-vm-host-name) |How to change a VM host's |
 | [naming](/t/about-customising-machines/5976#heading--template-naming) |About template |
 | [netplan](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-netplan) |How to set up a VM host bridge with |
 | [network info for a machine](/t/how-to-manage-machines/5160#heading--machine-interfaces) |How to find |
@@ -984,9 +854,6 @@
 | [pre-seeding](/t/about-customising-machines/5976#heading--about-pre-seeding) |About |
 | [pre-seed with cloud-init](/t/how-to-customise-machines/5108#heading--cloud-init) |How to |
 | [pre-seed with curtin](/t/how-to-customise-machines/5108#heading--how-to-pre-seed-with-curtin) |How to |
-| [prior to deployment](/t/about-customising-machines/5976#heading--about-customising-machines-prior-to-deployment) |About customising machines |
-| [prior to use](/t/how-to-use-lxd/5208#heading--lxd-init) |How to initialise LXD |
-| [process](/t/about-machines/5080#heading--about-the-enlistment-process) |About the enlistment |
 | [project associated with a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-create-vm-in-vm-host-project) |How to create a new VM in the LXD |
 | [project associated with a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-move-vm-into-vm-host-project) |How to move an existing VM into the LXD |
 | [project for MAAS when instantiating a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-create-with-vm-host) |How to create a new |
@@ -1019,12 +886,6 @@
 | [read a block device](/t/how-to-customise-machines/5108#heading--how-to-read-a-block-device) |How to |
 | [read a block device](/t/how-to-manage-machines/5160#heading--how-to-read-a-block-device) |How to |
 | [receive dynamic annotations](/t/how-to-manage-machines/5160#heading--identify-machines-that-can-receive-dynamic-annotations) |How to identify machines that can |
-| [reference](/t/how-to-manage-machines/5160#heading--bcache-storage-layout-reference) |bcache storage layout |
-| [reference](/t/how-to-manage-machines/5160#heading--blank-storage-layout-reference) |Blank storage layout |
-| [reference](/t/how-to-manage-machines/5160#heading--flat-storage-layout-reference) |Flat layout storage |
-| [reference](/t/how-to-manage-machines/5160#heading--lvm-storage-layout-reference) |LVM storage layout |
-| [reference](/t/how-to-manage-machines/5160#heading--storage-layouts-reference) |Storage layouts |
-| [reference](/t/how-to-manage-machines/5160#heading--vmfs6-storage-layout-reference) |VMFS6 storage layout |
 | [refresh LXD on 20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) |How to |
 | [region and rack controllers communicate](/t/about-controllers/5072#heading--rackregion) |How |
 | [region controller performance](/t/how-to-manage-controllers/5172#heading--increasing-regiond-daemon-workers) |How to improve |
@@ -1044,17 +905,6 @@
 | [resource pools](/t/how-to-customise-machines/5108#heading--list-available-resource-pools) |How to list available |
 | [resource pools](/t/how-to-manage-machines/5160#heading--how-to-use-resource-pools) |How to use |
 | [resource pools](/t/how-to-manage-machines/5160#heading--list-available-resource-pools) |How to list available |
-| [resource pool](/t/how-to-customise-machines/5108#heading--add-a-machine-to-a-resource-pool) |How to add a machine to a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--add-a-node-to-a-resource-pool) |How to add a machine to a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--add-a-resource-pool) |How to add a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--add-a-vm-host-to-a-resource-pool) |How to add a VM host to a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--creating-a-resource-pool) |How to create a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--delete-a-resource-pool) |How to delete a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--deleting-a-resource-pool) |How to delete a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--list-a-single-resource-pool) |How to list a single |
-| [resource pool](/t/how-to-customise-machines/5108#heading--removing-a-node-from-a-resource-pool) |How to remove a machine from a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--removing-a-vm-host-from-a-resource-pool) |How to remove a VM host from a |
-| [resource pool](/t/how-to-customise-machines/5108#heading--update-a-resource-pool) |How to update a |
 | [resource pool](/t/how-to-manage-machines/5160#heading--add-a-machine-to-a-resource-pool) |How to add a machine to a |
 | [resource pool](/t/how-to-manage-machines/5160#heading--add-a-node-to-a-resource-pool) |How to add a machine to a |
 | [resource pool](/t/how-to-manage-machines/5160#heading--add-a-resource-pool) |How to add a |
@@ -1071,15 +921,7 @@
 | [resources](/t/about-vm-hosting/5068#heading--overcommit-resources) |About over-committed |
 | [resources](/t/how-to-use-lxd/5208#heading--projects-s1-resource) |How to get a summary of LXD project |
 | [resources while adding a VM](/t/how-to-manage-vms/5148#heading--set-resources) |How to set |
-| [restrictions](/t/about-customising-machines/5976#heading--about-storage-restrictions) |About storage |
-| [restrictions](/t/about-machines/5080#heading--about-storage-restrictions) |About storage |
-| [results](/t/about-machines/5080#heading--about-script-results) |About script |
-| [results](/t/how-to-deploy-machines/5112#heading--how-to-filter-script-results) |How to filter script |
-| [results](/t/how-to-deploy-machines/5112#heading--how-to-suppress-failed-results) |How to suppress failed |
-| [results](/t/how-to-deploy-machines/5112#heading--how-to-view-script-results) |How to view script |
-| [results](/t/how-to-deploy-machines/5112#heading--results) |How to view testing |
 | [revert hardware testing scripts](/t/how-to-deploy-machines/5112#heading--how-to-revert-hardware-testing-scripts) |How to |
-| [How to refresh LXD on 20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) | |
 | [run all scripts manually](/t/how-to-deploy-machines/5112#heading--how-to-run-all-scripts-manually) |How to |
 | [running a workload](/t/how-to-deploy-machines/5112#heading--enlisted-deployed-machines) |How to enlist a machine that’s already |
 | [script failures](/t/about-machines/5080#heading--about-debugging-script-failures) |About debugging |
@@ -1122,7 +964,6 @@
 | [set the architecture while adding a VM](/t/how-to-manage-vms/5148#heading--architecture) |How to |
 | [set the default erasure configuration](/t/how-to-customise-machines/5108#heading--how-to-set-default-erasure-configuration) |How to |
 | [set the default erasure configuration](/t/how-to-manage-machines/5160#heading--how-to-set-default-erasure-configuration) |How to |
-| [settings](/t/about-vm-hosting/5068#heading--configuration) |About VM host |
 | [set up a VM host bridge with libvirt](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-libvirt) |How to |
 | [set up a VM host bridge with netplan](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-netplan) |How to |
 | [set up a VM host bridge with the web UI](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-web-ui) |How to |
@@ -1174,9 +1015,7 @@
 | [storage](/t/about-machines/5080#heading--about-storage) |About |
 | [storage](/t/how-to-customise-machines/5108#heading--how-to-customise-machine-storage) |How to customise machine |
 | [storage](/t/how-to-manage-machines/5160#heading--how-to-use-machine-storage) |How to use machine |
-| [summaries](/t/about-vm-hosting/5068#heading--vm-host-project-summary) |About LXD VM host project |
 | [summary of LXD project resources](/t/how-to-use-lxd/5208#heading--projects-s1-resource) |How to get a |
-| [summary](/t/about-machines/5080#heading--about-the-machine-summary) |About the machine |
 | [support for NUMA, SR-IOV, and hugepages](/t/about-vm-hosting/5068#heading--about-support-for-numa-et-al) |About |
 | [suppress failed results](/t/how-to-deploy-machines/5112#heading--how-to-suppress-failed-results) |How to |
 | [switch between LXD projects](/t/how-to-use-lxd/5208#heading--projects-s1-switch) |How to |
@@ -1204,8 +1043,6 @@
 | [test logs](/t/how-to-manage-machines/5160#heading--hardware-tests) |How to find machine hardware & |
 | [test machines](/t/how-to-deploy-machines/5112#heading--how-to-test-machines) |How to |
 | [test network links](/t/how-to-deploy-machines/5112#heading--network-link-testing) |How to |
-| [test scripts](/t/how-to-deploy-machines/5112#heading--upload-test-scripts) |How to upload hardware |
-| [test](/t/how-to-deploy-machines/5112#heading--apply-a-hardware-test) |How to apply a hardware |
 | [timeout](/t/how-to-deploy-machines/5112#heading--configure-deployment-timeout) |Configure deployment |
 | [tutorial](/t/how-to-use-lxd/5208#heading--projects-tutorial) |An LXD project |
 | [types](/t/about-customising-machines/5976#heading--about-disk-erasure-types) |About disk erasure |
@@ -1217,7 +1054,6 @@
 | [Ubuntu kernels](/t/how-to-customise-machines/5108#heading--how-to-choose-ubuntu-kernels) |How to choose |
 | [UEFI booting](/t/about-customising-machines/5976#heading--about-uefi-booting) |About |
 | [UEFI booting](/t/about-machines/5080#heading--about-uefi-booting) |About |
-| [UI](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-web-ui) |How to set up a VM host bridge with the web |
 | [unformat a block device](/t/how-to-customise-machines/5108#heading--how-to-unformat-a-block-device) |How to |
 | [unformat a block device](/t/how-to-manage-machines/5160#heading--how-to-unformat-a-block-device) |How to |
 | [unformat a partition](/t/how-to-customise-machines/5108#heading--how-to-unformat-a-partition) |How to |
@@ -1252,7 +1088,6 @@
 | [use static annotations](/t/how-to-manage-machines/5160#heading--work-with-static-annotations) |How to |
 | [use tags to group commissioning and testing scripts](/t/how-to-deploy-machines/5112#heading--tags-group-scripts) |How to |
 | [use the MAAS API to configure a bridge](/t/how-to-manage-vm-hosts/5140#heading--maas-bridge-cli) |How to |
-| [use](/t/how-to-use-lxd/5208#heading--lxd-init) |How to initialise LXD prior to |
 | [validation and testing scripts](/t/how-to-deploy-machines/5112#heading--network-validation-scripts-and-testing) |How to configure network |
 | [versions of LXD](/t/how-to-use-lxd/5208#heading--reinstalling-lxd) |How to remove older |
 | [via a chassis](/t/how-to-manage-machines/5160#heading--how-to-add-machines-via-a-chassis) |How to add machines |
