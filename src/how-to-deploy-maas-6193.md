@@ -4,7 +4,7 @@
 
 |  |  |
 |------:|:------|
-| [20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) |R\How to refresh LXD on |
+| [20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) | How to refresh LXD on |
 | [About adding machines](/t/about-machines/5080#heading--about-adding-machines) | |
 | [About allocation and deployment](/t/about-machines/5080#heading--about-allocation-and-deployment) | |
 | [About alternatives to LXD projects in MAAS](/t/how-to-use-lxd/5208#heading--projects-big-picture) | |
@@ -779,7 +779,7 @@
 | [LXD clusters](/t/how-to-manage-vm-hosts/5140#heading--how-to-delete-lxd-clusters) |How to delete |
 | [LXD clusters](/t/how-to-manage-vm-hosts/5140#heading--lxd-clusters) | |
 | [LXD entities to another project to hide them from MAAS](/t/how-to-use-lxd/5208#heading--projects-s2-move-non-maas-items) |How to move |
-| [LXD on 20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) |R\How to refresh |
+| [LXD on 20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) |How to refresh |
 | [LXD prior to use](/t/how-to-use-lxd/5208#heading--lxd-init) |How to initialise |
 | [LXD project associated with a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-create-vm-in-vm-host-project) |How to create a new VM in the |
 | [LXD project associated with a VM host](/t/how-to-use-lxd/5208#heading--projects-s2-move-vm-into-vm-host-project) |How to move an existing VM into the |
@@ -1025,7 +1025,7 @@
 | [reference](/t/how-to-manage-machines/5160#heading--lvm-storage-layout-reference) |LVM storage layout |
 | [reference](/t/how-to-manage-machines/5160#heading--storage-layouts-reference) |Storage layouts |
 | [reference](/t/how-to-manage-machines/5160#heading--vmfs6-storage-layout-reference) |VMFS6 storage layout |
-| [refresh LXD on 20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) |R\How to |
+| [refresh LXD on 20.04](/t/how-to-use-lxd/5208#heading--newer-lxd) |How to |
 | [region and rack controllers communicate](/t/about-controllers/5072#heading--rackregion) |How |
 | [region controller performance](/t/how-to-manage-controllers/5172#heading--increasing-regiond-daemon-workers) |How to improve |
 | [region controllers](/t/about-controllers/5072#heading--region-controller) |About |
