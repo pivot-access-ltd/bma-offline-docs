@@ -5,6 +5,7 @@ MAAS is relatively easy to install and configure.  You can [view the big picture
 <a href="#heading--Installation-big-picture-view"><h2 id="heading--Installation-big-picture-view">Installation big picture view</h2></a>
 
 - [Installation](/t/-/5128): Everything you need to know about installing and configuring MAAS, from either Debian packages or the snap.
+- [Upgrade older versions](/t/how-to-upgrade-maas/5436): A dedicated page for upgrading from older versions of MAAS, including OS update requirements.
 - [Troubleshooting](/t/-/5333): If you run into something odd, it might be that we've seen it before; try here first.
 
 <a href="#heading--Installation-permuted-index"><h2 id="heading--Installation-permuted-index">Installation permuted index</h2></a>
