@@ -157,7 +157,7 @@ $ sudo snap install lxd
 lxd 4.1 from Canonical✓ installed
 ```
 
-<a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">How to refresh LXD on 20.04</h3></a>
+<a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">R\How to refresh LXD on 20.04</h3></a>
 
 If you are on 20.04 or above LXD should be installed by default, but it's a good idea to make sure it's up to date:
 
@@ -1065,7 +1065,7 @@ $ lxc list
 +--------------+---------+------+------+-----------------+-----------+
 ```
 
-We can check the status with MAAS, but we'll find that the machine isn't recognized.  If we turn it on, it will be enlisted by MAAS.  Since MAAS doesn't know about it yet, we need to turn it on with the following command:
+We can check the status with MAAS, but we'll find that the machine isn't recognised.  If we turn it on, it will be enlisted by MAAS.  Since MAAS doesn't know about it yet, we need to turn it on with the following command:
 
 ```nohighlight
 lxc start trusty-drake
