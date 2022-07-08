@@ -1,5 +1,19 @@
 <!-- "How to use tags" -->
 
+One of the more useful attributes of machines is tags (and annotations).  These can be used not only to identify machines, but to customise them (e.g., kernel options) when they are commissioned and deployed.  You can study the [big picture of tags](#heading--The-big-picture-of-tags) or find specific items with the [tags permuted index](#heading--Tags-permuted-index).
+
+<a href="#heading--The-big-picture-of-tags"><h2 id="heading--The-big-picture-of-tags">The big picture of tags</h2></a>
+
+- [Work with tags](/t/-/5928): Tags for different objects have similar purposes, but they aren’t necessarily administered in the same way.
+- [Work with annotations](/t/-/5929): Annotations are descriptive, searchable phrases that apply only to machines. There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states). Annotations help you identify, characterise, and inform others about your machines.
+- [Use machine tags](/t/-/5224): There are a number of ways you can use tags with machines.
+- [Use controller tags](/t/-/5216): Controllers can be tagged to help identify and recognise them.
+- [Use storage tags](/t/-/5232): Block devices (and to a lesser extent, partitions) can be tagged so you can recognise and identify them easily.
+- [Use network tags](/t/-/5228): You can use tags to help distinguish one network interface from another, or group network interfaces by category.
+
+
+<a href="#heading--Tags-permuted-index"><h2 id="heading--Tags-permuted-index">Tags permuted index</h2></a>
+
 | | |
 |-----:|:------|
 | [a block device](/t/how-to-use-storage-tags/5232#heading--assign-tags-to-a-block-device) |How to assign tags to |
