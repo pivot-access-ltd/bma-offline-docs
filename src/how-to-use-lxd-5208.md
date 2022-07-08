@@ -157,7 +157,7 @@ $ sudo snap install lxd
 lxd 4.1 from Canonical✓ installed
 ```
 
-<a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">R\How to refresh LXD on 20.04</h3></a>
+<a href="#heading--newer-lxd"><h3 id="heading--newer-lxd">How to refresh LXD on 20.04</h3></a>
 
 If you are on 20.04 or above LXD should be installed by default, but it's a good idea to make sure it's up to date:
 
