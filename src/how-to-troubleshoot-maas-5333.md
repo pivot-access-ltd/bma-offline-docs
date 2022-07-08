@@ -2,7 +2,7 @@
 This article may help you deal with some common problems.  It is organized by topic:
 
 - [Networking issues](#heading--networking-issues)
-- [Machine life-cycle failures](#headiing--machine-life-cycle-failures)
+- [Machine life-cycle failures](#heading--machine-life-cycle-failures)
 - [Custom image creation problems](#heading--custom-image-creation-problems)
 
 <a href="#heading--networking-issues"><h2 id="heading--networking-issues">Networking issues</h2></a>
