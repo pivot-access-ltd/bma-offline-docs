@@ -383,22 +383,6 @@
 <li>kernel boot options. </li>
 <li>resource pools.</li>
 </ul>
-<p>Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.  This will allow you to:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>add or remove disks</li>
-<li>add or remove network interfaces</li>
-<li>add or remove PCI devices</li>
-<li>add or remove USB devices</li>
-</ul>
-<p><strong>NOTE:</strong> 
-You cannot update these parameters from within MAAS on a deployed machine.</p>
-<p>While deploying a machine, you can configure that machine to periodically sync its hardware configuration.  Deployed machines will passively update changes to the BMC and tags for that machine, on-the-fly, as these changes are made.</p>
-<p>This article will help you learn:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</a></li>
-<li><a href="#heading--about-customising-deployed-machines">About customising deployed machines</a></li>
-</ul>
-<p>In short, this article will explain these possible customisations, and provide detailed instructions on how to customise your own machines as desired.</p>
 <p><a href="#heading--about-customising-machines-prior-to-deployment"><h2 id="heading--about-customising-machines-prior-to-deployment">About customising machines prior to deployment</h2></a></p>
 <p>In this section, you&rsquo;ll learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -464,7 +448,6 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 </li>
 </ol>
 <p><a href="#heading--templates"><h3 id="heading--templates">About templates</h3></a></p>
-<p>The <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita</a> template files are found in the <code>/etc/maas/preseeds/</code> directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:</p>
 <table>
 <thead>
 <tr>
@@ -571,53 +554,6 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <p>Resource pools allow administrators to logically group resources &ndash; machines and VM hosts &ndash; into pools. Pools can help you budget machines for a particular set of functions.  For example, if you&rsquo;re using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. </p>
 <p>Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab, or with the MAAS CLI.   Also note that all MAAS installations have a resource pool named &ldquo;default.&rdquo; MAAS automatically adds new machines to the default resource pool.</p>
 <p><a href="#heading--about-customising-deployed-machines"><h2 id="heading--about-customising-deployed-machines">About customising deployed machines</h2></a></p>
-<p>MAAS 3.2 provides the capability to customise deployed machines, in that you can update hardware for a running machine on-the-fly.  Specifically, MAAS will update a deployed machine’s data when you do any of the following things:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>add or remove disks</li>
-<li>add or remove network interfaces</li>
-<li>add or remove PCI devices</li>
-<li>add or remove USB devices</li>
-</ul>
-<p>You can find the <a href="how-to-customise-machines.html#heading--how-to-enable-hardware-sync-on-a-machine">procedure here</a>.</p>
-<p>While deploying a machine, you can configure that machine to periodically sync its <a href="#heading--about-hardware-sync">hardware configuration</a>.  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.</p>
-<p><a href="#heading--about-updating-hardware"><h3 id="heading--about-about-updating-hardware">About updating hardware</h3></a></p>
-<p>Updating hardware on a deployed machine works by installing a special binary on the deployed machine.   This binary is configured at a given interval and push hardware info to the MAAS metadata endpoint.  By setting “enable_hw_sync” to true on a machine prior to deployment, MAAS will add configuration to install a systemd service and timer that will download the hardware sync binary.  This binary then authenticates the machine, reads the hardware info from the machine and pushes it to MAAS. The interval is set globally in the MAAS settings.</p>
-<p>Any changes in hardware are written to the machine’s configuration.  Physical hardware changes will be preserved upon release, while virtual changes, such as a SR-IOV interface, will be dropped.</p>
-<p>When deploying a machine from the UI, there is a new “enable_hw_sync” flag available for each machine. This flag marks a machine to be configured with live hardware updates.</p>
-<p>When deployoing from the CLI, there is an additional <code>enable_hw_sync</code> flag on <code>maas $PROFILE machine deploy</code>. This flag also marks a machine to be configured with live hardware updates. </p>
-<p>When using the API, there are two additional fields in the request:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>enable_hw_sync: (Boolean) - indicating whether hardware sync should be enabled on the machine, </li>
-<li>sync_interval: (Int) - indicating the interval, in seconds, that should be set at time of deployment</li>
-</ul>
-<p>With respect to <code>machine.read</code>, both the RESTful API and Websocket API add the following fields to a response:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>enable_hw_sync: Bool indicating whether hardware sync is enabled on the machine, </li>
-<li>last_sync: Timestamp of the last time MAAS received hardware sync data for the machine,</li>
-<li>next_sync: Timestamp of the computed estimation of when the next sync should happen,</li>
-<li>sync_interval:  Int the interval, in seconds, that was set at time of deployment</li>
-<li>is_sync_healthy: Bool indicating the sync is working normally when true, false when a sync is late or missing,</li>
-</ul>
-<p>With respect to <code>config.list</code>, there is a new WebSocket Response result (new “hardware_sync_interval” option):</p>
-<pre><code class="language-nohighlight">[{
-   name: &quot;hardware_sync_interval&quot;,
-   value: String in systemd time span format  e.g. “15m”
-            (only hours, minutes and seconds are recognised)
-},…]
-
- -  hardware_sync_interval is set to `15m` by default
-config.update
-WebSocket Request params - new “hardware_sync_interval” param
-
-params: {
-  name: &quot;hardware_sync_interval&quot;,
-  value: String in systemd time span format, e.g. “15m”
- }
-</code></pre>
-<p><strong>NOTE:</strong> 
-The API does not throw errors when an invalid string is provided for these parameters.</p>
-<p><a href="#heading--about-hardware-sync"><h3 id="heading--about-hardware-sync">About hardware sync</h3></a></p>
-<p>Hardware sync updates the machine’s blockdevice, interface and device sets.  BMC configuration and tags can also be updated on the machine itself. The timestamps of the last sync and the next scheduled sync can be seen in the machine&rsquo;s data.</p>
     </div>
   </body>
 </html>

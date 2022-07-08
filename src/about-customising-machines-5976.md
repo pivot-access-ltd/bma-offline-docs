@@ -283,7 +283,7 @@ Any changes in hardware are written to the machine’s configuration.  Physical 
 
 When deploying a machine from the UI, there is a new “enable_hw_sync” flag available for each machine. This flag marks a machine to be configured with live hardware updates.
 
-When deployoing from the CLI, there is an additional `enable_hw_sync` flag on `maas $PROFILE machine deploy`. This flag also marks a machine to be configured with live hardware updates. 
+When deploying from the CLI, there is an additional `enable_hw_sync` flag on `maas $PROFILE machine deploy`. This flag also marks a machine to be configured with live hardware updates. 
 
 When using the API, there are two additional fields in the request:
 
