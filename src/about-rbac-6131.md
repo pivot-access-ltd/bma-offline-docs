@@ -32,17 +32,17 @@ Consequently, there must also be some means of active authorisation that allows 
 
 MAAS/RBAC will interface with many identity services, using Candid as a mediator.  While the choice of identity service is up to you, we should cover some general principles of identity servers as they relate to MAAS/RBAC.  Let's take a closer look at [Ubuntu Single Sign-On (SSO)](https://help.ubuntu.com/community/SingleSignOn).
 
-SSO permits users to log in once to access many network services.  SSO centralizes authentication (via Kerberos), account management (via LDAP), resource-sharing (via `pam_mount`), and limited authorization through group memberships in LDAP, coupled with file system permissions.
+SSO permits users to log in once to access many network services.  SSO centralises authentication (via Kerberos), account management (via LDAP), resource-sharing (via `pam_mount`), and limited authorisation through group memberships in LDAP, coupled with file system permissions.
 
-RBAC (Role-based access control) does not authenticate users or verify their identity; that function is assigned to the identity service you choose.  RBAC does recieve an identity token or "macaroon" (via Candid) that RBAC uses to assign user roles.  MAAS uses these roles, in turn, to control user access and actions.
+RBAC (Role-based access control) does not authenticate users or verify their identity; that function is assigned to the identity service you choose.  RBAC does receive an identity token or "macaroon" (via Candid) that RBAC uses to assign user roles.  MAAS uses these roles, in turn, to control user access and actions.
 
 <a href="#heading--about-candid"><h2 id="heading--about-candid">How Candid fits into the picture</h2></a>
 
 Direct authentication involves a user entering something unique in response to a challenge, in order to gain access.  "Something unique" means "something you know, something you have, or something you are", e.g., a password, a hardware key, or a fingerprint, respectively.  Authentication can be automated with private/public key exchanges, protected with a password on the first exchange.  Adding another access point (another trusted client) usually means providing a public key, setting a password, or registering some biometric data.  Direct authentication works well when there are a limited number of clients and not a lot of user turnover.
 
-Increase the number of users and services that need to authenticate, and direct authentication becomes an IT nightmare: generating access requests; validating requests; setting up authentication; and then managing access as users move around the organization.  [Candid](https://github.com/canonical/candid), the Canonical identity service, was designed to meet this need.  Candid acts as an authentication gateway that connects a service like RBAC to your chosen identity service.
+Increase the number of users and services that need to authenticate, and direct authentication becomes an IT nightmare: generating access requests; validating requests; setting up authentication; and then managing access as users move around the organisation.  [Candid](https://github.com/canonical/candid), the Canonical identity service, was designed to meet this need.  Candid acts as an authentication gateway that connects a service like RBAC to your chosen identity service.
 
-Candid manages authenticated users via special access tokens ([macaroons](https://askubuntu.com/questions/940640/what-is-a-macaroon)) that confirm user identity.  Unlike standard access tokens, macaroons can be verified independently, in a standard way, so they reduce the network traffic and delays of repeatedly querying the identity server.  Traditional access tokens must be short-lived; macaroons are valid for much longer and they can be refreshed easily.  Macaroons can also be bound to TLS certificates.  And macaroons can be used by multiple clients and services with no loss of securityl.
+Candid manages authenticated users via special access tokens ([macaroons](https://askubuntu.com/questions/940640/what-is-a-macaroon)) that confirm user identity.  Unlike standard access tokens, macaroons can be verified independently, in a standard way, so they reduce the network traffic and delays of repeatedly querying the identity server.  Traditional access tokens must be short-lived; macaroons are valid for much longer and they can be refreshed easily.  Macaroons can also be bound to TLS certificates.  And macaroons can be used by multiple clients and services with no loss of security.
 
 Candid can do the following things:
 
@@ -61,7 +61,7 @@ When a user tries to log into a MAAS which is working with RBAC, MAAS redirects 
 
 RBAC uses a database to associate a given role with a properly-authenticated user identity.  With RBAC, permissions are associated with roles, not individual users. Within a given resource pool, the role assigned to a properly authenticated user controls what they can and cannot do within that pool.
 
-In the parlance of RBAC, MAAS would be a service, while each resource pool would be considered a separate scope. RBAC/MAAS also recognizes scopes that are not tied to machines, including:
+In the parlance of RBAC, MAAS would be a service, while each resource pool would be considered a separate scope. RBAC/MAAS also recognises scopes that are not tied to machines, including:
 
 - DNS
 - Availability zones
@@ -79,7 +79,7 @@ Here is a thumbnail sketch of the permissions model:
 - MAAS maintains resource pools, which are a machine attribute.  Every machine can be assigned to one and only one resource pool.  
 - RBAC maintains roles, which are associated with user identities.  For a given user identity to carry out a particular operation in MAAS, that user identity must correspond to a role that has permission to carry out that operation in a given resource pool.
 - Candid vouches for the user with a macaroon.
-- Some identity service (e.g., SSO) authenticates the user to Candid, so that macaroons are not generated for unrecognized users.
+- Some identity service (e.g., SSO) authenticates the user to Candid, so that macaroons are not generated for unrecognised users.
 
 Relationships between roles, resource pools, and users is maintained by RBAC as a source of truth.  MAAS mediates access to resource pools, based on user roles, using information obtained from RBAC. 
 
