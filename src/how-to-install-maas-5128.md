@@ -877,7 +877,7 @@ To set up PostgreSQL, even if it's running on a different machine, you can use t
 
         sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
 
-4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+4. Edit `/etc/postgresql/12/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
 
         host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
 
