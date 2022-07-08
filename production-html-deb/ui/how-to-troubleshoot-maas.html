@@ -375,10 +375,10 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to troubleshoot MAAS</h1><!-- "How to troubleshoot MAAS" -->
-<p>This article may help you deal with some common problems.  It is organized by topic:</p>
+<p>This article may help you deal with some common problems.  It is organised by topic:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--networking-issues">Networking issues</a></li>
-<li><a href="#headiing--machine-life-cycle-failures">Machine life-cycle failures</a></li>
+<li><a href="#heading--machine-life-cycle-failures">Machine life-cycle failures</a></li>
 <li><a href="#heading--custom-image-creation-problems">Custom image creation problems</a></li>
 </ul>
 <p><a href="#heading--networking-issues"><h2 id="heading--networking-issues">Networking issues</h2></a></p>
@@ -538,7 +538,7 @@ make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF
 <pre><code class="language-nohighlight">2022/06/04 17:04:47 machine readable: error-count []string{&quot;1&quot;}
 ==&gt; Some builds didn't complete successfully and had errors:
 2022/06/04 17:04:47 machine readable: qemu,error []string{&quot;Failed creating Qemu driver: exec: \&quot;qemu-img\&quot;: executable file not found in $PATH&quot;}
-==&gt; Builds finished but no artifacts were created.
+==&gt; Builds finished but no artefacts were created.
 Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: &quot;qemu-img&quot;: executable file not found in $PATH
 </code></pre>
 <p>then you have forgotten to <a href="https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer">install a needed dependency</a>.</p>
@@ -555,7 +555,7 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 </ul>
 <p>Please feel free to add other issues and solutions, if you have them.</p>
 <p><a href="#heading--django-subarch-error"><h3 id="heading--django-subarch-error">Subarchitecture error thrown by django</h3></a></p>
-<p>Occassionally, you may encounter an error similar to this one:</p>
+<p>Occasionally, you may encounter an error similar to this one:</p>
 <pre><code>django.core.exceptions.ValidationError: ['Subarchitecture(&lt;value&gt;) must be generic when setting hwe_kernel.']
 </code></pre>
 <p>One potential solution for this problem is to specify a different commissioning kernel, such as upgrading from Xenial to Focal, etc.  </p>
@@ -567,7 +567,7 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 <p><a href="#heading--cant-find-maas-web-ui"><h3 id="heading--cant-find-maas-web-ui">Can&rsquo;t find MAAS web UI</h3></a></p>
 <p>By default, the web UI is located at <code>http://&lt;hostname&gt;:5240/MAAS/</code>. If you can&rsquo;t access it, there are a few things to try:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>Check that the webserver is running - By default the web interface uses Apache, which runs under the service name <em>apache2</em>. To check it, on the MAAS server box you can run <code>sudo /etc/init.d/apache2 status</code>.</li>
+<li>Check that the web server is running - By default the web interface uses Apache, which runs under the service name <em>apache2</em>. To check it, on the MAAS server box you can run <code>sudo /etc/init.d/apache2 status</code>.</li>
 <li>Check that the hostname is correct - It may seem obvious, but check that the hostname is being resolved properly. Try running a browser (even a text mode one like <code>elinks</code>) on the same box as the MAAS server and navigating to the page. If that doesn&rsquo;t work, try <code>http://127.0.0.1:5240/MAAS/</code>, which will always point at the local server.</li>
 <li>If you are still getting &ldquo;404 - Page not found&rdquo; errors, check that the MAAS web interface has been installed in the right place. There should be a file present called <code>/usr/share/maas/maas/urls.py</code>.</li>
 </ul>
@@ -577,7 +577,7 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 <p>As images are constantly updated and refreshed, the backdoor will only ever be temporary, but it should help you login to see what may be going wrong with your node.</p>
 <p><a href="#heading--extract-the-cloud-image"><h4 id="heading--extract-the-cloud-image">Extract the cloud image</h4></a></p>
 <p>First, download the cloud image that corresponds to the architecture of your node. The <em>Images</em> page of the web UI lists the images currently being cached by MAAS:</p>
-<p><a href="../images/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
 <p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/">https://cloud-images.ubuntu.com/</a>.</p>
 <p>For example:</p>
 <pre><code class="language-bash">wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
@@ -620,7 +620,7 @@ cp /home/ubuntu/xenial-customized.squashfs .
 chown maas:maas squashfs
 </code></pre>
 <p>You can now use this image to commission or deploy a node and access the root account with the backdoor password, such as by deploying the same specific image from the web UI to the node you wish to troubleshoot.</p>
-<p><a href="../images/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
 <h3 id="heading--migrating-maas">Migrating an existing snap installation</h3>
 
 <p>If you&rsquo;re currently running MAAS from a snap in <code>all</code> mode, you can easily migrate your database to a local PostgreSQL server with the following command:</p>

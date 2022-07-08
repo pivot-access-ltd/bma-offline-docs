@@ -1,5 +1,5 @@
 <!-- "How to troubleshoot MAAS" -->
-This article may help you deal with some common problems.  It is organized by topic:
+This article may help you deal with some common problems.  It is organised by topic:
 
 - [Networking issues](#heading--networking-issues)
 - [Machine life-cycle failures](#heading--machine-life-cycle-failures)
@@ -231,7 +231,7 @@ If you encounter an error such as this one:
 2022/06/04 17:04:47 machine readable: error-count []string{"1"}
 ==> Some builds didn't complete successfully and had errors:
 2022/06/04 17:04:47 machine readable: qemu,error []string{"Failed creating Qemu driver: exec: \"qemu-img\": executable file not found in $PATH"}
-==> Builds finished but no artifacts were created.
+==> Builds finished but no artefacts were created.
 Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: "qemu-img": executable file not found in $PATH
 ```
 
@@ -253,7 +253,7 @@ Please feel free to add other issues and solutions, if you have them.
 
 <a href="#heading--django-subarch-error"><h3 id="heading--django-subarch-error">Subarchitecture error thrown by django</h3></a>
 
-Occassionally, you may encounter an error similar to this one:
+Occasionally, you may encounter an error similar to this one:
 
 ```
 django.core.exceptions.ValidationError: ['Subarchitecture(<value>) must be generic when setting hwe_kernel.']
@@ -276,7 +276,7 @@ where $PROFILE is the name of the user.
 
 By default, the web UI is located at `http://<hostname>:5240/MAAS/`. If you can't access it, there are a few things to try:
 
-- Check that the webserver is running - By default the web interface uses Apache, which runs under the service name *apache2*. To check it, on the MAAS server box you can run `sudo /etc/init.d/apache2 status`.
+- Check that the web server is running - By default the web interface uses Apache, which runs under the service name *apache2*. To check it, on the MAAS server box you can run `sudo /etc/init.d/apache2 status`.
 - Check that the hostname is correct - It may seem obvious, but check that the hostname is being resolved properly. Try running a browser (even a text mode one like `elinks`) on the same box as the MAAS server and navigating to the page. If that doesn't work, try `http://127.0.0.1:5240/MAAS/`, which will always point at the local server.
 - If you are still getting "404 - Page not found" errors, check that the MAAS web interface has been installed in the right place. There should be a file present called `/usr/share/maas/maas/urls.py`.
 
