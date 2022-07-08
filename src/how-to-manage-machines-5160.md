@@ -2,7 +2,20 @@
 This article explains:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
+- [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
+- [How to clone machines](#heading--how-to-clone-machines)
+- [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
+- [How to use resource pools](#heading--how-to-use-resource-pools)
+- [How to use machine storage](#heading--how-to-use-machine-storage)
+[/tab]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+- [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
+- [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
+- [How to use resource pools](#heading--how-to-use-resource-pools)
+- [How to use machine storage](#heading--how-to-use-machine-storage)
+[/tab]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="CLI"]
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to clone machines](#heading--how-to-clone-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
@@ -10,7 +23,7 @@ This article explains:
 - [How to use annotations](#heading--how-to-use-annotations)
 - [How to use machine storage](#heading--how-to-use-machine-storage)
 [/tab]
-[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
+[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
 - [How to use resource pools](#heading--how-to-use-resource-pools)
