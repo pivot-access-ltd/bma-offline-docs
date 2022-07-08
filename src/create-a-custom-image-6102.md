@@ -123,8 +123,3 @@ It's the machine named `open-gannet` in the listing above, but your machine name
 <href id="#heading--thats-all-there-is-to-it"><h2 id="heading--thats-all-there-is-to-it">That's all there is to it!</h2></a>
 
 In a few simple steps, you've used packer to create a custom Ubuntu image, upload it to a running MAAS, and deploy it.  There are many different custom images that can be deployed with MAAS -- check [this guide](https://maas.io/docs/how-to-create-custom-images) to learn more.
-
-
-
-
-
