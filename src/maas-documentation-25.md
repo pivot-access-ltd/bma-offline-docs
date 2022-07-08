@@ -55,6 +55,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 ### [How to get MAAS running](/t/-/6202)
 
 - [Installation](/t/-/5128)
+- [Upgrade older versions](/t/how-to-upgrade-maas/5436)
 - [Troubleshooting](/t/-/5333)
 
 ### [How to configure networking](/t/-/6174)
@@ -99,7 +100,6 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Secure MAAS](/t/-/5196)
 - [Manage users](/t/-/5184)
 - [Search MAAS](/t/-/5192)
-- [Upgrade older versions](/t/how-to-upgrade-maas/5436)
 
 ### API reference
 
