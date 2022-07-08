@@ -99,7 +99,7 @@ At the physical layer, we're looking for binary (on/off) signals, set to the cad
 
 <a href="#heading--about-variable-latency"><h4 id="heading--about-variable-latency">About variable latency</h4></a>
 
-Variable latency is the important thing to know about the physical layer, because it affects the timing of network traffic. In order to understand variable latency, we need to understand network latency.  Packets aren't sent without some delay, becuase of:
+Variable latency is the important thing to know about the physical layer, because it affects the timing of network traffic. In order to understand variable latency, we need to understand network latency.  Packets aren't sent without some delay, because of:
 
 1. The processing delay - how long it takes the router to process the packet header.
 2. A queuing delay - how long the packet sits idle in routing queues.
@@ -640,7 +640,7 @@ Because IP addresses are hard for humans to remember, the Internet supports the 
 
 <a href="#heading--other-network-elements"><h2 id="heading--other-network-elements">About other network elements</h2></a>
 
-This section summarizes a number of other networking elements that may occasionally come up when working with MAAS networks.  These include:
+This section summarises a number of other networking elements that may occasionally come up when working with MAAS networks.  These include:
 
 - [Client](#heading--client)
 - [Hub](#heading--hub)
