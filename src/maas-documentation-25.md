@@ -52,7 +52,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Create a custom image](/t/-/6102)
 - [Using jq with the MAAS CLI](/t/-/6027)
 
-### How to get MAAS running
+### [How to get MAAS running](/t/-/6202)
 
 - [Installation](/t/-/5128)
 - [Troubleshooting](/t/-/5333)
@@ -80,7 +80,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Manage VMs](/t/-/5148)
 - [Use LXD](/t/-/5208)
 
-### How to use tags
+### [How to use tags](/t/-/6200)
 
 - [Work with tags](/t/-/5928)
 - [Work with annotations](/t/-/5929)
@@ -89,7 +89,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Use storage tags](/t/-/5232)
 - [Use network tags](/t/-/5228)
 
-### How to operate MAAS
+### [How to operate MAAS](/t/-/6201)
 
 - [Enable HA](/t/-/5120)
 - [Set up MAAS metrics](/t/-/5204)
@@ -136,6 +136,9 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6202|/docs/how-to-get-maas-running|
+|https://discourse.maas.io/t/-/6201|/docs/how-to-operate-maas|
+|https://discourse.maas.io/t/-/6200|/docs/how-to-use-tags|
 |https://discourse.maas.io/t/-/6193|/docs/how-to-deploy-maas|
 |https://discourse.maas.io/t/-/6192|/docs/how-to-choose-images|
 |https://discourse.maas.io/t/-/6174|/docs/how-to-configure-networking|
