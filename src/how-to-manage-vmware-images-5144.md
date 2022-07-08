@@ -3,7 +3,7 @@ MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directl
 
 #### This article will tell you:
 
-- [About the rerequisites for creating a VMWare image](#heading--prerequisites-to-create-the-images)
+- [About the prerequisites for creating a VMWare image](#heading--prerequisites-to-create-the-images)
 - [About the features and limitations of VMWare images in MAAS](#heading--features-and-limitations)
 - [How to customise VMWare images](#heading--customising-the-image)
 - [How to build a VMWare image](#heading--building-an-image)
