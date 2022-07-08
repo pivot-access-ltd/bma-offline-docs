@@ -1,5 +1,22 @@
 <!-- "How to operate MAAS" -->
 
+There are a number of peripheral activities associated with operating MAAS on a daily basis.  Here, you can choose from the [big picture view](#heading--The-big-picture-of-MAAS-operations) or dive into the very detailed [permuted index](#heading--MAAS-operations-permuted-index).
+
+<a href="#heading--The-big-picture-of-MAAS-operations"><h2 id="heading--The-big-picture-of-MAAS-operations">The big picture of MAAS operations</h2></a>
+
+The following peripheral operations make up part of day-to-day MAAS administration activities:
+
+- [Enable HA](/t/-/5120): This article describes how to provide high availability (HA) for MAAS at both region and rack levels. 
+- [Set up MAAS metrics](/t/-/5204): MAAS services can provide Prometheus endpoints for collecting performance metrics.
+- [Work with audit event logs](/t/-/5987): You can display and filter audit events via the CLI. 
+- [Use air-gapped MAAS](/t/-/5212): Many MAAS users maintain their data centres in an air-gapped environment that does not have an external Internet connection. MAAS runs well in this configuration, though keeping MAAS supplied with updates and images requires a bit of extra effort.
+- [Back up MAAS](/t/-/5096): MAAS currently does not provide specific tools to back up and restore a working MAAS configuration. MAAS servers are part of your data centre, just like other Linux-based servers, so your current backup and disaster recovery solution should be sufficient to back up your MAAS environment. Even so, you should know which files and actions are critical – to ensure that you get a clean backup, and further ensure that you can restore it cleanly.
+- [Secure MAAS](/t/-/5196): As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors. While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup. This article provides a few suggestions.
+- [Manage users](/t/-/5184): Presumably, you have already created an administrative user, but MAAS can also have regular users (who log in to the interface or use the CLI). What users you create depends on how you intend to use MAAS. 
+- [Search MAAS](/t/-/5192): The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices. This article is designed to help you understand how to use this resource.
+
+<a href="#heading--MAAS-operations-permuted-index"><h2 id="heading--MAAS-operations-permuted-index">MAAS operations permuted index</h2></a>
+
 | | |
 |----:|:----|
 | [About MAAS backup](/t/how-to-back-up-maas/5096#heading--about-maas-backup) | |
