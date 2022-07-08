@@ -154,7 +154,7 @@ sudo apt upgrade maas
 
 - If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 
-<a href="#heading--upgrade-from-v2- Packages8-to-3-1"><h2 id="heading--upgrade-from-v2- Packages8-to-3-1">How to upgrade from 2.8 or lower to MAAS 3.1</h2></a>
+<a href="#heading--upgrade-from-v2-8-to-3-1"><h2 id="heading--upgrade-from-v2-8-to-3-1">How to upgrade from 2.8 or lower to MAAS 3.1</h2></a>
 
 If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.1. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
@@ -271,7 +271,7 @@ sudo apt upgrade maas
 
 - If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 
-<a href="#heading--upgrade-from-v2- Packages8-to-3-0"><h2 id="heading--upgrade-from-v2- Packages8-to-3-0">How to upgrade from 2.8 or lower to MAAS 3.0</h2></a>
+<a href="#heading--upgrade-from-v2-8-to-3-0"><h2 id="heading--upgrade-from-v2-8-to-3-0">How to upgrade from 2.8 or lower to MAAS 3.0</h2></a>
 
 If you are running MAAS 2.8 or lower, you must also make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
@@ -367,7 +367,7 @@ After entering your password, the snap will refresh from the 3.0 channel.  You w
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v2.9 Packages"] 
-<a href="#heading--upgrade-from-v2- Packages8-to-2-9"><h2 id="heading--upgrade-from-v2- Packages8-to-2-9">How to upgrade from MAAS 2.8 or lower to MAAS 2.9</h2></a>
+<a href="#heading--upgrade-from-v2-8-to-2-9"><h2 id="heading--upgrade-from-v2-8-to-2-9">How to upgrade from MAAS 2.8 or lower to MAAS 2.9</h2></a>
 
 MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  You do these two operations all at once, with the following procedure:
 
