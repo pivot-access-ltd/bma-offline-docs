@@ -404,7 +404,7 @@ network:
 ```
 
 3. Apply the new configuration with `netplan apply`.
-zork
+
 <a href="#heading--how-to-manage-machine-interfaces"><h2 id="heading--how-to-manage-machine-interfaces">How to manage machine interfaces</h2></a>
 
 This section will explain the following procedures related to machine interfaces:
