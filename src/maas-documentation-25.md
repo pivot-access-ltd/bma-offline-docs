@@ -101,41 +101,49 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Search MAAS](/t/-/5192)
 - [Upgrade older versions](/t/how-to-upgrade-maas/5436)
 
-### [Reference](/t/-/6143)
+### API reference
 
 - [API authentication](/t/-/5060)
 - [API client](/t/-/5404)
 - [API documentation](https://maas.io/docs/api)
+
+### [Technical reference](/t/-/6203)
+
 - [Audit event logs](/t/-/5256)
 - [Commissioning scripts](/t/-/5375)
-- [Concepts & terms](/t/-/5416)
-- [Getting help](/t/-/5428)
 - [Hardware test scripts](/t/-/5392)
 - [Log files](/t/-/5240)
 - [MAAS performance](/t/-/6178)
 - [Power management](/t/-/5246)
 - [Storage layouts](/t/-/5973)
 
+### [General reference](/t/-/6143)
+
+- [Release notes](/t/-/5292)
+- [Concepts & terms](/t/-/5416)
+- [Getting help](/t/-/5428)
+
 ### [Explanations](/t/-/6141)
 
-- [Cloud networks](/t/-/5808)
-- [Controllers](/t/-/5072)
-- [Custom images](/t/-/6099)
-- [Customising machines](/t/-/5976)
-- [DHCP](/t/-/5807)
-- [Images](/t/-/5076)
 - [MAAS](/t/-/5064)
-- [MAAS networking](/t/-/5084)
-- [Machines](/t/-/5080)
-- [RBAC](/t/-/6131)
 - [TCP/IP networks](/t/-/5806)
+- [DHCP](/t/-/5807)
+- [Cloud networks](/t/-/5808)
+- [MAAS networking](/t/-/5084)
+- [Images](/t/-/5076)
+- [Custom images](/t/-/6099)
+- [Controllers](/t/-/5072)
+- [Machines](/t/-/5080)
+- [Customising machines](/t/-/5976)
 - [VM hosting](/t/-/5068)
+- [RBAC](/t/-/6131)
 
 ## URLs
 
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6203|/docs/technical-reference|
 |https://discourse.maas.io/t/-/6202|/docs/how-to-get-maas-running|
 |https://discourse.maas.io/t/-/6201|/docs/how-to-operate-maas|
 |https://discourse.maas.io/t/-/6200|/docs/how-to-use-tags|
@@ -147,7 +155,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 |https://discourse.maas.io/t/-/6140|/docs/tutorials|
 |https://discourse.maas.io/t/-/6141|/docs/explanation|
 |https://discourse.maas.io/t/-/6142|/docs/how-to-guides|
-|https://discourse.maas.io/t/-/6143|/docs/reference|
+|https://discourse.maas.io/t/-/6143|/docs/general-reference|
 |https://discourse.maas.io/t/-/6102|/docs/create-a-custom-image|
 |https://discourse.maas.io/t/-/6099|/docs/about-creating-custom-images|
 |https://discourse.maas.io/t/-/6027|/docs/using-jq-with-the-maas-cli|
