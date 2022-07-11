@@ -881,6 +881,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/vmware-images|/docs/how-to-manage-vmware-images|
 |/docs/about-tags|/docs/how-to-use-tags|
 |/docs/ssl|/docs/how-to-enable-tls-encryption|
 |/docs/stp|/docs/how-to-manage-networks|
