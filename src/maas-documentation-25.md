@@ -851,7 +851,6 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 |https://discourse.maas.io/t/-/5132|/docs/how-to-manage-ip-addresses|
 |https://discourse.maas.io/t/-/5064|/docs/about-maas|
 |https://discourse.maas.io/t/-/5080|/docs/about-machines|
-|https://discourse.maas.io/t/-/5088|/docs/about-tags|
 |https://discourse.maas.io/t/-/5060|/docs/api-authentication-reference|
 |https://discourse.maas.io/t/-/5096|/docs/how-to-back-up-maas|
 |https://discourse.maas.io/t/-/5248|/docs/commissioning-log-reference|
@@ -882,6 +881,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/about-tags|/docs/how-to-use-tags|
 |/docs/ssl|/docs/how-to-enable-tls-encryption|
 |/docs/stp|/docs/how-to-manage-networks|
 |/docs/subnet-management|/docs/how-to-manage-networks|
