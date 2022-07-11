@@ -15,4 +15,3 @@ The following technical explanations will help you learn about various features 
 - [VM hosting](/t/-/5068): Everything theoretical about hosting virtual machines in the MAAS environment.
 
 You can also find topics you're seeking the following permuted index of explanatory topics:
-
