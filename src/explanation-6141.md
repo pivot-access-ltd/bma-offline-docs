@@ -740,5 +740,3 @@ You can also find topics you're seeking the following permuted index of explanat
 | [works](/t/about-maas/5064heading--how-maas-works) |How MAAS |
 | [Yesterday's phone network is today's Internet](/t/about-tcp-ip-networks/5806#heading--borrowed-from-ma-bell) | |
 | [zones](/t/about-networking/5084#heading--about-availability-zones) |About availability |
-
-
