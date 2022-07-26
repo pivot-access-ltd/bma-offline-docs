@@ -120,6 +120,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 ### [General reference](/t/-/6143)
 
 - [Release notes](/t/-/5292)
+- [Installation requirements](/t/-/6233)
 - [Concepts & terms](/t/-/5416)
 - [Getting help](/t/-/5428)
 
@@ -143,6 +144,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6233|/docs/installation-requirements|
 |https://discourse.maas.io/t/-/6203|/docs/technical-reference|
 |https://discourse.maas.io/t/-/6202|/docs/how-to-get-maas-running|
 |https://discourse.maas.io/t/-/6201|/docs/how-to-operate-maas|
