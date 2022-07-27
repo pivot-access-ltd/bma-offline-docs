@@ -6,8 +6,6 @@ MAAS is relatively easy to install and configure.  Let's give it a try.
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-reference/6233).
 [/note]
 
-This article will show you:
-
 [tabs]
 [tab version="v3.2 Snap"]
 <a href="#heading--fresh-install-3-2-snap"><h2 id="heading--fresh-install-3-2-snap">How to do a fresh snap install of MAAS 3.2</h2></a>
