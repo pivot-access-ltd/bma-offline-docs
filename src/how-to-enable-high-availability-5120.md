@@ -58,10 +58,10 @@ Be sure to substitute the sample values for those of your own environment.
 <a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">How to configure multiple region endpoints</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/etc/maas/rackd.conf`.  For example:
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
 MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to `/var/snap/maas/current/rackd.conf`.  For example:
 [/tab]
 [/tabs]
