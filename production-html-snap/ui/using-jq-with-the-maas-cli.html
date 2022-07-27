@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -205,12 +217,12 @@
       <strong>
 	  How to operate MAAS
       </strong>
-      <ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -374,9 +409,8 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>Using jq with the MAAS CLI</h1><!-- "Using jq with the MAAS CLI" -->
-<p>The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it&rsquo;s sometimes hard for humans to process.</p>
-<p>Enter <code>jq</code>, a command-line tool dedicated to filtering and formatting JSON output, so that you can more easily summarize data. For instance, consider a small MAAS install with 12 virtual machines. Six of these machines are LXD VMs, and six are libvirt VMs. Suppose we enter the MAAS command to list all those machines:</p>
+  <h1>The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it's sometimes hard for humans to process.</h1><p>The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it&rsquo;s sometimes hard for humans to process.</p>
+<p>Enter <code>jq</code>, a command-line tool dedicated to filtering and formatting JSON output, so that you can more easily summarise data. For instance, consider a small MAAS install with 12 virtual machines. Six of these machines are LXD VMs, and six are libvirt VMs. Suppose we enter the MAAS command to list all those machines:</p>
 <pre><code class="language-nohighlight">maas admin machines read
 </code></pre>
 <p>The listing would be many pages long, and likely very time-consuming to pick through, so we&rsquo;ll just skip it here. On the other hand, I can apply the jq command, a couple of other Ubuntu CLI commands, and just a little bit of finesse to get something more useful:</p>
@@ -554,10 +588,10 @@ libvirt-vm-4    Ready
 libvirt-vm-5    Ready
 libvirt-vm-6    Deployed
 </code></pre>
-<p>This is tabulated, but the number of spaces between the columns is a little big, and, if there&rsquo;s an unusually long value in one of the fields, it may throw the tabulation off for that line. Something could have been added to jq for that, but there is no need, since Ubuntu already has the column utility. Piping the output of the command so far to column -t (-t for “tabs”) will normalize the tab spacing to the data and ensure that each column is exactly long enough for the longest value in that column:</p>
+<p>This is tabulated, but the number of spaces between the columns is a little big, and, if there&rsquo;s an unusually long value in one of the fields, it may throw the tabulation off for that line. Something could have been added to jq for that, but there is no need, since Ubuntu already has the column utility. Piping the output of the command so far to column -t (-t for “tabs”) will normalise the tab spacing to the data and ensure that each column is exactly long enough for the longest value in that column:</p>
 <pre><code class="language-nohighlight">maas admin machines read | jq -r '(.[] | [.hostname, .status_name]) | @tsv' | column -t
 </code></pre>
-<p>This command result is very similar to the previous output, though you&rsquo;ll notice that the field spacing is neatly optimized to the data itself:</p>
+<p>This command result is very similar to the previous output, though you&rsquo;ll notice that the field spacing is neatly optimised to the data itself:</p>
 <pre><code class="language-nohighlight">lxd-vm-1      Deployed
 lxd-vm-2      Allocated
 lxd-vm-3      Ready
@@ -904,7 +938,7 @@ lxd-vm-3      grwpwc  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-3  r44hr6  error  Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 </code></pre>
 <h2>Summary</h2>
-<p>At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq. </p>
+<p>At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq.</p>
     </div>
   </body>
 </html>

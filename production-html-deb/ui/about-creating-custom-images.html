@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -206,11 +218,11 @@
 	  How to operate MAAS
       </strong>
 	<ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -381,7 +416,7 @@
 <p><a href="#heading--about-transforming-an-iso"><h2 id="heading--about-transforming-an-iso">About transforming an ISO</h2></a></p>
 <p>When it comes to creating images for MAAS machines, you can hand-build images, as long as they meet the <code>curtin</code> and <code>cloud-init</code> requirements; or you can use a third-party tool called  <a href="https://www.packer.io">packer</a> to prepare special versions of these images that will work with MAAS.  There are also static Ubuntu images targeted at older MAAS versions (&lt;3.1).  Beyond providing a bit of technical detail here, we won&rsquo;t shepherd you through hand-building images: you&rsquo;re pretty much on your own there.  We will try to help you understand how to create and customise MAAS-friendly images, mostly focusing on packer templates.</p>
 <p>We maintain a git repo of templates for a few popular operating systems.  You can check out this graphic of a real, running lab MAAS instance to get an idea:</p>
-<p><a href="../images/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a></p>
 <p>Packer uses templates (essentially JSON meta-data) to run different build, provisioning, and post-processing tools that produce an image MAAS can deploy, and that you can successfully access and use. These tools might be as simple as a shell command, or as specialised as the RedHat <code>anaconda</code> installer.  It really just depends on what&rsquo;s needed to prepare an image so that MAAS can deploy it.</p>
 <p>We encourage and document custom images &ndash; and help informally as much as we can &ndash; but we&rsquo;re really not able to offer much support.  After all, other OS images are built from code we don&rsquo;t own, and licensed in ways that may or may not be compatible with a MAAS deployment.  For those reasons, among others, we recommend you customise machines using <code>cloud-init</code> user_data and/or <code>curtin</code> preseed data, whenever you can, instead of creating a custom image.</p>
 <p><strong>NOTE:</strong> 
@@ -423,7 +458,7 @@ That warning bears repeating: While it may be possible to deploy a certain image
 <li><a href="#heading--about-packer-created-images">About packer-created images</a></li>
 </ul>
 <p>The <a href="https://www.packer.io/docs">packer documentation</a> has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarise packer with the following linearised flowchart:</p>
-<p><a href="../images/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg"></a></p>
 <p>We can walk through packer operation like this:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>

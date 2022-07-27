@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -205,12 +217,12 @@
       <strong>
 	  How to operate MAAS
       </strong>
-      <ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -602,7 +637,7 @@ chmod 640 /var/snap/maas/current/regiond.conf
 -rw-r----- 1 root maas  157 Sep 27 14:14 regiond.conf
 </code></pre>
 <p><a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a></p>
-<p>Since snaps are fully confined or &ldquo;sandboxed,&rdquo; they bring a lot of inherent security to the contained application.  More detailed information can be found in <a href="https://snapcraft.io/blog/where-eagles-vs Snapnap-security-overview">this snap blog </a>.</p>
+<p>Since snaps are fully confined or &ldquo;sandboxed,&rdquo; they bring a lot of inherent security to the contained application.  More detailed information can be found in <a href="https://snapcraft.io/blog/where-eagles-snap-a-closer-look">this snap blog </a>.</p>
 <p><a href="#heading--shared-secrets"><h3 id="heading--shared-secrets">Shared secrets</h2></a></p>
 <p>When you add a new rack or region controller, MAAS asks for a shared secret it will use to communicate with the rest of MAAS. This secret is also exposed in the web UI when you click the &lsquo;Add rack controller&rsquo; button on the Controllers page.  MAAS automatically generates this secret when your first region controller installed, and stores the secret in a plain text file.  This file is automatically protected with the correct permissions, so there is no need for any action on your part.</p>
 <p><a href="#heading--security-consulting"><h2 id="heading--security-consulting">Whom to contact for MAAS security consulting</h2></a></p>

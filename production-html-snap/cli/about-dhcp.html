@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -112,7 +124,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-custom-images.html">
+	  <a href="how-to-create-custom-images.html">
 	    Create custom images
 	  </a>
 	</li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -206,11 +218,11 @@
 	  How to operate MAAS
       </strong>
 	<ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -399,7 +434,7 @@
 <p>The DHCP negotiation process is known as DORA: Discover, Offer, Request, Acknowledge. Just like the exchange above, it’s carried out by the network equivalent of shouting, that is, broadcast exchanges. While the payloads for the messages carry unique addressing information (after the first DISCOVER message), the Destination IP (DIP) is always 255.255.255.255 — broadcast mode. Every machine on the network will see the packet, but they will ignore it when they look at the payload.</p>
 <p>By the way, there are several other possible responses at various points in the exchange, such as NACK (from the DHCP server, when the client has waited too long to make the request) and DECLINE (e.g., when the IP address configuration offered isn’t usable by the client).</p>
 <p>The network version of the shouting match above looks something like this:</p>
-<p><a href="../images/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg"></a></p>
 <p>Message 1 (&ldquo;DISCOVER&rdquo;) is the only one that carries no destination info in its payload.  The
 entire exchange takes place in broadcasts, rather than addressed packets. Said differently, the DIP (Destination IP address) is always 255.255.255.255, the broadcast address. The exchange becomes semi-private with the first OFFER, via the use of message payloads.</p>
 <p><a href="#heading--about-dhcp-traffic"><h2 id="heading--about-dhcp-traffic">About DHCP traffic</h2></a></p>

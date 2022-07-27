@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -205,12 +217,12 @@
       <strong>
 	  How to operate MAAS
       </strong>
-      <ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -382,15 +417,15 @@
 </ul>
 <p><a href="#heading--add-vm-from-ui"><h2 id="heading--add-vm-from-ui">How to add a VM</h2></a></p>
 <p>While on VM host&rsquo;s details view, select &lsquo;Compose&rsquo; from the &lsquo;Take action&rsquo; drop-down menu to compose a machine.</p>
-<p><a href="../images/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg"></a> </p>
 <p>You can choose which storage pool to use from a drop-down list. </p>
 <p><strong>Note</strong> that when adding more than one disk, the boot disk will be the last disk in the list.</p>
 <p>Click the &lsquo;Compose machine&rsquo; button when you&rsquo;re finished. MAAS will present the VM host detail view. In a few moments, your new machine will be auto-commissioned. The &lsquo;Machines&rsquo; page will reflect this as well.</p>
 <p>MAAS will deduct the new machine&rsquo;s resources from the VM host&rsquo;s resources:</p>
-<p><a href="../images/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg"></a> </p>
 <p><a href="#heading--delete-a-machine"><h2 id="heading--delete-a-machine">How to delete a VM</h2></a></p>
 <p>To delete a VM, delete it as you would any other MAAS machine. Select the desired machine from the list of machines and select &lsquo;Delete&rsquo; from the &lsquo;Take Action&rsquo; menu.</p>
-<p><a href="../images/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> </p>
     </div>
   </body>
 </html>

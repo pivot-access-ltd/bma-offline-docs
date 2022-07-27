@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -205,12 +217,12 @@
       <strong>
 	  How to operate MAAS
       </strong>
-      <ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -414,6 +449,7 @@
 <p>A <a href="https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call">Remote Procedure Call</a>, or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, <a href="about-controllers.html#heading--rackregion">RPC is used for communication between the region and rack controllers</a>, specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine&rsquo;s DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. </p>
 <p><a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a></p>
 <p>MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS can be listed via the CLI. If a device advertises a hostname using <code>mDNS</code> (such as with <code>avahi</code> or <code>Bonjour</code>), MAAS will also present the discovered hostname when listing devices.</p>
+<p>Using the Dashboard, an unknown discovered device can be added to MAAS as a device or as a network interface belonging to a machine or device. Clicking the down arrow to the right of a new device allows values such as &lsquo;Type&rsquo;, &lsquo;Domain&rsquo;, &lsquo;IP Assignment&rsquo; and &lsquo;Parent&rsquo; to be changed prior to the device being added. Selecting a Parent device is optional.</p>
 <p><a href="#heading--subnets"><h2 id="heading--subnets">About subnets</h2></a></p>
 <p>A <a href="https://en.wikipedia.org/wiki/Subnetwork#firstHeading">subnet</a> is a &ldquo;layer 3&rdquo; network, defined by a network address and a network mask length (in bits) and usually written in &ldquo;CIDR&rdquo; format. MAAS supports IPv4 and IPv6 subnets. Examples include:</p>
 <pre><code class="language-no-highlight">- 0.0.0/8

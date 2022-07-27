@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -205,12 +217,12 @@
       <strong>
 	  How to operate MAAS
       </strong>
-      <ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -406,7 +441,7 @@
 <p><strong>NOTE:</strong> 
 For LXD VM hosts, each VM can be assigned a single block device from the storage pool.</p>
 <p>The MAAS web UI displays information about each VM host&rsquo;s storage pools so you can understand your resource usage at a glance:</p>
-<p><a href="../images/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3387f256f9bd02f7fc2079f119377305256973c8.jpeg"></a></p>
 <p><a href="#heading--about-lxd-vm-hosts"><h2 id="heading--about-lxd-vm-hosts">About LXD VM hosts</h2></a></p>
 <p><a href="#heading--about-lxd-vm-host-auth"><h3 id="heading--about-lxd-vm-host-auth">About LXD VM host authentication</h3></a></p>
 <p>MAAS 3.1 provides a smoother experience when connecting an existing LXD server to MAAS, guiding the user through manual steps and providing increased connection security with use of certificates. Currently, each MAAS region/rack controller has its own certificate. To add a LXD VM host to MAAS, the user needs to either add the certificate for each controller that can reach the LXD server to the trust list in LXD, or use the trust_password (in which case the controller talking to LXD will automatically add its certificate to the trust).</p>
@@ -431,15 +466,15 @@ For LXD VM hosts, each VM can be assigned a single block device from the storage
 The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.</p>
 <p><a href="#heading--vm-host-project-summary"><h2 id="heading--vm-host-project-summary">About LXD VM host project summaries</h2></a></p>
 <p>Each LXD VM host provides a &ldquo;Project&rdquo; tab that summarises the current state of the LXD KVM:</p>
-<p><a href="../images/e0cc264a17d67f9530ff8c2ef2bb9522fed0749a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e0cc264a17d67f9530ff8c2ef2bb9522fed0749a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e0cc264a17d67f9530ff8c2ef2bb9522fed0749a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e0cc264a17d67f9530ff8c2ef2bb9522fed0749a.png"></a></p>
 <p>This tab identifies the project, shows its current resource state, and provides the ability to select existing VM hosts and perform specific actions on them &ndash; as well as being able to compose new VMs on the spot.</p>
 <p><a href="#heading--vm-host-resource-details"><h2 id="heading--vm-host-resource-details">About LXD VM host resource details</h2></a></p>
 <p>This tab presents a summary of the LXD VM host&rsquo;s resource usage:</p>
-<p><a href="../images/d67cf384d6fe903274893eb50a098518d2c1295d.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d67cf384d6fe903274893eb50a098518d2c1295d.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/d67cf384d6fe903274893eb50a098518d2c1295d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d67cf384d6fe903274893eb50a098518d2c1295d.png"></a></p>
 <p>The only interactive option on this tab allows you to map or unmap resource usage to NUMA nodes.</p>
 <p><a href="#heading--configuration"><h2 id="heading--configuration">About VM host settings</h2></a></p>
 <p>VM hosts have several settings. Modify these by selecting the &lsquo;Settings&rsquo; tab and editing items directly. Options include a VM host&rsquo;s address, password, network zone, resource pool, and memory and CPU overcommit sliders.</p>
-<p><a href="../images/253afc122d61145be656bb5c3811f9b6c6caa708.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/253afc122d61145be656bb5c3811f9b6c6caa708.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/253afc122d61145be656bb5c3811f9b6c6caa708.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/253afc122d61145be656bb5c3811f9b6c6caa708.png"></a></p>
 <p>Please use the UI interface to interact with LXD VM hosts, by selecting &ldquo;UI&rdquo; from the dropdown above.</p>
 <p><a href="#heading--about-vms-and-numa"><h2 id="heading--about-vms-and-numa">About VMs and NUMA</h2></a></p>
 <p>MAAS provides extensive optimisation tools for using NUMA with virtual machines. Earlier versions of MAAS guarantee that machines are assigned to a single NUMA node that contains all the machine&rsquo;s resources. As of 2.9, MAAS now allows you to see how many VMs are allocated to each NUMA node, along with the allocations of cores, storage, and memory. You can quickly spot a VM running in multiple NUMA nodes, and optimise accordingly, with instant updates on pinning and allocations. You can also tell which VMs are currently running.</p>
@@ -470,7 +505,7 @@ The imported key must not have a passphrase; otherwise, MAAS will not be able to
 <li><code>32 physical CPU cores * 10.0 multiplier  = 320 virtual CPU cores</code></li>
 <li><code>128GB physical memory  * 5.5 multiplier  = 704G virtual Memory</code></li>
 </ol>
-<p><a href="../images/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/27a8f21392af3d29a500e33f99e1f79c578cf29c.jpeg"></a> </p>
 <p>Please use the MAAS UI to view overcommit ratios for NUMA resources.</p>
 <p>Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.</p>
     </div>

@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -112,7 +124,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-custom-images.html">
+	  <a href="how-to-create-custom-images.html">
 	    Create custom images
 	  </a>
 	</li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -206,11 +218,11 @@
 	  How to operate MAAS
       </strong>
 	<ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -609,24 +644,24 @@ MAAS will automatically discover and store the resources your VM host contains. 
 <p>LXD clusters within the context of MAAS are a way of viewing and managing existing VM host clusters and composing VMs within said cluster.  MAAS will not create a new cluster, but will discover an existing cluster when you provide the info for adding a single clustered host.</p>
 <p><a href="#heading--how-to-add-lxd-clusters"><h4 id="heading--how-to-add-lxd-clusters">How to add LXD clusters</h4></a></p>
 <p>MAAS assumes you have already configured a cluster within the context of LXD. You then need to configure said cluster with a single trust MAAS will use to communicate with said cluster. Adding a LXD cluster is similar to adding a single LXD host, in that you provide authentication the same way for a single host within the cluster, and then select a project. The only difference is the name you provide will be used for the cluster instead of the individual host. MAAS will then connect to the provided host and discover the other hosts within the cluster, and rename the initially defined host with the cluster member name configured in LXD.</p>
-<p><a href="../images/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a></p>
 <p>First, add an LXD KVM:</p>
-<p><a href="../images/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a></p>
 <p>Next, set up credentials and get your MAAS certificate trusted by LXD:</p>
-<p><a href="../images/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a></p>
 <p>Once it is connected, you can select the project in that cluster:</p>
-<p><a href="../images/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a></p>
 <p>If the KVM host address is part of a cluster, it will show as a Cluster on the listing page. </p>
-<p><a href="../images/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a></p>
 <p><a href="#heading--how-to-compose-vms-in-lxd-clusters"><h4 id="heading--how-to-compose-vms-in-lxd-clusters">How to compose VMs in LXD clusters</h4></a></p>
 <p>Composing a VM in a LXD cluster via MAAS is similar to composing a VM for a single VM host. MAAS does not provide any sort of scheduling of said VM, and will instead target the host you select for composing the VM.</p>
 <p>From the KVM host listing page, click on the <code>+</code> icon to add a VM to a specific host:</p>
-<p><a href="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
 <p>If you are in a specific KVM host page, you can click <code>+ add virtual machine</code>:</p>
-<p><a href="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
 <p><a href="#heading--how-to-delete-lxd-clusters"><h3 id="heading--how-to-delete-lxd-clusters">How to delete LXD clusters</h3></a></p>
 <p>To delete a LXD cluster, delete any one VM host within the cluster, this will delete the cluster and all members within the cluster:</p>
-<p><a href="../images/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a></p>
     </div>
   </body>
 </html>

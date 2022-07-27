@@ -36,6 +36,13 @@
 	  Home
 	</a>
       </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
       <p/>
       <strong>
 	  Tutorials
@@ -68,7 +75,12 @@
       <ul>
 	<li>
 	  <a href="how-to-install-maas.html">
-	    Install MAAS
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
 	  </a>
 	</li>
 	<li>
@@ -143,7 +155,7 @@
 	</li>
 	<li>
 	  <a href="how-to-deploy-machines.html">
-	    Commission and deploy machines
+	    Deploy machines
 	  </a>
 	</li>
 	<li>
@@ -205,12 +217,12 @@
       <strong>
 	  How to operate MAAS
       </strong>
-      <ul>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
 	  <li>
 	    <a href="how-to-set-up-maas-metrics.html">
 	      Set up MAAS metrics
@@ -246,24 +258,36 @@
 	    Search MAAS
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade older versions
-	  </a>
-	</li>
-      </ul>
+	</ul>
+      <p/>
       <strong>
-	  Reference
+	  API Reference
       </strong>
       <ul>
 	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
+	  <a href="api-authentication-reference.html">
+	    API authentication
 	  </a>
 	</li>
 	<li>
-	  <a href="power-management-reference.html">
-	    Power management
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
 	  </a>
 	</li>
 	<li>
@@ -282,25 +306,35 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="audit-event-log-reference.html">
-	    Audit event log reference
+	  <a href="maas-performance.html">
+	    MAAS performance
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
-	    API documentation
+	  <a href="power-management-reference.html">
+	    Power management
 	  </a>
 	</li>
 	<li>
-	  <a href="python-api-client-reference.html">
-	    API client
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
 	  </a>
 	</li>
 	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
+	  <a href="installation-requirements.html">
+	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -312,6 +346,7 @@
 	  </a>
 	</li>
       </ul>
+      <p/>
       <strong>
 	  Explanations
       </strong>
@@ -385,12 +420,12 @@
 <li><a href="#heading--change-password">How users can change their password</a></li>
 </ul>
 <p>You can manage user accounts from the &lsquo;Users&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
-<p><a href="../images/76402e4b-manage-user-accounts__2.4_current-users.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/76402e4b-manage-user-accounts__2.4_current-users.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png"></a></p>
 <p><strong>NOTE:</strong> 
 A currently logged in user cannot delete themselves from the web UI.</p>
 <p><a href="#heading--add-a-user"><h2 id="heading--add-a-user">How to add a user</h2></a></p>
 <p>Clicking the &lsquo;Add user&rsquo; button will result in a form to be displayed:</p>
-<p><a href="../images/1c59c2c5-manage-user-accounts__2.4_add-user.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/1c59c2c5-manage-user-accounts__2.4_add-user.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/1c59c2c5-manage-user-accounts__2.4_add-user.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/1c59c2c5-manage-user-accounts__2.4_add-user.png"></a></p>
 <p>Fill in the fields and hit &lsquo;Add user&rsquo; when done.</p>
 <p><a href="#heading--user-preferences"><h2 id="heading--user-preferences">How to change a user&rsquo;s preferences</h2></a></p>
 <p>Clicking the MAAS username in the top right corner will show that user&rsquo;s preferences.</p>
@@ -404,13 +439,13 @@ Success.
 The user normally imports their initial SSH key on the first login to the web UI.</p>
 <p>To add a locally-generated public key, select &lsquo;Upload&rsquo; from the &lsquo;Source&rsquo; menu and paste the complete contents of your key file, usually called <code>id_rsa.pub</code>, into the &lsquo;Public key&rsquo; field. Click &lsquo;Import&rsquo; to add the key to MAAS.</p>
 <p>Public keys residing on either <a href="https://help.launchpad.net/YourAccount">Launchpad</a> or <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">GitHub</a> can also be added. Select either from the &lsquo;Source&rsquo; menu and specify the user ID associated with the key(s). Press the &lsquo;Import&rsquo; button to add any keys MAAS discovers to the current user&rsquo;s MAAS account.</p>
-<p><a href="../images/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a></p>
 <p><a href="#heading--api-key"><h3 id="heading--api-key">How to add an API key for a user</h3></a></p>
 <p>The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the <a href="how-to-use-the-maas-cli.html">MAAS CLI</a>.  Other services connecting to MAAS such as Juju will also need this key.</p>
 <p>We recommend that you use the web UI to set or change a user&rsquo;s API key.  To see how, select the &ldquo;UI&rdquo; choice in the dropdown above.</p>
 <p><a href="#heading--change-password"><h3 id="heading--change-password">How users can change their password</h3></a></p>
 <p>The current user can change their password at the bottom of the page by entering the old password and entering the new password twice. Click &lsquo;Save password&rsquo; to finish.</p>
-<p><a href="../images/289ef578-manage-user-accounts__2.4_change-user-password.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/289ef578-manage-user-accounts__2.4_change-user-password.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png"></a></p>
 <p><strong>NOTE:</strong> 
 An administrator can change any user&rsquo;s password from within the &lsquo;Users&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
 <p>We recommend that you use the web UI to change user passwords.  To see how, select the &ldquo;UI&rdquo; choice in the dropdown above.</p>

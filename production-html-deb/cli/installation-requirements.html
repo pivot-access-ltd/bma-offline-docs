@@ -22,13 +22,13 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  &nbsp;UI-only&nbsp;
-      </span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/zork">
-	  CLI-only
+	<a href="../ui/installation-requirements.html">
+	  UI-only
 	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
@@ -334,6 +334,7 @@
 	    Installation requirements
 	  </a>
 	</li>
+
 	<li>
 	  <a href="maas-concepts-and-terms-reference.html">
 	    Concepts & terms
@@ -408,7 +409,103 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  {{content}}
+  <h1>installation requirements</h1><!-- "installation requirements" -->
+<p><a href="#heading--check-system-requirements-for-maas"><h2 id="heading--check-system-requirements-for-maas">How to check system requirements for MAAS</h2></a></p>
+<p>Before installing MAAS for the first time, you should make sure that the target system meets the minimum requirements for the machines that run MAAS, which vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.</p>
+<p><a href="#heading--test-environment"><h2 id="heading--test-environment">Requirements for a test environment</h2></a></p>
+<p>Here is a proof-of-concept scenario, with all MAAS components installed on a single host. This scenario assumes two complete sets of images (latest two Ubuntu LTS releases) for a single architecture (amd64).</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Memory (MB)</th>
+<th align="right">CPU (GHz)</th>
+<th align="right">Disk (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="maas-concepts-and-terms-reference.html#heading--controllers">Region controller</a> (minus PostgreSQL)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">PostgreSQL</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left"><a href="maas-concepts-and-terms-reference.html#heading--controllers&quot;">Rack controller</a></td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">Ubuntu Server (including logs)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<p>Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.</p>
+<p><a href="#heading--production-environment"><h2 id="heading--production-environment">Requirements for a production environment</h2></a></p>
+<p>Here is a production scenario designed to handle a high number of sustained client connections. This scenario implements both high availability (region and rack) and load balancing (region). MAAS reserves extra space for images (database and rack controller), while some images, such as those for Microsoft Windows, may require a lot more &ndash; so plan accordingly.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Memory (MB)</th>
+<th align="right">CPU (GHz)</th>
+<th align="right">Disk (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="maas-concepts-and-terms-reference.html#heading--controllers">Region controller</a> (minus PostgreSQL)</td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">PostgreSQL</td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="left"><a href="maas-concepts-and-terms-reference.html#heading--controllers&quot;">Rack controller</a></td>
+<td align="right">2048</td>
+<td align="right">2.0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="left">Ubuntu Server (including logs)</td>
+<td align="right">512</td>
+<td align="right">0.5</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<p>So, based on the above, the approximate requirements for this scenario are:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>A region controller (including PostgreSQL) installed on one host, with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
+<li>A duplicate region controller (including PostgreSQL) on a second host, also with 4.5 GB memory, 4.5 GHz CPU, and 45 GB of disk space.</li>
+<li>A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
+<li>A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.</li>
+</ul>
+<p>The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see <a href="power-management-reference.html">Power management</a> for more details.</p>
+<p>Some examples of factors that influence hardware specifications include:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>the number of connecting clients (client activity)</li>
+<li>how you decide to distribute services</li>
+<li>whether or not you use <a href="how-to-enable-high-availability.html">high availability/load balancing</a>.</li>
+<li>the number of images that you choose to store (disk space affecting PostgreSQL and the rack controller)</li>
+</ul>
+<p>Also, this discussion does not take into account a possible local image mirror, which would be a large consumer of disk space.</p>
+<p>One rack controller should only service 1000 machines or less, regardless of how you distribute them across subnets. There is no load balancing at the rack level, so you will need additional, independent rack controllers. Each controller must service its own subnet(s).</p>
     </div>
   </body>
 </html>
