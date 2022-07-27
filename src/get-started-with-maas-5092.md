@@ -1,4 +1,4 @@
-<!-- "Getting started with MAAS" -->
+<!-- "Get started with MAAS" -->
 
 What is "MAAS"?  Simply put, MAAS lets you completely control physical and virtual machines from anywhere, as long as you can network-boot the machines.
 
@@ -76,8 +76,6 @@ Unpacking postgresql (12+214) ...
 Setting up postgresql (12+214) ...
 ```
 
-## Initialisation
-
 Yep, version 12.  Now we need to set up a PostgreSQL user:
 
 ```nohighlight
@@ -98,6 +96,8 @@ sudo vi /etc/postgresql/12/main/pg_hba.conf
 host    maasclidb       maascli         0/0                     md5
 ```
 
+<a href="heading--maas-url"><h3 id="heading--mass-url">MAAS URL</h3></a>
+
 Finally, we can initialise MAAS, like this:
 
 ```nohighlight
@@ -105,7 +105,13 @@ sudo maas init region+rack --database-uri "postgres://maascli:maascli@localhost/
 MAAS URL [default=http://192.168.43.251:5240/MAAS]:
 ```
 
-This command offers me a bit of important feedback, the MAAS URL, which will be needed for the CLI login.  That's followed by a running commentary on the steps MAAS is taking to start up.
+This command offers me a bit of important feedback, the MAAS URL, which will be needed for the CLI login.
+
+[note]
+You really want to write down that MAAS URL.  You will use it a lot, whether you log in with the CLI or the UI.
+[/note]
+
+That's followed by a running commentary on the steps MAAS is taking to start up.
 
 It all ends with the following admonition:
 
