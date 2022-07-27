@@ -2,7 +2,7 @@
 
 What is "MAAS"?  Simply put, MAAS lets you completely control physical and virtual machines from anywhere, as long as you can network-boot the machines.
 
-Let's install MAAS and get some machines up and running, using the MAAS CLI, and you'll understand mroe about what that means.
+Let's install MAAS and get some machines up and running, using the MAAS CLI, and you'll understand more about what that means.
 
 ## Installation
 
@@ -3078,3 +3078,5 @@ On my machine, it didn't copy the permissions precisely, but it is executable by
 ## Summary
 
 As you see, it's not that difficult to install MAAS, deploy a machine, and then load usable software on it. Now you can go through the MAAS documenation to learn more about what you just did.
+
+
