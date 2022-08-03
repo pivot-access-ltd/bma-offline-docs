@@ -7,7 +7,7 @@ Here you will find release notes for:
 
 <a href="#heading--3-2-1-maas-release-notes"><h2 id="heading--3-2-1-maas-release-notes">MAAS 3.2.1 release notes</h2></a>
 
-We are happy to announce that MAAS 3.2.1 has been released.  This point release of MAAS 3.2.1 provides support for Rocky Linux UEFI ([bug number 1955671](https://bugs.launchpad.net/bugs/1955671), along with fixes for a number of recently-reported bugs:
+We are happy to announce that MAAS 3.2.1 has been released.  This point release of MAAS 3.2.1 provides support for Rocky Linux UEFI ([bug number 1955671](https://bugs.launchpad.net/bugs/1955671)), along with fixes for a number of recently-reported bugs:
 
 - #1955671: [support for rocky linux UEFI](https://bugs.launchpad.net/bugs/1955671)
 - #1980436: [MAAS CLI with anonymous access fails when TLS is enabled](https://bugs.launchpad.net/bugs/1980436)
