@@ -465,7 +465,9 @@ coreutils   8.32-4.1ubuntu1
 cpio    2.13+dfsg-7
 cron    3.0pl1-137ubuntu3
 </code></pre>
-<p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  If you should choose to create a <a href="how-to-create-custom-images.html">custom image</a> based on some other operating system, you will need a suitable template for <a href="https://www.packer.io/">packer</a> in order to create an image that MAAS can deploy and boot.  Canonical informally maintains <a href="https://github.com/canonical/packer-maas">quite a few of them</a>, although it isn&rsquo;t impossible to create your own.</p>
+<p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  Here&rsquo;s a conceptual view of the way that these images get booted into running MAAS machines:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c7ab7d1d6413dfcdf81e02cb901b09d6f784f0f6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7ab7d1d6413dfcdf81e02cb901b09d6f784f0f6.png"></a></p>
+<p>Note that the arrows don&rsquo;t imply direct action so much as a rough sequence of how the various pieces get loaded.  There are plenty of Ubuntu images available to load.  If you should choose to create a <a href="how-to-create-custom-images.html">custom image</a> based on some other operating system, you will need a suitable template for <a href="https://www.packer.io/">packer</a> &ndash; in order to create an image that MAAS can deploy and boot.  Canonical informally maintains <a href="https://github.com/canonical/packer-maas">quite a few of them</a>, although it isn&rsquo;t impossible to create your own.</p>
 <p><a href="#heading--boot-sources"><h2 id="heading--boot-sources">About boot sources and why they matter</h2></a></p>
 <p>A region controller downloads its images from a boot source. The main characteristics of a boot source are location (URL) and an associated GPG public keyring.</p>
 <p><strong>NOTE:</strong> 
