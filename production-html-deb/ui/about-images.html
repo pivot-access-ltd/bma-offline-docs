@@ -425,7 +425,7 @@
 <li>a <a href="https://images.maas.io/ephemeral-v3/stable/bootloaders/">bootloader</a>, which boots the computer to the point that an operating system can be loaded.  MAAS currently uses one of three types of bootloaders: open firmware, PXE, and UEFI.</li>
 <li>a <a href="https://images.maas.io/ephemeral-v3/stable/jammy/amd64/20220718/ga-22.04/generic/">bootable kernel</a>, like the general availability amd64 kernel visible at the link as &ldquo;boot-kernel&rdquo;.</li>
 <li>an <a href="https://images.maas.io/ephemeral-v3/stable/jammy/amd64/20220718/ga-22.04/generic/">initial ramdisk</a>, the &ldquo;boot-initrd&rdquo; file also visible at the given link.</li>
-<li>a <a href="https://images.maas.io/ephemeral-v3/stable/jammy/amd64/2022071/8">squashfs filesystem</a>, which provides a basic disk image of system components and applications needed to get the system to a usable state.</li>
+<li>a <a href="https://images.maas.io/ephemeral-v3/stable/jammy/amd64/20220718">squashfs filesystem</a>, which provides a basic disk image of system components and applications needed to get the system to a usable state.</li>
 </ul>
 <p>If you glance at the <code>squashfs.manifest</code>, you&rsquo;ll see something like this:</p>
 <pre><code class="language-nohighlight">adduser 3.118ubuntu5
@@ -465,7 +465,7 @@ coreutils   8.32-4.1ubuntu1
 cpio    2.13+dfsg-7
 cron    3.0pl1-137ubuntu3
 </code></pre>
-<p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  If you should choose to create a <a href="how-to-create-custom-images.html">custom image</a> based on some other operating system, you will need a suitable <a href="https://github.com/canonical/packer-maas">template</a> for <a href="https://www.packer.io/">packer</a> in order to create an image that MAAS can deploy and boot.</p>
+<p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  If you should choose to create a <a href="how-to-create-custom-images.html">custom image</a> based on some other operating system, you will need a suitable template for <a href="https://www.packer.io/">packer</a> in order to create an image that MAAS can deploy and boot.  Canonical informally maintains <a href="https://github.com/canonical/packer-maas">quite a few of them</a>, although it isn&rsquo;t impossible to create your own.</p>
 <p><a href="#heading--boot-sources"><h2 id="heading--boot-sources">About boot sources and why they matter</h2></a></p>
 <p>A region controller downloads its images from a boot source. The main characteristics of a boot source are location (URL) and an associated GPG public keyring.</p>
 <p><strong>NOTE:</strong> 

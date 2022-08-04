@@ -16,7 +16,7 @@ MAAS images are more than just the operating system kernel.  In fact, a usable M
 - a [bootloader](https://images.maas.io/ephemeral-v3/stable/bootloaders/), which boots the computer to the point that an operating system can be loaded.  MAAS currently uses one of three types of bootloaders: open firmware, PXE, and UEFI.
 - a [bootable kernel](https://images.maas.io/ephemeral-v3/stable/jammy/amd64/20220718/ga-22.04/generic/), like the general availability amd64 kernel visible at the link as "boot-kernel".
 - an [initial ramdisk](https://images.maas.io/ephemeral-v3/stable/jammy/amd64/20220718/ga-22.04/generic/), the "boot-initrd" file also visible at the given link.
-- a [squashfs filesystem](https://images.maas.io/ephemeral-v3/stable/jammy/amd64/2022071/8), which provides a basic disk image of system components and applications needed to get the system to a usable state.
+- a [squashfs filesystem](https://images.maas.io/ephemeral-v3/stable/jammy/amd64/20220718), which provides a basic disk image of system components and applications needed to get the system to a usable state.
 
 If you glance at the `squashfs.manifest`, you'll see something like this:
 
@@ -59,7 +59,7 @@ cpio	2.13+dfsg-7
 cron	3.0pl1-137ubuntu3
 ```
 
-This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  If you should choose to create a [custom image](/t/how-to-create-custom-images/5104) based on some other operating system, you will need a suitable [template](https://github.com/canonical/packer-maas) for [packer](https://www.packer.io/) in order to create an image that MAAS can deploy and boot.
+This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  If you should choose to create a [custom image](/t/how-to-create-custom-images/5104) based on some other operating system, you will need a suitable template for [packer](https://www.packer.io/) in order to create an image that MAAS can deploy and boot.  Canonical informally maintains [quite a few of them](https://github.com/canonical/packer-maas), although it isn't impossible to create your own.
 
 <a href="#heading--boot-sources"><h2 id="heading--boot-sources">About boot sources and why they matter</h2></a>
 
