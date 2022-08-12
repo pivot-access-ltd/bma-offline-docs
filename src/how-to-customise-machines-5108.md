@@ -1418,7 +1418,7 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 [tab version="v3.2 Snap,v3.2 Packages" view="UI"]
 <a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a>
 
-To enable Hardware sync on a machine, select a machine from the machine listd and choose deploy from the "Take action" dropdown menu:
+To enable Hardware sync on a machine, select a machine from the machine list and choose deploy from the "Take action" dropdown menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png"></a>
 
