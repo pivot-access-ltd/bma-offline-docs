@@ -6,6 +6,7 @@ With your network properly configured, and suitable images selected and download
 
 Here are some theoretical aspects of machines to consider:
 
+- [How images get deployed](/t/about-images/5076#heading--how-images-deploy): The overall deployment process can be expressed as a fairly simple flowchart, which illustrates the role of various features and components of MAAS in the machine life-cycle.
 - [About controllers](/t/about-controllers/5072): Most of the functionality of MAAS is contained in a series of controllers. There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines. In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.  Knowing how these controllers communicate -- and divvy up the workload -- can be very useful when operating MAAS.
 - [About machines](/t/about-machines/5080): Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers.
 - [About customising machines](/t/about-customising-machines/5976): Prior to deployment, MAAS machines can be customised in a number of ways. Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.
