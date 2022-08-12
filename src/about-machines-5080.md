@@ -630,7 +630,7 @@ Once commissioned, you can configure the machine's network interface(s). Specifi
 
 <a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a>
 
-Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it, along with any other application loads you wish to run on that machine.
+Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to [install an operating system on it](/t/about-images/5076#heading--how-images-deploy), along with any other application loads you wish to run on that machine.
 
 Before deploying a machine, MAAS must allocate it (status 'Allocated'). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
 
