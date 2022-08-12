@@ -9,11 +9,11 @@ This article explains a little more about how MAAS images differ from a standard
 
 When it comes to creating images for MAAS machines, you can hand-build images, as long as they meet the `curtin` and `cloud-init` requirements; or you can use a third-party tool called  [packer](https://www.packer.io) to prepare special versions of these images that will work with MAAS.  There are also static Ubuntu images targeted at older MAAS versions (<3.1).  Beyond providing a bit of technical detail here, we won't shepherd you through hand-building images: you're pretty much on your own there.  We will try to help you understand how to create and customise MAAS-friendly images, mostly focusing on packer templates.
 
-We maintain a git repo of templates for a few popular operating systems.  You can check out this graphic of a real, running lab MAAS instance to get an idea:
+We maintain a [git repo](https://github.com/canonical/packer-maas) of packer templates for a few popular operating systems.  You can check out this graphic of a real, running lab MAAS instance to get an idea:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a>
 
-Packer uses templates (essentially JSON meta-data) to run different build, provisioning, and post-processing tools that produce an image MAAS can deploy, and that you can successfully access and use. These tools might be as simple as a shell command, or as specialised as the RedHat `anaconda` installer.  It really just depends on what's needed to prepare an image so that MAAS can deploy it.
+Packer uses templates (built in HCL2) to run different build, provisioning, and post-processing tools that produce an image MAAS can deploy -- one that you can successfully access and use. These tools might be as simple as a shell command, or as specialised as the RedHat `anaconda` installer.  It really just depends on what's needed to prepare an image so that MAAS can deploy it.
 
 We encourage and document custom images -- and help informally as much as we can -- but we're really not able to offer much support.  After all, other OS images are built from code we don't own, and licensed in ways that may or may not be compatible with a MAAS deployment.  For those reasons, among others, we recommend you customise machines using `cloud-init` user_data and/or `curtin` preseed data, whenever you can, instead of creating a custom image.
 
@@ -40,7 +40,7 @@ If you're using newer versions of MAAS (>3.0), we recommend choosing packer, sin
 
 <a href="#heading--about-uploading-hand-built-ubuntu-images"><h3 id="heading--about-uploading-hand-built-ubuntu-images">About uploading hand-built Ubuntu images</h3></a>
 
-You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as [packer](https://github.com/canonical/packer-maas), or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.
+You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as [packer](https://www.packer.io), or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.
 
 At a minimum, this image must contain a kernel, a bootloader, and a `/curtin/curtin-hooks` script that configures the network. A sample can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.
 
@@ -83,7 +83,7 @@ The [packer documentation](https://www.packer.io/docs) has an excellent, in-dept
 
 We can walk through packer operation like this:
 
- - A template is created or obtained which drives the packer build.  The [packer-maas](https://github.com/canonical/packer-maas) repository uses JSON templates.
+ - A template is created or obtained which drives the packer build.  The [packer-maas](https://github.com/canonical/packer-maas) repository uses HCL2 templates.
 
  - The template specifies packer commands and data sources.
 
@@ -112,294 +112,447 @@ These dependencies -- and the functionality they provide -- will be explained in
 
 <a href="#heading--about-packer-templates"><h2 id="heading--about-packer-templates">About packer templates</h2></a>
 
-A [packer template](https://www.packer.io/docs/templates) could just as easily be called a "packer script".  It contains declarations and commands that sequence and configure plugins.  Templates also have built-in functions to help you customise your artefacts. While packer is slowly transitioning to a dedicated language called HCL2, packer-maas still depends on JSON templates.
+A [packer template](https://www.packer.io/docs/templates) could just as easily be called a "packer script".  It contains declarations and commands that sequence and configure plugins.  Templates also have built-in functions to help you customise your artefacts. Our packer-maas templates are implemented in HCL2.
 
-Templates are run by the packer `build` command.  Within packer-maas, packer commands (like `build`) are collected into makefiles that prevent you from having to know a lot about how packer works.  Even so, it's beneficial to take a quick tour of how a typical packer template works.  Let's use the [ubuntu-flat](https://github.com/canonical/packer-maas/blob/master/ubuntu/ubuntu-flat.json) template as a simple example.
+Templates are run by the packer `build` command.  Within packer-maas, packer commands (like `build`) are collected into makefiles that prevent you from having to know a lot about how packer works.  Even so, it's beneficial to take a quick tour of how a typical packer template works.  Let's use the [ubuntu-cloudimg](https://github.com/canonical/packer-maas/blob/master/ubuntu/ubuntu-cloudimg.pkr.hcl) template as a simple example.
 
 [note]
-Building workable templates is extremely difficult. This section is intended to familiarise you with templates and their components so that you can possibly pinpoint bugs in community-provided templates.  If you want to build your own template, you should rely on the [packer documentation](https://www.packer.io/docs) as your guide.
+Building workable templates can be extremely difficult. This section is intended to familiarise you with templates and their components so that you can possibly pinpoint bugs in community-provided templates.  If you want to build your own template, you should rely on the [packer documentation](https://www.packer.io/docs) as your guide.
 [/note]
 
 This template builds a customised Ubuntu image with packer:
 
 ```nohighlight
-{
-    "variables": {
-        "name": "ubuntu-20.04",
-        "http_directory": "http",
-        "http_proxy": "{{env `http_proxy`}}",
-        "https_proxy": "{{env `https_proxy`}}",
-        "no_proxy": "{{env `no_proxy`}}",
-        "ssh_username": "ubuntu",
-        "ssh_password": "ubuntu"
-    },
-    "builders": [
-        {
-            "boot_command": [
-                "<wait>e<wait5>",
-                "<down><wait><down><wait><down><wait2><end><wait5>",
-                "<bs><bs><bs><bs><wait>autoinstall ---<wait><f10>"
-            ],
-            "boot_wait": "2s",
-            "cpus": 2,
-            "disk_size": "4G",
-            "headless": true,
-            "http_directory": "{{user `http_directory`}}",
-            "iso_checksum": "file:http://releases.ubuntu.com/20.04/SHA256SUMS",
-            "iso_url": "https://releases.ubuntu.com/focal/ubuntu-20.04.4-live-server-amd64.iso",
-            "iso_target_path": "packer_cache/ubuntu.iso",
-            "memory": 1024,
-            "type": "qemu",
-            "format": "raw",
-            "qemuargs": [
-                [ "-vga", "qxl"],
-                [ "-device", "virtio-blk-pci,drive=drive0,bootindex=0" ],
-                [ "-device", "virtio-blk-pci,drive=cdrom0,bootindex=1" ],
-                [ "-device", "virtio-blk-pci,drive=drive1,bootindex=2" ],
-                [ "-drive", "if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE.fd"],
-                [ "-drive", "if=pflash,format=raw,file=OVMF_VARS.fd"],
-                [ "-drive", "file=output-qemu/packer-qemu,if=none,id=drive0,cache=writeback,discard=ignore,format=raw"],
-                [ "-drive", "file=seeds-flat.iso,format=raw,cache=none,if=none,id=drive1"],
-                [ "-drive", "file=packer_cache/ubuntu.iso,if=none,id=cdrom0,media=cdrom" ]
-            ],
-            "shutdown_command": "sudo -S shutdown -P now",
-            "ssh_username": "{{user `ssh_username`}}",
-            "ssh_password": "{{user `ssh_password`}}",
-            "ssh_handshake_attempts": 500,
-            "ssh_wait_timeout": "45m",
-            "ssh_timeout": "45m"
-        }
-    ],
-    "provisioners": [
-        {
-            "type": "file",
-            "sources": [
-                "{{template_dir}}/scripts/curtin-hooks",
-                "{{template_dir}}/scripts/install-custom-packages",
-                "{{template_dir}}/scripts/setup-bootloader",
-                "{{template_dir}}/packages/custom-packages.tar.gz"
-            ],
-            "destination": "/tmp/"
-        },
-        {
-            "environment_vars": [
-                "HOME_DIR=/home/ubuntu",
-                "http_proxy={{user `http_proxy`}}",
-                "https_proxy={{user `https_proxy`}}",
-                "no_proxy={{user `no_proxy`}}"
-            ],
-            "execute_command": "echo 'ubuntu' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
-            "expect_disconnect": true,
-            "scripts": [
-                "{{template_dir}}/scripts/curtin.sh",
-                "{{template_dir}}/scripts/networking.sh",
-                "{{template_dir}}/scripts/cleanup.sh"
-            ],
-            "type": "shell"
-        }
-    ],
-    "post-processors": [
-        {
-            "type": "shell-local",
-            "inline_shebang": "/bin/bash -e",
-            "inline": [
-                "IMG_FMT=raw",
-                "source ../scripts/setup-nbd",
-                "OUTPUT=${OUTPUT:-custom-ubuntu.tar.gz}",
-                "source ./scripts/tar-rootfs"
-            ]
-        }
+packer {
+  required_version = ">= 1.7.0"
+  required_plugins {
+    qemu = {
+      version = "~> 1.0"
+      source  = "github.com/hashicorp/qemu"
+    }
+  }
+}
+
+variable "ubuntu_series" {
+  type        = string
+  default     = "focal"
+  description = "The codename of the Ubuntu series to build."
+}
+
+variable "filename" {
+  type        = string
+  default     = "custom-cloudimg.tar.gz"
+  description = "The filename of the tarball to produce"
+}
+
+variable "kernel" {
+  type        = string
+  default     = ""
+  description = "The package name of the kernel to install. May include version string, e.g linux-image-generic-hwe-22.04=5.15.0.41.43"
+}
+
+variable "customize_script" {
+  type        = string
+  description = "The filename of the script that will run in the VM to customize the image."
+}
+
+variable "architecture" {
+  type        = string
+  default     = "amd64"
+  description = "The architecture to build the image for (amd64 or arm64)"
+}
+
+variable "headless" {
+  type        = bool
+  default     = true
+  description = "Whether VNC viewer should not be launched."
+}
+
+variable "http_directory" {
+  type        = string
+  default     = "http"
+  description = "Directory for files to be accessed over http in the VM."
+}
+
+variable "http_proxy" {
+  type        = string
+  default     = "${env("http_proxy")}"
+  description = "HTTP proxy to use when customizing the image inside the VM. The http_proxy enviroment is set, and apt is configured to use the http proxy"
+}
+
+variable "https_proxy" {
+  type        = string
+  default     = "${env("https_proxy")}"
+  description = "HTTPS proxy to use when customizing the image inside the VM. The https_proxy enviroment is set, and apt is configured to use the https proxy"
+}
+
+variable "no_proxy" {
+  type        = string
+  default     = "${env("no_proxy")}"
+  description = "NO_PROXY environment to use when customizing the image inside the VM."
+}
+
+variable "ssh_password" {
+  type        = string
+  default     = "ubuntu"
+  description = "SSH password to use to connect to the VM to customize the image. Needs to match the hashed password in user-data-cloudimg."
+}
+
+variable "ssh_username" {
+  type        = string
+  default     = "root"
+  description = "SSH user to use to connect to the VM to customize the image. Needs to match the user in user-data-cloudimg."
+}
+
+locals {
+  qemu_arch = {
+    "amd64" = "x86_64"
+    "arm64" = "aarch64"
+  }
+  uefi_imp = {
+    "amd64" = "OVMF"
+    "arm64" = "AAVMF"
+  }
+  qemu_machine = {
+    "amd64" = "ubuntu,accel=kvm"
+    "arm64" = "virt"
+  }
+  qemu_cpu = {
+    "amd64" = "host"
+    "arm64" = "cortex-a57"
+  }
+
+  proxy_env = [
+    "http_proxy=${var.http_proxy}",
+    "https_proxy=${var.https_proxy}",
+    "no_proxy=${var.https_proxy}",
+  ]
+}
+
+
+source "qemu" "cloudimg" {
+  boot_wait      = "2s"
+  cpus           = 2
+  disk_image     = true
+  disk_size      = "4G"
+  format         = "qcow2"
+  headless       = var.headless
+  http_directory = var.http_directory
+  iso_checksum   = "file:https://cloud-images.ubuntu.com/${var.ubuntu_series}/current/SHA256SUMS"
+  iso_url        = "https://cloud-images.ubuntu.com/${var.ubuntu_series}/current/${var.ubuntu_series}-server-cloudimg-${var.architecture}.img"
+  memory         = 2048
+  qemu_binary    = "qemu-system-${lookup(local.qemu_arch, var.architecture, "")}"
+  qemu_img_args {
+    create = ["-F", "qcow2"]
+  }
+  qemuargs = [
+    ["-machine", "${lookup(local.qemu_machine, var.architecture, "")}"],
+    ["-cpu", "${lookup(local.qemu_cpu, var.architecture, "")}"],
+    ["-device", "virtio-gpu-pci"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_code,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_CODE.fd"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_vars,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_VARS.fd"],
+    ["-drive", "file=output-qemu/packer-qemu,format=qcow2"],
+    ["-drive", "file=seeds-cloudimg.iso,format=raw"]
+  ]
+  shutdown_command       = "sudo -S shutdown -P now"
+  ssh_handshake_attempts = 500
+  ssh_password           = var.ssh_password
+  ssh_timeout            = "45m"
+  ssh_username           = var.ssh_username
+  ssh_wait_timeout       = "45m"
+  use_backing_file       = true
+}
+
+build {
+  sources = ["source.qemu.cloudimg"]
+
+  provisioner "shell" {
+    environment_vars = concat(local.proxy_env, ["DEBIAN_FRONTEND=noninteractive"])
+    scripts          = ["${path.root}/scripts/cloudimg/setup-boot.sh"]
+  }
+
+
+  provisioner "shell" {
+    environment_vars  = concat(local.proxy_env, ["DEBIAN_FRONTEND=noninteractive"])
+    expect_disconnect = true
+    scripts           = [var.customize_script]
+  }
+
+  provisioner "shell" {
+    environment_vars = [
+      "CLOUDIMG_CUSTOM_KERNEL=${var.kernel}",
+      "DEBIAN_FRONTEND=noninteractive"
     ]
+    scripts = ["${path.root}/scripts/cloudimg/install-custom-kernel.sh"]
+  }
+
+  provisioner "file" {
+    destination = "/tmp/"
+    sources     = ["${path.root}/scripts/cloudimg/curtin-hooks"]
+  }
+
+  provisioner "shell" {
+    environment_vars = ["CLOUDIMG_CUSTOM_KERNEL=${var.kernel}"]
+    scripts          = ["${path.root}/scripts/cloudimg/setup-curtin.sh"]
+  }
+
+  provisioner "shell" {
+    environment_vars = ["DEBIAN_FRONTEND=noninteractive"]
+    scripts          = ["${path.root}/scripts/cloudimg/cleanup.sh"]
+  }
+
+  post-processor "shell-local" {
+    inline = [
+      "IMG_FMT=qcow2",
+      "source ../scripts/setup-nbd",
+      "OUTPUT=$${OUTPUT:-${var.filename}}",
+      "source ./scripts/cloudimg/tar-rootfs"
+    ]
+    inline_shebang = "/bin/bash -e"
+  }
 }
 ```
 
-You can see that the sections match the general flow of a `packer` session: declarations (variables); builders; provisioners; and post-processors.  We can deconstruct these briefly to understand what the template is doing.  This will help explain the image creation process.
+You can see that the sections match the typical structure of a `packer` HCL2 template: declarations (variables); a source declaration; and build tools.  We can deconstruct these briefly to understand what the template is doing.  This will help explain the image creation process.
 
 <a href="#heading--variables"><h3 id="heading--variables">Variables (declaration section)</h3></a>
 
 The variables section of this template looks like this:
 
 ```nohighlight
-    "variables": {
-        "name": "ubuntu-20.04",
-        "http_directory": "http",
-        "http_proxy": "{{env `http_proxy`}}",
-        "https_proxy": "{{env `https_proxy`}}",
-        "no_proxy": "{{env `no_proxy`}}",
-        "ssh_username": "ubuntu",
-        "ssh_password": "ubuntu"
-    },
+variable "ubuntu_series" {
+  type        = string
+  default     = "focal"
+  description = "The codename of the Ubuntu series to build."
+}
+
+variable "filename" {
+  type        = string
+  default     = "custom-cloudimg.tar.gz"
+  description = "The filename of the tarball to produce"
+}
+
+variable "kernel" {
+  type        = string
+  default     = ""
+  description = "The package name of the kernel to install. May include version string, e.g linux-image-generic-hwe-22.04=5.15.0.41.43"
+}
+
+variable "customize_script" {
+  type        = string
+  description = "The filename of the script that will run in the VM to customize the image."
+}
+
+variable "architecture" {
+  type        = string
+  default     = "amd64"
+  description = "The architecture to build the image for (amd64 or arm64)"
+}
+
+variable "headless" {
+  type        = bool
+  default     = true
+  description = "Whether VNC viewer should not be launched."
+}
+
+variable "http_directory" {
+  type        = string
+  default     = "http"
+  description = "Directory for files to be accessed over http in the VM."
+}
+
+variable "http_proxy" {
+  type        = string
+  default     = "${env("http_proxy")}"
+  description = "HTTP proxy to use when customizing the image inside the VM. The http_proxy enviroment is set, and apt is configured to use the http proxy"
+}
+
+variable "https_proxy" {
+  type        = string
+  default     = "${env("https_proxy")}"
+  description = "HTTPS proxy to use when customizing the image inside the VM. The https_proxy enviroment is set, and apt is configured to use the https proxy"
+}
+
+variable "no_proxy" {
+  type        = string
+  default     = "${env("no_proxy")}"
+  description = "NO_PROXY environment to use when customizing the image inside the VM."
+}
+
+variable "ssh_password" {
+  type        = string
+  default     = "ubuntu"
+  description = "SSH password to use to connect to the VM to customize the image. Needs to match the hashed password in user-data-cloudimg."
+}
+
+variable "ssh_username" {
+  type        = string
+  default     = "root"
+  description = "SSH user to use to connect to the VM to customize the image. Needs to match the user in user-data-cloudimg."
+}
+
+locals {
+  qemu_arch = {
+    "amd64" = "x86_64"
+    "arm64" = "aarch64"
+  }
+  uefi_imp = {
+    "amd64" = "OVMF"
+    "arm64" = "AAVMF"
+  }
+  qemu_machine = {
+    "amd64" = "ubuntu,accel=kvm"
+    "arm64" = "virt"
+  }
+  qemu_cpu = {
+    "amd64" = "host"
+    "arm64" = "cortex-a57"
+  }
+
+  proxy_env = [
+    "http_proxy=${var.http_proxy}",
+    "https_proxy=${var.https_proxy}",
+    "no_proxy=${var.https_proxy}",
+  ]
+}
 ```
 
 Most of this is straightforward.  We're going to use a base image of Ubuntu 20.04, keeping the HTTP files in directory `http` and making three possible proxy options available: HTTP, HTTPS, or no proxy.  The produced image will have an SSH username and password of "ubuntu".  It's that simple.
 
-These declaration sections can get a lot more complicated, depending upon what's needed to make a clean image.  Note that most of the packer-maas templates are kept as simple as possible.
-
-<a href="#heading--builders"><h3 id="heading--builders">Builder section</h3></a>
-
-The builders section of this template is a little more robust:
+The really complicated "builders" section of the old JSON version is replaced by a "source" section that is much cleaner.  Here's the source section of this HCL2 template, with a few comments added for clarity:
 
 ```nohighlight
-    "builders": [
-        {
-            "boot_command": [
-                "<wait>e<wait5>",
-                "<down><wait><down><wait><down><wait2><end><wait5>",
-                "<bs><bs><bs><bs><wait>autoinstall ---<wait><f10>"
-            ],
-            "boot_wait": "2s",
-            "cpus": 2,
-            "disk_size": "4G",
-            "headless": true,
-            "http_directory": "{{user `http_directory`}}",
-            "iso_checksum": "file:http://releases.ubuntu.com/20.04/SHA256SUMS",
-            "iso_url": "https://releases.ubuntu.com/focal/ubuntu-20.04.4-live-server-amd64.iso",
-            "iso_target_path": "packer_cache/ubuntu.iso",
-            "memory": 1024,
-            "type": "qemu",
-            "format": "raw",
-            "qemuargs": [
-                [ "-vga", "qxl"],
-                [ "-device", "virtio-blk-pci,drive=drive0,bootindex=0" ],
-                [ "-device", "virtio-blk-pci,drive=cdrom0,bootindex=1" ],
-                [ "-device", "virtio-blk-pci,drive=drive1,bootindex=2" ],
-                [ "-drive", "if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE.fd"],
-                [ "-drive", "if=pflash,format=raw,file=OVMF_VARS.fd"],
-                [ "-drive", "file=output-qemu/packer-qemu,if=none,id=drive0,cache=writeback,discard=ignore,format=raw"],
-                [ "-drive", "file=seeds-flat.iso,format=raw,cache=none,if=none,id=drive1"],
-                [ "-drive", "file=packer_cache/ubuntu.iso,if=none,id=cdrom0,media=cdrom" ]
-            ],
-            "shutdown_command": "sudo -S shutdown -P now",
-            "ssh_username": "{{user `ssh_username`}}",
-            "ssh_password": "{{user `ssh_password`}}",
-            "ssh_handshake_attempts": 500,
-            "ssh_wait_timeout": "45m",
-            "ssh_timeout": "45m"
-        }
-    ],
+source "qemu" "cloudimg" {
+  boot_wait      = "2s"
+# SETS UP THE IMAGE FOR A TWO-CPU VIRTUAL/MACHINE:
+  cpus           = 2
+  disk_image     = true
+# SETS UP THE IMAGE TO EXPECT A 4GB DISK:
+  disk_size      = "4G"
+  format         = "qcow2"
+# WHETHER OR NOT THE IMAGE EXPECTS TO RUN HEADLESS, THAT IS, WITHOUT A CONSOLE:
+  headless       = var.headless
+# THE HTTP DIRECTORY WILL (HOPEFULLY) BE THE USER'S HTTP DIRECTORY:
+  http_directory = var.http_directory
+# THE CHECKSUM FOR THE ISO IMAGE WILL BE FOUND HERE:
+  iso_checksum   = "file:https://cloud-images.ubuntu.com/${var.ubuntu_series}/current/SHA256SUMS"
+# THE ISO IMAGE ITSELF WILL BE FOUND AT THIS URL:
+  iso_url        = "https://cloud-images.ubuntu.com/${var.ubuntu_series}/current/${var.ubuntu_series}-server-cloudimg-${var.architecture}.img"
+# THE IMAGE SHOULD EXPECT THIS MUCH MEMORY:
+  memory         = 2048
+  qemu_binary    = "qemu-system-${lookup(local.qemu_arch, var.architecture, "")}"
+  qemu_img_args {
+    create = ["-F", "qcow2"]
+  }
+# IF YOU STUDY THE QEMU DOCUMENTATION, IT'S FAIRLY EASY TO SEE WHAT THESE ARGS DO:
+  qemuargs = [
+    ["-machine", "${lookup(local.qemu_machine, var.architecture, "")}"],
+    ["-cpu", "${lookup(local.qemu_cpu, var.architecture, "")}"],
+    ["-device", "virtio-gpu-pci"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_code,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_CODE.fd"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_vars,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_VARS.fd"],
+    ["-drive", "file=output-qemu/packer-qemu,format=qcow2"],
+    ["-drive", "file=seeds-cloudimg.iso,format=raw"]
+  ]
+# HERE'S THE SHUTDOWN COMMAND TO USE:
+  shutdown_command       = "sudo -S shutdown -P now"
+# HERE'S HOW MANY TIMES YOU TRY SSH:
+  ssh_handshake_attempts = 500
+# HERE'S HOW YOU GATHER THE SSH PASSWORD:
+  ssh_password           = var.ssh_password
+# USE A REALLY LONG SSH WAIT TIMEOUT:
+  ssh_timeout            = "45m"
+# HERE'S HOW YOU GATHER THE SSH USERNAME:
+  ssh_username           = var.ssh_username
+# USE A REALLY LONG SSH TIMEOUT, TOO:
+  ssh_wait_timeout       = "45m"
+  use_backing_file       = true
+}
 ```
 
-Note that the builders section is a JSON array, so it can contain multiple tools, as needed.  A few of these we can run through rather quickly, as their purpose is obvious on inspection:
+The high number of SSH handshake attempts -- and the really long timeouts -- have to do with trying to catch the system after it has successfully booted.  Because of the way packer works, it has no direct way to be informed that the system has booted.  As a consequence, to finish the build and run provisioners and post-processors, packer has to keep trying for a while until an SSH connection is successful.  In practice, this should only take 2-3 minutes, but this template uses very long values, just to be sure.
 
- - `"cpus": 2,`: sets up the image for a two-CPU virtual/machine.
- - `"disk_size": "4G",` : sets up the image to expect a 4Gb disk.
- - `"headless": true,` : the image expects to run headless, that is, without a console.
- - `"http_directory": "{{user `http_directory`}}",`: the HTTP directory will be the user's HTTP directory.
- - `"iso_checksum": "file:http://releases.ubuntu.com/20.04/SHA256SUMS",`: the checksum for the ISO image will be found here.
- - `"iso_url": "https://releases.ubuntu.com/focal/ubuntu-20.04.4-live-server-amd64.iso",`: the ISO image itself will be found at this URL.
- - `"iso_target_path": "packer_cache/ubuntu.iso",`: the packer artefact will be stored at this path.
- - `"memory": 1024,`: the image should expect this much memory.
- - `"format": "raw",`: the image should be written in raw (`dd`) format.
- - `"shutdown_command": "sudo -S shutdown -P now",`: here's the shutdown command to user.
- - `"ssh_username": "{{user `ssh_username`}}",`: here's how you gather the SSH username.
- - `"ssh_password": "{{user `ssh_password`}}",`: here's how you gather the SSH password.
- - `"ssh_handshake_attempts": 500,`: here's how many times you try SSH.
- - `"ssh_wait_timeout": "45m",`: use a really long SSH wait timeout.
- - `"ssh_timeout": "45m"`: use a really long SSH timeout, too.
+<a href="#heading--builders"><h3 id="heading--builders">Build section</h3></a>
 
-The high number of SSH handshake attempts -- and the really long timeouts -- have to do with trying to catch the system after it has successfully booted.  Because of the way packer works, it has no direct way to be informed that the system has booted.  As a consequence, to finish the build and run provisioners and post-processors, packer has to keep trying for a while until an SSH connection is successful.  In practice, this should only take 2-3 minutes, but this template uses a very long value, just to be sure.
-
-The values we skipped over tell packer how to build the OS; `"type": "qemu",` tells us that we're using QEMU to build this image.  The arguments to QEMU are as follows:
+The build section of this template lays out the tools that will build the packed image:
 
 ```nohighlight
-"qemuargs": [
-[ "-vga", "qxl"],
-[ "-device", "virtio-blk-pci,drive=drive0,bootindex=0" ],
-[ "-device", "virtio-blk-pci,drive=cdrom0,bootindex=1" ],
-[ "-device", "virtio-blk-pci,drive=drive1,bootindex=2" ],
-[ "-drive", "if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE.fd"],
-[ "-drive", "if=pflash,format=raw,file=OVMF_VARS.fd"],
-[ "-drive", "file=output-qemu/packer-qemu,if=none,id=drive0,cache=writeback,discard=ignore,format=raw"],
-[ "-drive", "file=seeds-flat.iso,format=raw,cache=none,if=none,id=drive1"],
-[ "-drive", "file=packer_cache/ubuntu.iso,if=none,id=cdrom0,media=cdrom" ]
-],
+build {
+  sources = ["source.qemu.cloudimg"]
+
+  provisioner "shell" {
+    environment_vars = concat(local.proxy_env, ["DEBIAN_FRONTEND=noninteractive"])
+    scripts          = ["${path.root}/scripts/cloudimg/setup-boot.sh"]
+  }
+
+
+  provisioner "shell" {
+    environment_vars  = concat(local.proxy_env, ["DEBIAN_FRONTEND=noninteractive"])
+    expect_disconnect = true
+    scripts           = [var.customize_script]
+  }
+
+  provisioner "shell" {
+    environment_vars = [
+      "CLOUDIMG_CUSTOM_KERNEL=${var.kernel}",
+      "DEBIAN_FRONTEND=noninteractive"
+    ]
+    scripts = ["${path.root}/scripts/cloudimg/install-custom-kernel.sh"]
+  }
+
+  provisioner "file" {
+    destination = "/tmp/"
+    sources     = ["${path.root}/scripts/cloudimg/curtin-hooks"]
+  }
+
+  provisioner "shell" {
+    environment_vars = ["CLOUDIMG_CUSTOM_KERNEL=${var.kernel}"]
+    scripts          = ["${path.root}/scripts/cloudimg/setup-curtin.sh"]
+  }
+
+  provisioner "shell" {
+    environment_vars = ["DEBIAN_FRONTEND=noninteractive"]
+    scripts          = ["${path.root}/scripts/cloudimg/cleanup.sh"]
+  }
+
+  post-processor "shell-local" {
+    inline = [
+      "IMG_FMT=qcow2",
+      "source ../scripts/setup-nbd",
+      "OUTPUT=$${OUTPUT:-${var.filename}}",
+      "source ./scripts/cloudimg/tar-rootfs"
+    ]
+    inline_shebang = "/bin/bash -e"
+  }
+}
 ```
 
-If you study the QEMU documentation, it's easy to see what these commands are doing.  Essentially, we're using QEMU to create an image as a raw `dd` file, putting it in a specific location.
-
-You may also notice that some of the QEMU options require additional dependencies, including `ovmf` (being used to flash the UEFI bootloader), `qemu-utils` (a fast processor emulator), and `qemu-system` (which is a machine architecture emulator.  Every template has different dependency requirements, just like any script.
-
-Finally, there is the "boot section" of the builder template:
-
-```nohighlight
-"boot_command": [
-    "<wait>e<wait5>",
-    "<down><wait><down><wait><down><wait2><end><wait5>",
-    "<bs><bs><bs><bs><wait>autoinstall ---<wait><f10>"
-],
-"boot_wait": "2s",
-```
-
-These two elements control how packer will attempt to boot the newly-built image.  Notice that the boot command, in particular, is extremely complex.  Getting a packer-generated image to boot for provisioning is one of the most difficult elements of template design.
-
-<a href="#heading--provisioners"><h3 id="heading--provisioners">Provisioner section</h3></a>
-
-The provisioner section of this simple template looks something like this:
-
-```nohighlight
-"provisioners": [
-    {
-        "type": "file",
-        "sources": [
-            "{{template_dir}}/scripts/curtin-hooks",
-            "{{template_dir}}/scripts/install-custom-packages",
-            "{{template_dir}}/scripts/setup-bootloader",
-            "{{template_dir}}/packages/custom-packages.tar.gz"
-        ],
-        "destination": "/tmp/"
-    },
-    {
-        "environment_vars": [
-            "HOME_DIR=/home/ubuntu",
-            "http_proxy={{user `http_proxy`}}",
-            "https_proxy={{user `https_proxy`}}",
-            "no_proxy={{user `no_proxy`}}"
-        ],
-        "execute_command": "echo 'ubuntu' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
-        "expect_disconnect": true,
-        "scripts": [
-            "{{template_dir}}/scripts/curtin.sh",
-            "{{template_dir}}/scripts/networking.sh",
-            "{{template_dir}}/scripts/cleanup.sh"
-        ],
-        "type": "shell"
-    }
-],
-```
-
-Rather than walking through each of these lines individually, we can just note that this JSON causes packer to:
+Rather than walking through each of these lines individually, we can just note that this HCL2 causes packer to:
 
  - retrieve scripts that set up the bootloader, configure curtin hooks, and install custom packages from a named gzip source.
  - set the homedir and proxy options for the image.
  - set up curtin, networking, and maybe storage for the image.
  - clean up the image prior to post-processing.
 
-If you are interested in more details, you can [examine the scripts](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts) to see what they do.
-
-<a href="#heading--post-processing"><h3 id="heading--post-processing">Post-processing section</h3></a>
-
 The post-processing section of this template prepares the image for use:
 
 ```nohighlight
-"post-processors": [
-    {
-        "type": "shell-local",
-        "inline_shebang": "/bin/bash -e",
-        "inline": [
-            "IMG_FMT=raw",
-            "source ../scripts/setup-nbd",
-            "OUTPUT=${OUTPUT:-custom-ubuntu.tar.gz}",
-            "source ./scripts/tar-rootfs"
-        ]
-    }
-]
+  post-processor "shell-local" {
+    inline = [
+      "IMG_FMT=qcow2",
+      "source ../scripts/setup-nbd",
+      "OUTPUT=$${OUTPUT:-${var.filename}}",
+      "source ./scripts/cloudimg/tar-rootfs"
+    ]
+    inline_shebang = "/bin/bash -e"
+  }
 ```
 
-You can see right away that this template has one post-processor (only one JSON array entry).  This post-processor is a local shell, invoked with the `-e` option, which causes the shell to terminate if there's an error (rather than continuing with the next command).  In this case, we can see that the shell runs four commands:
+You can see right away that this template has one post-processor (only one `post-processor` entry).  This post-processor is a local shell, invoked with the `-e` option, which causes the shell to terminate if there's an error (rather than continuing with the next command).  In this case, we can see that the shell runs four commands:
 
- - sets `$IMG_FMT` to "raw"
+ - sets `$IMG_FMT` to "qcow2"
  - runs the script `setup-nbd`
- - sets $OUTPUT to "<name of image>-custom-ubuntu.tar.gz"
+ - sets $OUTPUT to "<name of image>-custom-cloudimg.tar.gz"
  - runs the script `tar-rootfs`
 
 In this case, it's worth a quick look at the two scripts to see what this post-processor does. First, let's glance at `setup-nbd`:
@@ -469,7 +622,7 @@ done
 
 As you can see, this is just a well-structured script to export a QEMU image as a Network Block Device, binding it to a `/dev/nbd` directory.  This is first step in creating MAAS-loadable Ubuntu image.  The second step comes in `tar-rootfs`:
 
-```nohighlight
+```highlight
 #!/bin/bash -e
 #
 # tar-rootfs - Create a tar.gz from a binded /dev/nbd device
@@ -536,34 +689,6 @@ $ maas admin boot-resources create \
 At this point, the image shows up in MAAS, synced to the controller, the same as any other image.
 
 <a href="#heading--about-packer-created-images"><h2 id="heading--about-packer-created-images">About packer-created images</h2></a>
-
-Essentially, a packer image contains the things shown in this diagram:
-
-```nohighlight
------------------------
- OS image ISO
------------------------
- curtin hooks
-- - - - - - - - - - - -
-        installation
-- - - - - - - - - - - -
-        bootloader
------------------------
- cloud-init meta-data
-- - - - - - - - - - - -
-  network configuration
-- - - - - - - - - - - -
-  storage configuration
-- - - - - - - - - - - -
-  user/homedir creation
-- - - - - - - - - - - -
-  pkg install scripts
-- - - - - - - - - - - -
-  snap install scripts
------------------------
-```
-
-Note that they aren't necessarily packed in this order.
 
 If you're more interested in the anatomy of a packer-created image, for example, an ISO image, you can use `isoinfo` to explore the image file.  The image should be found in the packer git repository, under `<imagename>/packer-cache`.  Ideally, it shouldn't differ too much from any other customised ISO image.  You can explore with a few of the `isoinfo` commands.  For example, you can read the primary volume descriptor like this:
 
