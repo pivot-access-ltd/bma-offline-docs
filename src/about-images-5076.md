@@ -59,11 +59,15 @@ cpio	2.13+dfsg-7
 cron	3.0pl1-137ubuntu3
 ```
 
-This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  Here's a conceptual view of the way that these images get booted into running MAAS machines:
+This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  
+
+<!-- Here's a conceptual view of the way that these images get booted into running MAAS machines:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c7ab7d1d6413dfcdf81e02cb901b09d6f784f0f6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7ab7d1d6413dfcdf81e02cb901b09d6f784f0f6.png"></a>
 
-Note that the arrows don't imply direct action so much as a rough sequence of how the various pieces get loaded.  There are plenty of Ubuntu images available to load.  If you should choose to create a [custom image](/t/how-to-create-custom-images/5104) based on some other operating system, you will need a suitable template for [packer](https://www.packer.io/) -- in order to create an image that MAAS can deploy and boot.  Canonical informally maintains [quite a few of them](https://github.com/canonical/packer-maas), although it isn't impossible to create your own.
+Note that the arrows don't imply direct action so much as a rough sequence of how the various pieces get loaded. --> 
+
+There are plenty of Ubuntu images available to load.  If you should choose to create a [custom image](/t/how-to-create-custom-images/5104) based on some other operating system, you will need a suitable template for [packer](https://www.packer.io/) -- in order to create an image that MAAS can deploy and boot.  Canonical informally maintains [quite a few of them](https://github.com/canonical/packer-maas), although it isn't impossible to create your own.
 
 <a href="#heading--boot-sources"><h2 id="heading--boot-sources">About boot sources and why they matter</h2></a>
 
