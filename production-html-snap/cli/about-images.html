@@ -414,10 +414,8 @@
 <p>This article will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--maas-image-anatomy">What is a MAAS image?</a></li>
+<li><a href="#heading--how-images-deploy">How images get deployed onto a machine</a></li>
 <li><a href="#heading--boot-sources">About boot sources and why they matter</a></li>
-<li><a href="how-to-import-images.html">How to select and import an image</a></li>
-<li><a href="how-to-mirror-images-locally.html">How to set up and use a local image mirror</a></li>
-<li><a href="how-to-manage-vmware-images.html">How to use and manage VMWare images</a></li>
 </ul>
 <p><a href="#heading--what-is-a-maas-image"><h2 id="heading--what-is-a-maas-image">What is a MAAS image?</h2></a></p>
 <p>MAAS images are more than just the operating system kernel.  In fact, a usable MAAS image consists of at least four things:</p>
@@ -465,9 +463,42 @@ coreutils   8.32-4.1ubuntu1
 cpio    2.13+dfsg-7
 cron    3.0pl1-137ubuntu3
 </code></pre>
-<p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.  Here&rsquo;s a conceptual view of the way that these images get booted into running MAAS machines:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c7ab7d1d6413dfcdf81e02cb901b09d6f784f0f6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7ab7d1d6413dfcdf81e02cb901b09d6f784f0f6.png"></a></p>
-<p>Note that the arrows don&rsquo;t imply direct action so much as a rough sequence of how the various pieces get loaded.  There are plenty of Ubuntu images available to load.  If you should choose to create a <a href="how-to-create-custom-images.html">custom image</a> based on some other operating system, you will need a suitable template for <a href="https://www.packer.io/">packer</a> &ndash; in order to create an image that MAAS can deploy and boot.  Canonical informally maintains <a href="https://github.com/canonical/packer-maas">quite a few of them</a>, although it isn&rsquo;t impossible to create your own.</p>
+<p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.</p>
+<p><a href="#heading--how-images-deploy"><h2 id="heading--how-images-deploy">How images get deployed onto a machine</h2></a></p>
+<p>Here&rsquo;s a conceptual view of the way that images get deployed to create a running MAAS machine:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg"></a></p>
+<p>This is a good place to explain how images work, including the nuances of <code>cloud-init</code> and <code>curtin</code> configurations.  Let&rsquo;s take it from the top.</p>
+<p>Before a machine can be deployed, it must be added to MAAS, commissioned, and allocated.  Machines can be added to MAAS either by <a href="about-machines.html#heading--about-enlistment">enlistment</a> or by direct user action.  This machine must then be <a href="about-machines.html#heading--about-commissioning-machines">commissioned</a>, which establishes the configuration and resources of the machine.  Finally, that machine must be allocated, that is, assigned to the control of one and only one user, so that conflicting commands to the same machine are not possible.  This aggregate step is represented by the green lines in the above diagram.</p>
+<p>When MAAS receives the &ldquo;deploy&rdquo; command from the user (blue lines), it must first retrieve (from the MAAS DB) the machine info that was gathered about the machine during commissioning (red lines).  MAAS then boots the machine and waits for the machine&rsquo;s firmware to request a bootable &ldquo;ephemeral&rdquo; OS.  This ephemeral OS must be one of the images supplied by <a href="https://images.maas.io">the MAAS simplestreams</a> and cannot be a custom OS image.</p>
+<p>At the point that MAAS must send the ephemeral OS to the machine, MAAS needs to have this OS downloaded to the rack controller, based on earlier selections made by the user (yellow lines).  Assuming that the a suitable simplestreams image is available, MAAS can send it to the machine.  This ephemeral OS is not deployed, but it is used to download and deploy the image you&rsquo;ve chosen for the machine.</p>
+<p>When the ephermal OS boots, it immediately spawns <a href="https://curtin.readthedocs.io/en/latest/topics/overview.html">curtin</a>.  Curtin&rsquo;s deployment of the target image can be customised with pre-seeds, shown by the brown lines in the diagram.  These pre-seeds control things which are difficult to change once the target OS has been installed (such as <a href="http://caribou.kamikamamak.com/2015/06/26/custom-partitioning-with-maas-and-curtin-2/">partitioning</a>].  Things which can be customized after the target image is running are generally configured with <a href="https://cloudinit.readthedocs.io/en/latest/">cloud-init</a>, represented by the pink lines.</p>
+<p>To continue with the deployment flow, curtin retrieves the target image, either from the rack controller&rsquo;s cache (if the image is standard) or from the MAAS DB (if the image is custom).  Curtin then installs the target image and reboots the machine.  When the target image boots, it retrieves cloud-init configuration either from the MAAS metadata server (proxied by the region controller), or from cloud-init configuration data packed with the target image &ndash; whichever is &ldquo;closer&rdquo;.</p>
+<p>Once cloud-init has finished, the machine is deployed, that is, up and running, ready to perform whatever functions have been assigned to it.</p>
+<p><a href="#heading--key-takeaways"><h3 id="heading--key-takeaways">Key takeaways from this flowchart</h3></a></p>
+<p>The flowchart above is a bit complicated, but there are few key takeaways you should remember:</p>
+<ol>
+<li>
+<p>Machines have to be added, either by enlistment or direct user action, before they can be deployed.</p>
+</li>
+<li>
+<p>Machines must be commissioned before deployment, so that MAAS knows what resources the machine has available.</p>
+</li>
+<li>
+<p>Machines must be allocated before deployment, to lock out all other users (so that no command deadlock can occur).</p>
+</li>
+<li>
+<p>You must have selected and downloaded at least one suitable image from the MAAS simplestreams before you can deploy a machine, because this simplestreams image is used to boot the machine from the network, so that the target OS can then be installed on the machine.</p>
+</li>
+<li>
+<p>If you need to customize things about the machine that can&rsquo;t be changed after the target OS is installed (like partitioning drives), you must use curtin pre-seeds to do this.  You must specify these pre-seeds before you start deployment.</p>
+</li>
+<li>
+<p>If you want to customize things about the machine that can be changed after the target OS is installed (like downloading and installing an application),  you must use cloud-init to do this.  You must specify this cloud-init configuration, at the very least, before deployment begins.</p>
+</li>
+<li>
+<p>If you wish to deploy a custom image, you must pack it and upload it to MAAS before deployment begins.</p>
+</li>
+</ol>
 <p><a href="#heading--boot-sources"><h2 id="heading--boot-sources">About boot sources and why they matter</h2></a></p>
 <p>A region controller downloads its images from a boot source. The main characteristics of a boot source are location (URL) and an associated GPG public keyring.</p>
 <p><strong>NOTE:</strong> 
