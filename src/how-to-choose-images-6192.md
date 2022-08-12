@@ -5,6 +5,7 @@ Now that you've got your network configured, you'll want to choose or build some
 
 If you're feeling uncertain about your understanding of MAAS images and how they work, you can pause to learn:
 
+- [How images get deployed](/t/about-images/5076#heading--how-images-deploy): This flowchart and accompanying description provides an excellent overview of both ephemeral and target images, and how customisations like `curtin` and `cloud-init` help you to tailor your deployments.
 - [About images](/t/about-images/5076): MAAS provides supported images for stable Ubuntu releases, CentOS 7, and CentOS 8.0. In this article, you can learn about boot sources and why they matter.
 - [About custom images](/t/about-creating-custom-images/6099): MAAS is much more useful when you can upload images that aren’t gathered from the MAAS image repository, deploy them to MAAS-managed machines, and count on them to work properly.  This article explains how MAAS images differ from a standard ISO, and what has to happen to make those off-the-shelf ISOs deployable and usable by MAAS.
 
