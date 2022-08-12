@@ -1037,7 +1037,7 @@ maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 
 <a href="#heading--how-to-pre-seed-with-curtin"><h2 id="heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</h2></a>
 
-You can customise the Curtin installation by either editing the existing `curtin_userdata` template or by adding a custom file as described above.
+You can customise the Curtin installation by either editing the existing `curtin_userdata` template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see [How images get deployed](/t/about-images/5076#heading--how-images-deploy).
 
 Curtin provides hooks to execute custom code before and after installation takes place. These hooks are named `early` and `late` respectively, and they can both be overridden to execute the Curtin configuration in the ephemeral environment. Additionally, the `late` hook can be used to execute a configuration for a machine being installed, a state known as in-target.
 
@@ -1071,6 +1071,8 @@ late_commands:
 ```
 
 <a href="#heading--cloud-init"><h2 id="heading--cloud-init">How to pre-seed with cloud-init</h2></a>
+
+For a flowchart, showing where cloud-init fits into the deployment picture, see [How images get deployed](/t/about-images/5076#heading--how-images-deploy).
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]

@@ -411,44 +411,17 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to customise machines</h1><!-- "How to customise machines" -->
 <p>MAAS provides the capability to customise machines.  This article will help you learn:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--how-to-customise-machine-storage">How to customise machine storage</a></li>
-<li><a href="#heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</a></li>
-<li><a href="#heading--cloud-init">How to pre-seed with cloud-init</a></li>
-<li><a href="#heading--how-to-choose-ubuntu-kernels">How to choose Ubuntu kernels</a></li>
-<li><a href="#heading--how-to-set-global-kernel-boot-options">How to set global kernel boot options</a></li>
-<li><a href="#heading--create-tags-with-built-in-kernel-options">How to create tags with built-in kernel options</a></li>
-<li><a href="#heading--how-to-use-resource-pools">How to use resource pools</a></li>
-<li><a href="#heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</a></li>
-<li><a href="#heading--how-to-configure-hardware-sync-interval">How to configure hardware sync interval</a></li>
-<li><a href="#heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</a></li>
-</ul>
 <p><a href="#heading--how-to-customise-machine-storage"><h2 id="heading--how-to-customise-machine-storage">How to customise machine storage</h2></a></p>
 <p>This section will show you:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--how-to-set-global-storage-layouts">How to set global storage layouts</a></li>
-<li><a href="#heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</a></li>
-<li><a href="#heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</a></li>
-</ul>
 <p>Note that layouts can be set globally and on a per-machine basis.  For additional information on storage layouts, see the <a href="storage-layouts-reference.html">Storage layouts reference</a> article.</p>
 <p><a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a></p>
-<p>All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the &lsquo;Settings&rsquo; page, under the &lsquo;Storage&rsquo; tab.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a></p>
 <p><strong>NOTE:</strong> 
 The new default will only apply to newly-commissioned machines.</p>
 <p><a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a></p>
-<p>An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of &lsquo;Ready&rsquo;. This is only possible via the CLI: to see how, click the &ldquo;CLI&rdquo; option for your version and delivery method above.</p>
 <p><strong>NOTE:</strong> 
 Only an administrator can modify storage at the block device level (providing the machine has a status of &lsquo;Ready&rsquo;).</p>
-<p><a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a></p>
-<p>A default erasure configuration can be set on the &lsquo;Settings&rsquo; page by selecting the &lsquo;Storage&rsquo; tab.</p>
-<p><a href="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png"></a></p>
-<p>If option &lsquo;Erase machines&rsquo; disks prior to releasing&rsquo; is chosen then users will be compelled to use disk erasure. That option will be pre-filled in the machine&rsquo;s view and the user will be unable to remove the option.</p>
-<p>With the above defaults, the machine&rsquo;s view will look like this when the Release action is chosen:</p>
-<p><a href="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></p>
-<p>Where &lsquo;secure erase&rsquo; and &lsquo;quick erase&rsquo; can then be configured by the user.</p>
 <p><a href="#heading--how-to-pre-seed-with-curtin"><h2 id="heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</h2></a></p>
-<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.</p>
+<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p>Curtin provides hooks to execute custom code before and after installation takes place. These hooks are named <code>early</code> and <code>late</code> respectively, and they can both be overridden to execute the Curtin configuration in the ephemeral environment. Additionally, the <code>late</code> hook can be used to execute a configuration for a machine being installed, a state known as in-target.</p>
 <p>Curtin commands look like this:</p>
 <pre><code>foo: ["command", "--command-arg", "command-arg-value"]
@@ -470,19 +443,7 @@ Only an administrator can modify storage at the block device level (providing th
   custom: [&quot;curtin&quot;, &quot;in-target&quot;, &quot;--&quot;, &quot;sh&quot;, &quot;-c&quot;, &quot;/bin/echo -en 'Installed ' &gt; /tmp/maas_system_id&quot;]
 </code></pre>
 <p><a href="#heading--cloud-init"><h2 id="heading--cloud-init">How to pre-seed with cloud-init</h2></a></p>
-<p>It&rsquo;s easy to customise cloud-init via the web UI.  When you&rsquo;ve selected a machine and choose &lsquo;Take action &gt;&gt; Deploy,&rsquo; you&rsquo;ll be presented with the following screen:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a></p>
-<p>Select a viable release (in this case, &ldquo;Ubuntu 18.04&hellip;&rdquo;) and check the box labelled &ldquo;Cloud-init user-data&hellip;&rdquo;:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a></p>
-<p>Paste the desired script directly into the box, and select &ldquo;Start deployment for machine.&rdquo;  For example, to import an SSH key immediately after your machine deployment, you could paste this script:</p>
-<pre><code class="language-bash">#!/bin/bash
-(
-echo === $date ===
-ssh-import-id foobar_user
-) | tee /ssh-key-import.log
-</code></pre>
-<p><strong>NOTE:</strong> 
-No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.</p>
+<p>For a flowchart, showing where cloud-init fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p><a href="#heading--how-to-choose-ubuntu-kernels"><h2 id="heading--how-to-choose-ubuntu-kernels">How to choose Ubuntu kernels</h2></a></p>
 <p>This section will show you:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -491,19 +452,7 @@ No script validation of any kind is provided with this capability.  You will nee
 <li><a href="#heading--set-a-specific-kernel-during-machine-deployment">How to set a specific kernel during machine deployment</a></li>
 </ul>
 <p><a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h3 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">How to set a default minimum kernel for enlistment and commissioning</h3></a></p>
-<p>To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the &lsquo;General&rsquo; tab of the &lsquo;Settings&rsquo; page and select a kernel in the &lsquo;Default Minimum Kernel Version&rsquo; field of the <em>Commissioning</em> section. Don&rsquo;t forget to click &lsquo;Save&rsquo;.</p>
-<p><a href="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png"></a></p>
-<p><a href="#heading--set-a-minimum-deploy-kernel-for-a-machine"><h3 id="heading--set-a-minimum-deploy-kernel-for-a-machine">How to set a minimum deployment kernel for a machine</h3></a></p>
-<p>To set the minimum deploy kernel on a machine basis, click on a machine from the &lsquo;Machines&rsquo; page of the web UI and switch to its &lsquo;Configuration&rsquo; page. Click &lsquo;Edit&rsquo; in the &lsquo;Machine configuration&rsquo; section, select a kernel in the &lsquo;Minimum Kernel&rsquo; field followed by &lsquo;Save changes&rsquo;.</p>
-<p><a href="https://assets.ubuntu.com/v1/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png"></a></p>
-<p><a href="#heading--set-a-specific-kernel-during-machine-deployment"><h3 id="heading--set-a-specific-kernel-during-machine-deployment">How to set a specific kernel during machine deployment</h3></a></p>
-<p>To set a specific kernel during deployment, select a machine from the &lsquo;Machines&rsquo; page and choose &lsquo;Deploy&rsquo; under &lsquo;Take action&rsquo;. Then choose a kernel from the (third) kernel field. Hit &lsquo;Deploy machine&rsquo; to initiate the deployment.</p>
-<p><a href="https://assets.ubuntu.com/v1/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png"></a></p>
-<p>MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.</p>
 <p><a href="#heading--how-to-set-global-kernel-boot-options"><h2 id="heading--how-to-set-global-kernel-boot-options">How to set global kernel boot options</h2></a></p>
-<p>To set kernel boot options globally, as an admin, open the &lsquo;Settings&rsquo; page and on the &lsquo;General&rsquo; tab scroll down to the &lsquo;Global Kernel Parameters&rsquo; section:</p>
-<p><a href="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png"></a></p>
-<p>Type in the desired (space separated) options and click &lsquo;Save&rsquo;. The contents of the field will be used as-is. Do not use extra characters.</p>
 <p><a href="#heading--create-tags-with-built-in-kernel-options"><h2 id="heading--create-tags-with-built-in-kernel-options">How to create tags with built-in kernel options</h2></a></p>
 <p>You can create tags with embedded kernel boot options.  When you apply such tags to a machine, those kernel boot options will be applied to that machine on the next deployment.</p>
 <p>To create a tag with embedded kernel boot options, use the following command:</p>
@@ -541,47 +490,6 @@ nomodeset_tag        nomodeset_kernel_option      nomodeset       vga
 </code></pre>
 <p><a href="#heading--how-to-use-resource-pools"><h2 id="heading--how-to-use-resource-pools">How to use resource pools</h2></a></p>
 <p>This section will explain:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--add-a-resource-pool">How to add a resource pool</a></li>
-<li><a href="#heading--deleting-a-resource-pool">How to delete a resource pool</a></li>
-<li><a href="#heading--add-a-node-to-a-resource-pool">How to add a node to a resource pool</a></li>
-<li><a href="#heading--removing-a-node-from-a-resource-pool">How to remove a node from a resource pool</a></li>
-<li><a href="#heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</a></li>
-<li><a href="#heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</a></li>
-</ul>
-<p><a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a></p>
-<p>Use the Add pool button to add a new resource pool.</p>
-<p>After giving your new pool a name and description, click the Add pool button:</p>
-<p><a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a></p>
-<p><a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a></p>
-<p>To delete a resource pool, click the trashcan icon next to the pool.</p>
-<p><a href="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a></p>
-<p><strong>NOTE:</strong> 
-If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.</p>
-<p><a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a></p>
-<p>To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.</p>
-<p><a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a></p>
-<p><a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a></p>
-<p>To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
-<p><a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a></p>
-<p>You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host&rsquo;s configuration:</p>
-<p><a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a></p>
-<p><a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a></p>
-<p>To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
-<p><a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a></p>
-<p>To enable Hardware sync on a machine, select a machine from the machine listd and choose deploy from the &ldquo;Take action&rdquo; dropdown menu:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png"></a></p>
-<p>Set the parameters as indicated below, and choose &ldquo;Start deployment for machine&rdquo;:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png"></a></p>
-<p>Once you&rsquo;ve enabled hardware sync, any changes you make to the physical device, or to the VM through the VM host, will show up in the appropriate page for the deployed machine as soon as the sync interval has passed.</p>
-<p><a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a></p>
-<p>Hardware sync updates the machine’s blockdevice, interface and device sets on a periodic basis. These can be viewed in machine details:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/de259546ce6810ea6dd8aae52d096051ec31b784.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/de259546ce6810ea6dd8aae52d096051ec31b784.png"></a></p>
-<p>Updated BMC configuration and tags can also be viewed on the machine itself.  The timestamps of the last time data was synced and the estimated next time the machine will be synced can be seen in the <code>last_sync</code> and <code>next_sync</code> fields respectively.</p>
-<p><a href="#heading--how-to-configure-hardware-sync-interval"><h2 id="heading--how-to-configure-hardware-sync-interval">How to configure hardware sync interval</h2></a></p>
-<p>The hardware sync interval is configured globally in MAAS settings:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png"></a></p>
-<p>This value is then applied to the machine at time of deployment. You cannot modify a deployed machine’s sync interval.  You can view a machine’s specific sync interval via the <code>sync_interval</code> field on a given machine.</p>
     </div>
   </body>
 </html>
