@@ -502,6 +502,63 @@ resource &quot;maas_subnet&quot; &quot;tf_subnet&quot; {
 </code></pre>
 <p>See the <a href="https://www.terraform.io/language">Terraform HCL documentation</a> for more details about these blocks.</p>
 <p><a href="#heading--data-sources"><h2 id="heading--data-sources">Data sources</h2></a></p>
+<p>The MAAS Terraform provider offers three data sources, all representing network elements:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>a <a href="maas-concepts-and-terms-reference.html#heading--fabrics">fabric</a>, which is essentially a VLAN namespace &ndash; that is, it connects two or more VLANs together.</li>
+<li>a <a href="maas-concepts-and-terms-reference.html#heading--subnets">subnet</a>, which is the traditional way of dividing up IP addresses into smaller networks, e.g., 192.168.15.0/24.</li>
+<li>a <a href="https://en.wikipedia.org/wiki/VLAN">VLAN</a>, a &ldquo;virtual LAN&rdquo;, which is a collection of specific addresses or ports that are connected together to form a restricted network.</li>
+</ul>
+<p>Each of these data sources has a specific HCL block with elements structured appropriately to manage that MAAS element.</p>
+<p><a href="#heading--fabric"><h3 id="heading--fabric">Fabric</h3></a></p>
+<p>The <a href="https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_fabric.md">fabric</a> data source provides minimal details, namely, the fabric ID, of an existing MAAS fabric.  It takes one argument (the fabric name) and exports one attribute (the fabric ID):</p>
+<pre><code class="language-nohighlight">data &quot;maas_fabric&quot; &quot;default&quot; {
+  name = &quot;maas&quot;
+}
+</code></pre>
+<p>Fabrics within MAAS are not widely manipulated in and of themselves, but rather serve as containers for storing VLAN/subnet combinations.</p>
+<p><a href="#heading--subnet"><h3 id="heading--subnet">Subnet</h3></a></p>
+<p>The <a href="https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_subnet.md">subnet</a> data source provides a number of details about an existing MAAS network subnet.  The element takes one argument, the subnet CIDR, and exports a number of attributes:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>id - The subnet ID.</li>
+<li>fabric - The subnet fabric.</li>
+<li>vid - The subnet VLAN traffic segregation ID.</li>
+<li>name - The subnet name.</li>
+<li>rdns_mode - How reverse DNS is handled for this subnet. It can have one of the following values:
+&ndash; 0 - Disabled, no reverse zone is created.
+&ndash; 1 - Enabled, generate reverse zone.
+&ndash; 2 - RFC2317, extends 1 to create the necessary parent zone with the appropriate CNAME resource records for the network, if the network is small enough to require the support described in RFC2317.</li>
+<li>allow_dns - Boolean value that indicates if the MAAS DNS resolution is enabled for this subnet.</li>
+<li>allow_proxy - Boolean value that indicates if maas-proxy allows requests from this subnet.</li>
+<li>gateway_ip - Gateway IP address for the subnet.</li>
+<li>dns_servers - List of IP addresses set as DNS servers for the subnet.</li>
+</ul>
+<p>Declaring a subnet looks something like this example:</p>
+<pre><code class="language-nohighlight">data &quot;maas_subnet&quot; &quot;vid10&quot; {
+  cidr = &quot;10.10.0.0/16&quot;
+}
+</code></pre>
+<p>Subnets are the network backbone of MAAS, and thus provide a number of attributes that can be manipulated to alter the behavior of MAAS.</p>
+<p><a href="#heading--vlan"><h3 id="heading--vlan">VLAN</h3></a></p>
+<p>The <a href="https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_vlan.md">VLAN</a> data source provides details about an existing MAAS VLAN.  A VLAN takes two arguments:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>fabric - (Required) The fabric identifier (ID or name) for the VLAN.</li>
+<li>vlan - (Required) The VLAN identifier (ID or traffic segregation ID).</li>
+</ul>
+<p>A VLAN data source exports a few useful attributes:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>mtu - The MTU used on the VLAN.</li>
+<li>dhcp_on - Boolean value indicating if DHCP is enabled on the VLAN.</li>
+<li>name - The VLAN name.</li>
+<li>space - The VLAN space.</li>
+</ul>
+<p>VLAN <a href="maas-concepts-and-terms-reference.html#heading--spaces">spaces</a> are used mostly by Juju, but can be employed by other tools, if desired.</p>
+<p>The typical definition of a MAAS VLAN in HCL might look like this:</p>
+<pre><code class="language-nohighlight">data &quot;maas_vlan&quot; &quot;vid10&quot; {
+  fabric = data.maas_fabric.default.id
+  vlan = 10
+}
+</code></pre>
+<p>VLANs are available as data sources, but generally, subnets are the workhorses of most MAAS instances.</p>
 <p><a href="#heading--resources"><h2 id="heading--resources">Resources</h2></a></p>
     </div>
   </body>

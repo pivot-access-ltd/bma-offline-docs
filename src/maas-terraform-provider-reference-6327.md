@@ -107,4 +107,78 @@ See the [Terraform HCL documentation](https://www.terraform.io/language) for mor
 
 <a href="#heading--data-sources"><h2 id="heading--data-sources">Data sources</h2></a>
 
+The MAAS Terraform provider offers three data sources, all representing network elements:
+
+- a [fabric](https://discourse.maas.io/t/maas-concepts-and-terms-reference/5416#heading--fabrics), which is essentially a VLAN namespace -- that is, it connects two or more VLANs together.
+- a [subnet](https://discourse.maas.io/t/maas-concepts-and-terms-reference/5416#heading--subnets), which is the traditional way of dividing up IP addresses into smaller networks, e.g., 192.168.15.0/24.
+- a [VLAN](https://en.wikipedia.org/wiki/VLAN), a "virtual LAN", which is a collection of specific addresses or ports that are connected together to form a restricted network.
+
+Each of these data sources has a specific HCL block with elements structured appropriately to manage that MAAS element.
+
+<a href="#heading--fabric"><h3 id="heading--fabric">Fabric</h3></a>
+
+The [fabric](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_fabric.md) data source provides minimal details, namely, the fabric ID, of an existing MAAS fabric.  It takes one argument (the fabric name) and exports one attribute (the fabric ID):
+
+```nohighlight
+data "maas_fabric" "default" {
+  name = "maas"
+}
+```
+
+Fabrics within MAAS are not widely manipulated in and of themselves, but rather serve as containers for storing VLAN/subnet combinations.
+
+<a href="#heading--subnet"><h3 id="heading--subnet">Subnet</h3></a>
+
+The [subnet](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_subnet.md) data source provides a number of details about an existing MAAS network subnet.  The element takes one argument, the subnet CIDR, and exports a number of attributes:
+
+- id - The subnet ID.
+- fabric - The subnet fabric.
+- vid - The subnet VLAN traffic segregation ID.
+- name - The subnet name.
+- rdns_mode - How reverse DNS is handled for this subnet. It can have one of the following values:
+-- 0 - Disabled, no reverse zone is created.
+-- 1 - Enabled, generate reverse zone.
+-- 2 - RFC2317, extends 1 to create the necessary parent zone with the appropriate CNAME resource records for the network, if the network is small enough to require the support described in RFC2317.
+- allow_dns - Boolean value that indicates if the MAAS DNS resolution is enabled for this subnet.
+- allow_proxy - Boolean value that indicates if maas-proxy allows requests from this subnet.
+- gateway_ip - Gateway IP address for the subnet.
+- dns_servers - List of IP addresses set as DNS servers for the subnet.
+
+Declaring a subnet looks something like this example:
+
+```nohighlight
+data "maas_subnet" "vid10" {
+  cidr = "10.10.0.0/16"
+}
+```
+
+Subnets are the network backbone of MAAS, and thus provide a number of attributes that can be manipulated to alter the behavior of MAAS.
+
+<a href="#heading--vlan"><h3 id="heading--vlan">VLAN</h3></a>
+
+The [VLAN](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_vlan.md) data source provides details about an existing MAAS VLAN.  A VLAN takes two arguments:
+
+- fabric - (Required) The fabric identifier (ID or name) for the VLAN.
+- vlan - (Required) The VLAN identifier (ID or traffic segregation ID).
+
+A VLAN data source exports a few useful attributes:
+
+- mtu - The MTU used on the VLAN.
+- dhcp_on - Boolean value indicating if DHCP is enabled on the VLAN.
+- name - The VLAN name.
+- space - The VLAN space.
+
+VLAN [spaces](https://discourse.maas.io/t/maas-concepts-and-terms-reference/5416#heading--spaces) are used mostly by Juju, but can be employed by other tools, if desired.
+
+The typical definition of a MAAS VLAN in HCL might look like this:
+
+```nohighlight
+data "maas_vlan" "vid10" {
+  fabric = data.maas_fabric.default.id
+  vlan = 10
+}
+```
+
+VLANs are available as data sources, but generally, subnets are the workhorses of most MAAS instances.
+
 <a href="#heading--resources"><h2 id="heading--resources">Resources</h2></a>
