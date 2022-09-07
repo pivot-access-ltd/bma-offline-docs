@@ -4,6 +4,7 @@
 
 The following technical topics may be useful as you operate and administer MAAS:
 
+- [MAAS Terraform provider](/t/-/6327): This article provides a pure reference on the MAAS Terraform provider, in terms of data sources and resources available through that provider, along with HCL examples culled from the source.
 - [Audit event logs](/t/-/5256): Audit events are a subset of the MAAS event logs. This article will provide reference material for those who want to review and report on events designated as MAAS audit events.
 - [Commissioning scripts](/t/-/5375): This article provides technical details about commissioning scripts. 
 - [Hardware test scripts](/t/-/5392): This article enumerates and describes the various hardware tests you can engage when commissioning a machine.
