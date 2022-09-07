@@ -421,6 +421,86 @@
 </ul>
 <p>We will deal with each of these categories in turn.  For each data source and resource, we will offer a brief definition and description of how that item is employed in MAAS.  If you are new to <a href="https://www.terraform.io/">Terraform</a>, or want to explore what terraforming may provide for your MAAS instance, you may wish to consult the <a href="https://www.terraform.io/intro">Terraform documentation</a> or one of the many <a href="https://learn.hashicorp.com/collections/terraform/aws-get-started?utm_source=WEBSITE&amp;utm_medium=WEB_IO&amp;utm_offer=ARTICLE_PAGE&amp;utm_content=DOCS">tutorials available</a>.</p>
 <p><a href="#heading--terraform-api-linkage"><h2 id="heading--terraform-api-linkage">API linkages</h2></a></p>
+<p>The schema that provides an API linkage to MAAS from Terraform consists of a standard HCL provider block and a provider API block.  As with all Terraform providers, the provider block contains at least two items:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>a source element, which in this case is &ldquo;maas/maas&rdquo;.</li>
+<li>a version element, which can be sufficiently specified by &ldquo;~&gt;1.0&rdquo;.</li>
+</ul>
+<p>The provider block would look something like this:</p>
+<pre><code class="language-nohighlight">terraform {
+  required_providers {
+    maas = {
+      source  = &quot;maas/maas&quot;
+      version = &quot;~&gt;1.0&quot;
+    }
+  }
+}
+</code></pre>
+<p>The provider API block contains the necessary credentials to allow Terraform to access your MAAS instance, which include three things:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>an API version.</li>
+<li>an API key.</li>
+<li>an API URL.</li>
+</ul>
+<p>A typical provider API block might look like this:</p>
+<pre><code class="language-nohighlight">provider &quot;maas&quot; {
+  api_version = &quot;2.0&quot;
+  api_key = &quot;&lt;YOUR API KEY&gt;&quot;
+  api_url = &quot;http://127.0.0.1:5240/MAAS&quot;
+}
+</code></pre>
+<p>A completed definition would also include some data sources and resources, like this typical example:</p>
+<pre><code class="language-nohighlight">terraform {
+  required_providers {
+    maas = {
+      source  = &quot;maas/maas&quot;
+      version = &quot;~&gt;1.0&quot;
+    }
+  }
+}
+
+provider &quot;maas&quot; {
+  api_version = &quot;2.0&quot;
+  api_key = &quot;&lt;YOUR API KEY&gt;&quot;
+  api_url = &quot;&lt;YOUR API URL&gt;&quot;
+}
+
+resource &quot;maas_space&quot; &quot;tf_space&quot; {
+  name = &quot;tf-space&quot;
+}
+
+resource &quot;maas_fabric&quot; &quot;tf_fabric&quot; {
+  name = &quot;tf-fabric&quot;
+}
+
+resource &quot;maas_vlan&quot; &quot;tf_vlan&quot; {
+  fabric = maas_fabric.tf_fabric.id
+  vid = 14
+  name = &quot;tf-vlan14&quot;
+  space = maas_space.tf_space.name
+}
+resource &quot;maas_subnet&quot; &quot;tf_subnet&quot; {
+  cidr = &quot;10.88.88.0/24&quot;
+  fabric = maas_fabric.tf_fabric.id
+  vlan = maas_vlan.tf_vlan.vid
+  name = &quot;tf_subnet&quot;
+  gateway_ip = &quot;10.88.88.1&quot;
+  dns_servers = [
+    &quot;1.1.1.1&quot;,
+  ]
+  ip_ranges {
+    type = &quot;reserved&quot;
+    start_ip = &quot;10.88.88.1&quot;
+    end_ip = &quot;10.88.88.50&quot;
+  }
+  ip_ranges {
+    type = &quot;dynamic&quot;
+    start_ip = &quot;10.88.88.200&quot;
+    end_ip = &quot;10.88.88.254&quot;
+  }
+}
+</code></pre>
+<p>See the <a href="https://www.terraform.io/language">Terraform HCL documentation</a> for more details about these blocks.</p>
 <p><a href="#heading--data-sources"><h2 id="heading--data-sources">Data sources</h2></a></p>
 <p><a href="#heading--resources"><h2 id="heading--resources">Resources</h2></a></p>
     </div>
