@@ -410,7 +410,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>MAAS Terraform provider reference</h1><!-- "MAAS Terraform provider reference" -->
-<p>If you wish to use MAAS with <a href="https://www.terraform.io/">Terraform</a>, there is a <a href="https://github.com/maas/terraform-provider-maas">provider avaiable</a>, supplied by a third party.  This article provides reference information about the data sources and resources available through the provider.  It does not attempt to explain the mechanics or usage of Terraform or offer any tutorial information related to this MAAS Terraform provider.</p>
+<p>If you wish to use MAAS with <a href="https://www.terraform.io/">Terraform</a>, we have made a <a href="https://github.com/maas/terraform-provider-maas">provider available</a>.  This article provides reference information about the data sources and resources that can be accessed via this provider.  It does not attempt to explain the mechanics or usage of Terraform or offer any tutorial information related to this MAAS Terraform provider.</p>
 <p><a href="#heading--what-is-this"><h1 id="heading--what-is-this">The MAAS Terraform provider</h1></a></p>
 <p>The MAAS provider is a Terraform provider that allows you to manage MAAS resources using the Terraform (CRUD) tool. This provider can be used to manage many aspects of a MAAS environment, including networking, users, machines, and VM hosts.</p>
 <p>These aspects can be divided into three categories of Terraform-compliant HCL:</p>
@@ -537,7 +537,7 @@ resource &quot;maas_subnet&quot; &quot;tf_subnet&quot; {
   cidr = &quot;10.10.0.0/16&quot;
 }
 </code></pre>
-<p>Subnets are the network backbone of MAAS, and thus provide a number of attributes that can be manipulated to alter the behavior of MAAS.</p>
+<p>Subnets are the network backbone of MAAS, and thus provide a number of attributes that can be manipulated to alter the behaviour of MAAS.</p>
 <p><a href="#heading--vlan"><h3 id="heading--vlan">VLAN</h3></a></p>
 <p>The <a href="https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_vlan.md">VLAN</a> data source provides details about an existing MAAS VLAN.  A VLAN takes two arguments:</p>
 <ul style="margin-left:4px; list-style-type:disc;">

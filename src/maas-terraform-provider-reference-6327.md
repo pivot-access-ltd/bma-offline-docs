@@ -1,5 +1,5 @@
 <!-- "MAAS Terraform provider reference" -->
-If you wish to use MAAS with [Terraform](https://www.terraform.io/), there is a [provider avaiable](https://github.com/maas/terraform-provider-maas), supplied by a third party.  This article provides reference information about the data sources and resources available through the provider.  It does not attempt to explain the mechanics or usage of Terraform or offer any tutorial information related to this MAAS Terraform provider.
+If you wish to use MAAS with [Terraform](https://www.terraform.io/), we have made a [provider available](https://github.com/maas/terraform-provider-maas).  This article provides reference information about the data sources and resources that can be accessed via this provider.  It does not attempt to explain the mechanics or usage of Terraform or offer any tutorial information related to this MAAS Terraform provider.
 
 <a href="#heading--what-is-this"><h1 id="heading--what-is-this">The MAAS Terraform provider</h1></a>
 
@@ -152,7 +152,7 @@ data "maas_subnet" "vid10" {
 }
 ```
 
-Subnets are the network backbone of MAAS, and thus provide a number of attributes that can be manipulated to alter the behavior of MAAS.
+Subnets are the network backbone of MAAS, and thus provide a number of attributes that can be manipulated to alter the behaviour of MAAS.
 
 <a href="#heading--vlan"><h3 id="heading--vlan">VLAN</h3></a>
 
