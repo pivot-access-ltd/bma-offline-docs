@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/configuration-settings-reference.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Tutorials
+      </strong>
+      <ul>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-cli-tutorial.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to get MAAS running
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to configure networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-addresses.html">
+	    Manage IP addresses
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to choose images
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-custom-images.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to deploy MAAS
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-controllers.html">
+	    Manage controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to use tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to operate MAAS
+      </strong>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-work-with-audit-event-logs.html">
+	      Work with audit event logs
+	    </a>
+	  </li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+	</ul>
+      <p/>
+      <strong>
+	  API Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Getting help
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Explanations
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    Cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    MAAS networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    Images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-creating-custom-images.html">
+	    Custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    Controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    Machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-customising-machines.html">
+	    Customising machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    VM hosting
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>Configuration settings reference</h1><!-- "Configuration settings reference" -->
+
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>outline
+&ndash; general
+<strong><em> this doc must have both UI and CLI versions
+</em></strong> these will be (essentially) completely different docs
+<strong><em> to avoid chasing so many tabs:
+</em></strong><em> one tab for the entire UI version
+</em><strong><em> one tab for the entire CLI version
+</em>* UI version (walks down the lhs navigation)
+</strong><em> Basic configuration
+</em><strong><em> General items
+</em></strong>** MAAS name (text box)
+Use MAAS name and unicode emoji(s) to describe your MAAS instance.
+Examples:
+⛔ maas-prod
+my-maas ⚠️ no-deploys</li>
+</ul>
+<p><strong><em>*</em> MAAS theme main colour (radio-button selection)
+Default
+Bark
+Sage
+Olive
+Viridian
+Prussian green
+Blue
+Purple
+Magenta
+Red
+Data analytics
+</strong><strong><em> Enable analytics to shape improvements to user experience (checkbox)
+The analytics used in MAAS are Google Analytics, Usabilla and Sentry Error Tracking. Data privacy
+Notifications
+</em></strong><strong> Enable new release notifications (checkbox)
+This applies to all users of MAAS. 
+</strong><strong> Security
+</strong>*** TLS status
+(icon) TLS disabled</p>
+<p>You can enable TLS with a certificate and a private key in the CLI with the following command:</p>
+<p><code>maas config-tls enable $key $cert --port YYYY</code>
+<strong><em>* Commissioning
+</em></strong><strong> Machine settings
+</strong><strong><em>* Default Ubuntu release used for commissioning (dropdown)
+</em></strong><strong><em> Default minimum kernel version (dropdown)
+The default minimum kernel version used on all new and commissioned nodes
+</em></strong><strong> IPMI settings
+</strong><strong><em>* MAAS generated IPMI username (text box)
+</em></strong><strong><em> K_g BMC key (text box)
+Specify this key to encrypt all communication between IPMI clients and the BMC. Leave this blank for no encryption. IPMI and BMC key
+</em></strong><strong><em> MAAS generated IPMI user privilege level (radio buttons)
+Admin
+operator
+User
+</em></strong><em> Deployment
+</em><strong><em>* Default operating system used for deployment (dropdown)
+</em></strong><strong> Default OS release used for deployment (dropdown)
+</strong><strong><em> Default hardware sync interval (minutes) (text box)
+</em></strong><em> Kernel parameters
+</em><strong><em>* Global boot parameters always passed to the kernel (text box)
+</em></strong> Users
+<strong><em>* Search box
+</em></strong><em> &ldquo;Add user&rdquo; button
+</em><strong><em> User table
+</em></strong><strong> user name (sortable by ascending, descending, none)
+</strong><strong><em> real name (sortable by ascending, descending, none)
+</em></strong><strong> machines (sortable by ascending, descending, none)
+</strong><strong><em> Type
+</em></strong><strong> Last seen
+</strong><strong><em> Role
+</em></strong><strong> MAAS keys
+</strong><strong><em> Actions
+</em></strong><strong><em> edit button on each row
+possibly greyed out based on current user role
+</em></strong><strong><em> delete button on each row
+possibly greyed out based on current user role
+</em></strong><em> paging buttons, if necessary
+</em><strong> Images
+</strong><strong> Ubuntu
+</strong><strong><em> Enable the installation of proprietary drivers (i.e. HPVSA) (checkbox)
+</em></strong><em> Windows
+</em><strong><em>* Windows KMS activation host (text box)
+FQDN or IP address of the host that provides the KMS Windows activation service. (Only needed for Windows deployments using KMS activation.)
+</em></strong><em> VMware
+</em><strong><em>* VMware vCenter server FQDN or IP address (text box)
+VMware vCenter server FQDN or IP address which is passed to a deployed VMware ESXi host.
+</em></strong><strong> VMware vCenter username (text box)
+VMware vCenter server username which is passed to a deployed VMware ESXi host.
+</strong><strong><em> VMware vCenter password (text box)
+VMware vCenter server password which is passed to a deployed VMware ESXi host.
+</em></strong><strong> VMware vCenter datacenter (text box)
+VMware vCenter datacenter which is passed to a deployed VMware ESXi host.
+</strong><em> License keys
+</em><strong><em> search bar
+</em></strong><em> &ldquo;Add license key&rdquo; button
+</em><strong><em> table of licenses
+</em></strong><strong> Operating system (sortable by ascending, descending, none)
+</strong><strong><em> Distro series (sortable by ascending, descending, none)
+</em></strong><strong> Actions
+</strong><strong><em>* edit button on each row
+possibly greyed out based on current user role
+</em></strong><strong><em> delete button on each row
+possibly greyed out based on current user role
+</em></strong><em> paging buttons, if necessary
+</em><strong> Storage
+</strong><strong><em> Default storage layout (dropdown)
+Storage layout that is applied to a node when it is commissioned.
+</em></strong><strong> Erase nodes&rsquo; disks prior to releasing (checkbox)
+Forces users to always erase disks when releasing.
+</strong><strong><em> Use secure erase by default when erasing disks (checkbox)
+Will only be used on devices that support secure erase. Other devices will fall back to full wipe or quick erase depending on the selected options.
+</em></strong><strong> Use quick erase by default when erasing disks (checkbox)
+This is not a secure erase; it wipes only the beginning and end of each disk.
+</strong><em> Network
+</em><strong><em> Proxy
+HTTP proxy used by MAAS to download images, and by provisioned machines for APT and YUM packages. (radio buttons)
+</em></strong><strong> Don&rsquo;t use a proxy
+</strong><strong><em> MAAS built-in
+</em></strong><strong> External
+</strong><strong><em> Peer
+</em></strong><strong> &ldquo;External&rdquo; or &ldquo;Peer&rdquo; radio button followed by a text box with instructions:
+Enter the external proxy URL that the MAAS built-in proxy will use as an upstream cache peer. Machines will be configured to use MAAS&rsquo; built-in proxy to download APT packages.
+</strong><strong> DNS
+</strong><strong><em> Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses) (text box)
+Only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;forwarders&rsquo; in the DNS server config.
+</em></strong><strong> Enable DNSSEC validation of upstream zones (dropdown)
+Only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;dnssec_validation&rsquo; in the DNS server config.
+</strong><strong><em> List of external networks (not previously known), that will be allowed to use MAAS for DNS resolution (text box)
+MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows to add extra networks (not previously known) to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
+</em></strong><em> NTP
+</em><strong><em>* Addresses of NTP servers (text box)
+NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS&rsquo;s DHCP services.
+</em></strong><strong> Use external NTP servers only (check box)
+Configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers, rack contoller hosts will in turn refer to the regions&rsquo; NTP servers, and deployed machines will refer to the racks&rsquo; NTP servers.
+</strong><strong> Syslog
+</strong><strong><em> Remote syslog server to forward machine logs (text box)
+A remote syslog server that MAAS will set on enlisting, commissioning, testing, and deploying machines to send all log messages. Clearing this value will restore the default behaviour of forwarding syslog to MAAS.
+</em></strong><em> Network discovery
+</em><strong><em>* Network discovery (dropdown)
+When enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.
+</em></strong><strong> Active subnet mapping interval (dropdown)
+When enabled, each rack will scan subnets enabled for active mapping. This helps ensure discovery information is accurate and complete.
+</strong><em> Scripts
+</em><strong><em> Commissioning scripts
+</em></strong><strong> Search box
+</strong><strong><em> &ldquo;Upload script&rdquo; button
+</em></strong><strong> Table of scripts
+</strong><strong><em>* script name (sortable by ascending, descending, none)
+</em></strong><strong><em>* script names are clickable, expanding to show the script code
+</em></strong><strong><em> description (sortable by ascending, descending, none)
+</em></strong><strong><em> uploaded on (sortable by ascending, descending, none)
+</em></strong><strong><em> Actions
+</em></strong><strong><em>* delete button on each row
+possibly greyed out based on current user role
+</em></strong><strong> paging buttons, if necessary
+</strong><strong> Testing scripts
+</strong><strong><em> Search box
+</em></strong><strong> &ldquo;Upload script&rdquo; button
+</strong><strong><em> Table of scripts
+</em></strong><strong><em> script name (sortable by ascending, descending, none)
+</em></strong><strong><em>* script names are clickable, expanding to show the script code
+</em></strong><strong><em> description (sortable by ascending, descending, none)
+</em></strong><strong><em> uploaded on (sortable by ascending, descending, none)
+</em></strong><strong><em> Actions
+</em></strong><strong><em>* delete button on each row
+possibly greyed out based on current user role
+</em></strong><strong> paging buttons, if necessary
+</strong><em> DHCP snippets
+</em><strong><em> Search box
+</em></strong><em> &ldquo;Add snippet&rdquo; button
+</em><strong><em> Table of snippets
+</em></strong><strong> Snippet name (sortable by ascending, descending, none)
+</strong><strong><em>* snippet names are clickable, expanding to show snippet
+</em></strong><strong> Type (sortable by ascending, descending, none)
+</strong><strong><em> Applies to (sortable by ascending, descending, none)
+</em></strong><strong> Description (sortable by ascending, descending, none)
+</strong><strong><em> Enabled (sortable by ascending, descending, none)
+</em></strong><strong> Last edited (sortable by ascending, descending, none)
+</strong><strong><em> Actions
+</em></strong><strong><em> edit button on each row
+possibly greyed out based on current user role
+</em></strong><strong><em> delete button on each row
+possibly greyed out based on current user role
+</em></strong><em> paging buttons, if necessary
+</em><strong> Package repos
+</strong><strong> Search box
+</strong><strong> &ldquo;Add PPA&rdquo; button
+</strong><strong> &ldquo;Add repository&rdquo; button
+</strong><strong> Table of snippets
+</strong><strong><em> Repo name (sortable by ascending, descending, none)
+</em></strong><strong> URL (sortable by ascending, descending, none)
+</strong><strong><em> Enabled (sortable by ascending, descending, none)
+</em></strong><strong> Actions
+</strong><strong><em>* edit button on each row
+possibly greyed out based on current user role
+</em></strong><strong><em> delete button on each row
+possibly greyed out based on current user role
+</em></strong><em> paging buttons, if necessary
+</em><em> CLI version (follows the pattern of the CLI help)
+</em>** basic help text reprinted
+Set a configuration value</p>
+<p>This method accepts keyword arguments.  Pass each argument as a
+key-value pair with an equals sign between the key and the value:
+key1=value1 key2=value key3=value3.  Keyword arguments must come after
+any positional arguments.</p>
+<p>Set a configuration value.</p>
+<p>:param value: Optional.  The value of the configuration
+item to be set.
+:type value: String</p>
+<p>:param name: Required.  The name of the
+configuration item to be set.</p>
+<p>Available configuration items:</p>
+<p>:active_discovery_interval: Active subnet mapping interval.         When enabled, each rack will scan subnets enabled for active mapping. This helps ensure discovery information is accurate and complete.
+:boot_images_auto_import: Automatically import/refresh the boot images every 60 minutes.
+:boot_images_no_proxy: Set no_proxy with the image repository address when MAAS is behind (or set with) a proxy..         By default, when MAAS is behind (and set with) a proxy, it is used to download images from the image repository. In some situations (e.g. when using a local image repository) it doesn&rsquo;t make sense for MAAS to use the proxy to download images because it can access them directly. Setting this option allows MAAS to access the (local) image repository directly by setting the no_proxy variable for the MAAS env with the address of the image repository.
+:commissioning_distro_series: Default Ubuntu release used for commissioning.
+:completed_intro: Marks if the initial intro has been completed.
+:curtin_verbose: Run the fast-path installer with higher verbosity. This provides more detail in the installation logs.
+:default_distro_series: Default OS release used for deployment.
+:default_dns_ttl: Default Time-To-Live for the DNS.         If no TTL value is specified at a more specific point this is how long DNS responses are valid, in seconds.
+:default_min_hwe_kernel: Default Minimum Kernel Version.         The default minimum kernel version used on all new and commissioned nodes.
+:default_osystem: Default operating system used for deployment.
+:default_storage_layout: Default storage layout.         Storage layout that is applied to a node when it is commissioned.        Available choices are: &lsquo;bcache&rsquo; (Bcache layout), &lsquo;blank&rsquo; (No storage (blank) layout), &lsquo;custom&rsquo; (Custom layout (from commissioning storage config)), &lsquo;flat&rsquo; (Flat layout), &lsquo;lvm&rsquo; (LVM layout), &lsquo;vmfs6&rsquo; (VMFS6 layout), &lsquo;vmfs7&rsquo; (VMFS7 layout).
+:disk_erase_with_quick_erase: Use quick erase by default when erasing disks..         This is not a secure erase; it wipes only the beginning and end of each disk.
+:disk_erase_with_secure_erase: Use secure erase by default when erasing disks.         Will only be used on devices that support secure erase.  Other devices will fall back to full wipe or quick erase depending on the selected options.
+:dns_trusted_acl: List of external networks (not previously known), that will be allowed to use MAAS for DNS resolution..         MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows to add extra networks (not previously known) to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
+:dnssec_validation: Enable DNSSEC validation of upstream zones.         Only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;dnssec_validation&rsquo; in the DNS server config.
+:enable_analytics: Enable Google Analytics in MAAS UI to shape improvements in user experience.
+:enable_disk_erasing_on_release: Erase nodes&rsquo; disks prior to releasing.         Forces users to always erase disks when releasing.
+:enable_http_proxy: Enable the use of an APT or YUM and HTTP/HTTPS proxy.         Provision nodes to use the built-in HTTP proxy (or user specified proxy) for APT or YUM. MAAS also uses the proxy for downloading boot images.
+:enable_third_party_drivers: Enable the installation of proprietary drivers (i.e. HPVSA).
+:enlist_commissioning: Whether to run commissioning during enlistment..         Enables running all built-in commissioning scripts during enlistment.
+:force_v1_network_yaml: Always use the legacy v1 YAML (rather than Netplan format, also known as v2 YAML) when composing the network configuration for a machine..
+:hardware_sync_interval: Hardware Sync Interval.         The interval to send hardware info to MAAS fromhardware sync enabled machines, in systemd time span syntax.
+:http_proxy: Proxy for APT or YUM and HTTP/HTTPS.         This will be passed onto provisioned nodes to use as a proxy for APT or YUM traffic. MAAS also uses the proxy for downloading boot images. If no URL is provided, the built-in MAAS proxy will be used.
+:kernel_opts: Boot parameters to pass to the kernel by default.
+:maas_auto_ipmi_cipher_suite_id: MAAS IPMI Default Cipher Suite ID.         The default IPMI cipher suite ID to use when connecting to the BMC via ipmitools        Available choices are: &lsquo;&rsquo; (freeipmi-tools default), &lsquo;12&rsquo; (12 - HMAC-MD5::MD5-128::AES-CBC-128), &lsquo;17&rsquo; (17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128), &lsquo;3&rsquo; (3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128), &lsquo;8&rsquo; (8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128).
+:maas_auto_ipmi_k_g_bmc_key: The IPMI K_g key to set during BMC configuration..         This IPMI K_g BMC key is used to encrypt all IPMI traffic to a BMC. Once set, all clients will REQUIRE this key upon being commissioned. Any current machines that were previously commissioned will not require this key until they are recommissioned.
+:maas_auto_ipmi_user: MAAS IPMI user..         The name of the IPMI user that MAAS automatically creates during enlistment/commissioning.
+:maas_auto_ipmi_user_privilege_level: MAAS IPMI privilege level.         The default IPMI privilege level to use when creating the MAAS user and talking IPMI BMCs        Available choices are: &lsquo;ADMIN&rsquo; (Administrator), &lsquo;OPERATOR&rsquo; (Operator), &lsquo;USER&rsquo; (User).
+:maas_auto_ipmi_workaround_flags: IPMI Workaround Flags.         The default workaround flag (-W options) to use for ipmipower commands        Available choices are: &lsquo;&rsquo; (None), &lsquo;authcap&rsquo; (Authcap), &lsquo;endianseq&rsquo; (Endianseq), &lsquo;forcepermsg&rsquo; (Forcepermsg), &lsquo;idzero&rsquo; (Idzero), &lsquo;integritycheckvalue&rsquo; (Integritycheckvalue), &lsquo;intel20&rsquo; (Intel20), &lsquo;ipmiping&rsquo; (Ipmiping), &lsquo;nochecksumcheck&rsquo; (Nochecksumcheck), &lsquo;opensesspriv&rsquo; (Opensesspriv), &lsquo;sun20&rsquo; (Sun20), &lsquo;supermicro20&rsquo; (Supermicro20), &lsquo;unexpectedauth&rsquo; (Unexpectedauth).
+:maas_internal_domain: Domain name used by MAAS for internal mapping of MAAS provided services..         This domain should not collide with an upstream domain provided by the set upstream DNS.
+:maas_name: MAAS name.
+:maas_proxy_port: Port to bind the MAAS built-in proxy (default: 8000).         Defines the port used to bind the built-in proxy. The default port is 8000.
+:maas_syslog_port: Port to bind the MAAS built-in syslog (default: 5247).         Defines the port used to bind the built-in syslog. The default port is 5247.
+:max_node_commissioning_results: The maximum number of commissioning results runs which are stored.
+:max_node_installation_results: The maximum number of installation result runs which are stored.
+:max_node_testing_results: The maximum number of testing results runs which are stored.
+:network_discovery: .         When enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.
+:node_timeout: Time, in minutes, until the node times out during commissioning, testing, deploying, or entering rescue mode..         Commissioning, testing, deploying, and entering rescue mode all set a timeout when beginning. If MAAS does not hear from the node within the specified number of minutes the node is powered off and set into a failed status.
+:ntp_external_only: Use external NTP servers only.         Configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers, rack contoller hosts will in turn refer to the regions&rsquo; NTP servers, and deployed machines will refer to the racks&rsquo; NTP servers.
+:ntp_servers: Addresses of NTP servers.         NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS&rsquo;s DHCP services.
+:prefer_v4_proxy: Sets IPv4 DNS resolution before IPv6.         If prefer_v4_proxy is set, the proxy will be set to prefer IPv4 DNS resolution before it attempts to perform IPv6 DNS resolution.
+:prometheus_enabled: Enable sending stats to a prometheus gateway..         Allows MAAS to send statistics to Prometheus. This requires the &lsquo;prometheus_push_gateway&rsquo; to be set.
+:prometheus_push_gateway: Address or hostname of the Prometheus push gateway..         Defines the address or hostname of the Prometheus push gateway where MAAS will send data to.
+:prometheus_push_interval: Interval of how often to send data to Prometheus (default: to 60 minutes)..         The internal of how often MAAS will send stats to Prometheus in minutes.
+:promtail_enabled: Enable streaming logs to Promtail..         Whether to stream logs to Promtail
+:promtail_port: TCP port of the Promtail Push API..         Defines the TCP port of the Promtail push API where MAAS will stream logs to.
+:release_notifications: Enable or disable notifications for new MAAS releases..
+:remote_syslog: Remote syslog server to forward machine logs.         A remote syslog server that MAAS will set on enlisting, commissioning, testing, and deploying machines to send all log messages. Clearing this value will restore the default behaviour of forwarding syslog to MAAS.
+:subnet_ip_exhaustion_threshold_count: If the number of free IP addresses on a subnet becomes less than or equal to this threshold, an IP exhaustion warning will appear for that subnet.
+:tls_cert_expiration_notification_enabled: Notify when the certificate is due to expire.         Enable/Disable notification about certificate expiration.
+:tls_cert_expiration_notification_interval: Certificate expiration reminder (days).         Configure notification when certificate is due to expire in (days).
+:upstream_dns: Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses).         Only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;forwarders&rsquo; in the DNS server config.
+:use_peer_proxy: Use the built-in proxy with an external proxy as a peer.         If enable_http_proxy is set, the built-in proxy will be configured to use http_proxy as a peer proxy. The deployed machines will be configured to use the built-in proxy.
+:use_rack_proxy: Use DNS and HTTP metadata proxy on the rack controllers when a machine is booted..         All DNS and HTTP metadata traffic will flow through the rack controller that a machine is booting from. This isolated region controllers from machines.
+:vcenter_datacenter: VMware vCenter datacenter.         VMware vCenter datacenter which is passed to a deployed VMware ESXi host.
+:vcenter_password: VMware vCenter password.         VMware vCenter server password which is passed to a deployed VMware ESXi host.
+:vcenter_server: VMware vCenter server FQDN or IP address.         VMware vCenter server FQDN or IP address which is passed to a deployed VMware ESXi host.
+:vcenter_username: VMware vCenter username.         VMware vCenter server username which is passed to a deployed VMware ESXi host.
+:windows_kms_host: Windows KMS activation host.         FQDN or IP address of the host that provides the KMS Windows activation service. (Only needed for Windows deployments using KMS activation.)
+:type name: String</p>
+<p><strong><em> :active_discovery_interval:
+Active subnet mapping interval. When enabled, each rack will scan subnets enabled for active mapping. This helps ensure discovery information is accurate and complete.
+</em></strong> :boot_images_auto_import:
+Automatically import/refresh the boot images every 60 minutes.
+<strong><em> :boot_images_no_proxy:
+Set no_proxy with the image repository address when MAAS is behind (or set with) a proxy..         By default, when MAAS is behind (and set with) a proxy, it is used to download images from the image repository. In some situations (e.g. when using a local image repository) it doesn&rsquo;t make sense for MAAS to use the proxy to download images because it can access them directly. Setting this option allows MAAS to access the (local) image repository directly by setting the no_proxy variable for the MAAS env with the address of the image repository.
+</em></strong> :commissioning_distro_series:
+Default Ubuntu release used for commissioning.
+<strong><em> :completed_intro:
+Marks if the initial intro has been completed.
+</em></strong> :curtin_verbose:
+Run the fast-path installer with higher verbosity. This provides more detail in the installation logs.
+<strong><em> :default_distro_series:
+Default OS release used for deployment.
+</em></strong> :default_dns_ttl:
+Default Time-To-Live for the DNS.         If no TTL value is specified at a more specific point this is how long DNS responses are valid, in seconds.
+<strong><em> :default_min_hwe_kernel: 
+Default Minimum Kernel Version.         The default minimum kernel version used on all new and commissioned nodes.
+</em></strong> :default_osystem: 
+Default operating system used for deployment.
+<strong><em> :default_storage_layout: 
+Default storage layout.         Storage layout that is applied to a node when it is commissioned.        Available choices are:
+&lsquo;bcache&rsquo; (Bcache layout), &lsquo;blank&rsquo; (No storage (blank) layout), &lsquo;custom&rsquo; (Custom layout (from commissioning storage config)), &lsquo;flat&rsquo; (Flat layout), &lsquo;lvm&rsquo; (LVM layout), &lsquo;vmfs6&rsquo; (VMFS6 layout), &lsquo;vmfs7&rsquo; (VMFS7 layout).
+</em></strong> :disk_erase_with_quick_erase:
+Use quick erase by default when erasing disks..         This is not a secure erase; it wipes only the beginning and end of each disk.
+<strong><em> :disk_erase_with_secure_erase:
+Use secure erase by default when erasing disks.         Will only be used on devices that support secure erase.  Other devices will fall back to full wipe or quick erase depending on the selected options.
+</em></strong> :dns_trusted_acl:
+List of external networks (not previously known), that will be allowed to use MAAS for DNS resolution..         MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows to add extra networks (not previously known) to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
+<strong><em> :dnssec_validation:
+Enable DNSSEC validation of upstream zones.         Only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;dnssec_validation&rsquo; in the DNS server config.
+</em></strong> :enable_analytics:
+Enable Google Analytics in MAAS UI to shape improvements in user experience.
+<strong><em> :enable_disk_erasing_on_release:
+Erase nodes&rsquo; disks prior to releasing.         Forces users to always erase disks when releasing.
+</em></strong> :enable_http_proxy:
+Enable the use of an APT or YUM and HTTP/HTTPS proxy.         Provision nodes to use the built-in HTTP proxy (or user specified proxy) for APT or YUM. MAAS also uses the proxy for downloading boot images.
+<strong><em> :enable_third_party_drivers:
+Enable the installation of proprietary drivers (i.e. HPVSA).
+</em></strong> :enlist_commissioning:
+Whether to run commissioning during enlistment..         Enables running all built-in commissioning scripts during enlistment.
+<strong><em> :force_v1_network_yaml:
+Always use the legacy v1 YAML (rather than Netplan format, also known as v2 YAML) when composing the network configuration for a machine..
+</em></strong> :hardware_sync_interval:
+Hardware Sync Interval.         The interval to send hardware info to MAAS fromhardware sync enabled machines, in systemd time span syntax.
+<strong><em> :http_proxy:
+Proxy for APT or YUM and HTTP/HTTPS.         This will be passed onto provisioned nodes to use as a proxy for APT or YUM traffic. MAAS also uses the proxy for downloading boot images. If no URL is provided, the built-in MAAS proxy will be used.
+</em></strong> :kernel_opts:
+Boot parameters to pass to the kernel by default.
+<strong><em> :maas_auto_ipmi_cipher_suite_id: 
+MAAS IPMI Default Cipher Suite ID.         The default IPMI cipher suite ID to use when connecting to the BMC via ipmitools        Available choices are:
+&lsquo;&rsquo; (freeipmi-tools default), &lsquo;12&rsquo; (12 - HMAC-MD5::MD5-128::AES-CBC-128), &lsquo;17&rsquo; (17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128), &lsquo;3&rsquo; (3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128), &lsquo;8&rsquo; (8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128).
+</em></strong> :maas_auto_ipmi_k_g_bmc_key:
+The IPMI K_g key to set during BMC configuration..         This IPMI K_g BMC key is used to encrypt all IPMI traffic to a BMC. Once set, all clients will REQUIRE this key upon being commissioned. Any current machines that were previously commissioned will not require this key until they are recommissioned.
+<strong><em> :maas_auto_ipmi_user:
+MAAS IPMI user..         The name of the IPMI user that MAAS automatically creates during enlistment/commissioning.
+</em></strong> :maas_auto_ipmi_user_privilege_level:
+MAAS IPMI privilege level.         The default IPMI privilege level to use when creating the MAAS user and talking IPMI BMCs        Available choices are:
+&lsquo;ADMIN&rsquo; (Administrator), &lsquo;OPERATOR&rsquo; (Operator), &lsquo;USER&rsquo; (User).
+<strong><em> :maas_auto_ipmi_workaround_flags: 
+IPMI Workaround Flags.         The default workaround flag (-W options) to use for ipmipower commands        Available choices are:
+&lsquo;&rsquo; (None), &lsquo;authcap&rsquo; (Authcap), &lsquo;endianseq&rsquo; (Endianseq), &lsquo;forcepermsg&rsquo; (Forcepermsg), &lsquo;idzero&rsquo; (Idzero), &lsquo;integritycheckvalue&rsquo; (Integritycheckvalue), &lsquo;intel20&rsquo; (Intel20), &lsquo;ipmiping&rsquo; (Ipmiping), &lsquo;nochecksumcheck&rsquo; (Nochecksumcheck), &lsquo;opensesspriv&rsquo; (Opensesspriv), &lsquo;sun20&rsquo; (Sun20), &lsquo;supermicro20&rsquo; (Supermicro20), &lsquo;unexpectedauth&rsquo; (Unexpectedauth).
+</em></strong> :maas_internal_domain:
+Domain name used by MAAS for internal mapping of MAAS provided services..         This domain should not collide with an upstream domain provided by the set upstream DNS.
+<strong><em> :maas_name:
+MAAS name.
+</em></strong> :maas_proxy_port: 
+Port to bind the MAAS built-in proxy (default: 8000).         Defines the port used to bind the built-in proxy. The default port is 8000.
+<strong><em> :maas_syslog_port: 
+Port to bind the MAAS built-in syslog (default: 5247).         Defines the port used to bind the built-in syslog. The default port is 5247.
+</em></strong> :max_node_commissioning_results:
+The maximum number of commissioning results runs which are stored.
+<strong><em> :max_node_installation_results:
+The maximum number of installation result runs which are stored.
+</em></strong> :max_node_testing_results:
+The maximum number of testing results runs which are stored.
+<strong><em> :network_discovery:
+When enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.
+</em></strong> :node_timeout:
+Time, in minutes, until the node times out during commissioning, testing, deploying, or entering rescue mode..         Commissioning, testing, deploying, and entering rescue mode all set a timeout when beginning. If MAAS does not hear from the node within the specified number of minutes the node is powered off and set into a failed status.
+<strong><em> :ntp_external_only:
+Use external NTP servers only.         Configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers, rack contoller hosts will in turn refer to the regions&rsquo; NTP servers, and deployed machines will refer to the racks&rsquo; NTP servers.
+</em></strong> :ntp_servers:
+Addresses of NTP servers.         NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS&rsquo;s DHCP services.
+<strong><em> :prefer_v4_proxy:
+Sets IPv4 DNS resolution before IPv6.         If prefer_v4_proxy is set, the proxy will be set to prefer IPv4 DNS resolution before it attempts to perform IPv6 DNS resolution.
+</em></strong> :prometheus_enabled:
+Enable sending stats to a prometheus gateway..         Allows MAAS to send statistics to Prometheus. This requires the &lsquo;prometheus_push_gateway&rsquo; to be set.
+<strong><em> :prometheus_push_gateway:
+Address or hostname of the Prometheus push gateway..         Defines the address or hostname of the Prometheus push gateway where MAAS will send data to.
+</em></strong> :prometheus_push_interval:
+Interval of how often to send data to Prometheus (default:to 60 minutes)..         The internal of how often MAAS will send stats to Prometheus in minutes.
+<strong><em> :promtail_enabled:
+Enable streaming logs to Promtail..         Whether to stream logs to Promtail
+</em></strong> :promtail_port:
+TCP port of the Promtail Push API..         Defines the TCP port of the Promtail push API where MAAS will stream logs to.
+<strong><em> :release_notifications:
+Enable or disable notifications for new MAAS releases..
+</em></strong> :remote_syslog:
+Remote syslog server to forward machine logs.         A remote syslog server that MAAS will set on enlisting, commissioning, testing, and deploying machines to send all log messages. Clearing this value will restore the default behaviour of forwarding syslog to MAAS.
+<strong><em> :subnet_ip_exhaustion_threshold_count:
+If the number of free IP addresses on a subnet becomes less than or equal to this threshold, an IP exhaustion warning will appear for that subnet.
+</em></strong> :tls_cert_expiration_notification_enabled:
+Notify when the certificate is due to expire.         Enable/Disable notification about certificate expiration.
+<strong><em> :tls_cert_expiration_notification_interval:
+Certificate expiration reminder (days).         Configure notification when certificate is due to expire in (days).
+</em></strong> :upstream_dns:
+Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses).         Only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;forwarders&rsquo; in the DNS server config.
+<strong><em> :use_peer_proxy:
+Use the built-in proxy with an external proxy as a peer.         If enable_http_proxy is set, the built-in proxy will be configured to use http_proxy as a peer proxy. The deployed machines will be configured to use the built-in proxy.
+</em></strong> :use_rack_proxy:
+Use DNS and HTTP metadata proxy on the rack controllers when a machine is booted..         All DNS and HTTP metadata traffic will flow through the rack controller that a machine is booting from. This isolated region controllers from machines.
+<strong><em> :vcenter_datacenter:
+VMware vCenter datacenter.         VMware vCenter datacenter which is passed to a deployed VMware ESXi host.
+</em></strong> :vcenter_password:
+VMware vCenter password.         VMware vCenter server password which is passed to a deployed VMware ESXi host.
+<strong><em> :vcenter_server:
+VMware vCenter server FQDN or IP address.         VMware vCenter server FQDN or IP address which is passed to a deployed VMware ESXi host.
+</em></strong> :vcenter_username:
+VMware vCenter username.         VMware vCenter server username which is passed to a deployed VMware ESXi host.
+*** :windows_kms_host:
+Windows KMS activation host.         FQDN or IP address of the host that provides the KMS Windows activation service. (Only needed for Windows deployments using KMS activation.)</p>
+    </div>
+  </body>
+</html>
