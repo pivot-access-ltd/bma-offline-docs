@@ -4,7 +4,9 @@ MAAS has a significant number of configuration settings.  This article will list
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages" view="UI"]
-How to get to Settings.
+The MAAS UI provides a Settings tab at the top of the MAAS interface:
+
+
 
 <a href="#heading--Basic-configuration"><h2 id="heading--Basic-configuration">Basic configuration</h2></a>
 
