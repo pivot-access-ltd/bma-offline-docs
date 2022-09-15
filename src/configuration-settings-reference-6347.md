@@ -6,7 +6,7 @@ MAAS has a significant number of configuration settings.  This article will list
 [tab version="v3.3 Snap,v3.3 Packages" view="UI"]
 The MAAS UI provides a Settings tab at the top of the MAAS interface:
 
-
+![image|690x111](upload://cUehOV6KmXVErPmkMQgTers3i6h.png) 
 
 <a href="#heading--Basic-configuration"><h2 id="heading--Basic-configuration">Basic configuration</h2></a>
 
