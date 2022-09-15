@@ -6,18 +6,35 @@ MAAS has a significant number of configuration settings.  This article will list
 [tab version="v3.3 Snap,v3.3 Packages" view="UI"]
 The MAAS UI provides a Settings tab at the top of the MAAS interface:
 
-![image|690x111](upload://cUehOV6KmXVErPmkMQgTers3i6h.png) 
+<a href="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"></a>
+
+Selections are made by clicking on active links down the left side of the page.
 
 <a href="#heading--Basic-configuration"><h2 id="heading--Basic-configuration">Basic configuration</h2></a>
 
+The basic configuration section (simply marked "Configuration") provides access to the most-commonly changed configuration parameters of MAAS:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b72a84b995efa0d43d213cf869c248ad9107e25a.png"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b72a84b995efa0d43d213cf869c248ad9107e25a.png"></a>
+
+These common parameters will be enumerated in this section.
+
 <a href="#heading--General-items"><h3 id="heading--General-items">General items</h3></a>
+
+The "General" section provides the ability to set the MAAS site identity, which is most useful if you are running more than one MAAS instance.  For example, if you have a "test" environment and a "production" environment, you can differentiate them by name and colour scheme.  This section also provides data collection and version notification options.
 
 <a href="#heading--MAAS-name"><h4 id="heading--MAAS-name">MAAS name (text box)</h4></a>
 
-Use MAAS name and unicode emoji(s) to describe your MAAS instance.
-Examples:
-⛔ maas-prod
-my-maas ⚠️ no-deploys
+The "* MAAS name" is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"></a>
+
+<href="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"></a>
+
+You can also use this MAAS name string with unicode emoji(s) to provide additional visual cues:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a5fe492af7bb0da83324d2795e95748bde58be06.png"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a5fe492af7bb0da83324d2795e95748bde58be06.png"></a>
+
+Emojis can be added by cutting and pasting from an available graphics source; MAAS does not provide an emoji library at this time.
 
 <a href="#heading--MAAS-theme-main-colour"><h4 id="heading--MAAS-theme-main-colour">MAAS theme main colour (radio-button selection)</h4></a>
 
