@@ -3,7 +3,7 @@
 MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages" view="UI"]
+[tab version="v3.1 Snap,V3.1 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
 The MAAS UI provides a Settings tab at the top of the MAAS interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"></a>
@@ -229,7 +229,7 @@ Each table row also has an "Actions" column, which allows you to edit or delete 
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages" view="CLI"]
+[tab version="v3.1 Snap,V3.1 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
 
 <a href="#heading--changing-settings-with-the-cli"><h2 id="heading--changing-settings-with-the-cli">Changing MAAS settings via the MAAS CLI</h2></a>
 
