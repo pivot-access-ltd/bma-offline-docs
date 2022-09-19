@@ -111,6 +111,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 
 - [Audit event logs](/t/-/5256)
 - [Commissioning scripts](/t/-/5375)
+- [Configuration settings](/t/-/6347)
 - [Hardware test scripts](/t/-/5392)
 - [Log files](/t/-/5240)
 - [MAAS performance](/t/-/6178)
@@ -145,6 +146,7 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6347|/docs/configuration-settings-reference|
 |https://discourse.maas.io/t/-/6327|/docs/maas-terraform-provider|
 |https://discourse.maas.io/t/-/6233|/docs/installation-requirements|
 |https://discourse.maas.io/t/-/6203|/docs/technical-reference|
