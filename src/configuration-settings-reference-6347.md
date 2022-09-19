@@ -3,7 +3,7 @@
 MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
 
 [tabs]
-[tab version="v3.1 Snap,v3.1 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
+[tab version="v3.1 Snap,V3.1 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
 The MAAS UI provides a Settings tab at the top of the MAAS interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"></a>
@@ -26,7 +26,7 @@ The "General" section provides the ability to set the MAAS site identity, which 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"></a>
+<href="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"></a>
 
 <!-- You can also use this MAAS name string with unicode emoji(s) to provide additional visual cues:
 
@@ -229,7 +229,8 @@ Each table row also has an "Actions" column, which allows you to edit or delete 
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 [/tab]
-[tab version="v3.1 Snap,v3.1 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
+[tab version="v3.1 Snap,V3.1 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
+
 <a href="#heading--changing-settings-with-the-cli"><h2 id="heading--changing-settings-with-the-cli">Changing MAAS settings via the MAAS CLI</h2></a>
 
 Assuming you have successfully logged into the MAAS CLI, you can access configuration values using the `maas $PROFILE maas set-config` command.  This command is used to set MAAS configuration values.
@@ -257,7 +258,7 @@ These keyword arguments must come after any positional arguments required by a s
 - *disk_erase_with_secure_erase*: Use secure erase by default when erasing disks.         Will only be used on devices that support secure erase.  Other devices will fall back to full wipe or quick erase depending on the selected options.
 - *dns_trusted_acl*: List of external networks (not previously known), that will be allowed to use MAAS for DNS resolution..         MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows to add extra networks (not previously known) to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
 - *dnssec_validation*: Enable DNSSEC validation of upstream zones.         Only used when MAAS is running its own DNS server. This value is used as the value of 'dnssec_validation' in the DNS server config.
-- *enable_analytics*: Enable Google Analytics in the MAAS UI to shape improvements in user experience.
+- *enable_analytics*: Enable Google Analytics in MAAS UI to shape improvements in user experience.
 - *enable_disk_erasing_on_release*: Erase node disks prior to releasing.         Forces users to always erase disks when releasing.
 - *enable_http_proxy*: Enable the use of an APT or YUM and HTTP/HTTPS proxy.         Provision nodes to use the built-in HTTP proxy (or user specified proxy) for APT or YUM. MAAS also uses the proxy for downloading boot images.
 - *enable_third_party_drivers*: Enable the installation of proprietary drivers (i.e. HPVSA).
@@ -269,7 +270,6 @@ These keyword arguments must come after any positional arguments required by a s
 - *maas_auto_ipmi_cipher_suite_id*: MAAS IPMI Default Cipher Suite ID.         The default IPMI cipher suite ID to use when connecting to the BMC via ipmitools        Available choices are*: '' (freeipmi-tools default), '12' (12 - HMAC-MD5::MD5-128::AES-CBC-128), '17' (17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128), '3' (3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128), '8' (8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128).
 - *maas_auto_ipmi_k_g_bmc_key*: The IPMI K_g key to set during BMC configuration..         This IPMI K_g BMC key is used to encrypt all IPMI traffic to a BMC. Once set, all clients will REQUIRE this key upon being commissioned. Any current machines that were previously commissioned will not require this key until they are recommissioned.
 - *maas_auto_ipmi_user*: MAAS IPMI user..         The name of the IPMI user that MAAS automatically creates during enlistment/commissioning.
-- *maas_auto_ipmi_user_privilege_level*: MAAS IPMI privilege level.         The default IPMI privilege level to use when creating the MAAS user and talking IPMI BMCs        Available choices are*: 'ADMIN' (Administrator), 'OPERATOR' (Operator), 'USER' (User).
 - *maas_auto_ipmi_user_privilege_level*: MAAS IPMI privilege level.         The default IPMI privilege level to use when creating the MAAS user and talking IPMI BMCs        Available choices are*: 'ADMIN' (Administrator), 'OPERATOR' (Operator), 'USER' (User).
 - *maas_auto_ipmi_workaround_flags*: IPMI Workaround Flags.         The default workaround flag (-W options) to use for ipmipower commands        Available choices are*: '' (None), 'authcap' (Authcap), 'endianseq' (Endianseq), 'forcepermsg' (Forcepermsg), 'idzero' (Idzero), 'integritycheckvalue' (Integritycheckvalue), 'intel20' (Intel20), 'ipmiping' (Ipmiping), 'nochecksumcheck' (Nochecksumcheck), 'opensesspriv' (Opensesspriv), 'sun20' (Sun20), 'supermicro20' (Supermicro20), 'unexpectedauth' (Unexpectedauth).
 - *maas_internal_domain*: Domain name used by MAAS for internal mapping of MAAS provided services..         This domain should not collide with an upstream domain provided by the set upstream DNS.
