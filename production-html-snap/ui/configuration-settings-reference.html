@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;UI-only&nbsp;
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/configuration-settings-reference.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Tutorials
+      </strong>
+      <ul>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-cli-tutorial.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to get MAAS running
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to configure networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-addresses.html">
+	    Manage IP addresses
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to choose images
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-custom-images.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to deploy MAAS
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-controllers.html">
+	    Manage controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to use tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to operate MAAS
+      </strong>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-work-with-audit-event-logs.html">
+	      Work with audit event logs
+	    </a>
+	  </li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+	</ul>
+      <p/>
+      <strong>
+	  API Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Getting help
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Explanations
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    Cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    MAAS networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    Images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-creating-custom-images.html">
+	    Custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    Controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    Machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-customising-machines.html">
+	    Customising machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    VM hosting
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>Configuration settings reference</h1><!-- "Configuration settings reference" -->
+
+<p>MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.</p>
+<p>The MAAS UI provides a Settings tab at the top of the MAAS interface:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"></a></p>
+<p>Selections are made by clicking on active links down the left side of the page.</p>
+<p><a href="#heading--Basic-configuration"><h2 id="heading--Basic-configuration">Basic configuration</h2></a></p>
+<p>The basic configuration section (simply marked &ldquo;Configuration&rdquo;) provides access to the most-commonly changed configuration parameters of MAAS:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b72a84b995efa0d43d213cf869c248ad9107e25a.png"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b72a84b995efa0d43d213cf869c248ad9107e25a.png"></a></p>
+<p>These common parameters will be enumerated in this section.</p>
+<p><a href="#heading--General-items"><h3 id="heading--General-items">General items</h3></a></p>
+<p>The &ldquo;General&rdquo; section provides the ability to set the MAAS site identity, which is most useful if you are running more than one MAAS instance.  For example, if you have a &ldquo;test&rdquo; environment and a &ldquo;production&rdquo; environment, you can differentiate them by name<!-- and colour scheme-->.  This section also provides data collection and version notification options. </p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><em>MAAS name</em>: The &ldquo;* MAAS name&rdquo; is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"></a></p>
+<p><href="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"></a></p>
+<p>You can also use this MAAS name string with unicode emoji(s) to provide additional visual cues:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a5fe492af7bb0da83324d2795e95748bde58be06.png"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a5fe492af7bb0da83324d2795e95748bde58be06.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Emojis</em>: Emojis can be added to the MAAS name by cutting and pasting from an available graphics source; MAAS does not provide an emoji library at this time.</p>
+</li>
+<li>
+<p><em>Colour scheme</em>: Each MAAS instance can display the tab bar in a different color.  This helps users distinguish between different instances.  The available colors are as follows:</p>
+</li>
+<li>
+<p>Default</p>
+</li>
+<li>Bark</li>
+<li>Sage</li>
+<li>Olive</li>
+<li>Viridian</li>
+<li>Prussian green</li>
+<li>Blue</li>
+<li>Purple</li>
+<li>Magenta</li>
+<li>Red</li>
+</ul>
+<p>You can set the tab bar color by selecting the appropriate radio button.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Opt in to analytics</em>: MAAS uses Google Analytics, Usabilla and Sentry Error Tracking to improve user experience.  You can opt in or out of this service by setting or clearing this checkbox.</p>
+</li>
+<li>
+<p><em>Notify users of new releases:</em> If you select this checkbox, MAAS will notify all users when new releases are available.</p>
+</li>
+</ul>
+<p><a href="#heading--Security"><h3 id="heading--Security">Security</h3></a></p>
+<p>The MAAS configuration settings maintains a section for security-related parameters.  Currently, there is only one item, &ldquo;TLS status&rdquo;.  This section gives instructions on how to enable TLS with a certificate and a private key.  This is a CLI-operation; use the listed command at the command line, after logging into your MAAS instance.</p>
+<p><a href="#heading--Commissioning"><h3 id="heading--Commissioning">Commissioning</h3></a></p>
+<p>This section provides a number of configurable parameters related to commissioning machines, including settings for the machines themselves, as well as the IPMI connection used to access machines.</p>
+<p><a href="#heading--Machine-settings"><h4 id="heading--Machine-settings">Machine settings</h4></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Default commissioning release</em>: You can choose the default Ubuntu release that will be used for commissioning from a dropdown menu.</p>
+</li>
+<li>
+<p><em>Default minimum kernel version</em>: The default minimum kernel version used on all new and commissioned nodes.  You can also choose this default from a dropdown menu.</p>
+</li>
+</ul>
+<p><a href="#heading--IPMI-settings"><h4 id="heading--IPMI-settings">IPMI settings</h4></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>IPMI username</em>: You can set the default IPMI username, which will control IPMI access to machines.</p>
+</li>
+<li>
+<p><em>K_g BMC key</em>: Specify this key to encrypt all communication between IPMI clients and the BMC. Leave this blank for no encryption. </p>
+</li>
+<li>
+<p><em>IPMI privilege level</em>: You can choose the privilege level for IPMI access from a set of radio buttons (admin, operator, user).</p>
+</li>
+</ul>
+<p><a href="#heading--Deployment"><h3 id="heading--Deployment">Deployment</h3></a></p>
+<p>There are also a number of parameters which control MAAS machine deployment:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Default deployment OS</em>: You can choose the default operating system used for deployment from a dropdown list.</p>
+</li>
+<li>
+<p><em>Default deployment OS release</em>: You can also choose the default OS release used for deployment, also from a dropdown.</p>
+</li>
+<li>
+<p><em>Default hardware sync interval</em>: You can set the default hardware sync interval, in minutes.</p>
+</li>
+</ul>
+<p><a href="#heading--Kernel-parameters"><h3 id="heading--Kernel-parameters">Kernel parameters</h3></a></p>
+<p>You can set the kernel parameters used with machine kernels.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><em>Global boot parmeters</em>: You can set global boot parameters that are always passed to the machine kernel.</li>
+</ul>
+<p><a href="#heading--Users"><h2 id="heading--Users">Users</h2></a></p>
+<p>MAAS configuration gives you the ability to manage your users.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Add user button</em>: This button can be used to add a new user.</p>
+</li>
+<li>
+<p><em>User table</em>: This table lists user attributes, including username, real name, machines they can access, when the user was last seen, MAAS keys, and a user type and role.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are &ldquo;three click&rdquo; sorts: ascending, descending, and none.</p>
+</li>
+</ul>
+<p>Each table row also has an &ldquo;Actions&rdquo; column, which allows you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.</p>
+<p>Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen.  A search bar is also provided to help you locate a particular user in a longer list.</p>
+<p><a href="#heading--Images"><h2 id="heading--Images">Images</h2></a></p>
+<p>This section of the configuration settings allows you to specify parameters that control images.</p>
+<p>If you are using Ubuntu images, you can enable the installation of proprietry drives by selecting the appropriate checkbox.</p>
+<p>If youa re using Windows images, you can specify the Windows KMS activation host.  This is the FQDN or IP address of the host that provides the KMS Windows activation service. This is only needed for Windows deployments that use KMS activation.</p>
+<p>If you are usijng VMWare images, there are several parameters you can adjust:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>VMware vCenter server FQDN or IP address</em>: the VMware vCenter server FQDN or IP address which is passed to a deployed VMware ESXi host.</p>
+</li>
+<li>
+<p><em>VMware vCenter username</em>: the VMware vCenter server username which is passed to a deployed VMware ESXi host.</p>
+</li>
+<li>
+<p><em>VMware vCenter password</em>: the VMware vCenter server password which is passed to a deployed VMware ESXi host.</p>
+</li>
+<li>
+<p><em>VMware vCenter datacenter</em>: the VMware vCenter datacenter which is passed to a deployed VMware ESXi host.</p>
+</li>
+</ul>
+<p><a href="#heading--License-keys"><h2 id="heading--License-keys">License keys</h2></a></p>
+<p>MAAS configuration gives you the ability to manage your license key.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Add license key button</em>: This button can be used to add a new license key.</p>
+</li>
+<li>
+<p><em>License table</em>: This table lists license attributes, including operating system and distro series.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are &ldquo;three click&rdquo; sorts: ascending, descending, and none.</p>
+</li>
+</ul>
+<p>Each table row also has an &ldquo;Actions&rdquo; column, which allows you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.</p>
+<p>Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular license key in a longer list.</p>
+<p><a href="#heading--Storage"><h2 id="heading--Storage">Storage</h2></a></p>
+<p>You can set some parameters related to machine storage layouts.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Default storage layout</em>: The default storage layout that is applied to a machine when it is commissioned.</p>
+</li>
+<li>
+<p><em>Erase before releasing</em>: Checking this box forces users to always erase disks when releasing machines.</p>
+</li>
+<li>
+<p><em>Use secure erase</em>: Check this box to use secure erase by default when erasing disks. This will only be used on devices that support secure erase. Other devices will fall back to full wipe or quick erase depending on the selected options.</p>
+</li>
+<li>
+<p><em>Use quick erase</em>: Check this box to use quick erase by default when erasing disks.  This box is selected separately to provide a fallback for devices that do not support secure erase, should you have selected secure erase as the default method.  Note that this is not a secure erase; it wipes only the beginning and end of each disk.</p>
+</li>
+</ul>
+<p><a href="#heading--Network"><h2 id="heading--Network">Network</h2></a></p>
+<p>You can set some network defaults for MAAS machines.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>HTTP proxy</em>: Here, you can choose the HTTP proxy used by MAAS to download images, and used by provisioned machines for APT and YUM packages. Your choices are (1) no proxy, (2) MAAS built-in proxy, (3) external proxy, or (4) peer proxy.  If you choose external or peer proxy, you will be presented with a text box to specify the external proxy URL that the MAAS built-in proxy will use as an upstream cache peer. Note that machines will be configured to use MAAS&rsquo; built-in proxy to download APT packages when external or peer proxies are specified.</p>
+</li>
+<li>
+<p><em>Upstream DNS</em>: Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses). Only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;forwarders&rsquo; in the DNS server config.</p>
+</li>
+<li>
+<p><em>Enable DNSSEC validation</em>: If you wish to enable DNSSEC validation of upstream zones, you can choose the method from this dropdown list.  This is only used when MAAS is running its own DNS server. This value is used as the value of &lsquo;dnssec_validation&rsquo; in the DNS server config.</p>
+</li>
+<li>
+<p><em>List of external networks</em>: You can also provide a ist of external networks to be used for MAAS DNS resolution. MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows you to add extra, previously-unknown networks to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.</p>
+</li>
+<li>
+<p><em>NTP server addresses</em>: You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS&rsquo;s DHCP services.</p>
+</li>
+<li>
+<p><em>Use external NTP only</em>:  You can configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers; rack contoller hosts will in turn refer to the regions&rsquo; NTP servers; deployed machines will refer to the racks&rsquo; NTP servers.</p>
+</li>
+<li>
+<p><em>Remote syslog server</em>: You can specify the remote syslog server to which machine logs should be forwarded.  This will be a remote syslog server that MAAS will set on enlisting, commissioning, testing, and deploying machines to send all log messages. Clearing this value will restore the default behaviour of forwarding syslog to MAAS.</p>
+</li>
+<li>
+<p><em>Network discovery</em>: When this choice is enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.</p>
+</li>
+<li>
+<p><em>Active subnet mapping interval</em>: You can choose the subnet mapping interval from this dropdown.  When enabled, each rack will scan subnets enabled for active mapping. This helps ensure discovery information is accurate and complete.</p>
+</li>
+</ul>
+<p><a href="#heading--Scripts"><h2 id="heading--Scripts">Scripts</h2></a></p>
+<p>MAAS provides a great deal of flexibility when dealing with commissioning and testing scripts.</p>
+<p><a href="#heading--Commissioning-scripts"><h3 id="heading--Commissioning-scripts">Commissioning scripts</h3></a></p>
+<p>MAAS configuration gives you the ability to manage your commissioning scripts.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Upload script button</em>: This button can be used to upload a new commissioning script.</p>
+</li>
+<li>
+<p><em>Table of commissioning scripts</em>: This table lists script attributes, including script name, description, and upload timestamp.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are &ldquo;three click&rdquo; sorts: ascending, descending, and none.</p>
+</li>
+</ul>
+<p>Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.</p>
+<p>Each table row also has an &ldquo;Actions&rdquo; column, which allows you to delete the script in that row, depending upon your role.</p>
+<p>Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular commissioning script in a longer list.</p>
+<p><a href="#heading--Testing-scripts"><h3 id="heading--Testing-scripts">Testing scripts</h3></a></p>
+<p>The MAAS configuration settings give you the ability to manage your testing scripts.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Upload script button</em>: This button can be used to upload a new test script.</p>
+</li>
+<li>
+<p><em>Table of commissioning scripts</em>: This table lists script attributes, including script name, description, and upload timestamp.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are &ldquo;three click&rdquo; sorts: ascending, descending, and none.</p>
+</li>
+</ul>
+<p>Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.</p>
+<p>Each table row also has an &ldquo;Actions&rdquo; column, which allows you to delete the script in that row, depending upon your role.</p>
+<p>Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.</p>
+<p><a href="#heading--DHCP-snippets"><h2 id="heading--DHCP-snippets">DHCP snippets</h2></a></p>
+<p>The MAAS configuration settings give you the ability to manage any DHCP snippets you wish to apply.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Add snippet button</em>: This button can be used to add a new DHCP snippet.</p>
+</li>
+<li>
+<p><em>Table of snippets</em>: This table lists snippet attributes, including snippet name, type, description, application, data of last edit, and whether or not that snippet is currently enabled.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are &ldquo;three click&rdquo; sorts: ascending, descending, and none.</p>
+</li>
+</ul>
+<p>Also note that individual snippet names are clickable, allowing you to expand that row to see the language of that snippet.</p>
+<p>Each table row also has an &ldquo;Actions&rdquo; column, which allows you to edit or delete the snippet in that row, depending upon your role.</p>
+<p>Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.</p>
+<p><a href="#heading--Package-repos"><h2 id="heading--Package-repos">Package repos</h2></a></p>
+<p>MAAS configuration settings give you the ability to manage any package repos you wish to apply to your MAAS instance.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><em>Add PPA button</em>: This button can be used to add a new PPA to the search path.</p>
+</li>
+<li>
+<p><em>Add repository button</em>: This button can be used to add a new repository to the search path.</p>
+</li>
+<li>
+<p><em>Table of repositories</em>: This table lists enabled respositores, including the repo name, URL, and whether or not that repository is currently enabled in the search path.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are &ldquo;three click&rdquo; sorts: ascending, descending, and none.</p>
+</li>
+</ul>
+<p>Also note that individual snippet names are clickable, allowing you to expand that row to see the language of that snippet.</p>
+<p>Each table row also has an &ldquo;Actions&rdquo; column, which allows you to edit or delete the repository information in that row, depending upon your role.</p>
+<p>Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.</p>
+    </div>
+  </body>
+</html>
