@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MAAS | Discourse</title>
+  <meta name="description" content="">
+  <meta name="generator" content="Discourse 2.6.0 - https://github.com/discourse/discourse version d6121249d3856a40382637ed12db50fc43c1fb1d">
+<link rel="icon" type="image/png" href="https://discourse.maas.io/uploads/default/optimized/2X/4/4e77f0ddaab1e5de1494ee1dca57b64a81994cf6_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discourse.maas.io/uploads/default/optimized/2X/c/c318c28354414229c9195948cb03fdfb56b4cff0_2_180x180.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://discourse.maas.io/t/image-scrapbook/4398?page=0" />
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://discourse.maas.io","potentialAction":{"@type":"SearchAction","target":"https://discourse.maas.io/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<link rel="search" type="application/opensearchdescription+xml" href="https://discourse.maas.io/opensearch.xml" title="MAAS | Discourse Search">
+
+  <link href="/stylesheets/color_definitions_base__46aa1a54c26d735e70173b68efcf63653046bf97.css?__ws=discourse.maas.io" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="/stylesheets/desktop_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="desktop" data-theme-id="17"/>
+
+
+  <link href="/stylesheets/discourse-data-explorer_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-data-explorer" data-theme-id="17"/>
+  <link href="/stylesheets/discourse-details_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-details" data-theme-id="17"/>
+  <link href="/stylesheets/discourse-local-dates_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-local-dates" data-theme-id="17"/>
+  <link href="/stylesheets/discourse-markdown-note_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-markdown-note" data-theme-id="17"/>
+  <link href="/stylesheets/discourse-presence_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-presence" data-theme-id="17"/>
+  <link href="/stylesheets/discourse-rad-plugin_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-rad-plugin" data-theme-id="17"/>
+  <link href="/stylesheets/discourse-saml_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-saml" data-theme-id="17"/>
+  <link href="/stylesheets/discourse-solved_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="discourse-solved" data-theme-id="17"/>
+  <link href="/stylesheets/lazy-yt_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="lazy-yt" data-theme-id="17"/>
+  <link href="/stylesheets/poll_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="poll" data-theme-id="17"/>
+  <link href="/stylesheets/poll_desktop_f2d2228b8610547341cfda65766dfb5e3b3d82b2.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="poll_desktop" data-theme-id="17"/>
+
+  <link href="/stylesheets/desktop_theme_17_2994ad42dc87bf037848fa9bee9278d63e75cbe4.css?__ws=discourse.maas.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="17"/>
+
+
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet" type="text/css">
+  
+  
+</head>
+<body class="no-ember ">
+  
+<div class="p-navigation__row">
+  <nav class="p-navigation__nav">
+    <div div="" class="p-navigation__banner">
+      <div class="p-navigation__tagged-logo">
+        <a class="p-navigation__link" href="/" data-auto-route="true">
+          <div class="p-navigation__logo-tag">
+            <img class="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/0a1e5f5d-Canonical-MAAS-logo-2022.svg" alt="">
+          </div>
+          <span class="p-navigation__logo-title">Canonical MAAS</span>
+        </a>
+      </div>
+    </div>
+    <ul id="main-navigation" class="p-navigation__links">
+      <li class="p-navigation__link">
+        <a href="https://maas.io/install">Install</a>
+      </li>
+      <li class="p-navigation__link">
+        <a href="https://maas.io/how-it-works">How it works</a>
+      </li>
+      <li class="p-navigation__link">
+        <a href="https://maas.io/tour">Tour</a>
+      </li>
+      <li class="p-navigation__link">
+        <a href="https://maas.io/docs">Docs</a>
+      </li>
+      <li class="p-navigation__link">
+        <a href="https://maas.io/blog">Blog</a>
+      </li>
+      <li class="p-navigation__link">
+        <a href="https://maas.io/tutorials">Tutorials</a>
+      </li>
+      <li class="p-navigation__link">
+        <a href="https://maas.io/resources">Resources</a>
+      </li>
+      <li class="p-navigation__link">
+        <a href="https://maas.io/contact-us">Contact us</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<nav class="p-navigation--secondary">
+  <div class="u-fixed-width">
+    <a class="p-navigation--secondary__banner" href="/">
+        <h5 class="p-navigation--secondary__logo">
+          Discourse
+        </h5>
+    </a>
+  </div>
+</nav>
+  
+  <section id='main'>
+    
+  <header class="d-header">
+    <div class="wrap">
+      <div class="contents clearfix">
+        <div class="title">
+          <a href="/">
+              <img src="https://discourse.maas.io/uploads/default/original/2X/8/8003899a00283bcc2dd4ef9ce8120d9ddebd44d7.svg" alt="MAAS | Discourse" id="site-logo">
+          </a>
+        </div>
+        <div class="panel clearfix">
+            <span class='header-buttons'>
+                <a href="/signup" class='btn btn-primary btn-small sign-up-button'>Sign Up</a>
+              <a href="/login" class='btn btn-primary btn-small login-button btn-icon-text'><svg class="fa d-icon svg-icon svg-node" aria-hidden="true"><svg id="user" viewBox="0 0 448 512">
+    <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/>
+  </svg></svg>
+Log In</a>
+            </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <div id="main-outlet" class="wrap not-found-container">
+      <div class="page-not-found">
+  <h1 class="title">Oops! That page doesn’t exist or is private.</h1>
+
+    <a href="/login" class='btn btn-primary'><svg class="fa d-icon svg-icon svg-node" aria-hidden="true"><svg id="user" viewBox="0 0 448 512">
+    <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/>
+  </svg></svg>
+Log In</a>
+
+</div>
+
+
+
+<div class="row page-not-found-topics">
+    <div class="popular-topics">
+      <h2 class="popular-topics-title">Popular</h2>
+        <div class='not-found-topic'>
+          <a href="/t/show-and-tell-how-maas-snaps-are-built/6325">Show and Tell: How MAAS snaps are built</a><a class='badge-wrapper  bullet' href='/c/devel/13'><span class='badge-category-bg' style='background-color: #AB9364;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Roadmap, debugging and architecture discussions for MAAS contributors.'>Development</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/maas-3-2-has-completely-broken-ha-region-config-with-haproxy/6308">MaaS 3.2 has COMPLETELY BROKEN HA Region config with haproxy</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/web-ui-error-on-some-pages-after-upgrade-to-3-2-3/6289">Web UI error on some pages after upgrade to 3.2.3</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/maas-region-controller-db-connection-issue-from-3-1-0-to-3-2-0/6302">MAAS Region Controller DB Connection Issue from 3.1.0 to 3.2.0</a><a class='badge-wrapper  bullet' href='/c/devel/13'><span class='badge-category-bg' style='background-color: #AB9364;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Roadmap, debugging and architecture discussions for MAAS contributors.'>Development</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/power-error/6310">Power error</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/on-first-reboot-after-install-node-fails-to-bring-up-its-network-interface/6307">On first reboot after install, node fails to bring up its network interface</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/can-you-install-an-older-revision-3-2-1-via-snap/6326">Can you install an older revision (3.2.1) via Snap?</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/maas-documentation-on-using-cli/6293">MAAS documentation on using CLI</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/3-2-4-released/6292">3.2.4 Released</a><a class='badge-wrapper  bullet' href='/c/news/7'><span class='badge-category-bg' style='background-color: #25AAE2;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Announcements, releases, security alerts and news about MAAS.'>News</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/3-2-4-cli-fabric-vlan-naming-bug/6312">3.2.4 CLI fabric/vlan naming bug</a><a class='badge-wrapper  bullet' href='/c/devel/13'><span class='badge-category-bg' style='background-color: #AB9364;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Roadmap, debugging and architecture discussions for MAAS contributors.'>Development</span></a>
+        </div>
+      <a href="/top" class="btn btn-default">More&hellip;</a>
+    </div>
+    <div class="recent-topics">
+      <h2 class="recent-topics-title">Recent</h2>
+        <div class='not-found-topic'>
+          <a href="/t/cloud-init-fails-networking-dns-problem/6363">Cloud-init fails / Networking - DNS Problem?</a><a class='badge-wrapper  bullet' href='/c/docs/5'><span class='badge-category-bg' style='background-color: #ED207B;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='MAAS is Metal As A Service, a service that treats physical servers like virtual machines (instances) in the cloud.'>Docs</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/invalid-checksums-pulling-images-from-maas-io/6362">Invalid Checksums Pulling Images from maas.io</a><a class='badge-wrapper  bullet' href='/c/features/15'><span class='badge-category-bg' style='background-color: #F7941D;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Request MAAS features here.  Example use cases are helpful. Explaining how this helps the broader community builds momentum.  In that light, you can review and upvote features here – and hopefully explain why you’re upvoting.'>Features</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/maas-kvm-host-fails-deployment-w-error-in-rackd-log/6357">MAAS KVM Host Fails Deployment w/error in rackd.log</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/pending-commissioning-libvirt/6356">Pending commissioning (libvirt)</a><a class='badge-wrapper  bullet' href='/c/tutorials/16'><span class='badge-category-bg' style='background-color: #0088CC;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='This category is hosting the tutorials that will be hosted on https:&#x2F;&#x2F;maas.io&#x2F;tutorials'>Tutorials</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/rack-import-error/6354">Rack import error</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/convert-network-type-bridge-to-open-vswitch-bridge-on-deployed-node-with-openstack/6349">Convert network type &quot;Bridge&quot; to &quot;Open vSwitch Bridge&quot; on deployed node with OpenStack</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/configuration-settings-reference/6347">Configuration settings reference</a><a class='badge-wrapper  bullet' href='/c/docs/5'><span class='badge-category-bg' style='background-color: #ED207B;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='MAAS is Metal As A Service, a service that treats physical servers like virtual machines (instances) in the cloud.'>Docs</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/kvm-host-resources-incorrect/6345">KVM host resources incorrect</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/maas-metrics/6340">MAAS metrics</a><a class='badge-wrapper  bullet' href='/c/doc-requests/24'><span class='badge-category-bg' style='background-color: #0E76BD;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='If you think the docs need something, this is the place to suggest it: snippets of text, ideas, requests, suggestions – like a “Feature Request List” for docs.'>Doc Requests</span></a>
+        </div>
+        <div class='not-found-topic'>
+          <a href="/t/question-about-maas-dns-setup-during-deployment/6334">Question about MAAS DNS setup during deployment</a><a class='badge-wrapper  bullet' href='/c/users/8'><span class='badge-category-bg' style='background-color: #3AB54A;'></span><span style='' data-drop-close='true' class='badge-category clear-badge'
+                 title='Installation, operations, best practices and general discussions for the MAAS user community.'>Users</span></a>
+        </div>
+      <a href="/latest" class="btn btn-default">More&hellip;</a>
+    </div>
+</div>
+
+
+  <div class="row">
+    <div class="page-not-found-search">
+      <h2>Search this site</h2>
+      <p>
+        <form action='/search' id='discourse-search'>
+          <input type="text" name="q" value="image scrapbook">
+          <button class="btn btn-primary">Search</button>
+        </form>
+      </p>
+    </div>
+  </div>
+
+  <link rel="preload" href="/assets/onpopstate-handler-417528e7d5f1058afdf6002e7606a3f51c2abc04573b72c85a24374a343448f2.js" as="script">
+<script src="/assets/onpopstate-handler-417528e7d5f1058afdf6002e7606a3f51c2abc04573b72c85a24374a343448f2.js"></script>
+
+
+    </div>
+  </section>
+  
+  <script src="https://maas.io/static/js/modules/global-nav/global-nav.js"></script>
+
+<script src="/theme-javascripts/97b5d725b309c19986b389c20799ae34e9681721.js?__ws=discourse.maas.io"></script>
+  
+  
+</body>
+</html>
