@@ -3,88 +3,81 @@
 MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages" view="UI"]
+[tab version="v3.1 Snap,V3.1 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
 The MAAS UI provides a Settings tab at the top of the MAAS interface:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"></a>
 
 Selections are made by clicking on active links down the left side of the page.
 
-<a href="#heading--General-items"><h2 id="heading--General-items">General items</h2></a>
+<a href="#heading--Basic-configuration"><h2 id="heading--Basic-configuration">Basic configuration</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b70a6f273934c2f8b5c758be00ad25f4d5482a39.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b70a6f273934c2f8b5c758be00ad25f4d5482a39.png"></a>
+The basic configuration section (simply marked "Configuration") provides access to the most-commonly changed configuration parameters of MAAS:
 
-<a href="#heading--MAAS-site-identity"><h3 id="heading--MAAS-site-identity">MAAS site identity</h3></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/b72a84b995efa0d43d213cf869c248ad9107e25a.png"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b72a84b995efa0d43d213cf869c248ad9107e25a.png"></a>
+
+These common parameters will be enumerated in this section.
+
+<a href="#heading--General-items"><h3 id="heading--General-items">General items</h3></a>
 
 The "General" section provides the ability to set the MAAS site identity, which is most useful if you are running more than one MAAS instance.  For example, if you have a "test" environment and a "production" environment, you can differentiate them by name<!-- and colour scheme-->.  This section also provides data collection and version notification options. 
 
 - *MAAS name*: The "* MAAS name" is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f49676981aee8b1ab6414507358b990ed24e11d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f49676981aee8b1ab6414507358b990ed24e11d0.png"></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/521098cb79c77b7460067a3d950d71e8ecf77aa7.png"></a>
 
-You can also use this MAAS name string with unicode emoji(s) to provide additional visual cues:
+<href="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e62ee6ed638c24fba913359ea35b31af4d7822c0.png"></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0ccd74fee11f712d0265609ee5e8a8b58e94a546.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0ccd74fee11f712d0265609ee5e8a8b58e94a546.png"></a>
+<!-- You can also use this MAAS name string with unicode emoji(s) to provide additional visual cues:
 
-Each MAAS instance can also display the tab bar in a different color.  This helps users distinguish between different instances.  The available colors are as follows:
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/a5fe492af7bb0da83324d2795e95748bde58be06.png"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a5fe492af7bb0da83324d2795e95748bde58be06.png"></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/abdac304572b2f4c4de0753a010f77392ee149b8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/abdac304572b2f4c4de0753a010f77392ee149b8.png"></a>
+- *Emojis*: Emojis can be added to the MAAS name by cutting and pasting from an available graphics source; MAAS does not provide an emoji library at this time.
 
-You can set the tab bar color by selecting the appropriate radio button.
+- *Colour scheme*: Each MAAS instance can display the tab bar in a different color.  This helps users distinguish between different instances.  The available colors are as follows:
 
-<a href="#heading--Google-analytics"><h3 id="heading--Google analytics">Google analytics</h3></a>
+- Default
+- Bark
+- Sage
+- Olive
+- Viridian
+- Prussian green
+- Blue
+- Purple
+- Magenta
+- Red
 
-MAAS uses Google Analytics, Usabilla and Sentry Error Tracking to improve user experience.  You can opt in or out of this service by setting or clearing this checkbox:
+You can set the tab bar color by selecting the appropriate radio button.-->
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1888a7c8c785df0bd2a63f3897cafdaadfb04b78.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1888a7c8c785df0bd2a63f3897cafdaadfb04b78.png"></a>
+- *Opt in to analytics*: MAAS uses Google Analytics, Usabilla and Sentry Error Tracking to improve user experience.  You can opt in or out of this service by setting or clearing this checkbox.
 
-<a href="#heading--Release-notification"><h3 id="heading--Release notification">Release notification</h3></a>
+- *Notify users of new releases:* If you select this checkbox, MAAS will notify all users when new releases are available.
 
-If you select this checkbox, MAAS will notify all users when new releases are available:
+<a href="#heading--Security"><h3 id="heading--Security">Security</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3aaf1c0728b16f99ee8bd94091e4ca0fca436544.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aaf1c0728b16f99ee8bd94091e4ca0fca436544.png"></a>
+The MAAS configuration settings maintains a section for security-related parameters.  Currently, there is only one item, "TLS status".  This section gives instructions on how to enable TLS with a certificate and a private key.  This is a CLI-operation; use the listed command at the command line, after logging into your MAAS instance.
 
-<a href="#heading--Security"><h2 id="heading--Security">Security</h2></a>
+<a href="#heading--Commissioning"><h3 id="heading--Commissioning">Commissioning</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6353f2cf002d0e69750d16575ae329a4e5c819db.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6353f2cf002d0e69750d16575ae329a4e5c819db.png"></a>
+This section provides a number of configurable parameters related to commissioning machines, including settings for the machines themselves, as well as the IPMI connection used to access machines.
 
-The MAAS configuration settings maintains a section for security-related parameters.  Currently, there is only one item, "TLS status".  This section gives instructions on how to enable TLS with a certificate and a private key.  This is a CLI-operation; use the listed command at the command line, after logging into your MAAS instance:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8bc6805e395e7eb514af78e7c0c8f276d2110e0a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8bc6805e395e7eb514af78e7c0c8f276d2110e0a.png"></a>
-
-<a href="#heading--Commissioning"><h2 id="heading--Commissioning">Commissioning</h2></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b841dd1c539fc37bc5778a1c71e1194b53fb5103.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b841dd1c539fc37bc5778a1c71e1194b53fb5103.png"></a>
-
-This section provides a number of configurable parameters related to commissioning machines, including settings for the machines themselves. You can also control the IPMI connection used to access machines.
-
-<a href="#heading--Machine-settings"><h3 id="heading--Machine-settings">Machine settings</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/4fa33fbdb1fdd9db43b118e93f6bd76b061e79ea.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4fa33fbdb1fdd9db43b118e93f6bd76b061e79ea.png"></a>
+<a href="#heading--Machine-settings"><h4 id="heading--Machine-settings">Machine settings</h4></a>
 
 - *Default commissioning release*: You can choose the default Ubuntu release that will be used for commissioning from a dropdown menu.
 
 - *Default minimum kernel version*: The default minimum kernel version used on all new and commissioned nodes.  You can also choose this default from a dropdown menu.
 
-<a href="#heading--IPMI-settings"><h3 id="heading--IPMI-settings">IPMI settings</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0cd76e009226318e7afee4f594e86390ac99dfb1.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0cd76e009226318e7afee4f594e86390ac99dfb1.png"></a>
+<a href="#heading--IPMI-settings"><h4 id="heading--IPMI-settings">IPMI settings</h4></a>
 
 - *IPMI username*: You can set the default IPMI username, which will control IPMI access to machines.
 
 - *K_g BMC key*: Specify this key to encrypt all communication between IPMI clients and the BMC. Leave this blank for no encryption. 
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1c7dc2b1666148cde9487cbf06bd8efbbaca656b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1c7dc2b1666148cde9487cbf06bd8efbbaca656b.png"></a>
-
 - *IPMI privilege level*: You can choose the privilege level for IPMI access from a set of radio buttons (admin, operator, user).
 
-<a href="#heading--Deployment"><h2 id="heading--Deployment">Deployment</h2></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f28aa8c31ff843b47c44fb47e482b5163902c1c5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f28aa8c31ff843b47c44fb47e482b5163902c1c5.png"></a>
+<a href="#heading--Deployment"><h3 id="heading--Deployment">Deployment</h3></a>
 
 There are also a number of parameters which control MAAS machine deployment:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/66c5fe86db6dfdc043803b50d15c3e6929b5aa0c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/66c5fe86db6dfdc043803b50d15c3e6929b5aa0c.png"></a>
 
 - *Default deployment OS*: You can choose the default operating system used for deployment from a dropdown list.
 
@@ -92,23 +85,15 @@ There are also a number of parameters which control MAAS machine deployment:
 
 - *Default hardware sync interval*: You can set the default hardware sync interval, in minutes.
 
-<a href="#heading--Kernel-parameters"><h2 id="heading--Kernel-parameters">Kernel parameters</h2></a>
+<a href="#heading--Kernel-parameters"><h3 id="heading--Kernel-parameters">Kernel parameters</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/557e89310a2e1b512457c38497302fcb533a39ef.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/557e89310a2e1b512457c38497302fcb533a39ef.png"></a>
-
-You can set the kernel parameters used with machine kernels:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d2edc0a4c48ee76ac78a6e5c03a5eda810ed793d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d2edc0a4c48ee76ac78a6e5c03a5eda810ed793d.png"></a>
+You can set the kernel parameters used with machine kernels.
 
 - *Global boot parmeters*: You can set global boot parameters that are always passed to the machine kernel.
 
 <a href="#heading--Users"><h2 id="heading--Users">Users</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/807555f84904bd48b2279317b378b3184a5a1742.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/807555f84904bd48b2279317b378b3184a5a1742.png"></a>
-
-MAAS configuration gives you the ability to manage your users:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png"></a>
+MAAS configuration gives you the ability to manage your users.
 
 - *Add user button*: This button can be used to add a new user.
 
@@ -122,33 +107,11 @@ Note that if the table becomes longer than one screen will accomodate, paging bu
 
 This section of the configuration settings allows you to specify parameters that control images.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/37362d55a4c37b563af13c665e27a818f4dd63e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37362d55a4c37b563af13c665e27a818f4dd63e7.png"></a>
+If you are using Ubuntu images, you can enable the installation of proprietry drives by selecting the appropriate checkbox.
 
-<a href="#heading--Ubuntu-images"><h3 id="heading--Ubuntu images">Ubuntu images</h3></a>
-
-If you are using Ubuntu images, you can enable the installation of proprietry drives by selecting the appropriate checkbox:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fb4822256f5f9102af2e4a1cd5974ced2bca9075.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb4822256f5f9102af2e4a1cd5974ced2bca9075.png"></a>
-
-Additional options may be added to this menu from time to time.
-
-<a href="#heading--Windows-images"><h3 id="heading--Windows images">Windows images</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/cdbb64a45bdca8d8433b34818725ad14fab18119.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/cdbb64a45bdca8d8433b34818725ad14fab18119.png"></a>
-
-If you are using Windows images, you can specify the Windows KMS activation host.  This is the FQDN or IP address of the host that provides the KMS Windows activation service: 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d2e83dd7ace5b84e6aa9db8159f91f2149bbeffa.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d2e83dd7ace5b84e6aa9db8159f91f2149bbeffa.png"></a>
-
-This is only needed for Windows deployments that use KMS activation.
-
-<a href="#heading--VMWare-images"><h3 id="heading--VMWare images">VMWare images</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b92a7722885c7374ebbe02ced472fa0cd54d51ec.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b92a7722885c7374ebbe02ced472fa0cd54d51ec.png"></a>
+If youa re using Windows images, you can specify the Windows KMS activation host.  This is the FQDN or IP address of the host that provides the KMS Windows activation service. This is only needed for Windows deployments that use KMS activation.
 
 If you are usijng VMWare images, there are several parameters you can adjust:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/be3a4b46eb2b1d238d77b29380986e0b903e988f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/be3a4b46eb2b1d238d77b29380986e0b903e988f.png"></a>
 
 - *VMware vCenter server FQDN or IP address*: the VMware vCenter server FQDN or IP address which is passed to a deployed VMware ESXi host.
 
@@ -160,11 +123,7 @@ If you are usijng VMWare images, there are several parameters you can adjust:
 
 <a href="#heading--License-keys"><h2 id="heading--License-keys">License keys</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d1834664928572f9bbc652d6223b62b6580d7f43.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d1834664928572f9bbc652d6223b62b6580d7f43.png"></a>
-
-MAAS configuration gives you the ability to manage your license key:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png">
+MAAS configuration gives you the ability to manage your license key.
 
 - *Add license key button*: This button can be used to add a new license key.
 
@@ -176,11 +135,7 @@ Note that if the table becomes longer than one screen will accomodate, paging bu
 
 <a href="#heading--Storage"><h2 id="heading--Storage">Storage</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a749db087c74e4b6733f773cd6720be5308173ef.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a749db087c74e4b6733f773cd6720be5308173ef.png"></a>
-
-You can set some parameters related to machine storage layouts:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/965f6a622092cae03a4043cdb22d337a1ae981cc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/965f6a622092cae03a4043cdb22d337a1ae981cc.png"></a>
+You can set some parameters related to machine storage layouts.
 
 - *Default storage layout*: The default storage layout that is applied to a machine when it is commissioned.
 
@@ -194,55 +149,21 @@ You can set some parameters related to machine storage layouts:
 
 You can set some network defaults for MAAS machines.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/82f10e6375158387ba01842e2e68b18e638e5966.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/82f10e6375158387ba01842e2e68b18e638e5966.png"></a>
+- *HTTP proxy*: Here, you can choose the HTTP proxy used by MAAS to download images, and used by provisioned machines for APT and YUM packages. Your choices are (1) no proxy, (2) MAAS built-in proxy, (3) external proxy, or (4) peer proxy.  If you choose external or peer proxy, you will be presented with a text box to specify the external proxy URL that the MAAS built-in proxy will use as an upstream cache peer. Note that machines will be configured to use MAAS' built-in proxy to download APT packages when external or peer proxies are specified.
 
-<a href="#heading--HTTP-proxy"><h3 id="heading--HTTP proxy">HTTP proxy</h3></a>
-
-Here, you can choose the HTTP proxy used by MAAS to download images, and used by provisioned machines for APT and YUM packages. Your choices are (1) no proxy, (2) MAAS built-in proxy, (3) external proxy, or (4) peer proxy.  If you choose external or peer proxy, you will be presented with a text box to specify the external proxy URL that the MAAS built-in proxy will use as an upstream cache peer. 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c3e3667484f71938d364252566b65eb039251636.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c3e3667484f71938d364252566b65eb039251636.png"></a>
-
-Note that machines will be configured to use MAAS' built-in proxy to download APT packages when external or peer proxies are specified.
-
-<a href="#heading--Upstream-DNS"><h3 id="heading--Upstream DNS">Upstream DNS</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8ff7c117866781710b64daa8804167debf6d3a85.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8ff7c117866781710b64daa8804167debf6d3a85.png"></a>
-
-Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses). Only used when MAAS is running its own DNS server. This value is used as the value of 'forwarders' in the DNS server config.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/147467aff277c3fb45b94922f7f88f90e34509ec.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/147467aff277c3fb45b94922f7f88f90e34509ec.png"></a>
+- *Upstream DNS*: Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses). Only used when MAAS is running its own DNS server. This value is used as the value of 'forwarders' in the DNS server config.
 
 - *Enable DNSSEC validation*: If you wish to enable DNSSEC validation of upstream zones, you can choose the method from this dropdown list.  This is only used when MAAS is running its own DNS server. This value is used as the value of 'dnssec_validation' in the DNS server config.
 
 - *List of external networks*: You can also provide a ist of external networks to be used for MAAS DNS resolution. MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows you to add extra, previously-unknown networks to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
 
-<a href="#heading--NTP-service"><h3 id="heading--NTP service">NTP service</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/abf10690d730a2333ca8b910638f97fa4e04c03b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/abf10690d730a2333ca8b910638f97fa4e04c03b.png"></a>
-
-You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS's DHCP services.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/2e61953512a232b26ed51d43b01040d7482408d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2e61953512a232b26ed51d43b01040d7482408d0.png"></a>
+- *NTP server addresses*: You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS's DHCP services.
 
 - *Use external NTP only*:  You can configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers; rack contoller hosts will in turn refer to the regions' NTP servers; deployed machines will refer to the racks' NTP servers.
 
-<a href="#heading--Syslog-configuration"><h3 id="heading--Syslog configuration">Syslog configuration</h3></a>
+- *Remote syslog server*: You can specify the remote syslog server to which machine logs should be forwarded.  This will be a remote syslog server that MAAS will set on enlisting, commissioning, testing, and deploying machines to send all log messages. Clearing this value will restore the default behaviour of forwarding syslog to MAAS.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/50812e0362109f8c894eb3087b49030608fb3675.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/50812e0362109f8c894eb3087b49030608fb3675.png"></a>
-
-You can specify a remote syslog server to which machine logs should be forwarded.  This will be a remote syslog server that MAAS will set on enlisting, commissioning, testing, and deploying machines to send all log messages. 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/ed9853326328cce615a4c551074c0ee2ffa84e7b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ed9853326328cce615a4c551074c0ee2ffa84e7b.png"></a>
-
-Clearing this value will restore the default behaviour of forwarding syslog to MAAS.
-
-<a href="#heading--Network-discovery"><h3 id="heading--Network discovery">Network discovery</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1d3e161b8ae204b25183be53df23f72172822d2b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1d3e161b8ae204b25183be53df23f72172822d2b.png"></a>
-
-When this choice is enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/44ebe9af4eeaecbf3d4e7604085238991d1ce7bc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/44ebe9af4eeaecbf3d4e7604085238991d1ce7bc.png"></a>
+- *Network discovery*: When this choice is enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.
 
 - *Active subnet mapping interval*: You can choose the subnet mapping interval from this dropdown.  When enabled, each rack will scan subnets enabled for active mapping. This helps ensure discovery information is accurate and complete.
 
@@ -252,11 +173,7 @@ MAAS provides a great deal of flexibility when dealing with commissioning and te
 
 <a href="#heading--Commissioning-scripts"><h3 id="heading--Commissioning-scripts">Commissioning scripts</h3></a>
 
-<a href="https://discourse.maas.io/t/image-scrapbook/4398" target = "_blank"><img src="https://discourse.maas.io/t/image-scrapbook/4398"></a>
-
-MAAS configuration gives you the ability to manage your commissioning scripts:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png"></a>
+MAAS configuration gives you the ability to manage your commissioning scripts.
 
 - *Upload script button*: This button can be used to upload a new commissioning script.
 
@@ -270,11 +187,7 @@ Note that if the table becomes longer than one screen will accomodate, paging bu
 
 <a href="#heading--Testing-scripts"><h3 id="heading--Testing-scripts">Testing scripts</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3ff427b8977bd22b3b8ddec4cdcb63211102d42f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3ff427b8977bd22b3b8ddec4cdcb63211102d42f.png"></a>
-
-The MAAS configuration settings give you the ability to manage your testing scripts:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png"></a>
+The MAAS configuration settings give you the ability to manage your testing scripts.
 
 - *Upload script button*: This button can be used to upload a new test script.
 
@@ -288,11 +201,7 @@ Note that if the table becomes longer than one screen will accomodate, paging bu
 
 <a href="#heading--DHCP-snippets"><h2 id="heading--DHCP-snippets">DHCP snippets</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c188db5925593b8d9ebadeb4f696ffd8f24f311d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c188db5925593b8d9ebadeb4f696ffd8f24f311d.png"></a>
-
-The MAAS configuration settings give you the ability to manage any DHCP snippets you wish to apply:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png"></a>
+The MAAS configuration settings give you the ability to manage any DHCP snippets you wish to apply.
 
 - *Add snippet button*: This button can be used to add a new DHCP snippet.
 
@@ -306,11 +215,7 @@ Note that if the table becomes longer than one screen will accomodate, paging bu
 
 <a href="#heading--Package-repos"><h2 id="heading--Package-repos">Package repos</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a2a38a59ecab87c7abee31672aa86ebfaa755512.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a2a38a59ecab87c7abee31672aa86ebfaa755512.png"></a>
-
-MAAS configuration settings give you the ability to manage any package repos you wish to apply to your MAAS instance:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png"></a>
+MAAS configuration settings give you the ability to manage any package repos you wish to apply to your MAAS instance.
 
 - *Add PPA button*: This button can be used to add a new PPA to the search path.
 
@@ -324,7 +229,7 @@ Each table row also has an "Actions" column, which allows you to edit or delete 
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages" view="CLI"]
+[tab version="v3.1 Snap,V3.1 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
 
 <a href="#heading--changing-settings-with-the-cli"><h2 id="heading--changing-settings-with-the-cli">Changing MAAS settings via the MAAS CLI</h2></a>
 
