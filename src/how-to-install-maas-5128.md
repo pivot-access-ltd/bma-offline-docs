@@ -6,7 +6,150 @@ MAAS is relatively easy to install and configure.  Let's give it a try.
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-reference/6233).
 [/note]
 
+[note]
+Also note that, with the release of MAAS 3.3, PostgreSQL version 12 is deprecated.  See [undefined-as-yet-link]() for instructions on how to upgrade PostgreSQL to version 14.
+
 [tabs]
+[tab version="v3.3 Snap"]
+<a href="#heading--fresh-install-3-3-snap"><h2 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h2></a>
+
+To install MAAS 3.3 from a snap, simply enter the following:
+
+    $ sudo snap install --channel=3.3 maas
+
+After entering your password, the snap will download and install from the 3.2 channel.
+
+<a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h2></a>
+
+Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=3.3 maas
+
+After entering your password, the snap will refresh from the 3.3 channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
+
+[/tab]
+[tab version="v3.3 Packages"]
+<a href="#heading--fresh-install-3-3-packages"><h2 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h2></a>
+
+The recommended way to set up an initial MAAS environment is to put everything on one machine:
+
+``` bash
+sudo apt-add-repository ppa:maas/3.3
+sudo apt update
+sudo apt-get -y install maas
+```
+
+Note that MAAS 3.3 runs on Ubuntu 22.04, Jammy Jellyfish.  See the 
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
+
+Choosing "Y" proceeds with a standard <code>apt</code> package install.
+
+<h4>Distributed environment</h4> 
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+``` bash
+sudo apt install maas-region-controller
+```
+
+and the rack controller on another:
+
+``` bash
+sudo apt install maas-rack-controller
+sudo maas-rack register
+```
+
+These two steps will lead you through two similar <code>apt</code> install sequences.
+
+<a href="#heading--upgrade-debs-to-3-2"><h2 id="heading--upgrade-debs-to-3-2">How to upgrade package installations to MAAS 3.2</h2></a>
+
+If you are running MAAS 3.1 or lower, you can upgrade to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS or higher, by executing the following command:
+
+```
+lsb_release -a
+```
+
+The response should look something like this:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The minimum "xx.yy" required for MAAS 3.3 is "22.04," code-named "jammy".
+
+If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:
+
+1. Upgrade the release:
+
+```
+sudo do-release-upgrade --allow-third-party
+```
+
+2. Accept the defaults for any questions asked by the upgrade script.
+
+3. Reboot the machine when requested.
+
+4. Check whether the upgrade was successful:
+
+```
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04(.nn) LTS
+Release:	22.04
+Codename:	jammy
+```
+
+[note]
+If you're upgrading to version 3.3, please remember: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.
+[/note]
+
+1. Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+2. Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```
+sudo apt-add-repository ppa:maas/3.3
+```
+
+3. Run the release upgrade like this, answering any questions with the given default values:
+
+```
+sudo do-release-upgrade --allow-third-party
+```
+
+4. Check whether your upgrade has been successful by entering:
+
+```
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04(.nn) LTS
+Release:	22.04
+Codename:	jammy
+```
+
+5. Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you're running the 3.2 release.
+
+6. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.
+
+[/tab]
 [tab version="v3.2 Snap"]
 <a href="#heading--fresh-install-3-2-snap"><h2 id="heading--fresh-install-3-2-snap">How to do a fresh snap install of MAAS 3.2</h2></a>
 
