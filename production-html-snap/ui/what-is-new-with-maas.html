@@ -448,104 +448,11 @@
 <p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
 <p>Read the <a href="ansible-playbooks-reference.html">Ansible playbooks reference</a> document to learn more.</p>
 <p><a href="#heading--vault-integration"><h3 id="heading--vault-integration">Integratation of Vault for credential storage</h3></a></p>
-<p>MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …). Those are currently stored in the database, which is not secure by default.</p>
-<p>While it’s possible to keep the database on encrypted storage, this is possibly not suitable for environments that need to adhere to strict security requirements/regulations.</p>
-<p>Hashicorp Vault is a well-established solution for providing a secure and centralised system for credentials storage.</p>
-<p>For this reason, we want MAAS to be able to integrate with it and use it for storing secrets.</p>
-<p>How to enable Vault?
-<content>
-How to unseal Vault?
-<content></p>
+<p>MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …), currently stored in the database &ndash; which is insecure by default. This configuration may not meet everyone&rsquo;s security requirements or regulations. For this reason, we&rsquo;ve integrated MAAS with Hashicorp Vault, a well-established solution for secure, centralised credential storage.</p>
+<p>You can read the <a href="maas-vault-reference.html">MAAS Vault reference</a> documentation to learn more.</p>
 <p><a href="#heading--22-04-support"><h3 id="heading--22-04-support">Native support for 22.04 LTS and core22</h3></a></p>
-<p>[1] As a MAAS user, I want to be able to install MAAS on a 22.04 LTS system via deb packages.</p>
-<p>It should be possible to perform a new install of MAAS on a 22.04 LTS system via deb packages by adding the release PPA and installing MAAS packages.</p>
-<p>Acceptance criteria
-The PPAs (stable and next) for the 3.3 release contain MAAS packages and required dependencies for 22.04 LTS (jammy). 
-MAAS supports versions that are jammy for dependencies.
-Adding the PPA to a 22.04 LTS system and running apt install maas installs a functional MAAS. All dependencies that are not in the archive are available in the PPA.</p>
-<p>Work items:
-Create a ppa:maas/3.3-next PPA and copy all required dependencies
-Update/change dependencies in d/control so that the package can be built/installed on jammy</p>
-<p>[2] As a MAAS user, I want to be able to upgrade machines currently running MAAS via deb packages on Ubuntu 20.04 LTS to 22.04 LTS</p>
-<p>Users currently running MAAS via deb packages on a 20.04 system need to have a path for upgrading both MAAS and the operating system.</p>
-<p>Similarly to what happened with the 18.04 -&gt; 20.04 upgrade, this will require adding the PPA for MAAS 3.3 and performing the upgrade to Jammy with PPAs enabled, so that MAAS can also be upgraded.</p>
-<p>Acceptance criteria
-Upgrading a 3.2 MAAS installation based on debs on 20.04 to 22.04 also upgrades MAAs to 3.3
-After upgrading to 22.04, MAAS is functioning correctly
-There’s a documented procedure for the upgrade</p>
-<p>Work items:
-Test that the upgrade procedure from MAAS 3.2 on focal to 3.3 on jammy works
-Document the upgrade procedure</p>
-<p>[3] As a MAAS developer, I want to be able to run maas tests in a development environment on Ubuntu 22.04 LTS</p>
-<p>Since MAAS will support running on a 22.04 LTS host, development/testing also needs to happen on Jammy.</p>
-<p>Acceptance criteria
-The ppa:maas-committers/latest-deps PPA has packages with dependencies for 22.04
-The test suite passes when run on 22.04 LTS
-Helper scripts and tools work on 22.04 LTS</p>
-<p>Work items:
-Copy all required dependencies to ppa:maas-committers/latest-deps (updating packages if needed)
-Update code for dependencies changes
-Investigate and possibly address deprecations raised by updated dependencies
-Ensure unit tests pass locally
-Ensure performance tests pass locally</p>
-<p>[4] As a MAAS developer, I want tests to run in CI on Ubuntu 22.04 LTS</p>
-<p>Our CI infrastructure will need to be able to run tests for MAAS running on Ubuntu 22.04 LTS.
-Therefore, related jobs need to be updated to run on 22.04 LTS when the target branch is master, and later the 3.2 release branch.</p>
-<p>Acceptance criteria
-The branch-tester job runs on 22.04 LTS when target is master
-The branch-lander job runs on 22.04 LTS (not strictly required)
-The branch-reviewer job runs on 22.04 LTS (not strictly required)
-Jobs for other related projects (piston, performance tests, system-tests repo, …) run on 22.04 LTS
-Integration tests jobs for master run on 22.04 LTS
-Integration tests jobs for MAAS 3.2 run on 22.04 LTS
-Curtin/Cloud-init proposed SRU jobs run on 22.04 LTS
-Jobs for other related projects run on 22.04 LTS (not strictly required)</p>
-<p>Work items:
-Update branch-lander and branch-reviewer to run on 22.04
-Update jobs for other related projects to run on 22.04
-(nice to have) move the branch-tester/lander/reviewer to the new CI (JJB based)</p>
-<p>[5] As a MAAS developer, I want the maas snap to use the same dependencies versions as the deb</p>
-<p>The snap needs to be updated to be based on the core22 base, to match dependencies with the deb.</p>
-<p>This spec has some info on changes in the snapcraft format:ST031 - core20 to core22 migration guide</p>
-<p>Acceptance criteria
-The maas snap is based on the core22 base
-MAAS runs correctly when installed from the snap
-Upgrading a 3.2 snap-based MAAS install to 3.3 works</p>
-<p>Work items:
-Update snap configuration to core22 base and snapcraft 7.0 format
-Verify that the snap build on LP works
-Investigate if we can move to declare the PPA as a build dependency in snapcraft.yaml instead of the LP recipe.
-Verify that MAAS services and applications run correctly in the snap</p>
-<p>[6] As a MAAS developer, I want the maas-test-db snap to be based on core22</p>
-<p>To align the maas-test-db snap for MAAS 3.3 with the MAAS snap itself, we want it to be based on core22</p>
-<p>Acceptance criteria
-The maas-test-db snap is based on the core22 base
-The Postgresql version in the snap matches the one in Ubuntu 22.04 LTS (14.2)
-PostgreSQL runs correctly inside the snap</p>
-<p>Work items:
-Update the snap configuration to core22 base and snapcraft 7.0 format
-Bump snap epoch (to avoid accidental upgrades between major versions
-Update Postgres version in the snap to 14.2
-Verify that the snap build on LP works
-Verify that Postgres works correctly in the snap</p>
-<p>[7] As a MAAS developer, I want to be able to run MAAS tests on the Ubuntu development release, to identify breaking changes early </p>
-<p>CI should run a periodic job to test MAAS against the development version of Ubuntu.</p>
-<p>This will let us find deprecations and breaking changes early, rather than in a big jump between LTS releases, and progressively work on fixes for those. </p>
-<p>Acceptance criteria
-The ppa:maas-committers/latest-deps PPA has packages with dependencies for the Ubuntu development release
-There is a CI job that runs unittest periodically on the development release, using dependencies from the latest-deps PPA</p>
-<p>Work items:
-Add dependencies packages for the development Ubuntu release to the latest-deps PPA
-Add a CI job to run unit tests on the Ubuntu development release 
-Investigate how to handle cases where we can’t backport changes needed for the development release to master</p>
-<p>Documentation
-When we have a working Beta, the upgrade doc can be drafted, as follows:</p>
-<p>deb upgrade steps (once 3.3 will be actually released)
-apt update
-apt full-upgrade
-apt-add-repository -y ppa:maas/3.3 (or 3.3-next)
-do-release-upgrade –allow-third-party</p>
-<p>Will need to communicate that PostgreSQL 12 is deprecated and explain how/when to upgrade PostgreSQL.  Again, can work on this when we have a Beta to play with.</p>
+<p>MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.</p>
+<p>Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The <a href="how-to-install-maas.html">installation guide</a> provides the necessary details.</p>
 <p><a href="#heading--simultaneous-deployment-improvements"><h3 id="heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</h3></a></p>
 <p>[1] As a MAAS operator, I want to deploy many machines and have them all deploy reliably
 Currently when selecting and deploying a large number (around 30 or more)  of machines at the same time in the UI, not all will transition to Deploying. Some will end up in a Failed Deployment state without the machines even being turned on.</p>
