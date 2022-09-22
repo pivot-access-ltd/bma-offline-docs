@@ -5,13 +5,13 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-<a href="#heading--3-2-2-maas-release-notes"><h2 id="heading--3-2-2-maas-release-notes">MAAS 3.2.2 release notes</h2></a>
+<a href="#heading--3-2-4-maas-release-notes"><h2 id="heading--3-2-4-maas-release-notes">MAAS 3.2.4 release notes</h2></a>
 
-We are happy to announce that MAAS 3.2.2 has been released.  This point release of MAAS 3.2 provides a fix for a critical bug that prevented the controllers page from displaying under certain conditions:
+We are happy to announce that MAAS 3.2.4 has been released.  This point release of MAAS 3.2 provides a fix for a critical bug that prevented the controllers page from displaying under certain conditions:
 
 -  #1983624 [Fresh MAAS 3.2 install failed to find controller](https://bugs.launchpad.net/bugs/1983624)
 
-No other changes were made for this release.
+This release also addresses build issues found in prior point releases.
 
 <a href="#heading--3-2-1-maas-release-notes"><h2 id="heading--3-2-1-maas-release-notes">MAAS 3.2.1 release notes</h2></a>
 
