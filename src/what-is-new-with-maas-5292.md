@@ -5,6 +5,18 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
+<a href="#heading--3-2-6-maas-release-notes"><h2 id="heading--3-2-6-maas-release-notes">MAAS 3.2.6 release notes</h2></a>
+
+We are happy to announced that MAAS 3.2.6 has been released. This point release of MAAS 3.2 provides a fix for a critical bug that prevented MAAS from enlisting machines on subnets with active DNS:
+
+- #1989970 [Can't enlist machines on subnets with DNS set](https://bugs.launchpad.net/bugs/1989970)
+
+No other changes were made for this point release.
+
+<a href="#heading--3-2-5-maas-release-notes"><h2 id="heading--3-2-5-maas-release-notes">MAAS 3.2.5 release notes</h2></a>
+
+MAAS 3.2.5 was an attempt to fix a critical issue in 3.2.4.  This issue was resolved in MAAS 3.2.6, listed above. 
+
 <a href="#heading--3-2-4-maas-release-notes"><h2 id="heading--3-2-4-maas-release-notes">MAAS 3.2.4 release notes</h2></a>
 
 We are happy to announce that MAAS 3.2.4 has been released.  This point release of MAAS 3.2 provides a fix for a critical bug that prevented the controllers page from displaying under certain conditions:
@@ -12,6 +24,10 @@ We are happy to announce that MAAS 3.2.4 has been released.  This point release 
 -  #1983624 [Fresh MAAS 3.2 install failed to find controller](https://bugs.launchpad.net/bugs/1983624)
 
 This release also addresses build issues found in prior point releases.
+
+<a href="#heading--3-2-2-3-2-3-release-notes"><h2 id="heading--3-2-2-3-2-3-release-notes">MAAS 3.2.2 ~ MAAS 3.2.3</h2></a>
+
+MAAS 3.2.2 and MAAS 3.2.3 were successive attempts to fix issues in MAAS.  These issues were resolved in MAAS 3.2.4, listed above.
 
 <a href="#heading--3-2-1-maas-release-notes"><h2 id="heading--3-2-1-maas-release-notes">MAAS 3.2.1 release notes</h2></a>
 
