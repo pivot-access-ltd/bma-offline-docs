@@ -43,7 +43,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Home](/t/maas-documentation/25)
 
-- [Release notes](/t/-/5962)
+- [Release notes](/t/-/5292)
 
 ### [Tutorials](/t/-/6140)
 
@@ -121,7 +121,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [General reference](/t/-/6143)
 
-- [Release notes](/t/-/5962)
+- [Release notes](/t/-/5292)
 - [Installation requirements](/t/-/6233)
 - [Concepts & terms](/t/-/5416)
 - [Getting help](/t/-/5428)
