@@ -36,7 +36,7 @@ Here's a view of our current roadmap:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg"></a>
 
-Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448).
+Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448).
 
 <!-- nohtml begin-nohtml -->
 ## Navigation
