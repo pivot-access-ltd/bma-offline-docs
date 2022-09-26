@@ -1,8 +1,8 @@
-<!-- "Understanding audit events" -->
+<!-- "Understanding MAAS audit events" -->
 
 Audit events must be examined using the MAAS CLI, as there is no corresponding MAAS web UI tool at present.
 
-The CLI command `events query level=AUDIT' will help you review audit events:
+The CLI command `events query level=AUDIT` will help you review audit events:
 
 ```nohighlight
 $ maas admin events query level=AUDIT
