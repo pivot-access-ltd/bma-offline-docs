@@ -1,14 +1,24 @@
-Since audit events must be examined using the MAAS CLI, the following command will help you review audit events:
+<!-- "Understanding audit events" -->
+
+Audit events must be examined using the MAAS CLI, as there is no corresponding MAAS web UI tool at present.
+
+The CLI command `events query level=AUDIT' will help you review audit events:
 
 ```nohighlight
-$ maas admin events query level=AUDIT after=9 limit=20 \
+$ maas admin events query level=AUDIT
+```
+
+This command will show you 100 successive audit events, with no filtering, in JSON format.  Since JSON format can be very long, we recommend that you apply the `jq` tool to present records in a more readable way.  For example, the following command picks out the first 20 audit events currently available on your MAAS host:
+
+```nohighlight
+$ maas admin events query level=AUDIT after=0 limit=20 \
 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
 (., map(length*"-"))),
 (.events[] | [.username,.hostname,.created,.description]) 
 | @tsv' | column -t -s$'\t'
 ```
 
-For example, running this command might produce output similar to this:
+This command might produce output simlar to this:
 
 ```nohighlight
 USERNAME  HOSTNAME     DATE                        EVENT

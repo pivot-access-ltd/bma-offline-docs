@@ -409,14 +409,20 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>Since audit events must be examined using the MAAS CLI, the following command will help you review audit events:</h1><p>Since audit events must be examined using the MAAS CLI, the following command will help you review audit events:</p>
-<pre><code class="language-nohighlight">$ maas admin events query level=AUDIT after=9 limit=20 \
+  <h1>Understanding audit events</h1><!-- "Understanding audit events" -->
+
+<p>Audit events must be examined using the MAAS CLI, as there is no corresponding MAAS web UI tool at present.</p>
+<p>The CLI command `events query level=AUDIT&rsquo; will help you review audit events:</p>
+<pre><code class="language-nohighlight">$ maas admin events query level=AUDIT
+</code></pre>
+<p>This command will show you 100 successive audit events, with no filtering, in JSON format.  Since JSON format can be very long, we recommend that you apply the <code>jq</code> tool to present records in a more readable way.  For example, the following command picks out the first 20 audit events currently available on your MAAS host:</p>
+<pre><code class="language-nohighlight">$ maas admin events query level=AUDIT after=0 limit=20 \
 | jq -r '([&quot;USERNAME&quot;,&quot;HOSTNAME&quot;,&quot;DATE&quot;,&quot;EVENT&quot;] | 
 (., map(length*&quot;-&quot;))),
 (.events[] | [.username,.hostname,.created,.description]) 
 | @tsv' | column -t -s$'\t'
 </code></pre>
-<p>For example, running this command might produce output similar to this:</p>
+<p>This command might produce output simlar to this:</p>
 <pre><code class="language-nohighlight">USERNAME  HOSTNAME     DATE                        EVENT
 --------  --------     ----                        -----
 unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 2 was updated on node 8wmfx3
