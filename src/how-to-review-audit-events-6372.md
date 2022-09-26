@@ -1,7 +1,11 @@
 Since audit events must be examined using the MAAS CLI, the following command will help you review audit events:
 
 ```nohighlight
-$ maas admin events query level=AUDIT after=9 limit=20 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | (., map(length*"-"))),(.events[] | [.username,.hostname,.created,.description]) | @tsv' | column -t -s$'\t'
+$ maas admin events query level=AUDIT after=9 limit=20 \
+| jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
 For example, running this command might produce output similar to this:
