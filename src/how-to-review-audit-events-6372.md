@@ -1,3 +1,32 @@
+Since audit events must be examined using the MAAS CLI, the following command will help you review audit events:
+
 ```nohighlight
-$ maas admin events query level=AUDIT after=9 limit=5 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | (., map(length*"-"))),(.events[] | [.username,.hostname,.created,.description]) | @tsv' | column -t -s$'\t'
+$ maas admin events query level=AUDIT after=9 limit=20 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | (., map(length*"-"))),(.events[] | [.username,.hostname,.created,.description]) | @tsv' | column -t -s$'\t'
+```
+
+For example, running this command might produce output similar to this:
+
+```nohighlight
+USERNAME  HOSTNAME     DATE                        EVENT
+--------  --------     ----                        -----
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 2 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 0 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  block device sda was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  interface enp5s0 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  0 bytes of memory was removed on node 8wmfx3
+admin     valued-moth  Thu, 21 Apr. 2022 19:36:48  Started deploying 'valued-moth'.
+admin     valued-moth  Thu, 21 Apr. 2022 19:36:21  Acquired 'valued-moth'.
+admin     unknown      Thu, 21 Apr. 2022 19:21:46  Updated configuration setting 'completed_intro' to 'True'.
+admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'upstream_dns' to '8.8.8.8'.
+admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'maas_name' to 'neuromancer'.
+admin     unknown      Thu, 21 Apr. 2022 19:20:47  Updated configuration setting 'http_proxy' to ''.
+admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 ```
