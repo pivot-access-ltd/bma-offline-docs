@@ -413,10 +413,10 @@
 
 <p>Audit events must be examined using the MAAS CLI, as there is no corresponding MAAS web UI tool at present.</p>
 <p>The CLI command <code>events query level=AUDIT</code> will help you review audit events:</p>
-<pre><code class="language-nohighlight">$ maas admin events query level=AUDIT
+<pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT
 </code></pre>
 <p>This command will show you 100 successive audit events, with no filtering, in JSON format.  Since JSON format can be very long, we recommend that you apply the <code>jq</code> tool to present records in a more readable way.  For example, the following command picks out the first 20 audit events currently available on your MAAS host:</p>
-<pre><code class="language-nohighlight">$ maas admin events query level=AUDIT after=0 limit=20 \
+<pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT after=0 limit=20 \
 | jq -r '([&quot;USERNAME&quot;,&quot;HOSTNAME&quot;,&quot;DATE&quot;,&quot;EVENT&quot;] | 
 (., map(length*&quot;-&quot;))),
 (.events[] | [.username,.hostname,.created,.description]) 
@@ -446,6 +446,68 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting
 admin     unknown      Thu, 21 Apr. 2022 19:20:47  Updated configuration setting 'http_proxy' to ''.
 admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 </code></pre>
+<p><a href="#heading--Some-options-for-this-command"><h2 id="heading--Some-options-for-this-command">Some options for this command</h2></a></p>
+<p>This command has several options.  Let&rsquo;s look first at a couple of the most useful.  As you may know, a lot of the options passed to a MAAS CLI command are given as <code>key=value</code> pairs.  The example command above contains three such options, <code>level=AUDIT after=0 limit=20</code>, for instance.  The option <code>level=AUDIT</code> restricts the event query to audit events.  Other options are described below.</p>
+<p><a href="#heading--Before-and-after-options"><h3 id="heading--Before-and-after-options">The &ldquo;before&rdquo; and &ldquo;after&rdquo; options</h3></a></p>
+<p>The <code>maas $PROFILE events query</code> command, by default, looks as 100 records.  You can choose where to begin that 100 records by setting the <code>after</code> keyword.  In the example above, we&rsquo;ve chosen the first 20 audit records by specifying <code>after=0</code>, that is, beginning with the first record.  Pay attention to the <code>0</code>, since the <code>after</code> command works exactly as you&rsquo;d expect: it picks up some number of records after the number listed.  If you were to use <code>after=1</code>, for example, you wouldn&rsquo;t see the first event.</p>
+<p>Note that MAAS event numbering has nothing to do with the <code>level</code> you&rsquo;ve selected, so a given record number may or may not show up in your <code>level=AUDIT</code> query.  For example, let&rsquo;s do that audit event pull ag ain, but this time include the record number in our table.  We can do that with a command like this:</p>
+<pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT after=0 limit=20 \
+| jq -r '([&quot;RNO&quot;,&quot;USERNAME&quot;,&quot;HOSTNAME&quot;,&quot;DATE&quot;,&quot;EVENT&quot;] | 
+(., map(length*&quot;-&quot;))),
+(.events[] | [.id,.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
+</code></pre>
+<p>Note that we&rsquo;ve added &ldquo;RNO&rdquo; to the header, and the <code>.events[]</code> array member <code>.id</code> (the record number) to the table.  The results for this particular example look like this:</p>
+<pre><code class="language-nohighlight">RNO  USERNAME  HOSTNAME     DATE                        EVENT
+---  --------  --------     ----                        -----
+309  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 2 was updated on node 8wmfx3
+308  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+307  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+306  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+305  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+304  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+303  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+302  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+301  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+300  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 0 was updated on node 8wmfx3
+299  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  block device sda was updated on node 8wmfx3
+298  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  interface enp5s0 was updated on node 8wmfx3
+297  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  0 bytes of memory was removed on node 8wmfx3
+134  admin     valued-moth  Thu, 21 Apr. 2022 19:36:48  Started deploying 'valued-moth'.
+130  admin     valued-moth  Thu, 21 Apr. 2022 19:36:21  Acquired 'valued-moth'.
+18   admin     unknown      Thu, 21 Apr. 2022 19:21:46  Updated configuration setting 'completed_intro' to 'True'.
+14   admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'upstream_dns' to '8.8.8.8'.
+13   admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'maas_name' to 'neuromancer'.
+12   admin     unknown      Thu, 21 Apr. 2022 19:20:47  Updated configuration setting 'http_proxy' to ''.
+11   admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
+</code></pre>
+<p>You&rsquo;ll notice two important things:</p>
+<ol>
+<li>
+<p>The records are sorted so that the newest record in your search range shows up first, and the oldest at the bottom of the list.</p>
+</li>
+<li>
+<p>The record numbers aren&rsquo;t consecutive.  That&rsquo;s because MAAS generates lots of other events besides audit events, and the <code>level=AUDIT</code> screens those events out.  </p>
+</li>
+</ol>
+<p>You can consult the help message for the <code>events query</code> command by typing:</p>
+<pre><code class="language-nohighlight">$ maas $PROFILE events query -h
+</code></pre>
+<p>In the listing that follows, you&rsquo;ll notice several values for the <code>level</code> parameter; you can try them each to see what kind of output is returned.</p>
+<p>You can view records up to a specific value by using the <code>before=</code> keyword.  This is useful if you&rsquo;re manually paging through the audit records, looking for something which can&rsquo;t be easily filtered.</p>
+<p><a href="#heading--Limiting-the-number-of-records"><h3 id="heading--Limiting-the-number-of-records">Limiting the number of records</h3></a></p>
+<p>You can limit the number of records that <code>events query</code> will show you by adding the <code>limit=</code> keyword.  In the examples above, we&rsquo;ve limited the output to 20 records.  The default value is 100 records.  You can set this value as high as 1000 records; anything higher than that produces an error, and the command won&rsquo;t complete.  If you want more than 1000 records, you&rsquo;ll need to page through them or use filters to limit the output in a different way.</p>
+<p><a href="#heading--Filtering-audit-records-on-output"><h3 id="heading--Filtering-audit-records-on-output">Filtering audit records on output</h3></a></p>
+<p>You can filter audit records by several different parameters.  Unless otherwise stated, these <code>keyword=value</code> pairs can be entered in any order, in any combination, and repeated multiple times if you need to search for more than one value of a given keyword &ndash; that is, you can enter <code>hostname=grudging-goose hostname=hairy-hippo</code> to search for any records that contain either of those hostnames.  The parameters are as follows:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><code>hostname=</code>: this keyword allows you to limit your query to a specific hostname(s).</li>
+<li><code>mac_address=</code>: this keyword allows you to limit your query to a specific MAC address(es).</li>
+<li><code>id=</code>: this keyword allows you to limit your query to a specific system ID value(s).</li>
+<li><code>zone=</code>: this keyword allows you to limit your query to a specific zone(s).</li>
+<li><code>owner=</code>: this keyword allows you to limit your query to a specific machine owner(s).</li>
+</ul>
+<p><a href="#heading--The-meaning-of-audit-events"><h3 id="heading--The-meaning-of-audit-events">The meaning of audit events</h3></a></p>
+<p>Let&rsquo;s walk through a sample of, say, fifty audit events and see how to interpret and use them.  Consider the following <code>jq</code> output:</p>
     </div>
   </body>
 </html>
