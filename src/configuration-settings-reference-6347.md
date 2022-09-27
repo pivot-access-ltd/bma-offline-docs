@@ -8,66 +8,37 @@ A *Settings* tab is available at the top of the MAAS interface.
 
 <a href="#heading--General-items"><h2 id="heading--General-items">General</h2></a>
 
-The following options are found in *Setting* > *Configuration* > *General*.
+The following options are found in *Settings* > *Configuration* > *General*.
 
-Managing MAAS site identity is  useful when you are running more than one MAAS instance - say,  *Test* and *Production* environments.  This section also provides data collection and version notification options. 
+Managing MAAS site identity is useful when you are running more than one MAAS instance - say,  *Test* and *Production* environments.  This section also provides data collection and version notification options. 
 
 - *MAAS name*: The "* MAAS name" is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor.
 
+- *Google Analytics*: MAAS uses Google Analytics, Usabilla and Sentry Error Tracking to improve user experience.  You can opt in or out of this service by setting or clearing this checkbox.
 
-<a href="#heading--Google-analytics"><h3 id="heading--Google analytics">Google analytics</h3></a>
-
-MAAS uses Google Analytics, Usabilla and Sentry Error Tracking to improve user experience.  You can opt in or out of this service by setting or clearing this checkbox:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1888a7c8c785df0bd2a63f3897cafdaadfb04b78.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1888a7c8c785df0bd2a63f3897cafdaadfb04b78.png"></a>
-
-<a href="#heading--Release-notification"><h3 id="heading--Release notification">Release notification</h3></a>
-
-If you select this checkbox, MAAS will notify all users when new releases are available:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3aaf1c0728b16f99ee8bd94091e4ca0fca436544.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aaf1c0728b16f99ee8bd94091e4ca0fca436544.png"></a>
+- *Release notification*: If you select this checkbox, MAAS will notify all users when new releases are available.
 
 <a href="#heading--Security"><h2 id="heading--Security">Security</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6353f2cf002d0e69750d16575ae329a4e5c819db.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6353f2cf002d0e69750d16575ae329a4e5c819db.png"></a>
-
-The MAAS configuration settings maintains a section for security-related parameters.  Currently, there is only one item, "TLS status".  This section gives instructions on how to enable TLS with a certificate and a private key.  This is a CLI-operation; use the listed command at the command line, after logging into your MAAS instance:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8bc6805e395e7eb514af78e7c0c8f276d2110e0a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8bc6805e395e7eb514af78e7c0c8f276d2110e0a.png"></a>
+Choosing *Settings* > *Configuration* > *Security* provides instructions for enabling TLS with a certificate and a private key.  This is a CLI-operation; use the listed command at the command line, after logging into your MAAS instance.
 
 <a href="#heading--Commissioning"><h2 id="heading--Commissioning">Commissioning</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b841dd1c539fc37bc5778a1c71e1194b53fb5103.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b841dd1c539fc37bc5778a1c71e1194b53fb5103.png"></a>
-
-This section provides a number of configurable parameters related to commissioning machines, including settings for the machines themselves. You can also control the IPMI connection used to access machines.
-
-<a href="#heading--Machine-settings"><h3 id="heading--Machine-settings">Machine settings</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/4fa33fbdb1fdd9db43b118e93f6bd76b061e79ea.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4fa33fbdb1fdd9db43b118e93f6bd76b061e79ea.png"></a>
+The parameters under *Settings* > *Configuration* > *Commissioning* allow you to change the way machines are commissioned:
 
 - *Default commissioning release*: You can choose the default Ubuntu release that will be used for commissioning from a dropdown menu.
 
 - *Default minimum kernel version*: The default minimum kernel version used on all new and commissioned nodes.  You can also choose this default from a dropdown menu.
 
-<a href="#heading--IPMI-settings"><h3 id="heading--IPMI-settings">IPMI settings</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0cd76e009226318e7afee4f594e86390ac99dfb1.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0cd76e009226318e7afee4f594e86390ac99dfb1.png"></a>
-
 - *IPMI username*: You can set the default IPMI username, which will control IPMI access to machines.
 
 - *K_g BMC key*: Specify this key to encrypt all communication between IPMI clients and the BMC. Leave this blank for no encryption. 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1c7dc2b1666148cde9487cbf06bd8efbbaca656b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1c7dc2b1666148cde9487cbf06bd8efbbaca656b.png"></a>
 
 - *IPMI privilege level*: You can choose the privilege level for IPMI access from a set of radio buttons (admin, operator, user).
 
 <a href="#heading--Deployment"><h2 id="heading--Deployment">Deployment</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f28aa8c31ff843b47c44fb47e482b5163902c1c5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f28aa8c31ff843b47c44fb47e482b5163902c1c5.png"></a>
-
-There are also a number of parameters which control MAAS machine deployment:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/66c5fe86db6dfdc043803b50d15c3e6929b5aa0c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/66c5fe86db6dfdc043803b50d15c3e6929b5aa0c.png"></a>
+*Settings* > *Configuration* > *Deployment* lets you configure machine deployment:
 
 - *Default deployment OS*: You can choose the default operating system used for deployment from a dropdown list.
 
