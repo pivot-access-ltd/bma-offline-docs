@@ -62,7 +62,7 @@ Under *Configuration* > *General* > *Kernel parameters*, you can set global boot
 
 - *Actions column*: Each table row also has an "Actions" column, which allows you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.
 
-Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen.  A search bar is also provided to help you locate a particular user in a longer list.
+Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen.  A search bar is also provided to help you locate a particular user in a longer list.
 
 <a href="#heading--Images"><h2 id="heading--Images">Images</h2></a>
 
@@ -70,7 +70,7 @@ Note that if the table becomes longer than one screen will accomodate, paging bu
 
 <a href="#heading--Ubuntu-images"><h3 id="heading--Ubuntu images">Ubuntu images</h3></a>
 
-Under *Settings* > *Images* > *Ubuntu*, you can enable the installation of proprietry drives by selecting the appropriate checkbox.
+Under *Settings* > *Images* > *Ubuntu*, you can enable the installation of proprietary drives by selecting the appropriate checkbox.
 
 <a href="#heading--Windows-images"><h3 id="heading--Windows images">Windows images</h3></a>
 
@@ -100,7 +100,7 @@ If you are using VMWare images, *Settings* > *Images* > *VMware* offers several 
 
 - *Actions column*: These action buttons allow you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.
 
-Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular license key in a longer list.
+Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular license key in a longer list.
 
 <a href="#heading--Storage"><h2 id="heading--Storage">Storage</h2></a>
 
@@ -128,13 +128,13 @@ By choosing *Settings* > *Network* > *Proxy*, you can define the HTTP proxy used
 
 - *Enable DNSSEC validation*: If you wish to enable DNSSEC validation of upstream zones, you can choose the method from this dropdown list.  This is only used when MAAS is running its own DNS server. This value is used as the value of 'dnssec_validation' in the DNS server config.
 
-- *List of external networks*: You can also provide a ist of external networks to be used for MAAS DNS resolution. MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows you to add extra, previously-unknown networks to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
+- *List of external networks*: You can also provide a list of external networks to be used for MAAS DNS resolution. MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows you to add extra, previously-unknown networks to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
 
 <a href="#heading--NTP-service"><h3 id="heading--NTP service">NTP service</h3></a>
 
-Access the NTP service is controlled using *Settings* > *Network* > *NTP*. You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS's DHCP services.  
+Access the NTP service is controlled using *Settings* > *Network* > *NTP*. You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS DHCP services.  
 
-You can also instruct MAAS to *Use external NTP only*, so that all daemons and machines refer directly to the external NTP server (and not to each other). If this is not set, only region controller hosts will be configured to use those external NTP servers; rack contoller hosts will in turn refer to the regions' NTP servers, and deployed machines will refer to the racks' NTP servers.
+You can also instruct MAAS to *Use external NTP only*, so that all daemons and machines refer directly to the external NTP server (and not to each other). If this is not set, only region controller hosts will be configured to use those external NTP servers; rack controller hosts will in turn refer to the regions' NTP servers, and deployed machines will refer to the racks' NTP servers.
 
 <a href="#heading--Syslog-configuration"><h3 id="heading--Syslog configuration">Syslog configuration</h3></a>
 
@@ -162,11 +162,11 @@ Under the section *Settings* > *Scripts*, MAAS provides a great deal of flexibil
 
 - *Actions column*: Each table row has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
 
-Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular commissioning script in a longer list.
+Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular commissioning script in a longer list.
 
 <a href="#heading--Testing-scripts"><h3 id="heading--Testing-scripts">Testing scripts</h3></a>
 
-Simliar to *Commisioning scripts*, the choices *Settings* > *Scripts* > *Testing scripts* give you the ability to manage your machines testing scripts in a tabular format:
+Similar to *Commissioning scripts*, the choices *Settings* > *Scripts* > *Testing scripts* give you the ability to manage your machines testing scripts in a tabular format:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png"></a>
 
@@ -178,7 +178,7 @@ Simliar to *Commisioning scripts*, the choices *Settings* > *Scripts* > *Testing
 
 - *Actions column*: Each table row has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
 
-Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
+Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 
 <a href="#heading--DHCP-snippets"><h2 id="heading--DHCP-snippets">DHCP snippets</h2></a>
 
@@ -194,7 +194,7 @@ Note that if the table becomes longer than one screen will accomodate, paging bu
 
 - *Actions column*: Each table row has an "Actions" column, which allows you to edit delete the snippet in that row, depending upon your role.
 
-Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular snippet in a longer list.
+Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular snippet in a longer list.
 
 <a href="#heading--Package-repos"><h2 id="heading--Package-repos">Package repos</h2></a>
 
@@ -210,7 +210,7 @@ You can manage your MAAS repositories with the *Settings* > *Package repos* opti
 
 - *Actions column*: Each table row also has an "Actions" column, which allows you to edit or delete the repository information in that row, depending upon your role.
 
-Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
+Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages" view="CLI"]
 
@@ -247,7 +247,7 @@ These keyword arguments must come after any positional arguments required by a s
 - *enable_third_party_drivers*: Enable the installation of proprietary drivers (i.e. HPVSA).
 - *enlist_commissioning*: Whether to run commissioning during enlistment..         Enables running all built-in commissioning scripts during enlistment.
 - *force_v1_network_yaml*: Always use the legacy v1 YAML (rather than Netplan format, also known as v2 YAML) when composing the network configuration for a machine..
-- *hardware_sync_interval*: Hardware Sync Interval.         The interval to send hardware info to MAAS fromhardware sync enabled machines, in systemd time span syntax.
+- *hardware_sync_interval*: Hardware Sync Interval.         The interval to send hardware info to MAAS from hardware sync enabled machines, in systemd time span syntax.
 - *http_proxy*: Proxy for APT or YUM and HTTP/HTTPS.         This will be passed onto provisioned nodes to use as a proxy for APT or YUM traffic. MAAS also uses the proxy for downloading boot images. If no URL is provided, the built-in MAAS proxy will be used.
 - *kernel_opts*: Boot parameters to pass to the kernel by default.
 - *maas_auto_ipmi_cipher_suite_id*: MAAS IPMI Default Cipher Suite ID.         The default IPMI cipher suite ID to use when connecting to the BMC via ipmitools        Available choices are*: '' (freeipmi-tools default), '12' (12 - HMAC-MD5::MD5-128::AES-CBC-128), '17' (17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128), '3' (3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128), '8' (8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128).
@@ -264,8 +264,8 @@ These keyword arguments must come after any positional arguments required by a s
 - *max_node_testing_results*: The maximum number of testing results runs which are stored.
 - *network_discovery*: .         When enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.
 - *node_timeout*: Time, in minutes, until the node times out during commissioning, testing, deploying, or entering rescue mode..         Commissioning, testing, deploying, and entering rescue mode all set a timeout when beginning. If MAAS does not hear from the node within the specified number of minutes the node is powered off and set into a failed status.
-- *ntp_external_only*: Use external NTP servers only.         Configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers, rack contoller hosts will in turn refer to the regions' NTP servers, and deployed machines will refer to the racks' NTP servers.
-- *ntp_servers*: Addresses of NTP servers.         NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS's DHCP services.
+- *ntp_external_only*: Use external NTP servers only.         Configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers, rack controller hosts will in turn refer to the regions' NTP servers, and deployed machines will refer to the racks' NTP servers.
+- *ntp_servers*: Addresses of NTP servers.         NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS DHCP services.
 - *prefer_v4_proxy*: Sets IPv4 DNS resolution before IPv6.         If prefer_v4_proxy is set, the proxy will be set to prefer IPv4 DNS resolution before it attempts to perform IPv6 DNS resolution.
 - *prometheus_enabled*: Enable sending stats to a prometheus gateway..         Allows MAAS to send statistics to Prometheus. This requires the 'prometheus_push_gateway' to be set.
 - *prometheus_push_gateway*: Address or hostname of the Prometheus push gateway..         Defines the address or hostname of the Prometheus push gateway where MAAS will send data to.
