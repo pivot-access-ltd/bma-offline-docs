@@ -1,5 +1,9 @@
 <!-- "Understanding MAAS audit events" -->
 
+An audit event is a MAAS event that with the tag `AUDIT`. It contains information about changes to configuration and machine state. They are valuable for providing an oversight of user actions and automated updates and their effects, especially in contexts where multiple users may be interacting with multiple machines.
+
+## Viewing events
+
 Audit events must be examined using the MAAS CLI, as there is no corresponding MAAS web UI tool at present.
 
 The CLI command `events query level=AUDIT` will help you review audit events:
@@ -18,7 +22,7 @@ $ maas $PROFILE events query level=AUDIT after=0 limit=20 \
 | @tsv' | column -t -s$'\t'
 ```
 
-This command might produce output simlar to this:
+This command might produce output similar to this:
 
 ```nohighlight
 USERNAME  HOSTNAME     DATE                        EVENT
@@ -53,7 +57,7 @@ This command has several options.  Let's look first at a couple of the most usef
 
 The `maas $PROFILE events query` command, by default, looks as 100 records.  You can choose where to begin that 100 records by setting the `after` keyword.  In the example above, we've chosen the first 20 audit records by specifying `after=0`, that is, beginning with the first record.  Pay attention to the `0`, since the `after` command works exactly as you'd expect: it picks up some number of records after the number listed.  If you were to use `after=1`, for example, you wouldn't see the first event.
 
-Note that MAAS event numbering has nothing to do with the `level` you've selected, so a given record number may or may not show up in your `level=AUDIT` query.  For example, let's do that audit event pull ag ain, but this time include the record number in our table.  We can do that with a command like this:
+Note that MAAS event numbering has nothing to do with the `level` you've selected, so a given record number may or may not show up in your `level=AUDIT` query.  For example, let's do that audit event pull ag ain, but this time include the record number (`RNO`) in our table.  We can do that with a command like this:
 
 ```nohighlight
 $ maas $PROFILE events query level=AUDIT after=0 limit=20 \
@@ -69,24 +73,11 @@ Note that we've added "RNO" to the header, and the `.events[]` array member `.id
 RNO  USERNAME  HOSTNAME     DATE                        EVENT
 ---  --------  --------     ----                        -----
 309  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 2 was updated on node 8wmfx3
-308  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-307  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-306  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-305  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-304  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-303  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-302  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-301  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
-300  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 0 was updated on node 8wmfx3
 299  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  block device sda was updated on node 8wmfx3
 298  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  interface enp5s0 was updated on node 8wmfx3
-297  unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  0 bytes of memory was removed on node 8wmfx3
 134  admin     valued-moth  Thu, 21 Apr. 2022 19:36:48  Started deploying 'valued-moth'.
 130  admin     valued-moth  Thu, 21 Apr. 2022 19:36:21  Acquired 'valued-moth'.
 18   admin     unknown      Thu, 21 Apr. 2022 19:21:46  Updated configuration setting 'completed_intro' to 'True'.
-14   admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'upstream_dns' to '8.8.8.8'.
-13   admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'maas_name' to 'neuromancer'.
-12   admin     unknown      Thu, 21 Apr. 2022 19:20:47  Updated configuration setting 'http_proxy' to ''.
 11   admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 ```
 
@@ -124,5 +115,3 @@ You can filter audit records by several different parameters.  Unless otherwise 
 <a href="#heading--The-meaning-of-audit-events"><h3 id="heading--The-meaning-of-audit-events">The meaning of audit events</h3></a>
 
 Let's walk through a sample of, say, fifty audit events and see how to interpret and use them.  Consider the following `jq` output:
-
-
