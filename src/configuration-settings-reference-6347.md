@@ -4,23 +4,16 @@ MAAS has a significant number of configuration settings.  This article will list
 
 [tabs]
 [tab version="v3.1 Snap,v3.1 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
-The MAAS UI provides a Settings tab at the top of the MAAS interface:
+A *Settings* tab is available at the top of the MAAS interface.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a754cebaaae078bd04357c60abe6312d7171315.png"></a>
+<a href="#heading--General-items"><h2 id="heading--General-items">General</h2></a>
 
-Selections are made by clicking on active links down the left side of the page.
+The following options are found in *Setting* > *Configuration* > *General*.
 
-<a href="#heading--General-items"><h2 id="heading--General-items">General items</h2></a>
+Managing MAAS site identity is  useful when you are running more than one MAAS instance - say,  *Test* and *Production* environments.  This section also provides data collection and version notification options. 
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b70a6f273934c2f8b5c758be00ad25f4d5482a39.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b70a6f273934c2f8b5c758be00ad25f4d5482a39.png"></a>
+- *MAAS name*: The "* MAAS name" is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor.
 
-<a href="#heading--MAAS-site-identity"><h3 id="heading--MAAS-site-identity">MAAS site identity</h3></a>
-
-The "General" section provides the ability to set the MAAS site identity, which is most useful if you are running more than one MAAS instance.  For example, if you have a "test" environment and a "production" environment, you can differentiate them by name.  This section also provides data collection and version notification options. 
-
-- *MAAS name*: The "* MAAS name" is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f49676981aee8b1ab6414507358b990ed24e11d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f49676981aee8b1ab6414507358b990ed24e11d0.png"></a>
 
 <a href="#heading--Google-analytics"><h3 id="heading--Google analytics">Google analytics</h3></a>
 
