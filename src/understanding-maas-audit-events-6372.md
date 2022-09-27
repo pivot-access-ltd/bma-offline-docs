@@ -84,3 +84,9 @@ admin        ebd7dc  active-amoeba  AUDIT  Mon, 08 Nov. 2021 04:05:40  Node  Mar
 admin        knpge8  bolla          AUDIT  Wed, 16 Jun. 2021 04:35:50  Node  Started importing images on 'bolla'.
 admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set the zone to 'danger' on 'bolla'.
 ```
+
+As it turns out, all of these events are of type `Node`, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events -- mainly because they indicate changes to a machine's life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.
+
+Let's take a moment to consider the MAAS life-cycle, which can be depicted like this:
+
+
