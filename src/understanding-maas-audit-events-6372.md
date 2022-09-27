@@ -1,18 +1,16 @@
 <!-- "Understanding MAAS audit events" -->
 
-An audit event is a MAAS event that with the tag `AUDIT`. It contains information about changes to configuration and machine state. They are valuable for providing an oversight of user actions and automated updates and their effects, especially in contexts where multiple users may be interacting with multiple machines.
+An audit event is a MAAS event tagged with `AUDIT`. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates and their effects, especially when multiple users are interacting with multiple machines.
 
-## Viewing events
+<a href="#heading--Viewing-events"><h2 id="heading--Viewing-events">Viewing events</h2></a>
 
-Audit events must be examined using the MAAS CLI, as there is no corresponding MAAS web UI tool at present.
-
-The CLI command `events query level=AUDIT` will help you review audit events:
+Audit events must be examined using the MAAS CLI, via the command `events query level=AUDIT`:
 
 ```nohighlight
 $ maas $PROFILE events query level=AUDIT
 ```
 
-This command will show you 100 successive audit events, with no filtering, in JSON format.  Since JSON format can be very long, we recommend that you apply the `jq` tool to present records in a more readable way.  For example, the following command picks out the first 20 audit events currently available on your MAAS host:
+This command shows 100 successive audit events, with no filtering, in JSON format.  We recommend simplifying the output with the `jq` tool.  For example, the following command picks out the first 20 audit events currently available on your MAAS host:
 
 ```nohighlight
 $ maas $PROFILE events query level=AUDIT after=0 limit=20 \
@@ -51,13 +49,13 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 
 <a href="#heading--Some-options-for-this-command"><h2 id="heading--Some-options-for-this-command">Some options for this command</h2></a>
 
-This command has several options.  Let's look first at a couple of the most useful.  As you may know, a lot of the options passed to a MAAS CLI command are given as `key=value` pairs.  The example command above contains three such options, `level=AUDIT after=0 limit=20`, for instance.  The option `level=AUDIT` restricts the event query to audit events.  Other options are described below.
+This command has several options, so let's look at a couple of the most useful ones.  As you may know, most options passed to a MAAS CLI command are `key=value` pairs.  The example above shows three such options, `level=AUDIT after=0 limit=20`.  The option `level=AUDIT` restricts the event query to audit events.
 
 <a href="#heading--Before-and-after-options"><h3 id="heading--Before-and-after-options">The "before" and "after" options</h3></a>
 
-The `maas $PROFILE events query` command, by default, looks as 100 records.  You can choose where to begin that 100 records by setting the `after` keyword.  In the example above, we've chosen the first 20 audit records by specifying `after=0`, that is, beginning with the first record.  Pay attention to the `0`, since the `after` command works exactly as you'd expect: it picks up some number of records after the number listed.  If you were to use `after=1`, for example, you wouldn't see the first event.
+The `maas $PROFILE events query` retrieves 100 records by default.  You can choose where to begin that 100 records by setting the `after` keyword.  In the example above, we've chosen the first 20 audit records by specifying `after=0`, that is, beginning with the first record.  Pay attention to the `0`, since the `after` command works exactly as you'd expect: it picks up some number of records after the number listed.  If you were to use `after=1`, for example, you wouldn't see the first event.
 
-Note that MAAS event numbering has nothing to do with the `level` you've selected, so a given record number may or may not show up in your `level=AUDIT` query.  For example, let's do that audit event pull ag ain, but this time include the record number (`RNO`) in our table.  We can do that with a command like this:
+Note that MAAS event numbering has nothing to do with the `level` you've selected, so a given record number may or may not show up in your `level=AUDIT` query.  For example, let's do that audit event pull again, but this time include the record number (`RNO`) in our table.  We can do that with a command like this:
 
 ```nohighlight
 $ maas $PROFILE events query level=AUDIT after=0 limit=20 \
