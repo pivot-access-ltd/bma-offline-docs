@@ -50,59 +50,37 @@ The parameters under *Settings* > *Configuration* > *Commissioning* allow you to
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/557e89310a2e1b512457c38497302fcb533a39ef.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/557e89310a2e1b512457c38497302fcb533a39ef.png"></a>
 
-You can set the kernel parameters used with machine kernels:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d2edc0a4c48ee76ac78a6e5c03a5eda810ed793d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d2edc0a4c48ee76ac78a6e5c03a5eda810ed793d.png"></a>
-
-- *Global boot parmeters*: You can set global boot parameters that are always passed to the machine kernel.
+Under *Configuration* > *General* > *Kernel parameters*, you can set global boot that are always passed to the machine kernel.
 
 <a href="#heading--Users"><h2 id="heading--Users">Users</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/807555f84904bd48b2279317b378b3184a5a1742.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/807555f84904bd48b2279317b378b3184a5a1742.png"></a>
-
-MAAS configuration gives you the ability to manage your users:
+*Settings* > *Users* MAAS gives you the ability to manage your users in a tabular format:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png"></a>
 
 - *Add user button*: This button can be used to add a new user.
 
-- *User table*: This table lists user attributes, including username, real name, machines they can access, when the user was last seen, MAAS keys, and a user type and role.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+- *Sortable columns*: some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
 
-Each table row also has an "Actions" column, which allows you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.
+- *Actions column*: Each table row also has an "Actions" column, which allows you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen.  A search bar is also provided to help you locate a particular user in a longer list.
 
 <a href="#heading--Images"><h2 id="heading--Images">Images</h2></a>
 
-This section of the configuration settings allows you to specify parameters that control images.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/37362d55a4c37b563af13c665e27a818f4dd63e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37362d55a4c37b563af13c665e27a818f4dd63e7.png"></a>
+*Settings* > *Images* allows you to specify parameters that control different types of MAAS images.
 
 <a href="#heading--Ubuntu-images"><h3 id="heading--Ubuntu images">Ubuntu images</h3></a>
 
-If you are using Ubuntu images, you can enable the installation of proprietry drives by selecting the appropriate checkbox:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fb4822256f5f9102af2e4a1cd5974ced2bca9075.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb4822256f5f9102af2e4a1cd5974ced2bca9075.png"></a>
-
-Additional options may be added to this menu from time to time.
+Under *Settings* > *Images* > *Ubuntu*, you can enable the installation of proprietry drives by selecting the appropriate checkbox.
 
 <a href="#heading--Windows-images"><h3 id="heading--Windows images">Windows images</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/cdbb64a45bdca8d8433b34818725ad14fab18119.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/cdbb64a45bdca8d8433b34818725ad14fab18119.png"></a>
-
-If you are using Windows images, you can specify the Windows KMS activation host.  This is the FQDN or IP address of the host that provides the KMS Windows activation service: 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d2e83dd7ace5b84e6aa9db8159f91f2149bbeffa.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d2e83dd7ace5b84e6aa9db8159f91f2149bbeffa.png"></a>
-
-This is only needed for Windows deployments that use KMS activation.
+*Settings* > *Images* > *Windows* allows you to specify the Windows KMS activation host.  This is the FQDN or IP address of the host that provides the KMS Windows activation service, which is needed for Windows deployments that use KMS activation.
 
 <a href="#heading--VMWare-images"><h3 id="heading--VMWare images">VMWare images</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b92a7722885c7374ebbe02ced472fa0cd54d51ec.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b92a7722885c7374ebbe02ced472fa0cd54d51ec.png"></a>
-
-If you are usijng VMWare images, there are several parameters you can adjust:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/be3a4b46eb2b1d238d77b29380986e0b903e988f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/be3a4b46eb2b1d238d77b29380986e0b903e988f.png"></a>
+If you are using VMWare images, *Settings* > *Images* > *VMware* offers several parameters that you can adjust:
 
 - *VMware vCenter server FQDN or IP address*: the VMware vCenter server FQDN or IP address which is passed to a deployed VMware ESXi host.
 
@@ -114,27 +92,21 @@ If you are usijng VMWare images, there are several parameters you can adjust:
 
 <a href="#heading--License-keys"><h2 id="heading--License-keys">License keys</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d1834664928572f9bbc652d6223b62b6580d7f43.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d1834664928572f9bbc652d6223b62b6580d7f43.png"></a>
-
-MAAS configuration gives you the ability to manage your license key:
+*Settings* > *License keys* gives you the ability to manage your product licenses in a tabular format:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png"></a>
 
 - *Add license key button*: This button can be used to add a new license key.
 
-- *License table*: This table lists license attributes, including operating system and distro series.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
 
-Each table row also has an "Actions" column, which allows you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.
+- *Actions column*: These action buttons allow you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular license key in a longer list.
 
 <a href="#heading--Storage"><h2 id="heading--Storage">Storage</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a749db087c74e4b6733f773cd6720be5308173ef.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a749db087c74e4b6733f773cd6720be5308173ef.png"></a>
-
-You can set some parameters related to machine storage layouts:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/965f6a622092cae03a4043cdb22d337a1ae981cc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/965f6a622092cae03a4043cdb22d337a1ae981cc.png"></a>
+Under *Settings* > *Storage*, you can set some parameters related to machine disks:
 
 - *Default storage layout*: The default storage layout that is applied to a machine when it is commissioned.
 
@@ -146,25 +118,15 @@ You can set some parameters related to machine storage layouts:
 
 <a href="#heading--Network"><h2 id="heading--Network">Network</h2></a>
 
-You can set some network defaults for MAAS machines.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/82f10e6375158387ba01842e2e68b18e638e5966.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/82f10e6375158387ba01842e2e68b18e638e5966.png"></a>
+*Settings* > *Network* allows you to set several network defaults for MAAS machines.
 
 <a href="#heading--HTTP-proxy"><h3 id="heading--HTTP proxy">HTTP proxy</h3></a>
 
-Here, you can choose the HTTP proxy used by MAAS to download images, and used by provisioned machines for APT and YUM packages. Your choices are (1) no proxy, (2) MAAS built-in proxy, (3) external proxy, or (4) peer proxy.  If you choose external or peer proxy, you will be presented with a text box to specify the external proxy URL that the MAAS built-in proxy will use as an upstream cache peer. 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c3e3667484f71938d364252566b65eb039251636.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c3e3667484f71938d364252566b65eb039251636.png"></a>
-
-Note that machines will be configured to use MAAS' built-in proxy to download APT packages when external or peer proxies are specified.
+By choosing *Settings* > *Network* > *Proxy*, you can define the HTTP proxy used by MAAS to download images, and used by provisioned machines for APT and YUM packages. Your choices are (1) no proxy, (2) MAAS built-in proxy, (3) external proxy, or (4) peer proxy.  If you choose external or peer proxy, you will be presented with a text box to specify the external proxy URL that the MAAS built-in proxy will use as an upstream cache peer.  Note that machines will be configured to use MAAS' built-in proxy to download APT packages when external or peer proxies are specified.
 
 <a href="#heading--Upstream-DNS"><h3 id="heading--Upstream DNS">Upstream DNS</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8ff7c117866781710b64daa8804167debf6d3a85.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8ff7c117866781710b64daa8804167debf6d3a85.png"></a>
-
-Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses). Only used when MAAS is running its own DNS server. This value is used as the value of 'forwarders' in the DNS server config.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/147467aff277c3fb45b94922f7f88f90e34509ec.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/147467aff277c3fb45b94922f7f88f90e34509ec.png"></a>
+*Settings* > *Network* > *DNS* lets you set DNS parameters for your MAAS.  Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses).  This only applies when MAAS is running its own DNS server, since this value is used to define forwarding in the DNS server config.  You can set the following parameters:
 
 - *Enable DNSSEC validation*: If you wish to enable DNSSEC validation of upstream zones, you can choose the method from this dropdown list.  This is only used when MAAS is running its own DNS server. This value is used as the value of 'dnssec_validation' in the DNS server config.
 
@@ -172,97 +134,73 @@ Upstream DNS used to resolve domains not managed by this MAAS (space-separated I
 
 <a href="#heading--NTP-service"><h3 id="heading--NTP service">NTP service</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/abf10690d730a2333ca8b910638f97fa4e04c03b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/abf10690d730a2333ca8b910638f97fa4e04c03b.png"></a>
+Access the NTP service is controlled using *Settings* > *Network* > *NTP*. You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS's DHCP services.  
 
-You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS's DHCP services.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/2e61953512a232b26ed51d43b01040d7482408d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2e61953512a232b26ed51d43b01040d7482408d0.png"></a>
-
-- *Use external NTP only*:  You can configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers. Otherwise only region controller hosts will be configured to use those external NTP servers; rack contoller hosts will in turn refer to the regions' NTP servers; deployed machines will refer to the racks' NTP servers.
+You can also instruct MAAS to *Use external NTP only*, so that all daemons and machines refer directly to the external NTP server (and not to each other). If this is not set, only region controller hosts will be configured to use those external NTP servers; rack contoller hosts will in turn refer to the regions' NTP servers, and deployed machines will refer to the racks' NTP servers.
 
 <a href="#heading--Syslog-configuration"><h3 id="heading--Syslog configuration">Syslog configuration</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/50812e0362109f8c894eb3087b49030608fb3675.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/50812e0362109f8c894eb3087b49030608fb3675.png"></a>
-
-You can specify a remote syslog server to which machine logs should be forwarded.  This will be a remote syslog server that MAAS will set on enlisting, commissioning, testing, and deploying machines to send all log messages. 
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/ed9853326328cce615a4c551074c0ee2ffa84e7b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ed9853326328cce615a4c551074c0ee2ffa84e7b.png"></a>
-
-Clearing this value will restore the default behaviour of forwarding syslog to MAAS.
+You can use *Settings* > *Network* > *Syslog* to specify a remote syslog server to which machine logs should be forwarded.  MAAS will use this remote syslog server for all log messages when enlisting, commissioning, testing, and deploying machines. Conversely, clearing this value will restore the default behaviour of forwarding syslog entries to MAAS.
 
 <a href="#heading--Network-discovery"><h3 id="heading--Network discovery">Network discovery</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1d3e161b8ae204b25183be53df23f72172822d2b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1d3e161b8ae204b25183be53df23f72172822d2b.png"></a>
-
-When this choice is enabled, MAAS will use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/44ebe9af4eeaecbf3d4e7604085238991d1ce7bc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/44ebe9af4eeaecbf3d4e7604085238991d1ce7bc.png"></a>
-
-- *Active subnet mapping interval*: You can choose the subnet mapping interval from this dropdown.  When enabled, each rack will scan subnets enabled for active mapping. This helps ensure discovery information is accurate and complete.
+*Settings* > *Network* > *Network discovery*, when enabled, will cause MAAS to use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.  You can set the *Active subnet mapping interval* by choosing a desired interval from a dropdown.  When network discovery is enabled, each rack will scan subnets enabled for active mapping, which helps to ensure that discovery information is accurate and complete.
 
 <a href="#heading--Scripts"><h2 id="heading--Scripts">Scripts</h2></a>
 
-MAAS provides a great deal of flexibility when dealing with commissioning and testing scripts.
+Under the section *Settings* > *Scripts*, MAAS provides a great deal of flexibility when dealing with commissioning and testing scripts.
 
 <a href="#heading--Commissioning-scripts"><h3 id="heading--Commissioning-scripts">Commissioning scripts</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c54d0a3cf295f89b5b566b850cf1de876cafbf0b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c54d0a3cf295f89b5b566b850cf1de876cafbf0b.png"></a>
-
-MAAS configuration gives you the ability to manage your commissioning scripts:
+*Settings* > *Scripts* > *Commissioning scripts* gives you the ability to manage machine commissioning scripts in a tabular format:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png"></a>
 
 - *Upload script button*: This button can be used to upload a new commissioning script.
 
-- *Table of commissioning scripts*: This table lists script attributes, including script name, description, and upload timestamp.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
 
-Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.
+- *Expandable script contents*: Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.
 
-Each table row also has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
+- *Actions column*: Each table row has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular commissioning script in a longer list.
 
 <a href="#heading--Testing-scripts"><h3 id="heading--Testing-scripts">Testing scripts</h3></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3ff427b8977bd22b3b8ddec4cdcb63211102d42f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3ff427b8977bd22b3b8ddec4cdcb63211102d42f.png"></a>
-
-The MAAS configuration settings give you the ability to manage your testing scripts:
+Simliar to *Commisioning scripts*, the choices *Settings* > *Scripts* > *Testing scripts* give you the ability to manage your machines testing scripts in a tabular format:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png"></a>
 
 - *Upload script button*: This button can be used to upload a new test script.
 
-- *Table of commissioning scripts*: This table lists script attributes, including script name, description, and upload timestamp.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
 
-Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.
+- *Expandable script contents*: Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.
 
-Each table row also has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
+- *Actions column*: Each table row has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 
 <a href="#heading--DHCP-snippets"><h2 id="heading--DHCP-snippets">DHCP snippets</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c188db5925593b8d9ebadeb4f696ffd8f24f311d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c188db5925593b8d9ebadeb4f696ffd8f24f311d.png"></a>
-
-The MAAS configuration settings give you the ability to manage any DHCP snippets you wish to apply:
+*Settings* > *DHCP snippets* lets you manage your DHCP snippets in a table:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png"></a>
 
 - *Add snippet button*: This button can be used to add a new DHCP snippet.
 
-- *Table of snippets*: This table lists snippet attributes, including snippet name, type, description, application, data of last edit, and whether or not that snippet is currently enabled.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
 
-Also note that individual snippet names are clickable, allowing you to expand that row to see the language of that snippet.
+- *Expandable snippets*: Also note that individual snippets are clickable, allowing you to expand that row to see the contents of that snippet.
 
-Each table row also has an "Actions" column, which allows you to edit or delete the snippet in that row, depending upon your role.
+- *Actions column*: Each table row has an "Actions" column, which allows you to edit delete the snippet in that row, depending upon your role.
 
-Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
+Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular snippet in a longer list.
 
 <a href="#heading--Package-repos"><h2 id="heading--Package-repos">Package repos</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a2a38a59ecab87c7abee31672aa86ebfaa755512.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a2a38a59ecab87c7abee31672aa86ebfaa755512.png"></a>
-
-MAAS configuration settings give you the ability to manage any package repos you wish to apply to your MAAS instance:
+You can manage your MAAS repositories with the *Settings* > *Package repos* option.  Referenced repos are listed in a table:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png"></a>
 
@@ -270,11 +208,9 @@ MAAS configuration settings give you the ability to manage any package repos you
 
 - *Add repository button*: This button can be used to add a new repository to the search path.
 
-- *Table of repositories*: This table lists enabled respositores, including the repo name, URL, and whether or not that repository is currently enabled in the search path.  Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
 
-Also note that individual snippet names are clickable, allowing you to expand that row to see the language of that snippet.
-
-Each table row also has an "Actions" column, which allows you to edit or delete the repository information in that row, depending upon your role.
+- *Actions column*: Each table row also has an "Actions" column, which allows you to edit or delete the repository information in that row, depending upon your role.
 
 Note that if the table becomes longer than one screen will accomodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 [/tab]
