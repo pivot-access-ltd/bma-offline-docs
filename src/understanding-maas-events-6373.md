@@ -264,7 +264,7 @@ admin        8r6pw7  karura       AUDIT  Wed, 21 Sep. 2022 14:00:47  Node  Untag
 These various filters can be combined, and even repeated as necessary:
 
 ```nohighlight
-$ maas stormrider events query level=AUDIT hostname=karura hostname=polong limit=5 \
+$ maas $PROFILE events query level=AUDIT hostname=karura hostname=polong limit=5 \
 | jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | 
 (., map(length*"-"))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
@@ -288,7 +288,7 @@ admin       8r6pw7  karura    AUDIT  Wed, 21 Sep. 2022 13:58:11  Node  Untagging
 You can use the `limit` filter to restrict the number of records listed, as we have been doing in many of the examples above.  We can expand the last example to `limit=7`, for instance:
 
 ```nohighlight
-$ maas stormrider events query level=AUDIT hostname=karura hostname=polong limit=7 \
+$ maas $PROFILE events query level=AUDIT hostname=karura hostname=polong limit=7 \
 | jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | 
 (., map(length*"-"))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
@@ -314,7 +314,7 @@ admin       7h3cw7  polong    AUDIT  Tue, 13 Sep. 2022 14:14:24  Node  Powered o
 Let's suppose that we want to repeat the query in the last example, but we want to start from the beginning of the event log (whenever that might have been).  We could modify the above command to something like this:
 
 ```nohighlight
-$ maas stormrider events query level=AUDIT hostname=karura hostname=polong after=0 limit=7 \
+$ maas $PROFILE events query level=AUDIT hostname=karura hostname=polong after=0 limit=7 \
 | jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | 
 (., map(length*"-"))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
@@ -338,7 +338,7 @@ ed        7h3cw7  polong    AUDIT  Thu, 27 Jan. 2022 14:34:34  Node  Powered on 
 We could also retrieve very recent records using "before":
 
 ```nohighlight
-$ maas stormrider events query level=AUDIT before=500000 limit=7 \
+$ maas $PROFILE events query level=AUDIT before=500000 limit=7 \
 | jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | 
 (., map(length*"-"))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
@@ -358,3 +358,13 @@ ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:15  Node  Untaggin
 ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:14  Node  Tagging 'fair-marten'.
 admin     mm3tc8  fair-marten  AUDIT  Fri, 11 Feb. 2022 11:00:00  Node  Set the zone to 'twilight' on 'fair-marten'.
 ```
+
+
+
+
+
+
+
+
+
+

@@ -630,7 +630,7 @@ mikebolton   mm3tc8  fair-marten  AUDIT  Wed, 21 Sep. 2022 14:10:38  Node  Untag
 admin        8r6pw7  karura       AUDIT  Wed, 21 Sep. 2022 14:00:47  Node  Untagging 'karura'.
 </code></pre>
 <p>These various filters can be combined, and even repeated as necessary:</p>
-<pre><code class="language-nohighlight">$ maas stormrider events query level=AUDIT hostname=karura hostname=polong limit=5 \
+<pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT hostname=karura hostname=polong limit=5 \
 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | 
 (., map(length*&quot;-&quot;))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
@@ -647,7 +647,7 @@ admin       8r6pw7  karura    AUDIT  Wed, 21 Sep. 2022 13:58:11  Node  Untagging
 </code></pre>
 <p><a href="#heading--limit-filter"><h3 id="heading--limit-filter">The limit filter</h3></a></p>
 <p>You can use the <code>limit</code> filter to restrict the number of records listed, as we have been doing in many of the examples above.  We can expand the last example to <code>limit=7</code>, for instance:</p>
-<pre><code class="language-nohighlight">$ maas stormrider events query level=AUDIT hostname=karura hostname=polong limit=7 \
+<pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT hostname=karura hostname=polong limit=7 \
 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | 
 (., map(length*&quot;-&quot;))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
@@ -666,7 +666,7 @@ admin       7h3cw7  polong    AUDIT  Tue, 13 Sep. 2022 14:14:24  Node  Powered o
 </code></pre>
 <p><a href="#heading--before-and-after-filters"><h3 id="heading--before-and-after-filters">The before and after filters</h3></a></p>
 <p>Let&rsquo;s suppose that we want to repeat the query in the last example, but we want to start from the beginning of the event log (whenever that might have been).  We could modify the above command to something like this:</p>
-<pre><code class="language-nohighlight">$ maas stormrider events query level=AUDIT hostname=karura hostname=polong after=0 limit=7 \
+<pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT hostname=karura hostname=polong after=0 limit=7 \
 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | 
 (., map(length*&quot;-&quot;))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
@@ -684,7 +684,7 @@ peter     8r6pw7  karura    AUDIT  Fri, 22 Apr. 2022 07:09:55  Node  Powered on 
 ed        7h3cw7  polong    AUDIT  Thu, 27 Jan. 2022 14:34:34  Node  Powered on 'polong'.
 </code></pre>
 <p>We could also retrieve very recent records using &ldquo;before&rdquo;:</p>
-<pre><code class="language-nohighlight">$ maas stormrider events query level=AUDIT before=500000 limit=7 \
+<pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT before=500000 limit=7 \
 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | 
 (., map(length*&quot;-&quot;))),
 (.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
