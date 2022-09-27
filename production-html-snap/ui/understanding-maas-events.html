@@ -412,7 +412,7 @@
   <h1>Understanding MAAS events</h1><!-- "Understanding MAAS events" -->
 
 <p>Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.</p>
-<p>Every event can be reviwed by scanning the MAAS logs.  If you&rsquo;re using snaps, the logs of interest are:</p>
+<p>Every event can be reviewed by scanning the MAAS logs.  If you&rsquo;re using snaps, the logs of interest are:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>/var/snap/maas/common/log/maas.log</li>
 <li>/var/snap/maas/common/log/regiond.log</li>
@@ -426,7 +426,7 @@
 <li>/var/log/maas/rackd.log</li>
 <li>/var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages</li>
 </ul>
-<p>These logs can be very large and hard to search, so MAAS provides a CLI tool which can help you filter and summarize events.  Let&rsquo;s take a look at how this tool works.</p>
+<p>These logs can be very large and hard to search, so MAAS provides a CLI tool which can help you filter and summarise events.  Let&rsquo;s take a look at how this tool works.</p>
 <p><a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a></p>
 <p>MAAS events can be queried with the simple CLI command:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query
@@ -515,7 +515,7 @@ unknown   pbpncx  ruling-bobcat  WARNING  Thu, 10 Mar. 2022 21:33:16  Failed to 
 unknown   knpge8  bolla          INFO     Thu, 10 Mar. 2022 20:21:41  Ready                         
 unknown   pbpncx  ruling-bobcat  WARNING  Thu, 10 Mar. 2022 18:01:47  Failed to query node's BMC  &lt;LXDAPIException instance at 0x7f0b53e21dc0 with str error:\n Traceback (most recent call last):\n  File &quot;/snap/maas/19076/usr/lib/python3/dist-packages/twisted/python/reflect.py&quot;, line 448, in safe_str\n    return str(o)\n  File &quot;/snap/maas/19076/usr/lib/python3/dist-packages/pylxd/exceptions.py&quot;, line 18, in __str__\n    if self.response.status_code == 200:  # Operation failure\nAttributeError: 'LXDAPIException' object has no attribute 'status_code'\n&gt;
 </code></pre>
-<p>You&rsquo;ll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviors and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let&rsquo;s explore ways to filter this table.</p>
+<p>You&rsquo;ll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviours and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let&rsquo;s explore ways to filter this table.</p>
 <p><a href="#heading--filter-parameters"><h2 id="heading--filter-parameters">Filter parameters</h2></a></p>
 <p>The <code>events query</code> command accepts several different filters, all of them optional:</p>
 <ul style="margin-left:4px; list-style-type:disc;">

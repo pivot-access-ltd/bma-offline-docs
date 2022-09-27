@@ -2,7 +2,7 @@
 
 Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
 
-Every event can be reviwed by scanning the MAAS logs.  If you're using snaps, the logs of interest are:
+Every event can be reviewed by scanning the MAAS logs.  If you're using snaps, the logs of interest are:
 
 - /var/snap/maas/common/log/maas.log
 - /var/snap/maas/common/log/regiond.log
@@ -16,7 +16,7 @@ If you’re using packages, you’ll find the log files in these locations:
 - /var/log/maas/rackd.log
 - /var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
-These logs can be very large and hard to search, so MAAS provides a CLI tool which can help you filter and summarize events.  Let's take a look at how this tool works.
+These logs can be very large and hard to search, so MAAS provides a CLI tool which can help you filter and summarise events.  Let's take a look at how this tool works.
 
 <a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a>
 
@@ -118,7 +118,7 @@ unknown   knpge8  bolla          INFO     Thu, 10 Mar. 2022 20:21:41  Ready
 unknown   pbpncx  ruling-bobcat  WARNING  Thu, 10 Mar. 2022 18:01:47  Failed to query node's BMC  <LXDAPIException instance at 0x7f0b53e21dc0 with str error:\n Traceback (most recent call last):\n  File "/snap/maas/19076/usr/lib/python3/dist-packages/twisted/python/reflect.py", line 448, in safe_str\n    return str(o)\n  File "/snap/maas/19076/usr/lib/python3/dist-packages/pylxd/exceptions.py", line 18, in __str__\n    if self.response.status_code == 200:  # Operation failure\nAttributeError: 'LXDAPIException' object has no attribute 'status_code'\n>
 ```
 
-You'll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviors and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let's explore ways to filter this table.
+You'll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviours and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let's explore ways to filter this table.
 
 <a href="#heading--filter-parameters"><h2 id="heading--filter-parameters">Filter parameters</h2></a>
 
@@ -358,3 +358,13 @@ ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:15  Node  Untaggin
 ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:14  Node  Tagging 'fair-marten'.
 admin     mm3tc8  fair-marten  AUDIT  Fri, 11 Feb. 2022 11:00:00  Node  Set the zone to 'twilight' on 'fair-marten'.
 ```
+
+
+
+
+
+
+
+
+
+
