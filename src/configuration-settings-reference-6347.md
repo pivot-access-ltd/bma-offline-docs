@@ -48,8 +48,6 @@ The parameters under *Settings* > *Configuration* > *Commissioning* allow you to
 
 <a href="#heading--Kernel-parameters"><h2 id="heading--Kernel-parameters">Kernel parameters</h2></a>
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/557e89310a2e1b512457c38497302fcb533a39ef.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/557e89310a2e1b512457c38497302fcb533a39ef.png"></a>
-
 Under *Configuration* > *General* > *Kernel parameters*, you can set global boot that are always passed to the machine kernel.
 
 <a href="#heading--Users"><h2 id="heading--Users">Users</h2></a>
