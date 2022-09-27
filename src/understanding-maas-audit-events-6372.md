@@ -1,6 +1,6 @@
 <!-- "Understanding MAAS audit events" -->
 
-An audit event is a MAAS event tagged with `AUDIT`. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates and their effects, especially when multiple users are interacting with multiple machines.
+An audit event is a [MAAS event](/t/understanding-maas-events/6373) tagged with `AUDIT`. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates and their effects, especially when multiple users are interacting with multiple machines.
 
 <a href="#heading--Viewing-events"><h2 id="heading--Viewing-events">Viewing events</h2></a>
 
