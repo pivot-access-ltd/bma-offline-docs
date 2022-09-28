@@ -1,10 +1,10 @@
 <!-- "Understanding MAAS audit events" -->
 
-An audit event is a [MAAS event](/t/understanding-maas-events/6373) tagged with `AUDIT`. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates and their effects, especially when multiple users are interacting with multiple machines.  See the [Understanding MAAS events](/t/understanding-maas-events/6373) for the basic operation of the CLI `events query` command.
+An audit event is a [MAAS event](/t/understanding-maas-events/6373) tagged with `AUDIT`. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates -- and their effects -- especially when multiple users are interacting with multiple machines.  See [Understanding MAAS events](/t/understanding-maas-events/6373) for basic usage of the CLI `events query` command.
 
 <a href="#heading--Viewing-events"><h2 id="heading--Viewing-events">Viewing events</h2></a>
 
-Audit events are examined using the MAAS CLI with the `level=AUDIT`:
+Audit events are examined using the MAAS CLI with the `level=AUDIT` parameter set:
 
 ```nohighlight
 $ maas $PROFILE events query level=AUDIT
@@ -85,9 +85,9 @@ admin        knpge8  bolla          AUDIT  Wed, 16 Jun. 2021 04:35:50  Node  Sta
 admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set the zone to 'danger' on 'bolla'.
 ```
 
-As it turns out, all of these example events are of type `Node`, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events -- mainly because they indicate changes to a machine's life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.
+All of these example events are type `Node`, referring to a machine actions.  Node events are probably the most important audit events, because they capture machine life-cycle changes.  When auditing your MAAS, life-cycle events are often the most useful.
 
-Let's take a moment to consider the MAAS life-cycle, which can be depicted with this state table:
+Take a moment to consider the MAAS life-cycle, which can be depicted with this state table:
 
 | Machine state | Cm | Aq | Dp | Rl | Ab | Cl | PC | Ts | Rsq | Bk | Lk | Fx | Tg | RP | SZ | Del |
 |---------------|----|----|----|----|----|----|----|----|-----|----|----|----|----|----|----|-----|
@@ -101,7 +101,28 @@ Let's take a moment to consider the MAAS life-cycle, which can be depicted with 
 | Broken        | Y  |    |    |    |    |    | Y  | Y  | Y   |    |    | Y  | Y  | Y  | Y  | Y   |
 | Rescue mode   |    |    |    |    |    |    |    |    | X   |    |    |    | Y  | Y  | Y  | Y   |
 
-Here are a few example outputs that audit state changes:
+The key for the table columns is as follows:
+
+- *Cm* - can commission.
+- *Aq* - can acquire.
+- *Dp* - can deploy.
+- *Rl* - can release.
+- *Ab* - can abort an operation in progress.
+- *Cl* - can clone the machine.
+- *PC* - can power-cycle the machine (turn in on or off).
+- *Ts* - can run tests on the machine.
+- *Rsq* - can put the machine in Rescue Mode.
+- *Bk* - can mark the machine as broken.
+- *Lk* - can lock the machine, preventing others from accessing it.
+- *Fx* - can move a broken machine to a fixed state.
+- *Tg* - can set tags for a machine.
+- *RP* - can set the resource pool for a machine.
+- *SZ* - can set the zone for a machine.
+- *Del* - can delete the machine.
+
+<a href="#heading--Using-audit-events-to-find-out-what-happened"><h3 id="heading--Using-audit-events-to-find-out-what-happened">Using audit events to find out what happened</h3></a>
+
+Consider these example events that audit state changes:
 
 ```nohighlight
 ID      LEVEL  TYPE           USERNAME  DESCRIPTION
@@ -135,9 +156,7 @@ ID      LEVEL  TYPE           USERNAME  DESCRIPTION
 3944    AUDIT  Node           clark     Deleted the 'machine' 'sweet-urchin'.
 ```
 
-This is a bit of a long listing, but it shows most of the authorisation, state changes, and settings updates that get recorded by audit events.  
-
-There are many questions you can answer with audit events.  For example, looking at the above listing, we might address the following questions:
+This is a long (but varied) listing, so there are many questions you might answer with these events.  Now consider the following questions:
 
 1. Who deployed `comic-muskox`? 
 
@@ -442,3 +461,5 @@ The important points for working with audit data are:
 - if you don't have JSON tools handy, you can always use `jq` to produce workable text output, which you can then manipulate using standard CLI text tools.
 
 There's probably no limit to what you can figure out if you use audit events properly.
+
+

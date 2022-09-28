@@ -411,9 +411,9 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>Understanding MAAS audit events</h1><!-- "Understanding MAAS audit events" -->
 
-<p>An audit event is a <a href="understanding-maas-events.html">MAAS event</a> tagged with <code>AUDIT</code>. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates and their effects, especially when multiple users are interacting with multiple machines.  See the <a href="understanding-maas-events.html">Understanding MAAS events</a> for the basic operation of the CLI <code>events query</code> command.</p>
+<p>An audit event is a <a href="understanding-maas-events.html">MAAS event</a> tagged with <code>AUDIT</code>. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates &ndash; and their effects &ndash; especially when multiple users are interacting with multiple machines.  See <a href="understanding-maas-events.html">Understanding MAAS events</a> for basic usage of the CLI <code>events query</code> command.</p>
 <p><a href="#heading--Viewing-events"><h2 id="heading--Viewing-events">Viewing events</h2></a></p>
-<p>Audit events are examined using the MAAS CLI with the <code>level=AUDIT</code>:</p>
+<p>Audit events are examined using the MAAS CLI with the <code>level=AUDIT</code> parameter set:</p>
 <pre><code class="language-nohighlight">$ maas $PROFILE events query level=AUDIT
 </code></pre>
 <p>You can use <code>jq</code> to prettify the output:</p>
@@ -477,8 +477,8 @@ admin        ebd7dc  active-amoeba  AUDIT  Mon, 08 Nov. 2021 04:05:40  Node  Mar
 admin        knpge8  bolla          AUDIT  Wed, 16 Jun. 2021 04:35:50  Node  Started importing images on 'bolla'.
 admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set the zone to 'danger' on 'bolla'.
 </code></pre>
-<p>As it turns out, all of these example events are of type <code>Node</code>, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events &ndash; mainly because they indicate changes to a machine&rsquo;s life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.</p>
-<p>Let&rsquo;s take a moment to consider the MAAS life-cycle, which can be depicted with this state table:</p>
+<p>All of these example events are type <code>Node</code>, referring to a machine actions.  Node events are probably the most important audit events, because they capture machine life-cycle changes.  When auditing your MAAS, life-cycle events are often the most useful.</p>
+<p>Take a moment to consider the MAAS life-cycle, which can be depicted with this state table:</p>
 <table>
 <thead>
 <tr>
@@ -675,7 +675,27 @@ admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set
 </tr>
 </tbody>
 </table>
-<p>Here are a few example outputs that audit state changes:</p>
+<p>The key for the table columns is as follows:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><em>Cm</em> - can commission.</li>
+<li><em>Aq</em> - can acquire.</li>
+<li><em>Dp</em> - can deploy.</li>
+<li><em>Rl</em> - can release.</li>
+<li><em>Ab</em> - can abort an operation in progress.</li>
+<li><em>Cl</em> - can clone the machine.</li>
+<li><em>PC</em> - can power-cycle the machine (turn in on or off).</li>
+<li><em>Ts</em> - can run tests on the machine.</li>
+<li><em>Rsq</em> - can put the machine in Rescue Mode.</li>
+<li><em>Bk</em> - can mark the machine as broken.</li>
+<li><em>Lk</em> - can lock the machine, preventing others from accessing it.</li>
+<li><em>Fx</em> - can move a broken machine to a fixed state.</li>
+<li><em>Tg</em> - can set tags for a machine.</li>
+<li><em>RP</em> - can set the resource pool for a machine.</li>
+<li><em>SZ</em> - can set the zone for a machine.</li>
+<li><em>Del</em> - can delete the machine.</li>
+</ul>
+<p><a href="#heading--Using-audit-events-to-find-out-what-happened"><h3 id="heading--Using-audit-events-to-find-out-what-happened">Using audit events to find out what happened</h3></a></p>
+<p>Consider these example events that audit state changes:</p>
 <pre><code class="language-nohighlight">ID      LEVEL  TYPE           USERNAME  DESCRIPTION
 =================================================================================================
 589317  AUDIT  Node           bruce     Marked 'ruling-bobcat' broken.
@@ -706,8 +726,7 @@ admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set
 5896    AUDIT  Authorisation  hank      Created user 'understanding-maas-audit-events.htmlo'.
 3944    AUDIT  Node           clark     Deleted the 'machine' 'sweet-urchin'.
 </code></pre>
-<p>This is a bit of a long listing, but it shows most of the authorisation, state changes, and settings updates that get recorded by audit events.  </p>
-<p>There are many questions you can answer with audit events.  For example, looking at the above listing, we might address the following questions:</p>
+<p>This is a long (but varied) listing, so there are many questions you might answer with these events.  Now consider the following questions:</p>
 <ol>
 <li>
 <p>Who deployed <code>comic-muskox</code>? </p>
