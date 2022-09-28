@@ -88,5 +88,3 @@ admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set
 As it turns out, all of these events are of type `Node`, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events -- mainly because they indicate changes to a machine's life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.
 
 Let's take a moment to consider the MAAS life-cycle, which can be depicted like this:
-
-
