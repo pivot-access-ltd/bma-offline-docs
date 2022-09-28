@@ -442,5 +442,3 @@ The important points for working with audit data are:
 - if you don't have JSON tools handy, you can always use `jq` to produce workable text output, which you can then manipulate using standard CLI text tools.
 
 There's probably no limit to what you can figure out if you use audit events properly.
-
-
