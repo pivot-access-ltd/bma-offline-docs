@@ -237,6 +237,15 @@ zorkobob  mm3tc8  fair-marten    AUDIT  Wed, 21 Sep. 2022 14:21:25  Node  Taggin
 zorkobob  mm3tc8  fair-marten    AUDIT  Wed, 21 Sep. 2022 14:10:38  Node  Untagging 'fair-marten'.
 ```
 
+In fact, there are several different levels associated with MAAS events:
+
+- INFO: the default, used if no `level=` is specified; shows `INFO` and `ERROR` events.  A typical `INFO` event is "Ready", indicating that a machine has reached the "Ready" state.
+- CRITICAL: critical MAAS failures; shows only `CRITICAL` events.  These events usually represent severe error conditions that should be immediately remedied.
+- ERROR: MAAS errors; shows only `ERROR` events. Typical `ERROR` events include such things as power on/off failures, commissioning timeouts, and image import failures.
+- WARNING: failures which may or may not affect MAAS performance; shows `WARNING` and `ERROR` events.  A typical warning event, for example, might include the inability to find and boot a machine.
+- DEBUG: information which would help debug MAAS behavior; shows `DEBUG` and `INFO` events.  Typical `DEBUG` events involve routine image import activites, for example.
+- AUDIT: information which helps determine settings and user actions in MAAS; shows only `AUDIT` events.  They are [covered in more detail elsewhere](/t/understanding-maas-audit-events/6372).
+
 <a href="#heading--combining-filters"><h3 id="heading--combining-filters">Combining filters</h3></a>
 
 We can combine the `level` parameter with the `zone` parameter:
@@ -358,3 +367,13 @@ ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:15  Node  Untaggin
 ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:14  Node  Tagging 'fair-marten'.
 admin     mm3tc8  fair-marten  AUDIT  Fri, 11 Feb. 2022 11:00:00  Node  Set the zone to 'twilight' on 'fair-marten'.
 ```
+
+
+
+
+
+
+
+
+
+

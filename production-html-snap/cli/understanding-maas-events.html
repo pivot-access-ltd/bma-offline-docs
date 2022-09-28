@@ -612,6 +612,15 @@ admin     87pnsc  solid-tick     AUDIT  Thu, 22 Sep. 2022 15:18:59  Node  Starte
 understanding-maas-events.htmlobob  mm3tc8  fair-marten    AUDIT  Wed, 21 Sep. 2022 14:21:25  Node  Tagging 'fair-marten'.
 understanding-maas-events.htmlobob  mm3tc8  fair-marten    AUDIT  Wed, 21 Sep. 2022 14:10:38  Node  Untagging 'fair-marten'.
 </code></pre>
+<p>In fact, there are several different levels associated with MAAS events:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>INFO: the default, used if no <code>level=</code> is specified; shows <code>INFO</code> and <code>ERROR</code> events.  A typical <code>INFO</code> event is &ldquo;Ready&rdquo;, indicating that a machine has reached the &ldquo;Ready&rdquo; state.</li>
+<li>CRITICAL: critical MAAS failures; shows only <code>CRITICAL</code> events.  These events usually represent severe error conditions that should be immediately remedied.</li>
+<li>ERROR: MAAS errors; shows only <code>ERROR</code> events. Typical <code>ERROR</code> events include such things as power on/off failures, commissioning timeouts, and image import failures.</li>
+<li>WARNING: failures which may or may not affect MAAS performance; shows <code>WARNING</code> and <code>ERROR</code> events.  A typical warning event, for example, might include the inability to find and boot a machine.</li>
+<li>DEBUG: information which would help debug MAAS behavior; shows <code>DEBUG</code> and <code>INFO</code> events.  Typical <code>DEBUG</code> events involve routine image import activites, for example.</li>
+<li>AUDIT: information which helps determine settings and user actions in MAAS; shows only <code>AUDIT</code> events.  They are <a href="understanding-maas-audit-events.html">covered in more detail elsewhere</a>.</li>
+</ul>
 <p><a href="#heading--combining-filters"><h3 id="heading--combining-filters">Combining filters</h3></a></p>
 <p>We can combine the <code>level</code> parameter with the <code>zone</code> parameter:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query limit=5 level=AUDIT zone=twilight\
