@@ -156,7 +156,7 @@ ID      LEVEL  TYPE           USERNAME  DESCRIPTION
 3944    AUDIT  Node           clark     Deleted the 'machine' 'sweet-urchin'.
 ```
 
-This is a long (but varied) listing, so there are many questions you might answer with these events.  Now consider the following questions:
+This is a long (but varied) listing, so there are many questions you might be able to answer:
 
 1. Who deployed `comic-muskox`? 
 
@@ -170,11 +170,11 @@ This is a long (but varied) listing, so there are many questions you might answe
 
 6. Who's responsible for the DHCP snippet called `foo`?
 
-These audit events won't answer all these questions directly, but they will point you in the direction of user who can (hopefully) answer them.  
+Audit events don't answer all questions, but they help you discover whom to ask.
 
 <a href="#heading--Auditing-with-finesse"><h3 id="heading--Auditing-with-finesse">Auditing with finesse</h3></a>
 
-You can use the MAAS CLI, jq, and some command line tools to add some finesse to your auditing.  First, of course, you'll have to get a feel for how MAAS describes audit events:
+You can use the MAAS CLI, `jq`, and command line text tools to finesse your auditing.  First, you'll have to get a feel for how MAAS describes audit events:
 
 - Set the resource pool to 
 - Started commissioning 
@@ -186,7 +186,7 @@ You can use the MAAS CLI, jq, and some command line tools to add some finesse to
 - Deleted the 'machine' 
 - Created user
 
-You can use these snippets of descriptions to search for specific things.  For example, say you walk in one day and a couple of machines you were using aren't there any more.  You could run a command like this:
+You can use these snippets as search keys.  Say you walk into the data centre one day and a couple of machines just aren't there any more.  You could run this command:
 
 ```nohighlight
 $ maas $PROFILE events query limit=1000 after=0 level=AUDIT \
@@ -196,7 +196,7 @@ hostname=new-bedbug hostname=sweet-urchin \
 | grep "Deleted the"
 ```
 
-Within 30 seconds, you'd know who to ask:
+Within 30 seconds, you'd know whom to ask:
 
 ```nohighlight
 7615    AUDIT  Node  barry     Deleted the 'machine' 'new-bedbug'.
@@ -341,7 +341,7 @@ Or, you could just check to see what's been deleted:
 2682   AUDIT  Node           Deleted the 'machine' 'Tigger'.
 ```
 
-Of course, that list is hard to read, so we could simplify it, sort it, remove any duplicates, and prettify the list a bit:
+Of course, that's a complex list, so could simplify, sort, remove any duplicates, and prettify the list a bit with already-available tools:
 
 ```nohighlight
 $ maas $PROFILE events query limit=1000 after=0 level=AUDIT \
@@ -461,3 +461,5 @@ The important points for working with audit data are:
 - if you don't have JSON tools handy, you can always use `jq` to produce workable text output, which you can then manipulate using standard CLI text tools.
 
 There's probably no limit to what you can figure out if you use audit events properly.
+
+

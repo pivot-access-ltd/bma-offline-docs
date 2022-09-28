@@ -726,7 +726,7 @@ admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set
 5896    AUDIT  Authorisation  hank      Created user 'understanding-maas-audit-events.htmlo'.
 3944    AUDIT  Node           clark     Deleted the 'machine' 'sweet-urchin'.
 </code></pre>
-<p>This is a long (but varied) listing, so there are many questions you might answer with these events.  Now consider the following questions:</p>
+<p>This is a long (but varied) listing, so there are many questions you might be able to answer:</p>
 <ol>
 <li>
 <p>Who deployed <code>comic-muskox</code>? </p>
@@ -747,9 +747,9 @@ admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set
 <p>Who&rsquo;s responsible for the DHCP snippet called <code>foo</code>?</p>
 </li>
 </ol>
-<p>These audit events won&rsquo;t answer all these questions directly, but they will point you in the direction of user who can (hopefully) answer them.  </p>
+<p>Audit events don&rsquo;t answer all questions, but they help you discover whom to ask.</p>
 <p><a href="#heading--Auditing-with-finesse"><h3 id="heading--Auditing-with-finesse">Auditing with finesse</h3></a></p>
-<p>You can use the MAAS CLI, jq, and some command line tools to add some finesse to your auditing.  First, of course, you&rsquo;ll have to get a feel for how MAAS describes audit events:</p>
+<p>You can use the MAAS CLI, <code>jq</code>, and command line text tools to finesse your auditing.  First, you&rsquo;ll have to get a feel for how MAAS describes audit events:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Set the resource pool to </li>
 <li>Started commissioning </li>
@@ -761,14 +761,14 @@ admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set
 <li>Deleted the &lsquo;machine&rsquo; </li>
 <li>Created user</li>
 </ul>
-<p>You can use these snippets of descriptions to search for specific things.  For example, say you walk in one day and a couple of machines you were using aren&rsquo;t there any more.  You could run a command like this:</p>
+<p>You can use these snippets as search keys.  Say you walk into the data centre one day and a couple of machines just aren&rsquo;t there any more.  You could run this command:</p>
 <pre><code class="language-nohighlight">$ maas $PROFILE events query limit=1000 after=0 level=AUDIT \
 hostname=new-bedbug hostname=sweet-urchin \
 | jq -r '(.events[] | [.id,.level,.type,.username,.description]) 
 | @tsv' | column -t -s$'\t' \
 | grep &quot;Deleted the&quot;
 </code></pre>
-<p>Within 30 seconds, you&rsquo;d know who to ask:</p>
+<p>Within 30 seconds, you&rsquo;d know whom to ask:</p>
 <pre><code class="language-nohighlight">7615    AUDIT  Node  barry     Deleted the 'machine' 'new-bedbug'.
 3944    AUDIT  Node  clark     Deleted the 'machine' 'sweet-urchin'.
 </code></pre>
@@ -908,7 +908,7 @@ hostname=new-bedbug hostname=sweet-urchin \
 2683   AUDIT  Node           Deleted the 'machine' 'Sootie'.
 2682   AUDIT  Node           Deleted the 'machine' 'Tigger'.
 </code></pre>
-<p>Of course, that list is hard to read, so we could simplify it, sort it, remove any duplicates, and prettify the list a bit:</p>
+<p>Of course, that&rsquo;s a complex list, so could simplify, sort, remove any duplicates, and prettify the list a bit with already-available tools:</p>
 <pre><code class="language-nohighlight">$ maas $PROFILE events query limit=1000 after=0 level=AUDIT \
 | jq -r '(.events[] | [.description]) | @tsv' \
 | column -t -s$'\t' \
