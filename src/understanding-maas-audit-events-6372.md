@@ -115,6 +115,3 @@ Here are a few example outputs that audit state changes:
 426354  AUDIT  Node  Started commissioning on 'fair-marten'.
 423257  AUDIT  Node  Aborted 'commissioning' on 'fair-marten'.
 ```
-
-
-
