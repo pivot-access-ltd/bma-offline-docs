@@ -477,8 +477,176 @@ admin        ebd7dc  active-amoeba  AUDIT  Mon, 08 Nov. 2021 04:05:40  Node  Mar
 admin        knpge8  bolla          AUDIT  Wed, 16 Jun. 2021 04:35:50  Node  Started importing images on 'bolla'.
 admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set the zone to 'danger' on 'bolla'.
 </code></pre>
-<p>As it turns out, all of these events are of type <code>Node</code>, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events &ndash; mainly because they indicate changes to a machine&rsquo;s life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.</p>
-<p>Let&rsquo;s take a moment to consider the MAAS life-cycle, which can be depicted like this:</p>
+<p>As it turns out, all of these example events are of type <code>Node</code>, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events &ndash; mainly because they indicate changes to a machine&rsquo;s life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.</p>
+<p>Let&rsquo;s take a moment to consider the MAAS life-cycle, which can be depicted with this state table:</p>
+<table>
+<thead>
+<tr>
+<th>Machine state</th>
+<th>Com</th>
+<th>Acq</th>
+<th>Dep</th>
+<th>Rel</th>
+<th>Abt</th>
+<th>Cln</th>
+<th>Pwr</th>
+<th>Tst</th>
+<th>Res</th>
+<th>MBr</th>
+<th>Lck</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Commissioning</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ready</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Acquired</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Deploying</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Deployed</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Broken</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Rescue mode</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Exit</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Here are a few example outputs that audit state changes:</p>
+<pre><code class="language-nohighlight">583324  AUDIT  Node  Tagging 'fair-marten'.
+583313  AUDIT  Node  Untagging 'fair-marten'.
+435099  AUDIT  Node  Set the zone to 'twilight' on 'fair-marten'.
+435097  AUDIT  Node  Acquired 'fair-marten'.
+430453  AUDIT  Node  Started testing on 'fair-marten'.
+430449  AUDIT  Node  Marked 'fair-marten' broken.
+430445  AUDIT  Node  Aborted 'testing' on 'fair-marten'.
+427583  AUDIT  Node  Set the resource pool to 'default' on 'fair-marten'.
+426354  AUDIT  Node  Started commissioning on 'fair-marten'.
+423257  AUDIT  Node  Aborted 'commissioning' on 'fair-marten'.
+</code></pre>
     </div>
   </body>
 </html>

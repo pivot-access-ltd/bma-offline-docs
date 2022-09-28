@@ -85,6 +85,36 @@ admin        knpge8  bolla          AUDIT  Wed, 16 Jun. 2021 04:35:50  Node  Sta
 admin        knpge8  bolla          AUDIT  Wed, 10 Jun. 2020 21:07:40  Node  Set the zone to 'danger' on 'bolla'.
 ```
 
-As it turns out, all of these events are of type `Node`, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events -- mainly because they indicate changes to a machine's life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.
+As it turns out, all of these example events are of type `Node`, which means they refer to a particular machine.  These node events are probably the most important aspect of MAAS audit events -- mainly because they indicate changes to a machine's life-cycle.  When auditing your MAAS, these life-cycle events will typically be the most useful.
 
-Let's take a moment to consider the MAAS life-cycle, which can be depicted like this:
+Let's take a moment to consider the MAAS life-cycle, which can be depicted with this state table:
+
+| Machine state | Com | Acq | Dep | Rel | Abt | Cln | Pwr | Tst | Res | MBr | Lck | Fix |
+|---------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| New           | Yes |     |     |     |     |     | Yes | Yes | Yes |     |     |     |
+| Failed        | Yes |     |     |     |     |     | Yes | Yes | Yes | Yes |     |     |
+| Commissioning |     |     |     |     | Yes |     |     |     |     |     |     |     |
+| Ready         | Yes | Yes | Yes |     |     | Yes |     | Yes | Yes |     |     |     |
+| Acquired      |     |     | Yes | Yes |     |     |     | Yes | Yes | Yes |     |     |
+| Deploying     |     |     |     | Yes | Yes |     | Yes |     |     |     | Yes |     |
+| Deployed      |     |     |     | Yes |     |     | Yes | Yes | Yes | Yes | Yes |     |
+| Broken        |     |     |     |     |     |     | Yes | Yes | Yes |     |     | Yes |
+| Rescue mode   |     |     |     |     |     |     |     |     | Exit |    |     |     |
+
+Here are a few example outputs that audit state changes:
+
+```nohighlight
+583324  AUDIT  Node  Tagging 'fair-marten'.
+583313  AUDIT  Node  Untagging 'fair-marten'.
+435099  AUDIT  Node  Set the zone to 'twilight' on 'fair-marten'.
+435097  AUDIT  Node  Acquired 'fair-marten'.
+430453  AUDIT  Node  Started testing on 'fair-marten'.
+430449  AUDIT  Node  Marked 'fair-marten' broken.
+430445  AUDIT  Node  Aborted 'testing' on 'fair-marten'.
+427583  AUDIT  Node  Set the resource pool to 'default' on 'fair-marten'.
+426354  AUDIT  Node  Started commissioning on 'fair-marten'.
+423257  AUDIT  Node  Aborted 'commissioning' on 'fair-marten'.
+```
+
+
+
