@@ -594,15 +594,3 @@ case      bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:29:52  User stopping re
 ```
 
 Notice the detailed `cloudinit` actions necessary to change the machine's state.  The other state changes have similarly detailed outputs in `DEBUG`.
- 
-
-
-
-
-
-
-
-
-
-
-
