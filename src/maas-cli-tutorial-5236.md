@@ -1,10 +1,10 @@
 <!-- "MAAS Zero to Sixty" -->
 
-Let's install MAAS and get some machines up and running, using the MAAS CLI.
+Let's get some machines up and running, using the MAAS CLI.  If you haven't installed MAAS yet, you can [follow these instructions](/t/how-to-install-maas/5128) first.
 
-## Loggins into MAAS
+## Logging into MAAS
 
-The first step is logging in.  In the CLI, that's a two-stepper:
+In the CLI, logging in is a two-stepper:
 
 ```nohighlight
 sudo maas apikey --username=admin > api-key-file
