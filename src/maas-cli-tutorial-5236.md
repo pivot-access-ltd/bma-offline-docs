@@ -2,142 +2,9 @@
 
 Let's install MAAS and get some machines up and running, using the MAAS CLI.
 
-## Installation
+## Loggins into MAAS
 
-Begin by installing (but not initialising) the MAAS snap:
-
-```nohighlight
-sudo snap install maas
-maas (3.2/stable) <some-build-string> from Canonical installed
-```
-
-The MAAS initialisation mode "region+rack" will do fine for this install.  No need to add the complexity of separate rack controllers just yet.  It's not quite time to initialise, though; we need to choose production vs. proof-of-concept. For now, let's go with the production configuration, since there's more to see and do.
-
-A production setup starts with a local PostgreSQL install, from packages.  And, like most Debian installs, that starts with an update, to grab any packages that might be needed for the install to succeed:
-
-```nohighlight
-sudo apt update -y
-
-[sudo] password for stormrider: 
-Hit:1 http://dl.google.com/linux/chrome/deb stable InRelease
-Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease                                      
-Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
-Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]
-Get:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
-Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [310 kB]
-Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [21.2 kB]
-Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [187 kB]     
-Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [196 kB]
-Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [142 kB]
-Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [77.6 kB]
-Get:12 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [35.8 kB]
-Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [71.7 kB]
-Get:14 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [176 kB]
-Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
-Get:16 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,972 B]
-Fetched 1,538 kB in 2s (827 kB/s)                                             
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-325 packages can be upgraded. Run 'apt list --upgradable' to see them.
-```
-
-Then I can install PostgreSQL, probably version 12:
-
-```nohighlight
-sudo apt install -y postgresql
-
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-enchant geoip-database gir1.2-mutter-5 gsfonts libbind9-161 libcroco3 libdns-export1107
-libdns1107 libdns1109 libenchant1c2a libfprint0 libgeoip1 libgnome-desktop-3-18 libirs161
-libisc-export1104 libisc1104 libisc1105 libisccc161 libisccfg163 liblwres161 libmicrodns0
-libmutter-5-0 liboauth0 libpoppler90 libpython3.7 libpython3.7-minimal libpython3.7-stdlib
-linux-image-5.3.0-40-generic linux-modules-5.3.0-40-generic
-linux-modules-extra-5.3.0-40-generic ubuntu-software ubuntu-system-service
-Use 'sudo apt autoremove' to remove them.
-Suggested packages:
-postgresql-doc
-The following NEW packages will be installed:
-postgresql
-0 upgraded, 1 newly installed, 0 to remove and 325 not upgraded.
-Need to get 4,004 B of archives.
-After this operation, 67.6 kB of additional disk space will be used.
-Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 postgresql all 12+214 [4,004 B]
-Fetched 4,004 B in 0s (13.2 kB/s)     
-Selecting previously unselected package postgresql.
-(Reading database ... 227326 files and directories currently installed.)
-Preparing to unpack .../postgresql_12+214_all.deb ...
-Unpacking postgresql (12+214) ...
-Setting up postgresql (12+214) ...
-```
-
-## Initialisation
-
-Yep, version 12.  Now we need to set up a PostgreSQL user:
-
-```nohighlight
-sudo -u postgres psql -c "CREATE USER \"maascli\" WITH ENCRYPTED PASSWORD 'maascli'"
-CREATE ROLE
-```
-
-We also need a suitable MAAS database:
-
-```nohighlight
-sudo -u postgres createdb -O "maascli" "maasclidb"
-```
-
-Note that there's no system response (the old UNIX rule of "no news is good news").  Next, we need to add the database to the PostgreSQL HBA configuration, by editing `/etc/postgres/12/main/pg_hba.conf`, adding a line to the bottom of the file:
-
-```nohighlight
-sudo vi /etc/postgresql/12/main/pg_hba.conf
-host    maasclidb       maascli         0/0                     md5
-```
-
-Finally, we can initialise MAAS, like this:
-
-```nohighlight
-sudo maas init region+rack --database-uri "postgres://maascli:maascli@localhost/maasclidb"
-MAAS URL [default=http://192.168.43.251:5240/MAAS]:
-```
-
-This command offers me a bit of important feedback, the MAAS URL, which will be needed for the CLI login.  That's followed by a running commentary on the steps MAAS is taking to start up.
-
-It all ends with the following admonition:
-
-```nohighlight
-MAAS has been set up.
-
-If you want to configure external authentication or use
-MAAS with Canonical RBAC, please run
-
-sudo maas configauth
-
-To create admins when not using external authentication, run
-
-sudo maas createadmin
-```
-
-### Creating an admin user
-
-Well, that's an easy call.  Let's just run "createadmin" real quick:
-
-
-```nohighlight
-sudo maas createadmin
-[sudo] password for stormrider: 
-Username: admin
-Password: 
-Again: 
-Email: admin@admin.com
-Import SSH keys [] (lp:user-id or gh:user-id): xxxxxxxxxxx
-```
-
-## Configuring MAAS
-
-The first step in the config journey is logging in.  In the CLI, that's a two-stepper:
+The first step is logging in.  In the CLI, that's a two-stepper:
 
 ```nohighlight
 sudo maas apikey --username=admin > api-key-file
@@ -192,7 +59,7 @@ Your MAAS address will probably not be the same as the one I'm using; cutting an
 [/note]
 
 ```nohighlight
-maas login admin http://192.168.43.251:5240/MAAS/api/2.0/ < api-key-file
+maas login admin http://192.168.43.251:5240/MAAS/api/2.0/ $(<api-key-file)
 
 You are now logged in to the MAAS server at
 http://192.168.43.251:5240/MAAS/api/2.0/ with the profile name 'admin'.
