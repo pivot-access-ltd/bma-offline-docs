@@ -791,6 +791,20 @@ ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:15  Node  Untaggin
 ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:14  Node  Tagging 'fair-marten'.
 admin     mm3tc8  fair-marten  AUDIT  Fri, 11 Feb. 2022 11:00:00  Node  Set the zone to 'twilight' on 'fair-marten'.
 </code></pre>
+<p><a href="#heading--Using-different-event-levels"><h2 id="heading--Using-different-event-levels">Using different event levels</h2></a></p>
+<p>As mentioned earlier, the <code>AUDIT</code> events are <a href="understanding-maas-audit-events.html">discussed elsewhere</a>.  It may be useful, though to take a closer look at the other event levels here.</p>
+<p><a href="#heading--INFO-and-DEBUG-events"><h3 id="heading--INFO-and-DEBUG-events">INFO and DEBUG events</h3></a></p>
+<p>We walked the MAAS machine <code>fun-zebra</code> through the following states:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Commissioning</li>
+<li>Allocation</li>
+<li>Deployment</li>
+<li>Releasing</li>
+<li>Testing (with a premature manual abort)</li>
+<li>Rescue mode</li>
+</ul>
+<p>The resulting <code>level=INFO</code> and <code>level=DEBUG</code> event sets are enlightening.</p>
+<p>First, let&rsquo;s try this command:</p>
     </div>
   </body>
 </html>
