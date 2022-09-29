@@ -59,7 +59,7 @@ Your MAAS address will probably not be the same as the one I'm using; cutting an
 [/note]
 
 ```nohighlight
-maas login admin http://192.168.43.251:5240/MAAS/api/2.0/ $(<api-key-file)
+maas login admin http://192.168.43.251:5240/MAAS/api/2.0/ $(head -1 api-key-file)
 
 You are now logged in to the MAAS server at
 http://192.168.43.251:5240/MAAS/api/2.0/ with the profile name 'admin'.

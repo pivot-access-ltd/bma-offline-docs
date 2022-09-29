@@ -452,7 +452,7 @@ drill down:
 <p>So now, let&rsquo;s login and try that help again:</p>
 <p><strong>NOTE:</strong> 
 Your MAAS address will probably not be the same as the one I&rsquo;m using; cutting and pasting won&rsquo;t work.</p>
-<pre><code class="language-nohighlight">maas login admin http://192.168.43.251:5240/MAAS/api/2.0/ $(&lt;api-key-file)
+<pre><code class="language-nohighlight">maas login admin http://192.168.43.251:5240/MAAS/api/2.0/ $(head -1 api-key-file)
 
 You are now logged in to the MAAS server at
 http://192.168.43.251:5240/MAAS/api/2.0/ with the profile name 'admin'.
