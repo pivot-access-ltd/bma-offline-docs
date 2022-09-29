@@ -1,38 +1,146 @@
 <!-- "Get started with MAAS" -->
-An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.
+An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  For this example, we'll use the latest MAAS snap from the UI.
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+<a href="#heading--Installation"><h2 id="heading--Installation">Installation</h2></a>
+
+Begin by installing (but not initialising) the MAAS snap:
+
+```nohighlight
+sudo snap install maas
+maas (3.2/stable) <some-build-string> from Canonical installed
+```
+
+The MAAS initialisation mode "region+rack" will do fine for this install.  No need to add the complexity of separate rack controllers just yet.  It's not quite time to initialise, though; we need to choose production vs. proof-of-concept. For now, let's go with the production configuration, since there's more to see and do.
+
+A production setup starts with a local PostgreSQL install, from packages.  And, like most Debian installs, that starts with an update, to grab any packages that might be needed for the install to succeed:
+
+```nohighlight
+sudo apt update -y
+
+[sudo] password for stormrider: 
+Hit:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease                                      
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [310 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [21.2 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [187 kB]     
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [196 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [142 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [77.6 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [35.8 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [71.7 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [176 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,972 B]
+Fetched 1,538 kB in 2s (827 kB/s)                                             
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+325 packages can be upgraded. Run 'apt list --upgradable' to see them.
+```
+
+Then I can install PostgreSQL, probably version 12:
+
+```nohighlight
+sudo apt install -y postgresql
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+enchant geoip-database gir1.2-mutter-5 gsfonts libbind9-161 libcroco3 libdns-export1107
+libdns1107 libdns1109 libenchant1c2a libfprint0 libgeoip1 libgnome-desktop-3-18 libirs161
+libisc-export1104 libisc1104 libisc1105 libisccc161 libisccfg163 liblwres161 libmicrodns0
+libmutter-5-0 liboauth0 libpoppler90 libpython3.7 libpython3.7-minimal libpython3.7-stdlib
+linux-image-5.3.0-40-generic linux-modules-5.3.0-40-generic
+linux-modules-extra-5.3.0-40-generic ubuntu-software ubuntu-system-service
+Use 'sudo apt autoremove' to remove them.
+Suggested packages:
+postgresql-doc
+The following NEW packages will be installed:
+postgresql
+0 upgraded, 1 newly installed, 0 to remove and 325 not upgraded.
+Need to get 4,004 B of archives.
+After this operation, 67.6 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 postgresql all 12+214 [4,004 B]
+Fetched 4,004 B in 0s (13.2 kB/s)     
+Selecting previously unselected package postgresql.
+(Reading database ... 227326 files and directories currently installed.)
+Preparing to unpack .../postgresql_12+214_all.deb ...
+Unpacking postgresql (12+214) ...
+Setting up postgresql (12+214) ...
+```
+
+<a href="#heading--Initialisation"><h2 id="heading--Initialisation">Initialisation</h2></a>
+
+Yep, version 12.  Now we need to set up a PostgreSQL user:
+
+```nohighlight
+sudo -u postgres psql -c "CREATE USER \"maascli\" WITH ENCRYPTED PASSWORD 'maascli'"
+CREATE ROLE
+```
+
+We also need a suitable MAAS database:
+
+```nohighlight
+sudo -u postgres createdb -O "maascli" "maasclidb"
+```
+
+Note that there's no system response (the old UNIX rule of "no news is good news").  Next, we need to add the database to the PostgreSQL HBA configuration, by editing `/etc/postgres/12/main/pg_hba.conf`, adding a line to the bottom of the file:
+
+```nohighlight
+sudo vi /etc/postgresql/12/main/pg_hba.conf
+host    maasclidb       maascli         0/0                     md5
+```
+
+Finally, we can initialise MAAS, like this:
+
+```nohighlight
+sudo maas init region+rack --database-uri "postgres://maascli:maascli@localhost/maasclidb"
+MAAS URL [default=http://192.168.43.251:5240/MAAS]:
+```
+
+This command offers me a bit of important feedback, the MAAS URL, which will be needed for the CLI login.  That's followed by a running commentary on the steps MAAS is taking to start up.
+
+It all ends with the following admonition:
+
+```nohighlight
+MAAS has been set up.
+
+If you want to configure external authentication or use
+MAAS with Canonical RBAC, please run
+
+sudo maas configauth
+
+To create admins when not using external authentication, run
+
+sudo maas createadmin
+```
+
+<a href="#heading--Creating-an-admin-user"><h3 id="heading--Creating-an-admin-user">Creating an admin user</h3></a>
+
+Well, that's an easy call.  Let's just run "createadmin" real quick:
+
+
+```nohighlight
+sudo maas createadmin
+[sudo] password for stormrider: 
+Username: admin
+Password: 
+Again: 
+Email: admin@admin.com
+Import SSH keys [] (lp:user-id or gh:user-id): xxxxxxxxxxx
+```
+
+<a href="#heading--What-we-are-trying-to-achieve"><h2 id="heading--What-we-are-trying-to-achieve">What we are trying to achieve</h2></a>
+
+So imagine that you're the IT administrator for a new, 100-bed hospital that's under construction, intended to serve a suburban community of 5,000 people.  Call it "Metaphorical General Hospital" (MGH).   Your job is to design a flexible data centre for this facility.  You've decided to start with MAAS as your tool of choice, and for this planning exercise, you'll use VMs in a VM host.  You're trying to get to this setup:
+
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a> 
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-```
-FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
-----               -----  ------     -----  ----     ----       ----     ----
-52-54-00-15-36-f2  off    Ready      -      Orders   Prescrbr   @md-all  Medications
-52-54-00-17-64-c8  off    Ready      -      HRMgmt   StaffComp  @tmclck  Payroll
-52-54-00-1d-47-95  off    Ready      -      MedSupp  SuppServ   @storag  Inventory
-52-54-00-1e-06-41  off    Ready      -      PatPrtl  BusOfc     @bzstns  BizOffice
-52-54-00-1e-a5-7e  off    Ready      -      Pharm    Prescrbr   @rxonly  Pharmacy
-52-54-00-2e-b7-1e  off    Allocated  admin  NursOrd  NurServ    @nstns   Nursing
-52-54-00-2e-c4-40  off    Allocated  admin  MedAdmn  NurServ    @rxonly  Nursing
-52-54-00-2e-ee-17  off    Deployed   admin  Charts   ProServ    @md-all  Physician
-```
 
-You can generate a list similar to this for your machines with the command:
-
-```
-maas admin machines read | jq -r '(["FQDN","POWER","STATUS",
-"OWNER", "TAGS", "POOL", "NOTE", "ZONE"] | (., map(length*"-"))),
-(.[] | [.hostname, .power_state, .status_name, .owner // "-", 
-.tag_names[0] // "-", .pool.name, .description // "-", .zone.name]) | @tsv' | column -t
-```
-
-Be aware that newly-created machines will only have default settings for tags, resource pools, zones, and notes, and will probably all be in the "Ready" state, with no owner.
-[/tab]
-[/tabs]
-
-So imagine that you're the IT administrator for a new, 100-bed hospital that's under construction, intended to serve a suburban community of 5,000 people.  Call it "Metaphorical General Hospital" (MGH).   Your job is to design a flexible data centre for this facility.  You've decided to start with MAAS as your tool of choice, and for this planning exercise, you'll use VMs in a VM host.
+First, there's some planning work do to.
 
 <a href="#heading--machines"><h2 id="heading--machines">Machines</h2></a>
 
@@ -53,7 +161,8 @@ You can handle this lowest level with individual [machines](/t/about-machines/50
 <summary>
 <em>Try it!</em>
 </summary>
-<h4>Creating some sample VMs</h4>
+
+<a href="#heading--Creating-some-sample-VMs"><h3 id="heading--Creating-some-sample-VMs">Creating some sample VMs</h3></a>
 
 Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) on the machine where you'll be running MAAS, you can create virtual machines like this:
 
@@ -135,47 +244,11 @@ No need to create a lot of VMs for this example (unless you just want to do so).
 
 Once you've created the necessary VMs, you'll want to [manually add machines](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually) to MAAS that correspond to your VMs.
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> 
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-```
-FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
-----               -----  ------  -----  ----     ----     ----  ----
-52-54-00-15-36-f2  off    Ready   -      virtual  default  -     default
-52-54-00-17-64-c8  off    Ready   -      virtual  default  -     default
-52-54-00-1d-47-95  off    Ready   -      virtual  default  -     default
-52-54-00-1e-06-41  off    Ready   -      virtual  default  -     default
-52-54-00-1e-a5-7e  off    Ready   -      virtual  default  -     default
-52-54-00-2e-b7-1e  off    Ready   -      virtual  default  -     default
-52-54-00-2e-c4-40  off    Ready   -      virtual  default  -     default
-52-54-00-2e-eke-17  off    Ready   -      virtual  default  -     default
-52-54-00-2f-6d-3c  off    Ready   -      virtual  default  -     default
-52-54-00-4a-2a-30  off    Ready   -      virtual  default  -     default
-52-54-00-4e-60-b2  off    Ready   -      virtual  default  -     default
-52-54-00-52-93-10  off    Ready   -      virtual  default  -     default
-52-54-00-5d-b5-a1  off    Ready   -      virtual  default  -     default
-52-54-00-60-1e-6f  off    Ready   -      virtual  default  -     default
-52-54-00-60-8d-4b  off    Ready   -      virtual  default  -     default
-52-54-00-62-22-e3  off    Ready   -      virtual  default  -     default
-52-54-00-65-2e-20  off    Ready   -      virtual  default  -     default
-52-54-00-6a-ac-23  off    Ready   -      virtual  default  -     default
-52-54-00-6f-b4-af  off    Ready   -      virtual  default  -     default
-52-54-00-71-0c-53  off    Ready   -      virtual  default  -     default
-52-54-00-77-4e-53  off    Ready   -      virtual  default  -     default
-52-54-00-98-42-ef  off    Broken  -      -        default  -     default
-52-54-00-9b-e4-9a  off    Ready   -      virtual  default  -     default
-52-54-00-9c-51-00  off    Ready   -      virtual  default  -     default
-```
-[/tab]
-[/tabs]
 
 <details>
 <summary><em>Try it!</em></summary>
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Creating a machine from a VM requires about a dozen pieces of information, most of which you can gather from the VM itself:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bc6c18c0fd31367bd4a9909fb7d954dc06f15c40.jpeg"></a> 
@@ -198,50 +271,11 @@ As you add machines, they automatically commission:
 <a href="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg"></a> 
 
 When finished, the commissioned machines with be at the "Ready" state.
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-Creating a machine from a VM requires six pieces of information:
-
-1. the machine architecture (e.g., amd64)
-2. the machine's MAC address
-3. the power type (in this case, "virsh")
-4. the power ID
-5. the power address (which also contains a username)
-6. the power password
-
-Once you've collected this information, you'll want to create a new KVM like this:
-
-```
-maas admin machines create \
-architecture=amd64 hostname=52-54-00-15-36-f2 \ 
-mac_addresses=52:54:00:15:36:f2 \
-power_type=virsh power_parameters_power_id=f677a842-571c-4e65-adc9-11e2cf92d363 \
-power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
-power_parameters_power_pass=xxxxxxxx
-```
-
-Here, we've assigned a variant of the MAC address as the machine name.  Note that the machine name cannot include colons (":"), we've substituted dashes.  You can gather most of this information from the KVM itself:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg"></a> 
-</details>
-
-For default configurations, the Virsh Address is "qemu+ssh://[your-login-id]@192.168.122.1/system;" replace "[your-login-id]" with your username or login ID on the machine where you're hosting MAAS and the Virtual Machine Manager.  Likewise, the password is your normal login password for the same host.  Finally, you can retrieve the Virsh VM ID from the "Overview" screen of the VM itself:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/79e135e48576bb6f455dd42fd7a09a2c7448d221.jpeg"></a> 
-</details>
-
-As you add machines, they automatically commission.
-
-[/tab]
-[/tabs]
-
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
 Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/5112#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/5112) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/how-to-use-tags/6200) to machines.  
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> 
 
 <details>
@@ -263,46 +297,6 @@ Select "Save changes" to add the tag(s) to the machine.  When you return to the 
 <a href="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8a21ca291aa800440d9074270ab9d9108cff9be1.jpeg"></a> 
 
 </details>
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-```
-FQDN               POWER  STATUS  OWNER  TAGS     POOL     NOTE  ZONE
-----               -----  ------  -----  ----     ----     ----  ----
-52-54-00-15-36-f2  off    Ready   -      Orders   default  -     default
-52-54-00-17-64-c8  off    Ready   -      HRMgmt   default  -     default
-52-54-00-1d-47-95  off    Ready   -      MedSupp  default  -     default
-52-54-00-1e-06-41  off    Ready   -      PatPrtl  default  -     default
-52-54-00-1e-a5-7e  off    Ready   -      Pharm    default  -     default
-52-54-00-2e-b7-1e  off    Ready   admin  NursOrd  default  -     default
-52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  default  -     default
-52-54-00-2e-ee-17  off    Ready   admin  Charts   default  -     default
-```
-
-<details>
-<summary><em>Try it!</em></summary>
-Adding a tag to a machine is simple.  First, you must create the tag:
-
-```
-maas $PROFILE tags create name=$TAG_NAME comment='$TAG_COMMENT'
-```
-
-Next you add the tag to a machine with the following command:
-
-```
-maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
-```
-
-If you need to find the $SYSTEM_ID of your machines, you can use this command:
-
-```
-maas admin machines read | jq -r '(["HOSTNAME","SYSID"]
-| (., map(length*"-"))),
-(.[] | [.hostname, .system_id]) | @tsv' | column -t
-```
-
-</details>
-[/tab]
-[/tabs]
 
 Tags can will help you keep up with which machine(s) are covering which functions as you apply your apps.  You can search and filter by tags, and you can utilise tags from within the API, as well.
 
@@ -338,8 +332,6 @@ You're aware that the number of machines you'll need use for each of the individ
 <details>
 <summary><em>Try it!</em></summary>
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Notice at the top of the machine list, there is a tab labelled, "Resource pools:"
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7d4c52a176f53f29a0c1ac3190e7abb563dc993.jpeg"></a> 
@@ -363,46 +355,12 @@ Click on "Add pool" to add this resource pool to the list, then click on "Machin
 Just choose the one you want for this machine (in our example, ProServ) and you're done:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/0cff1cf26f28236dbabc89b14a92c69435934933.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0cff1cf26f28236dbabc89b14a92c69435934933.jpeg"></a> 
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-Just like tags, you must first create a resource pool before assigning a machine to it.
-Here’s an example that demonstrates how to create a new resource pool named "myresource" in a single command; note that the description field is optional, but often very helpful:
-
-```
-maas $PROFILE resource-pools create name=myresource description="A new resource pool."
-```
-
-Once you've created the pool you want, you can add a machine that pool with the following command:
-
-```
-maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
-```
-[/tab]
-[/tabs]
 
 </details>
 
 Here's a snippet of the updated machine list, with all machines added to the appropriate resource pool:
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/704b6d1603f6f90fca42891d98c3bb418458b94a.jpeg"></a> 
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-```
-FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE  ZONE
-----               -----  ------  -----  ----     ----       ----  ----
-52-54-00-15-36-f2  off    Ready   -      Orders   Prescrbr   -     default
-52-54-00-17-64-c8  off    Ready   -      HRMgmt   StaffComp  -     default
-52-54-00-1d-47-95  off    Ready   -      MedSupp  SuppServ   -     default
-52-54-00-1e-06-41  off    Ready   -      PatPrtl  BusOfc     -     default
-52-54-00-1e-a5-7e  off    Ready   -      Pharm    Prescrbr   -     default
-52-54-00-2e-b7-1e  off    Ready   admin  NursOrd  NurServ    -     default
-52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    -     default
-52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    -     default
-```
-[/tab]
-[/tabs]
 
 Resource pools are mostly for your use, helping you to budget servers within a given category.  Untagged servers can be in a pool, so if you've got five servers in the "Prescriber controls" resource pool, you can tag them with "Pharmacy," "Medication reconciliation," etc., as you use them.  It will also be obvious when you're running low on servers for that pool, and need to either provision more or move some unused ones from another pool.
 
@@ -410,31 +368,11 @@ Resource pools are mostly for your use, helping you to budget servers within a g
 
 Another optional identifier for machines is the "Note" field.  While it can be long, a portion of it shows up on the machine list, which makes it useful for adding special identifiers or groupings.  In this example, we've added a vague identifier which might help an IT admin remember server locations or access rights.
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8724395dfe9fc4d3f4a10a05687c33c6a3dded07.jpeg"></a> 
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-```
-FQDN               POWER  STATUS  OWNER  TAGS     POOL       NOTE     ZONE
-----               -----  ------  -----  ----     ----       ----     ----
-52-54-00-15-36-f2  off    Ready   -      Orders   Prescrbr   @md-all  default
-52-54-00-17-64-c8  off    Ready   -      HRMgmt   StaffComp  @tmclck  default
-52-54-00-1d-47-95  off    Ready   -      MedSupp  SuppServ   @storag  default
-52-54-00-1e-06-41  off    Ready   -      PatPrtl  BusOfc     @bzstns  default
-52-54-00-1e-a5-7e  off    Ready   -      Pharm    Prescrbr   @rxonly  default
-52-54-00-2e-b7-1e  off    Ready   admin  NursOrd  NurServ    @nstns   default
-52-54-00-2e-c4-40  off    Ready   admin  MedAdmn  NurServ    @rxonly  default
-52-54-00-2e-ee-17  off    Ready   admin  Charts   ProServ    @md-all  default
-```
-[/tab]
-[/tabs]
 
 <details>
 <summary><em>Try it!</em></summary>
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 You can edit notes by clicking on a machine name in the machine list, switching to the "Configuration" tab, and selecting the "Edit" button.  These choices will bring you to a screen like this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a9d61f28a4ada7d97ff6f896d2f1e8e719ad680b.jpeg"></a> 
@@ -446,18 +384,6 @@ From here, you can add free-form text into the "Note" field:
 When you save the changes and return to the machine list, you'll notice that the NOTE field for that machine now contains your changes: 
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/46cf42808ef44829f1c610e479d6dfb62af2d898.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/46cf42808ef44829f1c610e479d6dfb62af2d898.jpeg"></a> 
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-To add a note to a machine, you'll first need to determine its system ID (see above).  Once you have that, you can add or change a note like this:
-
-```
-maas $PROFILE machine update $SYSTEM_ID description="note"
-```
-
-It helps very much to keep your notes short, since only a few characters are visible on the machine list.
-[/tab]
-[/tabs]
-
 </details>
 
 <a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a>
@@ -481,38 +407,13 @@ Looking over your design, you notice that some of these resource pools must have
 
 Each of these higher-level groupings is ideal for a VLAN, so you create six of them, one for each division:
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7245ed378ce0b9000aaf6f15b16ea16dbde2fccf.jpeg"></a> 
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-```
-FABRIC    VLAN                   DHCP
-------    ----                   ----
-fabric-0  Accounts_Receivable    false
-fabric-0  Staff_Support          false
-fabric-0  Patient_Support        false
-fabric-0  Accounts_Payable       false
-fabric-0  Medication_Management  false
-fabric-0  Caregiver_Services     false
-fabric-0  untagged               false
-```
-
-You can generate this list with the command:
-
-```
-maas admin vlans read $FABRIC_ID | jq -r '(["FABRIC","VLAN","DHCP"] | (., map(length*"-"))), (.[] | [.fabric, .name, .dhcp_on]) | @tsv' | column -t
-```
-[/tab]
-[/tabs]
 
 <details>
 <summary><em>Try it!</em></summary>
 
 Adding a functional VLAN requires some additional (common) networking aspects, which we'll cover later.  In the meantime, though, here's the short version of adding and naming the VLAN itself.  
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 From anywhere on the MAAS page, select "Subnets" from the top menu-bar, which brings you to this screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/befd3a3eb5987d412477d0a076d16a50e81dae30.jpeg"></a> 
@@ -530,21 +431,6 @@ Enter the Name and ID of the VLAN, and select the fabric to enclose it (in this 
 <a href="https://discourse.maas.io/uploads/default/original/1X/961d5cae7119db1c3fb7e8d6ae6ce7015d9263d1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/961d5cae7119db1c3fb7e8d6ae6ce7015d9263d1.jpeg"></a> 
 
 When you're satisfied with your choices, select "Add VLAN" to complete the operation.
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-To create additional VLANs, choose the fabric where you want them to be added, and enter the following command, once for each new VLAN:
-
-```
-maas admin vlans create $FABRIC_ID name=$VLAN_NAME vid=$VLAN_ID
-```
-
-For example, to create the "Caregiver Services" VLAN with VID 100 on fabric 0, enter the following command:
-
-```
-maas admin vlans create 0 name="Caregiver_Services" vid=100
-```
-[/tab]
-[/tabs]
 
 </details>
 
@@ -592,20 +478,4 @@ Finally, click "Save summary" to move this VLAN to the desired fabric.  The end 
 
 </details>
 
-[tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/23c214cd6836dd783347f050f2cdba04da7bcaa1.jpeg"></a>
-[/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-```
-FABRIC              VLAN                   DHCP  
-------              ----                   ----  
-Accounting          Accounts_Receivable    False 
-                    Accounts_Payable       False
-Facilities          Patient_Support        False
-                    Staff_Support          False
-Patient_Management  Caregiver_Services     False
-                    Medication_Management  False
-```
-[/tab]
-[/tabs]
