@@ -2,7 +2,54 @@
 
 Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
 
-Every event can be reviewed by scanning the MAAS logs.  If you're using snaps, the logs of interest are:
+Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI `events query` command.  These three sources provide analagous (but somewhat different information). For example, consider the following log listing, obtained by doing a `grep "fun-zebra" *.log | grep "transition from"` in the MAAS log directory:
+
+```nohighlight
+maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
+maas.log:2022-09-29T15:04:17.288763-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY
+```
+
+This information appears this way when events are queried from the CLI:
+
+```nohighlight
+        {
+            "username": "unknown",
+            "node": "bk7mg8",
+            "hostname": "fun-zebra",
+            "id": 170,
+            "level": "INFO",
+            "created": "Thu, 29 Sep. 2022 20:04:17",
+            "type": "Ready",
+            "description": ""
+        },
+        {
+            "username": "unknown",
+            "node": "bk7mg8",
+            "hostname": "fun-zebra",
+            "id": 167,
+            "level": "INFO",
+            "created": "Thu, 29 Sep. 2022 20:04:07",
+            "type": "Running test",
+            "description": "smartctl-validate on sda"
+        },
+```
+
+And it appears like this in the UI events log:
+
+| Time	| Event |
+|---|---|
+|**Thu, 29 Sep. 2022 20:04:17**	|**Node changed status - From 'Testing' to 'Ready'** |
+|Thu, 29 Sep. 2022 20:04:17	|Ready |
+|Thu, 29 Sep. 2022 20:04:17	|Script result - smartctl-validate on sda changed status from 'Running' to 'Skipped' |
+|Thu, 29 Sep. 2022 20:04:16	|Script result - smartctl-validate on sda changed status from 'Installing dependencies' to 'Running' |
+|Thu, 29 Sep. 2022 20:04:07	|Running test - smartctl-validate on sda |
+|**Thu, 29 Sep. 2022 20:04:07**	|**Node changed status - From 'Commissioning' to 'Testing'** |
+
+You can see that all three outputs are sources of truth, but the messages are somewhat different, include different information, and contain different levels of detail.
+
+<a href="#heading--Using-the-logs-directly"><h2 id="heading--Using-the-logs-directly">Using the logs directly</h2></a>
+
+By the way, if you're interested in reading the logs, and you're using snaps, you'll find what you need here:
 
 - /var/snap/maas/common/log/maas.log
 - /var/snap/maas/common/log/regiond.log
@@ -16,9 +63,31 @@ If you’re using packages, you’ll find the log files in these locations:
 - /var/log/maas/rackd.log
 - /var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
-These logs can be very large and hard to search, so MAAS provides a CLI tool which can help you filter and summarise events.  Let's take a look at how this tool works.
+These logs can be very large and hard to search, and the web UI does not separate events by type. For instance, commissioning a simple VM produces logging information like this:
+
+```nohighlight
+maas.log:2022-09-29T15:00:16.461402-05:00 neuromancer maas.interface: [info] eth0 (physical) on fun-zebra: IP address automatically unlinked: None:type=AUTO
+maas.log:2022-09-29T15:00:16.553396-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from NEW to COMMISSIONING
+maas.log:2022-09-29T15:00:16.754265-05:00 neuromancer maas.power: [info] Changing power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T15:00:16.759676-05:00 neuromancer maas.node: [info] fun-zebra: Commissioning started
+maas.log:2022-09-29T15:00:18.039441-05:00 neuromancer maas.power: [info] Changed power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T15:03:26.946507-05:00 neuromancer maas.node: [info] fun-zebra: Storage layout was set to flat.
+maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
+maas.log:2022-09-29T15:04:17.288763-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY
+regiond.log:2022-09-29 20:00:16 maasserver.models.signals.interfaces: [info] eth0 (physical) on fun-zebra: deleted IP addresses due to VLAN update (5001 -> 5002).
+regiond.log:2022-09-29 20:00:32 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:2022-09-29 20:01:09 maasserver.rpc.leases: [info] Lease update: commit for 10.103.114.192 on 0:16:3e:a2:73:5c at 2022-09-29 20:01:09 (lease time: 600s) (hostname: fun-zebra)
+regiond.log:2022-09-29 20:01:14 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:     * node fun-zebra renamed interface eth0 to enp5s0
+regiond.log:     * ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:     * ip 10.103.114.192 disconnected from fun-zebra on eth0
+```
+
+Not all of this output is relevant, nor does it all trigger a recorded MAAS event.  Interpreting MAAS logs is a matter of practice with known events in a controlled environment.
 
 <a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a>
+
+To simplify the review of significant events, MAAS provides a CLI tool, `events query`, which can help you filter and summarise events.  Let's take a look at how this tool works.
 
 MAAS events can be queried with the simple CLI command:
 
@@ -367,3 +436,13 @@ ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:15  Node  Untaggin
 ed        mm3tc8  fair-marten  AUDIT  Fri, 08 Apr. 2022 11:02:14  Node  Tagging 'fair-marten'.
 admin     mm3tc8  fair-marten  AUDIT  Fri, 11 Feb. 2022 11:00:00  Node  Set the zone to 'twilight' on 'fair-marten'.
 ```
+
+
+
+
+
+
+
+
+
+

@@ -412,7 +412,70 @@
   <h1>Understanding MAAS events</h1><!-- "Understanding MAAS events" -->
 
 <p>Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.</p>
-<p>Every event can be reviewed by scanning the MAAS logs.  If you&rsquo;re using snaps, the logs of interest are:</p>
+<p>Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI <code>events query</code> command.  These three sources provide analagous (but somewhat different information). For example, consider the following log listing, obtained by doing a <code>grep "fun-zebra" *.log | grep "transition from"</code> in the MAAS log directory:</p>
+<pre><code class="language-nohighlight">maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
+maas.log:2022-09-29T15:04:17.288763-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY
+</code></pre>
+<p>This information appears this way when events are queried from the CLI:</p>
+<pre><code class="language-nohighlight">        {
+            &quot;username&quot;: &quot;unknown&quot;,
+            &quot;node&quot;: &quot;bk7mg8&quot;,
+            &quot;hostname&quot;: &quot;fun-zebra&quot;,
+            &quot;id&quot;: 170,
+            &quot;level&quot;: &quot;INFO&quot;,
+            &quot;created&quot;: &quot;Thu, 29 Sep. 2022 20:04:17&quot;,
+            &quot;type&quot;: &quot;Ready&quot;,
+            &quot;description&quot;: &quot;&quot;
+        },
+        {
+            &quot;username&quot;: &quot;unknown&quot;,
+            &quot;node&quot;: &quot;bk7mg8&quot;,
+            &quot;hostname&quot;: &quot;fun-zebra&quot;,
+            &quot;id&quot;: 167,
+            &quot;level&quot;: &quot;INFO&quot;,
+            &quot;created&quot;: &quot;Thu, 29 Sep. 2022 20:04:07&quot;,
+            &quot;type&quot;: &quot;Running test&quot;,
+            &quot;description&quot;: &quot;smartctl-validate on sda&quot;
+        },
+</code></pre>
+<p>And it appears like this in the UI events log:</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Thu, 29 Sep. 2022 20:04:17</strong></td>
+<td><strong>Node changed status - From &lsquo;Testing&rsquo; to &lsquo;Ready&rsquo;</strong></td>
+</tr>
+<tr>
+<td>Thu, 29 Sep. 2022 20:04:17</td>
+<td>Ready</td>
+</tr>
+<tr>
+<td>Thu, 29 Sep. 2022 20:04:17</td>
+<td>Script result - smartctl-validate on sda changed status from &lsquo;Running&rsquo; to &lsquo;Skipped&rsquo;</td>
+</tr>
+<tr>
+<td>Thu, 29 Sep. 2022 20:04:16</td>
+<td>Script result - smartctl-validate on sda changed status from &lsquo;Installing dependencies&rsquo; to &lsquo;Running&rsquo;</td>
+</tr>
+<tr>
+<td>Thu, 29 Sep. 2022 20:04:07</td>
+<td>Running test - smartctl-validate on sda</td>
+</tr>
+<tr>
+<td><strong>Thu, 29 Sep. 2022 20:04:07</strong></td>
+<td><strong>Node changed status - From &lsquo;Commissioning&rsquo; to &lsquo;Testing&rsquo;</strong></td>
+</tr>
+</tbody>
+</table>
+<p>You can see that all three outputs are sources of truth, but the messages are somewhat different, include different information, and contain different levels of detail.</p>
+<p><a href="#heading--Using-the-logs-directly"><h2 id="heading--Using-the-logs-directly">Using the logs directly</h2></a></p>
+<p>By the way, if you&rsquo;re interested in reading the logs, and you&rsquo;re using snaps, you&rsquo;ll find what you need here:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>/var/snap/maas/common/log/maas.log</li>
 <li>/var/snap/maas/common/log/regiond.log</li>
@@ -426,8 +489,26 @@
 <li>/var/log/maas/rackd.log</li>
 <li>/var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages</li>
 </ul>
-<p>These logs can be very large and hard to search, so MAAS provides a CLI tool which can help you filter and summarise events.  Let&rsquo;s take a look at how this tool works.</p>
+<p>These logs can be very large and hard to search, and the web UI does not separate events by type. For instance, commissioning a simple VM produces logging information like this:</p>
+<pre><code class="language-nohighlight">maas.log:2022-09-29T15:00:16.461402-05:00 neuromancer maas.interface: [info] eth0 (physical) on fun-zebra: IP address automatically unlinked: None:type=AUTO
+maas.log:2022-09-29T15:00:16.553396-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from NEW to COMMISSIONING
+maas.log:2022-09-29T15:00:16.754265-05:00 neuromancer maas.power: [info] Changing power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T15:00:16.759676-05:00 neuromancer maas.node: [info] fun-zebra: Commissioning started
+maas.log:2022-09-29T15:00:18.039441-05:00 neuromancer maas.power: [info] Changed power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T15:03:26.946507-05:00 neuromancer maas.node: [info] fun-zebra: Storage layout was set to flat.
+maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
+maas.log:2022-09-29T15:04:17.288763-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY
+regiond.log:2022-09-29 20:00:16 maasserver.models.signals.interfaces: [info] eth0 (physical) on fun-zebra: deleted IP addresses due to VLAN update (5001 -&gt; 5002).
+regiond.log:2022-09-29 20:00:32 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:2022-09-29 20:01:09 maasserver.rpc.leases: [info] Lease update: commit for 10.103.114.192 on 0:16:3e:a2:73:5c at 2022-09-29 20:01:09 (lease time: 600s) (hostname: fun-zebra)
+regiond.log:2022-09-29 20:01:14 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:     * node fun-zebra renamed interface eth0 to enp5s0
+regiond.log:     * ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:     * ip 10.103.114.192 disconnected from fun-zebra on eth0
+</code></pre>
+<p>Not all of this output is relevant, nor does it all trigger a recorded MAAS event.  Interpreting MAAS logs is a matter of practice with known events in a controlled environment.</p>
 <p><a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a></p>
+<p>To simplify the review of significant events, MAAS provides a CLI tool, <code>events query</code>, which can help you filter and summarise events.  Let&rsquo;s take a look at how this tool works.</p>
 <p>MAAS events can be queried with the simple CLI command:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query
 </code></pre>
