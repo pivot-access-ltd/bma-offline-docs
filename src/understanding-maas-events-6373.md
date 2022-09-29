@@ -594,3 +594,37 @@ case      bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:29:52  User stopping re
 ```
 
 Notice the detailed `cloudinit` actions necessary to change the machine's state.  The other state changes have similarly detailed outputs in `DEBUG`.
+
+<a href="#heading--ERROR-and-WARNING-events"><h3 id="heading--ERROR-and-WARNING-events">ERROR and WARNING events</h3></a>
+
+Here are a few representative `ERROR` event descriptions taken from a live MAAS machine:
+
+```nohighlight
+Node has not been heard from for the last 30 minutes
+Node operation 'Commissioning' timed out after 30 minutes.
+Unable to import boot images: HTTPConnectionPool(host='localhost', port=5240): Read timed out.
+Node operation 'Testing' timed out after 30 minutes.
+Power on for the node failed: Failed talking to node's BMC: Failed to login to virsh console.
+Unable to import boot images: Invalid sha256 Checksum at http://localhost:5240/MAAS/images-stream/ubuntu/amd64/ga-18.04-lowlatency/bionic/20200206/boot-initrd. Found 834c0eacb1a19526f715f9947bd47904b18ad8c733b0762e690edf6143e10561. Expected addfa86d7c054bd0dc085333ad2850e93223d511d04b59ee516d42d801522324. read 38 bytes expected 61715624 bytes. (size 38 expected 61715624)
+``` 
+
+Notice that these `ERROR` events flag failures that are probably going to prevent MAAS from operating properly.  Changing the level to `WARNING` picks up all `ERROR` events, but also includes warnings such as this one:
+
+```nohighlight
+Finished importing boot images, the region does not have any boot images available.
+```
+
+`WARNINGS` tend to be failures, as well, but failures which are more easily fixed (such as having not successfully downloaded any images).
+
+<a href="#heading--CRITICAL-errors"><h3 id="heading--CRITICAL-errors">CRITICAL errors</h3></a>
+
+`CRITICAL` errors represent major failures, often code failures or tracebacks.  Any `CRITICAL` errors should be immediately examined and resolved, if possible.
+
+
+
+
+
+
+
+
+
