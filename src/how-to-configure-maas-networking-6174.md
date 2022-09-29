@@ -13,7 +13,7 @@ If you're uncertain about your relevant networking knowledge, you can take a few
 On the other hand, if you're ready to get right down to business, you can investigate:
 
 - [How to manage networks](/t/how-to-manage-networks/5164): Here, you'll learn how to manipulate subnets, examine IP ranges, set up bridges, and generally make sure MAAS can "see" your machines.
-- [How to manage IP addresses](/t/how-to-manage-networks/5164): Now that you know how to examine MAAS IP ranges, it's time to learn how to configure MAAS DHCP (in several different configurations), and be sure that you have IP addresses available for your machines to use when they PXE-boot.
+- [How to manage IP addresses](/t/how-to-manage-ip-addresses/5132): Now that you know how to examine MAAS IP ranges, it's time to learn how to configure MAAS DHCP (in several different configurations), and be sure that you have IP addresses available for your machines to use when they PXE-boot.
 - [How to enable TLS](/t/how-to-enable-tls-encryption/5116): You may want to encrypt MAAS communications, or you may even want to do even more to [secure MAAS](/t/how-to-secure-maas/5196); this section guides you through the relevant processes.
 - [How to manage availability zones](/t/how-to-manage-availability-zones/5152): Just in case you want to optimise the performance of your networks (and your MAAS instance), you can enable availability zones to polish things up.
 
