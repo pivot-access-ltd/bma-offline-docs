@@ -238,7 +238,7 @@ As you add machines, they automatically commission.
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/5112#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/5112) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/about-tags-and-annotations/5088) to machines.  
+Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/5112#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/5112) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/how-to-use-tags/6200) to machines.  
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
