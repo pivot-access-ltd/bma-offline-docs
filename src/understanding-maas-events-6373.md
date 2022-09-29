@@ -455,15 +455,3 @@ We walked the MAAS machine `fun-zebra` through the following states:
 The resulting `level=INFO` and `level=DEBUG` event sets are enlightening.
 
 First, let's try this command:
-
-
-
-
-
-
-
-
-
-
-
-
