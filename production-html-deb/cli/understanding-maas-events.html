@@ -804,7 +804,140 @@ admin     mm3tc8  fair-marten  AUDIT  Fri, 11 Feb. 2022 11:00:00  Node  Set the 
 <li>Rescue mode</li>
 </ul>
 <p>The resulting <code>level=INFO</code> and <code>level=DEBUG</code> event sets are enlightening.</p>
+<p><details><summary>The raw log output, for reference only.</summary></p>
+<pre><code class="language-nohighlight">maas.log:2022-09-29T15:00:16.461402-05:00 neuromancer maas.interface: [info] eth0 (physical) on fun-zebra: IP address automatically unlinked: None:type=AUTO
+maas.log:2022-09-29T15:00:16.553396-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from NEW to COMMISSIONING
+maas.log:2022-09-29T15:00:16.754265-05:00 neuromancer maas.power: [info] Changing power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T15:00:16.759676-05:00 neuromancer maas.node: [info] fun-zebra: Commissioning started
+maas.log:2022-09-29T15:00:18.039441-05:00 neuromancer maas.power: [info] Changed power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T15:03:26.946507-05:00 neuromancer maas.node: [info] fun-zebra: Storage layout was set to flat.
+maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
+maas.log:2022-09-29T15:04:17.288763-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY
+maas.log:2022-09-29T16:14:21.778320-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from READY to ALLOCATED
+maas.log:2022-09-29T16:14:21.793566-05:00 neuromancer maas.node: [info] fun-zebra: allocated to user case
+maas.log:2022-09-29T16:14:27.662829-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from ALLOCATED to DEPLOYING
+maas.log:2022-09-29T16:14:31.019526-05:00 neuromancer maas.power: [info] Changing power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:14:32.334589-05:00 neuromancer maas.power: [info] Changed power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:22:41.935983-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from DEPLOYING to DEPLOYED
+maas.log:2022-09-29T16:23:37.084128-05:00 neuromancer maas.node: [info] fun-zebra: Releasing node
+maas.log:2022-09-29T16:23:37.085876-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from DEPLOYED to RELEASING
+maas.log:2022-09-29T16:23:37.196437-05:00 neuromancer maas.power: [info] Changing power state (off) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:23:38.546649-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from RELEASING to READY
+maas.log:2022-09-29T16:23:38.591042-05:00 neuromancer maas.power: [info] Changed power state (off) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:23:51.876495-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from READY to TESTING
+maas.log:2022-09-29T16:23:51.997139-05:00 neuromancer maas.power: [info] Changing power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:23:52.001167-05:00 neuromancer maas.node: [info] fun-zebra: Testing starting
+maas.log:2022-09-29T16:23:53.291863-05:00 neuromancer maas.power: [info] Changed power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:26:14.607386-05:00 neuromancer maas.power: [info] Changing power state (off) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:26:14.622643-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY
+maas.log:2022-09-29T16:26:14.678433-05:00 neuromancer maas.node: [info] fun-zebra: Testing aborted, stopping node
+maas.log:2022-09-29T16:26:16.051940-05:00 neuromancer maas.power: [info] Changed power state (off) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:26:23.081533-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from READY to ENTERING_RESCUE_MODE
+maas.log:2022-09-29T16:26:23.160687-05:00 neuromancer maas.power: [info] Changing power state (cycle) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:26:23.163274-05:00 neuromancer maas.node: [info] fun-zebra: Rescue mode starting
+maas.log:2022-09-29T16:26:24.528007-05:00 neuromancer maas.power: [info] Changed power state (on) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:28:58.268558-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from ENTERING_RESCUE_MODE to RESCUE_MODE
+maas.log:2022-09-29T16:29:52.204837-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from RESCUE_MODE to EXITING_RESCUE_MODE
+maas.log:2022-09-29T16:29:52.323798-05:00 neuromancer maas.power: [info] Changing power state (off) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:29:53.708975-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from EXITING_RESCUE_MODE to READY
+maas.log:2022-09-29T16:29:53.745776-05:00 neuromancer maas.power: [info] Changed power state (off) of node: fun-zebra (bk7mg8)
+maas.log:2022-09-29T16:32:20.147958-05:00 neuromancer maas.node: [info] fun-zebra: moved from default zone to new-zone zone.
+regiond.log:2022-09-29 20:00:16 maasserver.models.signals.interfaces: [info] eth0 (physical) on fun-zebra: deleted IP addresses due to VLAN update (5001 -&gt; 5002).
+regiond.log:2022-09-29 20:00:32 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:2022-09-29 20:01:09 maasserver.rpc.leases: [info] Lease update: commit for 10.103.114.192 on 0:16:3e:a2:73:5c at 2022-09-29 20:01:09 (lease time: 600s) (hostname: fun-zebra)
+regiond.log:2022-09-29 20:01:14 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:     * node fun-zebra renamed interface eth0 to enp5s0
+regiond.log:     * ip 10.103.114.192 connected to fun-zebra on eth0
+regiond.log:     * ip 10.103.114.192 disconnected from fun-zebra on eth0
+regiond.log:2022-09-29 21:15:31 maasserver.rpc.leases: [info] Lease update: commit for 10.103.114.2 on 0:16:3e:a2:73:5c at 2022-09-29 21:15:31 (lease time: 600s) (hostname: fun-zebra)
+regiond.log:2022-09-29 21:21:48 maasserver.models.node: [info] fun-zebra: Turning off netboot for node
+regiond.log:2022-09-29 21:22:41 metadataserver: [info] No user data registered for node named fun-zebra
+regiond.log:2022-09-29 21:23:37 maasserver.models.node: [info] fun-zebra: Turning on netboot for node
+regiond.log:2022-09-29 21:23:37 maasserver.models.node: [info] fun-zebra: Turning ephemeral deploy off for node
+regiond.log:2022-09-29 21:24:06 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on enp5s0
+regiond.log:2022-09-29 21:24:43 maasserver.rpc.leases: [info] Lease update: commit for 10.103.114.192 on 0:16:3e:a2:73:5c at 2022-09-29 21:24:43 (lease time: 600s) (hostname: fun-zebra)
+regiond.log:2022-09-29 21:24:46 maasserver.region_controller: [info] Reloaded DNS configuration; ip 10.103.114.192 connected to fun-zebra on enp5s0
+regiond.log:2022-09-29 21:27:18 maasserver.rpc.leases: [info] Lease update: commit for 10.103.114.192 on 0:16:3e:a2:73:5c at 2022-09-29 21:27:18 (lease time: 600s) (hostname: fun-zebra)
+</code></pre>
+<p></details></p>
 <p>First, let&rsquo;s try this command:</p>
+<pre><code class="language-nohighlight"> maas $PROFILE events query level=INFO hostname=fun-zebra limit=1000 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | (., map(length*&quot;-&quot;))),(.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) | @tsv' | column -t -s$'\t'
+ ```
+
+ This will yield a surprisingly compact report:
+
+ ```nohighlight
+ USERNAME  NODE    HOSTNAME   LEVEL  DATE                        TYPE                   EVENT
+--------  ----    --------   -----  ----                        ----                   -----
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:53  Exited rescue mode     
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:52  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:28:58  Rescue mode            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:27:18  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:40  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Power cycling          
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Entering rescue mode   
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Aborted testing        
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:24:08  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Testing                
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:38  Released               
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Releasing              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:22:41  Deployed               
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:21:49  Rebooting              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:18:42  Configuring OS         
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:42  Installing OS          
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:30  Configuring storage    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:15:31  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:48  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:31  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:27  Deploying              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:04:17  Ready                  
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:04:07  Running test           smartctl-validate on sda
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:27  Gathering information  
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:10  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:35  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Commissioning          
+ ```
+
+Note that most of the `INFO` events are either machine life-cycle events or key operations within those state changes, such as `Loading ephemeral` after a PXE boot.  `DEBUG` events, on the other hand, include `INFO` events for reference, but provide a much more extensive report of individual actions within each state change.  For instance, here is just the snippet of `DEBUG` information for the host's exit from rescue mode:
+
+```nohighlight
+USERNAME  NODE    HOSTNAME   LEVEL  DATE                        TYPE                              EVENT
+--------  ----    --------   -----  ----                        ----                              -----
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:29:53  Node powered off                  
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:29:53  Node changed status               From 'Exiting rescue mode' to 'Ready'
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:53  Exited rescue mode                
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:58  Node status event                 'cloudinit' running config-power-state-change with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:58  Node status event                 'cloudinit' running config-final-message with frequency always
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:58  Node status event                 'cloudinit' running config-phone-home with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:58  Node status event                 'cloudinit' running config-install-hotplug with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:58  Node status event                 'cloudinit' running config-keys-to-console with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:58  Node status event                 'cloudinit' running config-ssh-authkey-fingerprints with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-scripts-user with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-scripts-per-instance with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-scripts-per-boot with frequency always
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-scripts-per-once with frequency once
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-scripts-vendor with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-rightscale_userdata with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-refresh_rmc_and_interface with frequency always
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-reset_rmc with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-salt-minion with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-mcollective with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-chef with frequency always
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-puppet with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-write-files-deferred with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-ubuntu-drivers with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-lxd with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-landscape with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:28:57  Node status event                 'cloudinit' running config-fan with frequency once-per-instance
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:52  Powering off                      
+unknown   bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:29:52  Node changed status               From 'Rescue mode' to 'Exiting rescue mode'
+case      bk7mg8  fun-zebra  DEBUG  Thu, 29 Sep. 2022 21:29:52  User stopping rescue mode         (case)
+</code></pre>
+<p>Notice the detailed <code>cloudinit</code> actions necessary to change the machine&rsquo;s state.  The other state changes have similarly detailed outputs in <code>DEBUG</code>.</p>
     </div>
   </body>
 </html>
