@@ -414,25 +414,25 @@
 <p><a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a> <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a> are available to automate the setup for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
-<p><a href="heading--MAAS-region-controller">MAAS region controllers</a>: install and configure a MAAS region on a targeted host; running the playbook on hosts with a MAAS region will upgrade it.</p>
+<p><a href="#heading--MAAS-region-controller">MAAS region controllers</a>: install and configure a MAAS region on a targeted host; running the playbook on hosts with a MAAS region will upgrade it.</p>
 </li>
 <li>
-<p><a href="heading--MAAS-rack-controller">MAAS rack controllers</a>: install and configure a MAAS rack.</p>
+<p><a href="#heading--MAAS-rack-controller">MAAS rack controllers</a>: install and configure a MAAS rack.</p>
 </li>
 <li>
-<p><a href="heading--PostgreSQL-primary-role">PostgreSQL primary role</a>: setup the postgres primary role.</p>
+<p><a href="#heading--PostgreSQL-primary-role">PostgreSQL primary role</a>: setup the postgres primary role.</p>
 </li>
 <li>
-<p><a href="heading--PostgreSQL-secondary-role">PostgreSQL secondary role</a>: setup the postgres secondary role.</p>
+<p><a href="#heading--PostgreSQL-secondary-role">PostgreSQL secondary role</a>: setup the postgres secondary role.</p>
 </li>
 <li>
-<p><a href="heading--Firewall-rules">Firewall rules</a>: setup firewall rules.</p>
+<p><a href="#heading--Firewall-rules">Firewall rules</a>: setup firewall rules.</p>
 </li>
 </ul>
 <p>MAAS Playbooks are available from a <a href="https://github.com/maas/MAAS-ansible-playbook">repository</a>.  They will eventually be available through Ansible Galaxy.</p>
 <p>There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.  These groups include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</a></li>
+<li><a href="#heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</a></li>
 <li>?? (there must be more, huh?)</li>
 </ul>
 <p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
