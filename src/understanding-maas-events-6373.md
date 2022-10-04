@@ -621,12 +621,3 @@ Finished importing boot images, the region does not have any boot images availab
 <a href="#heading--CRITICAL-errors"><h3 id="heading--CRITICAL-errors">CRITICAL errors</h3></a>
 
 `CRITICAL` errors represent major failures, often code failures or tracebacks.  Any `CRITICAL` errors should be immediately examined and resolved, if possible, and [reported as a bug](/t/how-to-report-a-bug/4446) if not resolvable.
-
-
-
-
-
-
-
-
-
