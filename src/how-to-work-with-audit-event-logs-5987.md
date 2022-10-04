@@ -10,7 +10,7 @@ This article gives concise procedures for working with audit events.  Here you w
 - [How to filter audit events by owner](#heading--How-to-filter-audit-events-by-owner)
 - [How to limit the number of audit events displayed](#heading--How-to-limit-the-number-of-audit-events-displayed)
 - [How to move the audit event window](#heading--How-to-move-the-audit-event-window)
-- [How to audit a machine's life-cycle with audit events](#heading--How-to-audit-a-machine's-life-cycle-with-audit-events)
+- [How to audit a machine's life-cycle with audit events](#heading--How-to-audit-a-machines-life-cycle-with-audit-events)
 
 For an explanation of MAAS audit events, see [Understanding MAAS audit events](/t/understanding-maas-audit-events/6372).  For a general explanation of MAAS events and how to examine them, see [Understanding MAAS events](/t/understanding-maas-events/6373).  Note that for this article, we will assume you have installed [the `jq` tool](https://stedolan.github.io/jq/), which makes the JSON output of `events query` more human-readable.
 
@@ -319,7 +319,7 @@ carlo        fair-marten    Wed, 01 Dec. 2021 05:20:39  Started commissioning on
 
 Note that the starting point of the list (newest date first) has moved forward in time somewhat.  You can also use the `before=` parameter to move the window, as desired.
 
-<a href="#heading--How-to-audit-a-machine's-life-cycle-with-audit-events"><h2 id="heading--How-to-audit-a-machine's-life-cycle-with-audit-events">How to audit a machine's life-cycle with audit events</h2></a>
+<a href="#heading--How-to-audit-a-machines-life-cycle-with-audit-events"><h2 id="heading--How-to-audit-a-machines-life-cycle-with-audit-events">How to audit a machine's life-cycle with audit events</h2></a>
 
 To audit a machine's life-cycle, using audit events, do the following:
 
