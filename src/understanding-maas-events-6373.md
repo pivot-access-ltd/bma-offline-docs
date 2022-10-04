@@ -2,7 +2,7 @@
 
 Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
 
-Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI `events query` command.  These three sources provide analagous (but somewhat different information). For example, consider the following log listing, obtained by doing a `grep "fun-zebra" *.log | grep "transition from"` in the MAAS log directory:
+Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI `events query` command.  These three sources provide analogous (but somewhat different information). For example, consider the following log listing, obtained by doing a `grep "fun-zebra" *.log | grep "transition from"` in the MAAS log directory:
 
 ```nohighlight
 maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
@@ -87,7 +87,7 @@ Not all of this output is relevant, nor does it all trigger a recorded MAAS even
 
 <a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a>
 
-In fact, probably the best way to review events is via the CLI subcommand, `events query`. This subcommand can help you filter and summarise events.  Let's take a look at how this tool works.
+In fact, probably the best way to review events is via the CLI sub-command, `events query`. This sub-command can help you filter and summarise events.  Let's take a look at how this tool works.
 
 <a href="#heading--Basic-queries"><h3 id="heading--Basic-queries">Basic queries</h3></a>
 
@@ -314,7 +314,7 @@ In fact, there are several different levels associated with MAAS events:
 - CRITICAL: critical MAAS failures; shows only `CRITICAL` events.  These events usually represent severe error conditions that should be immediately remedied.
 - ERROR: MAAS errors; shows only `ERROR` events. Typical `ERROR` events include such things as power on/off failures, commissioning timeouts, and image import failures.
 - WARNING: failures which may or may not affect MAAS performance; shows `WARNING` and `ERROR` events.  A typical warning event, for example, might include the inability to find and boot a machine.
-- DEBUG: information which would help debug MAAS behavior; shows `DEBUG` and `INFO` events.  Typical `DEBUG` events involve routine image import activites, for example.
+- DEBUG: information which would help debug MAAS behaviour; shows `DEBUG` and `INFO` events.  Typical `DEBUG` events involve routine image import activities, for example.
 - AUDIT: information which helps determine settings and user actions in MAAS; shows only `AUDIT` events.  They are [covered in more detail elsewhere](/t/understanding-maas-audit-events/6372).
 
 <a href="#heading--combining-filters"><h3 id="heading--combining-filters">Combining filters</h3></a>
@@ -620,4 +620,13 @@ Finished importing boot images, the region does not have any boot images availab
 
 <a href="#heading--CRITICAL-errors"><h3 id="heading--CRITICAL-errors">CRITICAL errors</h3></a>
 
-`CRITICAL` errors represent major failures, often code failures or tracebacks.  Any `CRITICAL` errors should be immediately examined and resolved, if possible, and [reported as a bug](/t/how-to-report-a-bug/4446) if not resolvable.
+`CRITICAL` errors represent major failures, often code failures or trace-backs.  Any `CRITICAL` errors should be immediately examined and resolved, if possible, and [reported as a bug](/t/how-to-report-a-bug/4446) if not resolvable.
+
+
+
+
+
+
+
+
+

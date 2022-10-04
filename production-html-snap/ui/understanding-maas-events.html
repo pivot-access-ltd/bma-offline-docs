@@ -412,7 +412,7 @@
   <h1>Understanding MAAS events</h1><!-- "Understanding MAAS events" -->
 
 <p>Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.</p>
-<p>Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI <code>events query</code> command.  These three sources provide analagous (but somewhat different information). For example, consider the following log listing, obtained by doing a <code>grep "fun-zebra" *.log | grep "transition from"</code> in the MAAS log directory:</p>
+<p>Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI <code>events query</code> command.  These three sources provide analogous (but somewhat different information). For example, consider the following log listing, obtained by doing a <code>grep "fun-zebra" *.log | grep "transition from"</code> in the MAAS log directory:</p>
 <pre><code class="language-nohighlight">maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
 maas.log:2022-09-29T15:04:17.288763-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY
 </code></pre>
@@ -508,7 +508,7 @@ regiond.log:     * ip 10.103.114.192 disconnected from fun-zebra on eth0
 </code></pre>
 <p>Not all of this output is relevant, nor does it all trigger a recorded MAAS event.  Interpreting MAAS logs is a matter of practice with known events in a controlled environment.</p>
 <p><a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a></p>
-<p>In fact, probably the best way to review events is via the CLI subcommand, <code>events query</code>. This subcommand can help you filter and summarise events.  Let&rsquo;s take a look at how this tool works.</p>
+<p>In fact, probably the best way to review events is via the CLI sub-command, <code>events query</code>. This sub-command can help you filter and summarise events.  Let&rsquo;s take a look at how this tool works.</p>
 <p><a href="#heading--Basic-queries"><h3 id="heading--Basic-queries">Basic queries</h3></a></p>
 <p>MAAS events can be queried with the simple CLI command:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query
@@ -700,7 +700,7 @@ understanding-maas-events.htmlobob  mm3tc8  fair-marten    AUDIT  Wed, 21 Sep. 2
 <li>CRITICAL: critical MAAS failures; shows only <code>CRITICAL</code> events.  These events usually represent severe error conditions that should be immediately remedied.</li>
 <li>ERROR: MAAS errors; shows only <code>ERROR</code> events. Typical <code>ERROR</code> events include such things as power on/off failures, commissioning timeouts, and image import failures.</li>
 <li>WARNING: failures which may or may not affect MAAS performance; shows <code>WARNING</code> and <code>ERROR</code> events.  A typical warning event, for example, might include the inability to find and boot a machine.</li>
-<li>DEBUG: information which would help debug MAAS behavior; shows <code>DEBUG</code> and <code>INFO</code> events.  Typical <code>DEBUG</code> events involve routine image import activites, for example.</li>
+<li>DEBUG: information which would help debug MAAS behaviour; shows <code>DEBUG</code> and <code>INFO</code> events.  Typical <code>DEBUG</code> events involve routine image import activities, for example.</li>
 <li>AUDIT: information which helps determine settings and user actions in MAAS; shows only <code>AUDIT</code> events.  They are <a href="understanding-maas-audit-events.html">covered in more detail elsewhere</a>.</li>
 </ul>
 <p><a href="#heading--combining-filters"><h3 id="heading--combining-filters">Combining filters</h3></a></p>
@@ -953,7 +953,7 @@ Unable to import boot images: Invalid sha256 Checksum at http://localhost:5240/M
 </code></pre>
 <p><code>WARNINGS</code> tend to be failures, as well, but failures which are more easily fixed (such as having not successfully downloaded any images).</p>
 <p><a href="#heading--CRITICAL-errors"><h3 id="heading--CRITICAL-errors">CRITICAL errors</h3></a></p>
-<p><code>CRITICAL</code> errors represent major failures, often code failures or tracebacks.  Any <code>CRITICAL</code> errors should be immediately examined and resolved, if possible, and <a href="how-to-report-a-bug.html">reported as a bug</a> if not resolvable.</p>
+<p><code>CRITICAL</code> errors represent major failures, often code failures or trace-backs.  Any <code>CRITICAL</code> errors should be immediately examined and resolved, if possible, and <a href="how-to-report-a-bug.html">reported as a bug</a> if not resolvable.</p>
     </div>
   </body>
 </html>
