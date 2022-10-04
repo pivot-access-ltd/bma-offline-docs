@@ -139,6 +139,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Machines](/t/-/5080)
 - [Customising machines](/t/-/5976)
 - [VM hosting](/t/-/5068)
+- [MAAS events](/t/-/6373)
+- [MAAS audit events](/t/-/6372)
 - [RBAC](/t/-/6131)
 
 ## URLs
@@ -146,6 +148,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6372|/docs/understanding-maas-audit-events|
+|https://discourse.maas.io/t/-/6373|/docs/understanding-maas-events|
 |https://discourse.maas.io/t/-/6347|/docs/configuration-settings-reference|
 |https://discourse.maas.io/t/-/6327|/docs/maas-terraform-provider|
 |https://discourse.maas.io/t/-/6233|/docs/installation-requirements|
