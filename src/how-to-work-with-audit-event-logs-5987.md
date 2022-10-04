@@ -330,11 +330,11 @@ Thu, 21 Apr. 2022 19:20:47	admin	unknown	Updated configuration setting 'http_pro
 Thu, 21 Apr. 2022 19:20:24	admin	unknown	Logged in admin.
 ```
 
-<a id="#heading--using-audit-events-to-audit-maas"><h2 id="heading--using-audit-events-to-audit-maas">Using audit events to audit MAAS</h2></a>
+<a href="#heading--using-audit-events-to-audit-maas"><h2 id="heading--using-audit-events-to-audit-maas">Using audit events to audit MAAS</h2></a>
 
 Given the procedures above, you can use audit events to answer questions about a particular MAAS instance.  We will only offer a couple of examples here.  You can certainly extrapolate to suit your own particular needs.
 
-<a id="#heading--auditing-machine-actions"><h3 id="heading--using-auditing-machine-actions">Auditing machine actions</h2></a>
+<a href="#heading--auditing-machine-actions"><h3 id="heading--using-auditing-machine-actions">Auditing machine actions</h2></a>
 
 For example, suppose you were trying to discover who deployed a specific machine (say, `valued-moth`) and when it was deployed.  You could enter a command sequence like this one:
 
@@ -349,7 +349,7 @@ Mon, 25 Apr. 2022 21:51:23	admin	valued-moth	Started deploying 'valued-moth'.
 Thu, 21 Apr. 2022 19:36:48	admin	valued-moth	Started deploying 'valued-moth'.
 ```
 
-<a id="#heading--auditing-settings-changes"><h3 id="heading--using-auditing-settings-changes">Auditing settings changes</h2></a>
+<a href="#heading--auditing-settings-changes"><h3 id="heading--using-auditing-settings-changes">Auditing settings changes</h2></a>
 
 Or as another example, imagine trying to isolate recent changes to MAAS settings made by `admin`.  You could enter a command similar to this one:
 
