@@ -508,7 +508,8 @@ regiond.log:     * ip 10.103.114.192 disconnected from fun-zebra on eth0
 </code></pre>
 <p>Not all of this output is relevant, nor does it all trigger a recorded MAAS event.  Interpreting MAAS logs is a matter of practice with known events in a controlled environment.</p>
 <p><a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a></p>
-<p>To simplify the review of significant events, MAAS provides a CLI tool, <code>events query</code>, which can help you filter and summarise events.  Let&rsquo;s take a look at how this tool works.</p>
+<p>In fact, probably the best way to review events is via the CLI subcommand, <code>events query</code>. This subcommand can help you filter and summarise events.  Let&rsquo;s take a look at how this tool works.</p>
+<p><a href="#heading--Basic-queries"><h3 id="heading--Basic-queries">Basic queries</h3></a></p>
 <p>MAAS events can be queried with the simple CLI command:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query
 </code></pre>
@@ -564,7 +565,7 @@ Machine-readable output follows:
 </li>
 </ul>
 <p>Let&rsquo;s explore both of these things in turn.</p>
-<p><a href="#heading--using-jq-with-events"><h2 id="heading--using-jq-with-events">Using jq with events</h2></a></p>
+<p><a href="#heading--using-jq-with-events"><h3 id="heading--using-jq-with-events">Using jq with events</h3></a></p>
 <p>We offer a <a href="using-jq-with-the-maas-cli.html">more complete tutorial on jq</a> in this documentation set, but for now, we can give you some invocations that will make events much easier to read.  Let&rsquo;s take our example command above and add some <code>jq</code> to it to make the output more readable:</p>
 <pre><code class="language-nohighlight">maas $PROFILE events query limit=20 \
 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | 
@@ -597,7 +598,7 @@ unknown   knpge8  bolla          INFO     Thu, 10 Mar. 2022 20:21:41  Ready
 unknown   pbpncx  ruling-bobcat  WARNING  Thu, 10 Mar. 2022 18:01:47  Failed to query node's BMC  &lt;LXDAPIException instance at 0x7f0b53e21dc0 with str error:\n Traceback (most recent call last):\n  File &quot;/snap/maas/19076/usr/lib/python3/dist-packages/twisted/python/reflect.py&quot;, line 448, in safe_str\n    return str(o)\n  File &quot;/snap/maas/19076/usr/lib/python3/dist-packages/pylxd/exceptions.py&quot;, line 18, in __str__\n    if self.response.status_code == 200:  # Operation failure\nAttributeError: 'LXDAPIException' object has no attribute 'status_code'\n&gt;
 </code></pre>
 <p>You&rsquo;ll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviours and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let&rsquo;s explore ways to filter this table.</p>
-<p><a href="#heading--filter-parameters"><h2 id="heading--filter-parameters">Filter parameters</h2></a></p>
+<p><a href="#heading--filter-parameters">&lt;3 id=&rdquo;heading&ndash;filter-parameters&rdquo;&gt;Filter parameters</h3></a></p>
 <p>The <code>events query</code> command accepts several different filters, all of them optional:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
@@ -952,7 +953,7 @@ Unable to import boot images: Invalid sha256 Checksum at http://localhost:5240/M
 </code></pre>
 <p><code>WARNINGS</code> tend to be failures, as well, but failures which are more easily fixed (such as having not successfully downloaded any images).</p>
 <p><a href="#heading--CRITICAL-errors"><h3 id="heading--CRITICAL-errors">CRITICAL errors</h3></a></p>
-<p><code>CRITICAL</code> errors represent major failures, often code failures or tracebacks.  Any <code>CRITICAL</code> errors should be immediately examined and resolved, if possible.</p>
+<p><code>CRITICAL</code> errors represent major failures, often code failures or tracebacks.  Any <code>CRITICAL</code> errors should be immediately examined and resolved, if possible, and <a href="how-to-report-a-bug.html">reported as a bug</a> if not resolvable.</p>
     </div>
   </body>
 </html>

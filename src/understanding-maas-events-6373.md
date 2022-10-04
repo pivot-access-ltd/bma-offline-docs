@@ -87,7 +87,9 @@ Not all of this output is relevant, nor does it all trigger a recorded MAAS even
 
 <a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a>
 
-To simplify the review of significant events, MAAS provides a CLI tool, `events query`, which can help you filter and summarise events.  Let's take a look at how this tool works.
+In fact, probably the best way to review events is via the CLI subcommand, `events query`. This subcommand can help you filter and summarise events.  Let's take a look at how this tool works.
+
+<a href="#heading--Basic-queries"><h3 id="heading--Basic-queries">Basic queries</h3></a>
 
 MAAS events can be queried with the simple CLI command:
 
@@ -148,7 +150,7 @@ These listings can be very long and very hard to read.  You'll also notice that 
 
 Let's explore both of these things in turn.
 
-<a href="#heading--using-jq-with-events"><h2 id="heading--using-jq-with-events">Using jq with events</h2></a>
+<a href="#heading--using-jq-with-events"><h3 id="heading--using-jq-with-events">Using jq with events</h3></a>
 
 We offer a [more complete tutorial on jq](/t/using-jq-with-the-maas-cli/6027) in this documentation set, but for now, we can give you some invocations that will make events much easier to read.  Let's take our example command above and add some `jq` to it to make the output more readable:
 
@@ -189,7 +191,7 @@ unknown   pbpncx  ruling-bobcat  WARNING  Thu, 10 Mar. 2022 18:01:47  Failed to 
 
 You'll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviours and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let's explore ways to filter this table.
 
-<a href="#heading--filter-parameters"><h2 id="heading--filter-parameters">Filter parameters</h2></a>
+<a href="#heading--filter-parameters"><3 id="heading--filter-parameters">Filter parameters</h3></a>
 
 The `events query` command accepts several different filters, all of them optional:
 
@@ -618,4 +620,13 @@ Finished importing boot images, the region does not have any boot images availab
 
 <a href="#heading--CRITICAL-errors"><h3 id="heading--CRITICAL-errors">CRITICAL errors</h3></a>
 
-`CRITICAL` errors represent major failures, often code failures or tracebacks.  Any `CRITICAL` errors should be immediately examined and resolved, if possible.
+`CRITICAL` errors represent major failures, often code failures or tracebacks.  Any `CRITICAL` errors should be immediately examined and resolved, if possible, and [reported as a bug](/t/how-to-report-a-bug/4446) if not resolvable.
+
+
+
+
+
+
+
+
+
