@@ -409,145 +409,106 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>MAAS 3.2 release notes</h1><!-- "MAAS 3.2 release notes" -->
+  <h1>MAAS 3.3 release notes</h1><!-- "MAAS 3.3 release notes" -->
 
 <p>Here you will find release notes for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
 <li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
 </ul>
-<p><a href="#heading--3-2-6-maas-release-notes"><h2 id="heading--3-2-6-maas-release-notes">MAAS 3.2.6 release notes</h2></a></p>
-<p>We are happy to announced that MAAS 3.2.6 has been released. This point release of MAAS 3.2 provides a fix for a critical bug that prevented MAAS from enlisting machines on subnets with active DNS:</p>
+<p><a href="#heading--3-3-0-maas-release-notes"><h2 id="heading--3-3-0-maas-release-notes">MAAS 3.3 release notes</h2></a></p>
+<p>We are happy to announce that MAAS 3.3 has been released, with concerted efforts to improve MAAS on multiple fronts. New features include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<h1>1989970 <a href="https://bugs.launchpad.net/bugs/1989970">Can&rsquo;t enlist machines on subnets with DNS set</a></h1>
-</li>
+<li><a href="#heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</a></li>
+<li><a href="#heading--vault-integration">Integration of Vault for credential storage</a></li>
 </ul>
-<p>No other changes were made for this point release.</p>
-<p><a href="#heading--3-2-5-maas-release-notes"><h2 id="heading--3-2-5-maas-release-notes">MAAS 3.2.5 release notes</h2></a></p>
-<p>MAAS 3.2.5 was an attempt to fix a critical issue in 3.2.4.  This issue was resolved in MAAS 3.2.6, listed above. </p>
-<p><a href="#heading--3-2-4-maas-release-notes"><h2 id="heading--3-2-4-maas-release-notes">MAAS 3.2.4 release notes</h2></a></p>
-<p>We are happy to announce that MAAS 3.2.4 has been released.  This point release of MAAS 3.2 provides a fix for a critical bug that prevented the controllers page from displaying under certain conditions:</p>
+<p>Improved capabilities include the following:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<h1>1983624 <a href="https://bugs.launchpad.net/bugs/1983624">Fresh MAAS 3.2 install failed to find controller</a></h1>
-</li>
+<li><a href="#heading--22-04-support">Native support for 22.04 LTS and core22</a></li>
+<li><a href="#heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</a></li>
+<li><a href="#heading--nvidia-dpu-support">The first phase of Nvidia DPU support</a></li>
+<li><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a></li>
 </ul>
-<p>This release also addresses build issues found in prior point releases.</p>
-<p><a href="#heading--3-2-2-3-2-3-release-notes"><h2 id="heading--3-2-2-3-2-3-release-notes">MAAS 3.2.2 ~ MAAS 3.2.3</h2></a></p>
-<p>MAAS 3.2.2 and MAAS 3.2.3 were successive attempts to fix issues in MAAS.  These issues were resolved in MAAS 3.2.4, listed above.</p>
-<p><a href="#heading--3-2-1-maas-release-notes"><h2 id="heading--3-2-1-maas-release-notes">MAAS 3.2.1 release notes</h2></a></p>
-<p>We are happy to announce that MAAS 3.2.1 has been released.  This point release of MAAS 3.2.1 provides support for Rocky Linux UEFI (<a href="https://bugs.launchpad.net/bugs/1955671">bug number 1955671</a>), along with fixes for a number of recently-reported bugs:</p>
+<p>Greatly expanded documentation sections include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<h1>1955671: <a href="https://bugs.launchpad.net/bugs/1955671">support for rocky linux UEFI</a></h1>
-</li>
-<li>
-<h1>1980436: <a href="https://bugs.launchpad.net/bugs/1980436">MAAS CLI with anonymous access fails when TLS is enabled</a></h1>
-</li>
-<li>
-<h1>1980490: <a href="https://bugs.launchpad.net/bugs/1980490">MAAS regiond IPC crash due to a machine-resources binary crash when parsing some VPDs</a></h1>
-</li>
-<li>
-<h1>1980818: <a href="https://bugs.launchpad.net/bugs/1980818">Configure DHCP for VLAN</a></h1>
-</li>
-<li>
-<h1>1981536: <a href="https://bugs.launchpad.net/bugs/1981536">volume group creation fails on md device - MAAS 3.2</a></h1>
-</li>
-<li>
-<h1>1981560: <a href="https://bugs.launchpad.net/bugs/1981560">upgrade from 3.1 to 3.2 using debian packages missing steps</a></h1>
-</li>
-<li>
-<h1>1982984: <a href="https://bugs.launchpad.net/bugs/1982984">reverse-proxy service is not displayed for region controller</a></h1>
-</li>
-<li>
-<h1>1929478: <a href="https://bugs.launchpad.net/bugs/1929478">Commissioning fails with binary data in IPMI Lan_Conf_Security_Keys</a></h1>
-</li>
-<li>
-<h1>1982208: <a href="https://bugs.launchpad.net/bugs/1982208">agent.yaml.example is missing when maas is installed via deb package</a></h1>
-</li>
-<li>
-<h1>1982846: <a href="https://bugs.launchpad.net/bugs/1982846">Missing update_interface method on controller websocket handler</a></h1>
-</li>
+<li><a href="#heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</a></li>
+<li><a href="#heading--maas-config-settings-ref">MAAS Configuration settings reference</a></li>
 </ul>
-<p>Please see the release notes for the 3.2 release, below, for a summary of 3.2 features.</p>
-<p><a href="#heading--current-maas-release-notes"><h2 id="heading--current-maas-release-notes">MAAS 3.2 release notes</h2></a></p>
-<p>We are happy to announce that MAAS 3.2 is now available.</p>
-<p><a href="#heading--new-features"><h2 id="heading--new-features">New MAAS 3.2 features</h2></a></p>
-<p>MAAS 3.2 provides several new features, as well as the usual cadre of bug fixes.</p>
-<p><a href="#heading--improved-performance"><h3 id="heading--improved-performance">Improved performance</h3></a></p>
-<p>As part of the MAAS 3.2 development effort, we have taken steps to improve the performance of machine listings.  To date, we have measured the speed of listing a large number (100-1000) of machines via the REST API to be 32% faster, on average.  During the next cycle, we will be actively working to improve MAAS performance for other operations (such as search).</p>
-<p><a href="#heading--better-redfish-support"><h3 id="heading--better-redfish-support">Better Redfish support</h3></a></p>
-<p>MAAS has previously supported the Redfish protocol for some time, but as an option, preferring IPMI over all others if a choice of protocol was possible.  In contrast, MAAS 3.2 supports Redfish as a BMC protocol by preferring Redfish over IPMI, provided that:</p>
+<p>Read on to catch up with what we&rsquo;ve done this cycle.</p>
+<p><a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a></p>
+<p><a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a> <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a> are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  Playbooks are available to:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>The BMC has a Redfish Host Interface enabled</li>
-<li>That host interface can be accessed by the MAAS host</li>
+<li>install and configure a MAAS region on a targeted host; running the playbook on hosts with a MAAS region will upgrade it.</li>
+<li>install and configure a MAAS rack.</li>
+<li>setup the postgres primary role.</li>
+<li>setup the postgres secondary role.</li>
+<li>setup firewall rules.</li>
 </ul>
-<p>MAAS already supports Redfish, but with MAAS 3.2 we’re trying to auto-detect Redfish and use it if it&rsquo;s available.</p>
-<p>You may know that Redfish is an alternative to the IPMI protocol for connecting with machine BMCs.  It provides additional features above and beyond those provided by IPMI.  Eventually, Redfish should supplant IPMI as the default BMC interface.</p>
-<p>If the machine uses either IPMI or Redfish for its BMC, the ephemeral environment will automatically detect it, create a separate user for MAAS and configure the machine, so that MAAS may check and control the machine’s power status. Note that the name of the user that MAAS creates in the BMC is controlled by the <code>maas_auto_ipmi_user</code> config setting, both for IPMI and Redfish; nothing has changed in this regard with MAAS 3.2.</p>
-<p>You can check whether or not a machine can communicate via Redfish, with the command: </p>
-<pre><code class="language-nohighlight">dmidecode -t 42
-</code></pre>
-<p>If the machine has been enlisted by MAAS, you can also check the output of the <code>30-maas-01-bmc-config</code> commissioning script to discover this.</p>
-<p><a href="#heading--maas-native-tls"><h3 id="heading--maas-native-tls">MAAS native TLS</h3></a></p>
-<p>MAAS 3.2 provides <a href="how-to-enable-tls-encryption.html#heading--about-maas-native-tls">native TLS</a>. MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.  Note that you can still set up an HA proxy if you are using multiple controllers.</p>
-<p><a href="#heading--hardware-sync-for-deployed-machines"><h3 id="heading--hardware-sync-for-deployed-machines">Hardware sync for deployed machines</h3></a></p>
-<p>MAAS 3.2 allows you to <a href="https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine">sync hardware changes for deployed machines</a>.  You can see real-time updates to storage, etc., for a running machine.  This feature requires a special parameter be set prior to deployment.  Coupled with the existing ability to commission deployed machines, MAAS 3.2 moves a step closer to real-time reconfiguration of active, deployed, bare-metal.</p>
-<p><a href="#heading--expanded-tagging-capability"><h3 id="heading--expanded-tagging-capability">Expanded tagging capability</h3></a></p>
-<p>MAAS 3.2 provides greatly <a href="how-to-work-with-tags.html#heading--automatic-tags">expanded tagging capability</a>.  You can auto-apply tags to machines that match a custom XPath expression. Setting up an automatic tag lets you recognise special hardware characteristics and settings, e.g., the gpu passthrough.</p>
-<p><a href="#heading--more-new-features"><h3 id="heading--more-new-features">More new features</h3></a></p>
-<p>MAAS 3.2 rounds out the feature set with a few more items:</p>
+<p>MAAS Playbooks are available from a <a href="https://github.com/maas/MAAS-ansible-playbook">repository</a>.  They will eventually be available through Ansible Galaxy.</p>
+<p>There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.</p>
+<p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
+<p>Read the <a href="ansible-playbooks-reference.html">Ansible playbooks reference</a> document to learn more.</p>
+<p><a href="#heading--vault-integration"><h3 id="heading--vault-integration">Integration of Vault for credential storage</h3></a></p>
+<p>MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …), currently stored in the database &ndash; which is insecure by default. This configuration may not meet everyone&rsquo;s security requirements or regulations. For this reason, we&rsquo;ve integrated MAAS with Hashicorp Vault, a well-established solution for secure, centralised credential storage.</p>
+<p>You can read the <a href="maas-vault-reference.html">MAAS Vault reference</a> documentation to learn more.</p>
+<p><a href="#heading--22-04-support"><h3 id="heading--22-04-support">Native support for 22.04 LTS and core22</h3></a></p>
+<p>MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.</p>
+<p>Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The <a href="how-to-install-maas.html">installation guide</a> provides the necessary details.</p>
+<p><a href="#heading--simultaneous-deployment-improvements"><h3 id="heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</h3></a></p>
+<p>MAAS 3.3 brings some behind-the-scenes performance improvements to the product.  When you deploy many machines, you expect them all deploy reliably, with IPs allocated in bulk, and no DNS delays or RPC timeouts.  Within our development system, we&rsquo;ve added system tests and metrics to track any failures or latency when large numbers of machines are being deployed.  We&rsquo;ve then used these new data to lower the failure rate and reduce latency in those situations.</p>
+<p><a href="#heading--nvidia-dpu-support"><h3 id="heading--nvidia-dpu-support">The first phase of Nvidia DPU support</h3></a></p>
+<p>Long-term, we know that MAAS administrators want to enlist and use DPUs with MAAS.  The Nvidia DPU is a complex machine with a tremendous amount of capability, so this cycle, we made the first steps toward supporting them.  Details will follow in a forward-looking blog post sometime after the MAAS 3.3 release.</p>
+<p><a href="#heading--UI-performance-improvements"><h3 id="heading--UI-performance-improvements">UI performance improvements</h3></a></p>
+<p>We wanted to improve the performance of the machine list page for large (&gt;10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.</p>
+<p>With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, do not have to wait for all their machines’ data to be loaded before they can start searching. </p>
+<p>The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  At that point, the user can begin to filter machines by using free text search, which matches any of:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><a href="how-to-set-up-maas-metrics.html">Support for observability (O11y) in MAAS</a>: MAAS now supports integration with FOSS Observability stacks.</p>
-</li>
-<li>
-<p><a href="power-management-reference.html">Ability for user to specify IPMI cipher suite</a>: You can explicitly select which cipher suite to use when interacting with a BMC.</p>
-</li>
-<li>
-<p>Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We&rsquo;ve eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.</p>
-</li>
+<li>FQDN</li>
+<li>MAC address</li>
+<li>IP addresses</li>
+<li>Power type</li>
+<li>Status text</li>
+<li>OS</li>
+<li>Owner name</li>
+<li>Tags</li>
+<li>Pool name</li>
+<li>Description</li>
+<li>Zone name</li>
+<li>Boot VLAN name</li>
+<li>Boot VLAN’s fabric name</li>
+<li>Architecture</li>
 </ul>
-<p><a href="#heading--how-to-install-maas-3-2"><h2 id="heading--how-to-install-maas-3-2">How to install MAAS 3.2</h2></a></p>
-<p>MAAS 3.2 can be installed fresh from snaps (recommended) with:</p>
-<pre><code>sudo snap install --channel=3.2 maas
-</code></pre>
-<p>MAAS 3.2 can be installed from packages by adding the <code>ppa:maas/3.2</code> PPA:</p>
-<pre><code>sudo add-apt-repository ppa:maas/3.2
-sudo apt update
-sudo apt install maas
-</code></pre>
-<p>You can then install MAAS 3.2 fresh (recommended) with:</p>
-<pre><code>sudo apt-get -y install maas
-</code></pre>
-<p>Or, if you prefer to upgrade, you can:</p>
-<pre><code>sudo apt upgrade maas
-</code></pre>
-<p>At this point, proceed with a normal installation.</p>
-<p><a href="#heading--bugs-fixed-in-maas-3-2"><h2 id="heading--bugs-fixed-in-maas-3-2">Bugs fixed in MAAS 3.2</h2></a></p>
-<p>Here is the breakdown of bugs fixed across the MAAS 3.2 release:</p>
+<p>The filter has some special features:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="https://launchpad.net/maas/+milestone/3.2.1">MAAS 3.2.1</a></li>
-<li><a href="https://launchpad.net/maas/3.2/3.2.0">MAAS 3.2</a></li>
-<li><a href="https://launchpad.net/maas/3.2/3.2.0-rc2">MAAS 3.2 RC 2</a></li>
-<li><a href="https://launchpad.net/maas/+milestone/3.2.0-rc1">MAAS 3.2 RC 1</a></li>
-<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta6">MAAS 3.2 Beta 6</a></li>
-<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta5">MAAS 3.2 Beta 5</a></li>
-<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta4">MAAS 3.2 Beta 4</a></li>
-<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta3">MAAS 3.2 Beta 3</a></li>
-<li><a href="https://launchpad.net/maas/+milestone/3.2.0-beta2">MAAS 3.2 Beta 2</a></li>
-<li><a href="https://launchpad.net/maas/3.2/3.2.0-beta1">MAAS 3.2 Beta 1</a></li>
+<li>The user can filter machines by partially matching machine values (e.g. hostname contains “test”)</li>
+<li>The user can filter machines by exact matching machine values (e.g. hostname is “test-machine”)</li>
+<li>The user can filter machines by negatively matching machine values (e.g. power state is not “error”, status does not contain “Failed”)</li>
+<li>The user can filter machines by multiple machine values (e.g. hostname contains “test” and status is “Testing”)</li>
+<li>The user can filter machines by multiple matches of a machine value (e.g. status is “New” or status is “Ready”)</li>
+<li>The user can filter machines by a list of filter options.</li>
+<li>The list of machines is not added to or removed from after a filter has been performed, except in some specific circumstances:</li>
+<li>When a machine is deleted it gets removed from the list.</li>
+<li>The data of the machines in the list is updated in real time.</li>
+<li>The user can see a count of the machines that match a certain filter criteria.</li>
+<li>The user can sort the list of machines, ascending or descending, according to a machine parameter.</li>
+<li>The list of machines can be paginated.</li>
 </ul>
-<p><a href="#heading--known-issues-maas-3-2"><h2 id="heading--known-issues-maas-3-2">Known issues for MAAS 3.2</h2></a></p>
-<p>The following known issues exist for MAAS 3.2:</p>
-<h3>Cannot update controller/device tags via WebSocket API</h3>
-
-<p>If you attempt to update a list of tags of a device with an automatic tag, you get an error: &ldquo;Cannot add tag tag-name to node because it has a definition&rdquo;.</p>
-<p>If you attempt to manually make the same API request, but send a list of tags with the automatic tag filtered out, the automatic tag will be removed from the device.</p>
+<p>In addition, we felt that a MAAS UI user should be able to group their machines by owner, pool, power state, status, zone or “none” (ungrouped) in order to maintain parity with the machine list in MAAS 3.2 and earlier.  This means retaining the following capabilities:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The user can choose to group the machines in the machine list by owner, pool, power state, status or zone.</li>
+<li>The user can choose not to have the machines in the machine list grouped.</li>
+<li>The user can see a count of how many machines are in each group.</li>
+<li>The user can collapse and expand groups.</li>
+</ul>
+<p><strong>How does this compare to the 3.2 filters?</strong></p>
+<p><a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a></p>
+<p>MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult <a href="https://maas.io/docs/api">the API documentation</a> for details.</p>
+<p><a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS Configuration settings reference</h3></a></p>
+<p>MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the <a href="configuration-settings-reference.html">Configuration settings reference</a>.</p>
 <p><a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a></p>
 <p>Here are release notes for other relatively recent MAAS versions:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="what-is-new-with-maas-3-2.html">MAAS 3.2</a></li>
 <li><a href="what-is-new-with-maas-3-1.html">MAAS 3.1</a></li>
 <li><a href="what-is-new-with-maas-3-0.html">MAAS 3.0</a></li>
 <li><a href="what-is-new-with-maas-2-9.html">MAAS 2.9</a></li>
