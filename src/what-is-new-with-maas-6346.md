@@ -17,6 +17,7 @@ Improved capabilities include the following:
 - [Native support for 22.04 LTS and core22](#heading--22-04-support)
 - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements)
 - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support)
+- [UI performance improvements for large machine counts](#heading--UI-performance-improvements)
 
 Greatly expanded documentation sections include:
 
@@ -62,6 +63,53 @@ MAAS 3.3 brings some behind-the-scenes performance improvements to the product. 
 <a href="#heading--nvidia-dpu-support"><h3 id="heading--nvidia-dpu-support">The first phase of Nvidia DPU support</h3></a>
 
 Long-term, we know that MAAS administrators want to enlist and use DPUs with MAAS.  The Nvidia DPU is a complex machine with a tremendous amount of capability, so this cycle, we made the first steps toward supporting them.  Details will follow in a forward-looking blog post sometime after the MAAS 3.3 release.
+
+<a href="#heading--UI-performance-improvements"><h3 id="heading--UI-performance-improvements">UI performance improvements</h3></a>
+
+We wanted to improve the performance of the machine list page for large (>10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.
+
+With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, do not have to wait for all their machines’ data to be loaded before they can start searching. 
+
+The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  At that point, the user can begin to filter machines by using free text search, which matches any of:
+
+ - FQDN
+ - MAC address
+ - IP addresses
+ - Power type
+ - Status text
+ - OS
+ - Owner name
+ - Tags
+ - Pool name
+ - Description
+ - Zone name
+ - Boot VLAN name
+ - Boot VLAN’s fabric name
+ - Architecture
+
+The filter has some special features:
+
+ - The user can filter machines by partially matching machine values (e.g. hostname contains “test”)
+ - The user can filter machines by exact matching machine values (e.g. hostname is “test-machine”)
+ - The user can filter machines by negatively matching machine values (e.g. power state is not “error”, status does not contain “Failed”)
+ - The user can filter machines by multiple machine values (e.g. hostname contains “test” and status is “Testing”)
+ - The user can filter machines by multiple matches of a machine value (e.g. status is “New” or status is “Ready”)
+ - The user can filter machines by a list of filter options.
+ - The list of machines is not added to or removed from after a filter has been performed, except in some specific circumstances:
+ - When a machine is deleted it gets removed from the list.
+ - The data of the machines in the list is updated in real time.
+ - The user can see a count of the machines that match a certain filter criteria.
+ - The user can sort the list of machines, ascending or descending, according to a machine parameter.
+ - The list of machines can be paginated.
+
+In addition, we felt that a MAAS UI user should be able to group their machines by owner, pool, power state, status, zone or “none” (ungrouped) in order to maintain parity with the machine list in MAAS 3.2 and earlier.  This means retaining the following capabilities:
+
+ - The user can choose to group the machines in the machine list by owner, pool, power state, status or zone.
+ - The user can choose not to have the machines in the machine list grouped.
+ - The user can see a count of how many machines are in each group.
+ - The user can collapse and expand groups.
+ 
+**How does this compare to the 3.2 filters?**
 
 <a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a>
 

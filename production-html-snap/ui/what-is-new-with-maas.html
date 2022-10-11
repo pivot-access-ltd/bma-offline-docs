@@ -427,6 +427,7 @@
 <li><a href="#heading--22-04-support">Native support for 22.04 LTS and core22</a></li>
 <li><a href="#heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</a></li>
 <li><a href="#heading--nvidia-dpu-support">The first phase of Nvidia DPU support</a></li>
+<li><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a></li>
 </ul>
 <p>Greatly expanded documentation sections include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -457,6 +458,49 @@
 <p>MAAS 3.3 brings some behind-the-scenes performance improvements to the product.  When you deploy many machines, you expect them all deploy reliably, with IPs allocated in bulk, and no DNS delays or RPC timeouts.  Within our development system, we&rsquo;ve added system tests and metrics to track any failures or latency when large numbers of machines are being deployed.  We&rsquo;ve then used these new data to lower the failure rate and reduce latency in those situations.</p>
 <p><a href="#heading--nvidia-dpu-support"><h3 id="heading--nvidia-dpu-support">The first phase of Nvidia DPU support</h3></a></p>
 <p>Long-term, we know that MAAS administrators want to enlist and use DPUs with MAAS.  The Nvidia DPU is a complex machine with a tremendous amount of capability, so this cycle, we made the first steps toward supporting them.  Details will follow in a forward-looking blog post sometime after the MAAS 3.3 release.</p>
+<p><a href="#heading--UI-performance-improvements"><h3 id="heading--UI-performance-improvements">UI performance improvements</h3></a></p>
+<p>We wanted to improve the performance of the machine list page for large (&gt;10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.</p>
+<p>With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, do not have to wait for all their machines’ data to be loaded before they can start searching. </p>
+<p>The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  At that point, the user can begin to filter machines by using free text search, which matches any of:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>FQDN</li>
+<li>MAC address</li>
+<li>IP addresses</li>
+<li>Power type</li>
+<li>Status text</li>
+<li>OS</li>
+<li>Owner name</li>
+<li>Tags</li>
+<li>Pool name</li>
+<li>Description</li>
+<li>Zone name</li>
+<li>Boot VLAN name</li>
+<li>Boot VLAN’s fabric name</li>
+<li>Architecture</li>
+</ul>
+<p>The filter has some special features:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The user can filter machines by partially matching machine values (e.g. hostname contains “test”)</li>
+<li>The user can filter machines by exact matching machine values (e.g. hostname is “test-machine”)</li>
+<li>The user can filter machines by negatively matching machine values (e.g. power state is not “error”, status does not contain “Failed”)</li>
+<li>The user can filter machines by multiple machine values (e.g. hostname contains “test” and status is “Testing”)</li>
+<li>The user can filter machines by multiple matches of a machine value (e.g. status is “New” or status is “Ready”)</li>
+<li>The user can filter machines by a list of filter options.</li>
+<li>The list of machines is not added to or removed from after a filter has been performed, except in some specific circumstances:</li>
+<li>When a machine is deleted it gets removed from the list.</li>
+<li>The data of the machines in the list is updated in real time.</li>
+<li>The user can see a count of the machines that match a certain filter criteria.</li>
+<li>The user can sort the list of machines, ascending or descending, according to a machine parameter.</li>
+<li>The list of machines can be paginated.</li>
+</ul>
+<p>In addition, we felt that a MAAS UI user should be able to group their machines by owner, pool, power state, status, zone or “none” (ungrouped) in order to maintain parity with the machine list in MAAS 3.2 and earlier.  This means retaining the following capabilities:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The user can choose to group the machines in the machine list by owner, pool, power state, status or zone.</li>
+<li>The user can choose not to have the machines in the machine list grouped.</li>
+<li>The user can see a count of how many machines are in each group.</li>
+<li>The user can collapse and expand groups.</li>
+</ul>
+<p><strong>How does this compare to the 3.2 filters?</strong></p>
 <p><a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a></p>
 <p>MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult <a href="https://maas.io/docs/api">the API documentation</a> for details.</p>
 <p><a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS Configuration settings reference</h3></a></p>
