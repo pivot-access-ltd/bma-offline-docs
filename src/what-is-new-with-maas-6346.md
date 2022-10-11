@@ -68,7 +68,7 @@ Long-term, we know that MAAS administrators want to enlist and use DPUs with MAA
 
 We wanted to improve the performance of the machine list page for large (>10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.
 
-With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, do not have to wait for all their machines’ data to be loaded before they can start searching. 
+With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. 
 
 The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  At that point, the user can begin to filter machines by using free text search, which matches any of:
 
@@ -84,7 +84,7 @@ The user can start searching for machines within a short time after the visible 
  - Description
  - Zone name
  - Boot VLAN name
- - Boot VLAN’s fabric name
+ - Boot VLAN fabric name
  - Architecture
 
 The filter has some special features:
@@ -95,14 +95,13 @@ The filter has some special features:
  - The user can filter machines by multiple machine values (e.g. hostname contains “test” and status is “Testing”)
  - The user can filter machines by multiple matches of a machine value (e.g. status is “New” or status is “Ready”)
  - The user can filter machines by a list of filter options.
- - The list of machines is not added to or removed from after a filter has been performed, except in some specific circumstances:
- - When a machine is deleted it gets removed from the list.
+ - The list of machines is not modified after a filter has been performed, except that when a machine is deleted, it gets removed from the list.
  - The data of the machines in the list is updated in real time.
  - The user can see a count of the machines that match a certain filter criteria.
  - The user can sort the list of machines, ascending or descending, according to a machine parameter.
  - The list of machines can be paginated.
 
-In addition, we felt that a MAAS UI user should be able to group their machines by owner, pool, power state, status, zone or “none” (ungrouped) in order to maintain parity with the machine list in MAAS 3.2 and earlier.  This means retaining the following capabilities:
+In addition, we felt that a MAAS UI user should be able to group their machines by owner, pool, power state, status, zone or “none” (un-grouped) in order to maintain parity with the machine list in MAAS 3.2 and earlier.  This means retaining the following capabilities:
 
  - The user can choose to group the machines in the machine list by owner, pool, power state, status or zone.
  - The user can choose not to have the machines in the machine list grouped.
