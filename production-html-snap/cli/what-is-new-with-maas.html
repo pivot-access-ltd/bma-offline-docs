@@ -422,7 +422,9 @@
 <li><a href="#heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</a></li>
 </ul>
 <!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
-
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a></li>
+</ul>
 <p>Improved capabilities include the following:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--22-04-support">Native support for 22.04 LTS and core22</a></li>
@@ -431,11 +433,14 @@
 <!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a></li>
+<li><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</a></li>
 </ul>
 <p>Greatly expanded documentation sections include:</p>
+<!-- - [Shifting the MAAS API documentation to OpenAPI standards](#heading--openapi-support) -->
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</a></li>
 <li><a href="#heading--maas-config-settings-ref">MAAS configuration settings reference</a></li>
+<li><a href="#heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</a></li>
+<li><a href="#heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</a></li>
 </ul>
 <p>Read on to catch up with what we&rsquo;ve done so far this cycle.</p>
 <p><a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a></p>
@@ -458,6 +463,7 @@ MAAS deals with a number of secrets (user password, certificates and keys, API t
 
 You can read the [MAAS Vault reference](maas-vault-reference.html) documentation to learn more. -->
 
+<p><a href="#heading--Improved-machine-list-filtering"><h3 id="heading--Improved-machine-list-filtering">Improved machine list filtering</h3></a></p>
 <p><a href="#heading--22-04-support"><h3 id="heading--22-04-support">Native support for 22.04 LTS and core22</h3></a></p>
 <p>MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.</p>
 <p>Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The <a href="how-to-install-maas.html">installation guide</a> provides the necessary details.</p>
@@ -513,10 +519,13 @@ Long-term, we know that MAAS administrators want to enlist and use DPUs with MAA
 <li>The user can collapse and expand groups.</li>
 </ul>
 <p><strong>How does this compare to the 3.2 filters?</strong></p>
+<p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h3 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h3></a></p>
 <p><a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a></p>
 <p>MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult <a href="https://maas.io/docs/api">the API documentation</a> for details.</p>
 <p><a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h3></a></p>
 <p>MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the <a href="configuration-settings-reference.html">Configuration settings reference</a>.</p>
+<p><a href="#heading--Improved-MAAS-event-documentation"><h3 id="heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</h3></a></p>
+<p><a href="#heading--Improved-MAAS-audit-event-documentation"><h3 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h3></a></p>
 <!---
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 

@@ -11,6 +11,7 @@ We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted 
 
 - [Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations](#heading--ansible-playbooks)
 <!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
+- [Improved machine list filtering](#heading--Improved-machine-list-filtering)
 
 Improved capabilities include the following:
 
@@ -18,11 +19,14 @@ Improved capabilities include the following:
 <!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
 <!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
 - [UI performance improvements for large machine counts](#heading--UI-performance-improvements)
+- [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images)
 
 Greatly expanded documentation sections include:
 
-- [Shifting the MAAS API documentation to OpenAPI standards](#heading--openapi-support)
+<!-- - [Shifting the MAAS API documentation to OpenAPI standards](#heading--openapi-support) -->
 - [MAAS configuration settings reference](#heading--maas-config-settings-ref)
+- [Improved MAAS event documentation](#heading--Improved-MAAS-event-documentation)
+- [Improved MAAS audit event documentation](#heading--Improved-MAAS-audit-event-documentation)
 
 Read on to catch up with what we've done so far this cycle.
 
@@ -50,6 +54,8 @@ Read the [Ansible playbooks reference](/t/ansible-playbooks-reference/6367) docu
 MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …), currently stored in the database -- which is insecure by default. This configuration may not meet everyone's security requirements or regulations. For this reason, we've integrated MAAS with Hashicorp Vault, a well-established solution for secure, centralised credential storage.
 
 You can read the [MAAS Vault reference](/t/maas-vault-reference/6368) documentation to learn more. -->
+
+<a href="#heading--Improved-machine-list-filtering"><h3 id="heading--Improved-machine-list-filtering">Improved machine list filtering</h3></a>
 
 <a href="#heading--22-04-support"><h3 id="heading--22-04-support">Native support for 22.04 LTS and core22</h3></a>
 
@@ -113,6 +119,8 @@ In addition, we felt that a MAAS UI user should be able to group their machines 
  
 **How does this compare to the 3.2 filters?**
 
+<a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h3 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h3></a>
+
 <a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a>
 
 MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult [the API documentation](https://maas.io/docs/api) for details.
@@ -120,6 +128,10 @@ MAAS API User want to experience the MAAS API in a more standard way, along the 
 <a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h3></a>
 
 MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the [Configuration settings reference](/t/configuration-settings-reference/6347).
+
+<a href="#heading--Improved-MAAS-event-documentation"><h3 id="heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</h3></a>
+
+<a href="#heading--Improved-MAAS-audit-event-documentation"><h3 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h3></a>
 
 <!---
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
