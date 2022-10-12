@@ -57,6 +57,11 @@ You can read the [MAAS Vault reference](/t/maas-vault-reference/6368) documentat
 
 <a href="#heading--Improved-machine-list-filtering"><h3 id="heading--Improved-machine-list-filtering">Improved machine list filtering</h3></a>
 
+[note]
+**NOTE** that this feature is still in development, so some of the feature-set described in this section may not be fully operational yet.  As always, we reserve the right to change this feature-set until the final release of MAAS 3.3.
+[/note]
+
+
 <a href="#heading--22-04-support"><h3 id="heading--22-04-support">Native support for 22.04 LTS and core22</h3></a>
 
 MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.
