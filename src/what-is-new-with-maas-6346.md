@@ -58,9 +58,91 @@ You can read the [MAAS Vault reference](/t/maas-vault-reference/6368) documentat
 <a href="#heading--Improved-machine-list-filtering"><h3 id="heading--Improved-machine-list-filtering">Improved machine list filtering</h3></a>
 
 [note]
-**NOTE** that this feature is still in development, so some of the feature-set described in this section may not be fully operational yet.  As always, we reserve the right to change this feature-set until the final release of MAAS 3.3.
+**NOTE** that this feature is still in development, so some of the feature-set described in this section may not be fully operational yet.  As always, we reserve the right to change this feature-set until the final release of MAAS 3.3. These release notes will be updated as the feature develops.
 [/note]
 
+MAAS 3.3 enhances the way you can filter the machine list, in two ways:
+
+1. You may begin filtering within a very short time after the first page of the machine list loads, even if you have more than 10,000 machines in the list.  
+
+2. You have a wider range of filter choices, as descsribed in the table below.
+
+Note that with this version of MAAS, matching machine counts have been removed from the filter list for better performance.
+
+The following table describes the proposed filter set for the MAAS machine list:
+
+- Items marked as "Dynamic" are populated based on existing data, that is, the "Tags" filter only shows tags that currently exist.  
+- Items which are not dynamic present the entire range of possible values, regardless of whether that value currently existds in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.
+- Items marked as "Grouping" can be used to group machines, instead of the default machine status.
+
+| Parameter               | Description                                              | Dynamic  | Grouping |
+|-------------------------|----------------------------------------------------------|----------|----------|
+| arch                    | Include nodes with this architecture                     |          | Grouping |
+| not_arch                | Exclude nodes with this architecture                     | Dynamic  |          |
+| zone                    | Include nodes in this zone                               | Dynamic  | Grouping |
+| not_in_zone             | Exclude nodes in this zone                               | Dynamic  |          |
+| pool                    | Include nodes in this resource pool                      | Dynamic  | Grouping |
+| not_in_pool             | Exclude nodes in this resource pool                      | Dynamic  |          |
+| pod                     | Include pods matching this name                          | Dynamic  | Grouping |
+| not_pod                 | Exclude pods matching this name                          | Dynamic  |          |
+| pod_type                | Include pods with this power type                        | Dynamic  | Grouping |
+| not_pod_type            | Exclude pods with this power type                        | Dynamic  |          |
+| domain                  | Include nodes in this domain                             | Dynamic  | Grouping |
+| not_domain              | Exclude nodes in this domain                             | Dynamic  |          |
+| status                  | Include nodes with this status                           | Grouping |          |
+| not_status              | Exclude nodes with the specified status                  | Dynamic  |          |
+| owner                   | Owners (users) to include                                | Dynamic  | Grouping |
+| not_owner               | Exclude nodes with these owners (users)                  | Dynamic  |          |
+| power_state             | Include nodes with this power state                      |          | Grouping |
+| not_power_state         | Exclude nodes with this power state                      | Dynamic  |          |
+| tags                    | Tags                                                     | Dynamic  |          |
+| not_tags                | Not having tags                                          | Dynamic  |          |
+| fabrics                 | Attached to fabrics                                      | Dynamic  |          |
+| not_fabrics             | Not attached to fabrics                                  | Dynamic  |          |
+| fabric_classes          | Attached to fabric with specified classes                | Dynamic  |          |
+| not_fabric_classes      | Not attached to fabric with specified classes            | Dynamic  |          |
+| fabric_name             | Boot interface Fabric                                    | Dynamic  |          |
+| not_fabric_name         | Boot interface Fabric                                    | Dynamic  |          |
+| subnets                 | Attached to subnets                                      | Dynamic  |          |
+| not_subnets             | Not attached to subnets                                  | Dynamic  |          |
+| link_speed              | Link speed                                               | Dynamic  |          |
+| not_link_speed          | Link speed                                               | Dynamic  |          |
+| vlans                   | Attached to VLANs                                        | Dynamic  |          |
+| not_vlans               | Not attached to VLANs                                    | Dynamic  |          |
+| storage                 | Storage                                                  | Dynamic  |          |
+| total_storage           | Total storage                                            | Dynamic  |          |
+| not_total_storage       | Total storage                                            | Dynamic  |          |
+| cpu_count               | CPU count                                                | Dynamic  |          |
+| not_cpu_count           | CPU count                                                | Dynamic  |          |
+| mem                     | Memory                                                   | Dynamic  |          |
+| not_mem                 | Memory                                                   | Dynamic  |          |
+| mac_address             | MAC addresses to filter on                               | Dynamic  |          |
+| not_mac_address         | MAC addresses to filter on                               | Dynamic  |          |
+| agent_name              | Only include nodes with events matching the agent name   | Dynamic  |          |
+| not_agent_name          | Excludes nodes with events matching the agent name       | Dynamic  |          |
+| cpu_speed               | CPU speed                                                | Dynamic  |          |
+| not_cpu_speed           | CPU speed                                                | Dynamic  |          |
+| osystem                 | The OS of the desired node                               | Dynamic  |          |
+| not_osystem             | OS to ignore                                             | Dynamic  |          |
+| distro_series           | The OS distribution of the desired node                  | Dynamic  |          |
+| not_distro_series       | OS distribution to ignore                                | Dynamic  |          |
+| ip_addresses            | Node's IP address                                        | Dynamic  |          |
+| not_ip_addresses        | IP address to ignore                                     | Dynamic  |          |
+| spaces                  | Node's spaces                                            | Dynamic  |          |
+| not_spaces              | Node's spaces                                            | Dynamic  |          |
+| workloads               | Node's workload annotations                              | Dynamic  |          |
+| not_workloads           | Node's workload annotations                              | Dynamic  |          |
+| physical_disk_count     | Physical disk Count                                      | Dynamic  |          |
+| not_physical_disk_count | Physical disk Count                                      | Dynamic  |          |
+| pxe_mac                 | Boot interface MAC address                               | Dynamic  |          |
+| not_pxe_mac             | Boot interface MAC address                               | Dynamic  |          |
+| fqdn                    | Node FQDN                                                | Dynamic  |          |
+| not_fqdn                | Node FQDN                                                | Dynamic  |          |
+| simple_status           | Only includes nodes with the specified simplified status | Dynamic  |          |
+| not_simple_status       | Exclude nodes with the specified simplified status       | Dynamic  |          |
+| devices                 | Devices                                                  | Dynamic  |          |
+| interfaces              | Interfaces                                               | Dynamic  |          |
+| parent                  | Parent node                                              | Dynamic  | Grouping |
 
 <a href="#heading--22-04-support"><h3 id="heading--22-04-support">Native support for 22.04 LTS and core22</h3></a>
 
