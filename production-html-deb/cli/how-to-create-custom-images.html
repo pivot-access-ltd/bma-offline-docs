@@ -1229,37 +1229,77 @@ $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --editio
 <pre><code>maas admin boot-resources create name=rhel/8 title="RedHat Enterprise Linux 8" architecture=amd64/generic content@=rhel8-amd64-root-tgz
 </code></pre>
 <p><a href="#heading--custom-windows-images"><h3 id="heading--custom-windows-images">How to create Windows images</h3></a></p>
-<p>Since Windows is a proprietary operating system, MAAS can&rsquo;t download these images. You need to manually generate images to use with MAAS.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows ISO &ndash; which <em>helps</em> automate the process.</p>
-<p><b>Hyper-V 2012 R2</b>
-In this example, Windows Hyper-V 2012 R2 is used, but rest assured that multiple versions are supported. Download the Hyper-V 2012 R2 ISO from Microsoft, so it can be used in the image generation process.  You can obtain the download at:</p>
-<p>http://technet.microsoft.com/en-US/evalcenter/dn205299.aspx</p>
-<p>There are several other supported versions (for &ndash;windows-edition):</p>
+<p>Since Windows is a proprietary operating system, MAAS can&rsquo;t download these images. You need to manually generate images to use with MAAS by using Windows ISO images.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows image &ndash; which <em>helps</em> automate the process.</p>
+<p>You can obtain Windows ISO images at the Microsoft Evaluation Center:</p>
+<p>https://www.microsoft.com/en-us/evalcenter</p>
+<p><b>Windows editions</b></p>
+<p>There are several Windows editions/install options supported by <code>maas-image-builder</code> (<code>--windows-edition</code> options):</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>win2012</li>
-<li>win2012r2</li>
-<li>win2012hv</li>
-<li>win2012hvr2</li>
-<li>win2016</li>
-<li>win2016hv</li>
+<li><code>win2008r2</code></li>
+<li><code>win2008hvr2</code></li>
+<li><code>win2012</code></li>
+<li><code>win2012hv</code></li>
+<li><code>win2012r2</code></li>
+<li><code>win2012hvr2</code></li>
+<li><code>win2016</code></li>
+<li><code>win2016-core</code></li>
+<li><code>win2016hv</code></li>
+<li><code>win2016dc</code></li>
+<li><code>win2016dc-core</code></li>
+<li><code>win2019</code></li>
+<li><code>win2019-core</code></li>
+<li><code>win2019dc</code></li>
+<li><code>win2019dc-core</code></li>
+<li><code>win10ent</code></li>
+<li><code>win10ent-eval</code></li>
+<li><code>win2022</code></li>
+<li><code>win2022-core</code></li>
 </ul>
+<p>The examples in this section use Windows Hyper-V 2012 R2.</p>
 <h4 id="heading--mib-windows">Image Builder</h4>
 
-<p>MAAS Image builder can automate the process of generating images for MAAS and <code>curtin</code>.  In this instance,  though, you need Windows drivers for your specific hardware.  You can obtain these windows drivers with the following command:</p>
-<pre><code>sudo maas-image-builder -o windows-win2012hvr2-amd64-root-dd  windows \
---windows-iso ~/Downloads/2012hvr2.ISO \
---windows-edition win2012hvr2 [--windows-updates] \
-[--windows-drivers &lt;folder/&gt;]  [--windows-language en-US]
-</code></pre>
-<p>As an example, consider:</p>
+<p>MAAS Image Builder (also known as &ldquo;MIB&rdquo;) can automate the process of generating images for MAAS and <code>curtin</code>.</p>
+<p>Note, though, you may need Windows drivers to deploy the image on your specific hardware (see the <code>--windows-drivers</code> option).</p>
+<p>In order to obtain Windows updates, provide the <code>&ndash;windows-updates</code> option (and sufficient disk space, depending on the Windows edition/updates size, with the <code>&ndash;disk-size</code> option). This requires access to a bridged connection with a DHCP server (provide a network interface with the <code>maas-image-builder -i</code> option).</p>
+<p>Important: <b>UEFI and BIOS</b> systems require different Windows images, built with or without the <code>--uefi</code> option, respectively.
+(Windows ISO images in UEFI mode usually require connecting using a VNC client early to press any key to start Windows setup; see below.)</p>
+<p>Important: <b>LXD Virtual Machines</b> require an UEFI image (<code>--uefi</code>) and VirtIO drivers (<code>--windows-drivers</code>).
+(In order to use/test the VirtIO drivers during image build, not just during image deploy, use <code>--virtio</code> and <code>--driver-store</code>.)</p>
 <pre><code>sudo maas-image-builder -o windows-win2012hvr2-amd64-root-dd windows \
 --windows-iso win2012hvr2.iso  --windows-edition win2012hvr2 \
---windows-updates --windows-drivers ~/Win2012hvr2_x64/DRIVERS/  --windows-language en-US
+--windows-language en-US \
+[--windows-drivers ~/Win2012hvr2_x64/DRIVERS/] \
+[--windows-updates] [--disk-size 128G] \
+[--uefi] [--virtio] [--driver-store]
 </code></pre>
-<p>Please note that this will not <em>install</em> any Windows updates. In order to obtain an up-to-date image of Windows, be sure provide the <code>&ndash;windows-updates</code> flag. This requires access to a bridged connection with a DHCP server, an interface that can be specified with <code>-i</code>.</p>
-<p>Also note that you may be required to have specific Windows drivers for this image to work in your hardware. Be sure you inject those drivers when installing them. Those drivers are the default <code>*.inf</code> files.</p>
+<h4 id="heading--mib-options-windows">Image Builder options for Windows</h4>
+
+<p>MAAS Image Builder options for Windows images can be listed with the following command:</p>
+<pre><code>sudo maas-image-builder -o windows --help
+</code></pre>
+<p>Note that this is different from the MAAS Image Builder generic/image-independent options, which can be listed with the following command:</p>
+<pre><code>sudo maas-image-builder --help
+</code></pre>
+<p>Some of the Windows-specific options include:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><code>--windows-iso</code>: path to the Windows ISO image.</li>
+<li><code>--windows-edition</code>: identifier for the Windows edition/option being installed (see above).</li>
+<li><code>--windows-license-key</code>: Windows license key (required with non-evaluation editions)</li>
+<li><code>--windows-language</code>: Windows installation language (default: <code>en-US</code>)</li>
+<li><code>--windows-updates</code>: download and install Windows Updates (requires internet access; might require a larger <code>--disk-size</code> option)</li>
+<li><code>--windows-drivers</code>: path to directory with Windows drivers to be installed (requires internet access; uses the Windows Driver Kit, by default)</li>
+<li><code>--driver-store</code>: combined with <code>--windows-drivers</code>, uses the Windows Driver Store to install drivers early into Windows Setup and image (does not require internet access; does not use the Windows Driver Kit).</li>
+</ul>
+<p>Some Windows-specific platform options:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><code>--uefi</code>: use UEFI partition layout and firmware</li>
+<li><code>--virtio</code>: use paravirtualized VirtIO SCSI and VirtIO NET devices (instead of emulated devices) for installation (requires <code>--windows-drivers</code>)</li>
+<li><code>--disk-size</code>: specify the (virtual) disk size for Windows setup (must be larger for <code>--windows-updates</code>; increases deployment/copy-to-disk time, and is expanded to physical disk size during deployment)</li>
+</ul>
 <h4 id="heading--mib-debug-windows">Debug</h4>
 
-<p>You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client.</p>
+<p>You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client (e.g., <code>vncviewer</code>).</p>
+<p>You can pause the Windows installation process at the last step for inspection/debugging in PowerShell with the <code>--powershell</code> option.</p>
 <h4 id="heading--windows-image-install">Install into MAAS</h4>
 
 <p>The generated images need to be placed into the correct directories so MAAS can deploy them onto a node:</p>

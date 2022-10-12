@@ -269,7 +269,6 @@ $ maas admin boot-resources create \
     name='custom/ubuntu-raw' \
     title='Ubuntu Custom RAW' \
     architecture='amd64/generic' \
-    base_image="ubuntu/focal" \
     filetype='ddgz' \
     content@=custom-ubuntu-lvm.dd.gz
 ```
@@ -607,13 +606,8 @@ $ sudo PACKER_LOG=1 packer build -var 'rhel7_iso_path=/PATH/TO/rhel-server-7.9-x
 You can upload the RHEL7 raw packer image with the following command:
 
 ```nohighlight
-$ maas $PROFILE boot-resources create \
-    name='rhel/7-custom' \
-    title='RHEL 7 Custom' \
-    architecture='amd64/generic' \
-    base_image='rhel/rhel7' \
-    filetype='tgz' \
-    content@=rhel7.tar.gz
+$ maas $PROFILE boot-resources create
+name='rhel/7-custom' title='RHEL 7 Custom' architecture='amd64/generic' filetype='tgz' content@=rhel7.tar.gz
 ```
 
 ### Verify your custom image
@@ -808,13 +802,8 @@ $ sudo PACKER_LOG=1 packer build -var 'rhel8_iso_path=/PATH/TO/rhel-server-8.6-x
 You can upload the RHEL8 raw packer image with the following command:
 
 ```nohighlight
-$ maas $PROFILE boot-resources create \
-    name='rhel/8-custom' \
-    title='RHEL 8 Custom' \
-    base_image='rhel/rhel8' \
-    architecture='amd64/generic' \
-    filetype='tgz' \
-    content@=rhel8.tar.gz
+$ maas $PROFILE boot-resources create
+name='rhel/8-custom' title='RHEL 8 Custom' architecture='amd64/generic' filetype='tgz' content@=rhel8.tar.gz
 ```
 
 ### Verify your custom image
@@ -1003,7 +992,7 @@ You can upload the CentOS 7 raw packer image with the following command:
 
 ```nohighlight
 $ maas $PROFILE boot-resources create
-name='centos/7-custom' title='CentOS 7 Custom' architecture='amd64/generic' base_image='centos/centos7' filetype='tgz' content@=centos7.tar.gz
+name='centos/7-custom' title='CentOS 7 Custom' architecture='amd64/generic' filetype='tgz' content@=centos7.tar.gz
 ```
 
 ### Verify your custom image
@@ -1258,44 +1247,90 @@ The custom RHEL image can be uploaded to MAAS, but note that the name **must** s
 
 <a href="#heading--custom-windows-images"><h3 id="heading--custom-windows-images">How to create Windows images</h3></a>
 
-Since Windows is a proprietary operating system, MAAS can't download these images. You need to manually generate images to use with MAAS.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows ISO -- which _helps_ automate the process.
+Since Windows is a proprietary operating system, MAAS can't download these images. You need to manually generate images to use with MAAS by using Windows ISO images.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows image -- which _helps_ automate the process.
 
-<b>Hyper-V 2012 R2</b>
-In this example, Windows Hyper-V 2012 R2 is used, but rest assured that multiple versions are supported. Download the Hyper-V 2012 R2 ISO from Microsoft, so it can be used in the image generation process.  You can obtain the download at:
+You can obtain Windows ISO images at the Microsoft Evaluation Center:
 
-http://technet.microsoft.com/en-US/evalcenter/dn205299.aspx
+https://www.microsoft.com/en-us/evalcenter
 
-There are several other supported versions (for --windows-edition):
+<b>Windows editions</b>
 
-- win2012
-- win2012r2
-- win2012hv
-- win2012hvr2
-- win2016
-- win2016hv
+There are several Windows editions/install options supported by `maas-image-builder` (`--windows-edition` options):
+
+- `win2008r2`
+- `win2008hvr2`
+- `win2012`
+- `win2012hv`
+- `win2012r2`
+- `win2012hvr2`
+- `win2016`
+- `win2016-core`
+- `win2016hv`
+- `win2016dc`
+- `win2016dc-core`
+- `win2019`
+- `win2019-core`
+- `win2019dc`
+- `win2019dc-core`
+- `win10ent`
+- `win10ent-eval`
+- `win2022`
+- `win2022-core`
+
+The examples in this section use Windows Hyper-V 2012 R2.
 
 <h4 id="heading--mib-windows">Image Builder</h4>
 
-MAAS Image builder can automate the process of generating images for MAAS and <code>curtin</code>.  In this instance,  though, you need Windows drivers for your specific hardware.  You can obtain these windows drivers with the following command:
+MAAS Image Builder (also known as "MIB") can automate the process of generating images for MAAS and <code>curtin</code>.
 
-    sudo maas-image-builder -o windows-win2012hvr2-amd64-root-dd  windows \
-    --windows-iso ~/Downloads/2012hvr2.ISO \
-    --windows-edition win2012hvr2 [--windows-updates] \
-    [--windows-drivers <folder/>]  [--windows-language en-US]
+Note, though, you may need Windows drivers to deploy the image on your specific hardware (see the `--windows-drivers` option).
 
-As an example, consider:
+In order to obtain Windows updates, provide the <code>--windows-updates</code> option (and sufficient disk space, depending on the Windows edition/updates size, with the <code>--disk-size</code> option). This requires access to a bridged connection with a DHCP server (provide a network interface with the <code>maas-image-builder -i</code> option).
+
+Important: <b>UEFI and BIOS</b> systems require different Windows images, built with or without the `--uefi` option, respectively.
+(Windows ISO images in UEFI mode usually require connecting using a VNC client early to press any key to start Windows setup; see below.)
+
+Important: <b>LXD Virtual Machines</b> require an UEFI image (`--uefi`) and VirtIO drivers (`--windows-drivers`).
+(In order to use/test the VirtIO drivers during image build, not just during image deploy, use `--virtio` and `--driver-store`.)
 
     sudo maas-image-builder -o windows-win2012hvr2-amd64-root-dd windows \
     --windows-iso win2012hvr2.iso  --windows-edition win2012hvr2 \
-    --windows-updates --windows-drivers ~/Win2012hvr2_x64/DRIVERS/  --windows-language en-US
+    --windows-language en-US \
+    [--windows-drivers ~/Win2012hvr2_x64/DRIVERS/] \
+    [--windows-updates] [--disk-size 128G] \
+    [--uefi] [--virtio] [--driver-store]
 
-Please note that this will not <em>install</em> any Windows updates. In order to obtain an up-to-date image of Windows, be sure provide the <code>--windows-updates</code> flag. This requires access to a bridged connection with a DHCP server, an interface that can be specified with <code>-i</code>.
+<h4 id="heading--mib-options-windows">Image Builder options for Windows</h4>
 
-Also note that you may be required to have specific Windows drivers for this image to work in your hardware. Be sure you inject those drivers when installing them. Those drivers are the default <code>*.inf</code> files.
+MAAS Image Builder options for Windows images can be listed with the following command:
+
+	sudo maas-image-builder -o windows --help
+
+Note that this is different from the MAAS Image Builder generic/image-independent options, which can be listed with the following command:
+
+	sudo maas-image-builder --help
+
+Some of the Windows-specific options include:
+
+- `--windows-iso`: path to the Windows ISO image.
+- `--windows-edition`: identifier for the Windows edition/option being installed (see above).
+- `--windows-license-key`: Windows license key (required with non-evaluation editions)
+- `--windows-language`: Windows installation language (default: `en-US`)
+- `--windows-updates`: download and install Windows Updates (requires internet access; might require a larger `--disk-size` option)
+- `--windows-drivers`: path to directory with Windows drivers to be installed (requires internet access; uses the Windows Driver Kit, by default)
+- `--driver-store`: combined with `--windows-drivers`, uses the Windows Driver Store to install drivers early into Windows Setup and image (does not require internet access; does not use the Windows Driver Kit).
+
+Some Windows-specific platform options:
+
+- `--uefi`: use UEFI partition layout and firmware
+- `--virtio`: use paravirtualized VirtIO SCSI and VirtIO NET devices (instead of emulated devices) for installation (requires `--windows-drivers`)
+- `--disk-size`: specify the (virtual) disk size for Windows setup (must be larger for `--windows-updates`; increases deployment/copy-to-disk time, and is expanded to physical disk size during deployment)
 
 <h4 id="heading--mib-debug-windows">Debug</h4>
 
-You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client.
+You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client (e.g., `vncviewer`).
+
+You can pause the Windows installation process at the last step for inspection/debugging in PowerShell with the `--powershell` option.
 
 <h4 id="heading--windows-image-install">Install into MAAS</h4>
 
