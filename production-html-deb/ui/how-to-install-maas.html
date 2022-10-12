@@ -414,14 +414,16 @@
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
 <p><strong>NOTE:</strong> 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-reference.html">you can always double-check</a>.</p>
-<p>This article will show you:</p>
-<p><a href="#heading--fresh-install-3-2-packages"><h2 id="heading--fresh-install-3-2-packages">How to do a fresh install of MAAS 3.2 from packages</h2></a></p>
+<p><strong>NOTE:</strong> 
+Also note that, with the release of MAAS 3.3, PostgreSQL version 12 is deprecated.  See <a href="">undefined-as-yet-link</a> for instructions on how to upgrade PostgreSQL to version 14.</p>
+<p><a href="#heading--fresh-install-3-3-packages"><h2 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h2></a></p>
 <p>The recommended way to set up an initial MAAS environment is to put everything on one machine:</p>
-<pre><code class="language-bash">sudo apt-add-repository ppa:maas/3.2
+<pre><code class="language-bash">sudo apt-add-repository ppa:maas/3.3
 sudo apt update
 sudo apt-get -y install maas
 </code></pre>
-<p>Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:</p>
+<p>Note that MAAS 3.3 runs on Ubuntu 22.04, Jammy Jellyfish.  See the 
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a></p>
 <p>Choosing &ldquo;Y&rdquo; proceeds with a standard <code>apt</code> package install.</p>
 <h4>Distributed environment</h4>
@@ -435,35 +437,8 @@ sudo apt-get -y install maas
 sudo maas-rack register
 </code></pre>
 <p>These two steps will lead you through two similar <code>apt</code> install sequences.</p>
-<p><a href="#heading--upgrade-to-3-2"><h2 id="heading--upgrade-to-3-2">How to ugprade to MAAS 3.2 from MAAS 2.9 or higher</h2></a></p>
-<p>Maybe you&rsquo;d prefer to upgrade from MAAS 2.9 or higher to MAAS 3.2. You can also <a href="#heading--upgrade-from-2-8-to-3-2">upgrade from older versions</a> with bit more work.</p>
-<p>To upgrade from MAAS 2.9 - 3.1 to MAAS 3.2, follow these steps:</p>
-<ol>
-<li>
-<p>Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
-</li>
-<li>
-<p>Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
-</li>
-</ol>
-<pre><code>sudo apt-add-repository ppa:maas/3.2
-</code></pre>
-<ol>
-<li>Run the MAAS upgrade like this:</li>
-</ol>
-<pre><code>sudo apt update
-sudo apt upgrade maas
-</code></pre>
-<ol>
-<li>
-<p>Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you&rsquo;re running the 3.2 release.</p>
-</li>
-<li>
-<p>If this didn&rsquo;t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.</p>
-</li>
-</ol>
-<p><a href="#heading--upgrade-from-2-8-to-3-2"><h2 id="heading--upgrade-from-2-8-to-3-2">How to upgrade from 2.8 or lower to MAAS 3.2</h2></a></p>
-<p>If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.2. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:</p>
+<p><a href="#heading--upgrade-debs-to-3-3"><h2 id="heading--upgrade-debs-to-3-3">How to upgrade package installations to MAAS 3.3</h2></a></p>
+<p>If you are running MAAS 3.1 or lower, you can upgrade to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS or higher, by executing the following command:</p>
 <pre><code>lsb_release -a
 </code></pre>
 <p>The response should look something like this:</p>
@@ -472,8 +447,8 @@ Description:    Ubuntu xx.yy
 Release:    xx.yy
 Codename:   $RELEASE_NAME
 </code></pre>
-<p>The minimum &ldquo;xx.yy&rdquo; required for MAAS 3.2 is &ldquo;20.04,&rdquo; code-named &ldquo;focal.&rdquo;</p>
-<p>If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:</p>
+<p>The minimum &ldquo;xx.yy&rdquo; required for MAAS 3.3 is &ldquo;22.04,&rdquo; code-named &ldquo;jammy&rdquo;.</p>
+<p>If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:</p>
 <ol>
 <li>Upgrade the release:</li>
 </ol>
@@ -494,12 +469,12 @@ Codename:   $RELEASE_NAME
 </code></pre>
 <p>A successful upgrade should respond with output similar to the following:</p>
 <pre><code>Distributor ID: Ubuntu
-Description:    Ubuntu 20.04(.nn) LTS
-Release:    20.04
-Codename:   focal
+Description:    Ubuntu 22.04(.nn) LTS
+Release:    22.04
+Codename:   jammy
 </code></pre>
 <p><strong>NOTE:</strong> 
-If you&rsquo;re upgrading from MAAS version 2.8 or lower to version 3.2, please remember: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.</p>
+If you&rsquo;re upgrading to version 3.3, please remember: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.</p>
 <ol>
 <li>
 <p>Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
@@ -508,7 +483,7 @@ If you&rsquo;re upgrading from MAAS version 2.8 or lower to version 3.2, please 
 <p>Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
 </li>
 </ol>
-<pre><code>sudo apt-add-repository ppa:maas/3.2
+<pre><code>sudo apt-add-repository ppa:maas/3.3
 </code></pre>
 <ol>
 <li>Run the release upgrade like this, answering any questions with the given default values:</li>
@@ -523,9 +498,9 @@ If you&rsquo;re upgrading from MAAS version 2.8 or lower to version 3.2, please 
 <p>If the ugprade was successful, this command should yield output similar to the following:</p>
 <pre><code>No LSB modules are available.
 Distributor ID: Ubuntu
-Description:    Ubuntu 20.04(.nn) LTS
-Release:    20.04
-Codename:   focal
+Description:    Ubuntu 22.04(.nn) LTS
+Release:    22.04
+Codename:   jammy
 </code></pre>
 <ol>
 <li>
@@ -535,12 +510,6 @@ Codename:   focal
 <p>If this didn&rsquo;t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.</p>
 </li>
 </ol>
-<p><a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS 3.2 user</h2></a></p>
-<p>You will need to create a MAAS administrator user to access the web UI:</p>
-<pre><code class="language-nohighlight">sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
-</code></pre>
-<p>$PROFILE is the administrative MAAS username you wish to create.  $EMAIL_ADDRESS is an email address you may type in at random (currently, MAAS does not use this email address).</p>
-<p>The <code>createadmin</code> option will ask for an SSH key.  If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to use the associated key. For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt. In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix.</p>
 <p><a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a></p>
 <p>You can check the status of running services with:</p>
 <pre><code>sudo maas status
@@ -568,39 +537,6 @@ tgt                              RUNNING   pid 8040, uptime 0:09:15
 <pre><code>sudo maas init --help
 </code></pre>
 <p><a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a></p>
-<p>Once you&rsquo;ve successfully installed MAAS (regardless of method), you can now login here:</p>
-<pre><code>http://${API_HOST}:5240/MAAS
-</code></pre>
-<p>where $API_HOST is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p></p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg"></a> </p>
-<p>Log in at the prompts, with the login information you created when initialising MAAS.</p>
-<p><a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a></p>
-<p>After a fresh MAAS installation, the web UI presents a couple of welcome  screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg"></a>  </p>
-<p>Your main concerns for this experiment are the DNS forwarder, the Ubuntu image import section, and the SSH public key, though you might want to set the region name to something memorable, since this text will appear at the bottom of every MAAS screen in this install domain. Set the DNS forwarder to something obvious, e.g., <code>8.8.8.8</code>, Google’s DNS server.  Set this to your own internal DNS server if you know the IP address.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg"></a>  </p>
-<p>Select an Ubuntu image to import, noting that you may be required to select at least one LTS version, depending upon the version of MAAS that snap installed.  In this example, we&rsquo;ve already chosen an image, and downloading is partially complete.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg"></a>  </p>
-<p>When you click on “Continue,” the screen will shift to a screen labelled, “SSH keys for admin:”  </p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg"></a> </p>
-<p>In the source drop-down, select “Launchpad,” “Github,” or “Upload.”  If you choose one of the first two, you will need to enter your username for that service.  For example, if you want to upload your SSH public key from Launchpad, you would enter:</p>
-<pre><code>lp:&lt;username&gt;
-</code></pre>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg"></a> </p>
-<p>Likewise, if you want to upload your github public SSH key, you would enter:</p>
-<pre><code>gh:&lt;username&gt;
-</code></pre>
-<p>If you want to use your existing public key from your home directory, you can select “Upload”and then copy your entire public key from <code>.ssh/id_rsa.pub</code> (or wherever you may have stored the key):</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg"></a> </p>
-<p>and paste it into the block labelled “Public key.”  Finally, press the “Import” button to import this key:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg"></a> </p>
-<p>With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.</p>
-<p><strong>NOTE:</strong> 
-Note that you may have to wait a few moments for your selected images to sync locally.</p>
-<p><a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable DHCP</h3></a></p>
-<p>Before moving forward with MAAS, you&rsquo;ll want to enable DHCP.  You can do this very easily from the web UI by selecting &ldquo;Subnets&rdquo; from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, &ldquo;Enable DHCP.&rdquo;</p>
-<p><a href="#heading--networking"><h3 id="heading--networking">About network discovery</h3></a></p>
-<p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This network discovery process allows you to easily add or map devices already connected to your network &ndash; devices that you may not necessarily want to manage with MAAS.</p>
 <!--
 <a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a>
 

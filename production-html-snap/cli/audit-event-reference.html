@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/audit-event-reference.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Tutorials
+      </strong>
+      <ul>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-cli-tutorial.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to get MAAS running
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to configure networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-addresses.html">
+	    Manage IP addresses
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to choose images
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-custom-images.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to deploy MAAS
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-controllers.html">
+	    Manage controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to use tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to operate MAAS
+      </strong>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-work-with-audit-event-logs.html">
+	      Work with audit event logs
+	    </a>
+	  </li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+	</ul>
+      <p/>
+      <strong>
+	  API Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="configuration-settings-reference.html">
+	    Configuration settings
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Getting help
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Explanations
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    Cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    MAAS networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    Images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-creating-custom-images.html">
+	    Custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    Controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    Machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-customising-machines.html">
+	    Customising machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    VM hosting
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>|object|audited action | event type | message |</h1><table>
+<thead>
+<tr>
+<th>object</th>
+<th>audited action</th>
+<th>event type</th>
+<th>message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>init</strong></td>
+<td>creation of SSH key</td>
+<td>AUTHORISATION</td>
+<td>&ldquo;Created SSH key {for &lsquo;username&rsquo;}.&rdquo;</td>
+</tr>
+<tr>
+<td><strong>init</strong></td>
+<td>creation of SSL key</td>
+<td>AUTHORISATION</td>
+<td>&ldquo;Created SSL key.&rdquo;</td>
+</tr>
+<tr>
+<td>accounts</td>
+<td>deletion of token</td>
+<td>AUTHORISATION</td>
+<td>&ldquo;Deleted token&rdquo;</td>
+</tr>
+<tr>
+<td>bcache</td>
+<td>creation</td>
+<td>NODE</td>
+<td>&ldquo;Created bcache&rdquo;</td>
+</tr>
+<tr>
+<td>bcache</td>
+<td>deletion</td>
+<td>NODE</td>
+<td>&ldquo;Deleted bcache&rdquo;</td>
+</tr>
+<tr>
+<td>bcache</td>
+<td>update</td>
+<td>NODE</td>
+<td>&ldquo;Updated bcache&rdquo;</td>
+</tr>
+<tr>
+<td>bcache_cacheset</td>
+<td>creation</td>
+<td>NODE</td>
+<td>&ldquo;Created bcache cache set&rdquo;</td>
+</tr>
+<tr>
+<td>bcache_cacheset</td>
+<td>deletion</td>
+<td>NODE</td>
+<td>&ldquo;Deleted bcache cache set&rdquo;</td>
+</tr>
+<tr>
+<td>bcache_cacheset</td>
+<td>update</td>
+<td>NODE</td>
+<td>&ldquo;Updated bcache cache set&rdquo;</td>
+</tr>
+<tr>
+<td>commissioning_scripts</td>
+<td>deletion</td>
+<td>SETTINGS</td>
+<td>&ldquo;Deleted script &lsquo;script name&rsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>config</td>
+<td>update</td>
+<td>SETTINGS</td>
+<td>&ldquo;Updated configuration setting &lsquo;&rsquo;setting name&rsquo;&lsquo; to &lsquo;&rsquo;updated value&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>config_tls</td>
+<td>update</td>
+<td>SETTINGS</td>
+<td>&ldquo;Update configuration seting &lsquo;{tls_key_name}&rsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>dhcpsnippet</td>
+<td>creation/update</td>
+<td>SETTINGS</td>
+<td>&ldquo;{Created/updated} DHCP snippet &lsquo;&rsquo;dhcp_snippet_name&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>dhcpsnippets</td>
+<td>deletion</td>
+<td>SETTINGS</td>
+<td>&ldquo;Deleted DHCP snippet &lsquo;&rsquo;dhcp snippet name&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>dhcpsnippets</td>
+<td>reversion</td>
+<td>SETTINGS</td>
+<td>&ldquo;Reverted DHCP snippet &lsquo;&rsquo;dhcp snippet name&rsquo;&lsquo; to revision &lsquo;&rsquo;revision number&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>node actions</td>
+<td>various</td>
+<td>NODE</td>
+<td>varies by action</td>
+</tr>
+<tr>
+<td>packagerepositories</td>
+<td>deletion</td>
+<td>SETTINGS</td>
+<td>&ldquo;Deleted package repository &lsquo;&rsquo;package repo name&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>packagerepository</td>
+<td>creation/update</td>
+<td>SETTINGS</td>
+<td>&ldquo;{Created/updated} package repository &lsquo;&rsquo;package_repo_name&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td>reversion</td>
+<td>SETTINGS</td>
+<td>&ldquo;Reverted script &lsquo;&rsquo;script name&rsquo;&lsquo; to revision &lsquo;&rsquo;revision number&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td>save</td>
+<td>SETTINGS</td>
+<td>&ldquo;Saved script &lsquo;&rsquo;script name&rsquo;&lsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td>tagging</td>
+<td>SETTINGS</td>
+<td>&ldquo;Added tag &lsquo;{tag}&rsquo; to script &lsquo;{script.name}&rsquo;.&rdquo;</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td>un-tagging</td>
+<td>SETTINGS</td>
+<td>&ldquo;Removed tag &lsquo;{tag}&rsquo; from script &lsquo;{script.name}&rsquo;.&rdquo;</td>
+</tr>
+<tr>
+<td>ssh_keys</td>
+<td>deletion</td>
+<td>AUTHORISATION</td>
+<td>&ldquo;Deleted SSH key id=&rsquo;&lsquo;ssh_key_id&rsquo;&lsquo;.&rdquo;</td>
+</tr>
+<tr>
+<td>ssh_keys</td>
+<td>import</td>
+<td>AUTHORISATION</td>
+<td>&ldquo;Imported SSH keys.&rdquo;</td>
+</tr>
+<tr>
+<td>ssl_keys</td>
+<td>import</td>
+<td>AUTHORISATION,</td>
+<td>&ldquo;Imported SSH keys.&rdquo;</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>creation</td>
+<td>TAG</td>
+<td>&ldquo;Tag &lsquo;{tag.name}&rsquo; created.&rdquo;</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>definition</td>
+<td>TAG</td>
+<td>&ldquo;Tag &lsquo;{name}&rsquo; {action}.&rdquo;</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>deletion</td>
+<td>TAG</td>
+<td>&ldquo;Tag &lsquo;{tag.name}&rsquo; deleted.&rdquo;</td>
+</tr>
+<tr>
+<td>test</td>
+<td>various</td>
+<td>NODE_PXE_REQUEST</td>
+<td>varies</td>
+</tr>
+<tr>
+<td>test</td>
+<td>various</td>
+<td>SETTINGS</td>
+<td>varies</td>
+</tr>
+<tr>
+<td>users</td>
+<td>creation</td>
+<td>AUTHORISATION</td>
+<td>&ldquo;Created {admin/user} &lsquo;username&rsquo;&ldquo;</td>
+</tr>
+<tr>
+<td>users</td>
+<td>deletion</td>
+<td>AUTHORISATION</td>
+<td>&ldquo;Deleted {admin/user} &lsquo;username&rsquo;&ldquo;</td>
+</tr>
+</tbody>
+</table>
+    </div>
+  </body>
+</html>

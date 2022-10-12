@@ -414,14 +414,16 @@
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
 <p><strong>NOTE:</strong> 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-reference.html">you can always double-check</a>.</p>
-<p>This article will show you:</p>
-<p><a href="#heading--fresh-install-3-2-packages"><h2 id="heading--fresh-install-3-2-packages">How to do a fresh install of MAAS 3.2 from packages</h2></a></p>
+<p><strong>NOTE:</strong> 
+Also note that, with the release of MAAS 3.3, PostgreSQL version 12 is deprecated.  See <a href="">undefined-as-yet-link</a> for instructions on how to upgrade PostgreSQL to version 14.</p>
+<p><a href="#heading--fresh-install-3-3-packages"><h2 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h2></a></p>
 <p>The recommended way to set up an initial MAAS environment is to put everything on one machine:</p>
-<pre><code class="language-bash">sudo apt-add-repository ppa:maas/3.2
+<pre><code class="language-bash">sudo apt-add-repository ppa:maas/3.3
 sudo apt update
 sudo apt-get -y install maas
 </code></pre>
-<p>Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:</p>
+<p>Note that MAAS 3.3 runs on Ubuntu 22.04, Jammy Jellyfish.  See the 
+Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a></p>
 <p>Choosing &ldquo;Y&rdquo; proceeds with a standard <code>apt</code> package install.</p>
 <h4>Distributed environment</h4>
@@ -435,35 +437,8 @@ sudo apt-get -y install maas
 sudo maas-rack register
 </code></pre>
 <p>These two steps will lead you through two similar <code>apt</code> install sequences.</p>
-<p><a href="#heading--upgrade-to-3-2"><h2 id="heading--upgrade-to-3-2">How to ugprade to MAAS 3.2 from MAAS 2.9 or higher</h2></a></p>
-<p>Maybe you&rsquo;d prefer to upgrade from MAAS 2.9 or higher to MAAS 3.2. You can also <a href="#heading--upgrade-from-2-8-to-3-2">upgrade from older versions</a> with bit more work.</p>
-<p>To upgrade from MAAS 2.9 - 3.1 to MAAS 3.2, follow these steps:</p>
-<ol>
-<li>
-<p>Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
-</li>
-<li>
-<p>Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
-</li>
-</ol>
-<pre><code>sudo apt-add-repository ppa:maas/3.2
-</code></pre>
-<ol>
-<li>Run the MAAS upgrade like this:</li>
-</ol>
-<pre><code>sudo apt update
-sudo apt upgrade maas
-</code></pre>
-<ol>
-<li>
-<p>Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you&rsquo;re running the 3.2 release.</p>
-</li>
-<li>
-<p>If this didn&rsquo;t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.</p>
-</li>
-</ol>
-<p><a href="#heading--upgrade-from-2-8-to-3-2"><h2 id="heading--upgrade-from-2-8-to-3-2">How to upgrade from 2.8 or lower to MAAS 3.2</h2></a></p>
-<p>If you are running MAAS 2.8 or lower, you can upgrade directly to MAAS 3.2. You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:</p>
+<p><a href="#heading--upgrade-debs-to-3-3"><h2 id="heading--upgrade-debs-to-3-3">How to upgrade package installations to MAAS 3.3</h2></a></p>
+<p>If you are running MAAS 3.1 or lower, you can upgrade to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS or higher, by executing the following command:</p>
 <pre><code>lsb_release -a
 </code></pre>
 <p>The response should look something like this:</p>
@@ -472,8 +447,8 @@ Description:    Ubuntu xx.yy
 Release:    xx.yy
 Codename:   $RELEASE_NAME
 </code></pre>
-<p>The minimum &ldquo;xx.yy&rdquo; required for MAAS 3.2 is &ldquo;20.04,&rdquo; code-named &ldquo;focal.&rdquo;</p>
-<p>If you are currently running Ubuntu bionic 18.04 LTS, you can upgrade to focal 20.04 LTS with the following procedure:</p>
+<p>The minimum &ldquo;xx.yy&rdquo; required for MAAS 3.3 is &ldquo;22.04,&rdquo; code-named &ldquo;jammy&rdquo;.</p>
+<p>If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:</p>
 <ol>
 <li>Upgrade the release:</li>
 </ol>
@@ -494,12 +469,12 @@ Codename:   $RELEASE_NAME
 </code></pre>
 <p>A successful upgrade should respond with output similar to the following:</p>
 <pre><code>Distributor ID: Ubuntu
-Description:    Ubuntu 20.04(.nn) LTS
-Release:    20.04
-Codename:   focal
+Description:    Ubuntu 22.04(.nn) LTS
+Release:    22.04
+Codename:   jammy
 </code></pre>
 <p><strong>NOTE:</strong> 
-If you&rsquo;re upgrading from MAAS version 2.8 or lower to version 3.2, please remember: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.</p>
+If you&rsquo;re upgrading to version 3.3, please remember: While the following procedures should work, note that they are untested.  Use at your own risk.  Start by making a verifiable backup; see step 1, below.</p>
 <ol>
 <li>
 <p>Back up your MAAS server completely; the tools and media are left entirely to your discretion.  Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
@@ -508,7 +483,7 @@ If you&rsquo;re upgrading from MAAS version 2.8 or lower to version 3.2, please 
 <p>Add the MAAS 3.2 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
 </li>
 </ol>
-<pre><code>sudo apt-add-repository ppa:maas/3.2
+<pre><code>sudo apt-add-repository ppa:maas/3.3
 </code></pre>
 <ol>
 <li>Run the release upgrade like this, answering any questions with the given default values:</li>
@@ -523,9 +498,9 @@ If you&rsquo;re upgrading from MAAS version 2.8 or lower to version 3.2, please 
 <p>If the ugprade was successful, this command should yield output similar to the following:</p>
 <pre><code>No LSB modules are available.
 Distributor ID: Ubuntu
-Description:    Ubuntu 20.04(.nn) LTS
-Release:    20.04
-Codename:   focal
+Description:    Ubuntu 22.04(.nn) LTS
+Release:    22.04
+Codename:   jammy
 </code></pre>
 <ol>
 <li>
@@ -535,12 +510,6 @@ Codename:   focal
 <p>If this didn&rsquo;t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.</p>
 </li>
 </ol>
-<p><a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS 3.2 user</h2></a></p>
-<p>You will need to create a MAAS administrator user to access the web UI:</p>
-<pre><code class="language-nohighlight">sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
-</code></pre>
-<p>$PROFILE is the administrative MAAS username you wish to create.  $EMAIL_ADDRESS is an email address you may type in at random (currently, MAAS does not use this email address).</p>
-<p>The <code>createadmin</code> option will ask for an SSH key.  If you have an SSH key associated with your launchpad or github accounts, you can enter the username here to use the associated key. For launchpad, just enter <code>lp:username</code>, and for github, enter <code>gh:username</code> at the prompt. In both cases, the actual username has to be supplied after the <code>lp:</code> or <code>gh:</code> prefix.</p>
 <p><a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a></p>
 <p>You can check the status of running services with:</p>
 <pre><code>sudo maas status
@@ -568,293 +537,6 @@ tgt                              RUNNING   pid 8040, uptime 0:09:15
 <pre><code>sudo maas init --help
 </code></pre>
 <p><a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a></p>
-<p>Once you&rsquo;ve successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you&rsquo;re going to employing:</p>
-<pre><code>sudo maas apikey --username=$PROFILE &gt; api-key-file
-</code></pre>
-<p>Replace $PROFILE with whatever username you set during the <code>createadmin</code> part of the install process.  Next, login with the following command:</p>
-<pre><code>maas login $PROFILE $MAAS_URL &lt; api-key-file
-</code></pre>
-<p>Substitute $MAAS_URL with the URL that was returned to you when you initialised MAAS, for example, <code>192.168.43.251:5240/MAAS</code>.  Remember that, once you&rsquo;ve logged in, you can get extensive CLI help with the command:</p>
-<pre><code>maas admin --help
-</code></pre>
-<p>Sample output is shown in the detail section below.</p>
-<p><details><summary>MAAS CLI help, sample output</summary>
-usage: maas admin [-h] COMMAND &hellip;</p>
-<p>Issue commands to the MAAS region controller at <code>http://192.168.43.251:5240/MAAS/api/2.0/.</code></p>
-<p>optional arguments:
-  -h, &ndash;help            show this help message and exit</p>
-<p>drill down:
-  COMMAND
-    account             Manage the current logged-in user.
-    bcache-cache-set    Manage bcache cache set on a machine.
-    bcache-cache-sets   Manage bcache cache sets on a machine.
-    bcache              Manage bcache device on a machine.
-    bcaches             Manage bcache devices on a machine.
-    block-device        Manage a block device on a machine.
-    block-devices       Manage block devices on a machine.
-    boot-resource       Manage a boot resource.
-    boot-resources      Manage the boot resources.
-    boot-source         Manage a boot source.
-    boot-source-selection
-                        Manage a boot source selection.
-    boot-source-selections
-                        Manage the collection of boot source selections.
-    boot-sources        Manage the collection of boot sources.
-    commissioning-script
-                        Manage a custom commissioning script.
-    commissioning-scripts
-                        Manage custom commissioning scripts.
-    dhcpsnippet         Manage an individual DHCP snippet.
-    dhcpsnippets        Manage the collection of all DHCP snippets in MAAS.
-    dnsresource         Manage dnsresource.
-    dnsresource-record  Manage dnsresourcerecord.
-    dnsresource-records
-                        Manage DNS resource records (e.g. CNAME, MX, NS, SRV,
-                        TXT)
-    dnsresources        Manage dnsresources.
-    device              Manage an individual device.
-    devices             Manage the collection of all the devices in the MAAS.
-    discoveries         Query observed discoveries.
-    discovery           Read or delete an observed discovery.
-    domain              Manage domain.
-    domains             Manage domains.
-    events              Retrieve filtered node events.
-    fabric              Manage fabric.
-    fabrics             Manage fabrics.
-    fan-network         Manage Fan Network.
-    fan-networks        Manage Fan Networks.
-    file                Manage a FileStorage object.
-    files               Manage the collection of all the files in this MAAS.
-    ipaddresses         Manage IP addresses allocated by MAAS.
-    iprange             Manage IP range.
-    ipranges            Manage IP ranges.
-    interface           Manage a node&rsquo;s or device&rsquo;s interface.
-    interfaces          Manage interfaces on a node.
-    license-key         Manage a license key.
-    license-keys        Manage the license keys.
-    maas                Manage the MAAS server.
-    machine             Manage an individual machine.
-    machines            Manage the collection of all the machines in the MAAS.
-    network             Manage a network.
-    networks            Manage the networks.
-    node                Manage an individual Node.
-    node-results        Read the collection of commissioning script results.
-    node-script         Manage or view a custom script.
-    node-script-result  Manage node script results.
-    node-script-results
-                        Manage node script results.
-    node-scripts        Manage custom scripts.
-    nodes               Manage the collection of all the nodes in the MAAS.
-    notification        Manage an individual notification.
-    notifications       Manage the collection of all the notifications in
-                        MAAS.
-    package-repositories
-                        Manage the collection of all Package Repositories in
-                        MAAS.
-    package-repository  Manage an individual package repository.
-    partition           Manage partition on a block device.
-    partitions          Manage partitions on a block device.
-    pod                 Manage an individual pod.
-    pods                Manage the collection of all the pod in the MAAS.
-    rack-controller     Manage an individual rack controller.
-    rack-controllers    Manage the collection of all rack controllers in MAAS.
-    raid                Manage a specific RAID (Redundant Array of Independent
-                        Disks) on a machine.
-    raids               Manage all RAIDs (Redundant Array of Independent
-                        Disks) on a machine.
-    region-controller   Manage an individual region controller.
-    region-controllers  Manage the collection of all region controllers in
-                        MAAS.
-    resource-pool       Manage a resource pool.
-    resource-pools      Manage resource pools.
-    sshkey              Manage an SSH key.
-    sshkeys             Manage the collection of all the SSH keys in this
-                        MAAS.
-    sslkey              Manage an SSL key.
-    sslkeys             Operations on multiple keys.
-    space               Manage space.
-    spaces              Manage spaces.
-    static-route        Manage static route.
-    static-routes       Manage static routes.
-    subnet              Manage subnet.
-    subnets             Manage subnets.
-    tag                 Tags are properties that can be associated with a Node
-                        and serve as criteria for selecting and allocating
-                        nodes.
-    tags                Manage all tags known to MAAS.
-    user                Manage a user account.
-    users               Manage the user accounts of this MAAS.
-    version             Information about this MAAS instance.
-    vlan                Manage a VLAN on a fabric.
-    vlans               Manage VLANs on a fabric.
-    vm-host             Manage an individual vm-host.
-    vm-hosts            Manage the collection of all the vm-hosts in the MAAS.
-    vmfs-datastore      Manage VMFS datastore on a machine.
-    vmfs-datastores     Manage VMFS datastores on a machine.
-    volume-group        Manage volume group on a machine.
-    volume-groups       Manage volume groups on a machine.
-    zone                Manage a physical zone.
-    zones               Manage physical zones.</p>
-<p>This is a profile.  Any commands you issue on this profile will
-operate on the MAAS region server.</p>
-<p>The command information you see here comes from the region server&rsquo;s
-API; it may differ for different profiles.  If you believe the API may
-have changed, use the command&rsquo;s &lsquo;refresh&rsquo; sub-command to fetch the
-latest version of this help information from the server.
-</details></p>
-<p><a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a></p>
-<p>Configuring MAAS consists of four broad steps:</p>
-<ol>
-<li>Setting upstream DNS</li>
-<li>Importing an SSH key for your admin user</li>
-<li>Importing images</li>
-<li>Configuring DNS</li>
-</ol>
-<p>This section will cover those four operations</p>
-<p><a href="#heading--setting-dns"><h4 id="heading--setting-dns">How to set upstream DNS</h4></a></p>
-<p>After logging in for the first time, you will need to set a number of system-wide configuration options.  First up, you should configure DNS.  You can check out the help for DNS settings, known in the CLI as a &ldquo;DNS forwarder&rdquo;:</p>
-<pre><code>maas $PROFILE maas set-config name=upstream_dns value=&quot;8.8.8.8&quot;
-</code></pre>
-<p>Here, we&rsquo;ve set the DNS forwarder to &ldquo;8.8.8.8&rdquo; (Google), which is a reliable value.</p>
-<p><a href="#heading--setting-ssh"><h4 id="heading--setting-ssh">How to set up SSH for the admin user</h4></a></p>
-<p>To add a public SSH key to a MAAS user account, type the following command:</p>
-<pre><code>maas $PROFILE sshkeys create &quot;key=$SSH_KEY&quot;
-</code></pre>
-<p><a href="#heading--importing-images"><h4 id="heading--importing-images">How to import images</h4></a></p>
-<p>Before going any further, it&rsquo;s worthwhile to start the image import, as it can sometimes take a few minutes.  You can see what images you already have downloaded with this command:</p>
-<pre><code>maas $PROFILE boot-resources read | jq -r '.[] | &quot;\(.name)\t\(.architecture)&quot;'
-</code></pre>
-<p>This command will return a list similar to the following:</p>
-<pre><code>grub-efi-signed/uefi        amd64/generic
-grub-efi/uefi           arm64/generic
-grub-ieee1275/open-firmware ppc64el/generic
-pxelinux/pxe            i386/generic
-ubuntu/bionic           amd64/ga-18.04
-ubuntu/bionic           amd64/ga-18.04-lowlatency
-ubuntu/bionic           amd64/hwe-18.04
-ubuntu/bionic           amd64/hwe-18.04-edge
-ubuntu/bionic           amd64/hwe-18.04-lowlatency
-ubuntu/bionic           amd64/hwe-18.04-lowlatency-edge
-</code></pre>
-<p>Suppose you also want a version called &ldquo;Trusty&rdquo; &ndash; you can import a new image by first selecting it for download, like this:</p>
-<pre><code>maas $PROFILE boot-source-selections create 1 os=&quot;ubuntu&quot; release=&quot;trusty&quot; arches=&quot;amd64&quot; subarches=&quot;*&quot;  labels=&quot;*&quot;
-</code></pre>
-<p>which returns some JSON confirming your action:</p>
-<pre><code>Success.
-Machine-readable output follows:
-{
-    &quot;os&quot;: &quot;ubuntu&quot;,
-    &quot;release&quot;: &quot;trusty&quot;,
-    &quot;arches&quot;: [
-        &quot;amd64&quot;
-    ],
-    &quot;subarches&quot;: [
-        &quot;*&quot;
-    ],
-    &quot;labels&quot;: [
-        &quot;*&quot;
-    ],
-    &quot;boot_source_id&quot;: 1,
-    &quot;id&quot;: 2,
-    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-sources/1/selections/2/&quot;
-}
-</code></pre>
-<p>Once selected, you can start the image import with this command:</p>
-<pre><code>maas admin boot-resources import
-</code></pre>
-<p>which offers a shorter confirmation message:</p>
-<pre><code>Success.
-Machine-readable output follows:
-Import of boot resources started
-</code></pre>
-<p><a href="#heading--enabling-dhcp"><h4 id="heading--enabling-dhcp">How to enable DHCP</h4></a></p>
-<p>Once your image has been imported, you&rsquo;ll want to get DHCP working, which means finding the untagged VLAN. In truth, it shouldn’t be too hard, because at this point, there still should only be one.</p>
-<p>In order to turn on DHCP, you need to know two things besides the VLAN name (“untagged”): the fabric ID and the primary rack controller name. To start, all the fabrics will be on the same untagged VLAN, so any fabric will do. You can find a valid fabric ID by reading it from any subnet, so just pick one  (e.g., 192.168.123.0/24) and find a usable fabric ID like this:</p>
-<pre><code>maas $PROFILE subnet read $SUBNET_CIDR | grep fabric_id
-</code></pre>
-<p>which returns (in this example):</p>
-<pre><code>&quot;fabric_id&quot;: $FABRIC_ID,
-</code></pre>
-<p>Next, find the name of the primary rack controller. It&rsquo;s usually fairly obvious, but for purposes of argument, assume that it&rsquo;s not known. You can get it this way:</p>
-<pre><code>maas $PROFILE rack-controllers read | grep hostname | cut -d '&quot;' -f 4
-</code></pre>
-<p>This returns a hostname, which we&rsquo;ll call:</p>
-<pre><code>$RACK_CONTR_HOSTNAME
-</code></pre>
-<p>Finally, you need to create an IP range for DHCP, in this case, a dynamic range:</p>
-<pre><code>maas $PROFILE ipranges create type=dynamic start_ip=$START_IP end_ip=$END_IP
-</code></pre>
-<p>This command returns something similar to this sample output:</p>
-<pre><code>Success.
-Machine-readable output follows:
-{
-    "subnet": {
-        "name": "192.168.123.0/24",
-        "description": "",
-        "vlan": {
-            "vid": 0,
-            "mtu": 1500,
-            "dhcp_on": false,
-            "external_dhcp": null,
-            "relay_vlan": null,
-            "fabric": "fabric-2",
-            "primary_rack": null,
-            "name": "untagged",
-            "id": 5003,
-            "space": "undefined",
-            "secondary_rack": null,
-            "fabric_id": 2,
-            "resource_uri": "/MAAS/api/2.0/vlans/5003/"
-        },
-        "cidr": "192.168.123.0/24",
-        "rdns_mode": 2,
-        "gateway_ip": null,
-        "dns_servers": [],
-        "allow_dns": true,
-        "allow_proxy": true,
-        "active_discovery": false,
-        "managed": true,
-        "id": 4,
-        "space": "undefined",
-        "resource_uri": "/MAAS/api/2.0/subnets/4/"
-    },
-    "type": "dynamic",
-    "start_ip": "192.168.123.190",
-    "end_ip": "192.168.123.253",
-    "user": {
-        "is_superuser": true,
-        "username": "admin",
-        "email": "admin@admin.com",
-        "is_local": true,
-        "resource_uri": "/MAAS/api/2.0/users/admin/"
-    },
-    "comment": "",
-    "id": 1,
-    "resource_uri": "/MAAS/api/2.0/ipranges/1/"
-}
-</code></pre>
-<p>So you should now be able to turn on DHCP like this:</p>
-<pre><code>maas $PROFILE vlan update $FABRIC_ID untagged dhcp_on=True primary_rack=$RACK_CONTR_HOSTNAME
-</code></pre>
-<p>If you&rsquo;ve done everything correctly, you should see JSON output similar to this sample:</p>
-<pre><code>Success.
-Machine-readable output follows:
-{
-    "vid": 0,
-    "mtu": 1500,
-    "dhcp_on": true,
-    "external_dhcp": null,
-    "relay_vlan": null,
-    "fabric": "fabric-2",
-    "space": "undefined",
-    "primary_rack": "8dwnne",
-    "secondary_rack": null,
-    "name": "untagged",
-    "fabric_id": 2,
-    "id": 5003,
-    "resource_uri": "/MAAS/api/2.0/vlans/5003/"
-}
-</code></pre>
 <!--
 <a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a>
 
