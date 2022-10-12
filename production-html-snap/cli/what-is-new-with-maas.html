@@ -411,28 +411,31 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>MAAS 3.3 release notes</h1><!-- "MAAS 3.3 release notes" -->
 
-<p>Here you will find release notes for:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
-<li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
-</ul>
+<!-- Here you will find release notes for:
+
+- [The current version of MAAS](#heading--current-maas-release-notes)
+- [Other MAAS versions](#heading--other-maas-versions) -->
+
 <p><a href="#heading--3-3-0-maas-release-notes"><h2 id="heading--3-3-0-maas-release-notes">MAAS 3.3 release notes</h2></a></p>
 <p>We are happy to announce that MAAS 3.3 has been released, with concerted efforts to improve MAAS on multiple fronts. New features include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</a></li>
-<li><a href="#heading--vault-integration">Integration of Vault for credential storage</a></li>
 </ul>
+<!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
+
 <p>Improved capabilities include the following:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--22-04-support">Native support for 22.04 LTS and core22</a></li>
-<li><a href="#heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</a></li>
-<li><a href="#heading--nvidia-dpu-support">The first phase of Nvidia DPU support</a></li>
+</ul>
+<!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
+<!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
+<ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a></li>
 </ul>
 <p>Greatly expanded documentation sections include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</a></li>
-<li><a href="#heading--maas-config-settings-ref">MAAS Configuration settings reference</a></li>
+<li><a href="#heading--maas-config-settings-ref">MAAS configuration settings reference</a></li>
 </ul>
 <p>Read on to catch up with what we&rsquo;ve done this cycle.</p>
 <p><a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a></p>
@@ -448,19 +451,29 @@
 <p>There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.</p>
 <p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
 <p>Read the <a href="ansible-playbooks-reference.html">Ansible playbooks reference</a> document to learn more.</p>
-<p><a href="#heading--vault-integration"><h3 id="heading--vault-integration">Integration of Vault for credential storage</h3></a></p>
-<p>MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …), currently stored in the database &ndash; which is insecure by default. This configuration may not meet everyone&rsquo;s security requirements or regulations. For this reason, we&rsquo;ve integrated MAAS with Hashicorp Vault, a well-established solution for secure, centralised credential storage.</p>
-<p>You can read the <a href="maas-vault-reference.html">MAAS Vault reference</a> documentation to learn more.</p>
+<!--
+<a href="#heading--vault-integration"><h3 id="heading--vault-integration">Integration of Vault for credential storage</h3></a>
+
+MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …), currently stored in the database -- which is insecure by default. This configuration may not meet everyone's security requirements or regulations. For this reason, we've integrated MAAS with Hashicorp Vault, a well-established solution for secure, centralised credential storage.
+
+You can read the [MAAS Vault reference](maas-vault-reference.html) documentation to learn more. -->
+
 <p><a href="#heading--22-04-support"><h3 id="heading--22-04-support">Native support for 22.04 LTS and core22</h3></a></p>
 <p>MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.</p>
 <p>Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The <a href="how-to-install-maas.html">installation guide</a> provides the necessary details.</p>
-<p><a href="#heading--simultaneous-deployment-improvements"><h3 id="heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</h3></a></p>
-<p>MAAS 3.3 brings some behind-the-scenes performance improvements to the product.  When you deploy many machines, you expect them all deploy reliably, with IPs allocated in bulk, and no DNS delays or RPC timeouts.  Within our development system, we&rsquo;ve added system tests and metrics to track any failures or latency when large numbers of machines are being deployed.  We&rsquo;ve then used these new data to lower the failure rate and reduce latency in those situations.</p>
-<p><a href="#heading--nvidia-dpu-support"><h3 id="heading--nvidia-dpu-support">The first phase of Nvidia DPU support</h3></a></p>
-<p>Long-term, we know that MAAS administrators want to enlist and use DPUs with MAAS.  The Nvidia DPU is a complex machine with a tremendous amount of capability, so this cycle, we made the first steps toward supporting them.  Details will follow in a forward-looking blog post sometime after the MAAS 3.3 release.</p>
+<!--
+<a href="#heading--simultaneous-deployment-improvements"><h3 id="heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</h3></a>
+
+MAAS 3.3 brings some behind-the-scenes performance improvements to the product.  When you deploy many machines, you expect them all deploy reliably, with IPs allocated in bulk, and no DNS delays or RPC timeouts.  Within our development system, we've added system tests and metrics to track any failures or latency when large numbers of machines are being deployed.  We've then used these new data to lower the failure rate and reduce latency in those situations.
+
+<a href="#heading--nvidia-dpu-support"><h3 id="heading--nvidia-dpu-support">The first phase of Nvidia DPU support</h3></a>
+
+Long-term, we know that MAAS administrators want to enlist and use DPUs with MAAS.  The Nvidia DPU is a complex machine with a tremendous amount of capability, so this cycle, we made the first steps toward supporting them.  Details will follow in a forward-looking blog post sometime after the MAAS 3.3 release.
+-->
+
 <p><a href="#heading--UI-performance-improvements"><h3 id="heading--UI-performance-improvements">UI performance improvements</h3></a></p>
 <p>We wanted to improve the performance of the machine list page for large (&gt;10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.</p>
-<p>With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, do not have to wait for all their machines’ data to be loaded before they can start searching. </p>
+<p>With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. </p>
 <p>The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  At that point, the user can begin to filter machines by using free text search, which matches any of:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>FQDN</li>
@@ -475,7 +488,7 @@
 <li>Description</li>
 <li>Zone name</li>
 <li>Boot VLAN name</li>
-<li>Boot VLAN’s fabric name</li>
+<li>Boot VLAN fabric name</li>
 <li>Architecture</li>
 </ul>
 <p>The filter has some special features:</p>
@@ -486,14 +499,13 @@
 <li>The user can filter machines by multiple machine values (e.g. hostname contains “test” and status is “Testing”)</li>
 <li>The user can filter machines by multiple matches of a machine value (e.g. status is “New” or status is “Ready”)</li>
 <li>The user can filter machines by a list of filter options.</li>
-<li>The list of machines is not added to or removed from after a filter has been performed, except in some specific circumstances:</li>
-<li>When a machine is deleted it gets removed from the list.</li>
+<li>The list of machines is not modified after a filter has been performed, except that when a machine is deleted, it gets removed from the list.</li>
 <li>The data of the machines in the list is updated in real time.</li>
 <li>The user can see a count of the machines that match a certain filter criteria.</li>
 <li>The user can sort the list of machines, ascending or descending, according to a machine parameter.</li>
 <li>The list of machines can be paginated.</li>
 </ul>
-<p>In addition, we felt that a MAAS UI user should be able to group their machines by owner, pool, power state, status, zone or “none” (ungrouped) in order to maintain parity with the machine list in MAAS 3.2 and earlier.  This means retaining the following capabilities:</p>
+<p>In addition, we felt that a MAAS UI user should be able to group their machines by owner, pool, power state, status, zone or “none” (un-grouped) in order to maintain parity with the machine list in MAAS 3.2 and earlier.  This means retaining the following capabilities:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>The user can choose to group the machines in the machine list by owner, pool, power state, status or zone.</li>
 <li>The user can choose not to have the machines in the machine list grouped.</li>
@@ -503,18 +515,20 @@
 <p><strong>How does this compare to the 3.2 filters?</strong></p>
 <p><a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a></p>
 <p>MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult <a href="https://maas.io/docs/api">the API documentation</a> for details.</p>
-<p><a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS Configuration settings reference</h3></a></p>
+<p><a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h3></a></p>
 <p>MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the <a href="configuration-settings-reference.html">Configuration settings reference</a>.</p>
-<p><a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a></p>
-<p>Here are release notes for other relatively recent MAAS versions:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="what-is-new-with-maas-3-2.html">MAAS 3.2</a></li>
-<li><a href="what-is-new-with-maas-3-1.html">MAAS 3.1</a></li>
-<li><a href="what-is-new-with-maas-3-0.html">MAAS 3.0</a></li>
-<li><a href="what-is-new-with-maas-2-9.html">MAAS 2.9</a></li>
-<li><a href="what-is-new-with-maas-2-8.html">MAAS 2.8</a></li>
-<li><a href="what-is-new-with-maas-2-7.html">MAAS 2.7</a></li>
-</ul>
+<!---
+<a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
+
+Here are release notes for other relatively recent MAAS versions:
+
+- [MAAS 3.2](what-is-new-with-maas-3-2.html)
+- [MAAS 3.1](what-is-new-with-maas-3-1.html)
+- [MAAS 3.0](what-is-new-with-maas-3-0.html)
+- [MAAS 2.9](what-is-new-with-maas-2-9.html)
+- [MAAS 2.8](what-is-new-with-maas-2-8.html)
+- [MAAS 2.7](what-is-new-with-maas-2-7.html)
+ -->
     </div>
   </body>
 </html>
