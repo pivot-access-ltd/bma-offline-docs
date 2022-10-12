@@ -5,9 +5,9 @@
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions) -->
 
-<a href="#heading--3-3-0-maas-release-notes"><h2 id="heading--3-3-0-maas-release-notes">MAAS 3.3 release notes</h2></a>
+<a href="#heading--3-3-0-Beta-1-maas-release-notes"><h2 id="heading--3-3-0-Beta-1-maas-release-notes">MAAS 3.3 Beta 1 release notes</h2></a>
 
-We are happy to announce that MAAS 3.3 has been released, with concerted efforts to improve MAAS on multiple fronts. New features include:
+We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted efforts to improve MAAS on multiple fronts. New features include:
 
 - [Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations](#heading--ansible-playbooks)
 <!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
@@ -24,7 +24,7 @@ Greatly expanded documentation sections include:
 - [Shifting the MAAS API documentation to OpenAPI standards](#heading--openapi-support)
 - [MAAS configuration settings reference](#heading--maas-config-settings-ref)
 
-Read on to catch up with what we've done this cycle.
+Read on to catch up with what we've done so far this cycle.
 
 <a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a>
 
