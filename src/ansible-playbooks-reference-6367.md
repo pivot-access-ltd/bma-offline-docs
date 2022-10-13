@@ -80,7 +80,7 @@ The default installation is a snap.  A successful run of the playbook should giv
 - The playbook only installs the maas-region-api deb if the operator chooses the deb installation.
 - Once the region controller is installed, the playbook will run migrations using the configured postgresql primary instance.
 - Running on an already configured machine -- but with a new version -- should upgrade the instance.
-- The operator can override the postgres DSN variable on any machine (hence not setting maas_postgresql_primary or maas_postgresql_secondary) to use an existing PostgreSQL instance not managed by this playbook.
+- The operator can override the postgres DSN variable on any machine (hence not setting `maas_postgres_primary` or `maas_postgres_secondary`) to use an existing PostgreSQL instance not managed by this playbook.
 - Optionally, the user can install a grafana agent by setting the variable `install_metrics=true` either in the hosts or on the command line.
 
 `[MAAS_Region_Controller]` variables:
@@ -170,7 +170,7 @@ You must [back up](/t/how-to-back-up-maas/5096) the database and MAAS configurat
 As an operator, you want to install a reverse proxy and configure high-availability region controllers for a given host using Ansible.  Note that HA region controllers require an HAProxy configuration. You can accomplish this with the following steps:
 
 - [set the maas_cluster_proxy](#heading--Set-the-maas_cluster_proxy),
-- [have Ansible instdall and configure HAProxy](#heading--Use-Ansible-to-configure-HAProxy) on the designated instances, 
+- [have Ansible install and configure HAProxy](#heading--Use-Ansible-to-configure-HAProxy) on the designated instances, 
 - and [verify that the HAProxy is forwarding traffic](#heading--Verify-HAProxy-forwarding) to the region controllers.
  
 Ansible configures the HAProxy instance for optimal use, such that OS images can be uploaded, for example. An unresponsive Region Controller is taken out of the upstream pool quickly.
@@ -283,3 +283,4 @@ As a operator, you want to be able to setup MAAS in a secure way, following best
 
  
 <a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
+

@@ -488,7 +488,7 @@
 <li>The playbook only installs the maas-region-api deb if the operator chooses the deb installation.</li>
 <li>Once the region controller is installed, the playbook will run migrations using the configured postgresql primary instance.</li>
 <li>Running on an already configured machine &ndash; but with a new version &ndash; should upgrade the instance.</li>
-<li>The operator can override the postgres DSN variable on any machine (hence not setting maas_postgresql_primary or maas_postgresql_secondary) to use an existing PostgreSQL instance not managed by this playbook.</li>
+<li>The operator can override the postgres DSN variable on any machine (hence not setting <code>maas_postgres_primary</code> or <code>maas_postgres_secondary</code>) to use an existing PostgreSQL instance not managed by this playbook.</li>
 <li>Optionally, the user can install a grafana agent by setting the variable <code>install_metrics=true</code> either in the hosts or on the command line.</li>
 </ul>
 <p><code>[MAAS_Region_Controller]</code> variables:</p>
@@ -558,7 +558,7 @@ install_metrics: false          # Whether metrics should be enabled for this MAA
 <p>As an operator, you want to install a reverse proxy and configure high-availability region controllers for a given host using Ansible.  Note that HA region controllers require an HAProxy configuration. You can accomplish this with the following steps:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--Set-the-maas_cluster_proxy">set the maas_cluster_proxy</a>,</li>
-<li><a href="#heading--Use-Ansible-to-configure-HAProxy">have Ansible instdall and configure HAProxy</a> on the designated instances, </li>
+<li><a href="#heading--Use-Ansible-to-configure-HAProxy">have Ansible install and configure HAProxy</a> on the designated instances, </li>
 <li>and <a href="#heading--Verify-HAProxy-forwarding">verify that the HAProxy is forwarding traffic</a> to the region controllers.</li>
 </ul>
 <p>Ansible configures the HAProxy instance for optimal use, such that OS images can be uploaded, for example. An unresponsive Region Controller is taken out of the upstream pool quickly.
