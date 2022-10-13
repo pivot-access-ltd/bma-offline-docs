@@ -61,7 +61,7 @@ sudo maas-rack register
 
 These two steps will lead you through two similar <code>apt</code> install sequences.
 
-<a href="#heading--upgrade-to-3-2"><h2 id="heading--upgrade-to-3-2">How to ugprade to MAAS 3.2 from MAAS 2.9 or higher</h2></a>
+<a href="#heading--upgrade-to-3-2"><h2 id="heading--upgrade-to-3-2">How to upgrade to MAAS 3.2 from MAAS 2.9 or higher</h2></a>
 
 Maybe you'd prefer to upgrade from MAAS 2.9 or higher to MAAS 3.2. You can also [upgrade from older versions](#heading--upgrade-from-2-8-to-3-2) with bit more work.
 
