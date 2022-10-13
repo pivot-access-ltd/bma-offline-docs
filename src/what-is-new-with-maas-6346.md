@@ -69,14 +69,14 @@ MAAS 3.3 enhances the way you can filter the machine list, in two ways:
 
 1. You may begin filtering within a very short time after the first page of the machine list loads, even if you have more than 10,000 machines in the list.  
 
-2. You have a wider range of filter choices, as descsribed in the table below.
+2. You have a wider range of filter choices, as described in the table below.
 
 Note that with this version of MAAS, matching machine counts have been removed from the filter list for better performance.
 
 The following table describes the proposed filter set for the MAAS machine list:
 
 - Items marked as "Dynamic" are populated based on existing data, that is, the "Tags" filter only shows tags that currently exist.  
-- Items which are not dynamic present the entire range of possible values, regardless of whether that value currently existds in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.
+- Items which are not dynamic present the entire range of possible values, regardless of whether that value currently exists in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.
 - Items marked as "Grouping" can be used to group machines, instead of the default machine status.
 
 See [How to search MAAS](/t/how-to-search-maas/5192) for details on how to use these parameters.
