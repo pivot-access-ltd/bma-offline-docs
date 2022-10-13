@@ -414,19 +414,6 @@
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
 <p><strong>NOTE:</strong> 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-reference.html">you can always double-check</a>.</p>
-<p><strong>NOTE:</strong> 
-Also note that, with the release of MAAS 3.3, PostgreSQL version 12 is deprecated.  See <a href="">undefined-as-yet-link</a> for instructions on how to upgrade PostgreSQL to version 14.</p>
-<p><a href="#heading--fresh-install-3-3-snap"><h2 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h2></a></p>
-<p>To install MAAS 3.3 from a snap, simply enter the following:</p>
-<pre><code>$ sudo snap install --channel=3.3 maas
-</code></pre>
-<p>After entering your password, the snap will download and install from the 3.2 channel.</p>
-<p><a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h2></a></p>
-<p>Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
-<pre><code>$ sudo snap refresh --channel=3.3 maas
-</code></pre>
-<p>After entering your password, the snap will refresh from the 3.3 channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
-<p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
 <p><a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a></p>
 <p>You can check the status of running services with:</p>
 <pre><code>sudo maas status
