@@ -8,6 +8,10 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 
 [tabs]
 [tab version="v3.3 Beta 1 Snap"]
+[note]
+**ALSO NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favor of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+[/note]
+
 <a href="#heading--fresh-install-3-3-snap"><h2 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h2></a>
 
 To install MAAS 3.2 from a snap, simply enter the following:
@@ -133,6 +137,10 @@ To set up PostgreSQL, even if it's running on a different machine, you can use t
 Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
 [/tab]
 [tab version="v3.3 Beta 1 Packages"]
+[note]
+**ALSO NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favor of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+[/note]
+
 <a href="#heading--fresh-install-3-3-packages"><h2 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h2></a>
 
 The recommended way to set up an initial MAAS environment is to put everything on one machine:
