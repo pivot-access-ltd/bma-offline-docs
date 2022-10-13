@@ -30,6 +30,10 @@ Greatly expanded documentation sections include:
 
 Read on to catch up with what we've done so far this cycle.
 
+[note]
+**NOTE** that this is a Beta release.  Features are included which contain no known regressions, but there may be bugs and/or missing functionality.  Please do not use this release for production.
+[/note]
+
 <a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a>
 
 [Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html) are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  Playbooks are available to:
