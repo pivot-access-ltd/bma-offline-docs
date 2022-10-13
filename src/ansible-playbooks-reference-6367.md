@@ -1,13 +1,14 @@
 <!-- "Ansible playbooks reference" -->
 
-A user should probably have a solid grasp of the standard terminology in relation to ansible:
+A user should probably have a solid grasp of the standard terminology in relation to Ansible:
 Playbook / plays
 Hosts and groups
+Inventory
 
-[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) is a sophisticated IT automation tool that allows users to set up [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html), which automate complex, repititive (or error-prone) setup activities.  While we won't provide a detailed tutorial on Ansible here (since the links above are excellent), there is a bit of terminology you should master before trying to use Ansible with MAAS:
+[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) is a sophisticated IT automation tool that allows users to set up [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html), which automate complex, repetitive (or error-prone) setup activities.  While we won't provide a detailed tutorial on Ansible here (since the links above are excellent), there is a bit of terminology you should master before trying to use Ansible with MAAS:
 
 - **Modules** are binaries (or even pieces of code) that Ansible can run on a managed node.  These modules can be grouped into named collections.
-- **Tasks** are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as "parition and format /sda".
+- **Tasks** are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as "partition and format /sda".
 - **Plays** are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., "install the OS" ==> "partition and format /sda", "install binary x.7.iso", etc.
 - **Playbooks** are YAML files that run plays in a specific order; for example, "install the OS", "install MAAS", "create a region controller", "sync images", etc.
 
@@ -29,7 +30,7 @@ Playbooks are available to automate the setup for:
 
 - [Firewall rules](#heading--Firewall-rules): setup firewall rules.
 
-MAAS Playbooks are available from a [repository](https://github.com/maas/MAAS-ansible-playbook).  They will eventually be available through Ansible Galaxy.
+MAAS Playbooks will eventually be available through Ansible Galaxy.
 
 There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.  These groups include:
 
@@ -48,11 +49,29 @@ As an operator, you want want to install a MAAS region controller onto a given h
 
 <a href="#heading--Setting-the-maas_region_controller-role"><h3 id="heading--Setting-the-maas_region_controller-role">Setting the maas_region_controller role</h3></a>
 
+
 **How do we do this?  Please explain!**
+
+*To attach roles to hosts, a user adds each role to their [Inventory file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups) in the form of either an INI or a YAML file where each role is followed by the addresses of each host to attach the role to.
+The examples below attaches the region controller role to a host running on `10.10.0.20` with the user `ubuntu`:*
+
+INI:
+```INI
+[maas_region_controller]
+10.10.0.20 ansible_user=ubuntu
+```
+YAML:
+```YAML
+all:
+  maas_region_controller:
+    hosts:
+      10.10.0.20:
+        ansible_user: ubuntu
+```
 
 <a href="#heading--Running-the-region-controller-playbook"><h3 id="heading--Running-the-region-controller-playbook">Running the region controller playbook</h3></a>
 
-When running the playbook for a host with the maas_region_controller role, the playbook installs the MAAS region controller.  The documented ansible variable (which one?) provides the user with the ability to set whether it’s a deb installation or a snap installation, along with additional variables for MAAS version, snap channel and/or PPA. 
+When running the playbook for a host with the maas_region_controller role, the playbook installs the MAAS region controller.  The documented ansible variable `maas_installation_type` provides the user with the ability to set whether it’s a deb installation or a snap installation, along with additional variables for MAAS version, snap channel and/or PPA. 
 
 **Please document these variables!**
 
@@ -66,15 +85,34 @@ The default installation is a snap.  A successful run of the playbook should giv
 - Once the region controller is installed, the playbook will run migrations using the configured postgresql primary instance.
 - Running on an already configured machine -- but with a new version -- should upgrade the instance.
 - The operator can override the postgres DSN variable on any machine (hence not setting maas_postgresql_primary or maas_postgresql_secondary) to use an existing PostgreSQL instance not managed by this playbook.
-- Optionally, the user can install a grafana agent (**how do they do this?**)
+- Optionally, the user can install a grafana agent (**how do they do this?**) *set the variable `install_metrics=true` either in the hosts or command line.*
+
+`[MAAS_Region_Controller]` variables:
+```
+maas_version: "latest"          # The version of MAAS to install on the host
+maas_installation_type: "snap"  # The installation manager to use
+maas_snap_channel: "stable"     # The snap channel, if using snap
+maas_url: $Ip_Address           # The url of the database for this MAAS
+enable_tls: false               # Whether TLS should be enabled for this MAAS
+install_metrics: false          # Whether metrics should be enabled for this MAAS
+
+# Details for the administrative account
+admin_username: "admin"
+admin_password: "admin"
+admin_email: "admin@email.com"
+admin_id: "admin"
+```
+*These variables can be defined in the `Hosts` file above, or at the command line using the `--extra_vars` argument.*
 
 The playbook uses an ansible variable to determine what version of MAAS to deploy.  The playbook won’t execute (i.e “skipped” in the context of Ansible) if host_vars show the Ubuntu version is incompatible with the version and install method.  The Region Controller tasks should be able to execute on multiple hosts in a single execution if the target is an Ansible Group rather than a single host.
 
 **please document the steps here:**
 
+
 <a href="#heading--Finding-the-new-region-controller"><h3 id="heading--Finding-the-new-region-controller">Finding the new region controller</h3></a>
 
 **how does the operator find the newly-installed region controller?**
+*It should be accessible at the host ip address, as though the MAAS region had been installed manually.*
 
 <a href="#heading--MAAS-rack-controller"><h2 id="heading--MAAS-rack-controller">MAAS rack controller</h2></a>
 
@@ -87,6 +125,24 @@ As an operator, you want to install a MAAS rack controller to a given host, usin
 <a href="#heading--Setting-the-maas_rack_controller-role"><h3 id="heading--Setting-the-maas_rack_controller-role">Setting the maas_rack_controller role</h3></a>
 
 **How do we do this?  Please explain!**
+*The process is the same as assigning a host the `maas_region_controller` roles, or any role for that matter. The role is given a set of hosts in the `hosts` file of the ansible configuration:*
+
+INI
+```INI
+[$role]
+$Host_Ip_Address extra_variable=$Variable_Value
+$Second_Host_Ip
+```
+YAML
+```
+all:
+  $role:
+    hosts:
+      $Host_Ip_Address:
+        extra_variable: $Variable_Value
+      $Second_Host_Ip
+```
+
 
 <a href="#heading--Running-the-rack-controller-playbook"><h3 id="heading--Running-the-rack-controller-playbook">Running the rack controller playbook</h3></a>
 
@@ -96,19 +152,33 @@ When running the playbook for a host with the maas_rack_controller role, the pla
 - The rack controller tasks should be able to execute on multiple hosts in a single execution if an Ansible Group is targeted rather than a single host.
 - Only install the maas-rack-controller deb if using the deb installation.
 - Running on an already configured machine but with a new version should upgrade the instance.
-- You can optionally install a grafana agent (**how do we do this?**)
+- You can optionally install a grafana agent (**how do we do this?**) *set the `install_metrics` variable to `true` either in the hosts file or at the command line.*
+
+`[MAAS_Rack_Controller]` Variables
+```bash
+maas_version: "latest"          # The version of MAAS to install on the host
+maas_installation_type: "snap"  # The installation manager to use
+maas_snap_channel: "stable"     # The snap channel, if using snap
+maas_url: $Ip_Address           # The url of the database for this MAAS
+maas_rack_secret:               # The secret used to enroll a MAAS rack
+enable_tls: false               # Whether TLS should be enabled for this MAAS
+install_metrics: false          # Whether metrics should be enabled for this MAAS
+```
 
 <a href="#heading--Finding-the-new-rack-controller"><h3 id="heading--Finding-the-new-rack-controller">Finding the new rack controller</h3></a>
 
 **how does the operator find the newly-installed rack controller?**
+*The rack should be accessible at the host IP address, just as if you had installed it there manually*
 
 <a href="#heading--MAAS-de-installation"><h3 id="heading--MAAS-de-installation">MAAS de-installation</h3></a>
 
 As an operator, you want to be able to revert the MAAS setup installed by this playbook, such that the machine is clean of all MAAS packages or snaps.  In order to teardown a MAAS deployment, you can run a separate entry-point within the playbook to teardown the installed MAAS packages or snaps.  This entry-point is provided in the playbook to remove the installation that the default entry-point provides. **What does that last sentence mean, exactly?**
+*Running the other playbooks with the default configuration will install a MAAS. Running this playbook with the default configuration with perfectly undo the default install ie: metrics aren't enabled by default, so we don't uninstall metrics by default.*
 
 You must back up the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.
 
 **How does one do this, exactly?**
+*In theory this is the same as backing up any other MAAS DB and MAAS Config, we have [this doc](https://maas.io/docs/how-to-back-up-maas) on maas.io that should cover this.*
 
 <a href="#heading--MAAS-high-availability"><h3 id="heading--MAAS-high-availability">MAAS high availability</h3></a>
 
