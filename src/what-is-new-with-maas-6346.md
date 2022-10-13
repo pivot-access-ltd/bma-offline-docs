@@ -31,7 +31,7 @@ Greatly expanded documentation sections include:
 Read on to catch up with what we've done so far this cycle.
 
 [note]
-**NOTE** that this is a Beta release.  Features are included which contain no known regressions, but there may be bugs and/or missing functionality.  Please do not use this release for production.
+**NOTE** that this is a Beta release.  Features are included which contain no known regressions, but there may be bugs and/or missing functionality due to ongoing development work.  Please do not use this release for production.
 [/note]
 
 <a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a>
