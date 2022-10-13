@@ -43,7 +43,7 @@ After installing ansible, running each of the playbooks on a blank machine will 
 
 <a href="#heading--Running-a-MAAS-Ansible-playbook"><h2 id="heading--Running-a-MAAS-Ansible-playbook">Running a MAAS Ansible playbook</h2></a>
 
-In general terms, you can run any of the MAAS Ansible playbooks with a command of this form:
+In general terms, you can run any of the MAAS Ansible plays with a command of this form:
 
 ```nohighlight
 ansible-playbook -i hosts \
@@ -56,7 +56,7 @@ maas_url=$MAAS_URL" \
 ./site.yaml
 ```
 
-Consult the Ansible documentation for more details on additional options and command structure.
+A command of this form will run all of the plays below (i.e., the entire playbook).  If you want to run the tasks for one particular role (or roles), you can use the form  `--tags <target role(s)>` to limit which parts of the MAAS Ansible playbook run.  Consult the Ansible documentation for more details on additional options and command structure.
 
 <a href="#heading--MAAS-region-controller"><h2 id="heading--MAAS-region-controller">MAAS region controller</h2></a>
 
@@ -300,3 +300,4 @@ As a operator, you want to be able to setup MAAS in a secure way, following best
 
  
 <a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
+

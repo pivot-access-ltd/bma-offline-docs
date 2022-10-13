@@ -458,7 +458,7 @@
 </ul>
 <p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
 <p><a href="#heading--Running-a-MAAS-Ansible-playbook"><h2 id="heading--Running-a-MAAS-Ansible-playbook">Running a MAAS Ansible playbook</h2></a></p>
-<p>In general terms, you can run any of the MAAS Ansible playbooks with a command of this form:</p>
+<p>In general terms, you can run any of the MAAS Ansible plays with a command of this form:</p>
 <pre><code class="language-nohighlight">ansible-playbook -i hosts \
 --extra_vars \
 &quot;maas_version=$MAAS_VERSION 
@@ -468,7 +468,7 @@ maas_installation_type=&lt;deb|snap&gt;
 maas_url=$MAAS_URL&quot; \
 ./site.yaml
 </code></pre>
-<p>Consult the Ansible documentation for more details on additional options and command structure.</p>
+<p>A command of this form will run all of the plays below (i.e., the entire playbook).  If you want to run the tasks for one particular role (or roles), you can use the form  <code>--tags &lt;target role(s)&gt;</code> to limit which parts of the MAAS Ansible playbook run.  Consult the Ansible documentation for more details on additional options and command structure.</p>
 <p><a href="#heading--MAAS-region-controller"><h2 id="heading--MAAS-region-controller">MAAS region controller</h2></a></p>
 <p>As an operator, you want want to install a MAAS region controller onto a given host using Ansible.  To accomplish this, you must:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
