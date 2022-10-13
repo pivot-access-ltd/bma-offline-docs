@@ -41,6 +41,23 @@ There is also a set of groups that will automate setting up specific sections of
 
 After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.
 
+<a href="#heading--Running-a-MAAS-Ansible-playbook"><h2 id="heading--Running-a-MAAS-Ansible-playbook">Running a MAAS Ansible playbook</h2></a>
+
+In general terms, you can run any of the MAAS Ansible playbooks with a command of this form:
+
+```nohighlight
+ansible-playbook -i hosts \
+--extra_vars \
+"maas_version=$MAAS_VERSION 
+maas_postgres_password=$MAAS_PG_PASSWORD 
+maas_postgres_replication_password=$MAAS_PG_REP_PASSWORD 
+maas_installation_type=<deb|snap> 
+maas_url=$MAAS_URL" \
+./site.yaml
+```
+
+Consult the Ansible documentation for more details on additional options and command structure.
+
 <a href="#heading--MAAS-region-controller"><h2 id="heading--MAAS-region-controller">MAAS region controller</h2></a>
 
 As an operator, you want want to install a MAAS region controller onto a given host using Ansible.  To accomplish this, you must:
@@ -283,3 +300,4 @@ As a operator, you want to be able to setup MAAS in a secure way, following best
 
  
 <a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
+
