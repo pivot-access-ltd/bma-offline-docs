@@ -176,17 +176,33 @@ As an operator, you want to install a reverse proxy and configure high-availabil
 Ansible configures the HAProxy instance for optimal use, such that OS images can be uploaded, for example. An unresponsive Region Controller is taken out of the upstream pool quickly.
 The HAProxy instance does not interfere with Nginx/MAAS TLS configuration
 
-<a href="#heading--Set-the-maas_cluster_proxy"><h3 id="heading--Set-the-maas_cluster_proxy">Set the maas_cluster_proxy</h3></a>
+<a href="#heading--Set-the-maas_proxy"><h3 id="heading--Set-the-maas_proxy">Set the maas_proxy role</h3></a>
 
-**How does one do this?**
+Set the following in the `hosts` file to set the `maas_proxy` role:
+
+```nohighlight
+maas_proxy
+my.host ansible_user=ssh_user
+```
+
+For example, on a host called "neuromancer" with an SSH-capable user called "stormrider", this YAML would be:
+
+```nohighlight
+maas_proxy
+neuromancer ansible_user=stormrider
+```
 
 <a href="#heading--Use-Ansible-to-configure-HAProxy"><h3 id="heading--Use-Ansible-to-configure-HAProxy">Use Ansible to configure HAProxy</h3></a>
 
-**How does one do this?**
+Run the full playbook, or add `--tags <target role(s)>` to run only the tasks for a given role.
 
 <a href="#heading--Verify-HAProxy-forwarding"><h3 id="heading--Verify-HAProxy-forwarding">Verify HAProxy forwarding</h3></a>
 
-**How does one do this?**
+You can verify the HAProxy forwarding by running `curl -L http://<haproxy host>:5240/MAAS` if HAProxy is on a separate host from the region controller; otherwise, change the port number to 5050 like this:
+
+```nohighlight
+curl -L http://<haproxy hostd>:5050/MAAS
+```
 
 <a href="#heading--PostgreSQL-primary-role"><h2 id="heading--PostgreSQL-primary-role">PostgreSQL primary role</h2></a>
 
@@ -198,17 +214,29 @@ As an operator, you want to install a Postgresql database as a primary to a give
  
 Ansible installs the latest supported version of PostgreSQL supported for the given MAAS version. **Do they select the MAAS version?  How does it know?**  If the playbook runs with other roles set on targeted hosts / groups, the tasks associated with the maas_postgresql_primary role runs first. If the operator sets a variable for importing a backup, the backup is loaded into PostgreSQL. ** How do they set this variable?  What is the variable?**
 
-<a href="#heading--Set-the-maas_postgresql_primary-role"><h3 id="heading--Set-the-maas_postgresql_primary-role">Set the maas_postgresql_primary role</h3></a>
+<a href="#heading--Set-the-maas_postgres_primary-role"><h3 id="heading--Set-the-maas_postgres_primary-role">Set the maas_postgres_primary role</h3></a>
 
-**How does one do this?**
+Set the following in the `hosts` file to set the `maas_postgres_primary` role:
+
+```nohighlight
+maas_postgres_primary
+my.host ansible_user=ssh_user
+```
+
+For example, on a host called "neuromancer" with an SSH-capable user called "stormrider", this YAML would be:
+
+```nohighlight
+maas_postgres_primary
+neuromancer ansible_user=stormrider
+```
 
 <a href="#heading--Use-Ansible-to-install-a-postgres-instance"><h3 id="heading--Use-Ansible-to-install-a-postgres-instance">Use Ansible to install a postgres instance</h3></a>
 
-**How does one do this?**
+Run the full playbook, or add `--tags <target role(s)>` to run only the tasks for a given role.
 
 <a href="#heading--Verify-the-PostgreSQL-instance"><h3 id="heading--Verify-the-PostgreSQL-instance">Verify the PostgreSQL instance</h3></a>
 
-**How does one do this?**
+You can verify the primary by running `sudo -u postgres psql` and making sure you get a prompt.
 
 <a href="#heading--PostgreSQL-secondary-role"><h2 id="heading--PostgreSQL-secondary-role">PostgreSQL secondary role</h2></a>
 
@@ -224,28 +252,35 @@ If the playbook runs with other roles set on targeted hosts / groups, the tasks 
 
 Automated failover is configured manually, external to this playbook. Manual failover can be achieved by a separate set of tasks for the maas_postgresql_secondary role, which once successful, changes the machine’s role to a maas_postgresql_primary and its configuration reflects that.
 
-<a href="#heading--Set-the-maas_postregresql_secondary-role-"><h3 id="heading--Set-the-maas_postregresql_secondary-role-">Set the maas_postregresql_secondary role </h3></a>
+<a href="#heading--Set-the-maas_postregres_secondary-role-"><h3 id="heading--Set-the-maas_postregres_secondary-role-">Set the maas_postregres_secondary role </h3></a>
 
-**How does one do this?**
+Set the following in the `hosts` file to set the `maas_postgres_secondary` role:
+
+```nohighlight
+maas_postgres_secondary
+my.host ansible_user=ssh_user
+```
+
+For example, on a host called "neuromancer" with an SSH-capable user called "stormrider", this YAML would be:
+
+```nohighlight
+maas_postgres_secondary
+neuromancer ansible_user=stormrider
+```
 
 <a href="#heading--Use-Ansible-to-install-PostgreSQL-failover-instance"><h3 id="heading--Use-Ansible-to-install-PostgreSQL-failover-instance">Use Ansible to install PostgreSQL failover instance</h3></a>
 
-**How does one do this?**
+Run the full playbook, or add `--tags <target role(s)>` to run only the tasks for a given role.
 
 <a href="#heading--Verify-that-the-failover-instance-works-properly"><h3 id="heading--Verify-that-the-failover-instance-works-properly">Verify that the failover instance works properly</h3></a>
 
-**How does one do this?**
+You can verify the primary by running `sudo -u postgres psql`; when you get a prompt, enter `select * from pg_stat_replication;`.  This should return a list of all secondaries connected to that primary.
 
+<!--
 <a href="#heading--Firewall-rules"><h2 id="heading--Firewall-rules">Firewall rules</h2></a>
 
 As a operator, you want to be able to setup MAAS in a secure way, following best practices and operational guidance on securing MAAS. In order to make a MAAS setup secure, I would Ansible playbooks to configure firewalls and file permissions based on https://maas.io/docs/how-to-secure-maas.
 
-**What steps does one take to make this happen?**
  
-<a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a>
+<a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
 
-**not sure what this means or how to execute it; enlighten me?**
-
-A set of groups that will automate setting up specific sections of MAAS
-I.e.: a postgres group that sets up the primary, and secondary, without having to manually run the primary and secondary postgres playbooks individually.
-After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. (ie: running the region+rack will setup a region+rack on the host)
