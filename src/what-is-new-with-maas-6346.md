@@ -42,7 +42,6 @@ Read on to catch up with what we've done so far this cycle.
 - install and configure a MAAS rack.
 - setup the postgres primary role.
 - setup the postgres secondary role.
-- setup firewall rules.
 
 MAAS Playbooks are available from a [repository](https://github.com/maas/MAAS-ansible-playbook).  They will eventually be available through Ansible Galaxy.
 
