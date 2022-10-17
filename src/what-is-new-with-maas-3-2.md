@@ -1,1 +1,0 @@
-Discussion about this site, its organization, how it works, and how we can improve it.
