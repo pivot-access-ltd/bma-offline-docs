@@ -196,7 +196,7 @@ MAAS audit event documentation has been greatly expanded to include [much better
 
 Here are release notes for other relatively recent MAAS versions:
 
-- [MAAS 3.2)(/t/what-is-new-with-maas-3-2/5962)
+- [MAAS 3.2](/t/what-is-new-with-maas-3-2/5962)
 - [MAAS 3.1](/t/what-is-new-with-maas-3-1/5964)
 - [MAAS 3.0](/t/what-is-new-with-maas-3-0/5963)
 - [MAAS 2.9](/t/what-is-new-with-maas-2-9/5961)
