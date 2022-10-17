@@ -10,16 +10,16 @@
 We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted efforts to improve MAAS on multiple fronts. New features include:
 
 - [Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations](#heading--ansible-playbooks)
-<!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
 - [Improved machine list filtering](#heading--Improved-machine-list-filtering)
+<!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
 
 Improved capabilities include the following:
 
 - [Native support for 22.04 LTS and core22](#heading--22-04-support)
-<!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
-<!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
 - [UI performance improvements for large machine counts](#heading--UI-performance-improvements)
 - [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images)
+<!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
+<!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
 
 Greatly expanded documentation sections include:
 
