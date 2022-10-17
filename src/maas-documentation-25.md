@@ -44,6 +44,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 ### [Home](/t/maas-documentation/25)
 
 - [Release notes](/t/-/5292)
+- [Request a feature](https://maas.io/docs/request-a-feature)
+- [Report a bug](https://maas.io/docs/report-a-bug)
 
 ### [Tutorials](/t/-/6140)
 
@@ -109,6 +111,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Technical reference](/t/-/6203)
 
+- [Ansible playbooks](/t/-/6367)
 - [Audit event logs](/t/-/5256)
 - [Commissioning scripts](/t/-/5375)
 - [Configuration settings](/t/-/6347)
@@ -148,6 +151,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6346|/docs/what-is-new-with-maas-3-3|
+|https://discourse.maas.io/t/-/6367|/docs/ansible-playbooks-reference|
 |https://discourse.maas.io/t/-/6372|/docs/understanding-maas-audit-events|
 |https://discourse.maas.io/t/-/6373|/docs/understanding-maas-events|
 |https://discourse.maas.io/t/-/6347|/docs/configuration-settings-reference|
