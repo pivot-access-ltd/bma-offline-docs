@@ -36,7 +36,7 @@ Here's a view of our current roadmap:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg"></a>
 
-Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448).
+Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448).
 
 <!-- nohtml begin-nohtml -->
 ## Navigation
@@ -139,6 +139,8 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 - [Machines](/t/-/5080)
 - [Customising machines](/t/-/5976)
 - [VM hosting](/t/-/5068)
+- [MAAS events](/t/-/6373)
+- [MAAS audit events](/t/-/6372)
 - [RBAC](/t/-/6131)
 
 ## URLs
@@ -146,6 +148,8 @@ Thinking about using MAAS for your next project? [Get in touch](/t/how-to-contac
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6372|/docs/understanding-maas-audit-events|
+|https://discourse.maas.io/t/-/6373|/docs/understanding-maas-events|
 |https://discourse.maas.io/t/-/6347|/docs/configuration-settings-reference|
 |https://discourse.maas.io/t/-/6327|/docs/maas-terraform-provider|
 |https://discourse.maas.io/t/-/6233|/docs/installation-requirements|

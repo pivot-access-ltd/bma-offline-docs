@@ -1,369 +1,414 @@
 <!-- "How to work with audit event logs" -->
-You can display and filter audit events via the CLI.  The basic command to report events is:
+
+This article gives concise procedures for working with audit events.  Here you will learn:
+
+- [How to report audit events](#heading--How-to-report-audit-events)
+- [How to filter audit events by hostname](#heading--How-to-filter-audit-events-by-hostname)
+- [How to filter audit events by MAC address](#heading--How-to-filter-audit-events-by-MAC-address)
+- [How to filter audit events by system ID](#heading--How-to-filter-audit-events-by-system-ID)
+- [How to filter audit events by zone](#heading--How-to-filter-audit-events-by-zone)
+- [How to filter audit events by owner](#heading--How-to-filter-audit-events-by-owner)
+- [How to limit the number of audit events displayed](#heading--How-to-limit-the-number-of-audit-events-displayed)
+- [How to move the audit event window](#heading--How-to-move-the-audit-event-window)
+- [How to audit a machine's life-cycle with audit events](#heading--How-to-audit-a-machines-life-cycle-with-audit-events)
+
+For an explanation of MAAS audit events, see [Understanding MAAS audit events](/t/understanding-maas-audit-events/6372).  For a general explanation of MAAS events and how to examine them, see [Understanding MAAS events](/t/understanding-maas-events/6373).  Note that for this article, we will assume you have installed [the `jq` tool](https://stedolan.github.io/jq/), which makes the JSON output of `events query` more human-readable.
+
+<a href="#heading--How-to-report-audit-events"><h2 id="heading--How-to-report-audit-events">How to report audit events</h2></a>
+
+To get a list of MAAS audit events, enter this MAAS CLI command:
 
 ```nohighlight
-usage: maas $PROFILE events query [--help] [-d] [-k] [data [data ...]]
-
-List node events
-
-
-This method accepts keyword arguments.  Pass each argument as a
-key-value pair with an equals sign between the key and the value:
-key1=value1 key2=value key3=value3.  Keyword arguments must come after
-any positional arguments.
-
-List node events, optionally filtered by various criteria
-via URL query parameters.
-
-:param hostname: Optional.  An optional hostname. Only
-events relating to the node with the matching hostname will be
-returned. This can be specified multiple times to get events relating
-to more than one node.
-:type hostname: String
-
- :param mac_address: Optional.  An optional list of MAC
-addresses.  Only nodes with matching MAC addresses will be returned.
-:type mac_address: String
-
- :param id: Optional.  An optional list of system ids.
-Only nodes with matching system ids will be returned.
-:type id: String
-
- :param zone: Optional.  An optional name for a physical
-zone. Only nodes in the zone will be returned.
-:type zone: String
-
- :param agent_name: Optional.  An optional agent name.
-Only nodes with matching agent names will be returned.
-:type agent_name: String
-
- :param level: Optional.  Desired minimum log level of
-returned events. Returns this level of events and greater. Choose from:
-AUDIT, CRITICAL, DEBUG, ERROR, INFO, WARNING.  The default is INFO.
-:type level: String
-
- :param limit: Optional.  Optional number of events to
-return. Default 100.  Maximum: 1000.
-:type limit: String
-
- :param before: Optional.  Optional event id.  Defines
-where to start returning older events.
-:type before: String
-
- :param after: Optional.  Optional event id.  Defines
-where to start returning newer events.
-:type after: String
-
- :param owner: Optional.  If specified, filters the list
-to show only events owned by the specified username.
-:type owner: String
-
-
-Common command-line options:
-    --help, -h
-	Show this help message and exit.
-    -d, --debug
-	Display more information about API responses.
-    -k, --insecure
-	Disable SSL certificate check
+$ maas $PROFILE events query level=AUDIT \
+| jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-<a href="#heading--how-to-report-audit-events"><h2 id="heading--how-to-report-audit-events">How to report audit events</h2></a>
-
-To report on audit-level events, you just have to add the `level` parameter to the previous command, like this:
+This produces a table of 100 of the most recent audit events.  The truncated table might look something like this:
 
 ```nohighlight
-maas $PROFILE events query level=AUDIT
+USERNAME       HOSTNAME         DATE                        EVENT
+--------       --------         ----                        -----
+paulomalovich  ruling-bobcat    Tue, 04 Oct. 2022 13:19:22  Started testing on 'ruling-bobcat'.
+paulomalovich  new-name         Tue, 04 Oct. 2022 11:45:44  Started testing on 'new-name'.
+paulomalovich  fine-hornet      Tue, 04 Oct. 2022 11:44:48  Powered off 'fine-hornet'.
+paulomalovich  fine-hornet      Tue, 04 Oct. 2022 11:44:39  Powered off 'fine-hornet'.
+admin          polong           Tue, 04 Oct. 2022 11:39:44  Started testing on 'polong'.
+paulomalovich  fine-hornet      Tue, 04 Oct. 2022 11:35:32  Powered off 'fine-hornet'.
+admin          fair-marten      Mon, 03 Oct. 2022 14:13:54  Started testing on 'fair-marten'.
+admin          new-name         Mon, 03 Oct. 2022 14:13:54  Started testing on 'new-name'.
+paulomalovich  new-name         Fri, 30 Sep. 2022 09:44:25  Started testing on 'new-name'.
+stormrider     ruling-bobcat    Wed, 28 Sep. 2022 21:36:36  Marked 'ruling-bobcat' broken.
+stormrider     ruling-bobcat    Wed, 28 Sep. 2022 20:46:46  Started commissioning on 'ruling-bobcat'.
+stormrider     ruling-bobcat    Wed, 28 Sep. 2022 20:46:38  Set the zone to 'default' on 'ruling-bobcat'.
+paulomalovich  top-monkey       Wed, 28 Sep. 2022 14:43:47  Tagging 'top-monkey'.
+paulomalovich  fake-controller  Wed, 28 Sep. 2022 14:24:36  Powered on 'fake-controller'.
+paulomalovich  fake-controller  Wed, 28 Sep. 2022 14:24:06  Powered on 'fake-controller'.
+paulomalovich  fake-controller  Wed, 28 Sep. 2022 14:24:03  Powered off 'fake-controller'.
+paulomalovich  new-name         Wed, 28 Sep. 2022 14:19:35  Untagging 'new-name'.
+paulomalovich  new-name         Wed, 28 Sep. 2022 14:19:30  Tagging 'new-name'.
+stormrider     ruling-bobcat    Tue, 27 Sep. 2022 22:53:35  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider     ruling-bobcat    Tue, 27 Sep. 2022 22:53:30  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider     ruling-bobcat    Tue, 27 Sep. 2022 22:53:11  Started commissioning on 'ruling-bobcat'.
+...
 ```
 
-This produces a stream of JSON representing only the audit events:
+<a href="#heading--How-to-filter-audit-events-by-hostname"><h2 id="heading--How-to-filter-audit-events-by-hostname">How to filter audit events by hostname</h2></a>
+
+To get a list of MAAS audit events for a specific host, enter this MAAS CLI command:
 
 ```nohighlight
-Success.
-Machine-readable output follows:
-{
-    "count": 100,
-    "events": [
-        {
-            "username": "admin",
-            "node": "e86c7h",
-            "hostname": "valued-moth",
-            "id": 12729,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:51:23",
-            "type": "Node",
-            "description": "Started deploying 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": "e86c7h",
-            "hostname": "valued-moth",
-            "id": 12725,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:51:18",
-            "type": "Node",
-            "description": "Acquired 'valued-moth'."
-        },
-       ...
-   ],
-    "next_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&after=12729",
-    "prev_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&before=12383"
-}
+$ maas $PROFILE events query level=AUDIT hostname=ruling-bobcat \
+| jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-By default, this list is limited to 100 events; that can be changed by specifying the `limit` parameter:
+This produces a table of 100 of the most recent audit events for the specified hostname.  The truncated table might look something like this:
 
 ```nohighlight
-stormrider@neuromancer:~$ maas $PROFILE events query level=AUDIT limit=3
-Success.
-Machine-readable output follows:
-{
-    "count": 3,
-    "events": [
-        {
-            "username": "admin",
-            "node": "e86c7h",
-            "hostname": "valued-moth",
-            "id": 12729,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:51:23",
-            "type": "Node",
-            "description": "Started deploying 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": "e86c7h",
-            "hostname": "valued-moth",
-            "id": 12725,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:51:18",
-            "type": "Node",
-            "description": "Acquired 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 12502,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:44:51",
-            "type": "Node",
-            "description": "Aborted 'commissioning' on 'valued-moth'."
-        }
-    ],
-    "next_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&limit=3&after=12729",
-    "prev_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&limit=3&before=12502"
-}
+paulomalovich  ruling-bobcat  Tue, 04 Oct. 2022 13:19:22  Started testing on 'ruling-bobcat'.
+stormrider     ruling-bobcat  Wed, 28 Sep. 2022 21:36:36  Marked 'ruling-bobcat' broken.
+stormrider     ruling-bobcat  Wed, 28 Sep. 2022 20:46:46  Started commissioning on 'ruling-bobcat'.
+stormrider     ruling-bobcat  Wed, 28 Sep. 2022 20:46:38  Set the zone to 'default' on 'ruling-bobcat'.
+stormrider     ruling-bobcat  Tue, 27 Sep. 2022 22:53:35  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider     ruling-bobcat  Tue, 27 Sep. 2022 22:53:30  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider     ruling-bobcat  Tue, 27 Sep. 2022 22:53:11  Started commissioning on 'ruling-bobcat'.
+admin          ruling-bobcat  Thu, 22 Sep. 2022 15:19:00  Started commissioning on 'ruling-bobcat'.
+admin          ruling-bobcat  Wed, 21 Sep. 2022 10:57:53  Started commissioning on 'ruling-bobcat'.
+admin          ruling-bobcat  Tue, 20 Sep. 2022 15:16:41  Started commissioning on 'ruling-bobcat'.
+admin          ruling-bobcat  Tue, 20 Sep. 2022 15:02:40  Started commissioning on 'ruling-bobcat'.
+admin          ruling-bobcat  Tue, 20 Sep. 2022 11:17:14  Started commissioning on 'ruling-bobcat'.
+sugarsmacks    ruling-bobcat  Tue, 23 Aug. 2022 09:24:20  Started releasing 'ruling-bobcat'.
+admin          ruling-bobcat  Thu, 23 Jun. 2022 23:26:57  Set the zone to 'forbidden' on 'ruling-bobcat'.
+sugarsmacks    ruling-bobcat  Wed, 22 Jun. 2022 10:32:24  Started releasing 'ruling-bobcat'.
+...
 ```
 
-The `limit` parameter can be changed up to a maximum of 1000 entries.
+<a href="#heading--How-to-filter-audit-events-by-MAC-address"><h2 id="heading--How-to-filter-audit-events-by-MAC-address">How to filter audit events by MAC address</h2></a>
 
-[note]
-Non-administrative users will only see their own audit events listed.
-[/note]
-
-<a href="#heading--how-to-filter-audit-event-records"><h2 id="heading--how-to-filter-audit-event-records">How to filter audit event records</h2></a>
-
-You can filter audit event records by hostname, mac_address, system id, zone, and owner.  For example, if you want to know what actions the user `admin` took on hostname `valued-moth`, you could enter a command such as this one:
+To get a list of MAAS audit events for a specific MAC address, enter this MAAS CLI command:
 
 ```nohighlight
-maas $PROFILE events query level=AUDIT owner=admin hostname=valued-moth
+$ maas $PROFILE events query level=AUDIT mac_address=00:07:fe:72:a6:00 \
+| jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-which might produce output similar to the following:
+This produces a table of 100 of the most recent audit events for the hostname with the specified MAC address.  The truncated table might look something like this:
 
 ```nohighlight
-{
-    "count": 14,
-    "events": [
-        {
-            "username": "admin",
-            "node": "e86c7h",
-            "hostname": "valued-moth",
-            "id": 12729,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:51:23",
-            "type": "Node",
-            "description": "Started deploying 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": "e86c7h",
-            "hostname": "valued-moth",
-            "id": 12725,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:51:18",
-            "type": "Node",
-            "description": "Acquired 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 12502,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:44:51",
-            "type": "Node",
-            "description": "Aborted 'commissioning' on 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 12497,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:41:52",
-            "type": "Node",
-            "description": "Started commissioning on 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 12493,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:41:18",
-            "type": "Node",
-            "description": "Started releasing 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 12486,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:40:42",
-            "type": "Node",
-            "description": "Acquired 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 12479,
-            "level": "AUDIT",
-            "created": "Mon, 25 Apr. 2022 21:40:34",
-            "type": "Node",
-            "description": "Started releasing 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 134,
-            "level": "AUDIT",
-            "created": "Thu, 21 Apr. 2022 19:36:48",
-            "type": "Node",
-            "description": "Started deploying 'valued-moth'."
-        },
-        {
-            "username": "admin",
-            "node": null,
-            "hostname": "valued-moth",
-            "id": 130,
-            "level": "AUDIT",
-            "created": "Thu, 21 Apr. 2022 19:36:21",
-            "type": "Node",
-            "description": "Acquired 'valued-moth'."
-        },
-    ],
-    "next_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&hostname=valued-moth&owner=admin&after=12729",
-    "prev_uri": "/MAAS/api/2.0/events/?op=query&level=AUDIT&hostname=valued-moth&owner=admin&before=11"
-}
+USERNAME     HOSTNAME     DATE                        EVENT
+--------     --------     ----                        -----
+admin        fair-marten  Mon, 03 Oct. 2022 14:13:54  Started testing on 'fair-marten'.
+sugarsmacks  fair-marten  Wed, 21 Sep. 2022 14:21:25  Tagging 'fair-marten'.
+sugarsmacks  fair-marten  Wed, 21 Sep. 2022 14:10:38  Untagging 'fair-marten'.
+sugarsmacks  fair-marten  Wed, 22 Jun. 2022 10:20:13  Tagging 'fair-marten'.
+edward       fair-marten  Fri, 08 Apr. 2022 11:02:15  Untagging 'fair-marten'.
+edward       fair-marten  Fri, 08 Apr. 2022 11:02:14  Tagging 'fair-marten'.
+admin        fair-marten  Fri, 11 Feb. 2022 11:00:00  Set the zone to 'twilight' on 'fair-marten'.
+admin        fair-marten  Fri, 11 Feb. 2022 10:59:56  Set the zone to 'danger' on 'fair-marten'.
+admin        fair-marten  Fri, 11 Feb. 2022 10:59:50  Acquired 'fair-marten'.
+carlo        fair-marten  Tue, 11 Jan. 2022 01:56:32  Started testing on 'fair-marten'.
+carlo        fair-marten  Tue, 11 Jan. 2022 01:56:26  Marked 'fair-marten' broken.
+carlo        fair-marten  Tue, 11 Jan. 2022 01:56:23  Aborted 'testing' on 'fair-marten'.
+...
+```
+Note that the JSON output from `events query` does not print the MAC address, so it is not possible to include that parameter in the output.
+
+<a href="#heading--How-to-filter-audit-events-by-system-ID"><h2 id="heading--How-to-filter-audit-events-by-system-ID">How to filter audit events by system ID</h2></a>
+
+To get a list of MAAS audit events for a specific system ID, enter this MAAS CLI command:
+
+```nohighlight
+$ maas $PROFILE events query level=AUDIT id=8r6pw7 \
+| jq -r '(["USERNAME","HOSTNAME","SYSTEM_ID", "DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.node,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-<a href="#heading--how-to-pretty-print-audit-reports-with-jq"><h2 id="heading--how-to-pretty-print-audit-reports-with-jq">How to pretty-print audit reports with jq</h2></a>
-
-A long stream of JSON is not the most efficient means of reporting audit events.  You can use `jq` to create more concise audit reports.  For example, you can try this command:
+This produces a table of 100 of the most recent audit events for the hostname with the specified system ID.  The truncated table might look something like this:
 
 ```nohighlight
-maas $PROFILE events query level=AUDIT limit=20 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv'
+USERNAME       HOSTNAME  SYSTEM_ID  DATE                        EVENT
+--------       --------  ---------  ----                        -----
+stormrider     karura    8r6pw7     Tue, 27 Sep. 2022 21:53:34  Set the zone to 'twilight' on 'karura'.
+admin          karura    8r6pw7     Wed, 21 Sep. 2022 14:00:47  Untagging 'karura'.
+admin          karura    8r6pw7     Wed, 21 Sep. 2022 14:00:01  Tagging 'karura'.
+admin          karura    8r6pw7     Wed, 21 Sep. 2022 13:58:11  Untagging 'karura'.
+admin          karura    8r6pw7     Wed, 21 Sep. 2022 13:57:48  Tagging 'karura'.
+hmrxopxi       karura    8r6pw7     Fri, 12 Aug. 2022 00:16:51  Tagging 'karura'.
+john           karura    8r6pw7     Tue, 12 Jul. 2022 15:08:27  Powered on 'karura'.
+john           karura    8r6pw7     Tue, 12 Jul. 2022 15:08:23  Powered on 'karura'.
+john           karura    8r6pw7     Tue, 12 Jul. 2022 15:08:08  Powered off 'karura'.
+admin          karura    8r6pw7     Thu, 23 Jun. 2022 23:26:53  Set the zone to 'asd' on 'karura'.
+paulomalovich  karura    8r6pw7     Fri, 22 Apr. 2022 08:06:59  Powered off 'karura'.
+paulomalovich  karura    8r6pw7     Fri, 22 Apr. 2022 07:09:55  Powered on 'karura'.
 ```
 
-This produces a table of the first 20 audit events, filtering out the less interesting fields:
+<a href="#heading--How-to-filter-audit-events-by-zone"><h2 id="heading--How-to-filter-audit-events-by-zone">How to filter audit events by zone</h2></a>
+
+To get a list of MAAS audit events that are in a specific zone, enter this MAAS CLI command:
 
 ```nohighlight
-Mon, 25 Apr. 2022 21:51:23	admin	valued-moth	Started deploying 'valued-moth'.
-Mon, 25 Apr. 2022 21:51:18	admin	valued-moth	Acquired 'valued-moth'.
-Mon, 25 Apr. 2022 21:44:51	admin	valued-moth	Aborted 'commissioning' on 'valued-moth'.
-Mon, 25 Apr. 2022 21:41:52	admin	valued-moth	Started commissioning on 'valued-moth'.
-Mon, 25 Apr. 2022 21:41:18	admin	valued-moth	Started releasing 'valued-moth'.
-Mon, 25 Apr. 2022 21:40:42	admin	valued-moth	Acquired 'valued-moth'.
-Mon, 25 Apr. 2022 21:40:34	admin	valued-moth	Started releasing 'valued-moth'.
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	cpu Intel(R) Core(TM) i5-10210U CPU was added on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 7 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 5 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 3 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 11 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 10 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 6 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 4 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	usb device 8 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	pci device 31 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	pci device 31 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	pci device 31 was removed on node 8wmfx3
-Mon, 25 Apr. 2022 21:30:50	unknown	valued-moth	pci device 31 was removed on node 8wmfx3
+$ maas $PROFILE events query level=AUDIT zone=twilight \
+| jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-You can also look for events triggered by a specific user, by adding the `owner` parameter to the CLI invocation above, in this case using the owner `admin`:
+This produces a table of 100 of the most recent audit events for the hosts that are in the specified zone.  The truncated table might look something like this:
 
 ```nohighlight
-maas admin events query level=AUDIT owner="admin" limit=1000 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv'
+USERNAME       HOSTNAME     DATE                        EVENT
+--------       --------     ----                        -----
+admin          polong       Tue, 04 Oct. 2022 11:39:44  Started testing on 'polong'.
+admin          fair-marten  Mon, 03 Oct. 2022 14:13:54  Started testing on 'fair-marten'.
+stormrider     polong       Tue, 27 Sep. 2022 21:53:38  Set the zone to 'twilight' on 'polong'.
+stormrider     karura       Tue, 27 Sep. 2022 21:53:34  Set the zone to 'twilight' on 'karura'.
+sugarsmacks    fair-marten  Wed, 21 Sep. 2022 14:21:25  Tagging 'fair-marten'.
+sugarsmacks    fair-marten  Wed, 21 Sep. 2022 14:10:38  Untagging 'fair-marten'.
+admin          karura       Wed, 21 Sep. 2022 14:00:47  Untagging 'karura'.
+admin          karura       Wed, 21 Sep. 2022 14:00:01  Tagging 'karura'.
+admin          karura       Wed, 21 Sep. 2022 13:58:11  Untagging 'karura'.
+admin          karura       Wed, 21 Sep. 2022 13:57:48  Tagging 'karura'.
+admin          polong       Tue, 13 Sep. 2022 14:14:24  Powered on 'polong'.
+```
+Note that the JSON output from `events query` does not print the zone, so it is not possible to include that parameter in the output.
+
+<a href="#heading--How-to-filter-audit-events-by-owner"><h2 id="heading--How-to-filter-audit-events-by-owner">How to filter audit events by owner</h2></a>
+
+To get a list of MAAS audit events for machines owned by a specific username, enter this MAAS CLI command:
+
+```nohighlight
+$ maas stormrider events query level=AUDIT owner=stormrider | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-This query returns results similar to these:
+This produces a table of 100 of the most recent audit events for the hosts that are owned by the specified username ("owner").  The truncated table might look something like this:
 
 ```nohighlight
-Mon, 25 Apr. 2022 21:51:23	admin	valued-moth	Started deploying 'valued-moth'.
-Mon, 25 Apr. 2022 21:51:18	admin	valued-moth	Acquired 'valued-moth'.
-Mon, 25 Apr. 2022 21:44:51	admin	valued-moth	Aborted 'commissioning' on 'valued-moth'.
-Mon, 25 Apr. 2022 21:41:52	admin	valued-moth	Started commissioning on 'valued-moth'.
-Mon, 25 Apr. 2022 21:41:18	admin	valued-moth	Started releasing 'valued-moth'.
-Mon, 25 Apr. 2022 21:40:42	admin	valued-moth	Acquired 'valued-moth'.
-Mon, 25 Apr. 2022 21:40:34	admin	valued-moth	Started releasing 'valued-moth'.
-Thu, 21 Apr. 2022 19:36:48	admin	valued-moth	Started deploying 'valued-moth'.
-Thu, 21 Apr. 2022 19:36:21	admin	valued-moth	Acquired 'valued-moth'.
-Thu, 21 Apr. 2022 19:21:46	admin	unknown	Updated configuration setting 'completed_intro' to 'True'.
-Thu, 21 Apr. 2022 19:20:49	admin	unknown	Updated configuration setting 'upstream_dns' to '8.8.8.8'.
-Thu, 21 Apr. 2022 19:20:49	admin	unknown	Updated configuration setting 'maas_name' to 'neuromancer'.
-Thu, 21 Apr. 2022 19:20:47	admin	unknown	Updated configuration setting 'http_proxy' to ''.
-Thu, 21 Apr. 2022 19:20:24	admin	unknown	Logged in admin.
+USERNAME    HOSTNAME       DATE                        EVENT
+--------    --------       ----                        -----
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 21:36:36  Marked 'ruling-bobcat' broken.
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 20:46:46  Started commissioning on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 20:46:38  Set the zone to 'default' on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Tue, 27 Sep. 2022 22:53:35  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Tue, 27 Sep. 2022 22:53:30  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Tue, 27 Sep. 2022 22:53:11  Started commissioning on 'ruling-bobcat'.
+stormrider  polong         Tue, 27 Sep. 2022 21:53:38  Set the zone to 'twilight' on 'polong'.
+stormrider  karura         Tue, 27 Sep. 2022 21:53:34  Set the zone to 'twilight' on 'karura'.
+stormrider  new-name       Tue, 27 Sep. 2022 21:53:14  Set the zone to 'forbidden' on 'new-name'.
 ```
 
-<a id="#heading--using-audit-events-to-audit-maas"><h2 id="heading--using-audit-events-to-audit-maas">Using audit events to audit MAAS</h2></a>
+<a href="#heading--How-to-limit-the-number-of-audit-events-displayed"><h2 id="heading--How-to-limit-the-number-of-audit-events-displayed">How to limit the number of audit events displayed</h2></a>
 
-Given the procedures above, you can use audit events to answer questions about a particular MAAS instance.  We will only offer a couple of examples here.  You can certainly extrapolate to suit your own particular needs.
-
-<a id="#heading--auditing-machine-actions"><h3 id="heading--using-auditing-machine-actions">Auditing machine actions</h2></a>
-
-For example, suppose you were trying to discover who deployed a specific machine (say, `valued-moth`) and when it was deployed.  You could enter a command sequence like this one:
+To limit or expand the number of MAAS audit events shown for any given query, use the `limit=` parameter:
 
 ```nohighlight
-maas admin events query level=AUDIT owner="admin" hostname="valued-moth" limit=1000 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv' | grep valued-moth | grep deploy
+$ maas stormrider events query level=AUDIT owner=stormrider limit=3 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-Such a command might yield results such as these:
+This particular command repeats the query used in the previous section, but limits the number of records returned to three:
 
 ```nohighlight
-Mon, 25 Apr. 2022 21:51:23	admin	valued-moth	Started deploying 'valued-moth'.
-Thu, 21 Apr. 2022 19:36:48	admin	valued-moth	Started deploying 'valued-moth'.
+USERNAME    HOSTNAME       DATE                        EVENT
+--------    --------       ----                        -----
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 21:36:36  Marked 'ruling-bobcat' broken.
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 20:46:46  Started commissioning on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 20:46:38  Set the zone to 'default' on 'ruling-bobcat'.
 ```
 
-<a id="#heading--auditing-settings-changes"><h3 id="heading--using-auditing-settings-changes">Auditing settings changes</h2></a>
-
-Or as another example, imagine trying to isolate recent changes to MAAS settings made by `admin`.  You could enter a command similar to this one:
+This parameter can also be used to expand the number of reported records, up to a maximum of 1000.  Note that the query returns only as many records as are available.  For example, we can attempt to return 1000 records for `owner=stormrider`:
 
 ```nohighlight
-maas admin events query level=AUDIT owner="admin" limit=1000 | jq -r '.events[] | [.created, .username, .hostname,.description] | @tsv' | grep setting
+$ maas stormrider events query level=AUDIT owner=stormrider limit=1000 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
 ```
 
-which might give you results like these:
+Since only a few audit events exist, though, the returned list is much smaller:
 
 ```nohighlight
-Thu, 21 Apr. 2022 19:21:46	admin	unknown	Updated configuration setting 'completed_intro' to 'True'.
-Thu, 21 Apr. 2022 19:20:49	admin	unknown	Updated configuration setting 'upstream_dns' to '8.8.8.8'.
-Thu, 21 Apr. 2022 19:20:49	admin	unknown	Updated configuration setting 'maas_name' to 'neuromancer'.
-Thu, 21 Apr. 2022 19:20:47	admin	unknown	Updated configuration setting 'http_proxy' to ''.
-````
+USERNAME    HOSTNAME       DATE                        EVENT
+--------    --------       ----                        -----
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 21:36:36  Marked 'ruling-bobcat' broken.
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 20:46:46  Started commissioning on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Wed, 28 Sep. 2022 20:46:38  Set the zone to 'default' on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Tue, 27 Sep. 2022 22:53:35  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Tue, 27 Sep. 2022 22:53:30  Aborted 'commissioning' on 'ruling-bobcat'.
+stormrider  ruling-bobcat  Tue, 27 Sep. 2022 22:53:11  Started commissioning on 'ruling-bobcat'.
+stormrider  polong         Tue, 27 Sep. 2022 21:53:38  Set the zone to 'twilight' on 'polong'.
+stormrider  karura         Tue, 27 Sep. 2022 21:53:34  Set the zone to 'twilight' on 'karura'.
+stormrider  new-name       Tue, 27 Sep. 2022 21:53:14  Set the zone to 'forbidden' on 'new-name'.
+```
 
-Using `jq` along with `grep` and other command line utilities, you can quickly produce reports that answer a wide range of audit questions about the current MAAS instance.
+<a href="#heading--How-to-move-the-audit-event-window"><h2 id="heading--How-to-move-the-audit-event-window">How to move the audit event window</h2></a>
+
+To return records that occur before a certain record ID number, enter a command like this one:
+
+```nohighlight
+$ maas stormrider events query level=AUDIT after=0 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
+```
+
+This command will yield a list that starts with the following events:
+
+```nohighlight
+USERNAME     HOSTNAME       DATE                        EVENT
+--------     --------       ----                        -----
+admin        ruling-bobcat  Wed, 17 Nov. 2021 00:04:51  Started deploying 'ruling-bobcat'.
+admin        active-amoeba  Mon, 15 Nov. 2021 05:39:48  Set the resource pool to 'default' on 'active-amoeba'.
+admin        fair-marten    Mon, 15 Nov. 2021 05:39:48  Set the resource pool to 'default' on 'fair-marten'.
+admin        active-amoeba  Mon, 15 Nov. 2021 05:37:26  Set the resource pool to 'new' on 'active-amoeba'.
+admin        fair-marten    Mon, 15 Nov. 2021 05:37:26  Set the resource pool to 'new' on 'fair-marten'.
+admin        active-amoeba  Mon, 08 Nov. 2021 04:07:44  Started testing on 'active-amoeba'.
+admin        active-amoeba  Mon, 08 Nov. 2021 04:05:40  Marked 'active-amoeba' broken.
+admin        active-amoeba  Mon, 08 Nov. 2021 04:05:05  Started testing on 'active-amoeba'.
+admin        active-amoeba  Mon, 08 Nov. 2021 04:04:57  Marked 'active-amoeba' broken.
+admin        bolla          Wed, 16 Jun. 2021 04:35:50  Started importing images on 'bolla'.
+```
+
+You can move the start of this window by moving the `after=` setting, like this:
+
+```nohighlight
+$ maas stormrider events query level=AUDIT after=2000 | jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
+```
+
+This command will yield a list that starts with later events:
+
+```nohighlight
+USERNAME     HOSTNAME       DATE                        EVENT
+--------     --------       ----                        -----
+carlo        fair-marten    Wed, 01 Dec. 2021 06:13:45  Tagging 'fair-marten'.
+carlo        new-name       Wed, 01 Dec. 2021 06:13:45  Tagging 'new-name'.
+carlo        ruling-bobcat  Wed, 01 Dec. 2021 06:09:55  Tagging 'ruling-bobcat'.
+carlo        fair-marten    Wed, 01 Dec. 2021 06:09:55  Tagging 'fair-marten'.
+carlo        new-name       Wed, 01 Dec. 2021 06:09:55  Tagging 'new-name'.
+carlo        ruling-bobcat  Wed, 01 Dec. 2021 05:33:41  Started commissioning on 'ruling-bobcat'.
+carlo        fair-marten    Wed, 01 Dec. 2021 05:33:40  Started commissioning on 'fair-marten'.
+carlo        new-name       Wed, 01 Dec. 2021 05:33:40  Started commissioning on 'new-name'.
+carlo        ruling-bobcat  Wed, 01 Dec. 2021 05:21:09  Aborted 'commissioning' on 'ruling-bobcat'.
+carlo        ruling-bobcat  Wed, 01 Dec. 2021 05:21:07  Aborted 'commissioning' on 'ruling-bobcat'.
+carlo        ruling-bobcat  Wed, 01 Dec. 2021 05:21:04  Aborted 'commissioning' on 'ruling-bobcat'.
+carlo        ruling-bobcat  Wed, 01 Dec. 2021 05:21:02  Aborted 'commissioning' on 'ruling-bobcat'.
+carlo        new-name       Wed, 01 Dec. 2021 05:20:50  Started commissioning on 'new-name'.
+carlo        fair-marten    Wed, 01 Dec. 2021 05:20:50  Started commissioning on 'fair-marten'.
+carlo        ruling-bobcat  Wed, 01 Dec. 2021 05:20:40  Started commissioning on 'ruling-bobcat'.
+carlo        new-name       Wed, 01 Dec. 2021 05:20:39  Started commissioning on 'new-name'.
+carlo        fair-marten    Wed, 01 Dec. 2021 05:20:39  Started commissioning on 'fair-marten'.
+```
+
+Note that the starting point of the list (newest date first) has moved forward in time somewhat.  You can also use the `before=` parameter to move the window, as desired.
+
+<a href="#heading--How-to-audit-a-machines-life-cycle-with-audit-events"><h2 id="heading--How-to-audit-a-machines-life-cycle-with-audit-events">How to audit a machine's life-cycle with audit events</h2></a>
+
+To audit a machine's life-cycle, using audit events, do the following:
+
+1. Collect a fair amount of audit data on that particular machine using, for example, the hostname to filter events:
+
+```nohighlight
+maas stormrider events query hostname=ruling-bobcat level=AUDIT after=0 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' > /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=AUDIT after=1000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=AUDIT after=2000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=AUDIT after=3000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=AUDIT after=4000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=AUDIT after=5000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+...to the number of events you wish to collect
+```
+
+2. Collect non-audit data by excluding the `level=` parameter from the call:
+
+```nohighlight
+maas stormrider events query hostname=ruling-bobcat after=0 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat after=1000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat after=2000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat after=3000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat after=4000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat after=5000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+...again, to the number of events you wish to collect
+```
+
+3. Collect state information by using the `level=DEBUG` parameter:
+
+```nohighlight
+maas stormrider events query hostname=ruling-bobcat level=DEBUG after=0 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=DEBUG after=1000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=DEBUG after=2000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=DEBUG after=3000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=DEBUG after=4000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+maas stormrider events query hostname=ruling-bobcat level=DEBUG after=5000 limit=1000 | jq -r '(.events[] | [.id,.level,.type,.created,.description]) 
+| @tsv' | column -t -s$'\t' >> /tmp/audit-data
+...and again, to the number of events you wish to collect
+```
+
+4. Sort your collected data and remove any duplicates (since ranges may overlap at times):
+
+```nohighlight
+sort -u /tmp/audit-data > /tmp/life-cycle
+```
+
+Let's assume at this point, you have a `life-cycle` file that begins something like this:
+
+```nohighlight
+418606  ERROR    Marking node broken               Wed, 17 Nov. 2021 00:02:52  A Physical Interface requires a MAC address.
+418607  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:02:52  From 'New' to 'Broken'
+418608  DEBUG    Marking node fixed                Wed, 17 Nov. 2021 00:04:24  
+418609  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:04:24  From 'Broken' to 'Ready'
+418613  DEBUG    User acquiring node               Wed, 17 Nov. 2021 00:04:51  (admin)
+418614  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:04:51  From 'Ready' to 'Allocated' (to admin)
+418615  DEBUG    User starting deployment          Wed, 17 Nov. 2021 00:04:51  (admin)
+418616  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:04:51  From 'Allocated' to 'Deploying'
+418617  INFO     Deploying                         Wed, 17 Nov. 2021 00:04:51  
+418618  AUDIT    Node                              Wed, 17 Nov. 2021 00:04:51  Started deploying 'ruling-bobcat'.
+418619  INFO     Powering on                       Wed, 17 Nov. 2021 00:04:55  
+418625  ERROR    Marking node failed               Wed, 17 Nov. 2021 00:05:32  Power on for the node failed: Failed talking to node's BMC: Failed to power pbpncx. BMC never transitioned from off to on.
+418626  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:05:32  From 'Deploying' to 'Failed deployment'
+418627  ERROR    Failed to power on node           Wed, 17 Nov. 2021 00:05:32  Power on for the node failed: Failed talking to node's BMC: Failed to power pbpncx. BMC never transitioned from off to on.
+```
+
+5. Walk down the collected life-cycle data to find out what happened to the machine.  In this case, we can see that:
+
+- The machine was marked "Broken" because one of its physical interfaces lacked a MAC address.
+- Someone marked the machine fixed (did they actually fix the problem?), which moved it back to a "Ready" state.
+- Someone acquired the machine (successfully) and attempted to deploy it.
+- MAAS could not talk to the machine's BMC, so the deployment failed.
+
+In this case, a first thought might be to see whether the machine interface was actually fixed, that is, whether the machine was ever adjusted so that it could communicate with MAAS, or whether an interface issues persists.
+
+Note that you must use more than just AUDIT events when debugging life-cycle issues with a machine.  Also note that issue the command `maas $PROFILE events query` without a specified `level=` parameter does not report audit events, so it's best to collect three sets of information: AUDIT, INFO, and DEBUG, and then process the information according to the event ID.
