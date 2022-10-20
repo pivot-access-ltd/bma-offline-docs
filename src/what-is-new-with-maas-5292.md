@@ -28,7 +28,7 @@ Greatly expanded documentation sections include:
 - [Improved MAAS event documentation](#heading--Improved-MAAS-event-documentation)
 - [Improved MAAS audit event documentation](#heading--Improved-MAAS-audit-event-documentation)
 
-Read on to catch up with what we've done so far this cycle.
+This release also includes a massive number of [bug fixes](#heading--MAAS-3-3-Beta-1-bug-list).  Read on to catch up with what we've done so far this cycle.
 
 [note]
 **NOTE** that this is a Beta release. While we aim to ensure there is no regression,  there may be bugs. While we work to stabilise the release, we advise against using beta releases in production environments.
@@ -192,6 +192,126 @@ MAAS event documentation has been expanded to include [much better explanations]
 <a href="#heading--Improved-MAAS-audit-event-documentation"><h3 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h3></a>
 
 MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including many examples and use cases.
+
+<a href="#heading--MAAS-3-3-Beta-1-bug-list"><h2 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h2></a>
+
+So far in MAAS 3.3, we've fixed well over 100 bugs:
+
+- [1762673](https://bugs.launchpad.net/bugs/1762673): maas insists on running the proxy, even when it's disabled
+- [1802505](https://bugs.launchpad.net/bugs/1802505): [ui][2.4][2.5] maas ignores ttl parameter for address records
+- [1806707](https://bugs.launchpad.net/bugs/1806707): [2.5] Composing a VM with an interface attached to a (macvtap) network (on a KVM host NIC that is not a bridge) resulted in disconnect interface
+- [1811109](https://bugs.launchpad.net/bugs/1811109): [2.5, UI, RBAC] Normal users can unmount the root file system, but not remount it
+- [1818004](https://bugs.launchpad.net/bugs/1818004): Slow response in the UI
+- [1822640](https://bugs.launchpad.net/bugs/1822640): [websocket, UI] Admins should be able to change ownership of resources over the UI
+- [1822840](https://bugs.launchpad.net/bugs/1822840): [UI, feature] Add ability to edit/delete (manage) tags over the UI
+- [1825255](https://bugs.launchpad.net/bugs/1825255): TestPostgresListenerService test fails erroneously in CI
+- [1826011](https://bugs.launchpad.net/bugs/1826011): [UI] Compose machine from pod misaligned message
+- [1826789](https://bugs.launchpad.net/bugs/1826789): stress-ng-cpu-long times out in bionic
+- [1826967](https://bugs.launchpad.net/bugs/1826967): Exiting rescue mode shows 'loading ephemeral'
+- [1833545](https://bugs.launchpad.net/bugs/1833545): After removing a controller rackd still tries to update DNS
+- [1840049](https://bugs.launchpad.net/bugs/1840049): [UI] When changing configuration of an Interface, one has to enter the config twice
+- [1852360](https://bugs.launchpad.net/bugs/1852360): Validate network configuration button selects all network scripts that accept an interface parameter
+- [1863395](https://bugs.launchpad.net/bugs/1863395): 2.6.2 Unable to change power type to manual via UI
+- [1871605](https://bugs.launchpad.net/bugs/1871605): Updating controller name shouldn't be allowed in the UI
+- [1874355](https://bugs.launchpad.net/bugs/1874355): Controller details page not updated to match machine details page designs
+- [1881948](https://bugs.launchpad.net/bugs/1881948): IPv6 address for power control fails
+- [1882633](https://bugs.launchpad.net/bugs/1882633): Logical volume size is required
+- [1883232](https://bugs.launchpad.net/bugs/1883232): UI: UI application cached after upgrade
+- [1890262](https://bugs.launchpad.net/bugs/1890262): UI: Error message with a custom image URL doesn't clear
+- [1893226](https://bugs.launchpad.net/bugs/1893226): Machine-specific minimal commissioning kernel resets to MAAS wide default
+- [1893670](https://bugs.launchpad.net/bugs/1893670): UI: display bios_boot_mode in the web UI
+- [1898131](https://bugs.launchpad.net/bugs/1898131): IP address gets hidden, instead of subnet when window is resized
+- [1905636](https://bugs.launchpad.net/bugs/1905636): UI: CentOS 7 is the default over CentOS 8
+- [1909348](https://bugs.launchpad.net/bugs/1909348): MAAS 2.9.0 DNS zone remove @ labels impossible
+- [1913800](https://bugs.launchpad.net/bugs/1913800): PCI and USB information missing from controllers page
+- [1918963](https://bugs.launchpad.net/bugs/1918963): Controllers page out of sync with nodes
+- [1918978](https://bugs.launchpad.net/bugs/1918978): doesn't detect the subarchitecture xgene-uboot for a HP m400 cartridge
+- [1927748](https://bugs.launchpad.net/bugs/1927748): Need additional form inputs for DHCP Snippets associated with ipranges
+- [1929478](https://bugs.launchpad.net/bugs/1929478): Commissioning fails with binary data in IPMI Lan_Conf_Security_Keys
+- [1929973](https://bugs.launchpad.net/bugs/1929973): "Controllers have different installation sources." is not shown on the controllers page
+- [1931654](https://bugs.launchpad.net/bugs/1931654): domain.set_default error handling just returns id
+- [1933408](https://bugs.launchpad.net/bugs/1933408): Setting discovery parent returns cryptic error
+- [1938296](https://bugs.launchpad.net/bugs/1938296): MAAS 3.0 incorrectly calculates the amount of free space on drive
+- [1940909](https://bugs.launchpad.net/bugs/1940909): UI: Allow to create a machine as deployed from the UI
+- [1951229](https://bugs.launchpad.net/bugs/1951229): CLI: Uninformative errors when adding non-existent tags to machines
+- [1955671](https://bugs.launchpad.net/bugs/1955671): support for rocky linux UEFI
+- [1956766](https://bugs.launchpad.net/bugs/1956766): UI: Unable to deploy CentOS7 - centos/focal not a supported combination
+- [1958817](https://bugs.launchpad.net/bugs/1958817): Cannot delete a tag from multiple machines in a bulk with Web UI
+- [1959856](https://bugs.launchpad.net/bugs/1959856): newly added tags in UI don't show until refresh/page change
+- [1960571](https://bugs.launchpad.net/bugs/1960571): Domain name should be checked for duplicate against maas_internal_domain
+- [1961627](https://bugs.launchpad.net/bugs/1961627): confusing UI to add the first network space
+- [1964024](https://bugs.launchpad.net/bugs/1964024): smartctl-validate test runs even when explicitly removed from commissioning step
+- [1965172](https://bugs.launchpad.net/bugs/1965172): [3.1] Setting interface into unconfigured does not reset auto-assign IP mode
+- [1967577](https://bugs.launchpad.net/bugs/1967577): commissioning fails w/ 3.2-beta1: "please fill out the field"
+- [1970803](https://bugs.launchpad.net/bugs/1970803): CLI event filters give extraneous results with more than one filter
+- [1971152](https://bugs.launchpad.net/bugs/1971152): Authentication broken with MASS using Candid
+- [1973236](https://bugs.launchpad.net/bugs/1973236): MAAS reports failure to detect storage that it already detected
+- [1973617](https://bugs.launchpad.net/bugs/1973617): refresh a lxd KVM host resources after it was added
+- [1976194](https://bugs.launchpad.net/bugs/1976194): init rack can't find secrets
+- [1976196](https://bugs.launchpad.net/bugs/1976196): Controller WebSocket handler contains unimplemented methods
+- [1977820](https://bugs.launchpad.net/bugs/1977820): Some tests are skipped due to the "perf" filtering
+- [1977822](https://bugs.launchpad.net/bugs/1977822): ERROR: Redfish 'Redfish' object has no attribute '_get_network_interface'
+- [1977864](https://bugs.launchpad.net/bugs/1977864): 30-maas-01-bmc-config: ERROR: Redfish string indices must be integers
+- [1977866](https://bugs.launchpad.net/bugs/1977866): 30-maas-01-bmc-config: ERROR: 169.254.95.120/16 has host bits set
+- [1977895](https://bugs.launchpad.net/bugs/1977895): Certificate metadata missing from controller websocket model
+- [1977942](https://bugs.launchpad.net/bugs/1977942): 30-maas-01-bmc-config: ERROR: Redfish 'Redfish' object has no attribute '_bmc_config'
+- [1977951](https://bugs.launchpad.net/bugs/1977951): 30-maas-01-bmc-config: ERROR: Redfish nonnumeric port: 'None'
+- [1978024](https://bugs.launchpad.net/bugs/1978024): maas auto-creates interface name for docker bridge on controller, which breaks bind
+- [1978037](https://bugs.launchpad.net/bugs/1978037): Drop legacy /l/ UI prefix
+- [1978072](https://bugs.launchpad.net/bugs/1978072): 30-maas-01-bmc-config: ERROR: Redfish 'dict' object has no attribute 'split'
+- [1978121](https://bugs.launchpad.net/bugs/1978121): 30-maas-01-bmc-config: ERROR: ERROR: Unable to add BMC user!
+- [1978154](https://bugs.launchpad.net/bugs/1978154): MAAS 3.1 introduces breaking changes for custom centos7 images
+- [1978922](https://bugs.launchpad.net/bugs/1978922): MAAS 3.1 - Missing button "Create datastore" in VMFS7 storage layout
+- [1979039](https://bugs.launchpad.net/bugs/1979039): TLS certificates are not recognised by CLI maas <profile> boot-resources create action
+- [1979256](https://bugs.launchpad.net/bugs/1979256): Add config option for UI theme
+- [1979316](https://bugs.launchpad.net/bugs/1979316): UI stuck at the initial configuration page
+- [1979317](https://bugs.launchpad.net/bugs/1979317): Initial configuration form doesn't allow proxy URL with hostname
+- [1980347](https://bugs.launchpad.net/bugs/1980347): MAAS snap fails to parse supervisor STOPPING state
+- [1980436](https://bugs.launchpad.net/bugs/1980436): MAAS CLI with anonymous access fails when TLS is enabled
+- [1980490](https://bugs.launchpad.net/bugs/1980490): MAAS regiond IPC crash due to a machine-resources binary crash when parsing some VPDs
+- [1980818](https://bugs.launchpad.net/bugs/1980818): Configure DHCP for VLAN
+- [1980846](https://bugs.launchpad.net/bugs/1980846): IP Address tooltip on Machines page blocks access to everything underneath and doesnt disappear until mouse-off
+- [1981536](https://bugs.launchpad.net/bugs/1981536): volume group creation fails on md device - MAAS 3.2
+- [1981560](https://bugs.launchpad.net/bugs/1981560): upgrade from 3.1 to 3.2 using debian packages missing steps
+- [1982208](https://bugs.launchpad.net/bugs/1982208): agent.yaml.example is missing when maas is installed via deb package
+- [1982315](https://bugs.launchpad.net/bugs/1982315): MAAS not sending correct metadata_url
+- [1982328](https://bugs.launchpad.net/bugs/1982328): update docstring to include informative not found change
+- [1982846](https://bugs.launchpad.net/bugs/1982846): Missing update_interface method on controller websocket handler
+- [1982866](https://bugs.launchpad.net/bugs/1982866): MAAS Breaks historical custom images
+- [1982984](https://bugs.launchpad.net/bugs/1982984): reverse-proxy service is not displayed for region controller
+- [1983624](https://bugs.launchpad.net/bugs/1983624): Fresh MAAS 3.2 install failed to find controller
+- [1984141](https://bugs.launchpad.net/bugs/1984141): duplicate tag results in failed deployment for KVM host
+- [1984852](https://bugs.launchpad.net/bugs/1984852): machine.filter_options returns empty, duplicate and mis-typed options
+- [1984994](https://bugs.launchpad.net/bugs/1984994): machine.list fails for some group_key values
+- [1985741](https://bugs.launchpad.net/bugs/1985741): Commissioning script 'maas-kernel-cmdline' fails with bonded interfaces
+- [1986372](https://bugs.launchpad.net/bugs/1986372): UI: Setting Default minimum kernel version for commissioning blocks deployments
+- [1987874](https://bugs.launchpad.net/bugs/1987874): interface.update_ip_addresses raise an Exception when exsits multiple StaticIPAddress
+- [1988543](https://bugs.launchpad.net/bugs/1988543): VM Discovery fails, resulting in " Error: An architecture is required." when composing a LXD VM
+- [1988759](https://bugs.launchpad.net/bugs/1988759): Provisioning LXD vmhost fails
+- [1988769](https://bugs.launchpad.net/bugs/1988769): The ppc64 machine in our lab fails during commissioning
+- [1988874](https://bugs.launchpad.net/bugs/1988874): Release command is failing for ppc64 machine in our lab
+- [1989949](https://bugs.launchpad.net/bugs/1989949): provisioningserver TestGetSourceAddress.test_returns_none_if_no_route_found sometimes fails locally
+- [1989970](https://bugs.launchpad.net/bugs/1989970): Can't enlist machines on subnets with DNS set
+- [1989974](https://bugs.launchpad.net/bugs/1989974): rackd fails on CIS-hardened machine with "Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)"
+- [1990014](https://bugs.launchpad.net/bugs/1990014): regiond.conf "debug_http: true" causes image downloads from regiond to fail with 500 error code
+- [1990289](https://bugs.launchpad.net/bugs/1990289): allocate call with system_id can allocate a new machine
+- [1990649](https://bugs.launchpad.net/bugs/1990649): Kernel parameters form resets to previous value after save
+- [1990873](https://bugs.launchpad.net/bugs/1990873): TestKeys - test_get_launchpad_crashes_for_user_not_found
+- [1991106](https://bugs.launchpad.net/bugs/1991106): vCenter password field text is visible in settings
+- [1991210](https://bugs.launchpad.net/bugs/1991210): Color theme resets with page reload
+- [1991229](https://bugs.launchpad.net/bugs/1991229): Selecting all machines in a state in the UI causes traceback in backend
+- [1991372](https://bugs.launchpad.net/bugs/1991372): websocket config update notifications are no longer sent
+- [1991410](https://bugs.launchpad.net/bugs/1991410): wildcard DNS entry is not allowed
+- [1991792](https://bugs.launchpad.net/bugs/1991792): machine.action clone does not accept filter
+- [1991795](https://bugs.launchpad.net/bugs/1991795): machine.action does not always throw errors for failed machines
+- [1992185](https://bugs.launchpad.net/bugs/1992185): unable to deploy a machine with vmhost if a bond interface was created
+- [1992332](https://bugs.launchpad.net/bugs/1992332): websocket machine.list parent group label should return hostname
+- [1992686](https://bugs.launchpad.net/bugs/1992686): MAAS 3.3 alpha missing two existing filters
+- [1992791](https://bugs.launchpad.net/bugs/1992791): Info icons appear/disappear based on checked options in subnet page
+- [1992975](https://bugs.launchpad.net/bugs/1992975): Grouping by parents fails if there's more than one page
+- [1993289](https://bugs.launchpad.net/bugs/1993289): Pod storage pool path can't be blank
+
+More bugs are planned for later 3.3 releases.
 
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 
