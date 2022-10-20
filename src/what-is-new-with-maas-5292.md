@@ -28,10 +28,10 @@ Greatly expanded documentation sections include:
 - [Improved MAAS event documentation](#heading--Improved-MAAS-event-documentation)
 - [Improved MAAS audit event documentation](#heading--Improved-MAAS-audit-event-documentation)
 
-This release also includes a massive number of [bug fixes](#heading--MAAS-3-3-Beta-1-bug-list).  Read on to catch up with what we've done so far this cycle.
+This first Beta release also includes over one-hundred [bug fixes](#heading--MAAS-3-3-Beta-1-bug-list).  Read on to catch up with what we've done so far this cycle.
 
 [note]
-**NOTE** that this is a Beta release. While we aim to ensure there is no regression,  there may be bugs. While we work to stabilise the release, we advise against using beta releases in production environments.
+**NOTE** that this is a Beta release. Although we aim to ensure there is no regression, there still may be bugs. While we work to stabilise this release, we advise against using beta releases in production environments.
 [/note]
 
 <a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a>
@@ -311,7 +311,7 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 - [1992975](https://bugs.launchpad.net/bugs/1992975): Grouping by parents fails if there's more than one page
 - [1993289](https://bugs.launchpad.net/bugs/1993289): Pod storage pool path can't be blank
 
-More bugs are planned for later 3.3 releases.
+More bug-fixes are planned for later 3.3 releases.
 
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 
