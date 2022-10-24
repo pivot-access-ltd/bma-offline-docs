@@ -45,7 +45,17 @@ This first Beta release also includes over one-hundred [bug fixes](#heading--MAA
 
 <a href="#heading--ansible-playbooks"><h3 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h3></a>
 
-[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html) are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  Playbooks are available to:
+[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html) are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  
+
+<a href="#heading--Ten-words-or-less-1"><h3 id="heading--Ten-words-or-less-1">Ten words or less</h3></a>
+
+Automate the drudgery of installing and configuring MAAS with Ansible.
+
+<a href="#heading--Background-explanations-on-Ansible"><h3 id="heading--Background-explanations-on-Ansible">Background explanations on Ansible</h3></a>
+
+Ansible is more than scripting; it's a fully-featured automation tool that allows you to group modules (binaries or snippets of code) into specific tasks.  These tasks can be combined to build plays, and plays can be combined to build playbooks.  The idea is to abstract each level so you're not trying to keep track of which lines of Bash code you need to cut and past in between others.  
+
+With MAAS 3.3, playbooks are available to:
 
 - install and configure a MAAS region on a targeted host; running the playbook on hosts with a MAAS region will upgrade it.
 - install and configure a MAAS rack.
@@ -58,7 +68,54 @@ There is also a set of groups that will automate setting up specific sections of
 
 After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.
 
-Read the [Ansible playbooks reference](/t/ansible-playbooks-reference/6367) document to learn more.
+<a href="#heading--How-you-can-use-Ansible-playbooks"><h3 id="heading--How-you-can-use-Ansible-playbooks">How you can use Ansible playbooks</h3></a>
+
+In general terms, you can run any of the MAAS Ansible plays with a command of this form:
+
+```nohighlight
+ansible-playbook -i hosts \
+--extra_vars \
+"maas_version=$MAAS_VERSION 
+maas_postgres_password=$MAAS_PG_PASSWORD 
+maas_postgres_replication_password=$MAAS_PG_REP_PASSWORD 
+maas_installation_type=<deb|snap> 
+maas_url=$MAAS_URL" \
+./site.yaml
+```
+
+A command of this form will run all of the plays below (i.e., the entire playbook). If you want to run the tasks for one particular role (or roles), you can use the form --tags <target role(s)> to limit which parts of the MAAS Ansible playbook run. Consult the Ansible documentation for more details on additional options and command structure.
+
+[note]
+There's some extra good news here:  These Ansible playbooks were built and tested with MAAS 3.2, so you can use them with all variants of MAAS 3.2.
+[/note]
+
+For example, suppose you want to install a MAAS region controller.  As an operator, you want want to install a MAAS region controller onto a given host using Ansible. To accomplish this, you need only:
+
+- set a maas_region_controller role on a given host,
+- run the region controller playbook,
+- and find the newly-configured region controller present on that host .
+
+To set the `maas_region_controller` role, you add that role to your Inventory file in the form of either an INI or a YAML file, where each role is followed by the addresses of each host to attach the role to. The example below attaches the region controller role to a host running on 10.10.0.20 with the user `ubuntu`:
+
+```nohighlight
+INI:
+
+[maas_region_controller]
+10.10.0.20 ansible_user=ubuntu
+YAML:
+
+all:
+  maas_region_controller:
+    hosts:
+      10.10.0.20:
+        ansible_user: ubuntu
+```
+
+When running the playbook for a host with the `maas_region_controller` role, the playbook installs the MAAS region controller. The documented ansible variable `maas_installation_type` provides the user with the ability to set whether it’s a deb installation or a snap installation, along with additional variables for MAAS version, snap channel and/or PPA.
+
+The default installation is a snap. A successful run of the playbook should give the operator an accessible and ready MAAS instance.  The playbook uses an Ansible variable to determine what version of MAAS to deploy. The playbook won’t execute (i.e “skipped” in the context of Ansible) if the Ubuntu version is incompatible with the version and install method. The Region Controller tasks should be able to execute on multiple hosts in a single execution if the target is an Ansible Group rather than a single host.  The newly-installed region controller should be accessible at the specified host ip address, as though the controller had been installed manually.
+
+Read the [Ansible playbooks reference](/t/ansible-playbooks-reference/6367) document to learn more about the feature and the additional playbooks that are available.
 
 <!--
 <a href="#heading--vault-integration"><h3 id="heading--vault-integration">Integration of Vault for credential storage</h3></a>
