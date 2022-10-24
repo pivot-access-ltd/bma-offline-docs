@@ -417,18 +417,30 @@
 <li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
 </ul>
 <p><a href="#heading--current-maas-release-notes"><h2 id="heading--current-maas-release-notes">MAAS 3.3 Beta 1 release notes</h2></a></p>
-<p>We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted efforts to improve MAAS on multiple fronts. New features include:</p>
+<p>We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted efforts to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
+<p><a href="#heading--Cumulative-summary-of-new-features-in-MAAS-3.3"><h3 id="heading--Cumulative-summary-of-new-features-in-MAAS-3.3">Cumulative summary of new features in MAAS 3.3</h3></a></p>
+<p>New features created for MAAS 3.3 include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</a></li>
-<li><a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a></li>
+<li>
+<p><a href="#heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</a>: <a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a> <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a> are now available for MAAS, making it easy to automate routine setup and configuration of MAAS.</p>
+</li>
+<li>
+<p><a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a>: MAAS 3.3 enhances the presentation and filtering of the machine list, with a shorter wait to start filtering and a wider range of filter choices.</p>
+</li>
 </ul>
 <!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
 
 <p>Improved capabilities include the following:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--22-04-support">Native support for 22.04 LTS and core22</a></li>
-<li><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a></li>
-<li><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</a></li>
+<li>
+<p><a href="#heading--22-04-support">Native support for 22.04 LTS and core22</a>: We&rsquo;ve removed the requirement to use snaps on 22.04 (Jammy Jellyfish); you now can load MAAS 3.3 on 22.04 using packages.</p>
+</li>
+<li>
+<p><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a>: We&rsquo;ve improved the performance of the UI machine list for large (&gt;10000 machines) MAASi instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.</p>
+</li>
+<li>
+<p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</a>: The <a href="https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
+</li>
 </ul>
 <!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
 <!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
@@ -436,9 +448,15 @@
 <p>Greatly expanded documentation sections include:</p>
 <!-- - [Shifting the MAAS API documentation to OpenAPI standards](#heading--openapi-support) -->
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--maas-config-settings-ref">MAAS configuration settings reference</a></li>
-<li><a href="#heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</a></li>
-<li><a href="#heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</a></li>
+<li>
+<p><a href="#heading--maas-config-settings-ref">MAAS configuration settings reference</a>: There is now one reference page that addresses all MAAS settings in one place.  Other references throughout the document are preserved for now.</p>
+</li>
+<li>
+<p><a href="#heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</a>: MAAS event documentation has been expanded to include <a href="understanding-maas-events.html">much better explanations</a> of MAAS events, including many examples.</p>
+</li>
+<li>
+<p><a href="#heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</a>: MAAS audit event documentation has been greatly expanded to include <a href="understanding-maas-audit-events.html">much better explanations</a> of MAAS audit events, including many examples and use cases.</p>
+</li>
 </ul>
 <p>This first Beta release also includes over one-hundred <a href="#heading--MAAS-3-3-Beta-1-bug-list">bug fixes</a>.  Read on to catch up with what we&rsquo;ve done so far this cycle.</p>
 <p><strong>NOTE:</strong> 
