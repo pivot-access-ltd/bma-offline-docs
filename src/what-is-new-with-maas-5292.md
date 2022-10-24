@@ -57,7 +57,7 @@ To install MAAS 3.3 from a snap, simply enter the following:
 
 After entering your password, the snap will download and install from the 3.3 channel.
 
-<a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h2></a>
+<a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h3 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h3></a>
 
 Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a `region+rack` configuration, use this command:
 
@@ -532,6 +532,8 @@ MAAS API User want to experience the MAAS API in a more standard way, along the 
 <a href="#heading--maas-config-settings-ref"><h2 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h2></a>
 
 MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the [Configuration settings reference](/t/configuration-settings-reference/6347).
+
+A minor new feature added with MAAS 3.3 is MAAS site identity.  
 
 <a href="#heading--Improved-MAAS-event-documentation"><h2 id="heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</h2></a>
 
