@@ -435,7 +435,7 @@
 <p><a href="#heading--22-04-support">Native support for 22.04 LTS and core22</a>: We&rsquo;ve removed the requirement to use snaps on 22.04 (Jammy Jellyfish); you now can load MAAS 3.3 on 22.04 using packages.</p>
 </li>
 <li>
-<p><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a>: We&rsquo;ve improved the performance of the UI machine list for large (&gt;10000 machines) MAASi instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.</p>
+<p><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a>: We&rsquo;ve improved the performance of the UI machine list for large (&gt;10000 machines) MAAS instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.</p>
 </li>
 <li>
 <p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</a>: The <a href="https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
@@ -1223,7 +1223,7 @@ MAAS API User want to experience the MAAS API in a more standard way, along the 
 <p>We&rsquo;ve finally documented MAAS events, making them easier to decode.</p>
 <p><a href="#heading--Understanding-MAAS-events"><h3 id="heading--Understanding-MAAS-events">Understanding MAAS events</h3></a></p>
 <p>Events are state changes that happen to MAAS elements, caused by MAAS itself, an external agent, or a users. Understanding events is an essential debugging skill.  But events appear in three different places in MAAS, each presentation providing slightly different information.  These screens are usually dense and hard to search.</p>
-<p>In this major documentation update, we&rsquo;ve standardized on the MAAS CLI events query command as the best way to review, filter, and summarise events.  We&rsquo;ve summaried the six main event types:</p>
+<p>In this major documentation update, we&rsquo;ve standardised on the MAAS CLI events query command as the best way to review, filter, and summarise events.  We&rsquo;ve summarised the six main event types:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>INFO: the default, used if no level= is specified; shows INFO and ERROR events. A typical INFO event is “Ready”, indicating that a machine has reached the “Ready” state.</p>
@@ -1291,42 +1291,43 @@ MAAS API User want to experience the MAAS API in a more standard way, along the 
 <pre><code class="language-nohighlight"> maas $PROFILE events query level=INFO hostname=fun-zebra limit=1000 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | (., map(length*&quot;-&quot;))),(.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) | @tsv' | column -t -s$'\t'
 </code></pre>
 <p>This gave us a reasonably thorough report of what happened to the machine:</p>
-<p>USERNAME  NODE    HOSTNAME   LEVEL  DATE                        TYPE                   EVENT
+<pre><code class="language-nohighlight">USERNAME  NODE    HOSTNAME   LEVEL  DATE                        TYPE                   EVENT
 --------  ----    --------   -----  ----                        ----                   -----
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:53  Exited rescue mode   <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:52  Powering off         <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:28:58  Rescue mode          <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:27:18  Loading ephemeral    <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:40  Performing PXE boot  <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Power cycling        <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Entering rescue mode <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Powering off         <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Aborted testing      <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:24:08  Performing PXE boot  <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Powering on          <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Testing              <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:38  Released             <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Powering off         <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Releasing            <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:22:41  Deployed             <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:21:49  Rebooting            <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:18:42  Configuring OS       <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:42  Installing OS        <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:30  Configuring storage  <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:15:31  Loading ephemeral    <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:48  Performing PXE boot  <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:31  Powering on          <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:27  Deploying            <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:04:17  Ready                <br>
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:53  Exited rescue mode     
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:52  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:28:58  Rescue mode            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:27:18  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:40  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Power cycling          
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Entering rescue mode   
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Aborted testing        
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:24:08  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Testing                
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:38  Released               
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Releasing              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:22:41  Deployed               
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:21:49  Rebooting              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:18:42  Configuring OS         
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:42  Installing OS          
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:30  Configuring storage    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:15:31  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:48  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:31  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:27  Deploying              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:04:17  Ready                  
 unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:04:07  Running test           smartctl-validate on sda
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:27  Gathering information<br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:10  Loading ephemeral    <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:35  Performing PXE boot  <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Powering on          <br>
-unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Commissioning          </p>
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:27  Gathering information  
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:10  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:35  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Commissioning          
+</code></pre>
 <p>Additional examples and techniques are provided as part of this new documentation.</p>
 <p><a href="#heading--Improved-MAAS-audit-event-documentation"><h2 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h2></a></p>
-<p>MAAS audit event documentation has been greatly expanded to include <a href="understanding-maas-audit-events.html">much better explanations</a> of MAAS audit events, including <a href="https://maas.io/docs/how-to-work-with-audit-event-logs#heading--How-to-audit-a-machines-life-cycle-with-audit-events">detailed examples of how to recontruct macxhine life-cycles</a> in the updated version of &ldquo;<a href="https://maas.io/docs/how-to-work-with-audit-event-logs">How to work with audit event logs</a>&rdquo;.</p>
+<p>MAAS audit event documentation has been greatly expanded to include <a href="understanding-maas-audit-events.html">much better explanations</a> of MAAS audit events, including <a href="https://maas.io/docs/how-to-work-with-audit-event-logs#heading--How-to-audit-a-machines-life-cycle-with-audit-events">detailed examples of how to reconstruct machine life-cycles</a> in the updated version of &ldquo;<a href="https://maas.io/docs/how-to-work-with-audit-event-logs">How to work with audit event logs</a>&rdquo;.</p>
 <p><a href="#heading--Ten-words-or-less-9"><h3 id="heading--Ten-words-or-less-9">Ten words or less</h3></a></p>
 <p>We&rsquo;ve finally offered details about how you should audit MAAS.</p>
 <p><a href="#heading--Understanding-how-audit-events-explain-MAAS-internal-operations"><h3 id="heading--Understanding-how-audit-events-explain-MAAS-internal-operations">Understanding how audit events explain MAAS internal operations</h3></a></p>
@@ -1369,13 +1370,7 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 </code></pre>
 <p>You can, of course, use the <a href="understanding-maas-events.html#heading--filter-parameters">various event filters</a> with <code>level=AUDIT</code> to further restrict your output.</p>
 <p><a href="#heading--The-meaning-of-audit-events"><h3 id="heading--The-meaning-of-audit-events">The meaning of audit events</h3></a></p>
-<p>Let&rsquo;s walk through a sample of, say, eighteen audit events and see how to interpret and use them.  </p>
-<pre><code class="language-nohighlight">maas $PROFILE events query level=AUDIT limit=18 after=0 | jq -r '([&quot;USERNAME&quot;,&quot;NODE&quot;,&quot;HOSTNAME&quot;,&quot;LEVEL&quot;,&quot;DATE&quot;,&quot;TYPE&quot;,&quot;EVENT&quot;] | 
-(., map(length*&quot;-&quot;))),
-(.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
-| @tsv' | column -t -s$'\t'
-</code></pre>
-<p>In the new document, we provide detailed examples of various audit event queries, walking through real-world examples to answer questions like:</p>
+<p>Later on in the documentation, we walk through a sample of audit events and demonstrate how to interpret and use them.  This includes detailed examples of various audit event queries, walking through real-world examples to answer questions like:</p>
 <ol>
 <li>
 <p>Who deployed <code>comic-muskox</code>? </p>
@@ -1413,7 +1408,7 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 418626  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:05:32  From 'Deploying' to 'Failed deployment'
 418627  ERROR    Failed to power on node           Wed, 17 Nov. 2021 00:05:32  Power on for the node failed: Failed talking to node's BMC: Failed to power pbpncx. BMC never transitioned from off to on.
 </code></pre>
-<p>In this case, we managed to recognize, rather quickly, that no physical interface had been defined for <code>ruling-bobcat</code>, hence deployment fails because MAAS can&rsquo;t communicate with the node&rsquo;s BMC.  There are many other issues you can recognize with careful use of MAAS events to audit machine behaviours.  We welcome your feedback on this new documentation endeavour.</p>
+<p>In this case, we managed to recognise, rather quickly, that no physical interface had been defined for <code>ruling-bobcat</code>, hence deployment fails because MAAS can&rsquo;t communicate with the node&rsquo;s BMC.  There are many other issues you can recognise with careful use of MAAS events to audit machine behaviours.  We welcome your feedback on this new documentation endeavour.</p>
 <p><a href="#heading--MAAS-3-3-Beta-1-bug-list"><h2 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h2></a></p>
 <p>So far in MAAS 3.3, we&rsquo;ve fixed well over 100 bugs:</p>
 <ul style="margin-left:4px; list-style-type:disc;">

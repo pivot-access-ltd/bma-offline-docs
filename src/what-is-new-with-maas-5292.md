@@ -20,7 +20,7 @@ Improved capabilities include the following:
 
 - [Native support for 22.04 LTS and core22](#heading--22-04-support): We've removed the requirement to use snaps on 22.04 (Jammy Jellyfish); you now can load MAAS 3.3 on 22.04 using packages.
 
-- [UI performance improvements for large machine counts](#heading--UI-performance-improvements): We've improved the performance of the UI machine list for large (>10000 machines) MAASi instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.
+- [UI performance improvements for large machine counts](#heading--UI-performance-improvements): We've improved the performance of the UI machine list for large (>10000 machines) MAAS instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.
 
 - [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images): The [procedure](https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
 <!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
@@ -587,7 +587,7 @@ We've finally documented MAAS events, making them easier to decode.
 
 Events are state changes that happen to MAAS elements, caused by MAAS itself, an external agent, or a users. Understanding events is an essential debugging skill.  But events appear in three different places in MAAS, each presentation providing slightly different information.  These screens are usually dense and hard to search.
 
-In this major documentation update, we've standardized on the MAAS CLI events query command as the best way to review, filter, and summarise events.  We've summaried the six main event types:
+In this major documentation update, we've standardised on the MAAS CLI events query command as the best way to review, filter, and summarise events.  We've summarised the six main event types:
 
  - INFO: the default, used if no level= is specified; shows INFO and ERROR events. A typical INFO event is “Ready”, indicating that a machine has reached the “Ready” state.
 
@@ -646,6 +646,7 @@ We used this example command:
 
 This gave us a reasonably thorough report of what happened to the machine:
 
+```nohighlight
 USERNAME  NODE    HOSTNAME   LEVEL  DATE                        TYPE                   EVENT
 --------  ----    --------   -----  ----                        ----                   -----
 unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:53  Exited rescue mode     
@@ -679,12 +680,13 @@ unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:10  Loading ephemera
 unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:35  Performing PXE boot    
 unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Powering on            
 unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Commissioning          
+```
 
 Additional examples and techniques are provided as part of this new documentation.
 
 <a href="#heading--Improved-MAAS-audit-event-documentation"><h2 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h2></a>
 
-MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including [detailed examples of how to recontruct macxhine life-cycles](https://maas.io/docs/how-to-work-with-audit-event-logs#heading--How-to-audit-a-machines-life-cycle-with-audit-events) in the updated version of "[How to work with audit event logs](https://maas.io/docs/how-to-work-with-audit-event-logs)".
+MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including [detailed examples of how to reconstruct machine life-cycles](https://maas.io/docs/how-to-work-with-audit-event-logs#heading--How-to-audit-a-machines-life-cycle-with-audit-events) in the updated version of "[How to work with audit event logs](https://maas.io/docs/how-to-work-with-audit-event-logs)".
 
 <a href="#heading--Ten-words-or-less-9"><h3 id="heading--Ten-words-or-less-9">Ten words or less</h3></a>
 
@@ -745,15 +747,7 @@ You can, of course, use the [various event filters](/t/understanding-maas-events
 
 <a href="#heading--The-meaning-of-audit-events"><h3 id="heading--The-meaning-of-audit-events">The meaning of audit events</h3></a>
 
-Let's walk through a sample of, say, eighteen audit events and see how to interpret and use them.  
-
-```nohighlight
-maas $PROFILE events query level=AUDIT limit=18 after=0 | jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | 
-(., map(length*"-"))),
-(.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
-| @tsv' | column -t -s$'\t'
-```
-In the new document, we provide detailed examples of various audit event queries, walking through real-world examples to answer questions like:
+Later on in the documentation, we walk through a sample of audit events and demonstrate how to interpret and use them.  This includes detailed examples of various audit event queries, walking through real-world examples to answer questions like:
 
 1. Who deployed `comic-muskox`? 
 
@@ -788,7 +782,7 @@ As part of the updates to our "[How to work with audit event logs](https://maas.
 418627  ERROR    Failed to power on node           Wed, 17 Nov. 2021 00:05:32  Power on for the node failed: Failed talking to node's BMC: Failed to power pbpncx. BMC never transitioned from off to on.
 ```
 
-In this case, we managed to recognize, rather quickly, that no physical interface had been defined for `ruling-bobcat`, hence deployment fails because MAAS can't communicate with the node's BMC.  There are many other issues you can recognize with careful use of MAAS events to audit machine behaviours.  We welcome your feedback on this new documentation endeavour.
+In this case, we managed to recognise, rather quickly, that no physical interface had been defined for `ruling-bobcat`, hence deployment fails because MAAS can't communicate with the node's BMC.  There are many other issues you can recognise with careful use of MAAS events to audit machine behaviours.  We welcome your feedback on this new documentation endeavour.
 
 <a href="#heading--MAAS-3-3-Beta-1-bug-list"><h2 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h2></a>
 
