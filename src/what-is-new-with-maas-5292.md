@@ -1,11 +1,11 @@
 <!-- "MAAS 3.3 release notes" -->
 
-<!-- Here you will find release notes for:
+Here you will find release notes for:
 
 - [The current version of MAAS](#heading--current-maas-release-notes)
-- [Other MAAS versions](#heading--other-maas-versions) -->
+- [Other MAAS versions](#heading--other-maas-versions)
 
-<a href="#heading--3-3-0-Beta-1-maas-release-notes"><h2 id="heading--3-3-0-Beta-1-maas-release-notes">MAAS 3.3 Beta 1 release notes</h2></a>
+<a href="#heading--current-maas-release-notes"><h2 id="heading--current-maas-release-notes">MAAS 3.3 Beta 1 release notes</h2></a>
 
 We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted efforts to improve MAAS on multiple fronts. New features include:
 
