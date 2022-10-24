@@ -1141,6 +1141,46 @@ Long-term, we know that MAAS administrators want to enlist and use DPUs with MAA
 <p>With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  See <a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a>, in these release notes, for details on the enhanced filtering capabilities that were included in this work.</p>
 <p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h2 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h2></a></p>
 <p>The <a href="https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
+<p>Specifically, MIB now supports a much wider range of Windows images.  Previously, only 2012 and 2106 Windows versions were supported with MIB.  Now the list is much longer, bringing deployable MAAS versions up to date with the current Windows releases:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>win2008r2</li>
+<li>win2008hvr2</li>
+<li>win2012</li>
+<li>win2012hv</li>
+<li>win2012r2</li>
+<li>win2012hvr2</li>
+<li>win2016</li>
+<li>win2016-core</li>
+<li>win2016hv</li>
+<li>win2016dc</li>
+<li>win2016dc-core</li>
+<li>win2019</li>
+<li>win2019-core</li>
+<li>win2019dc</li>
+<li>win2019dc-core</li>
+<li>win10ent</li>
+<li>win10ent-eval</li>
+<li>win2022</li>
+<li>win2022-core</li>
+</ul>
+<p>There are also special instructions for using both UEFI and BIOS bootloaders, as well as instructions for using LXD containers with custom-built Windows images.  </p>
+<p>Finally, MIB has been extended to accept a much wider range of options for windows builds.  Some of the new Windows-specific options include:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>&ndash;windows-iso: path to the Windows ISO image.</li>
+<li>&ndash;windows-edition: identifier for the Windows edition/option being installed (see above).</li>
+<li>&ndash;windows-license-key: Windows license key (required with non-evaluation editions)</li>
+<li>&ndash;windows-language: Windows installation language (default: en-US)</li>
+<li>&ndash;windows-updates: download and install Windows Updates (requires internet access; might require a larger &ndash;disk-size option)</li>
+<li>&ndash;windows-drivers: path to directory with Windows drivers to be installed (requires internet access; uses the Windows Driver Kit, by default)</li>
+<li>&ndash;driver-store: combined with &ndash;windows-drivers, uses the Windows Driver Store to install drivers early into Windows Setup and image (does not require internet access; does not use the Windows Driver Kit).</li>
+</ul>
+<p>Some news Windows-specific platform options include:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>&ndash;uefi: use UEFI partition layout and firmware</li>
+<li>&ndash;virtio: use paravirtualized VirtIO SCSI and VirtIO NET devices (instead of emulated devices) for installation (requires &ndash;windows-drivers)</li>
+<li>&ndash;disk-size: specify the (virtual) disk size for Windows setup (must be larger for &ndash;windows-updates; increases deployment/copy-to-disk time, and is expanded to physical disk size during deployment)</li>
+</ul>
+<p>This update should make it much simpler to use custom-built Windows images with MAAS.</p>
 <!--
 <a href="#heading--openapi-support"><h2 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h2></a>
 

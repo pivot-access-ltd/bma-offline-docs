@@ -482,6 +482,48 @@ With the release of MAAS 3.3, when a MAAS UI user wants to find a particular mac
 
 The [procedure](https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
 
+Specifically, MIB now supports a much wider range of Windows images.  Previously, only 2012 and 2106 Windows versions were supported with MIB.  Now the list is much longer, bringing deployable MAAS versions up to date with the current Windows releases:
+
+ - win2008r2
+ - win2008hvr2
+ - win2012
+ - win2012hv
+ - win2012r2
+ - win2012hvr2
+ - win2016
+ - win2016-core
+ - win2016hv
+ - win2016dc
+ - win2016dc-core
+ - win2019
+ - win2019-core
+ - win2019dc
+ - win2019dc-core
+ - win10ent
+ - win10ent-eval
+ - win2022
+ - win2022-core
+
+There are also special instructions for using both UEFI and BIOS bootloaders, as well as instructions for using LXD containers with custom-built Windows images.  
+
+Finally, MIB has been extended to accept a much wider range of options for windows builds.  Some of the new Windows-specific options include:
+
+ - --windows-iso: path to the Windows ISO image.
+ - --windows-edition: identifier for the Windows edition/option being installed (see above).
+ - --windows-license-key: Windows license key (required with non-evaluation editions)
+ - --windows-language: Windows installation language (default: en-US)
+ - --windows-updates: download and install Windows Updates (requires internet access; might require a larger --disk-size option)
+ - --windows-drivers: path to directory with Windows drivers to be installed (requires internet access; uses the Windows Driver Kit, by default)
+ - --driver-store: combined with --windows-drivers, uses the Windows Driver Store to install drivers early into Windows Setup and image (does not require internet access; does not use the Windows Driver Kit).
+
+Some news Windows-specific platform options include:
+
+ - --uefi: use UEFI partition layout and firmware
+ - --virtio: use paravirtualized VirtIO SCSI and VirtIO NET devices (instead of emulated devices) for installation (requires --windows-drivers)
+ - --disk-size: specify the (virtual) disk size for Windows setup (must be larger for --windows-updates; increases deployment/copy-to-disk time, and is expanded to physical disk size during deployment)
+
+This update should make it much simpler to use custom-built Windows images with MAAS.
+
 <!--
 <a href="#heading--openapi-support"><h2 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h2></a>
 
