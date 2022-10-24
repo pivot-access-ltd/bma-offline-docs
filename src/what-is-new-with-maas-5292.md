@@ -366,6 +366,14 @@ You can read the [MAAS Vault reference](/t/maas-vault-reference/6368) documentat
 
 <a href="#heading--Improved-machine-list-filtering"><h2 id="heading--Improved-machine-list-filtering">Improved machine list filtering</h2></a>
 
+MAAS 3.3 dramatically reduces the latency associated with refreshing large machine lists.
+
+<a href="#heading--Ten-words-or-less-2"><h3 id="heading--Ten-words-or-less-2">Ten words or less</h3></a>
+
+You can filter machines mere seconds after one page loads.
+
+<a href="#heading--How-list-filtering-is-improved"><h3 id="heading--How-list-filtering-is-improved">How list filtering is improved</h3></a>
+
 [note]
 **NOTE** that this feature is still in development, so some of the feature-set described in this section may not be fully operational yet.  As always, we reserve the right to change this feature-set until the final release of MAAS 3.3. These release notes will be updated as the feature develops.
 [/note]
@@ -378,7 +386,9 @@ MAAS 3.3 enhances the way you can filter the machine list, in two ways:
 
 Note that with this version of MAAS, matching machine counts have been removed from the filter list for better performance.
 
-The following table describes the proposed filter set for the MAAS machine list:
+<a href="#heading--More-filter-parameters-have-been-added"><h3 id="heading--More-filter-parameters-have-been-added">More filter parameters have been added</h3></a>
+
+The following table describes the expanded filter set for the MAAS machine list:
 
 - Items marked as "Dynamic" are populated based on existing data, that is, the "Tags" filter only shows tags that currently exist.  
 - Items which are not dynamic present the entire range of possible values, regardless of whether that value currently exists in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.
@@ -458,6 +468,14 @@ See [How to search MAAS](/t/how-to-search-maas/5192) for details on how to use t
 
 <a href="#heading--22-04-support"><h2 id="heading--22-04-support">Native support for 22.04 LTS and core22</h2></a>
 
+MAAS can now be installed as a PPA, directly on Ubuntu 22.04, without the need to use snaps.
+
+<a href="#heading--Ten-words-or-less"><h3 id="heading--Ten-words-or-less">Ten words or less</h3></a>
+
+MAAS packages now run on Ubuntu 22.04, aka Jammy Jellyfish.
+
+<a href="#heading--Notes-on-22.04-LTS-MAAS-packages"><h3 id="heading--Notes-on-22.04-LTS-MAAS-packages">Notes on 22.04 LTS MAAS packages</h3></a>
+
 MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.
 
 Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The [installation guide](/t/how-to-install-maas/5128) provides the necessary details.
@@ -481,6 +499,12 @@ With the release of MAAS 3.3, when a MAAS UI user wants to find a particular mac
 <a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h2 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h2></a>
 
 The [procedure](https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
+
+<a href="#heading--Ten-words-or-less-5"><h3 id="heading--Ten-words-or-less-5">Ten words or less</h3></a>
+
+Custom Windows images on MAAS handle most releases and options.
+
+<a href="#heading--What-has-been-added-to-Windows-custom-images"><h3 id="heading--What-has-been-added-to-Windows-custom-images">What has been added to Windows custom images</h3></a>
 
 Specifically, MIB now supports a much wider range of Windows images.  Previously, only 2012 and 2106 Windows versions were supported with MIB.  Now the list is much longer, bringing deployable MAAS versions up to date with the current Windows releases:
 
@@ -531,17 +555,240 @@ MAAS API User want to experience the MAAS API in a more standard way, along the 
 
 <a href="#heading--maas-config-settings-ref"><h2 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h2></a>
 
+MAAS 3.3 documentation consolidates configuration settings in one article, in addition to their other mentions throughout the documentation set.
+
+<a href="#heading--Ten-words-or-less-6"><h3 id="heading--Ten-words-or-less-6">Ten words or less</h3></a>
+
+"Settings" now has its own page, and some new options.
+
+<a href="#heading--What-is-new-about-this-update"><h3 id="heading--What-is-new-about-this-update">What is new about this update</h3></a>
+
 MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the [Configuration settings reference](/t/configuration-settings-reference/6347).
 
-A minor new feature added with MAAS 3.3 is MAAS site identity.  
+A minor new feature added with MAAS 3.3 is MAAS site identity, which enables some new configuration parameters:
+
+- MAAS name: The “* MAAS name” is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor.
+
+- MAAS name emoji: You may also paste a suitable emoji in front of the MAAS name to help identify it.
+
+- MAAS theme main colour: You may also help identify your MAAS instance by changing the colour of the top bar; several colour choices are available.
+
+These enhancements were made available to assist users who have more than one instance (e.g., production and staging), and have issues with operations accidentally making changes to the wrong instance.
 
 <a href="#heading--Improved-MAAS-event-documentation"><h2 id="heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</h2></a>
 
 MAAS event documentation has been expanded to include [much better explanations](/t/understanding-maas-events/6373) of MAAS events, including many examples.
 
+<a href="#heading--Ten-words-or-less-6"><h3 id="heading--Ten-words-or-less-6">Ten words or less</h3></a>
+
+We've finally documented MAAS events, making them easier to decode.
+
+<a href="#heading--Understanding-MAAS-events"><h3 id="heading--Understanding-MAAS-events">Understanding MAAS events</h3></a>
+
+Events are state changes that happen to MAAS elements, caused by MAAS itself, an external agent, or a users. Understanding events is an essential debugging skill.  But events appear in three different places in MAAS, each presentation providing slightly different information.  These screens are usually dense and hard to search.
+
+In this major documentation update, we've standardized on the MAAS CLI events query command as the best way to review, filter, and summarise events.  We've summaried the six main event types:
+
+ - INFO: the default, used if no level= is specified; shows INFO and ERROR events. A typical INFO event is “Ready”, indicating that a machine has reached the “Ready” state.
+
+ - CRITICAL: critical MAAS failures; shows only CRITICAL events. These events usually represent severe error conditions that should be immediately remedied.
+
+ - ERROR: MAAS errors; shows only ERROR events. Typical ERROR events include such things as power on/off failures, commissioning timeouts, and image import failures.
+
+ - WARNING: failures which may or may not affect MAAS performance; shows WARNING and ERROR events. A typical warning event, for example, might include the inability to find and boot a machine.
+
+ - DEBUG: information which would help debug MAAS behaviour; shows DEBUG and INFO events. Typical DEBUG events involve routine image import activities, for example.
+
+ - AUDIT: information which helps determine settings and user actions in MAAS; shows only AUDIT events. They are covered in more detail elsewhere.
+
+In addition, the new document explains how these event types tend to overlap when queried.  We've also provide detailed instructions on how to use the most common filters:
+
+ - hostname: Only events relating to the node with the matching hostname will be returned. This can be specified multiple times to get events relating to more than one node.
+
+ - mac_address: Only nodes with matching MAC addresses will be returned. Note that MAC address is not part of the standard output, so you’d need to look it up elsewhere.
+
+ - id: Only nodes with matching system IDs will be returned. This corresponds to the node parameter in the JSON listing, not the id parameter there, which is a serial event number.
+
+ - zone: Only nodes in the zone will be returned. Note that zones are not part of the standard output, so you’d need to look these up elsewhere.
+
+ - level: The event level to capture. You can choose from AUDIT, CRITICAL, DEBUG, ERROR, INFO, or WARNING. The default is INFO.
+
+ - limit: Number of events to return. The default is 100, the maximum in one command is 1000.
+
+ - before: Defines an event id to start returning older events. This is the “id” part of the JSON, not the system ID or “node”. Note that before and after cannot be used together, as the results are unpredictable.
+
+ - after: Defines an event id to start returning newer events. This is the “id” part of the JSON, not the system ID or “node”. Note that before and after cannot be used together, as the results are unpredictable.
+
+Since the MAAS CLI returns JSON -- which is hard to humans to parse -- we've included some exemplary `jq` predicates of the form:
+
+```nohighlight
+maas $PROFILE events query limit=20 \
+| jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
+| @tsv' | column -t -s$'\t'
+```
+
+And finally, we provided some detailed usage examples.  For instance, we walked a MAAS machine called `fun-zebra` through the following states:
+
+ - Commissioning
+ - Allocation
+ - Deployment
+ - Releasing
+ - Testing (with a premature manual abort)
+ - Rescue mode
+
+We used this example command:
+
+```nohighlight
+ maas $PROFILE events query level=INFO hostname=fun-zebra limit=1000 | jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | (., map(length*"-"))),(.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) | @tsv' | column -t -s$'\t'
+```
+
+This gave us a reasonably thorough report of what happened to the machine:
+
+USERNAME  NODE    HOSTNAME   LEVEL  DATE                        TYPE                   EVENT
+--------  ----    --------   -----  ----                        ----                   -----
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:53  Exited rescue mode     
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:29:52  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:28:58  Rescue mode            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:27:18  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:40  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Power cycling          
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:23  Entering rescue mode   
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:26:14  Aborted testing        
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:24:08  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:51  Testing                
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:38  Released               
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Powering off           
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:23:37  Releasing              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:22:41  Deployed               
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:21:49  Rebooting              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:18:42  Configuring OS         
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:42  Installing OS          
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:17:30  Configuring storage    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:15:31  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:48  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:31  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 21:14:27  Deploying              
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:04:17  Ready                  
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:04:07  Running test           smartctl-validate on sda
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:27  Gathering information  
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:01:10  Loading ephemeral      
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:35  Performing PXE boot    
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Powering on            
+unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Commissioning          
+
+Additional examples and techniques are provided as part of this new documentation.
+
 <a href="#heading--Improved-MAAS-audit-event-documentation"><h2 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h2></a>
 
-MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including many examples and use cases.
+MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including [detailed examples of how to recontruct macxhine life-cycles](https://maas.io/docs/how-to-work-with-audit-event-logs#heading--How-to-audit-a-machines-life-cycle-with-audit-events) in the updated version of "[How to work with audit event logs](https://maas.io/docs/how-to-work-with-audit-event-logs)".
+
+<a href="#heading--Ten-words-or-less-9"><h3 id="heading--Ten-words-or-less-9">Ten words or less</h3></a>
+
+We've finally offered details about how you should audit MAAS.
+
+<a href="#heading--Understanding-how-audit-events-explain-MAAS-internal-operations"><h3 id="heading--Understanding-how-audit-events-explain-MAAS-internal-operations">Understanding how audit events explain MAAS internal operations</h3></a>
+
+There's probably no limit to what you can figure out if you use audit events properly.  The problems are: (1) a lot goes on in MAAS, and (2) you need more than just the explicit audit events to get a clear picture of what's happening.  We've tried to address this by taking a deeper look at the auditing process (not just the events).  
+
+As you may know, an audit event is just a [MAAS event](/t/understanding-maas-events/6373) tagged with `AUDIT`. It generally captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates -- and their effects -- especially when multiple users are interacting with multiple machines.  
+
+<a href="#heading--Viewing-events"><h3 id="heading--Viewing-events">Viewing events</h3></a>
+
+Audit events are examined using the MAAS CLI with the `level=AUDIT` parameter set:
+
+```nohighlight
+$ maas $PROFILE events query level=AUDIT
+```
+
+You'll probably get better results by appending a `jq` filter, to prettify the output:
+
+```nohighlight
+$ maas $PROFILE events query level=AUDIT after=0 limit=20 \
+| jq -r '(["USERNAME","HOSTNAME","DATE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.hostname,.created,.description]) 
+| @tsv' | column -t -s$'\t'
+```
+
+By itself, such a command might produce output similar to this:
+
+```nohighlight
+USERNAME  HOSTNAME     DATE                        EVENT
+--------  --------     ----                        -----
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 2 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 1 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  pci device 0 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  block device sda was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  interface enp5s0 was updated on node 8wmfx3
+unknown   valued-moth  Thu, 21 Apr. 2022 19:45:14  0 bytes of memory was removed on node 8wmfx3
+admin     valued-moth  Thu, 21 Apr. 2022 19:36:48  Started deploying 'valued-moth'.
+admin     valued-moth  Thu, 21 Apr. 2022 19:36:21  Acquired 'valued-moth'.
+admin     unknown      Thu, 21 Apr. 2022 19:21:46  Updated configuration setting 'completed_intro' to 'True'.
+admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'upstream_dns' to '8.8.8.8'.
+admin     unknown      Thu, 21 Apr. 2022 19:20:49  Updated configuration setting 'maas_name' to 'neuromancer'.
+admin     unknown      Thu, 21 Apr. 2022 19:20:47  Updated configuration setting 'http_proxy' to ''.
+admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
+```
+
+You can, of course, use the [various event filters](/t/understanding-maas-events/6373#heading--filter-parameters) with `level=AUDIT` to further restrict your output.
+
+<a href="#heading--The-meaning-of-audit-events"><h3 id="heading--The-meaning-of-audit-events">The meaning of audit events</h3></a>
+
+Let's walk through a sample of, say, eighteen audit events and see how to interpret and use them.  
+
+```nohighlight
+maas $PROFILE events query level=AUDIT limit=18 after=0 | jq -r '(["USERNAME","NODE","HOSTNAME","LEVEL","DATE","TYPE","EVENT"] | 
+(., map(length*"-"))),
+(.events[] | [.username,.node,.hostname,.level,.created,.type,.description]) 
+| @tsv' | column -t -s$'\t'
+```
+In the new document, we provide detailed examples of various audit event queries, walking through real-world examples to answer questions like:
+
+1. Who deployed `comic-muskox`? 
+
+2. What happened to `sweet-urchin`?
+
+3. Why is `fleet-calf` in rescue mode?
+
+4. Where did these changes come from in `setup.sh`?
+
+5. What caused `ruling-bobcat` to be marked as broken?
+
+6. Who's responsible for the DHCP snippet called `foo`?
+
+<a href="#heading--Auditing-with-finesse"><h3 id="heading--Auditing-with-finesse">Auditing with finesse</h3></a>
+
+As part of the updates to our "[How to work with audit event logs](https://maas.io/docs/how-to-work-with-audit-event-logs)", we've tried to offer you some finesse in reconstructing machine life-cycles.  We've shown how to combine various levels of MAAS event queries with standard command line utilities to produce clear audit trails such as this one:
+
+```nohighlight
+418606  ERROR    Marking node broken               Wed, 17 Nov. 2021 00:02:52  A Physical Interface requires a MAC address.
+418607  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:02:52  From 'New' to 'Broken'
+418608  DEBUG    Marking node fixed                Wed, 17 Nov. 2021 00:04:24  
+418609  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:04:24  From 'Broken' to 'Ready'
+418613  DEBUG    User acquiring node               Wed, 17 Nov. 2021 00:04:51  (admin)
+418614  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:04:51  From 'Ready' to 'Allocated' (to admin)
+418615  DEBUG    User starting deployment          Wed, 17 Nov. 2021 00:04:51  (admin)
+418616  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:04:51  From 'Allocated' to 'Deploying'
+418617  INFO     Deploying                         Wed, 17 Nov. 2021 00:04:51  
+418618  AUDIT    Node                              Wed, 17 Nov. 2021 00:04:51  Started deploying 'ruling-bobcat'.
+418619  INFO     Powering on                       Wed, 17 Nov. 2021 00:04:55  
+418625  ERROR    Marking node failed               Wed, 17 Nov. 2021 00:05:32  Power on for the node failed: Failed talking to node's BMC: Failed to power pbpncx. BMC never transitioned from off to on.
+418626  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:05:32  From 'Deploying' to 'Failed deployment'
+418627  ERROR    Failed to power on node           Wed, 17 Nov. 2021 00:05:32  Power on for the node failed: Failed talking to node's BMC: Failed to power pbpncx. BMC never transitioned from off to on.
+```
+
+In this case, we managed to recognize, rather quickly, that no physical interface had been defined for `ruling-bobcat`, hence deployment fails because MAAS can't communicate with the node's BMC.  There are many other issues you can recognize with careful use of MAAS events to audit machine behaviours.  We welcome your feedback on this new documentation endeavour.
 
 <a href="#heading--MAAS-3-3-Beta-1-bug-list"><h2 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h2></a>
 
