@@ -5,9 +5,9 @@ This section contains a collection of tips, tricks, and traps which may help sol
 
 - [Migrate an existing test database](#heading--Migrate-an-existing-test-database) (not recommended)
 - [Manually export the MAAS database](#heading--Manually-export-the-MAAS-database)
-- [Network boot IBM Power servers](Network boot IBM Power servers)
-- [Use jq to make CLI output more readable](Use jq to make CLI output more readable)
-- [Resolve DNS conflicts between LXD and MAAS](Resolve DNS conflicts between LXD and MAAS)
+- [Network boot IBM Power servers](#heading--Network-boot-IBM-Power-servers)
+- [Use jq to make CLI output more readable](#heading--Use-jq-to-make-CLI-output-more-readable)
+- [Resolve DNS conflicts between LXD and MAAS](#heading--Resolve-DNS-conflicts-between-LXD-and-MAAS)
 
 <a href="#heading--Migrate-an-existing-test-database"><h2 id="heading--Migrate-an-existing-test-database">Migrate an existing test database</h2></a>
 
