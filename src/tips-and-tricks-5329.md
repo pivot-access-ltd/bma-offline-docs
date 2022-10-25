@@ -3,25 +3,25 @@ This section contains a collection of tips, tricks, and traps which may help sol
 
 #### What would you like to do?
 
-- [Migrate an existing snap installation to use a local PostgreSQL server](#heading--migrating-maas)
-- [Manually export the MAAS database](#heading--manual-export)
-- [Network boot an IBM Power server](#heading--ibm-power-server-pxe-boot)
-- [Try jq recipes using the CLI](#heading--jq-machine-list)
-- [Resolve MAAS/LXD DNS & DHCP conflicts/network issues](#heading--maas-lxd-network-conflicts)
+- [Migrate an existing test database](#heading--Migrate-an-existing-test-database) (not recommended)
+- [Manually export the MAAS database](#heading--Manually-export-the-MAAS-database)
+- [Network boot IBM Power servers](Network boot IBM Power servers)
+- [Use jq to make CLI output more readable](Use jq to make CLI output more readable)
+- [Resolve DNS conflicts between LXD and MAAS](Resolve DNS conflicts between LXD and MAAS)
 
-<h2 id="heading--migrating-maas">Migrating an existing snap installation</h2>
+<a href="#heading--Migrate-an-existing-test-database"><h2 id="heading--Migrate-an-existing-test-database">Migrate an existing test database</h2></a>
 
-If you're currently running MAAS from a snap in `all` mode, you can easily migrate your database to a local PostgreSQL server with the following command:
+It's not recommended to migrate a `maas-test-db` from one version to another, but it is possible, using these instructions:
 
-    sudo /snap/maas/current/helpers/migrate-vd Snapatabase
+```nohighlight
+    export PGPASS=$(sudo awk -F':\\s+' '$1 == "database_pass" {print $2}' \
+        /var/snap/maas/current/regiond.conf)
+    sudo pg_dump -U maas -h /var/snap/maas-test-db/common/postgres/sockets \
+        -d maasdb -F t -f maasdb-dump.tar
+	sudo snap stop maas
+```
 
-This will install PostgreSQL from the archive and migrate the MAAS database to it. 
-
-**Note** that if PostgreSQL is already installed on the machine, the script will move the current datadir out of the way and replace it with the one from the snap, after  confirmation with the user. If you want to keep the current database set and just import the MAAS database, you'll need to perform a manual dump/restore of the MAAS database, explained below.
-
-The migration script will automatically adjust the snap configuration to use the new database.  Note, though, that the target database must be at least the same version level as the one currently used in the snap (PostgreSQL 10).  Consequently, the migration script only supports Ubuntu 18.04 (bionic) or later.
-
-<h2 id="heading--manual-export">Manually exporting the MAAS database</h2>
+<a href="#heading--Manually-export-the-MAAS-database"><h2 id="heading--Manually-export-the-MAAS-database">Manually export the MAAS database</h2></a>
 
 If you want to export the database from the snap to an already setup PostgreSQL server, possibly on a different machine, you can manually export it from MAAS as follows. With MAAS running (as this ensures access to the database), run:
 
@@ -57,7 +57,7 @@ To finish the process, you'll need to update the MAAS snap config to:
 
 Using a local PostgreSQL server is a little bit of work, but it provides great benefits in terms of MAAS scalability and performance.
 
-<h2 id="heading--ibm-power-server-pxe-boot">Network booting IBM Power servers</h2>
+<a href="#heading--Network-boot-IBM-Power-servers"><h2 id="heading--Network-boot-IBM-Power-servers">Network boot IBM Power servers</h2></a>
 
 Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by **Petitboot**, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.
 
@@ -65,7 +65,7 @@ When no specific interface is assigned as the network boot device, petitboot has
 
 So, when using IBM Power servers with multiple NICs that can network boot, it's strongly recommended to configure just a single <specific> NIC as the network boot device via **Petitboot**.
 
-<h2 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h2>
+<a href="#heading--Resolve-DNS-conflicts-between-LXD-and-MAAS"><h2 id="heading--Resolve-DNS-conflicts-between-LXD-and-MAAS">Resolve DNS conflicts between LXD and MAAS</h2></a>
 
 If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there's a simple fix. You can turn off LXD's DNS management with the following command:
 
@@ -86,7 +86,7 @@ Once you've done this, you can check your work with the following command:
 lxc network show $LXD_BRIDGE_NAME
 ````
 
-<h2 id="heading--jq-machine-list">jq recipes using the CLI</h2>
+<a href="#heading--Use-jq-to-make-CLI-output-more-readable"><h2 id="heading--Use-jq-to-make-CLI-output-more-readable">Use jq to make CLI output more readable</h2></a>
 
 Here are some `jq` recipes to get some human-readable output from the MAAS CLI.
 
