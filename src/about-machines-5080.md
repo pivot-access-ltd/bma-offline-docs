@@ -23,11 +23,11 @@ One of the most important things to understand about machines is their life-cycl
 
 Everything that happens to a machine under MAAS control conforms to a specific life-cycle.  All MAAS machines are in a named state, or in transition between states.  Most of these transitions are user-controlled.  Only the "failure" state is reached under the direction of MAAS, when a user's request for certain state changes can't be successfully completed.  
 
-In general, the various states and transitions can be summarized in a diagram:
+In general, the various states and transitions can be summarised in a diagram:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/1/117137e9340ef58bf73111fb8d8cbf1b7efdce9f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/117137e9340ef58bf73111fb8d8cbf1b7efdce9f.jpeg"></a>
 
-The light green boxes -- and the light blue box ("RELEASING") represent the normal progression of a machine from newly-enlisted to deployed (in use) and back.  This normal progression could be considered the standard MAAS life-cycle:
+The light green boxes -- and the light blue box ("RELEASING") -- represent the normal progression of a machine from newly-enlisted to deployed (in use) and back.  This normal progression could be considered the standard MAAS life-cycle:
 
 - Machines are enlisted by MAAS, and assigned a status of "NEW",  when (1) they are enabled to network boot, and (2) they are on a subnet accessible to MAAS.  New machines can be used by MAAS, or deleted if they are not intended for MAAS use.  A common practice is to simply define a desired subnet in MAAS, allow connected devices to be enlisted, and then delete the machines that MAAS shouldn't control.  These excluded machines might include switches, routers, printers, or unrelated servers that happen to be on the same network, among others.
 
@@ -39,7 +39,7 @@ The light green boxes -- and the light blue box ("RELEASING") represent the norm
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a>
 
-We'll come back to this process when we talk about deployment, a little later on.
+We'll come back to this process when we talk about deployment, a little later on.  Once deployed, there are a couple of state changes you can effect without releasing the machine:
 
 - Once a machine is deployed, you can lock it, if desired, to provide a little extra insurance that it won't accidentally be changed by you -- or anyone.
 
@@ -49,9 +49,9 @@ There are also some exceptional states you can command:
 
 - For any machine that is ready, allocated, or deployed, you can cycle it through a battery of tests at any time.  Be aware, of course, that testing causes the machine to be unavailable for normal use for the duration of the text cycle.
 
-- Machines that are ready, allocated, or deployed can also be placed in "rescue mode".  Essentially, rescue mode is the same as walking to a malfunctioning or misconfigured machine, taking it off the network, and fixing whatever may be wrong with it -- except that you're doing so via SSH, or by running tests from MAAS, rather than standing in front of the machine.  Machines in rescue mode can't enter normal life cycle states until you remove them from rescue mode.  You can, of course, delete them, modify their parameters (tags, zone, and so on), power them off, and mark them broken.  Rescue mode is like a remote repair state that you can control from wherever you are.
+- Machines that are ready, allocated, or deployed can also be placed in "rescue mode".  Essentially, rescue mode is the same as walking to a malfunctioning or mis-configured machine, taking it off the network, and fixing whatever may be wrong with it -- except that you're doing so via SSH, or by running tests from MAAS, rather than standing in front of the machine.  Machines in rescue mode can't enter normal life cycle states until you remove them from rescue mode.  You can, of course, delete them, modify their parameters (tags, zone, and so on), power them off, and mark them broken.  Rescue mode is like a remote repair state that you can control from wherever you are.
 
-- Machines that are allocated or deployed can also be marked broken.  A broken machine powers off by default.  You can sill power it on, delete, and enter rescue mode, but you can't log into it via SSH.  This state is intended for machines that experience catastrophic hardware or software failures and need direct repairs.
+- Machines that are allocated or deployed can also be marked broken.  A broken machine powers off by default.  You can still power it on, delete it, or enter rescue mode, but you can't log into it via SSH.  This state is intended for machines that experience catastrophic hardware or software failures and need direct repairs.
 
 There is one more state that a machine can get into: "failed".  This state is entered when commissioning, allocation, or deployment are not successful.  Getting out of a failed state means figuring out what went wrong, correcting it, and retrying the failed operation.  For example, when a machine fails, you can try and commission it again, hopefully after you've found the bug in your custom commissioning script that's causing it to fail (for instance).
 
