@@ -5,7 +5,7 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted efforts to improve MAAS on multiple fronts, including a large number of bug fixes. 
+We are happy to announce that MAAS 3.3 Beta 2 has been released, bringing [six additional bug fixes](#heading--MAAS-3.3-Beta-2-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3.3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3.3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
@@ -492,9 +492,15 @@ Long-term, we know that MAAS administrators want to enlist and use DPUs with MAA
 
 <a href="#heading--UI-performance-improvements"><h2 id="heading--UI-performance-improvements">UI performance improvements</h2></a>
 
-We wanted to improve the performance of the machine list page for large (>10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.
+We wanted to improve the performance of the machine list page for large (>10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. 
 
-With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  See [Improved machine list filtering](#heading--Improved-machine-list-filtering), in these release notes, for details on the enhanced filtering capabilities that were included in this work.
+<a href="#heading--Ten-words-or-less-17"><h3 id="heading--Ten-words-or-less-17">Ten words or less</h3></a>
+
+We're working on making large machine lists load in background.
+
+<a href="#heading--Background-performance-work"><h3 id="heading--Background-performance-work">Background performance work</h3></a>
+
+In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.  With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  See [Improved machine list filtering](#heading--Improved-machine-list-filtering), in these release notes, for details on the enhanced filtering capabilities that were included in this work.
 
 <a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h2 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h2></a>
 
@@ -502,7 +508,7 @@ The [procedure](https://maas.io/docs/how-to-create-custom-images#heading--custom
 
 <a href="#heading--Ten-words-or-less-5"><h3 id="heading--Ten-words-or-less-5">Ten words or less</h3></a>
 
-Custom Windows images on MAAS handle most releases and options.
+MAAS custom Windows images now support most releases and options.
 
 <a href="#heading--What-has-been-added-to-Windows-custom-images"><h3 id="heading--What-has-been-added-to-Windows-custom-images">What has been added to Windows custom images</h3></a>
 
@@ -885,7 +891,6 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 - [1989970](https://bugs.launchpad.net/bugs/1989970): Can't enlist machines on subnets with DNS set
 - [1989974](https://bugs.launchpad.net/bugs/1989974): rackd fails on CIS-hardened machine with "Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)"
 - [1990014](https://bugs.launchpad.net/bugs/1990014): regiond.conf "debug_http: true" causes image downloads from regiond to fail with 500 error code
-- [1990289](https://bugs.launchpad.net/bugs/1990289): allocate call with system_id can allocate a new machine
 - [1990649](https://bugs.launchpad.net/bugs/1990649): Kernel parameters form resets to previous value after save
 - [1990873](https://bugs.launchpad.net/bugs/1990873): TestKeys - test_get_launchpad_crashes_for_user_not_found
 - [1991106](https://bugs.launchpad.net/bugs/1991106): vCenter password field text is visible in settings
@@ -895,14 +900,20 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 - [1991410](https://bugs.launchpad.net/bugs/1991410): wildcard DNS entry is not allowed
 - [1991792](https://bugs.launchpad.net/bugs/1991792): machine.action clone does not accept filter
 - [1991795](https://bugs.launchpad.net/bugs/1991795): machine.action does not always throw errors for failed machines
-- [1992185](https://bugs.launchpad.net/bugs/1992185): unable to deploy a machine with vmhost if a bond interface was created
 - [1992332](https://bugs.launchpad.net/bugs/1992332): websocket machine.list parent group label should return hostname
 - [1992686](https://bugs.launchpad.net/bugs/1992686): MAAS 3.3 alpha missing two existing filters
-- [1992791](https://bugs.launchpad.net/bugs/1992791): Info icons appear/disappear based on checked options in subnet page
 - [1992975](https://bugs.launchpad.net/bugs/1992975): Grouping by parents fails if there's more than one page
-- [1993289](https://bugs.launchpad.net/bugs/1993289): Pod storage pool path can't be blank
 
 More bug-fixes are planned for later 3.3 releases.
+
+<a href="#heading--MAAS-3.3-Beta-2-bug-list"><h3 id="heading--MAAS-3.3-Beta-2-bug-list">MAAS 3.3 Beta 2 bug list</h3></a>
+
+- [1990289](https://bugs.launchpad.net/bugs/1990289): allocate call with system_id can allocate a new machine
+- [1991784](https://bugs.launchpad.net/bugs/1991784): [needs-packaging] GL Excess
+- [1992185](https://bugs.launchpad.net/bugs/1992185): unable to deploy a machine with vmhost if a bond interface was created
+- [1992494](https://bugs.launchpad.net/bugs/1992494): Jammy KVM host support
+- [1992791](https://bugs.launchpad.net/bugs/1992791): Info icons appear/disappear based on checked options in subnet page
+- [1993289](https://bugs.launchpad.net/bugs/1993289): Pod storage pool path can't be blank
 
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 

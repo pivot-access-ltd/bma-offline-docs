@@ -416,7 +416,7 @@
 <li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
 <li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
 </ul>
-<p>We are happy to announce that MAAS 3.3 Beta 1 has been released, with concerted efforts to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
+<p>We are happy to announce that MAAS 3.3 Beta 2 has been released, bringing <a href="#heading--MAAS-3.3-Beta-2-bug-list">six additional bug fixes</a>.  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
 <p><a href="#heading--Cumulative-summary-of-MAAS-3.3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3.3-features">Cumulative summary of MAAS 3.3 features</h2></a></p>
 <p>New features created for MAAS 3.3 include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -1146,12 +1146,15 @@ Long-term, we know that MAAS administrators want to enlist and use DPUs with MAA
 -->
 
 <p><a href="#heading--UI-performance-improvements"><h2 id="heading--UI-performance-improvements">UI performance improvements</h2></a></p>
-<p>We wanted to improve the performance of the machine list page for large (&gt;10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.</p>
-<p>With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  See <a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a>, in these release notes, for details on the enhanced filtering capabilities that were included in this work.</p>
+<p>We wanted to improve the performance of the machine list page for large (&gt;10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. </p>
+<p><a href="#heading--Ten-words-or-less-17"><h3 id="heading--Ten-words-or-less-17">Ten words or less</h3></a></p>
+<p>We&rsquo;re working on making large machine lists load in background.</p>
+<p><a href="#heading--Background-performance-work"><h3 id="heading--Background-performance-work">Background performance work</h3></a></p>
+<p>In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.  With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  See <a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a>, in these release notes, for details on the enhanced filtering capabilities that were included in this work.</p>
 <p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h2 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h2></a></p>
 <p>The <a href="https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
 <p><a href="#heading--Ten-words-or-less-5"><h3 id="heading--Ten-words-or-less-5">Ten words or less</h3></a></p>
-<p>Custom Windows images on MAAS handle most releases and options.</p>
+<p>MAAS custom Windows images now support most releases and options.</p>
 <p><a href="#heading--What-has-been-added-to-Windows-custom-images"><h3 id="heading--What-has-been-added-to-Windows-custom-images">What has been added to Windows custom images</h3></a></p>
 <p>Specifically, MIB now supports a much wider range of Windows images.  Previously, only 2012 and 2106 Windows versions were supported with MIB.  Now the list is much longer, bringing deployable MAAS versions up to date with the current Windows releases:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -1509,7 +1512,6 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 <li><a href="https://bugs.launchpad.net/bugs/1989970">1989970</a>: Can&rsquo;t enlist machines on subnets with DNS set</li>
 <li><a href="https://bugs.launchpad.net/bugs/1989974">1989974</a>: rackd fails on CIS-hardened machine with &ldquo;Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)&rdquo;</li>
 <li><a href="https://bugs.launchpad.net/bugs/1990014">1990014</a>: regiond.conf &ldquo;debug_http: true&rdquo; causes image downloads from regiond to fail with 500 error code</li>
-<li><a href="https://bugs.launchpad.net/bugs/1990289">1990289</a>: allocate call with system_id can allocate a new machine</li>
 <li><a href="https://bugs.launchpad.net/bugs/1990649">1990649</a>: Kernel parameters form resets to previous value after save</li>
 <li><a href="https://bugs.launchpad.net/bugs/1990873">1990873</a>: TestKeys - test_get_launchpad_crashes_for_user_not_found</li>
 <li><a href="https://bugs.launchpad.net/bugs/1991106">1991106</a>: vCenter password field text is visible in settings</li>
@@ -1519,14 +1521,20 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 <li><a href="https://bugs.launchpad.net/bugs/1991410">1991410</a>: wildcard DNS entry is not allowed</li>
 <li><a href="https://bugs.launchpad.net/bugs/1991792">1991792</a>: machine.action clone does not accept filter</li>
 <li><a href="https://bugs.launchpad.net/bugs/1991795">1991795</a>: machine.action does not always throw errors for failed machines</li>
-<li><a href="https://bugs.launchpad.net/bugs/1992185">1992185</a>: unable to deploy a machine with vmhost if a bond interface was created</li>
 <li><a href="https://bugs.launchpad.net/bugs/1992332">1992332</a>: websocket machine.list parent group label should return hostname</li>
 <li><a href="https://bugs.launchpad.net/bugs/1992686">1992686</a>: MAAS 3.3 alpha missing two existing filters</li>
-<li><a href="https://bugs.launchpad.net/bugs/1992791">1992791</a>: Info icons appear/disappear based on checked options in subnet page</li>
 <li><a href="https://bugs.launchpad.net/bugs/1992975">1992975</a>: Grouping by parents fails if there&rsquo;s more than one page</li>
-<li><a href="https://bugs.launchpad.net/bugs/1993289">1993289</a>: Pod storage pool path can&rsquo;t be blank</li>
 </ul>
 <p>More bug-fixes are planned for later 3.3 releases.</p>
+<p><a href="#heading--MAAS-3.3-Beta-2-bug-list"><h3 id="heading--MAAS-3.3-Beta-2-bug-list">MAAS 3.3 Beta 2 bug list</h3></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/bugs/1990289">1990289</a>: allocate call with system_id can allocate a new machine</li>
+<li><a href="https://bugs.launchpad.net/bugs/1991784">1991784</a>: [needs-packaging] GL Excess</li>
+<li><a href="https://bugs.launchpad.net/bugs/1992185">1992185</a>: unable to deploy a machine with vmhost if a bond interface was created</li>
+<li><a href="https://bugs.launchpad.net/bugs/1992494">1992494</a>: Jammy KVM host support</li>
+<li><a href="https://bugs.launchpad.net/bugs/1992791">1992791</a>: Info icons appear/disappear based on checked options in subnet page</li>
+<li><a href="https://bugs.launchpad.net/bugs/1993289">1993289</a>: Pod storage pool path can&rsquo;t be blank</li>
+</ul>
 <p><a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a></p>
 <p>Here are release notes for other relatively recent MAAS versions:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
