@@ -414,115 +414,8 @@
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
 <p><strong>NOTE:</strong> 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-reference.html">you can always double-check</a>.</p>
-<p>This article will show you:</p>
-<p><a href="#heading--fresh-install-3-2-snap"><h2 id="heading--fresh-install-3-2-snap">How to do a fresh snap install of MAAS 3.2</h2></a></p>
-<p>To install MAAS 3.2 from a snap, simply enter the following:</p>
-<pre><code>$ sudo snap install --channel=3.2 maas
-</code></pre>
-<p>After entering your password, the snap will download and install from the 3.2 channel.</p>
-<p><a href="#heading--upgrade-from-earlier-version-to-snap-3-2"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-2">How to upgrade from an earlier snap version to MAAS 3.2</h2></a></p>
-<p>Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.2 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
-<pre><code>$ sudo snap refresh --channel=3.2 maas
-</code></pre>
-<p>After entering your password, the snap will refresh from the 3.2 channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
-<p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
-<p><a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS 3.2 snap for a test or POC environment</h2></a></p>
-<p>You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called <code>maas-test-db</code>, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.</p>
-<p>Once MAAS is installed, you can use the <code>--help</code> flag with <code>maas init</code> to get relevant instructions:</p>
-<pre><code>$ sudo maas init --help
-usage: maas init [-h] {region+rack,region,rack} . . .
-
-Initialise MAAS in the specified run mode.
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-run modes:
-  {region+rack,region,rack}
-    region+rack         Both region and rack controllers
-    region              Region controller only
-    rack                Rack controller only
-
-When installing region or rack+region modes, MAAS needs a
-PostgreSQL database to connect to.
-
-If you want to set up PostgreSQL for a non-production deployment on
-this machine, and configure it for use with MAAS, you can install
-the maas-test-db snap before running 'maas init':
-    sudo snap install maas-test-db
-    sudo maas init region+rack --database-uri maas-test-db:///
-</code></pre>
-<p>We&rsquo;ll quickly walk through these instructions to confirm your understanding.  First, install the <code>maas-test-db</code> snap:</p>
-<pre><code>sudo snap install maas-test-db
-</code></pre>
-<p>Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it&rsquo;s done, you can double check with a built-in PostgreSQL shell:</p>
-<pre><code>$ sudo maas-test-db.psql
-psql (12.4)
-Type "help" for help.
-
-postgres=# \l
-</code></pre>
-<p>This will produce a list of databases, one of which will be <code>maasdb</code>, owned by <code>maas</code>.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the <code>maas init</code> command:</p>
-<pre><code>sudo maas init region+rack --database-uri maas-test-db:///
-</code></pre>
-<p>After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:</p>
-<pre><code>MAAS URL [default=http://10.45.222.159:5240/MAAS]:
-</code></pre>
-<p>When you&rsquo;ve entered a suitable URL, or accepted the default, the following prompt will appear:</p>
-<pre><code>MAAS has been set up.
-
-If you want to configure external authentication or use
-MAAS with Canonical RBAC, please run
-
-  sudo maas configauth
-
-To create admins when not using external authentication, run
-
-  sudo maas createadmin
-</code></pre>
-<p>Let&rsquo;s assume you just want a local testing user named <code>admin</code>:</p>
-<pre><code>$ sudo maas createadmin
-Username: admin
-Password: ******
-Again: ******
-Email: admin@example.com
-Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
-</code></pre>
-<p>At this point, MAAS is basically set up and running.  You can confirm this with <code>sudo maas status</code>.  If you need an API key, you can obtain this with <code>sudo maas apikey --username yourusername</code>.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your <code>admin</code> username and password.</p>
-<p><a href="#heading--init-maas-production"><h2 id="heading--init-maas-production">Initialise MAAS for a production configuration</h2></a></p>
-<p>To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.</p>
-<p><a href="#heading--pg-setup"><h4 id="heading--pg-setup">Setting up PostgreSQL from scratch</h4></a></p>
-<p>To set up PostgreSQL, even if it&rsquo;s running on a different machine, you can use the following procedure:</p>
-<ol>
-<li>
-<p>You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:</p>
-<pre><code>sudo apt update -y
-sudo apt install -y postgresql
-</code></pre>
-</li>
-<li>
-<p>You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where <code>$MAAS_DBUSER</code> is your desired database username, and <code>$MAAS_DBPASS</code> is the intended password for that username.  Note that if you&rsquo;re executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.</p>
-<pre><code>sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
-</code></pre>
-</li>
-<li>
-<p>Create the MAAS database with the following command, where <code>$MAAS_DBNAME</code> is your desired name for the MAAS database (typically known as <code>maas</code>). Again, if you&rsquo;re executing this step in a LXD container as root, you can ignore the minor error that results.</p>
-<pre><code>sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
-</code></pre>
-</li>
-<li>
-<p>Edit <code>/etc/postgresql/12/main/pg_hba.conf</code> and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than <code>0/0</code>.</p>
-<pre><code>host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
-</code></pre>
-</li>
-<li>
-<p>You can then initialise MAAS via the following command:</p>
-<pre><code>sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
-</code></pre>
-</li>
-</ol>
-<p><strong>NOTE:</strong>  You should use <code>localhost</code> for <code>$HOSTNAME</code> if you&rsquo;re running PostgreSQL on the same box as MAAS. </p>
-<p>Don&rsquo;t worry; if you leave out any of the database parameters, you&rsquo;ll be prompted for those details.</p>
+<p><strong>NOTE:</strong> 
+<strong>IMPORTANT</strong>: If you&rsquo;re having trouble accessing your MAAS, double-check your URL.  It should be of the form <code>http://nn.nn.nn.nn:5240/MAAS</code>, where <code>nn.nn...</code> is the IP address.  Note that this is <code>http</code> and not <code>https</code>.  <strong>ALSO</strong> check whether the IP of your MAAS host may have changed, e.g., due to the MAAS host using a DHCP lease.  If the MAAS host&rsquo;s IP changes for any reason, you will need to re-initialise MAAS to pick up the new IP address.</p>
 <p><a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a></p>
 <p>You can check the status of running services with:</p>
 <pre><code>sudo maas status
@@ -550,39 +443,6 @@ tgt                              RUNNING   pid 8040, uptime 0:09:15
 <pre><code>sudo maas init --help
 </code></pre>
 <p><a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a></p>
-<p>Once you&rsquo;ve successfully installed MAAS (regardless of method), you can now login here:</p>
-<pre><code>http://${API_HOST}:5240/MAAS
-</code></pre>
-<p>where $API_HOST is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p></p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg"></a> </p>
-<p>Log in at the prompts, with the login information you created when initialising MAAS.</p>
-<p><a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a></p>
-<p>After a fresh MAAS installation, the web UI presents a couple of welcome  screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg"></a>  </p>
-<p>Your main concerns for this experiment are the DNS forwarder, the Ubuntu image import section, and the SSH public key, though you might want to set the region name to something memorable, since this text will appear at the bottom of every MAAS screen in this install domain. Set the DNS forwarder to something obvious, e.g., <code>8.8.8.8</code>, Google’s DNS server.  Set this to your own internal DNS server if you know the IP address.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg"></a>  </p>
-<p>Select an Ubuntu image to import, noting that you may be required to select at least one LTS version, depending upon the version of MAAS that snap installed.  In this example, we&rsquo;ve already chosen an image, and downloading is partially complete.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg"></a>  </p>
-<p>When you click on “Continue,” the screen will shift to a screen labelled, “SSH keys for admin:”  </p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg"></a> </p>
-<p>In the source drop-down, select “Launchpad,” “Github,” or “Upload.”  If you choose one of the first two, you will need to enter your username for that service.  For example, if you want to upload your SSH public key from Launchpad, you would enter:</p>
-<pre><code>lp:&lt;username&gt;
-</code></pre>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg"></a> </p>
-<p>Likewise, if you want to upload your github public SSH key, you would enter:</p>
-<pre><code>gh:&lt;username&gt;
-</code></pre>
-<p>If you want to use your existing public key from your home directory, you can select “Upload”and then copy your entire public key from <code>.ssh/id_rsa.pub</code> (or wherever you may have stored the key):</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg"></a> </p>
-<p>and paste it into the block labelled “Public key.”  Finally, press the “Import” button to import this key:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg"></a> </p>
-<p>With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.</p>
-<p><strong>NOTE:</strong> 
-Note that you may have to wait a few moments for your selected images to sync locally.</p>
-<p><a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable DHCP</h3></a></p>
-<p>Before moving forward with MAAS, you&rsquo;ll want to enable DHCP.  You can do this very easily from the web UI by selecting &ldquo;Subnets&rdquo; from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, &ldquo;Enable DHCP.&rdquo;</p>
-<p><a href="#heading--networking"><h3 id="heading--networking">About network discovery</h3></a></p>
-<p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This network discovery process allows you to easily add or map devices already connected to your network &ndash; devices that you may not necessarily want to manage with MAAS.</p>
 <!--
 <a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a>
 
