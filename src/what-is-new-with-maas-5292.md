@@ -5,9 +5,9 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-We are happy to announce that MAAS 3.3 Beta 3 has been released, bringing [many additional bug fixes](#heading--MAAS-3.3-Beta-3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+We are happy to announce that MAAS 3.3 Beta 3 has been released, bringing [many additional bug fixes](#heading--MAAS-3-3-Beta-3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
-<a href="#heading--Cumulative-summary-of-MAAS-3.3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3.3-features">Cumulative summary of MAAS 3.3 features</h2></a>
+<a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
 New features created for MAAS 3.3 include:
 
@@ -41,7 +41,7 @@ This first Beta release also includes over one-hundred [bug fixes](#heading--MAA
 **NOTE** that this is a Beta release. Although we aim to ensure there is no regression, there still may be bugs. While we work to stabilise this release, we advise against using beta releases in production environments.
 [/note]
 
-<a href="#heading--How-to-install-MAAS-3.3-Beta"><h2 id="heading--How-to-install-MAAS-3.3-Beta">How to install MAAS 3.3 Beta</h2></a>
+<a href="#heading--How-to-install-MAAS-3-3-Beta"><h2 id="heading--How-to-install-MAAS-3-3-Beta">How to install MAAS 3.3 Beta</h2></a>
 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-reference/6233).
 
@@ -906,7 +906,7 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 
 More bug-fixes are planned for later 3.3 releases.
 
-<a href="#heading--MAAS-3.3-Beta-2-bug-list"><h3 id="heading--MAAS-3.3-Beta-2-bug-list">MAAS 3.3 Beta 2 bug list</h3></a>
+<a href="#heading--MAAS-3-3-Beta-2-bug-list"><h3 id="heading--MAAS-3-3-Beta-2-bug-list">MAAS 3.3 Beta 2 bug list</h3></a>
 
 - [1990289](https://bugs.launchpad.net/bugs/1990289): allocate call with system_id can allocate a new machine
 - [1991784](https://bugs.launchpad.net/bugs/1991784): [needs-packaging] GL Excess
@@ -915,7 +915,7 @@ More bug-fixes are planned for later 3.3 releases.
 - [1992791](https://bugs.launchpad.net/bugs/1992791): Info icons appear/disappear based on checked options in subnet page
 - [1993289](https://bugs.launchpad.net/bugs/1993289): Pod storage pool path can't be blank
 
-<a href="#heading--MAAS-3.3-Beta-3-bug-list"><h3 id="heading--MAAS-3.3-Beta-3-bug-list">MAAS 3.3 Beta 3 bug list</h3></a>
+<a href="#heading--MAAS-3-3-Beta-3-bug-list"><h3 id="heading--MAAS-3-3-Beta-3-bug-list">MAAS 3.3 Beta 3 bug list</h3></a>
 
 - [1993032](https://bugs.launchpad.net/bugs/1993032): maas_hardware_sync creds are readable to local users on deployed OS and can give a super user access to MAAS itself
 - [1996065](https://bugs.launchpad.net/bugs/1996065): CLI errors when redirecting the output to a file
