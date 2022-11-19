@@ -46,7 +46,7 @@ Add this information to your text file.
 
 We need to know the version and build (and packaging format) that you're running.
 
-<h4>If you're using a snap</h4>
+<a href="#heading--If-you're-using-a-snap"><h4 id="heading--If-you're-using-a-snap">If you're using a snap</h4></a>
 
 If you're using a snap, execute `snap list maas` at the command line, which will return some lines like this:
 
@@ -63,7 +63,7 @@ MAAS fails to PXE boot IBM LPAR machine as VM host
 >>I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.
 ```
 
-<h4>If you're using a debian package</h4>
+<a href="#heading--If-you're-using-a-debian-package"><h4 id="heading--If-you're-using-a-debian-package">If you're using a debian package</h4></a>
 
 If you're using a deb, execute `apt list maas` at the command line, and enter whatever it returns into your text file, as in the snap example above, being sure to specify:
 
@@ -180,7 +180,7 @@ If you're using packages, you'll find the files in these locations:
 * /var/log/maas/rackd.log
 * /var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages
 
-<a href="#heading--compress-logfiles"><h4>How to compress these logfiles into a tar.gz file for efficient upload</h4></a>
+<a href="#heading--How-to-compress-these-logfiles-into-a-tar-gz-file-for-efficient-upload"><h4 id="heading--How-to-compress-these-logfiles-into-a-tar-gz-file-for-efficient-upload">How to compress these logfiles into a tar.gz file for efficient upload</h4></a>
 
 The following animation shows a recommended process for creating a `tar.gz` file.  The mistakes are intentional, so that you'll know what to do if you forget an option now and then, or forget to use `sudo` in a step or two:
 

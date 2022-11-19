@@ -438,8 +438,7 @@ Note that in the examples that follow, a <code>&gt;&gt;</code> symbol indicates 
 <p>Add this information to your text file.</p>
 <p><a href="#heading--version-and-build"><h3 id="heading--version-and-build">Identify your version and build</h3></a></p>
 <p>We need to know the version and build (and packaging format) that you&rsquo;re running.</p>
-<h4>If you're using a snap</h4>
-
+<p><a href="#heading--If-you're-using-a-snap"><h4 id="heading--If-you're-using-a-snap">If you&rsquo;re using a snap</h4></a></p>
 <p>If you&rsquo;re using a snap, execute <code>snap list maas</code> at the command line, which will return some lines like this:</p>
 <pre><code class="language-text">Name  Version                       Rev    Tracking     Publisher   Notes
 maas  3.0.0~beta2-9796-g.2182ab55f  13292  latest/edge  canonical✓  -
@@ -449,8 +448,7 @@ maas  3.0.0~beta2-9796-g.2182ab55f  13292  latest/edge  canonical✓  -
 
 &gt;&gt;I'm using snap version/build 3.0.0~beta2-9796-g.2182ab55f.
 </code></pre>
-<h4>If you're using a debian package</h4>
-
+<p><a href="#heading--If-you're-using-a-debian-package"><h4 id="heading--If-you're-using-a-debian-package">If you&rsquo;re using a debian package</h4></a></p>
 <p>If you&rsquo;re using a deb, execute <code>apt list maas</code> at the command line, and enter whatever it returns into your text file, as in the snap example above, being sure to specify:</p>
 <pre><code class="language-text">I'm using debian package version/build...
 </code></pre>
@@ -548,7 +546,7 @@ stage, as normal.
 <li>/var/log/maas/rackd.log</li>
 <li>/var/log/maas/rsyslog/$MACHINE_NAME/$RELEVANT_DATE/messages</li>
 </ul>
-<p><a href="#heading--compress-logfiles"><h4>How to compress these logfiles into a tar.gz file for efficient upload</h4></a></p>
+<p><a href="#heading--How-to-compress-these-logfiles-into-a-tar-gz-file-for-efficient-upload"><h4 id="heading--How-to-compress-these-logfiles-into-a-tar-gz-file-for-efficient-upload">How to compress these logfiles into a tar.gz file for efficient upload</h4></a></p>
 <p>The following animation shows a recommended process for creating a <code>tar.gz</code> file.  The mistakes are intentional, so that you&rsquo;ll know what to do if you forget an option now and then, or forget to use <code>sudo</code> in a step or two:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c8e05533fc4f076774d26e592fe02418bc70ecf7.gif" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c8e05533fc4f076774d26e592fe02418bc70ecf7.gif"></a></p>
 <p><a href="#heading--filing-bug"><h2 id="heading--filing-bug">Step 2: Filing your bug</h2></a></p>
