@@ -1,8 +1,8 @@
-<!-- "MAAS Zero to Sixty" -->
+<!-- "MAAS CLI tutorial" -->
 
 Let's get some machines up and running, using the MAAS CLI.  If you haven't installed MAAS yet, you can [follow these instructions](/t/how-to-install-maas/5128) first.
 
-## Logging into MAAS
+<a href="#heading--Logging-into-MAAS"><h2 id="heading--Logging-into-MAAS">Log into MAAS</h2></a>
 
 In the CLI, logging in is a two-stepper:
 
@@ -68,6 +68,7 @@ For help with the available commands, try:
 
 maas admin --help
 ```
+<a href="#heading--Check-the-detailed-help"><h2 id="heading--Check-the-detailed-help">Check the detailed help</h2></a>
 
 Now, having done that, we can get a much better idea what MAAS will do:
 
@@ -199,6 +200,8 @@ drill down:
       latest version of this help information from the server.
 ```
 
+<a href="#heading--Set-the-DNS-server-IP-address"><h2 id="heading--Set-the-DNS-server-IP-address">Set the DNS server IP address</h2></a>
+
 The next step?  Set the DNS server IP address.  You can do this by issuing the CLI subcommand called "dnsresource".  Let's look at the help for that command:
 
 ```nohighlight
@@ -265,7 +268,7 @@ Machine-readable output follows:
 OK
 ```
 
-## Importing images
+<a href="#heading--Import-some-images"><h2 id="heading--Import-some-images">Import some images</h2></a>
 
 Next, we need to import images.  Some images automatically sync, so let's bring in some other image (like Ubuntu 16.04 LTS) just to see how that works.
 
@@ -365,6 +368,8 @@ Machine-readable output follows:
 
 Okay, that's a lot of information, but it looks like we have a bunch of 18.04 images downloaded and synched.  Depending on what version of MAAS you're using, your list could be a lot different, and that doesn't matter here.
 
+<a href="#heading--Try-getting-a-more-compact-image-list"><h3 id="heading--Try-getting-a-more-compact-image-list">Try getting a more compact image list</h3></a>
+
 Let's try to get a little fancy with  `grep` and see if we can make that list shorter:
 
 ```nohighlight
@@ -387,6 +392,8 @@ This produces a quick list of the images we've successfully downloaded:<br />
 ```
 
 That definitely confirms that we have some images.  But what are those three or four on top?  Looking at the massive JSON output, notice that they have names like "open-firmware," "uefi," and "pxe."  Those are images that can PXE-boot machines, basically.  But how can we sort this information out in a neat way?
+
+<a href="#heading--Get-familiar-with-jq"><h3 id="heading--Get-familiar-with-jq">Get familiar with jq</h3></a>
 
 Well, if you're going to use anything with JSON-based output, you'll want to consider learning the command line tool [jq](https://stedolan.github.io/jq/).  It's quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through `jq` like this:
 
@@ -451,7 +458,8 @@ Machine-readable output follows:
 Import of boot resources started
 ```
 
-## Configuring DHCP
+<a href="#heading--Configure-DHCP"><h2 id="heading--Configure-DHCP">Configure DHCP</h2></a>
+
 The whole point here is to get machines deployed, so the next step is to get DHCP working.  We have to find the right VLAN, which isn't too hard, since at this point there's only one.
 
 In order to turn on DHCP, we need to know two things besides the VLAN name ("untagged"): we need to know the fabric ID and the primary rack controller name. Actually, to start with, all the fabrics will be on the same untagged VLAN, so any fabric will do. We can find a usable fabric by picking a valid bridge IP address like this:
@@ -565,7 +573,7 @@ Machine-readable output follows:
 }
 ```
 
-## Commissioning machines
+<a href="#heading--Commission-some-machines"><h2 id="heading--Commission-some-machines">Commission some machines</h2></a>
 
 In order to deploy machines, we've got to create some, plain and simple, and then commission them.  We're using `virsh` for this example, but you can use LXD or any VM hosting tool you're comfortable with:
 
@@ -767,7 +775,7 @@ Machine-readable output follows:
 
 And just like that, it's already commissioning (MAAS does that if it can).
 
-### Commissioning by CLI
+<a href="#heading--Manually-commission-a-machine"><h2 id="heading--Manually-commission-a-machine">Manually commission a machine</h2></a>
 
 So now we have a machine in the "Ready" state, but let's also get familiar with commanding MAAS to commission it via the CLI.  All we really need for that is the system ID, which is the last parameter in the "resource uri" above.  But just for grins, let's go ahead and retrieve the system ID using the CLI.
 
@@ -1082,11 +1090,11 @@ Machine-readable output follows:
 
 And that's it, it's that easy. It takes a minute to get all the parameters together to create a new machine, but it isn't that difficult.  
 
-## Deploying machines
+<a href="#heading--Deploy-some-machines"><h2 id="heading--Deploy-some-machines">Deploy some machines</h2></a>
 
 The real value of MAAS, of course, is deploying machines without having to be there.  That's what we're going to do next.
 
-### Allocating a machine
+<a href="#heading--Allocate-a-machine"><h3 id="heading--Allocate-a-machine">Allocate a machine</h3></a>
 
 When it's finished commissioning, we can allocate a machine like this:
 
@@ -1593,7 +1601,8 @@ Machine-readable output follows:
 ```
 </details>
 
-## Deploying a machine with the CLI
+<a href="#heading--Deploying-a-machine-with-the-CLI"><h3 id="heading--Deploying-a-machine-with-the-CLI">Deploying a machine with the CLI</h3></a>
+
 Finally, let's deploy that machine this way:
 
 ```nohighlight
@@ -2098,13 +2107,13 @@ Machine-readable output follows:
 
 Okay then. We've installed and configured MAAS, started DHCP, created a machine, commissioned it, acquired it, and deployed it, with minimal hassle.  There's just one more useful thing to experience before diving into MAAS head-first.
 
-## SSH/SCP to running machines
+<a href="#heading--Log-into-running-machines"><h2 id="heading--Log-into-running-machines">Log into running machines</h2></a>
 
 What if we just set ourselves up to SSH into our MAAS machines?  Making this work will also allow us to `scp` files in -- and I'm sure you can see how we'd provision a machine from there.  We can also do the provisioning with MAAS, but that's a more complex topic for later.
 
 First things first: we need to build the MAAS infrastructure necessary to play with this feature.
 
-### Create a KVM
+<a href="#heading--Create-a-VM-host"><h3 id="heading--Create-a-VM-host">Create a VM host</h3></a>
 
 We start by creating a vm-host.  Let's play dumb and walk our way through this; first, we'll just try creating a vm-host, like this:
 
@@ -2180,7 +2189,7 @@ Your address will vary, so check carefully.
 
 What we'll need in the next step is the `vm-host ID`, which is the number on the end of the `resource_uri`. In this case that's "7".
 
-### Compose a machine
+<a href="#heading--Compose-a-machine"><h3 id="heading--Compose-a-machine">Compose a machine</h3></a>
 
 Having a VM host is great, but we can't demonstrate `ssh/scp` machine actions without a virtual machine running on that host.  Let's create one.  This may get tricky, so let's start by looking at the MAAS CLI help:
 
@@ -2546,7 +2555,7 @@ HOSTNAME    SYSID   POWER  STATUS  OWNER  TAGS     POOL     VLAN      FABRIC    
 native-cub  xttpfx  off    Ready   -      virtual  default  untagged  fabric-1  10.38.31.0/24
 ```
 
-### Getting the machine to a login state
+<a href="#heading--Get-the-machine-to-a-login-state"><h3 id="heading--Get-the-machine-to-a-login-state">Get the machine to a login state</h3></a>
 
 We can't SSH into it, because it automatically turned off after commissioning, and anyway, we didn't have a chance to ask for SSH keys to be loaded during the commissioning process.  Let's run that commissioning again, with SSH keys enabled, and making sure that it's left on after it's done.  For this operation, we just use the standard `machine` commands, because the `vm-host` is now hosting a MAAS machine:
 
@@ -2564,7 +2573,7 @@ HOSTNAME    SYSID   POWER  STATUS  OWNER  TAGS     POOL     VLAN      FABRIC    
 native-cub  xttpfx  on     Ready   -      virtual  default  untagged  fabric-1  10.38.31.0/24
 ```
 
-### Logging into a commissioned machine
+<a href="#heading--Logging-into-a-commissioned-machine"><h3 id="heading--Logging-into-a-commissioned-machine">Logging into a commissioned machine</h3></a>
 
 So it's "Ready" and it's powered on, that's good.  In order to log in, we'll need to know the machine's IP address.  There are several ways to get this, but by far the easiest (with LXD VMs) is just using the `lxc` command:
 
@@ -2639,7 +2648,7 @@ See "man sudo_root" for details.
 ubuntu@native-cub:`$ 
 ```
 
-###  Using SCP
+<a href="#heading--Using-SCP"><h3 id="heading--Using-SCP">Using SCP</h3></a>
 
 We can jump out of this machine and use its IP address to copy files over to it.  First, let's make sure that there isn't anything in the local directory on the machine:
 
@@ -2708,7 +2717,7 @@ ubuntu@native-cub:`$
 
 Good, we can copy files to a MAAS-managed machine.
 
-### Copying files to a deployed machine
+<a href="#heading--Copying-files-to-a-deployed-machine"><h3 id="heading--Copying-files-to-a-deployed-machine">Copying files to a deployed machine</h3></a>
 
 Copying files to a commissioned machine doesn't do us much good, of course, since the machine gets wiped out and reloaded on deployment.  Let's acquire and deploy that same machine, and then try logging in and copying files again.
 
@@ -2798,7 +2807,7 @@ See "man sudo_root" for details.
 ubuntu@native-cub:`$ 
 ```
 
-### Copying a script over there and running it
+<a href="#heading--Copying-a-script-to-a-machine-and-running-it"><h3 id="heading--Copying-a-script-to-a-machine-and-running-it">Copying a script to a machine and running it</h3></a>
 
 So first, let's verify that the script we want to copy over there isn't /already/ there.  In fact, to keep it simple, let's just create a simple and fun script to see what `scp` can get us.  First, we'll need to install a couple of software packages on the deployed machine:
 
@@ -2940,6 +2949,6 @@ On my machine, it didn't copy the permissions precisely, but it is executable by
 		||     ||
 ```
 
-## Summary
+<a href="#heading--Summary"><h2 id="heading--Summary">Summary</h2></a>
 
 As you see, it's not that difficult to install MAAS, deploy a machine, and then load usable software on it. Now you can go through the MAAS documenation to learn more about what you just did.
