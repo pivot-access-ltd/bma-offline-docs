@@ -39,7 +39,7 @@ If you made a mistake during setup or you just need to reconfigure your MAAS ser
 sudo dpkg-reconfigure maas-region-controller
 ```
 
-<h3 id="heading--ibm-power-server-pxe-boot">Network booting IBM Power servers</h3>
+<a href="#heading--Network-booting-IBM-Power-servers"><h3 id="heading--Network-booting-IBM-Power-servers">Network booting IBM Power servers</h3></a>
 
 Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by **Petitboot**, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.
 
@@ -47,7 +47,7 @@ When no specific interface is assigned as the network boot device, petitboot has
 
 So, when using IBM Power servers with multiple NICs that can network boot, it's strongly recommended to configure just a single <specific> NIC as the network boot device via **Petitboot**.
 
-<h3 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h3>
+<a href="#heading--Resolve-DNS-conflicts-between-LXD-and-MAAS"><h3 id="heading--Resolve-DNS-conflicts-between-LXD-and-MAAS">Resolve DNS conflicts between LXD and MAAS</h3></a>
 
 If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there's a simple fix. You can turn off LXD's DNS management with the following command:
 
@@ -375,7 +375,7 @@ You can now use this image to commission or deploy a node and access the root ac
 
 <a href="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png"></a>
 
-<h3 id="heading--migrating-maas">Migrating an existing snap installation</h3>
+<a href="#heading--Migrating-an-existing-snap-installation"><h3 id="heading--Migrating-an-existing-snap-installation">Migrating an existing snap installation</h3></a>
 
 If you're currently running MAAS from a snap in `all` mode, you can easily migrate your database to a local PostgreSQL server with the following command:
 
@@ -387,7 +387,7 @@ This will install PostgreSQL from the archive and migrate the MAAS database to i
 
 The migration script will automatically adjust the snap configuration to use the new database.  Note, though, that the target database must be at least the same version level as the one currently used in the snap (PostgreSQL 10).  Consequently, the migration script only supports Ubuntu 18.04 (bionic) or later.
 
-<h3 id="heading--manual-export">Manually exporting the MAAS database</h3>
+<a href="#heading--Manually-exporting-the-MAAS-database"><h3 id="heading--Manually-exporting-the-MAAS-database">Manually exporting the MAAS database</h3></a>
 
 If you want to export the database from the snap to an already setup PostgreSQL server, possibly on a different machine, you can manually export it from MAAS as follows. With MAAS running (as this ensures access to the database), run:
 
@@ -424,11 +424,11 @@ To finish the process, you'll need to update the MAAS snap config to:
 Using a local PostgreSQL server is a little bit of work, but it provides great benefits in terms of MAAS scalability and performance.
 
 
-<h3 id="heading--jq-machine-list">jq recipes using the CLI</h3>
+<a href="#heading--jq-recipes-using-the-CLI"><h3 id="heading--jq-recipes-using-the-CLI">jq recipes using the CLI</h3></a>
 
 Here are some `jq` recipes to get some human-readable output from the MAAS CLI.
 
-<h4 id="heading--jqml-sh">Basic machine list</h4>
+<a href="#heading--Basic-machine-list"><h4 id="heading--Basic-machine-list">Basic machine list</h4></a>
 
 This recipe, which we keep in a file called `jqml.sh`, prints a basic machine list
 
@@ -441,7 +441,7 @@ This recipe, which we keep in a file called `jqml.sh`, prints a basic machine li
 
 For this to work, you need to **only** break lines in the jq string ('...') or add backslashes if you break outside that boundary.
 
-<h4 id="heading--jqmltag-sh">Machine list with first tag added</h4>
+<a href="#heading--Machine-list-with-first-tag-added"><h4 id="heading--Machine-list-with-first-tag-added">Machine list with first tag added</h4></a>
 
 It's a good idea to keep your most important machine tag first, as it's the first one you'll see.  It makes scanning your list (UI or CLI/jq) much more efficient.  Here's a recipe that adds the first tag to the console-printed machine list.  We keep it in `jqmltag.sh`, but of course, you can call it whatever you want.
 
