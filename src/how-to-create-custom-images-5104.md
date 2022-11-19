@@ -1183,7 +1183,7 @@ All done? Great!  Now you can build and customise images for MAAS machines, as s
 
 MAAS already provides the latest available CentOS 7 and CentOS 8 for automatic download. If you need something else, though, MAAS Image Builder supports the ability to create various CentOS images.
 
-<h4 id="heading--centos-nw-rqmts">Network Requirements</h4>
+<a href="#heading--Network-Requirements-for-CentOS"><h4 id="heading--Network-Requirements-for-CentOS">Network Requirements for CentOS</h4></a>
 
 Access to the Internet is required, since you will need to start with one of these sites:
 
@@ -1191,11 +1191,11 @@ Access to the Internet is required, since you will need to start with one of the
 - https://download.fedoraproject.org - EPEL
 - https://copr-be.cloud.fedoraproject.org - Canonical maintained cloud-init repository
 
-<h4 id="heading--images-behind-proxy">Creating images behind a proxy</h4>
+<a href="#heading--Creating-CentOS-images-behind-a-proxy"><h4 id="heading--Creating-CentOS-images-behind-a-proxy">Creating CentOS images behind a proxy</h4></a>
 
 MAAS Image Builder can create CentOS images behind a proxy -- just set the ‘http_proxy’ environment variable to _your_ particular proxy. Once deployed, <code>yum</code> will use this MAAS-configured proxy.
 
-<h4 id="heading--centos-create-images">Creating the images</h4>
+<a href="#heading--Creating-the-CentOS-images"><h4 id="heading--Creating-the-CentOS-images">Creating the CentOS images</h4></a>
 
 <code>maas-image-builder</code> is designed to automate the process of generating the images for MAAS and <code>curtin</code>.  Here are some specific examples:
 
@@ -1203,13 +1203,13 @@ MAAS Image Builder can create CentOS images behind a proxy -- just set the ‘ht
     $ sudo maas-image-builder -o centos6-i386-root-tgz --arch i386 centos --edition 6
     $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --edition 7
 
-<h4 id="heading--centos-customize-images">Customising CentOS images</h4>
+<a href="#heading--Customising-CentOS-images"><h4 id="heading--Customising-CentOS-images">Customising CentOS images</h4></a>
 
 Starting from MAAS Image Builder 1.0.4, customisation of CentOS images is now supported.  You can provide a custom kickstart, in _addition_ to the kickstart that MAAS Image Builder uses to create the images. You can customise your image like this:
 
     $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --edition 7 --custom-kickstart ./custom.ks
 
-<h4 id="heading--centos-upload-images">Uploading the image into MAAS</h4>
+<a href="#heading--Uploading-the-CentOS-image-into-MAAS"><h4 id="heading--Uploading-the-CentOS-image-into-MAAS">Uploading the CentOS image into MAAS</h4></a>
 
 Custom CentOS images can be uploaded to MAAS as shown in the command below.  _Do note_ that the name **must** start with ‘centos’ and **must** be one line:
 
@@ -1221,7 +1221,7 @@ You can use the MAAS WebUI to check that your custom CentOS image is valid and s
 
 Currently, MAAS _only_ supports RHEL as a custom image. In future versions of MAAS, RHEL will be natively supported.
 
-<h4 id="heading--rhel-requirements">Some Requirements</h4>
+<a href="#heading--RHEL-image-Requirements"><h4 id="heading--RHEL-image-Requirements">RHEL image Requirements</h4></a>
 
 In order to create RHEL images, you will need access to these sites:
 
@@ -1229,17 +1229,17 @@ In order to create RHEL images, you will need access to these sites:
 - https://download.fedoraproject.org - Access to the EPEL repository to install required deps
 - https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository
 
-<h4 id="heading--rhel-behind-proxy">Creating images behind a proxy</h4>
+<a href="#heading--Creating-RHEL-images-behind-a-proxy"><h4 id="heading--Creating-RHEL-images-behind-a-proxy">Creating RHEL images behind a proxy</h4></a>
 
 MAAS image builder supports creating RHEL images behind a proxy. To use a proxy when building a RHEL image, just set the ‘http_proxy’ environment variable to _your_ local proxy. Once deployed, <code>yum</code> will use the MAAS-configured proxy.
 
-<h4 id="heading--rhel-create-images">Creating the images</h4>
+<a href="#heading--Creating-the-RHEL-images"><h4 id="heading--Creating-the-RHEL-images">Creating the RHEL images</h4></a>
 
 To generate a usable RHEL image, <code>maas-image-builder</code> automates image generation; these images can be used by MAAS and <code>curtin</code>.
 
      $ sudo maas-image-builder -a amd64 -o rhel8-amd64-root-tgz rhel --rhel-iso blah.iso
 
-<h4 id="heading--rhel-install">Install into MAAS</h4>
+<a href="#heading--Install-the-RHEL-image-into-MAAS"><h4 id="heading--Install-the-RHEL-image-into-MAAS">Install the RHEL image into MAAS</h4></a>
 
 The custom RHEL image can be uploaded to MAAS, but note that the name **must** start with ‘rhel’ and **must** be expressed as a single line, like this:
 
@@ -1279,7 +1279,7 @@ There are several Windows editions/install options supported by `maas-image-buil
 
 The examples in this section use Windows Hyper-V 2012 R2.
 
-<h4 id="heading--mib-windows">Image Builder</h4>
+<a href="#heading--MAAS-Image-Builder-for-Window"><h4 id="heading--MAAS-Image-Builder-for-Window">MAAS Image Builder for Window</h4></a>
 
 MAAS Image Builder (also known as "MIB") can automate the process of generating images for MAAS and <code>curtin</code>.
 
@@ -1300,7 +1300,7 @@ Important: <b>LXD Virtual Machines</b> require an UEFI image (`--uefi`) and Virt
     [--windows-updates] [--disk-size 128G] \
     [--uefi] [--virtio] [--driver-store]
 
-<h4 id="heading--mib-options-windows">Image Builder options for Windows</h4>
+<a href="#heading--Image-Builder-options-for-Windows"><h4 id="heading--Image-Builder-options-for-Windows">Image Builder options for Windows</h4></a>
 
 MAAS Image Builder options for Windows images can be listed with the following command:
 
@@ -1326,13 +1326,13 @@ Some Windows-specific platform options:
 - `--virtio`: use paravirtualized VirtIO SCSI and VirtIO NET devices (instead of emulated devices) for installation (requires `--windows-drivers`)
 - `--disk-size`: specify the (virtual) disk size for Windows setup (must be larger for `--windows-updates`; increases deployment/copy-to-disk time, and is expanded to physical disk size during deployment)
 
-<h4 id="heading--mib-debug-windows">Debug</h4>
+<a href="#heading--Debugging-custom-Windows-images"><h4 id="heading--Debugging-custom-Windows-images">Debugging custom Windows images</h4></a>
 
 You can debug the Windows installation process by connecting to <code>localhost:5901</code> using a VNC client (e.g., `vncviewer`).
 
 You can pause the Windows installation process at the last step for inspection/debugging in PowerShell with the `--powershell` option.
 
-<h4 id="heading--windows-image-install">Install into MAAS</h4>
+<a href="#heading--Installing-Windows-images-into-MAAS"><h4 id="heading--Installing-Windows-images-into-MAAS">Installing Windows images into MAAS</h4></a>
 
 The generated images need to be placed into the correct directories so MAAS can deploy them onto a node:
 
