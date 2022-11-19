@@ -438,7 +438,7 @@
  libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 </code></pre>
 <p>Here we have a clean text table listing the machine hostnames, along with the system IDs, power states, machines statuses, tags, pools, and networking information. These parameters represent only a small fraction of the available JSON output, of course. Let&rsquo;s break this command down, piece by piece, and see how it works.</p>
-<h2>Basic jq usage</h2>
+<p><a href="#heading--Basic-jq-usage"><h2 id="heading--Basic-jq-usage">Basic jq usage</h2></a></p>
 <p>First, we&rsquo;ll just pull the hostnames from these machines, with no qualifiers or formatting rules, like this:</p>
 <pre><code class="language-nohighlight">maas admin machines read | jq '(.[] | [.hostname])'
 </code></pre>
@@ -552,7 +552,7 @@
 ]
 </code></pre>
 <p>So much for printing the values of JSON keys. There are still some nuances (arrays, nested keys, …), but this is the lion&rsquo;s share of the syntax. Let&rsquo;s divert for a minute and look at how to format the output in a more human-readable way.</p>
-<h2>Improved formatting</h2>
+<p><a href="#heading--Improved-formatting"><h2 id="heading--Improved-formatting">Improved formatting</h2></a></p>
 <p>Most of the Ubuntu text-processing commands use tabs as field delimiters, which is a trait inherited from grandfather UNIX. Currently, the output is clean, but relatively hard to format into lines. Luckily jq has a filter for this: the “tab-separated values” filter, known as @tsv. This filter transforms the output records into individual lines with values separated by tabs.</p>
 <p>Adding @tsv to the mix:</p>
 <pre><code class="language-nohighlight">maas admin machines read | jq '(.[] | [.hostname, .status_name]) | @tsv'
@@ -605,7 +605,7 @@ libvirt-vm-4  Ready
 libvirt-vm-5  Ready
 libvirt-vm-6  Deployed
 </code></pre>
-<h2>Making real tables</h2>
+<p><a href="#heading--Making-real-tables"><h2 id="heading--Making-real-tables">Making real tables</h2></a></p>
 <p>So far, so good, but this still isn&rsquo;t a presentable data table. First of all, there are no headings. These can be added by passing a literal row to jq, like this:</p>
 <pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;STATUS&quot;]), (.[] | [.hostname, .status_name]) | @tsv' | column -t
 </code></pre>
@@ -644,7 +644,7 @@ libvirt-vm-4  Ready
 libvirt-vm-5  Ready
 libvirt-vm-6  Deployed
 </code></pre>
-<h2>Extending the list</h2>
+<p><a href="#heading--Extending-the-list"><h2 id="heading--Extending-the-list">Extending the list</h2></a></p>
 <p>Let&rsquo;s add a couple more fields, owner (which is sometimes blank), and system_id (which is never blank), to the output:</p>
 <pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;STATUS&quot;, &quot;OWNER&quot;, &quot;SYSTEM-ID&quot;] 
 | (.,map(length*&quot;-&quot;))), (.[] | [.hostname, .status_name,.owner,.system_id]) 
@@ -687,7 +687,7 @@ libvirt-vm-4  Ready      -      s3sdkw
 libvirt-vm-5  Ready      -      48dg8m
 libvirt-vm-6  Deployed   admin  bacx77
 </code></pre>
-<h2>Nested arrays</h2>
+<p><a href="#heading--Nested-arrays"><h2 id="heading--Nested-arrays">Nested arrays</h2></a></p>
 <p>Machines have a nested array (of indeterminate length) for machine tags. In JSON terms, instead of having a single key-value pair at the top level, like this:</p>
 <pre><code class="language-nohighlight">&quot;hostname&quot;: &quot;libvirt-vm-6&quot;,
 </code></pre>
@@ -739,7 +739,7 @@ libvirt-vm-4  Ready      -      s3sdkw     pod-console-logging
 libvirt-vm-5  Ready      -      48dg8m     pod-console-logging
 libvirt-vm-6  Deployed   admin  bacx77     pod-console-logging
 </code></pre>
-<h2>Nested keys</h2>
+<p><a href="#heading--Nested-keys"><h2 id="heading--Nested-keys">Nested keys</h2></a></p>
 <p>These aren&rsquo;t all the routine key-value pairs we want in the table, though. It would also be nice to print the pool to which each machine is assigned. Just asking for .pool as a single key-value pair:</p>
 <pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;STATUS&quot;, &quot;OWNER&quot;, &quot;SYSTEM-ID&quot;,
 &quot;FIRST_TAG&quot;,&quot;POOL&quot;] | (.,map(length*&quot;-&quot;))), (.[] | [.hostname, .status_name,
@@ -864,7 +864,7 @@ libvirt-vm-4  s3sdkw  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 </code></pre>
-<h2>Chaining Ubuntu CLI commands</h2>
+<p><a href="#heading--Chaining-Ubuntu-CLI-commands"><h2 id="heading--Chaining-Ubuntu-CLI-commands">Chaining Ubuntu CLI commands</h2></a></p>
 <p>Although the machine list above looks fairly neat, it&rsquo;s actually not sorted by hostname, exactly. To accomplish this, we&rsquo;d need to add a couple of Ubuntu CLI commands to the mix. Sorting on hostname means we want to sort on field 1 of the current command&rsquo;s output. We can try just feeding that to sort like this:</p>
 <pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;, &quot;OWNER&quot;, 
 &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))), (.[] | 
@@ -937,7 +937,7 @@ libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  unt
 lxd-vm-3      grwpwc  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 libvirt-vm-3  r44hr6  error  Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 </code></pre>
-<h2>Summary</h2>
+<p><a href="#heading--Summary"><h2 id="heading--Summary">Summary</h2></a></p>
 <p>At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq.</p>
     </div>
   </body>

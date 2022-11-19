@@ -38,7 +38,7 @@ HOSTNAME      SYSID   POWER  STATUS     OWNER  TAGS                 POOL     VLA
 
 Here we have a clean text table listing the machine hostnames, along with the system IDs, power states, machines statuses, tags, pools, and networking information. These parameters represent only a small fraction of the available JSON output, of course. Let's break this command down, piece by piece, and see how it works.
 
-## Basic jq usage
+<a href="#heading--Basic-jq-usage"><h2 id="heading--Basic-jq-usage">Basic jq usage</h2></a>
 
 First, we'll just pull the hostnames from these machines, with no qualifiers or formatting rules, like this:
 
@@ -177,7 +177,7 @@ This command essentially tells jq to do the same thing as last time, but also co
 
 So much for printing the values of JSON keys. There are still some nuances (arrays, nested keys, …), but this is the lion's share of the syntax. Let's divert for a minute and look at how to format the output in a more human-readable way.
 
-##  Improved formatting
+<a href="#heading--Improved-formatting"><h2 id="heading--Improved-formatting">Improved formatting</h2></a>
 
 Most of the Ubuntu text-processing commands use tabs as field delimiters, which is a trait inherited from grandfather UNIX. Currently, the output is clean, but relatively hard to format into lines. Luckily jq has a filter for this: the “tab-separated values” filter, known as @tsv. This filter transforms the output records into individual lines with values separated by tabs.
 
@@ -250,7 +250,7 @@ libvirt-vm-5  Ready
 libvirt-vm-6  Deployed
 ```
 
-## Making real tables
+<a href="#heading--Making-real-tables"><h2 id="heading--Making-real-tables">Making real tables</h2></a>
 
 So far, so good, but this still isn't a presentable data table. First of all, there are no headings. These can be added by passing a literal row to jq, like this:
 
@@ -302,7 +302,7 @@ libvirt-vm-5  Ready
 libvirt-vm-6  Deployed
 ```
 
-## Extending the list
+<a href="#heading--Extending-the-list"><h2 id="heading--Extending-the-list">Extending the list</h2></a>
 
 Let's add a couple more fields, owner (which is sometimes blank), and system_id (which is never blank), to the output:
 
@@ -359,7 +359,7 @@ libvirt-vm-6  Deployed   admin  bacx77
 ```
 
 
-## Nested arrays
+<a href="#heading--Nested-arrays"><h2 id="heading--Nested-arrays">Nested arrays</h2></a>
 
 Machines have a nested array (of indeterminate length) for machine tags. In JSON terms, instead of having a single key-value pair at the top level, like this:
 
@@ -430,7 +430,7 @@ libvirt-vm-5  Ready      -      48dg8m     pod-console-logging
 libvirt-vm-6  Deployed   admin  bacx77     pod-console-logging
 ```
 
-## Nested keys
+<a href="#heading--Nested-keys"><h2 id="heading--Nested-keys">Nested keys</h2></a>
 
 These aren't all the routine key-value pairs we want in the table, though. It would also be nice to print the pool to which each machine is assigned. Just asking for .pool as a single key-value pair:
 
@@ -589,7 +589,7 @@ libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 ```
 
-## Chaining Ubuntu CLI commands
+<a href="#heading--Chaining-Ubuntu-CLI-commands"><h2 id="heading--Chaining-Ubuntu-CLI-commands">Chaining Ubuntu CLI commands</h2></a>
 
 Although the machine list above looks fairly neat, it's actually not sorted by hostname, exactly. To accomplish this, we'd need to add a couple of Ubuntu CLI commands to the mix. Sorting on hostname means we want to sort on field 1 of the current command's output. We can try just feeding that to sort like this:
 
@@ -682,6 +682,6 @@ lxd-vm-3      grwpwc  off    Ready      -      pod-console-logging  default  unt
 libvirt-vm-3  r44hr6  error  Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
 ```
 
-## Summary
+<a href="#heading--Summary"><h2 id="heading--Summary">Summary</h2></a>
 
 At this point, it should be clear that jq is a relatively simple, powerful tool for formatting output from the MAAS CLI. You should also remember that, like any Ubuntu CLI command, jq simply outputs text — so anything you can do with text output, you can do with the output from jq.
