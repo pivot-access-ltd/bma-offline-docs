@@ -157,7 +157,7 @@ sudo apt-get -y install maas
 
 Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install. Choosing "Y" proceeds with a standard <code>apt</code> package install.
 
-<h4>Distributed environment</h4> 
+<a href="#heading--Distributed-environment"><h4 id="heading--Distributed-environment">Distributed environment</h4></a>
 
 <p>For a more distributed environment, you can place the region controller on one machine:</p>
 
@@ -397,7 +397,7 @@ Executing this command leads you to a list of dependent packages to be installed
 
 Choosing "Y" proceeds with a standard <code>apt</code> package install.
 
-<h4>Distributed environment</h4> 
+<a href="#heading--Distributed-environment-2"><h4 id="heading--Distributed-environment-2">Distributed environment</h4></a>
 
 <p>For a more distributed environment, you can place the region controller on one machine:</p>
 
@@ -677,7 +677,7 @@ Executing this command leads you to a list of dependent packages to be installed
 
 Choosing "Y" proceeds with a standard <code>apt</code> package install.
 
-<h4>Distributed environment</h4> 
+<a href="#heading--Distributed-environment-3"><h4 id="heading--Distributed-environment-3">Distributed environment</h4></a>
 
 <p>For a more distributed environment, you can place the region controller on one machine:</p>
 
@@ -955,7 +955,7 @@ Executing this command leads you to a list of dependent packages to be installed
 
 Choosing "Y" proceeds with a standard <code>apt</code> package install.
 
-<h4>Distributed environment</h4> 
+<a href="#heading--Distributed-environment-4"><h4 id="heading--Distributed-environment-4">Distributed environment</h4></a>
 
 <p>For a more distributed environment, you can place the region controller on one machine:</p>
 
@@ -1231,7 +1231,7 @@ Executing this command leads you to a list of dependent packages to be installed
 
 Choosing "Y" proceeds with a standard <code>apt</code> package install.
 
-<h4>Distributed environment</h4> 
+<a href="#heading--Distributed-environment-6"><h4 id="heading--Distributed-environment-6">Distributed environment</h4></a>
 
 <p>For a more distributed environment, you can place the region controller on one machine:</p>
 
