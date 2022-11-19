@@ -1,4 +1,4 @@
-<!-- "MAAS CLI tutorial" -->
+<!-- "MAAS Zero to Sixty" -->
 
 Let's get some machines up and running, using the MAAS CLI.  If you haven't installed MAAS yet, you can [follow these instructions](/t/how-to-install-maas/5128) first.
 
