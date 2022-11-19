@@ -269,7 +269,7 @@ Note that in the UI, if you go to the "Controllers" tab and press the button ent
 
 In the course of normal operations, you may wish to move a device acting as a rack controller from one MAAS instance to another.  From the point of view of MAAS, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance. From your perspective, of course, you are moving one box performing rack controller functions, either physically or network-wise, from one MAAS to another. 
 
-<h3>How to move the controller</h3>
+<a href="#heading--How-to-move-the-controller"><h3 id="heading--How-to-move-the-controller">How to move the controller</h3></a>
 
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
