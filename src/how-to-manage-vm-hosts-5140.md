@@ -163,7 +163,7 @@ By default, libvirt creates a virtual bridge, `virbr0`, through which VMs commun
 You can set up such a `maas` network like this:
 
 ```nohighlight
-cat << EOF > maas.xml
+$ cat << EOF > maas.xml
 <network>
  <name>maas</name>
  <forward mode='nat'>
@@ -178,7 +178,8 @@ cat << EOF > maas.xml
  </ip>
 </network>
 EOF
-virsh net-define maas.xml
+
+$ virsh net-define maas.xml
 ```
 
 Note that this network also has NAT port forwarding enabled to allow VMs to communicate with the Internet at large. Port forwarding is very useful in test environments.
