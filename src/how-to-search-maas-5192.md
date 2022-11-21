@@ -38,7 +38,7 @@ filter-name:([=]val1,...,[=]val2)
 
 **Note:** Surround search terms with parentheses when they must occur together, e.g., `status:(failed testing)`.
 
-<h3 id="heading--exact-matching">How to set up exact matching</h4>
+<a href="#heading--How-to-set-up-exact-matching"><h3 id="heading--How-to-set-up-exact-matching">How to set up exact matching</h3></a>
 
 If you need an exact match, preface the search value with an equal sign. For example, to find machines belonging to a pod named `able-cattle`:
 

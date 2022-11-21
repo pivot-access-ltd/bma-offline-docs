@@ -434,33 +434,18 @@
 <pre><code class="language-no-highlight">filter-name:([=]val1,...,[=]val2)
 </code></pre>
 <p><strong>Note:</strong> Surround search terms with parentheses when they must occur together, e.g., <code>status:(failed testing)</code>.</p>
-<h3 id="heading--exact-matching">How to set up exact matching</h4>
-
-If you need an exact match, preface the search value with an equal sign. For example, to find machines belonging to a pod named `able-cattle`:
-
-
+<p><a href="#heading--How-to-set-up-exact-matching"><h3 id="heading--How-to-set-up-exact-matching">How to set up exact matching</h3></a></p>
+<p>If you need an exact match, preface the search value with an equal sign. For example, to find machines belonging to a pod named <code>able-cattle</code>:</p>
 <pre><code class="language-no-highlight">pod:=able-cattle
 </code></pre>
-
-
-<a href="#heading--partial-matching"><h3 id="heading--partial-matching">How to set up partial matching</h3></a>
-
-Without an equal sign, MAAS returns partial matches. For example, the following will display all machines belonging to pods with names containing `able` or `cattle`:
-
-
+<p><a href="#heading--partial-matching"><h3 id="heading--partial-matching">How to set up partial matching</h3></a></p>
+<p>Without an equal sign, MAAS returns partial matches. For example, the following will display all machines belonging to pods with names containing <code>able</code> or <code>cattle</code>:</p>
 <pre><code class="language-no-highlight">pod:able,cattle
 </code></pre>
-
-
-<a href="#heading--multiple-search-terms"><h3 id="heading--multiple-search-terms">Multiple search terms</h3></a>
-
-MAAS uses Boolean AND logic to evaluate multiple search terms. For example, when you type `pod:able,cattle cpu:=5`, MAAS displays machines that belong to pods with names containing `able` OR `cattle` AND having 5 CPU cores. Similarly, if you enter multiple words into the search tool, e.g., `steady able`, MAAS will display machines matching both terms (e.g., `steady` AND `able`).
-
-<a href="#heading--filter-properties"><h2 id="heading--filter-properties">Filter properties reference</h2></a>
-
-In addition to the major filtering categories available in the Filter drop-down menu, the following machine properties are available as filters:
-
-
+<p><a href="#heading--multiple-search-terms"><h3 id="heading--multiple-search-terms">Multiple search terms</h3></a></p>
+<p>MAAS uses Boolean AND logic to evaluate multiple search terms. For example, when you type <code>pod:able,cattle cpu:=5</code>, MAAS displays machines that belong to pods with names containing <code>able</code> OR <code>cattle</code> AND having 5 CPU cores. Similarly, if you enter multiple words into the search tool, e.g., <code>steady able</code>, MAAS will display machines matching both terms (e.g., <code>steady</code> AND <code>able</code>).</p>
+<p><a href="#heading--filter-properties"><h2 id="heading--filter-properties">Filter properties reference</h2></a></p>
+<p>In addition to the major filtering categories available in the Filter drop-down menu, the following machine properties are available as filters:</p>
 <pre><code class="language-nohighlight">1.   architecture
 2.   cores
 3.   cpu
@@ -483,11 +468,7 @@ In addition to the major filtering categories available in the Filter drop-down 
 20.   tags
 21.   zone
 </code></pre>
-
-
-For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:
-
-
+<p>For example, the following will search for a machine that has an interface with a specific MAC address marked for PXE booting:</p>
 <pre><code class="language-no-highlight">pxe_mac:=9e:b0:e4:15:ae:1e
 </code></pre>
     </div>
