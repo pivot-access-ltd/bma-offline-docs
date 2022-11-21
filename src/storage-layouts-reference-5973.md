@@ -9,7 +9,7 @@ There are several possible MAAS storage layouts:
 
 The reference descriptions below include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
-<a href="#heading--flat-storage-layout-reference"><h3 id="heading--flat-storage-layout-reference">Flat layout storage reference</h2></a>
+<a href="#heading--flat-storage-layout-reference"><h2 id="heading--flat-storage-layout-reference">Flat layout storage reference</h2></a>
 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
 
