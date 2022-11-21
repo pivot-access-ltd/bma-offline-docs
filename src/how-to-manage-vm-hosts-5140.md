@@ -163,7 +163,7 @@ By default, libvirt creates a virtual bridge, `virbr0`, through which VMs commun
 You can set up such a `maas` network like this:
 
 ```nohighlight
-$ cat << EOF > maas.xml
+cat << EOF > maas.xml
 <network>
  <name>maas</name>
  <forward mode='nat'>
@@ -178,8 +178,7 @@ $ cat << EOF > maas.xml
  </ip>
 </network>
 EOF
-
-$ virsh net-define maas.xml
+virsh net-define maas.xml
 ```
 
 Note that this network also has NAT port forwarding enabled to allow VMs to communicate with the Internet at large. Port forwarding is very useful in test environments.
@@ -317,7 +316,7 @@ If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualiza
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a>
 
-### How to authenticate LXD VM hosts via certificates
+<a href="#heading--How-to-authenticate-LXD-VM-hosts-via-certificates"><h3 id="heading--How-to-authenticate-LXD-VM-hosts-via-certificates">How to authenticate LXD VM hosts via certificates</h3></a>
 
 Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
 
@@ -329,7 +328,7 @@ Select "Add KVM", which brings you to the definition screen:
 
 From here, you'll continue by choosing your authentication method.
 
-#### How to let MAAS create a certificate for you
+<a href="#heading--How-to-let-MAAS-create-a-certificate-for-you"><h3 id="heading--How-to-let-MAAS-create-a-certificate-for-you">How to let MAAS create a certificate for you</h3></a>
 
 If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
 
@@ -377,7 +376,7 @@ The certificate will be created for you.  When you click the "Check authenticati
 
 from which you can continue with normal LXD KVM setup.
 
-#### How to use your own, existing certificate
+<a href="#heading--How-to-use-your-own,-existing-certificate"><h4 id="heading--How-to-use-your-own,-existing-certificate">How to use your own, existing certificate</h4></a>
 
 Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
 
@@ -476,7 +475,7 @@ Both $USERNAME and $PASSWORD are optional for the virsh power type. $ZONE and $T
 
 The `power_...` parameters will vary with power type.  See the [API reference](/docs/api#power-types) for a listing of available power types.
 
-<h3>Some examples</h3>
+<a href="#heading--Some-examples"><h3 id="heading--Some-examples">Some examples</h3></a>
 
 For example, to create an RSD VM host, enter:
 
