@@ -63,7 +63,7 @@ These tools can be controlled from a responsive web UI.  You can easily (re)conf
 
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-<a href="#heading--cli-smooth-maas-experience"><h3 id="heading--cli-smooth-maas-experience'>A smooth system-management experience</h3></a>
+<a href="#heading--cli-smooth-maas-experience"><h3 id="heading--cli-smooth-maas-experience">A smooth system-management experience</h3></a>
 
 MAAS integrates all the tools you need into a smooth system-management experience. It includes the following eleven features:
 
