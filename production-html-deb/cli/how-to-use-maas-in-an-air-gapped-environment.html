@@ -421,15 +421,14 @@
 <p>There is at least one way to make each of these things available in an air-gapped environment.  Some of these can be set up to use a transparent proxy, which minimises changes to other components of the MAAS environment.</p>
 <h4>This article will help you learn:</h4>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--using-the-snap-proxy">How to use the snap proxy to refresh snaps in an air-gapped environment</a></li>
+<li><a href="#heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment">How to use the snap proxy to refresh snaps in an air-gapped environment</a></li>
 <li><a href="#heading--apt-mirror">How to make package updates available in an air-gapped environment</a></li>
 <li><a href="#heading--local-image-mirroring">How to retrieve or update MAAS images in an air-gapped environment</a></li>
 <li><a href="#heading--non-maas-images">How to retrieve or update non-MAAS-maintained images in an air-gapped environment</a></li>
 <li><a href="#heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</a></li>
 <li><a href="#heading--transparent-proxy">How to set up a transparent proxy</a></li>
 </ul>
-<h2 id="heading--using-the-snap-proxy"><a href="#heading--using-the-snap-proxy">How to use the snap proxy to refresh snaps in an air-gapped environment</a></h2>
-
+<p><a href="#heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment"><h2 id="heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment">How to use the snap proxy to refresh snaps in an air-gapped environment</h2></a></p>
 <p>Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an <a href="https://docs.ubuntu.com/snap-store-proxy/en/airgap">air-gapped</a> mode are part of a password-protected internal Beta.  </p>
 <p>Client devices connect to the air-gapped proxy and never contact the general Snap Store nor the Internet.  Proxy operators will need to side-load all needed snaps and updates into the proxy. </p>
 <p>There are three main steps to setting up this proxy:</p>
@@ -460,11 +459,9 @@
 <li>Create custom images and store them in your local mirror.</li>
 </ul>
 <p>Here&rsquo;s a thumbnail sketch of both of these methods.</p>
-<h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</a></h3>
-
+<p><a href="#heading--other-os-user-data"><h3 id="heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</h3></a></p>
 <p>A user can create custom <code>user_data</code> which will configure CentOS or RHEL to use a specific mirror.  Check out the <a href="how-to-customise-machines.html">machine customisation</a> page for details on how to make this work.</p>
-<h3 id="heading--store-custom-images"><a href="#heading--store-custom-images">Storing customer images for non-MAAS-maintained images</a></h3>
-
+<p><a href="#heading--store-custom-images"><h3 id="heading--store-custom-images">Storing customer images for non-MAAS-maintained images</h3></a></p>
 <p>You can also <a href="how-to-create-custom-images.html">create custom images</a> and store them in your local mirror.  Once you have the image built, consult the page on <a href="how-to-mirror-images-locally.html">local image mirrors</a> to see how to incorporate your newly-built image into the local stash.</p>
 <p><a href="#heading--transparent-proxy"><h2 id="heading--transparent-proxy">How to set up a transparent proxy</h2></a></p>
 <p>If you don&rsquo;t wish to disturb the default configurations for Ubuntu and MAAS, you can create a transparent proxy for Debian packages and images, via the following general steps:</p>
