@@ -1,4 +1,4 @@
-<!-- "About TCP/IP networks" -->
+<!-- "TCP/IP primer" -->
 Good understanding of networking fundamentals makes it much easier to design, operate, and debug MAAS networks. You may have a good grasp of these fundamentals, but not everyone does.  No problem.  Here's a quick refresher on TCP/IP networking, with references.  Feel free to pick and choose sections as you need them.
 
 TCP/IP networks evolved to meet a specific need: How can we keep a network functioning if important nodes go offline?  Well, you build the ARPAnet -- now called the Internet -- which relies heavily on TCP/IP networks.  The OSI model underlying TCP/IP can adapt to changing loads, handle significant failures, and strictly limit the network "blast radius" (yes, that's what it's called) when things go wrong.   
@@ -398,7 +398,7 @@ There are other DHCP configurations possible with MAAS (we'll cover this later).
 
 <a href="#heading--about-arp"><h2 id="heading--about-arp">About ARP</h2></a>
  
-In theory, every NIC card in the world has a unique identifier, called a /MAC address/.  "MAC" stands for "Media Access Control" -- you can find a [little history of this](https://en.wikipedia.org/wiki/Medium_access_control]) on Wikipedia, if you're interested.
+In theory, every NIC card in the world has a unique identifier, called a /MAC address/.  "MAC" stands for "Media Access Control" -- you can find a [little history of this](https://en.wikipedia.org/wiki/Medium_access_control) on Wikipedia, if you're interested.
 
 This subsection will help you learn:
 
