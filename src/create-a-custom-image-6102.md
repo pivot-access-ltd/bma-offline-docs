@@ -3,11 +3,11 @@ When we talk about creating custom OS images for MAAS, it feels like something t
 
 Let's see if we can't create and deploy a custom Ubuntu image with packer, just to see how easy it can be.
 
-<a href="#heading--install-maas"><h2 id="heading--install-maas">First, install MAAS</h2></a>
+<href id="#heading--install-maas"><h2 id="heading--install-maas">First, install MAAS</h2></a>
 
 If we're going to create custom images for MAAS, then first, we'll need MAAS!  You can use [this tutorial](https://maas.io/docs/how-to-use-the-maas-cli) to accomplish that, and get a feel for MAAS while you're at it.
 
-<a href="#heading--install-packer"><h2 id="heading--install-packer">Install packer</h2></a>
+<href id="#heading--install-packer"><h2 id="heading--install-packer">Install packer</h2></a>
 
 The next step is to install the tool `packer`, which will do the heavy lifting for us.  Packer is easily installed from its Debian package:
 
@@ -17,7 +17,7 @@ sudo apt install packer
 
 This should install with no additional prompts.
 
-<a href="#heading--install-dependencies"><h2 id="heading--install-dependencies">Install dependencies</h2></a>
+<href id="#heading--install-dependencies"><h2 id="heading--install-dependencies">Install dependencies</h2></a>
 
 We're going to create a "custom" Ubuntu image for this build, so we'll want to install a few dependencies.  Enter the following commands.  Don't worry about any output between commands:
 
@@ -28,7 +28,7 @@ sudo apt install ovmf
 sudo apt install cloud-image-utils
 ```
 
-<a href="#heading--get-the-packer-templates"><h2 id="heading--get-the-packer-templates">Get the packer templates</h2></a>
+<href id="#heading--get-the-packer-templates"><h2 id="heading--get-the-packer-templates">Get the packer templates</h2></a>
 
 Packer uses "templates", which are very much like scripts that build your custom image.  You can obtain the packer templates by cloning the [packer-maas github repository](https://github.com/canonical/packer-maas.git), like this:
 
@@ -41,7 +41,7 @@ git clone https://github.com/canonical/packer-maas.git
 
 Make sure to pay attention to where the repository is cloned, in this case, `tmp/git` in your home directory.  The packer template in this cloned repository creates a Ubuntu AMD64 image for use with MAAS.
 
-<a href="#heading--build-an-image"><h2 id="heading--build-an-image">Build an Ubuntu image</h2></a>
+<href id="#heading--build-an-image"><h2 id="heading--build-an-image">Build an Ubuntu image</h2></a>
 
 Now that we have that, let's build a custom Ubuntu image that we can deploy with MAAS.  Use these commands to do that:
 
@@ -75,7 +75,7 @@ rm OVMF_VARS.fd
 
 That means you've successfully built the image!  Just to prove it to ourselves, let's take a couple of additional steps.
 
-<a href="#heading--validate-the-build"><h2 id="heading--validate-the-build">Validate the build</h2></a>
+<href id="#heading--validate-the-build"><h2 id="heading--validate-the-build">Validate the build</h2></a>
 
 You can check the validity of the operation with a simple `ls` command in `~/tmp/git/packer-maas/ubuntu` (where you ran the `make` command), like this:
 
@@ -89,7 +89,7 @@ meta-data                scripts       user-data-flat
 
 See the `custom-ubuntu-lvm.dd.gz` file?  That's our image, ready to try out.
 
-<a href="#heading--upload-to-maas"><h2 id="heading--upload-to-maas">Upload the image to MAAS</h2></a>
+<href id="#heading--upload-to-maas"><h2 id="heading--upload-to-maas">Upload the image to MAAS</h2></a>
 
 You can upload your newly-created image with the following command:
 
@@ -102,7 +102,7 @@ $ maas admin boot-resources create \
     content@=custom-ubuntu-lvm.dd.gz
 ```
 
-<a href="#heading--deploy-your-image"><h2 id="heading--deploy-your-image">Deploy the image in MAAS</h2></a>
+<href id="#heading--deploy-your-image"><h2 id="heading--deploy-your-image">Deploy the image in MAAS</h2></a>
 
 What good is an image if we can't deploy it?  Pick one of the VMs you created in the [last tutorial](https://maas.io/docs/how-to-use-the-maas-cli) and deploy your new OS image to it.  Then use a command like this one to see it running:
 
@@ -120,6 +120,6 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  ubuntu-raw
 
 It's the machine named `open-gannet` in the listing above, but your machine name and $SYSID will be unique to your instance.
 
-<a href="#heading--thats-all-there-is-to-it"><h2 id="heading--thats-all-there-is-to-it">That's all there is to it!</h2></a>
+<href id="#heading--thats-all-there-is-to-it"><h2 id="heading--thats-all-there-is-to-it">That's all there is to it!</h2></a>
 
 In a few simple steps, you've used packer to create a custom Ubuntu image, upload it to a running MAAS, and deploy it.  There are many different custom images that can be deployed with MAAS -- check [this guide](https://maas.io/docs/how-to-create-custom-images) to learn more.
