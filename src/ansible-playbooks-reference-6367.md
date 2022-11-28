@@ -1,4 +1,4 @@
-<!-- "Ansible playbooks reference" -->
+<!-- "How to spin up MAAS with Ansible" -->
 
 A user should probably have a solid grasp of the standard terminology in relation to Ansible:
 
@@ -300,4 +300,3 @@ As a operator, you want to be able to setup MAAS in a secure way, following best
 
  
 <a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
-
