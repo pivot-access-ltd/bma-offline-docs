@@ -398,7 +398,7 @@ There are other DHCP configurations possible with MAAS (we'll cover this later).
 
 <a href="#heading--about-arp"><h2 id="heading--about-arp">About ARP</h2></a>
  
-In theory, every NIC card in the world has a unique identifier, called a /MAC address/.  "MAC" stands for "Media Access Control" -- you can find a [little history of this](https://en.wikipedia.org/wiki/Medium_access_control) on Wikipedia, if you're interested.
+In theory, every NIC card in the world has a unique identifier, called a /MAC address/.  "MAC" stands for "Media Access Control" -- you can find a [little history of this](https://en.wikipedia.org/wiki/Medium_access_control]) on Wikipedia, if you're interested.
 
 This subsection will help you learn:
 
