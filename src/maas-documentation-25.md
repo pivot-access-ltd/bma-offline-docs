@@ -45,7 +45,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Basic tutorials](/t/-/6140) 
 
-- [Bootstart MAAS by example](/t/-/5092)
+- [Bootstrap MAAS by example](/t/-/5092)
 - [Try out the MAAS CLI](/t/-/5236)
 - [Create a custom image](/t/-/6102)
 - [Using jq with the MAAS CLI](/t/-/6027)
@@ -61,7 +61,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Report a bug](https://maas.io/docs/report-a-bug)
 - [Troubleshooting](/t/-/5333)
 
-### [How to configure networking](/t/-/6174)
+### [How to set up networks](/t/-/6174)
 
 - [Connect MAAS networks](/t/-/5164)
 - [Enable DHCP](/t/-/5132)
@@ -74,7 +74,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Build custom images](/t/-/5104)
 - [Employ VMWare images](/t/-/5144)
 
-### How to fine-tune your controllers
+### How to tune controllers
 
 - [Adjust your controllers](/t/-/5172)
 - [Enable HA](/t/-/5120)
@@ -101,19 +101,19 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Use network tags](/t/-/5228)
 - [Find machines](/t/-/5192)
 
-### How to use logs to solve problems
+### How to find problems with logs
 
 - [Work with log files](/t/-/5240)
 - [Work with audit event logs](/t/-/5987)
 
-### How to make MAAS more secure
+### How to improve security
 
 - [Improve MAAS security](/t/-/5196)
 - [Enable MAAS native TLS](/t/-/5116)
 - [Set up an air-gapped MAAS](/t/-/5212)
 - [Manage users](/t/-/5184)
 
-### How to improve MAAS reliability
+### How to improve reliability
 
 - [Keep MAAS backed up](/t/-/5096)
 - [Observe MAAS while it's running](/t/-/5204)
