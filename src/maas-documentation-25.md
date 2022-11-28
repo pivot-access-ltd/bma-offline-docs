@@ -116,7 +116,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 ### How to improve reliability
 
 - [Keep MAAS backed up](/t/-/5096)
-- [Observe MAAS while it's running](/t/-/5204)
+- [Observe a running MAAS](/t/-/5204)
 
 ### [Explanations](/t/-/6141)
 
