@@ -43,65 +43,97 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Home](/t/maas-documentation/25)
 
-- [Release notes](/t/-/5292)
-- [Request a feature](https://maas.io/docs/request-a-feature)
-- [Report a bug](https://maas.io/docs/report-a-bug)
+### [Basic tutorials](/t/-/6140) 
 
-### [Tutorials](/t/-/6140)
-
-- [Get started with MAAS](/t/-/5092)
+- [Bootstart MAAS by example](/t/-/5092)
 - [Try out the MAAS CLI](/t/-/5236)
 - [Create a custom image](/t/-/6102)
 - [Using jq with the MAAS CLI](/t/-/6027)
 
-### [How to get MAAS running](/t/-/6202)
+### [How to get started with MAAS](/t/-/6202)
 
-- [Installation](/t/-/5128)
-- [Upgrade older versions](/t/how-to-upgrade-maas/5436)
+- [Spin up MAAS with Ansible](/t/-/6367)
+- [Install MAAS](/t/-/5128)
+- [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
+- [Change MAAS settings](/t/-/6347)
+- [Ask for help](/t/-/5428)
+- [Request a feature](https://maas.io/docs/request-a-feature)
+- [Report a bug](https://maas.io/docs/report-a-bug)
 - [Troubleshooting](/t/-/5333)
 
 ### [How to configure networking](/t/-/6174)
 
-- [Manage networks](/t/-/5164)
-- [Manage IP addresses](/t/-/5132)
-- [Enable TLS](/t/-/5116)
+- [Connect MAAS networks](/t/-/5164)
+- [Enable DHCP](/t/-/5132)
 - [Manage zones (AZs)](/t/-/5152)
 
-### [How to choose images](/t/-/6192)
+### [How to acquire images](/t/-/6192)
 
-- [Import images](/t/-/5124)
-- [Create custom images](/t/-/5104)
+- [Use standard images](/t/-/5124)
 - [Mirror images locally](/t/-/5927)
-- [Manage VMWare images](/t/-/5144)
+- [Build custom images](/t/-/5104)
+- [Employ VMWare images](/t/-/5144)
 
-### [How to deploy MAAS](/t/-/6193)
-- [Manage controllers](/t/-/5172)
-- [Manage machines](/t/-/5160)
-- [Deploy machines](/t/-/5112)
-- [Customise machines](/t/-/5108)
-- [Manage VM hosts](/t/-/5140)
-- [Manage VMs](/t/-/5148)
-- [Use LXD](/t/-/5208)
+### How to fine-tune your controllers
 
-### [How to use tags](/t/-/6200)
+- [Adjust your controllers](/t/-/5172)
+- [Enable HA](/t/-/5120)
 
-- [Work with tags](/t/-/5928)
-- [Work with annotations](/t/-/5929)
+### [How to deploy physical machines](/t/-/6193)
+
+- [Make machines available](/t/-/5160)
+- [Customise machines in advance](/t/-/5108)
+- [Put machines to work](/t/-/5112)
+
+### How to deploy virtual machines
+
+- [Set up LXD](/t/-/5208)
+- [Create VM hosts](/t/-/5140)
+- [Create and manage VMs](/t/-/5148)
+
+### [How to label and find machines](/t/-/6200)
+
+- [Apply tags to machines](/t/-/5928)
+- [Apply annoations to machines](/t/-/5929)
 - [Use machine tags](/t/-/5224)
 - [Use controller tags](/t/-/5216)
 - [Use storage tags](/t/-/5232)
 - [Use network tags](/t/-/5228)
+- [Find machines](/t/-/5192)
 
-### [How to operate MAAS](/t/-/6201)
+### How to use logs to solve problems
 
-- [Enable HA](/t/-/5120)
-- [Set up MAAS metrics](/t/-/5204)
+- [Work with log files](/t/-/5240)
 - [Work with audit event logs](/t/-/5987)
-- [Use air-gapped MAAS](/t/-/5212)
-- [Back up MAAS](/t/-/5096)
-- [Secure MAAS](/t/-/5196)
+
+### How to make MAAS more secure
+
+- [Improve MAAS security](/t/-/5196)
+- [Enable MAAS native TLS](/t/-/5116)
+- [Set up an air-gapped MAAS](/t/-/5212)
 - [Manage users](/t/-/5184)
-- [Search MAAS](/t/-/5192)
+
+### How to improve MAAS reliability
+
+- [Keep MAAS backed up](/t/-/5096)
+- [Observe MAAS while it's running](/t/-/5204)
+
+### [Explanations](/t/-/6141)
+
+- [MAAS 101](/t/-/5064)
+- [TCP/IP primer](/t/-/5806)
+- [It's always DHCP](/t/-/5807)
+- [Cloud networks](/t/-/5808)
+- [How MAAS networks](/t/-/5084)
+- [Images](/t/-/5076)
+- [Custom images](/t/-/6099)
+- [Controllers: the core of MAAS](/t/-/5072)
+- [Machines: the heavy lifing](/t/-/5080)
+- [Customising machines](/t/-/5976)
+- [VM hosting](/t/-/5068)
+- [MAAS events](/t/-/6373)
+- [MAAS audit events](/t/-/6372)
+- [RBAC](/t/-/6131)
 
 ### API reference
 
@@ -111,12 +143,9 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Technical reference](/t/-/6203)
 
-- [Ansible playbooks](/t/-/6367)
-- [Audit event logs](/t/-/5256)
 - [Commissioning scripts](/t/-/5375)
-- [Configuration settings](/t/-/6347)
 - [Hardware test scripts](/t/-/5392)
-- [Log files](/t/-/5240)
+- [Audit event logs](/t/-/5256)
 - [MAAS performance](/t/-/6178)
 - [Power management](/t/-/5246)
 - [Storage layouts](/t/-/5973)
@@ -127,24 +156,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Release notes](/t/-/5292)
 - [Installation requirements](/t/-/6233)
 - [Concepts & terms](/t/-/5416)
-- [Getting help](/t/-/5428)
 
-### [Explanations](/t/-/6141)
 
-- [MAAS](/t/-/5064)
-- [TCP/IP networks](/t/-/5806)
-- [DHCP](/t/-/5807)
-- [Cloud networks](/t/-/5808)
-- [MAAS networking](/t/-/5084)
-- [Images](/t/-/5076)
-- [Custom images](/t/-/6099)
-- [Controllers](/t/-/5072)
-- [Machines](/t/-/5080)
-- [Customising machines](/t/-/5976)
-- [VM hosting](/t/-/5068)
-- [MAAS events](/t/-/6373)
-- [MAAS audit events](/t/-/6372)
-- [RBAC](/t/-/6131)
 
 ## URLs
 
@@ -167,7 +180,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/6174|/docs/how-to-configure-networking|
 |https://discourse.maas.io/t/-/6178|/docs/maas-performance|
 |https://discourse.maas.io/t/-/6131|/docs/about-rbac|
-|https://discourse.maas.io/t/-/6140|/docs/tutorials|
 |https://discourse.maas.io/t/-/6141|/docs/explanation|
 |https://discourse.maas.io/t/-/6142|/docs/how-to-guides|
 |https://discourse.maas.io/t/-/6143|/docs/general-reference|
@@ -227,7 +239,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/5428|/docs/how-to-get-help|
 |https://discourse.maas.io/t/-/5116|/docs/how-to-enable-tls-encryption|
 |https://discourse.maas.io/t/-/5448|/docs/how-to-contact-us|
-|https://discourse.maas.io/t/-/5092|/docs/hardware-test-scripts-reference|
 |https://discourse.maas.io/t/-/5256|/docs/audit-event-log-reference|
 |https://discourse.maas.io/t/-/5375|/docs/commissioning-script-reference|
 |https://discourse.maas.io/t/-/817/|/docs/intel-rack-scale-design-rsd-introduction|
@@ -830,7 +841,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/25/|/docs|
 |https://discourse.maas.io/t/-/815/|/docs/add-an-rsd-host|
 |https://discourse.maas.io/t/-/793/|/docs/advanced-cli-tasks|
-|https://discourse.maas.io/t/-/832|/docs/hardware-test-scripts-reference|
 |https://discourse.maas.io/t/-/5392|/docs/hardware-test-scripts-reference|
 |https://discourse.maas.io/t/-/744/|/docs/building-the-docs|
 |https://discourse.maas.io/t/-/2218/|/docs/cli-cookbook|
@@ -869,7 +879,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/5060|/docs/api-authentication-reference|
 |https://discourse.maas.io/t/-/5096|/docs/how-to-back-up-maas|
 |https://discourse.maas.io/t/-/5248|/docs/commissioning-log-reference|
-|https://discourse.maas.io/t/-/5092|/docs/get-started-with-maas|
 |https://discourse.maas.io/t/-/5196|/docs/how-to-secure-maas|
 |https://discourse.maas.io/t/-/5120|/docs/how-to-enable-high-availability|
 |https://discourse.maas.io/t/-/5108|/docs/how-to-customise-machines|
@@ -889,6 +898,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/5962|/docs/what-is-new-with-maas-3-2|
 |https://discourse.maas.io/t/-/5993|/docs/what-is-new-with-maas-2-7|
 |https://discourse.maas.io/t/-/5994|/docs/what-is-new-with-maas-2-8|
+|https://discourse.maas.io/t/-/6140|/docs/tutorials|
+|https://discourse.maas.io/t/-/5092|/docs/get-started-with-maas|
 [/details]
 
 ## Redirects
@@ -896,6 +907,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+
 |/docs/vmware-images|/docs/how-to-manage-vmware-images|
 |/docs/about-tags|/docs/how-to-use-tags|
 |/docs/ssl|/docs/how-to-enable-tls-encryption|
