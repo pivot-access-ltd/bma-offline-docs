@@ -1,4 +1,4 @@
-<!-- "Configuration settings reference" -->
+<!-- "How to change MAAS settings" -->
 
 MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
 
