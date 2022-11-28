@@ -122,7 +122,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 - [MAAS 101](/t/-/5064)
 - [TCP/IP primer](/t/-/5806)
-- [It's always DHCP](/t/-/5807)
+- [It is always DHCP](/t/-/5807)
 - [Cloud networks](/t/-/5808)
 - [How MAAS networks](/t/-/5084)
 - [Images](/t/-/5076)
