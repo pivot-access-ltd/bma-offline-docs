@@ -82,7 +82,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 ### [How to deploy physical machines](/t/-/6193)
 
 - [Make machines available](/t/-/5160)
-- [Customise machines in advance](/t/-/5108)
+- [Customise machines](/t/-/5108)
 - [Put machines to work](/t/-/5112)
 
 ### How to deploy virtual machines
