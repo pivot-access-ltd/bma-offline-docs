@@ -409,7 +409,7 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>MAAS logging reference</h1><!-- "MAAS logging reference" -->
+  <h1>How to work with log files</h1><!-- "How to work with log files" -->
 <p>MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.</p>
 <h4>This document will help you learn:</h4>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -425,20 +425,7 @@
 </ul>
 <p>The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu &ndash; or from the list of questions above.</p>
 <p><a href="#heading--path"><h2 id="heading--path">About the syslog logging path</h2></a></p>
-<p>Syslog data is kept in <code>/var/snap/maas/common/log/rsyslog/&lt;machine-name&gt;&lt;yyyy-mm-dd&gt;/messages</code>. Every machine known to MAAS will have corresponding syslogs.</p>
 <p><a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">How to use a remote syslog server</h2></a></p>
-<p>To add or update a remote syslog server in your MAAS environment:</p>
-<pre><code class="language-bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=&quot;$SYSLOG_FQDN&quot;
-</code></pre>
-<p>For example, to set your syslog server to <code>192.168.100.11</code>:</p>
-<pre><code class="language-bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=192.168.100.11
-</code></pre>
-<p>If you clear the <code>remote_syslog</code> value, MAAS will revert to the default behaviour, which is to send all syslog information to all MAAS region controllers.</p>
-<p>For example:</p>
-<pre><code class="language-bash">maas $PROFILE maas set-config name=&quot;remote_syslog&quot; value=&quot;&quot;
-</code></pre>
-<p><strong>NOTE:</strong> 
-Note that MAAS controllers&rsquo; syslogs are not forwarded to the external syslog server &ndash; only machine syslog information is forwarded.</p>
     </div>
   </body>
 </html>
