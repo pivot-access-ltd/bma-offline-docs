@@ -124,7 +124,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Explanations](/t/-/6141)
 
-- [MAAS basics](/t/-/5064)
 - [TCP/IP primer](/t/-/5806)
 - [It is always DHCP](/t/-/5807)
 - [Cloud networks](/t/-/5808)
