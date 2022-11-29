@@ -1,4 +1,4 @@
-<!-- "How to secure MAAS" -->
+<!-- "How to improve MAAS security" -->
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 
 #### This article will help you learn:
@@ -279,7 +279,7 @@ You can also use the standard system logs to detect malicious activity, though t
 
 From here, you can either use `whois` to locate the attacker and work with the ISP to block them, or simply use your UFW firewall to block them directly.
 
-As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the [Ubuntu journalctl manpage ](http://manpages.ubuntu.com/manpages/cosmic/man1/journalctl.1.html) or [another, similar source ](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).  
+As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the [Ubuntu journalctl manpage](https://manpages.ubuntu.com/manpages/journalctl.1.html) or [another, similar source ](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).  
 
 <a href="#heading--postgres-security"><h2 id="heading--postgres-security">How to implement PostgreSQL security</h2></a>
 
