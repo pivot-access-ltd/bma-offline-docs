@@ -1,4 +1,4 @@
-<!-- "How to configure MAAS networking" -->
+<!-- "How to set up networks" -->
 Congratulations!  Now that you've [installed and configured MAAS](/t/how-to-install-maas/5128), configuring your MAAS networks is an important next step.  This major section will help you learn about the theory and practice of MAAS networking.  You can search for [big picture topics](#heading--networking-the-big-picture), or consult the [networking permuted index](#heading--networking-permuted-index).
 
 <a href="#heading--networking-the-big-picture"><h2 id="heading--networking-the-big-picture">Networking: the big picture</h2></a>
