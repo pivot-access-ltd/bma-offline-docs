@@ -1,4 +1,4 @@
-<!-- "How to deploy MAAS" -->
+<!-- "How to deploy physical machines" -->
 
 With your network properly configured, and suitable images selected and downloaded, you're ready to enlist, commission, and deploy machines.  This major section will help you sort out the theoretical aspects and procedures regarding the MAAS machine life-cycle.  You can search for the [big picture topics](#heading--the-big-picture-of-deploying-machines), or consult the [life-cycle permuted index](#heading--life-cycle-permuted-index).
 
