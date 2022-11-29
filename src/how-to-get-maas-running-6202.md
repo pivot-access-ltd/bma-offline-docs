@@ -1,4 +1,4 @@
-<!-- "How to get MAAS running" -->
+<!-- "How to get started with MAAS" -->
 
 MAAS is relatively easy to install and configure.  You can [view the big picture](#heading--Installation-big-picture-view) or find specific operations in the [permuted index](#heading--Installation-permuted-index).
 
