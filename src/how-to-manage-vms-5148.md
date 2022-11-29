@@ -1,4 +1,4 @@
-<!-- "How to manage VMs" -->
+<!-- "How to create and manage VMs" -->
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article will explain:
 
 [tabs]
