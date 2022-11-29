@@ -79,8 +79,8 @@ Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now availa
 
 - [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
 - [What known issues should I be aware of?](#heading--2-8-known-issues)
-- [How do I install MAAS 2.8 as a snap?](/t/maas-installation/3312)
-- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation/3312#heading--upgrade-maas-snap)
+- [How do I install MAAS 2.8 as a snap?](/t/maas-installation/3321)
+- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](/t/maas-installation/3321#heading--upgrade-maas-snap)
 - [How do I install MAAS 2.8 from packages?](/t/maas-installation/3327)
 - [What bugs were fixed in this release?](#heading--bug-fixes)
 
