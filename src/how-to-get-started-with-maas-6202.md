@@ -1,507 +1,153 @@
 <!-- "How to get started with MAAS" -->
 
-MAAS is relatively easy to install and configure.  You can [view the big picture](#heading--Installation-big-picture-view) or find specific operations in the [permuted index](#heading--Installation-permuted-index).
+Our [Ansible playbooks](/t/how-to-spin-up-maas-with-ansible/6367) make getting started easy -- from basic installation to setting up high availability.  If you prefer the manual approach, MAAS is still relatively easy to [install](/t/how-to-install-maas/5128), [upgrade](/t/how-to-upgrade-maas/5436), and [configure](/t/how-to-change-maas-settings/6347).  We try to make it easy to [ask for new features](/t/how-to-request-a-feature/4447) or -- better yet -- [just contribute some code](https://launchpad.net/maas).  You can also [report bugs](/t/how-to-report-a-bug/4446), [get help](/t/how-to-get-help/5428), and even do some [self-help troubleshooting](/t/how-to-troubleshoot-maas/5333).
 
-<a href="#heading--Installation-big-picture-view"><h2 id="heading--Installation-big-picture-view">Installation big picture view</h2></a>
+Start with any of these links, or -- if you want a little background information about MAAS -- read on in this article before you jump to the how-to guides.
 
-- [Installation](/t/-/5128): Everything you need to know about installing and configuring MAAS, from either Debian packages or the snap.
-- [Upgrade older versions](/t/how-to-upgrade-maas/5436): A dedicated page for upgrading from older versions of MAAS, including OS update requirements.
-- [Troubleshooting](/t/-/5333): If you run into something odd, it might be that we've seen it before; try here first.
+<a href="#heading--About-MAAS"><h2 id="heading--About-MAAS">About MAAS</h2></a>
 
-<a href="#heading--Installation-permuted-index"><h2 id="heading--Installation-permuted-index">Installation permuted index</h2></a>
+MAAS is an open-source tool that lets you create a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
 
-| | |
-|-----:|:-----|
-| [2.8 or lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade from MAAS |
-| [2.8 or lower to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to upgrade from |
-| [2.8 or lower to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to upgrade from |
-| [2.8 or lower to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to upgrade from |
-| [2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do a fresh install of MAAS |
-| [2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade to MAAS 3.2 from MAAS |
-| [2.9 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS |
-| [2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to do a fresh snap install of MAAS |
-| [2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade from MAAS 2.8 or lower to MAAS |
-| [2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade from an earlier snap version to MAAS |
-| [2.9 to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How to ugprade from MAAS |
-| [2.9 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS |
-| [3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do a fresh install of MAAS |
-| [3.0 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS |
-| [3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to do a fresh snap install of MAAS |
-| [3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to upgrade from 2.8 or lower to MAAS |
-| [3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How to ugprade from MAAS 2.9 to MAAS |
-| [3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade from an earlier snap version to MAAS |
-| [3.0 to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How to ugprade from MAAS |
-| [3.0 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS |
-| [3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do a fresh install of MAAS |
-| [3.1 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS |
-| [3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to do a fresh snap install of MAAS |
-| [3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to upgrade from 2.8 or lower to MAAS |
-| [3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How to ugprade from MAAS 3.0 to MAAS |
-| [3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade from an earlier snap version to MAAS |
-| [3.1 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS |
-| [3.2 from MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade to MAAS |
-| [3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do a fresh install of MAAS |
-| [3.2 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS |
-| [3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to do a fresh snap install of MAAS |
-| [3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to upgrade from 2.8 or lower to MAAS |
-| [3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade from an earlier snap version to MAAS |
-| [3.2 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS |
-| [About network discovery](/t/how-to-install-maas/5128#heading--networking) | |
-| [About SSH keys](/t/how-to-install-maas/5128#heading--ssh-keys) | |
-| [About the MAAS URL](/t/how-to-install-maas/5128#heading--maas-url) | |
-| [About the shared secret](/t/how-to-install-maas/5128#heading--shared-secret) | |
-| [Adding overlapping subnets in fabric can break deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) | |
-| [additional MAAS initialisation options](/t/how-to-install-maas/5128#heading--additional-init-options) |How to list |
-| [address](/t/how-to-troubleshoot-maas/5333#heading--need-to-reconfigure-server-ip-address) |Need to reconfigure server IP |
-| [administrator password](/t/how-to-troubleshoot-maas/5333#heading--forgot-maas-administrator-password) |Forgot MAAS |
-| [admin user](/t/how-to-install-maas/5128#heading--setting-ssh) |How to set up SSH for the |
-| [a fresh install of MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do |
-| [a fresh install of MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do |
-| [a fresh install of MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do |
-| [a fresh install of MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do |
-| [a fresh snap install of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to do |
-| [a fresh snap install of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to do |
-| [a fresh snap install of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to do |
-| [a fresh snap install of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to do |
-| [after deployment](/t/how-to-troubleshoot-maas/5333#heading--machine-login-issues) |Can't login to machine |
-| [a MAAS 2.9 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create |
-| [a MAAS 3.0 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create |
-| [a MAAS 3.1 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create |
-| [a MAAS 3.2 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create |
-| [an earlier snap version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade from |
-| [an earlier snap version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade from |
-| [an earlier snap version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade from |
-| [an earlier snap version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade from |
-| [an incorrectly](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-using-an-incorrectly-configured-vm) |Possible Cause: Using |
-| [a production configuration](/t/how-to-install-maas/5128#heading--init-maas-production) |Initialise MAAS for |
-| [a production environment](/t/how-to-install-maas/5128#heading--production-environment) |Requirements for |
-| [a test environment](/t/how-to-install-maas/5128#heading--test-environment) |Requirements for |
-| [a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 2.9 snap for |
-| [a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.0 snap for |
-| [a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.1 snap for |
-| [a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.2 snap for |
-| [Backdoor image login](/t/how-to-troubleshoot-maas/5333#heading--backdoor-image-login) | |
-| [boot](/t/how-to-troubleshoot-maas/5333#heading--nodes-fail-to-pxe-boot) |Nodes fail to PXE |
-| [break deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) |Adding overlapping subnets in fabric can |
-| [by django](/t/how-to-troubleshoot-maas/5333#heading--django-subarch-error) |Subarchitecture error thrown |
-| [can break deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) |Adding overlapping subnets in fabric |
-| [Can't find MAAS web UI](/t/how-to-troubleshoot-maas/5333#heading--cant-find-maas-web-ui) | |
-| [Can't login to machine after deployment](/t/how-to-troubleshoot-maas/5333#heading--machine-login-issues) | |
-| [Can't log in to node](/t/how-to-troubleshoot-maas/5333#heading--cant-log-in-to-node) | |
-| [Cause: DHCP conflict](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-dhcp-conflict) |Possible |
-| [Cause: Network drivers](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-network-drivers) |Possible |
-| [Cause: Timing issues](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-timing-issues) |Possible |
-| [Cause: Using an incorrectly](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-using-an-incorrectly-configured-vm) |Possible |
-| [check system requirements for MAAS](/t/how-to-install-maas/5128#heading--check-system-requirements-for-maas) |How to |
-| [check the status of MAAS services](/t/how-to-install-maas/5128#heading--service-status) |How to |
-| [CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when creating commissioning or node script with MAAS |
-| [cloud image](/t/how-to-troubleshoot-maas/5333#heading--extract-the-cloud-image) |Extract the |
-| [Command 'packer' not found](/t/how-to-troubleshoot-maas/5333#heading--packer-not-found) | |
-| [commissioning or node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when creating |
-| ["Commissioning"](/t/how-to-troubleshoot-maas/5333#heading--nodes-hang-on-commissioning) |Nodes hang on |
-| [Configuration](/t/how-to-install-maas/5128#heading--configuration) | |
-| [configuration](/t/how-to-install-maas/5128#heading--init-maas-production) |Initialise MAAS for a production |
-| [configure MAAS](/t/how-to-install-maas/5128#heading--configure-maas) |How to |
-| [conflict](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-dhcp-conflict) |Possible Cause: DHCP |
-| [create a MAAS 2.9 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to |
-| [create a MAAS 3.0 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to |
-| [create a MAAS 3.1 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to |
-| [create a MAAS 3.2 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to |
-| [create QEMU driver](/t/how-to-troubleshoot-maas/5333#heading--failed-creating-qemu-driver) |Failure to |
-| [creating commissioning or node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when |
-| [creation problems](/t/how-to-troubleshoot-maas/5333#heading--custom-image-creation-problems) |Custom image |
-| [Custom image creation problems](/t/how-to-troubleshoot-maas/5333#heading--custom-image-creation-problems) | |
-| [custom image](/t/how-to-troubleshoot-maas/5333#heading--use-the-custom-image) |Use the |
-| [deployment fails](/t/how-to-troubleshoot-maas/5333#heading--node-deployment-fails) |Node |
-| [deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) |Adding overlapping subnets in fabric can break |
-| [deployment](/t/how-to-troubleshoot-maas/5333#heading--machine-login-issues) |Can't login to machine after |
-| [DHCP conflict](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-dhcp-conflict) |Possible Cause: |
-| [DHCP](/t/how-to-install-maas/5128#heading--enabling-dhcp) |How to enable |
-| [discovery](/t/how-to-install-maas/5128#heading--networking) |About network |
-| [django](/t/how-to-troubleshoot-maas/5333#heading--django-subarch-error) |Subarchitecture error thrown by |
-| [DNS](/t/how-to-install-maas/5128#heading--setting-dns) |How to set upstream |
-| [do a fresh install of MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to |
-| [do a fresh install of MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to |
-| [do a fresh install of MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to |
-| [do a fresh install of MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to |
-| [do a fresh snap install of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to |
-| [do a fresh snap install of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to |
-| [do a fresh snap install of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to |
-| [do a fresh snap install of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to |
-| [drivers](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-network-drivers) |Possible Cause: Network |
-| [driver](/t/how-to-troubleshoot-maas/5333#heading--failed-creating-qemu-driver) |Failure to create QEMU |
-| [earlier snap version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade from an |
-| [earlier snap version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade from an |
-| [earlier snap version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade from an |
-| [earlier snap version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade from an |
-| [enable DHCP](/t/how-to-install-maas/5128#heading--enabling-dhcp) |How to |
-| [environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 2.9 snap for a test or POC |
-| [environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.0 snap for a test or POC |
-| [environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.1 snap for a test or POC |
-| [environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.2 snap for a test or POC |
-| [environment](/t/how-to-install-maas/5128#heading--production-environment) |Requirements for a production |
-| [environment](/t/how-to-install-maas/5128#heading--test-environment) |Requirements for a test |
-| [error thrown by django](/t/how-to-troubleshoot-maas/5333#heading--django-subarch-error) |Subarchitecture |
-| [Extract the cloud image](/t/how-to-troubleshoot-maas/5333#heading--extract-the-cloud-image) | |
-| [fabric can break deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) |Adding overlapping subnets in |
-| [fails](/t/how-to-troubleshoot-maas/5333#heading--node-deployment-fails) |Node deployment |
-| [fail to PXE boot](/t/how-to-troubleshoot-maas/5333#heading--nodes-fail-to-pxe-boot) |Nodes |
-| [failures](/t/how-to-troubleshoot-maas/5333#heading--machine-life-cycle-failures) |Machine life-cycle |
-| [Failure to create QEMU driver](/t/how-to-troubleshoot-maas/5333#heading--failed-creating-qemu-driver) | |
-| [\"File not found\" when creating commissioning or node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) | |
-| [find MAAS web UI](/t/how-to-troubleshoot-maas/5333#heading--cant-find-maas-web-ui) |Can't |
-| [for a production configuration](/t/how-to-install-maas/5128#heading--init-maas-production) |Initialise MAAS |
-| [for a production environment](/t/how-to-install-maas/5128#heading--production-environment) |Requirements |
-| [for a test environment](/t/how-to-install-maas/5128#heading--test-environment) |Requirements |
-| [for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 2.9 snap |
-| [for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.0 snap |
-| [for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.1 snap |
-| [for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.2 snap |
-| [Forgot MAAS administrator password](/t/how-to-troubleshoot-maas/5333#heading--forgot-maas-administrator-password) | |
-| [for MAAS](/t/how-to-install-maas/5128#heading--check-system-requirements-for-maas) |How to check system requirements |
-| [for the admin user](/t/how-to-install-maas/5128#heading--setting-ssh) |How to set up SSH |
-| [found](/t/how-to-troubleshoot-maas/5333#heading--packer-not-found) |Command 'packer' not |
-| [found\" when creating commissioning or node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not |
-| [fresh install of MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do a |
-| [fresh install of MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do a |
-| [fresh install of MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do a |
-| [fresh install of MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do a |
-| [fresh snap install of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to do a |
-| [fresh snap install of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to do a |
-| [fresh snap install of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to do a |
-| [fresh snap install of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to do a |
-| [from 2.8 or lower to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to upgrade |
-| [from 2.8 or lower to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to upgrade |
-| [from 2.8 or lower to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to upgrade |
-| [from an earlier snap version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade |
-| [from an earlier snap version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade |
-| [from an earlier snap version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade |
-| [from an earlier snap version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade |
-| [from MAAS 2.8 or lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade |
-| [from MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade to MAAS 3.2 |
-| [from MAAS 2.9 to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How to ugprade |
-| [from MAAS 3.0 to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How to ugprade |
-| [from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do a fresh install of MAAS 2.9 |
-| [from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do a fresh install of MAAS 3.0 |
-| [from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do a fresh install of MAAS 3.1 |
-| [from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do a fresh install of MAAS 3.2 |
-| [from scratch](/t/how-to-install-maas/5128#heading--pg-setup) |Setting up PostgreSQL |
-| [Generate password hash](/t/how-to-troubleshoot-maas/5333#heading--generate-password-hash) | |
-| [hang on "Commissioning"](/t/how-to-troubleshoot-maas/5333#heading--nodes-hang-on-commissioning) |Nodes |
-| [hash](/t/how-to-troubleshoot-maas/5333#heading--generate-password-hash) |Generate password |
-| [higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade to MAAS 3.2 from MAAS 2.9 or |
-| [How to check system requirements for MAAS](/t/how-to-install-maas/5128#heading--check-system-requirements-for-maas) | |
-| [How to check the status of MAAS services](/t/how-to-install-maas/5128#heading--service-status) | |
-| [How to configure MAAS](/t/how-to-install-maas/5128#heading--configure-maas) | |
-| [How to create a MAAS 2.9 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) | |
-| [How to create a MAAS 3.0 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) | |
-| [How to create a MAAS 3.1 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) | |
-| [How to create a MAAS 3.2 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) | |
-| [How to do a fresh install of MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) | |
-| [How to do a fresh install of MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) | |
-| [How to do a fresh install of MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) | |
-| [How to do a fresh install of MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) | |
-| [How to do a fresh snap install of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) | |
-| [How to do a fresh snap install of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) | |
-| [How to do a fresh snap install of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) | |
-| [How to do a fresh snap install of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) | |
-| [How to enable DHCP](/t/how-to-install-maas/5128#heading--enabling-dhcp) | |
-| [How to import images](/t/how-to-install-maas/5128#heading--importing-images) | |
-| [How to initialise MAAS 2.9 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) | |
-| [How to initialise MAAS 3.0 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) | |
-| [How to initialise MAAS 3.1 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) | |
-| [How to initialise MAAS 3.2 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) | |
-| [How to install MAAS](/t/how-to-install-maas/5128#heading--how-to-install-maas-main) | |
-| [How to list additional MAAS initialisation options](/t/how-to-install-maas/5128#heading--additional-init-options) | |
-| [How to re-initialise MAAS](/t/how-to-install-maas/5128#heading--reinitialising-maas) | |
-| [How to set up SSH for the admin user](/t/how-to-install-maas/5128#heading--setting-ssh) | |
-| [How to set upstream DNS](/t/how-to-install-maas/5128#heading--setting-dns) | |
-| [How to ugprade from MAAS 2.9 to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) | |
-| [How to ugprade from MAAS 3.0 to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) | |
-| [How to ugprade to MAAS 3.2 from MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) | |
-| [How to upgrade from 2.8 or lower to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) | |
-| [How to upgrade from 2.8 or lower to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) | |
-| [How to upgrade from 2.8 or lower to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) | |
-| [How to upgrade from an earlier snap version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) | |
-| [How to upgrade from an earlier snap version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) | |
-| [How to upgrade from an earlier snap version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) | |
-| [How to upgrade from an earlier snap version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) | |
-| [How to upgrade from MAAS 2.8 or lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) | |
-| [image creation problems](/t/how-to-troubleshoot-maas/5333#heading--custom-image-creation-problems) |Custom |
-| [image login](/t/how-to-troubleshoot-maas/5333#heading--backdoor-image-login) |Backdoor |
-| [images](/t/how-to-install-maas/5128#heading--importing-images) |How to import |
-| [image](/t/how-to-troubleshoot-maas/5333#heading--extract-the-cloud-image) |Extract the cloud |
-| [image](/t/how-to-troubleshoot-maas/5333#heading--rebuild-squashfs-image) |Rebuild SquashFS |
-| [image](/t/how-to-troubleshoot-maas/5333#heading--use-the-custom-image) |Use the custom |
-| [import images](/t/how-to-install-maas/5128#heading--importing-images) |How to |
-| [incorrectly](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-using-an-incorrectly-configured-vm) |Possible Cause: Using an |
-| [in fabric can break deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) |Adding overlapping subnets |
-| [initialisation modes reference](/t/how-to-install-maas/5128#heading--maas-init-modes) |MAAS |
-| [initialisation options](/t/how-to-install-maas/5128#heading--additional-init-options) |How to list additional MAAS |
-| [initialise MAAS 2.9 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to |
-| [initialise MAAS 3.0 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to |
-| [initialise MAAS 3.1 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to |
-| [initialise MAAS 3.2 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to |
-| [Initialise MAAS for a production configuration](/t/how-to-install-maas/5128#heading--init-maas-production) | |
-| [install MAAS](/t/how-to-install-maas/5128#heading--how-to-install-maas-main) |How to |
-| [install of MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do a fresh |
-| [install of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to do a fresh snap |
-| [install of MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do a fresh |
-| [install of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to do a fresh snap |
-| [install of MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do a fresh |
-| [install of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to do a fresh snap |
-| [install of MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do a fresh |
-| [install of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to do a fresh snap |
-| [in to node](/t/how-to-troubleshoot-maas/5333#heading--cant-log-in-to-node) |Can't log |
-| [IP address](/t/how-to-troubleshoot-maas/5333#heading--need-to-reconfigure-server-ip-address) |Need to reconfigure server |
-| [issues](/t/how-to-troubleshoot-maas/5333#heading--misc-problems) |Miscellaneous |
-| [issues](/t/how-to-troubleshoot-maas/5333#heading--networking-issues) |Networking |
-| [issues](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-timing-issues) |Possible Cause: Timing |
-| [keys](/t/how-to-install-maas/5128#heading--ssh-keys) |About SSH |
-| [life-cycle failures](/t/how-to-troubleshoot-maas/5333#heading--machine-life-cycle-failures) |Machine |
-| [list additional MAAS initialisation options](/t/how-to-install-maas/5128#heading--additional-init-options) |How to |
-| [login](/t/how-to-troubleshoot-maas/5333#heading--backdoor-image-login) |Backdoor image |
-| [login to machine after deployment](/t/how-to-troubleshoot-maas/5333#heading--machine-login-issues) |Can't |
-| [log in to node](/t/how-to-troubleshoot-maas/5333#heading--cant-log-in-to-node) |Can't |
-| [lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade from MAAS 2.8 or |
-| [lower to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to upgrade from 2.8 or |
-| [lower to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to upgrade from 2.8 or |
-| [lower to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to upgrade from 2.8 or |
-| [MAAS 2.8 or lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade from |
-| [MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do a fresh install of |
-| [MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade to MAAS 3.2 from |
-| [MAAS 2.9 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise |
-| [MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to do a fresh snap install of |
-| [MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade from MAAS 2.8 or lower to |
-| [MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade from an earlier snap version to |
-| [MAAS 2.9 to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How to ugprade from |
-| [MAAS 2.9 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a |
-| [MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do a fresh install of |
-| [MAAS 3.0 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise |
-| [MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to do a fresh snap install of |
-| [MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to upgrade from 2.8 or lower to |
-| [MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How to ugprade from MAAS 2.9 to |
-| [MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade from an earlier snap version to |
-| [MAAS 3.0 to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How to ugprade from |
-| [MAAS 3.0 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a |
-| [MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do a fresh install of |
-| [MAAS 3.1 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise |
-| [MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to do a fresh snap install of |
-| [MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to upgrade from 2.8 or lower to |
-| [MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How to ugprade from MAAS 3.0 to |
-| [MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade from an earlier snap version to |
-| [MAAS 3.1 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a |
-| [MAAS 3.2 from MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade to |
-| [MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do a fresh install of |
-| [MAAS 3.2 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise |
-| [MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to do a fresh snap install of |
-| [MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to upgrade from 2.8 or lower to |
-| [MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade from an earlier snap version to |
-| [MAAS 3.2 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a |
-| [MAAS administrator password](/t/how-to-troubleshoot-maas/5333#heading--forgot-maas-administrator-password) |Forgot |
-| [MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when creating commissioning or node script with |
-| [MAAS for a production configuration](/t/how-to-install-maas/5128#heading--init-maas-production) |Initialise |
-| [MAAS initialisation modes reference](/t/how-to-install-maas/5128#heading--maas-init-modes) | |
-| [MAAS initialisation options](/t/how-to-install-maas/5128#heading--additional-init-options) |How to list additional |
-| [MAAS services](/t/how-to-install-maas/5128#heading--service-status) |How to check the status of |
-| [MAAS](/t/how-to-install-maas/5128#heading--check-system-requirements-for-maas) |How to check system requirements for |
-| [MAAS](/t/how-to-install-maas/5128#heading--configure-maas) |How to configure |
-| [MAAS](/t/how-to-install-maas/5128#heading--how-to-install-maas-main) |How to install |
-| [MAAS](/t/how-to-install-maas/5128#heading--reinitialising-maas) |How to re-initialise |
-| [MAAS URL](/t/how-to-install-maas/5128#heading--maas-url) |About the |
-| [MAAS web UI](/t/how-to-troubleshoot-maas/5333#heading--cant-find-maas-web-ui) |Can't find |
-| [machine after deployment](/t/how-to-troubleshoot-maas/5333#heading--machine-login-issues) |Can't login to |
-| [Machine life-cycle failures](/t/how-to-troubleshoot-maas/5333#heading--machine-life-cycle-failures) | |
-| [make target ...OVMF_VARS.fd](/t/how-to-troubleshoot-maas/5333#heading--no-rule-for-ovmf) |No rule to |
-| [Miscellaneous issues](/t/how-to-troubleshoot-maas/5333#heading--misc-problems) | |
-| [modes reference](/t/how-to-install-maas/5128#heading--maas-init-modes) |MAAS initialisation |
-| [Need to reconfigure server IP address](/t/how-to-troubleshoot-maas/5333#heading--need-to-reconfigure-server-ip-address) | |
-| [network discovery](/t/how-to-install-maas/5128#heading--networking) |About |
-| [Network drivers](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-network-drivers) |Possible Cause: |
-| [Networking issues](/t/how-to-troubleshoot-maas/5333#heading--networking-issues) | |
-| [Node deployment fails](/t/how-to-troubleshoot-maas/5333#heading--node-deployment-fails) | |
-| [node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when creating commissioning or |
-| [Nodes fail to PXE boot](/t/how-to-troubleshoot-maas/5333#heading--nodes-fail-to-pxe-boot) | |
-| [Nodes hang on "Commissioning"](/t/how-to-troubleshoot-maas/5333#heading--nodes-hang-on-commissioning) | |
-| [node](/t/how-to-troubleshoot-maas/5333#heading--cant-log-in-to-node) |Can't log in to |
-| [No rule to make target ...OVMF_VARS.fd](/t/how-to-troubleshoot-maas/5333#heading--no-rule-for-ovmf) | |
-| [not found](/t/how-to-troubleshoot-maas/5333#heading--packer-not-found) |Command 'packer' |
-| [not found\" when creating commissioning or node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File |
-| [of MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do a fresh install |
-| [of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to do a fresh snap install |
-| [of MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do a fresh install |
-| [of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to do a fresh snap install |
-| [of MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do a fresh install |
-| [of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to do a fresh snap install |
-| [of MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do a fresh install |
-| [of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to do a fresh snap install |
-| [of MAAS services](/t/how-to-install-maas/5128#heading--service-status) |How to check the status |
-| [on "Commissioning"](/t/how-to-troubleshoot-maas/5333#heading--nodes-hang-on-commissioning) |Nodes hang |
-| [options](/t/how-to-install-maas/5128#heading--additional-init-options) |How to list additional MAAS initialisation |
-| [or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade to MAAS 3.2 from MAAS 2.9 |
-| [or lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade from MAAS 2.8 |
-| [or lower to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to upgrade from 2.8 |
-| [or lower to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to upgrade from 2.8 |
-| [or lower to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to upgrade from 2.8 |
-| [or node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when creating commissioning |
-| [or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 2.9 snap for a test |
-| [or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.0 snap for a test |
-| [or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.1 snap for a test |
-| [or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.2 snap for a test |
-| [overlapping subnets in fabric can break deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) |Adding |
-| [...OVMF_VARS.fd](/t/how-to-troubleshoot-maas/5333#heading--no-rule-for-ovmf) |No rule to make target |
-| [packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How to do a fresh install of MAAS 2.9 from |
-| [packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How to do a fresh install of MAAS 3.0 from |
-| [packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How to do a fresh install of MAAS 3.1 from |
-| [packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How to do a fresh install of MAAS 3.2 from |
-| ['packer' not found](/t/how-to-troubleshoot-maas/5333#heading--packer-not-found) |Command |
-| [password hash](/t/how-to-troubleshoot-maas/5333#heading--generate-password-hash) |Generate |
-| [password](/t/how-to-troubleshoot-maas/5333#heading--forgot-maas-administrator-password) |Forgot MAAS administrator |
-| [POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 2.9 snap for a test or |
-| [POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.0 snap for a test or |
-| [POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.1 snap for a test or |
-| [POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.2 snap for a test or |
-| [Possible Cause: DHCP conflict](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-dhcp-conflict) | |
-| [Possible Cause: Network drivers](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-network-drivers) | |
-| [Possible Cause: Timing issues](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-timing-issues) | |
-| [Possible Cause: Using an incorrectly](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-using-an-incorrectly-configured-vm) | |
-| [PostgreSQL from scratch](/t/how-to-install-maas/5128#heading--pg-setup) |Setting up |
-| [problems](/t/how-to-troubleshoot-maas/5333#heading--custom-image-creation-problems) |Custom image creation |
-| [production configuration](/t/how-to-install-maas/5128#heading--init-maas-production) |Initialise MAAS for a |
-| [production environment](/t/how-to-install-maas/5128#heading--production-environment) |Requirements for a |
-| [PXE boot](/t/how-to-troubleshoot-maas/5333#heading--nodes-fail-to-pxe-boot) |Nodes fail to |
-| [QEMU driver](/t/how-to-troubleshoot-maas/5333#heading--failed-creating-qemu-driver) |Failure to create |
-| [Rebuild SquashFS image](/t/how-to-troubleshoot-maas/5333#heading--rebuild-squashfs-image) | |
-| [reconfigure server IP address](/t/how-to-troubleshoot-maas/5333#heading--need-to-reconfigure-server-ip-address) |Need to |
-| [reference](/t/how-to-install-maas/5128#heading--maas-init-modes) |MAAS initialisation modes |
-| [re-initialise MAAS](/t/how-to-install-maas/5128#heading--reinitialising-maas) |How to |
-| [Requirements for a production environment](/t/how-to-install-maas/5128#heading--production-environment) | |
-| [Requirements for a test environment](/t/how-to-install-maas/5128#heading--test-environment) | |
-| [requirements for MAAS](/t/how-to-install-maas/5128#heading--check-system-requirements-for-maas) |How to check system |
-| [rule to make target ...OVMF_VARS.fd](/t/how-to-troubleshoot-maas/5333#heading--no-rule-for-ovmf) |No |
-| [scratch](/t/how-to-install-maas/5128#heading--pg-setup) |Setting up PostgreSQL from |
-| [script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when creating commissioning or node |
-| [secret](/t/how-to-install-maas/5128#heading--shared-secret) |About the shared |
-| [server IP address](/t/how-to-troubleshoot-maas/5333#heading--need-to-reconfigure-server-ip-address) |Need to reconfigure |
-| [services](/t/how-to-install-maas/5128#heading--service-status) |How to check the status of MAAS |
-| [Setting up PostgreSQL from scratch](/t/how-to-install-maas/5128#heading--pg-setup) | |
-| [set up SSH for the admin user](/t/how-to-install-maas/5128#heading--setting-ssh) |How to |
-| [set upstream DNS](/t/how-to-install-maas/5128#heading--setting-dns) |How to |
-| [shared secret](/t/how-to-install-maas/5128#heading--shared-secret) |About the |
-| [snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 2.9 |
-| [snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.0 |
-| [snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.1 |
-| [snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.2 |
-| [snap install of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How to do a fresh |
-| [snap install of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How to do a fresh |
-| [snap install of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How to do a fresh |
-| [snap install of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How to do a fresh |
-| [snap version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade from an earlier |
-| [snap version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade from an earlier |
-| [snap version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade from an earlier |
-| [snap version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade from an earlier |
-| [SquashFS image](/t/how-to-troubleshoot-maas/5333#heading--rebuild-squashfs-image) |Rebuild |
-| [SSH for the admin user](/t/how-to-install-maas/5128#heading--setting-ssh) |How to set up |
-| [SSH keys](/t/how-to-install-maas/5128#heading--ssh-keys) |About |
-| [status of MAAS services](/t/how-to-install-maas/5128#heading--service-status) |How to check the |
-| [Subarchitecture error thrown by django](/t/how-to-troubleshoot-maas/5333#heading--django-subarch-error) | |
-| [subnets in fabric can break deployments](/t/how-to-troubleshoot-maas/5333#heading--overlapping-subnets-can-break-deployments) |Adding overlapping |
-| [system requirements for MAAS](/t/how-to-install-maas/5128#heading--check-system-requirements-for-maas) |How to check |
-| [target ...OVMF_VARS.fd](/t/how-to-troubleshoot-maas/5333#heading--no-rule-for-ovmf) |No rule to make |
-| [test environment](/t/how-to-install-maas/5128#heading--test-environment) |Requirements for a |
-| [test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 2.9 snap for a |
-| [test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.0 snap for a |
-| [test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.1 snap for a |
-| [test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How to initialise MAAS 3.2 snap for a |
-| [the admin user](/t/how-to-install-maas/5128#heading--setting-ssh) |How to set up SSH for |
-| [the cloud image](/t/how-to-troubleshoot-maas/5333#heading--extract-the-cloud-image) |Extract |
-| [the custom image](/t/how-to-troubleshoot-maas/5333#heading--use-the-custom-image) |Use |
-| [the MAAS URL](/t/how-to-install-maas/5128#heading--maas-url) |About |
-| [the shared secret](/t/how-to-install-maas/5128#heading--shared-secret) |About |
-| [the status of MAAS services](/t/how-to-install-maas/5128#heading--service-status) |How to check |
-| [thrown by django](/t/how-to-troubleshoot-maas/5333#heading--django-subarch-error) |Subarchitecture error |
-| [Timing issues](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-timing-issues) |Possible Cause: |
-| [to check system requirements for MAAS](/t/how-to-install-maas/5128#heading--check-system-requirements-for-maas) |How |
-| [to check the status of MAAS services](/t/how-to-install-maas/5128#heading--service-status) |How |
-| [to configure MAAS](/t/how-to-install-maas/5128#heading--configure-maas) |How |
-| [to create a MAAS 2.9 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How |
-| [to create a MAAS 3.0 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How |
-| [to create a MAAS 3.1 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How |
-| [to create a MAAS 3.2 user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How |
-| [to create QEMU driver](/t/how-to-troubleshoot-maas/5333#heading--failed-creating-qemu-driver) |Failure |
-| [to do a fresh install of MAAS 2.9 from packages](/t/how-to-install-maas/5128#heading--fresh-install-2-9-packages) |How |
-| [to do a fresh install of MAAS 3.0 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-0-packages) |How |
-| [to do a fresh install of MAAS 3.1 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-1-packages) |How |
-| [to do a fresh install of MAAS 3.2 from packages](/t/how-to-install-maas/5128#heading--fresh-install-3-2-packages) |How |
-| [to do a fresh snap install of MAAS 2.9](/t/how-to-install-maas/5128#heading--fresh-install-2-9-snap) |How |
-| [to do a fresh snap install of MAAS 3.0](/t/how-to-install-maas/5128#heading--fresh-install-3-0-snap) |How |
-| [to do a fresh snap install of MAAS 3.1](/t/how-to-install-maas/5128#heading--fresh-install-3-1-snap) |How |
-| [to do a fresh snap install of MAAS 3.2](/t/how-to-install-maas/5128#heading--fresh-install-3-2-snap) |How |
-| [to enable DHCP](/t/how-to-install-maas/5128#heading--enabling-dhcp) |How |
-| [to import images](/t/how-to-install-maas/5128#heading--importing-images) |How |
-| [to initialise MAAS 2.9 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How |
-| [to initialise MAAS 3.0 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How |
-| [to initialise MAAS 3.1 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How |
-| [to initialise MAAS 3.2 snap for a test or POC environment](/t/how-to-install-maas/5128#heading--init-maas-poc) |How |
-| [to install MAAS](/t/how-to-install-maas/5128#heading--how-to-install-maas-main) |How |
-| [to list additional MAAS initialisation options](/t/how-to-install-maas/5128#heading--additional-init-options) |How |
-| [to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to upgrade from MAAS 2.8 or lower |
-| [to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade from an earlier snap version |
-| [to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to upgrade from 2.8 or lower |
-| [to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How to ugprade from MAAS 2.9 |
-| [to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade from an earlier snap version |
-| [to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to upgrade from 2.8 or lower |
-| [to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How to ugprade from MAAS 3.0 |
-| [to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade from an earlier snap version |
-| [to MAAS 3.2 from MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to ugprade |
-| [to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to upgrade from 2.8 or lower |
-| [to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade from an earlier snap version |
-| [to machine after deployment](/t/how-to-troubleshoot-maas/5333#heading--machine-login-issues) |Can't login |
-| [to make target ...OVMF_VARS.fd](/t/how-to-troubleshoot-maas/5333#heading--no-rule-for-ovmf) |No rule |
-| [to node](/t/how-to-troubleshoot-maas/5333#heading--cant-log-in-to-node) |Can't log in |
-| [to PXE boot](/t/how-to-troubleshoot-maas/5333#heading--nodes-fail-to-pxe-boot) |Nodes fail |
-| [to reconfigure server IP address](/t/how-to-troubleshoot-maas/5333#heading--need-to-reconfigure-server-ip-address) |Need |
-| [to re-initialise MAAS](/t/how-to-install-maas/5128#heading--reinitialising-maas) |How |
-| [to set up SSH for the admin user](/t/how-to-install-maas/5128#heading--setting-ssh) |How |
-| [to set upstream DNS](/t/how-to-install-maas/5128#heading--setting-dns) |How |
-| [to ugprade from MAAS 2.9 to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How |
-| [to ugprade from MAAS 3.0 to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How |
-| [to ugprade to MAAS 3.2 from MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How |
-| [to upgrade from 2.8 or lower to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How |
-| [to upgrade from 2.8 or lower to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How |
-| [to upgrade from 2.8 or lower to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How |
-| [to upgrade from an earlier snap version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How |
-| [to upgrade from an earlier snap version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How |
-| [to upgrade from an earlier snap version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How |
-| [to upgrade from an earlier snap version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How |
-| [to upgrade from MAAS 2.8 or lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How |
-| [ugprade from MAAS 2.9 to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-9-to-3-0) |How to |
-| [ugprade from MAAS 3.0 to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-3-0-to-3-1) |How to |
-| [ugprade to MAAS 3.2 from MAAS 2.9 or higher](/t/how-to-install-maas/5128#heading--upgrade-to-3-2) |How to |
-| [UI](/t/how-to-troubleshoot-maas/5333#heading--cant-find-maas-web-ui) |Can't find MAAS web |
-| [upgrade from 2.8 or lower to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-0) |How to |
-| [upgrade from 2.8 or lower to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-1) |How to |
-| [upgrade from 2.8 or lower to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-3-2) |How to |
-| [upgrade from an earlier snap version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to |
-| [upgrade from an earlier snap version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to |
-| [upgrade from an earlier snap version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to |
-| [upgrade from an earlier snap version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to |
-| [upgrade from MAAS 2.8 or lower to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-2-8-to-2-9) |How to |
-| [up PostgreSQL from scratch](/t/how-to-install-maas/5128#heading--pg-setup) |Setting |
-| [up SSH for the admin user](/t/how-to-install-maas/5128#heading--setting-ssh) |How to set |
-| [upstream DNS](/t/how-to-install-maas/5128#heading--setting-dns) |How to set |
-| [URL](/t/how-to-install-maas/5128#heading--maas-url) |About the MAAS |
-| [user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS 2.9 |
-| [user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS 3.0 |
-| [user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS 3.1 |
-| [user](/t/how-to-install-maas/5128#heading--create-a-maas-user) |How to create a MAAS 3.2 |
-| [user](/t/how-to-install-maas/5128#heading--setting-ssh) |How to set up SSH for the admin |
-| [Use the custom image](/t/how-to-troubleshoot-maas/5333#heading--use-the-custom-image) | |
-| [Using an incorrectly](/t/how-to-troubleshoot-maas/5333#heading--possible-cause-using-an-incorrectly-configured-vm) |Possible Cause: |
-| [version to MAAS 2.9](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-2-9) |How to upgrade from an earlier snap |
-| [version to MAAS 3.0](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-0) |How to upgrade from an earlier snap |
-| [version to MAAS 3.1](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-1) |How to upgrade from an earlier snap |
-| [version to MAAS 3.2](/t/how-to-install-maas/5128#heading--upgrade-from-earlier-version-to-snap-3-2) |How to upgrade from an earlier snap |
-| [web UI](/t/how-to-troubleshoot-maas/5333#heading--cant-find-maas-web-ui) |Can't find MAAS |
-| [when creating commissioning or node script with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" |
-| [with MAAS CLI](/t/how-to-troubleshoot-maas/5333#heading--commissioning-script-file-not-found) |\"File not found\" when creating commissioning or node script |
+This section will answer a few questions:
+
+- [What is MAAS?](#heading--what-is-maas)
+- [What does MAAS offer me?](#heading--what-maas-offers)
+- [Can MAAS co-locate key components to conserve resources?](#heading--colocation-of-key-components)
+- [How does MAAS work?](#heading--how-maas-works)
+
+<a href="#heading--what-is-maas"><h3 id="heading--what-is-maas">What is MAAS?</h3></a>
+
+MAAS expands to "Metal As A Service" -- it converts bare-metal servers into cloud instances of virtual machines. There is no need to manage individual units. You can quickly provision or destroy machines, as if they were instances hosted in a public cloud like Amazon AWS, Google GCE, or Microsoft Azure.
+
+MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://juju.is/docs/olm/maas), the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs) can even act as MAAS machines if they boot from the network via PXE.
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg"></a>
+
+<details><summary>Tell me about PXE booting</summary>
+
+PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The term refers to a way of booting an OS image (or other software assembly) downloaded to a client via a NIC.  The NIC must be PXE-capable for this to work.  Many NICs can be configured to support PXE boot with a software switch.
+
+</details>
+
+<a href="#heading--what-maas-offers"><h3 id="heading--what-maas-offers">What MAAS offers</h3></a>
+
+MAAS can manage a large number of physical machines by merging them into user-defined resource pools. MAAS automatically provisions participating machines and makes them available for use. You can return unused machines to the assigned pool at any time.
+
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+MAAS also discovers all of the USB and PCI devices attached to your physical or virtual machines, and allows you to delete them from the machine's visible configuration, prior to deployment, if you so desire.
+[/tab]
+[tab version="v2.9 Snap,v2.9 Packages"]
+[note]
+MAAS 2.9 does not discover USB and PCI devices.  This feature is available from MAAS version 3.0.
+[/note]
+[/tab]
+[/tabs]
+
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+<a href="#heading--ui-smooth-maas-experience"><h3 id="heading--ui-smooth-maas-experience">A smooth system-management experience</h3></a>
+
+MAAS integrates all the tools you need into a smooth system-management experience. It includes the following thirteen features:
+
+1. web UI (optimised for mobile devices)
+2. Ubuntu, CentOS, Windows, and RHEL installation support
+3. open-source IP address management (IPAM)
+4. full API/CLI support
+5. high availability (optional)
+6. IPv6 support
+7. inventory of components
+8. DHCP and DNS for other devices on the network
+9. DHCP relay integration
+10. VLAN and fabric support
+11. NTP for the entire infrastructure
+12. hardware testing
+13. composable hardware support
+
+These tools can be controlled from a responsive web UI.  You can easily (re)configure and scale your data centre with MAAS.
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/00968a71b82ce01c45ae3b345ed6b1270d0927bf.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/00968a71b82ce01c45ae3b345ed6b1270d0927bf.jpeg"></a> 
+
+[/tab]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+<a href="#heading--cli-smooth-maas-experience"><h3 id="heading--cli-smooth-maas-experience">A smooth system-management experience</h3></a>
+
+MAAS integrates all the tools you need into a smooth system-management experience. It includes the following eleven features:
+
+1. Ubuntu, CentOS, Windows, and RHEL installation support
+2. open-source IP address management (IPAM)
+3. high availability (optional)
+4. IPv6 support
+5. inventory of components
+6. DHCP and DNS for other devices on the network
+7. DHCP relay integration
+8. VLAN and fabric support
+9. NTP for the entire infrastructure
+10. hardware testing
+11. composable hardware support
+
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/40fdae53957095e5a830458dc5c7a62ea5d78c10.jpeg"></a> 
+
+[/tab]
+[/tabs]
+
+MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef) and [Juju](https://jaas.ai/) teams recommend MAAS as a physical provisioning system.
+
+[note]
+Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.ubuntu.com/support) to work correctly with MAAS.
+[/note]
+
+<a href="heading--colocation-of-key-components"><h3 id="heading--colocation-of-key-components">Colocation of key components</h3></a>
+
+MAAS relies on two key components: the *region controller* and the *rack controller*. The region controller handles operator requests; the rack controller provides high-bandwidth services to multiple racks. In essence, rack controllers manage racks, while the region controller manages the data centre. We generally recommended installing both controllers on the same system.  The default MAAS install delivers this co-located configuration automatically. This all-in-one solution also provides DHCP. 
+
+See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/how-to-enable-high-availability/5120), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/how-to-manage-dhcp/5132) will cause problems.
+
+<a href="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg"></a>
+
+<a href="heading--how-maas-works"><h3 id="heading--how-maas-works">How MAAS works</h3></a>
+
+When you [add a new machine](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/about-machines/5080#heading--about-enlistment), MAAS [commissions](/t/about-machines/5080#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+
+<details><summary>Tell me, quickly, about enlistment and commissioning.</summary>
+
+There are two ways to add a machine to MAAS.  Assuming it's on the network and capable of PXE-booting, you can add it explicitly -- or MAAS can simply discover it when you turn it on.
+
+Enlistment just means that MAAS discovers a machine when you turn it on, and presents it to the MAAS administrator, so that they can choose whether or not to commission it.  Machines that have only been enlisted will show up in the machine list as "New."
+
+Commissioning means that MAAS has successfully booted the machine, scanned and recorded its resources, and prepared it for eventual deployment.  Machines that you explicitly add are automatically commissioned.  MAAS marks a successfully-commissioned machine as "Ready" in the machine list.
+
+</details>
+
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/605019de31078dd70df72ff199d812de13a30d00.jpeg"></a>
+[/tab]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6aec9b567022216d80596411e689a14e1f594674.jpeg"></a>
+[/tab]
+[/tabs]
+
+MAAS controls machines through IPMI (or another BMC). It can also manage machines through a converged chassis controller, such as Cisco UCS.  You can choose how you want to control power on your machines based on what is available.  MAAS overwrites the machine's disk space with your chosen, pre-cached OS images.
+
+[note]
+*The above comment about disk space bears repeating: MAAS will overwrite the disk space of all machines it enlists. All pool machines are under the control of MAAS; you should provision them using other methods.*
+[/note]
+
+MAAS users allocate machines for use when needed. The web UI also allows you to allocate machines manually, such as when you are reserving specific hardware for certain users. You can remotely access and customise the installed operating system via SSH.
+
+[tabs]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8101d641c55d912cd66646bd99bbee9bb8f196ab.jpeg"></a>
+[/tab]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+<a href="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ac3b251a916bb18a7e7e463d7fa3c57ef32628da.jpeg"></a>
+
+When allocating machines from the API/CLI, you can specify requirements ("constraints"). Common constraints are memory, CPU cores, connected networks, and assigned physical zone.
+[/tab]
+[/tabs]
+
+An allocated MAAS machine is more flexible than a virtual instance in a cloud. You have complete control, including hardware drivers and root access. If you want to upgrade the BIOS, for example, you can allocate a machine to yourself and complete the upgrade.  Once you have completed the upgrade, you can send the machine back to the pool.
+
+Note that [Juju](https://juju.is/docs/olm/maas) is designed to work with MAAS. MAAS becomes a back-end Juju resource pool with all functionality fully available. For instance, if Juju removes a machine, then MAAS will release that machine to the pool.  With Juju, MAAS can become an integral part of your data centre strategy and operations.
