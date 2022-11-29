@@ -1,4 +1,4 @@
-<!-- "How to back up MAAS" -->
+<!-- "How to keep MAAS backed up" -->
 <a href="#heading--about-maas-backup"><h2 id="heading--about-maas-backup">About MAAS backup</h2></a>
 
 MAAS currently does not provide specific tools to back up and restore a working MAAS configuration. MAAS servers are part of your data centre, just like other Linux-based servers, so your current backup and disaster recovery solution should be sufficient to back up your MAAS environment.  Even so, you should know which files and actions are critical -- to ensure that you get a clean backup, and further ensure that you can restore it cleanly.
@@ -266,9 +266,18 @@ MAAS relies on various DB triggers for multiple operations. As such, it is alway
 
 As such, it is required to re-create the DB triggers (or upgrade the DB and run new/missing migrations) with the following command:
 
+[tabs]
+[tab version="Snap"]
+```bash
+sudo maas migrate
+```
+[/tab]
+[tab version="Deb"]
 ``` bash
 sudo maas-region dbupgrade
 ```
+[/tab]
+[/tabs]
 
 [note]
 Please note to run this command on one of the Region Controllers (if this is a multi-region MAAS cluster).
