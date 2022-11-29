@@ -1,4 +1,4 @@
-<!-- "How to use tags" -->
+<!-- "How to label and find machines" -->
 
 One of the more useful attributes of machines is tags (and annotations).  These can be used not only to identify machines, but to customise them (e.g., kernel options) when they are commissioned and deployed.  You can study the [big picture of tags](#heading--The-big-picture-of-tags) or find specific items with the [tags permuted index](#heading--Tags-permuted-index).
 
