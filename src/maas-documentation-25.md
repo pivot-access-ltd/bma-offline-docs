@@ -43,11 +43,15 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Home](/t/maas-documentation/25)
 
+- [Release notes](/t/-/5292)
+- [Installation requirements](/t/-/6233)
+- [Glossary](/t/-/5416)
+
 ### [Basic tutorials](/t/-/6140) 
 
-- [Bootstrap MAAS by example](/t/-/5092)
+- [MAAS bootstrap tutorial](/t/-/5092)
 - [Try out the MAAS CLI](/t/-/5236)
-- [Create a custom image](/t/-/6102)
+- [Custom image tutorial](/t/-/6102)
 - [Using jq with the MAAS CLI](/t/-/6027)
 
 ### [How to get started with MAAS](/t/-/6202)
@@ -93,42 +97,42 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [How to label and find machines](/t/-/6200)
 
-- [Apply tags to machines](/t/-/5928)
-- [Apply annoations to machines](/t/-/5929)
+- [Tag machines](/t/-/5928)
+- [Annotate machines](/t/-/5929)
 - [Use machine tags](/t/-/5224)
 - [Use controller tags](/t/-/5216)
 - [Use storage tags](/t/-/5232)
 - [Use network tags](/t/-/5228)
 - [Find machines](/t/-/5192)
 
-### How to find problems with logs
+### How to diagnose issues
 
 - [Work with log files](/t/-/5240)
 - [Work with audit event logs](/t/-/5987)
 
-### How to improve security
+### How to work securely
 
 - [Improve MAAS security](/t/-/5196)
 - [Enable MAAS native TLS](/t/-/5116)
 - [Set up an air-gapped MAAS](/t/-/5212)
-- [Manage users](/t/-/5184)
+- [Manage user accounts](/t/-/5184)
 
-### How to improve reliability
+### How to operate reliably
 
 - [Keep MAAS backed up](/t/-/5096)
-- [Observe a running MAAS](/t/-/5204)
+- [Observe a live MAAS](/t/-/5204)
 
 ### [Explanations](/t/-/6141)
 
-- [MAAS 101](/t/-/5064)
+- [MAAS basics](/t/-/5064)
 - [TCP/IP primer](/t/-/5806)
 - [It is always DHCP](/t/-/5807)
 - [Cloud networks](/t/-/5808)
 - [How MAAS networks](/t/-/5084)
 - [Images](/t/-/5076)
 - [Custom images](/t/-/6099)
-- [Controllers: the core of MAAS](/t/-/5072)
-- [Machines: the heavy lifing](/t/-/5080)
+- [MAAS controllers](/t/-/5072)
+- [Machines do the heavy lifing](/t/-/5080)
 - [Customising machines](/t/-/5976)
 - [VM hosting](/t/-/5068)
 - [MAAS events](/t/-/6373)
@@ -150,13 +154,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Power management](/t/-/5246)
 - [Storage layouts](/t/-/5973)
 - [Terraform provider](/t/-/6327)
-
-### [General reference](/t/-/6143)
-
-- [Release notes](/t/-/5292)
-- [Installation requirements](/t/-/6233)
-- [Concepts & terms](/t/-/5416)
-
 
 
 ## URLs
