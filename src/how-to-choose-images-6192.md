@@ -1,4 +1,4 @@
-<!-- "How to choose images" -->
+<!-- "How to acquire images" -->
 Now that you've got your network configured, you'll want to choose or build some images to deploy.  This article catalogues all the explanations and how-to procedures related to images.  You can search for [big picture topics](#heading--images-the-big-picture), or consult the [images permuted index](#heading--images-permuted-index).
 
 <a href="#heading--images-the-big-picture"><h2 id="heading--images-the-big-picture">MAAS images: the big picture</h2></a>
