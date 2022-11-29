@@ -266,18 +266,9 @@ MAAS relies on various DB triggers for multiple operations. As such, it is alway
 
 As such, it is required to re-create the DB triggers (or upgrade the DB and run new/missing migrations) with the following command:
 
-[tabs]
-[tab version="Snap"]
-```bash
-sudo maas migrate
-```
-[/tab]
-[tab version="Deb"]
 ``` bash
 sudo maas-region dbupgrade
 ```
-[/tab]
-[/tabs]
 
 [note]
 Please note to run this command on one of the Region Controllers (if this is a multi-region MAAS cluster).
