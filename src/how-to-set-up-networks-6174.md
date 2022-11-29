@@ -9,18 +9,18 @@ But don't feel rushed -- it depends on your comfort level with [MAAS networking]
 
 Some elements of MAAS networking are unique to the product, while others are standard networking concepts that are uniquely applied to MAAS.  This section will help you learn:
 
-- [About PXE booting](#heading--about-pxe-booting)
-- [About power drivers](#heading--about-power-drivers)
-- [About proxies](#heading--about-proxies)
-- [About RPC](#heading--about-RPC)
-- [About network discovery](#heading--about-network-discovery)
-- [About subnets](#heading--subnets)
-- [About VLANs](#heading--vlans)
-- [About subnet management](#heading--about-subnet-management)
-- [About IPv6](#heading--about-ipv6)
-- [About availability zones](#heading--about-availability-zones)
+- [PXE booting is essential](#heading--about-pxe-booting)
+- [Power drivers define machines](#heading--about-power-drivers)
+- [Proxies](#heading--about-proxies)
+- [RPC](#heading--about-RPC)
+- [What is network discovery?](#heading--about-network-discovery)
+- [Subnets](#heading--subnets)
+- [VLANs](#heading--vlans)
+- [You manage subnets](#heading--about-subnet-management)
+- [MAAS is IPv6-enabled](#heading--about-ipv6)
+- [Availability zones](#heading--about-availability-zones)
 
-<a href="#heading--about-pxe-booting"><h3 id="heading--about-pxe-booting">About PXE booting</h3></a>
+<a href="#heading--about-pxe-booting"><h3 id="heading--about-pxe-booting">PXE booting is essential</h3></a>
 
 PXE booting, or [Preboot eXecution Environment](https://en.wikipedia.org/wiki/Preboot_Execution_Environment), refers to the ability to boot a machine via a Network Interface Card (NIC).  PXE booting requires a Network Interface Card (NIC) which is equipped with a PXE API which can be accessed by the server wishing to boot the device.
 
@@ -40,7 +40,7 @@ Here are some related concepts you may want to explore:
 
 If you still have questions about PXE booting, please consider posting a question on our [discourse forum](https://discourse.maas.io/c/users/8).
 
-<a href="#heading--about-power-drivers"><h3 id="heading--about-power-drivers">About power drivers</h3></a>
+<a href="#heading--about-power-drivers"><h3 id="heading--about-power-drivers">Power drivers define machines</h3></a>
 
 Power drivers are units of software, embedded in MAAS, that interface with the [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) to power-cycle a machine remotely.  Different machines use different BMC configurations.  Typically, these vary by manufacturer, although there are some standard IPMI drivers that can be used.  In addition, it is sometimes possible to control a machine with a specialised BMC via a generic IPMI driver.
 
@@ -50,17 +50,17 @@ Specific machine models have different IPMI parameters that can or must be used 
 
 IPMI provides many other functions and capabilities besides power-cycling the machine, such as monitoring system state (e.g., temperature) and possibly adjusting some parameters remotely.  MAAS generally does not avail itself of these additional features.
 
-<a href="#heading--about-proxies"><h3 id="heading--about-proxies">About proxies</h3></a>
+<a href="#heading--about-proxies"><h3 id="heading--about-proxies">Proxies</h3></a>
 
 A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  
 
 MAAS provides an [internal proxy](/t/how-to-manage-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-manage-networks/5164#heading--configure-proxy) if desired.
 
-<a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a>
+<a href="#heading--about-rpc"><h3 id="heading--about-rpc">RPC</h3></a>
 
 A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, [RPC is used for communication between the region and rack controllers](/t/about-controllers/5072#heading--rackregion), specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine's DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. 
 
-<a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a>
+<a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">Waht is network discovery?</h3></a>
 
 MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS can be listed via the CLI. If a device advertises a hostname using `mDNS` (such as with `avahi` or `Bonjour`), MAAS will also present the discovered hostname when listing devices.
 
@@ -73,7 +73,7 @@ An unknown discovered device can be added to MAAS as a device, or as a network i
 [/tab]
 [/tabs]
 
-<a href="#heading--subnets"><h2 id="heading--subnets">About subnets</h2></a>
+<a href="#heading--subnets"><h2 id="heading--subnets">Subnets</h2></a>
 
 A [subnet](https://en.wikipedia.org/wiki/Subnetwork#firstHeading) is a "layer 3" network, defined by a network address and a network mask length (in bits) and usually written in "CIDR" format. MAAS supports IPv4 and IPv6 subnets. Examples include:
 
@@ -84,7 +84,7 @@ A [subnet](https://en.wikipedia.org/wiki/Subnetwork#firstHeading) is a "layer 3"
 2001:db8:4d41:4153::/64
 ```
 
-<a href="#heading--vlans"><h2 id="heading--vlans">About VLANs</h2></a>
+<a href="#heading--vlans"><h2 id="heading--vlans">VLANs</h2></a>
 
 [VLANs](https://en.wikipedia.org/wiki/Virtual_LAN#firstHeading) (Virtual LANs) are a common way to create logically separate networks using the same physical infrastructure.
 
@@ -94,7 +94,7 @@ You can use also use tagged VLANs with MAAS nodes. If a switch port is configure
 
 A "Default VLAN" is created for every fabric, to which every new VLAN-aware object in the fabric will be associated with by default (unless specified otherwise).
 
-<a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">About subnet management</h3></a>
+<a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">You manage subnets</h3></a>
 
 Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-manage-dhcp/5132#heading--enabling-dhcp).  None of these options requires detailed instruction.
 
@@ -115,7 +115,7 @@ When you enable management for a subnet, MAAS will:
 - Lease addresses for DHCP from a reserved dynamic IP range
 - Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
 
-See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+See [the glossary](/t/glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 If needed, you can also define a static route between two subnets. A static route is defined on a per-subnet basis to use a particular gateway, using a configured destination.
 
@@ -127,7 +127,7 @@ When management is disabled for a subnet, the definition of a reserved IP range 
 
 When you enable IP address tracking, MAAS will keep track of all assigned addresses, regardless of whether they come from managed or unmanaged subnets.
 
-<a href="#heading--about-ipv6"><h3 id="heading--about-ipv6">About IPv6</h3></a>
+<a href="#heading--about-ipv6"><h3 id="heading--about-ipv6">MAAS is IPv6-enabled</h3></a>
 
 Support for IPv6 in MAAS is similar to support for IPv4.  This subsection will help you learn:
 
@@ -176,7 +176,7 @@ You may be planning to operate DHCPv6 clients as well, for example, on machines 
 If you need RAs, but your gateway does not send them, you could install and configure `radvd` somewhere on the network to advertise its route.
 
 
-<a href="#heading--about-availability-zones"><h3 id="heading--about-availability-zones">About availability zones</h3></a>
+<a href="#heading--about-availability-zones"><h3 id="heading--about-availability-zones">Availability zones</h3></a>
 
 This subsection explains some characteristics and uses of availability zones.  Here you have the opportunity to learn:
 
