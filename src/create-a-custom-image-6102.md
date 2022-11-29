@@ -1,4 +1,4 @@
-<!-- "Create a custom image" -->
+<!-- "Custom image tutorial" -->
 When we talk about creating custom OS images for MAAS, it feels like something that's about to get really complex.  But with packer-maas, that's often not the case.
 
 Let's see if we can't create and deploy a custom Ubuntu image with packer, just to see how easy it can be.
