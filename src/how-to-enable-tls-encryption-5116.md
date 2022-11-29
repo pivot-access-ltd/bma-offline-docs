@@ -1,4 +1,4 @@
-<!-- "How to enable TLS encryption" -->
+<!-- "How to enable MAAS native TLS encryption" -->
 [tabs]
 [tab version="v3.2 Snap,v3.2 Packages"]
 <a href="#heading--about-maas-native-tls"><h2 id="heading--about-maas-native-tls">About MAAS Native TLS</h2></a>
