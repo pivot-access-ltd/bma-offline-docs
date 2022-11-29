@@ -1,3 +1,4 @@
+<!-- "How to report a bug" -->
 MAAS bugs are reported via Launchpad. We'll provide the link in a moment, but first, some necessary prerequisites.
 
 Filing a good bug report makes all the difference in how quickly we can triage and address your problem.  This brief how-to guide will walk you through the steps of filing a bug.  Some of these steps are necessary preparation, and the better you prepare before you file, the better the bug report.
