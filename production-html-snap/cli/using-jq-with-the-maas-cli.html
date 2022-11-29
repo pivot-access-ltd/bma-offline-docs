@@ -409,7 +409,8 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it's sometimes hard for humans to process.</h1><p>The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it&rsquo;s sometimes hard for humans to process.</p>
+  <h1>Using jq with the MAAS CLI</h1><!-- "Using jq with the MAAS CLI" -->
+<p>The JSON output from the MAAS CLI can be very lengthy for even one machine. You can imagine how large a listing 10 or 12 or 600 machines might present. Traditional JSON output is both consistent and comprehensive, but it&rsquo;s sometimes hard for humans to process.</p>
 <p>Enter <code>jq</code>, a command-line tool dedicated to filtering and formatting JSON output, so that you can more easily summarise data. For instance, consider a small MAAS install with 12 virtual machines. Six of these machines are LXD VMs, and six are libvirt VMs. Suppose we enter the MAAS command to list all those machines:</p>
 <pre><code class="language-nohighlight">maas admin machines read
 </code></pre>
