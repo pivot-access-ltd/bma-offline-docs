@@ -1,7 +1,13 @@
-<!-- "MAAS controllers" -->
+<!-- "How to tune controllers" -->
+Controllers are the backbone of MAAS.  Depending on your network configuration and your machine count, you may want to [adjust your controllers] a bit at this point.  You might even want to set up a [high availability] configuration.
+
+It helps to have a baseline understanding of controllers.  You can find that explained in the rest of this article.
+
+<a href="#heading--MAAS-controller-fundamentals"><h2 id="heading--MAAS-controller-fundamentals">MAAS controller fundamentals</h2></a>
+
 Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.
 
-<a href="#heading--region-controller"><h2 id="heading--region-controller">About region controllers</h2></a>
+<a href="#heading--region-controller"><h3 id="heading--region-controller">About region controllers</h3></a>
 
 A region controller consists of the following components:
 
@@ -13,7 +19,7 @@ A region controller consists of the following components:
 
 Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.
 
-<a href="#heading--rack-controllers"><h2 id="heading--rack-controllers">About rack controllers</h2></a>
+<a href="#heading--rack-controllers"><h3 id="heading--rack-controllers">About rack controllers</h3></a>
 
 A rack controller provides four services:
 
@@ -32,11 +38,11 @@ For example, let's say that your [hospital](/t/get-started-with-maas/5092) has t
 
 You can learn more about fabrics in the [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--fabrics) section of this documentation.
 
-<a href="#heading--about-contr-comm"><h2 id="heading--about-contr-comm">About controller communication</h2></a>
+<a href="#heading--about-contr-comm"><h3 id="heading--about-contr-comm">About controller communication</h3></a>
 
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/how-to-enable-high-availability/5120) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
 
-<a href="#heading--machinerack"><h3 id="heading--machinerack">How machines communicate with the rack controller</h3></a>
+<a href="#heading--machinerack"><h4 id="heading--machinerack">How machines communicate with the rack controller</h4></a>
 
 All machine communication with MAAS is proxied through rack controllers, including HTTP metadata, DNS, syslog and APT (cache-and-forward proxies via Squid). 
 
@@ -52,7 +58,7 @@ Zone management and maintenance still happen within the region controller.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a>
 
-<a href="#heading--rackregion"><h3 id="heading--rackregion">How region and rack controllers communicate</h3></a>
+<a href="#heading--rackregion"><h4 id="heading--rackregion">How region and rack controllers communicate</h4></a>
 
 The MAAS region and rack controllers interact in a number of different ways, depending upon the operation you've requested.  Consider the process of commissioning a machine, that is, taking over the machine and gathering information on its available resources, including CPU, RAM, storage, and MIB information (obtainable via LLDP requests).  Here's a rough idea of what that sequence looks like -- a sequence that is representative of the communication between rack and region controllers:
 
@@ -75,3 +81,4 @@ Again, this list doesn't represent every interaction between the controllers and
 
 The `next-server` directive is used to specify the host address from which an initial boot file is to be loaded, usually a TFTP server.  In the case of MAAS, the rack controller providing DHCP actually inserts itself, since it can proxy (broker) the delivery of boot bits to the machine in question.
 </details>
+
