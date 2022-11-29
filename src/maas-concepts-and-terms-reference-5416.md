@@ -2,6 +2,7 @@
 Built on a foundation of networking knowledge, MAAS introduces a number of new terms, and adds some nuances to common terms.  Some of these terms may be common networking terms you never looked up; others represent more complex concepts that may be unique to MAAS.  This article presents and explains some of these important terms.
 
 <details><summary>Show me an alphabetical list of terms</summary>
+
 - [Availability zones](/t/maas-concepts-and-terms-reference/5416#heading--zones)
 - [cloud-init](/t/maas-concepts-and-terms-reference/5416#heading--cloud-init)
 - [Controller](/t/maas-concepts-and-terms-reference/5416#heading--controllers)
@@ -29,7 +30,9 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 - [Tags](/t/maas-concepts-and-terms-reference/5416#heading--tags)
 - [Ubuntu package repositories](/t/maas-concepts-and-terms-reference/5416#heading--ubuntu-package-repositories)
 - [VM hosts](/t/maas-concepts-and-terms-reference/5416#heading--vm-hosts)
+
 </details>
+
 
 <a href="#heading--nodes"><h2 id="heading--nodes">Nodes</h2></a>
 
