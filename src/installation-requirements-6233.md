@@ -1,4 +1,4 @@
-<!-- "installation requirements" -->
+<!-- "MAAS installation requirements" -->
 <a href="#heading--check-system-requirements-for-maas"><h2 id="heading--check-system-requirements-for-maas">How to check system requirements for MAAS</h2></a>
 
 Before installing MAAS for the first time, you should make sure that the target system meets the minimum requirements for the machines that run MAAS, which vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
