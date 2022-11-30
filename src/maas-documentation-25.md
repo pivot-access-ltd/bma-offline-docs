@@ -124,9 +124,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Explanations](/t/-/6141)
 
-- [MAAS controllers](/t/-/5072)
-- [Machines do the heavy lifing](/t/-/5080)
-- [Customising machines](/t/-/5976)
 - [VM hosting](/t/-/5068)
 - [MAAS events](/t/-/6373)
 - [MAAS audit events](/t/-/6372)
