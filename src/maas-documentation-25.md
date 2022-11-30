@@ -78,7 +78,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Build custom images](/t/-/5104)
 - [Employ VMWare images](/t/-/5144)
 
-### How to tune controllers
+### [How to tune controllers](/t/-/6498)
 
 - [Adjust your controllers](/t/-/5172)
 - [Enable HA](/t/-/5120)
@@ -154,6 +154,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6498|/docs/how-to-tune-controllers|
 |https://discourse.maas.io/t/-/6346|/docs/what-is-new-with-maas-3-3|
 |https://discourse.maas.io/t/-/6367|/docs/ansible-playbooks-reference|
 |https://discourse.maas.io/t/-/6372|/docs/understanding-maas-audit-events|
