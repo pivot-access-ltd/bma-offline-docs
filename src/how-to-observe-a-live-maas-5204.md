@@ -176,8 +176,8 @@ git clone https://github.com/canonical/maas-loki-alert-rules.git
 cd maas-loki-alert-rules
 make groups
 
-mkdir -p /var/lib/loki/rules/maas
-cp rules/bundle.yml /var/lib/loki/rules/maas/
+mkdir -p /var/lib/loki/rules/fake
+cp rules/bundle.yml /var/lib/loki/rules/fake/
 ```
 
 Start the Loki service.
