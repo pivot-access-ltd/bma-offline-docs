@@ -390,81 +390,83 @@ Note that with this version of MAAS, matching machine counts have been removed f
 
 The following table describes the expanded filter set for the MAAS machine list:
 
-- Items marked as "Dynamic" are populated based on existing data, that is, the "Tags" filter only shows tags that currently exist.  
+- Items with an "X" under "Dyn" are populated based on existing data, that is, the "Tags" filter only shows tags that currently exist.  
 - Items which are not dynamic present the entire range of possible values, regardless of whether that value currently exists in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.
-- Items marked as "Grouping" can be used to group machines, instead of the default machine status.
+- Items with an "X" under "Grp" can be used to group machines, instead of the default machine status.
+- Items with an "X" under "Man" must be manually entered (i.e., they are not in the UI filter dropdown, but can be entered in the "Search" box.
 
-See [How to search MAAS](/t/how-to-search-maas/5192) for details on how to use these parameters.
+See [How to search MAAS](/t/how-to-search-maas/5192) for more details on how to use these parameters.
 
 
-| Parameter            | Description                                              | Dynamic | Grouping |
-|----------------------|----------------------------------------------------------|---------|----------|
-| arch                 | Include nodes with this architecture                     |         | Grouping |
-| !arch                | Exclude nodes with this architecture                     | Dynamic |          |
-| zone                 | Include nodes in this zone                               | Dynamic | Grouping |
-| !zone                | Exclude nodes in this zone                               | Dynamic |          |
-| pool                 | Include nodes in this resource pool                      | Dynamic | Grouping |
-| !pool                | Exclude nodes in this resource pool                      | Dynamic |          |
-| pod                  | Include pods matching this name                          | Dynamic | Grouping |
-| !pod                 | Exclude pods matching this name                          | Dynamic |          |
-| pod_type             | Include pods with this power type                        | Dynamic | Grouping |
-| !pod_type            | Exclude pods with this power type                        | Dynamic |          |
-| domain               | Include nodes in this domain                             | Dynamic | Grouping |
-| !domain              | Exclude nodes in this domain                             | Dynamic |          |
-| status               | Include nodes with this status                           |         | Grouping |
-| !status              | Exclude nodes with the specified status                  | Dynamic |          |
-| owner                | Include nodes owned by these users                       | Dynamic | Grouping |
-| !owner               | Exclude nodes owned by these users                       | Dynamic |          |
-| power_state          | Include nodes with this power state                      |         | Grouping |
-| !power_state         | Exclude nodes with this power state                      | Dynamic |          |
-| tags                 | Include nodes with this tag                              | Dynamic |          |
-| !tags                | Exclude nodes with this tag                              | Dynamic |          |
-| fabrics              | Include nodes attached to this fabric                    | Dynamic |          |
-| !fabrics             | Exclude nodes attached to this fabric                    | Dynamic |          |
-| fabric_classes       | Include nodes attached to this class of fabric           | Dynamic |          |
-| !fabric_classes      | Exclude nodes attached to this class of fabric           | Dynamic |          |
-| fabric_name          | Include nodes with this boot interface fabric            | Dynamic |          |
-| !fabric_name         | Exclude nodes with this boot interface fabric            | Dynamic |          |
-| subnets              | Attached to subnets                                      | Dynamic |          |
-| !subnets             | Not attached to subnets                                  | Dynamic |          |
-| link_speed           | Link speed                                               | Dynamic |          |
-| !link_speed          | Link speed                                               | Dynamic |          |
-| vlans                | Attached to VLANs                                        | Dynamic |          |
-| !vlans               | Not attached to VLANs                                    | Dynamic |          |
-| storage              | Storage                                                  | Dynamic |          |
-| total_storage        | Total storage                                            | Dynamic |          |
-| !total_storage       | Total storage                                            | Dynamic |          |
-| cpu_count            | CPU count                                                | Dynamic |          |
-| !cpu_count           | CPU count                                                | Dynamic |          |
-| mem                  | Memory                                                   | Dynamic |          |
-| !mem                 | Memory                                                   | Dynamic |          |
-| mac_address          | MAC addresses to filter on                               | Dynamic |          |
-| !mac_address         | MAC addresses to filter on                               | Dynamic |          |
-| agent_name           | Only include nodes with events matching the agent name   | Dynamic |          |
-| !agent_name          | Excludes nodes with events matching the agent name       | Dynamic |          |
-| cpu_speed            | CPU speed                                                | Dynamic |          |
-| !cpu_speed           | CPU speed                                                | Dynamic |          |
-| osystem              | The OS of the desired node                               | Dynamic |          |
-| !osystem             | OS to ignore                                             | Dynamic |          |
-| distro_series        | The OS distribution of the desired node                  | Dynamic |          |
-| !distro_series       | OS distribution to ignore                                | Dynamic |          |
-| ip_addresses         | Node's IP address                                        | Dynamic |          |
-| !ip_addresses        | IP address to ignore                                     | Dynamic |          |
-| spaces               | Node's spaces                                            | Dynamic |          |
-| !spaces              | Node's spaces                                            | Dynamic |          |
-| workloads            | Node's workload annotations                              | Dynamic |          |
-| !workloads           | Node's workload annotations                              | Dynamic |          |
-| physical_disk_count  | Physical disk Count                                      | Dynamic |          |
-| !physical_disk_count | Physical disk Count                                      | Dynamic |          |
-| pxe_mac              | Boot interface MAC address                               | Dynamic |          |
-| !pxe_mac             | Boot interface MAC address                               | Dynamic |          |
-| fqdn                 | Node FQDN                                                | Dynamic |          |
-| !fqdn                | Node FQDN                                                | Dynamic |          |
-| simple_status        | Only includes nodes with the specified simplified status | Dynamic |          |
-| !simple_status       | Exclude nodes with the specified simplified status       | Dynamic |          |
-| devices              | Devices                                                  | Dynamic |          |
-| interfaces           | Interfaces                                               | Dynamic |          |
-| parent               | Parent node                                              | Dynamic | Grouping |
+| **Parameter** example              | Shows nodes...                   | Dyn | Grp | Man |
+|------------------------------------|----------------------------------|-----|-----|-----|
+| **arch**:(=architecture)           | with "architecture"              |     | Grp |     |
+| arch:(!=architecture)              | NOT with "architecture"          | Dyn |     |     |
+| **zone**:(=zone-name)              | in "zone-name"                   | Dyn | Grp |     |
+| zone:(!=zone-name)                 | NOT in "zone-name"               | Dyn |     |     |
+| **pool**:(=resource-pool)          | in "resource-pool"               | Dyn | Grp |     |
+| pool:(!=resource-pool)             | NOT in "resource-pool"           | Dyn |     |     |
+| **pod**:(=pod-name)                | with "pod-name"                  | Dyn | Grp |     |
+| pod:(!=pod-name)                   | NOT with "pod-name"              | Dyn |     |     |
+| **pod_type**:(=pod-type)           | with power type "pod-type"       | Dyn | Grp | Man |
+| pod_type:(!=pod-type)              | NOT with power type "pod-type"   | Dyn |     | Man |
+| **domain**:(=domain-name)          | with "domain-name"               | Dyn | Grp | Man |
+| domain:(!=domain-name)             | NOT with "domain-name"           | Dyn |     | Man |
+| **status**:(=op-status)            | having "op-status"               |     | Grp |     |
+| status:(!=op-status)               | NOT having "op-status"           | Dyn |     |     |
+| **owner**:(=user)                  | owned by "user"                  | Dyn | Grp |     |
+| owner:(!=user)                     | NOT owned by "user"              | Dyn |     |     |
+| *power_state*:(=power-state)       | having "power-state"             |     | Grp | Man |
+| power_state:(!=power-state)        | NOT having "power-state"         | Dyn |     | Man |
+| *tags*:(=tag-name)                 | with tag "tag-name"              | Dyn |     |     |
+| tags:(!=tag-name)                  | NOT with tag "tag-name"          | Dyn |     |     |
+| *fabrics*:(=fabric-name)           | in "fabric-name"                 | Dyn |     |     |
+| fabrics:(!=fabric-name)            | NOT in "fabric-name"             | Dyn |     |     |
+| *fabric_classes*:(=fabric-class)   | in "fabric-class"                | Dyn |     | Man |
+| fabric_classes:(!=fabric-class)    | NOT in "fabric-class"            | Dyn |     | Man |
+| *fabric_name*:(=fabric-name)       | in "boot-interface-fabric"       | Dyn |     | Man |
+| fabric_name:(!=fabric-name)        | NOT in "boot-interface-fabric"   | Dyn |     | Man |
+| *subnets*:(=subnet-name)           | attached to "subnet-name"        | Dyn |     |     |
+| subnets:(!=subnet-name)            | Not attached to "subnet-name"    | Dyn |     |     |
+| *link_speed*:(link-speed)          | having "link-speed"              | Dyn |     | Man |
+| link_speed:(!link-speed)           | NOT having "link-speed"          | Dyn |     | Man |
+| *vlans*:(=vlan-name)               | attached to "vlan-name"          | Dyn |     |     |
+| vlans:(!=vlan-name)                | NOT attached to "vlan-name"      | Dyn |     |     |
+| *storage*:(storage-MB)             | having "storage-MB"              | Dyn |     | Man |
+| *total_storage*:(total-stg-MB)     | having "total-stg-MB"            | Dyn |     | Man |
+| total_storage:(!total-stg-MB)      | NOT having "total-stg-MB"        | Dyn |     | Man |
+| *cpu_count*:(cpu-count)            | having "cpu-count"               | Dyn |     | Man |
+| cpu_count:(!cpu-count)             | NOT having "cpu-count"           | Dyn |     | Man |
+| *mem*:(ram-in-MB)                  | having "ram-in-MB"               | Dyn |     | Man |
+| mem:(!ram-in-MB)                   | NOT having "ram-in-MB"           | Dyn |     | Man |
+| *mac_address*:(=MAC)               | having MAC address "MAC"         | Dyn |     | Man |
+| mac_address:(!=MAC)                | NOT having                       | Dyn |     | Man |
+| *agent_name*:(=agent-name)         | Include nodes with agent-name    | Dyn |     | Man |
+| agent_name:(!=agent-name)          | Exclude nodes with agent-name    | Dyn |     | Man |
+| *cpu_speed*:(cpu-speed-GHz)        | CPU speed                        | Dyn |     | Man |
+| cpu_speed:(!cpu-speed-GHz)         | CPU speed                        | Dyn |     | Man |
+| *osystem*:(=os-name)               | The OS of the desired node       | Dyn |     | Man |
+| osystem:(!=os-name)                | OS to ignore                     | Dyn |     | Man |
+| *distro_series*:(=distro-name)     | Include nodes using distro       | Dyn |     | Man |
+| distro_series:(!=distro-name)      | Exclude ndoes using distro       | Dyn |     | Man |
+| *ip_addresses*:(=ip-address)       | Node's IP address                | Dyn |     | Man |
+| ip_addresses:(!=ip-address)        | IP address to ignore             | Dyn |     | Man |
+| *spaces*:(=space-name)             | Node's spaces                    | Dyn |     |     |
+| spaces:(!=space-name)              | Node's spaces                    | Dyn |     |     |
+| *workloads*:(=annotation-text)     | Node's workload annotations      | Dyn |     |     |
+| workloads:(!=annotation-text)      | Node's workload annotations      | Dyn |     |     |
+| *physical_disk_count*:(disk-count) | Physical disk Count              | Dyn |     | Man |
+| physical_disk_count:(!disk-count)  | Physical disk Count              | Dyn |     | Man |
+| *pxe_mac*:(=PXE-MAC)               | Boot interface MAC address       | Dyn |     | Man |
+| pxe_mac:(!=PXE-MAC)                | Boot interface MAC address       | Dyn |     | Man |
+| *fqdn*:(=fqdn-value)               | Node FQDN                        | Dyn |     | Man |
+| fqdn:(!=fqdn-value)                | Node FQDN                        | Dyn |     | Man |
+| *simple_status*:(=status-val)      | Include nodes with simple-status | Dyn |     | Man |
+| simple_status:(!=status-val)       | Exclude nodes with simple-status | Dyn |     | Man |
+| *devices*:(=)                      | Devices                          | Dyn |     | Man |
+| *interfaces*:(=)                   | Interfaces                       | Dyn |     | Man |
+| *parent*:(=)                       | Parent node                      | Dyn | Grp | Man |
+|                                    |                                  |     |     | Man |
 
 <a href="#heading--22-04-support"><h2 id="heading--22-04-support">Native support for 22.04 LTS and core22</h2></a>
 

@@ -715,416 +715,491 @@ You can read the [MAAS Vault reference](maas-vault-reference.html) documentation
 <p><a href="#heading--More-filter-parameters-have-been-added"><h3 id="heading--More-filter-parameters-have-been-added">More filter parameters have been added</h3></a></p>
 <p>The following table describes the expanded filter set for the MAAS machine list:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>Items marked as &ldquo;Dynamic&rdquo; are populated based on existing data, that is, the &ldquo;Tags&rdquo; filter only shows tags that currently exist.  </li>
+<li>Items with an &ldquo;X&rdquo; under &ldquo;Dyn&rdquo; are populated based on existing data, that is, the &ldquo;Tags&rdquo; filter only shows tags that currently exist.  </li>
 <li>Items which are not dynamic present the entire range of possible values, regardless of whether that value currently exists in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.</li>
-<li>Items marked as &ldquo;Grouping&rdquo; can be used to group machines, instead of the default machine status.</li>
+<li>Items with an &ldquo;X&rdquo; under &ldquo;Grp&rdquo; can be used to group machines, instead of the default machine status.</li>
+<li>Items with an &ldquo;X&rdquo; under &ldquo;Man&rdquo; must be manually entered (i.e., they are not in the UI filter dropdown, but can be entered in the &ldquo;Search&rdquo; box.</li>
 </ul>
-<p>See <a href="how-to-search-maas.html">How to search MAAS</a> for details on how to use these parameters.</p>
+<p>See <a href="how-to-search-maas.html">How to search MAAS</a> for more details on how to use these parameters.</p>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Dynamic</th>
-<th>Grouping</th>
+<th><strong>Parameter</strong> example</th>
+<th>Shows nodes&hellip;</th>
+<th>Dyn</th>
+<th>Grp</th>
+<th>Man</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>arch</td>
-<td>Include nodes with this architecture</td>
+<td><strong>arch</strong>:(=architecture)</td>
+<td>with &ldquo;architecture&rdquo;</td>
 <td></td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!arch</td>
-<td>Exclude nodes with this architecture</td>
-<td>Dynamic</td>
+<td>Grp</td>
 <td></td>
 </tr>
 <tr>
-<td>zone</td>
-<td>Include nodes in this zone</td>
-<td>Dynamic</td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!zone</td>
-<td>Exclude nodes in this zone</td>
-<td>Dynamic</td>
+<td>arch:(!=architecture)</td>
+<td>NOT with &ldquo;architecture&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>pool</td>
-<td>Include nodes in this resource pool</td>
-<td>Dynamic</td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!pool</td>
-<td>Exclude nodes in this resource pool</td>
-<td>Dynamic</td>
+<td><strong>zone</strong>:(=zone-name)</td>
+<td>in &ldquo;zone-name&rdquo;</td>
+<td>Dyn</td>
+<td>Grp</td>
 <td></td>
 </tr>
 <tr>
-<td>pod</td>
-<td>Include pods matching this name</td>
-<td>Dynamic</td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!pod</td>
-<td>Exclude pods matching this name</td>
-<td>Dynamic</td>
+<td>zone:(!=zone-name)</td>
+<td>NOT in &ldquo;zone-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>pod_type</td>
-<td>Include pods with this power type</td>
-<td>Dynamic</td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!pod_type</td>
-<td>Exclude pods with this power type</td>
-<td>Dynamic</td>
+<td><strong>pool</strong>:(=resource-pool)</td>
+<td>in &ldquo;resource-pool&rdquo;</td>
+<td>Dyn</td>
+<td>Grp</td>
 <td></td>
 </tr>
 <tr>
-<td>domain</td>
-<td>Include nodes in this domain</td>
-<td>Dynamic</td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!domain</td>
-<td>Exclude nodes in this domain</td>
-<td>Dynamic</td>
+<td>pool:(!=resource-pool)</td>
+<td>NOT in &ldquo;resource-pool&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>status</td>
-<td>Include nodes with this status</td>
-<td></td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!status</td>
-<td>Exclude nodes with the specified status</td>
-<td>Dynamic</td>
+<td><strong>pod</strong>:(=pod-name)</td>
+<td>with &ldquo;pod-name&rdquo;</td>
+<td>Dyn</td>
+<td>Grp</td>
 <td></td>
 </tr>
 <tr>
-<td>owner</td>
-<td>Include nodes owned by these users</td>
-<td>Dynamic</td>
-<td>Grouping</td>
-</tr>
-<tr>
-<td>!owner</td>
-<td>Exclude nodes owned by these users</td>
-<td>Dynamic</td>
+<td>pod:(!=pod-name)</td>
+<td>NOT with &ldquo;pod-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>power_state</td>
-<td>Include nodes with this power state</td>
-<td></td>
-<td>Grouping</td>
+<td><strong>pod_type</strong>:(=pod-type)</td>
+<td>with power type &ldquo;pod-type&rdquo;</td>
+<td>Dyn</td>
+<td>Grp</td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!power_state</td>
-<td>Exclude nodes with this power state</td>
-<td>Dynamic</td>
+<td>pod_type:(!=pod-type)</td>
+<td>NOT with power type &ldquo;pod-type&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>tags</td>
-<td>Include nodes with this tag</td>
-<td>Dynamic</td>
-<td></td>
+<td><strong>domain</strong>:(=domain-name)</td>
+<td>with &ldquo;domain-name&rdquo;</td>
+<td>Dyn</td>
+<td>Grp</td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!tags</td>
-<td>Exclude nodes with this tag</td>
-<td>Dynamic</td>
+<td>domain:(!=domain-name)</td>
+<td>NOT with &ldquo;domain-name&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>fabrics</td>
-<td>Include nodes attached to this fabric</td>
-<td>Dynamic</td>
+<td><strong>status</strong>:(=op-status)</td>
+<td>having &ldquo;op-status&rdquo;</td>
 <td></td>
-</tr>
-<tr>
-<td>!fabrics</td>
-<td>Exclude nodes attached to this fabric</td>
-<td>Dynamic</td>
-<td></td>
-</tr>
-<tr>
-<td>fabric_classes</td>
-<td>Include nodes attached to this class of fabric</td>
-<td>Dynamic</td>
+<td>Grp</td>
 <td></td>
 </tr>
 <tr>
-<td>!fabric_classes</td>
-<td>Exclude nodes attached to this class of fabric</td>
-<td>Dynamic</td>
+<td>status:(!=op-status)</td>
+<td>NOT having &ldquo;op-status&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>fabric_name</td>
-<td>Include nodes with this boot interface fabric</td>
-<td>Dynamic</td>
+<td><strong>owner</strong>:(=user)</td>
+<td>owned by &ldquo;user&rdquo;</td>
+<td>Dyn</td>
+<td>Grp</td>
 <td></td>
 </tr>
 <tr>
-<td>!fabric_name</td>
-<td>Exclude nodes with this boot interface fabric</td>
-<td>Dynamic</td>
+<td>owner:(!=user)</td>
+<td>NOT owned by &ldquo;user&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>subnets</td>
-<td>Attached to subnets</td>
-<td>Dynamic</td>
+<td><em>power_state</em>:(=power-state)</td>
+<td>having &ldquo;power-state&rdquo;</td>
+<td></td>
+<td>Grp</td>
+<td>Man</td>
+</tr>
+<tr>
+<td>power_state:(!=power-state)</td>
+<td>NOT having &ldquo;power-state&rdquo;</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td><em>tags</em>:(=tag-name)</td>
+<td>with tag &ldquo;tag-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>!subnets</td>
-<td>Not attached to subnets</td>
-<td>Dynamic</td>
+<td>tags:(!=tag-name)</td>
+<td>NOT with tag &ldquo;tag-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>link_speed</td>
-<td>Link speed</td>
-<td>Dynamic</td>
+<td><em>fabrics</em>:(=fabric-name)</td>
+<td>in &ldquo;fabric-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>!link_speed</td>
-<td>Link speed</td>
-<td>Dynamic</td>
+<td>fabrics:(!=fabric-name)</td>
+<td>NOT in &ldquo;fabric-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>vlans</td>
-<td>Attached to VLANs</td>
-<td>Dynamic</td>
+<td><em>fabric_classes</em>:(=fabric-class)</td>
+<td>in &ldquo;fabric-class&rdquo;</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td>fabric_classes:(!=fabric-class)</td>
+<td>NOT in &ldquo;fabric-class&rdquo;</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td><em>fabric_name</em>:(=fabric-name)</td>
+<td>in &ldquo;boot-interface-fabric&rdquo;</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td>fabric_name:(!=fabric-name)</td>
+<td>NOT in &ldquo;boot-interface-fabric&rdquo;</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td><em>subnets</em>:(=subnet-name)</td>
+<td>attached to &ldquo;subnet-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>!vlans</td>
-<td>Not attached to VLANs</td>
-<td>Dynamic</td>
+<td>subnets:(!=subnet-name)</td>
+<td>Not attached to &ldquo;subnet-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>storage</td>
-<td>Storage</td>
-<td>Dynamic</td>
+<td><em>link_speed</em>:(link-speed)</td>
+<td>having &ldquo;link-speed&rdquo;</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td>link_speed:(!link-speed)</td>
+<td>NOT having &ldquo;link-speed&rdquo;</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td><em>vlans</em>:(=vlan-name)</td>
+<td>attached to &ldquo;vlan-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>total_storage</td>
-<td>Total storage</td>
-<td>Dynamic</td>
+<td>vlans:(!=vlan-name)</td>
+<td>NOT attached to &ldquo;vlan-name&rdquo;</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>!total_storage</td>
-<td>Total storage</td>
-<td>Dynamic</td>
+<td><em>storage</em>:(storage-MB)</td>
+<td>having &ldquo;storage-MB&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>cpu_count</td>
-<td>CPU count</td>
-<td>Dynamic</td>
+<td><em>total_storage</em>:(total-stg-MB)</td>
+<td>having &ldquo;total-stg-MB&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!cpu_count</td>
-<td>CPU count</td>
-<td>Dynamic</td>
+<td>total_storage:(!total-stg-MB)</td>
+<td>NOT having &ldquo;total-stg-MB&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>mem</td>
-<td>Memory</td>
-<td>Dynamic</td>
+<td><em>cpu_count</em>:(cpu-count)</td>
+<td>having &ldquo;cpu-count&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!mem</td>
-<td>Memory</td>
-<td>Dynamic</td>
+<td>cpu_count:(!cpu-count)</td>
+<td>NOT having &ldquo;cpu-count&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>mac_address</td>
-<td>MAC addresses to filter on</td>
-<td>Dynamic</td>
+<td><em>mem</em>:(ram-in-MB)</td>
+<td>having &ldquo;ram-in-MB&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!mac_address</td>
-<td>MAC addresses to filter on</td>
-<td>Dynamic</td>
+<td>mem:(!ram-in-MB)</td>
+<td>NOT having &ldquo;ram-in-MB&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>agent_name</td>
-<td>Only include nodes with events matching the agent name</td>
-<td>Dynamic</td>
+<td><em>mac_address</em>:(=MAC)</td>
+<td>having MAC address &ldquo;MAC&rdquo;</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!agent_name</td>
-<td>Excludes nodes with events matching the agent name</td>
-<td>Dynamic</td>
+<td>mac_address:(!=MAC)</td>
+<td>NOT having</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>cpu_speed</td>
+<td><em>agent_name</em>:(=agent-name)</td>
+<td>Include nodes with agent-name</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td>agent_name:(!=agent-name)</td>
+<td>Exclude nodes with agent-name</td>
+<td>Dyn</td>
+<td></td>
+<td>Man</td>
+</tr>
+<tr>
+<td><em>cpu_speed</em>:(cpu-speed-GHz)</td>
 <td>CPU speed</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!cpu_speed</td>
+<td>cpu_speed:(!cpu-speed-GHz)</td>
 <td>CPU speed</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>osystem</td>
+<td><em>osystem</em>:(=os-name)</td>
 <td>The OS of the desired node</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!osystem</td>
+<td>osystem:(!=os-name)</td>
 <td>OS to ignore</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>distro_series</td>
-<td>The OS distribution of the desired node</td>
-<td>Dynamic</td>
+<td><em>distro_series</em>:(=distro-name)</td>
+<td>Include nodes using distro</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!distro_series</td>
-<td>OS distribution to ignore</td>
-<td>Dynamic</td>
+<td>distro_series:(!=distro-name)</td>
+<td>Exclude ndoes using distro</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>ip_addresses</td>
+<td><em>ip_addresses</em>:(=ip-address)</td>
 <td>Node&rsquo;s IP address</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!ip_addresses</td>
+<td>ip_addresses:(!=ip-address)</td>
 <td>IP address to ignore</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>spaces</td>
+<td><em>spaces</em>:(=space-name)</td>
 <td>Node&rsquo;s spaces</td>
-<td>Dynamic</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>!spaces</td>
+<td>spaces:(!=space-name)</td>
 <td>Node&rsquo;s spaces</td>
-<td>Dynamic</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>workloads</td>
+<td><em>workloads</em>:(=annotation-text)</td>
 <td>Node&rsquo;s workload annotations</td>
-<td>Dynamic</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>!workloads</td>
+<td>workloads:(!=annotation-text)</td>
 <td>Node&rsquo;s workload annotations</td>
-<td>Dynamic</td>
+<td>Dyn</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>physical_disk_count</td>
+<td><em>physical_disk_count</em>:(disk-count)</td>
 <td>Physical disk Count</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!physical_disk_count</td>
+<td>physical_disk_count:(!disk-count)</td>
 <td>Physical disk Count</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>pxe_mac</td>
+<td><em>pxe_mac</em>:(=PXE-MAC)</td>
 <td>Boot interface MAC address</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!pxe_mac</td>
+<td>pxe_mac:(!=PXE-MAC)</td>
 <td>Boot interface MAC address</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>fqdn</td>
+<td><em>fqdn</em>:(=fqdn-value)</td>
 <td>Node FQDN</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!fqdn</td>
+<td>fqdn:(!=fqdn-value)</td>
 <td>Node FQDN</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>simple_status</td>
-<td>Only includes nodes with the specified simplified status</td>
-<td>Dynamic</td>
+<td><em>simple_status</em>:(=status-val)</td>
+<td>Include nodes with simple-status</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>!simple_status</td>
-<td>Exclude nodes with the specified simplified status</td>
-<td>Dynamic</td>
+<td>simple_status:(!=status-val)</td>
+<td>Exclude nodes with simple-status</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>devices</td>
+<td><em>devices</em>:(=)</td>
 <td>Devices</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>interfaces</td>
+<td><em>interfaces</em>:(=)</td>
 <td>Interfaces</td>
-<td>Dynamic</td>
+<td>Dyn</td>
 <td></td>
+<td>Man</td>
 </tr>
 <tr>
-<td>parent</td>
+<td><em>parent</em>:(=)</td>
 <td>Parent node</td>
-<td>Dynamic</td>
-<td>Grouping</td>
+<td>Dyn</td>
+<td>Grp</td>
+<td>Man</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Man</td>
 </tr>
 </tbody>
 </table>
