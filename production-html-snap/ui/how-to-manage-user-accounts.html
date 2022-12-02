@@ -438,7 +438,16 @@
 <li><a href="#heading--api-key">How to add an API key for a user</a></li>
 <li><a href="#heading--change-password">How users can change their password</a></li>
 </ul>
+<p>You can manage user accounts from the &lsquo;Users&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
+<p><a href="../images/76402e4b-manage-user-accounts__2.4_current-users.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/76402e4b-manage-user-accounts__2.4_current-users.png"></a></p>
+<p><strong>NOTE:</strong> 
+A currently logged in user cannot delete themselves from the web UI.</p>
 <p><a href="#heading--add-a-user"><h2 id="heading--add-a-user">How to add a user</h2></a></p>
+<p>Clicking the &lsquo;Add user&rsquo; button will result in a form to be displayed:</p>
+<p><a href="../images/1c59c2c5-manage-user-accounts__2.4_add-user.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/1c59c2c5-manage-user-accounts__2.4_add-user.png"></a></p>
+<p>Fill in the fields and hit &lsquo;Add user&rsquo; when done.</p>
+<p><a href="#heading--user-preferences"><h2 id="heading--user-preferences">How to change a user&rsquo;s preferences</h2></a></p>
+<p>Clicking the MAAS username in the top right corner will show that user&rsquo;s preferences.</p>
 <p><a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">How to add an SSH key for a user</h3></a></p>
 <p>Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See <a href="https://www.ssh.com/ssh/public-key-authentication">Public key authentication</a> (ssh.com) if you&rsquo;re not familiar with SSH keys.</p>
 <p>Assuming a public key exists in <code>/home/ubuntu/.ssh/id_rsa.pub</code> - add a key with the following command:</p>
@@ -447,7 +456,16 @@ Success.
 </code></pre>
 <p><strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI.</p>
+<p>To add a locally-generated public key, select &lsquo;Upload&rsquo; from the &lsquo;Source&rsquo; menu and paste the complete contents of your key file, usually called <code>id_rsa.pub</code>, into the &lsquo;Public key&rsquo; field. Click &lsquo;Import&rsquo; to add the key to MAAS.</p>
+<p>Public keys residing on either <a href="https://help.launchpad.net/YourAccount">Launchpad</a> or <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">GitHub</a> can also be added. Select either from the &lsquo;Source&rsquo; menu and specify the user ID associated with the key(s). Press the &lsquo;Import&rsquo; button to add any keys MAAS discovers to the current user&rsquo;s MAAS account.</p>
+<p><a href="../images/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a></p>
+<p><a href="#heading--api-key"><h3 id="heading--api-key">How to add an API key for a user</h3></a></p>
+<p>The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the <a href="how-to-use-the-maas-cli.html">MAAS CLI</a>.  Other services connecting to MAAS such as Juju will also need this key.</p>
 <p><a href="#heading--change-password"><h3 id="heading--change-password">How users can change their password</h3></a></p>
+<p>The current user can change their password at the bottom of the page by entering the old password and entering the new password twice. Click &lsquo;Save password&rsquo; to finish.</p>
+<p><a href="../images/289ef578-manage-user-accounts__2.4_change-user-password.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/289ef578-manage-user-accounts__2.4_change-user-password.png"></a></p>
+<p><strong>NOTE:</strong> 
+An administrator can change any user&rsquo;s password from within the &lsquo;Users&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
     </div>
   </body>
 </html>

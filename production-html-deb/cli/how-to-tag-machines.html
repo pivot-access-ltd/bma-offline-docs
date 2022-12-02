@@ -436,6 +436,119 @@
 </ol>
 <p>In general, names that do not conform to these rules cannot be created.</p>
 <p><a href="#heading--automatic-tags"><h2 id="heading--automatic-tags">About automatic tags</h2></a></p>
+<p><a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How to create a tag</h2></a></p>
+<p>With the CLI, you can create a tag with the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tags create name=$TAG_NAME comment='$TAG_COMMENT'
+</code></pre>
+<p>For example, depending upon your system configuration, you might type a command similar to this one:</p>
+<pre><code class="language-nohighlight">maas admin tags create name=&quot;new_tag&quot; comment=&quot;a new tag for test purposes&quot;
+</code></pre>
+<p>When the command is successful, you should see output similar to this:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;name&quot;: &quot;new_tag&quot;,
+    &quot;definition&quot;: &quot;&quot;,
+    &quot;comment&quot;: &quot;a new tag for test purposes&quot;,
+    &quot;kernel_opts&quot;: &quot;&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/tags/new_tag/&quot;
+}
+</code></pre>
+<p>You can verify your work by <a href="#heading--list-all-tags-available-on-this-maas">listing all the tags on this MAAS</a>.</p>
+<p><a href="#heading--create-tags-with-built-in-kernel-options"><h2 id="heading--create-tags-with-built-in-kernel-options">How to create tags with built-in kernel options</h2></a></p>
+<p>You can create tags with embedded kernel boot options.  When you apply such tags to a machine, those kernel boot options will be applied to that machine on the next deployment.</p>
+<p>To create a tag with embedded kernel boot options, use the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tags create name='$TAG_NAME' \
+    comment='$TAG_COMMENT' kernel_opts='$KERNEL_OPTIONS'
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin tags create name='nomodeset_tag' \
+    comment='nomodeset_kernel_option' kernel_opts='nomodeset vga'
+</code></pre>
+<p>This command yields the following results:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;name&quot;: &quot;nomodeset_tag&quot;,
+    &quot;definition&quot;: &quot;&quot;,
+    &quot;comment&quot;: &quot;nomodeset_kernel_option&quot;,
+    &quot;kernel_opts&quot;: &quot;nomodeset vga&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/tags/nomodeset_tag/&quot;
+}
+</code></pre>
+<p>You can check your work with a modified form of the listing command:</p>
+<pre><code class="language-nohighlight">maas admin tags read | jq -r \
+'([&quot;tag_name&quot;,&quot;tag_comment&quot;,&quot;kernel_options&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.name,.comment,.kernel_opts]) 
+| @tsv' | column -t
+</code></pre>
+<p>This should give you results something like this:</p>
+<pre><code class="language-nohighlight">tag_name             tag_comment                  kernel_options                     
+--------             -----------                  --------------                     
+virtual                                                                              
+new_tag              a-new-tag-for-test-purposes                                     
+pod-console-logging  console=tty1                 console=ttyS0                      
+nomodeset_tag        nomodeset_kernel_option      nomodeset       vga
+</code></pre>
+<p><a href="#heading--delete-a-tag"><h2 id="heading--delete-a-tag">How to delete a tag</h2></a></p>
+<p>With the CLI, you can delete a tag with the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tag delete $TAG_NAME
+</code></pre>
+<p>For example, depending upon your system configuration, you might type a command similar to this one:</p>
+<pre><code class="language-nohighlight">maas admin tag delete how-to-tag-machines.htmlo
+</code></pre>
+<p>When the command is successful, you should see output similar to this:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+</code></pre>
+<p>Note that there is no actual &ldquo;Machine-readable output&rdquo; produced by this command, in most cases. Also note that remove a tag removes it from any nodes where you may have assigned it, but does not affect those nodes in any other way.</p>
+<p>You can check your work by <a href="#heading--list-all-tags-available-on-this-maas">listing all the tags on this MAAS</a>.</p>
+<p><a href="#heading--update-a-tag"><h2 id="heading--update-a-tag">How to update a tag</h2></a></p>
+<p>You can update a tag (e.g., a tag comment) like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tag update $TAG_NAME comment='$TAG_COMMENT'
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin tag update new_tag comment=&quot;a-new-tag-for-test-purposes&quot;
+</code></pre>
+<p>This should return an output similar to this one:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;name&quot;: &quot;new_tag&quot;,
+    &quot;definition&quot;: &quot;&quot;,
+    &quot;comment&quot;: &quot;a-new-tag-for-test-purposes&quot;,
+    &quot;kernel_opts&quot;: &quot;&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/tags/new_tag/&quot;
+}
+</code></pre>
+<p>You can always verify by <a href="#heading--list-all-tags-available-on-this-maas">listing all the tags on this MAAS</a>.</p>
+<p><a href="#heading--list-all-tags-available-on-this-maas"><h2 id="heading--list-all-tags-available-on-this-maas">How to list all tags available on this MAAS</h2></a></p>
+<p>You can list all tags that currently exist in this MAAS with a command of the form:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tags read | jq -r '([&quot;tag_name&quot;,&quot;tag_comment&quot;]|(.,map(length*&quot;-&quot;))),(.[]|[.name,.comment]) | @tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin tags read | jq -r '([&quot;tag_name&quot;,&quot;tag_comment&quot;]|(.,map(length*&quot;-&quot;))),(.[]|[.name,.comment]) | @tsv' | column -t
+</code></pre>
+<p>Your output might look like this:</p>
+<pre><code class="language-nohighlight">tag_name  tag_comment
+--------  -----------
+virtual   
+new_tag   a-new-tag-for-test-purposes
+</code></pre>
+<p><a href="#heading--rebuild-a-tag"><h2 id="heading--rebuild-a-tag">How to rebuild a tag</h2></a></p>
+<p>If you need to update tags for all machines – without having to recommission them – you can accomplish this with the rebuild command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tag rebuild $TAG
+</code></pre>
+<p>This command automatically applies the tag to all machines regardless of state, even machines that are actively deployed. For example:</p>
+<pre><code class="language-nohighlight">maas admin tag rebuild virtual
+</code></pre>
+<p>This command would produce output similar to the following:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;rebuilding&quot;: &quot;virtual&quot;
+}
+</code></pre>
     </div>
   </body>
 </html>

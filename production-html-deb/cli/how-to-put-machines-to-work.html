@@ -445,15 +445,440 @@
 # tags: noauto
 </code></pre>
 <p>If you do not specify <code>noauto</code>, your custom commissioning scripts will run every time commissioning is attempted.</p>
+<p>To commission a machine that&rsquo;s in the &ldquo;Ready&rdquo; state, via the CLI, use the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine commission $SYSTEM_ID
+</code></pre>
+<p><details><summary>Typical JSON output (long listing)</summary></p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;storage_test_status_name&quot;: &quot;Pending&quot;,
+    &quot;bcaches&quot;: [],
+    &quot;cpu_count&quot;: 1,
+    &quot;interface_set&quot;: [
+        {
+            &quot;params&quot;: &quot;&quot;,
+            &quot;numa_node&quot;: 0,
+            &quot;tags&quot;: [],
+            &quot;id&quot;: 10,
+            &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+            &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+            &quot;children&quot;: [],
+            &quot;effective_mtu&quot;: 1500,
+            &quot;discovered&quot;: [],
+            &quot;links&quot;: [],
+            &quot;link_speed&quot;: 0,
+            &quot;link_connected&quot;: true,
+            &quot;system_id&quot;: &quot;bhxws3&quot;,
+            &quot;enabled&quot;: true,
+            &quot;interface_speed&quot;: 0,
+            &quot;firmware_version&quot;: null,
+            &quot;name&quot;: &quot;ens3&quot;,
+            &quot;sriov_max_vf&quot;: 0,
+            &quot;product&quot;: null,
+            &quot;vlan&quot;: {
+                &quot;vid&quot;: 0,
+                &quot;mtu&quot;: 1500,
+                &quot;dhcp_on&quot;: true,
+                &quot;external_dhcp&quot;: null,
+                &quot;relay_vlan&quot;: null,
+                &quot;fabric&quot;: &quot;fabric-2&quot;,
+                &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+                &quot;name&quot;: &quot;untagged&quot;,
+                &quot;id&quot;: 5003,
+                &quot;space&quot;: &quot;undefined&quot;,
+                &quot;secondary_rack&quot;: null,
+                &quot;fabric_id&quot;: 2,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;parents&quot;: [],
+            &quot;type&quot;: &quot;physical&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+        }
+    ],
+    &quot;network_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;numanode_set&quot;: [
+        {
+            &quot;index&quot;: 0,
+            &quot;memory&quot;: 985,
+            &quot;cores&quot;: [
+                0
+            ]
+        }
+    ],
+    &quot;locked&quot;: false,
+    &quot;hardware_uuid&quot;: &quot;F677A842-571C-4E65-ADC9-11E2CF92D363&quot;,
+    &quot;default_gateways&quot;: {
+        &quot;ipv4&quot;: {
+            &quot;gateway_ip&quot;: null,
+            &quot;link_id&quot;: null
+        },
+        &quot;ipv6&quot;: {
+            &quot;gateway_ip&quot;: null,
+            &quot;link_id&quot;: null
+        }
+    },
+    &quot;status_action&quot;: &quot;&quot;,
+    &quot;status_message&quot;: &quot;Commissioning&quot;,
+    &quot;cpu_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;memory_test_status&quot;: -1,
+    &quot;virtualblockdevice_set&quot;: [],
+    &quot;pool&quot;: {
+        &quot;name&quot;: &quot;default&quot;,
+        &quot;description&quot;: &quot;Default pool&quot;,
+        &quot;id&quot;: 0,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/resourcepool/0/&quot;
+    },
+    &quot;current_testing_result_id&quot;: 9,
+    &quot;current_installation_result_id&quot;: null,
+    &quot;netboot&quot;: true,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;special_filesystems&quot;: [],
+    &quot;testing_status&quot;: 0,
+    &quot;memory&quot;: 1024,
+    &quot;current_commissioning_result_id&quot;: 8,
+    &quot;storage&quot;: 5368.70912,
+    &quot;commissioning_status&quot;: 0,
+    &quot;cpu_test_status&quot;: -1,
+    &quot;tag_names&quot;: [
+        &quot;virtual&quot;
+    ],
+    &quot;memory_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;swap_size&quot;: null,
+    &quot;status_name&quot;: &quot;Commissioning&quot;,
+    &quot;other_test_status&quot;: -1,
+    &quot;pod&quot;: null,
+    &quot;storage_test_status&quot;: 0,
+    &quot;blockdevice_set&quot;: [
+        {
+            &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+            &quot;size&quot;: 5368709120,
+            &quot;block_size&quot;: 512,
+            &quot;tags&quot;: [
+                &quot;ssd&quot;
+            ],
+            &quot;serial&quot;: &quot;QM00001&quot;,
+            &quot;uuid&quot;: null,
+            &quot;numa_node&quot;: 0,
+            &quot;available_size&quot;: 5368709120,
+            &quot;id&quot;: 3,
+            &quot;partition_table_type&quot;: null,
+            &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+            &quot;storage_pool&quot;: null,
+            &quot;used_for&quot;: &quot;Unused&quot;,
+            &quot;filesystem&quot;: null,
+            &quot;system_id&quot;: &quot;bhxws3&quot;,
+            &quot;used_size&quot;: 0,
+            &quot;partitions&quot;: [],
+            &quot;name&quot;: &quot;sda&quot;,
+            &quot;type&quot;: &quot;physical&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+        }
+    ],
+    &quot;other_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;distro_series&quot;: &quot;&quot;,
+    &quot;testing_status_name&quot;: &quot;Pending&quot;,
+    &quot;ip_addresses&quot;: [],
+    &quot;address_ttl&quot;: null,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;physicalblockdevice_set&quot;: [
+        {
+            &quot;firmware_version&quot;: &quot;2.5+&quot;,
+            &quot;serial&quot;: &quot;QM00001&quot;,
+            &quot;uuid&quot;: null,
+            &quot;numa_node&quot;: 0,
+            &quot;available_size&quot;: 5368709120,
+            &quot;size&quot;: 5368709120,
+            &quot;tags&quot;: [
+                &quot;ssd&quot;
+            ],
+            &quot;id&quot;: 3,
+            &quot;partition_table_type&quot;: null,
+            &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+            &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+            &quot;storage_pool&quot;: null,
+            &quot;used_for&quot;: &quot;Unused&quot;,
+            &quot;filesystem&quot;: null,
+            &quot;system_id&quot;: &quot;bhxws3&quot;,
+            &quot;used_size&quot;: 0,
+            &quot;partitions&quot;: [],
+            &quot;name&quot;: &quot;sda&quot;,
+            &quot;block_size&quot;: 512,
+            &quot;type&quot;: &quot;physical&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+        }
+    ],
+    &quot;fqdn&quot;: &quot;ace-swan.maas&quot;,
+    &quot;osystem&quot;: &quot;&quot;,
+    &quot;domain&quot;: {
+        &quot;authoritative&quot;: true,
+        &quot;ttl&quot;: null,
+        &quot;resource_record_count&quot;: 0,
+        &quot;name&quot;: &quot;maas&quot;,
+        &quot;id&quot;: 0,
+        &quot;is_default&quot;: true,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/domains/0/&quot;
+    },
+    &quot;boot_interface&quot;: {
+        &quot;params&quot;: &quot;&quot;,
+        &quot;numa_node&quot;: 0,
+        &quot;tags&quot;: [],
+        &quot;id&quot;: 10,
+        &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+        &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+        &quot;children&quot;: [],
+        &quot;effective_mtu&quot;: 1500,
+        &quot;discovered&quot;: [],
+        &quot;links&quot;: [],
+        &quot;link_speed&quot;: 0,
+        &quot;link_connected&quot;: true,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;enabled&quot;: true,
+        &quot;interface_speed&quot;: 0,
+        &quot;firmware_version&quot;: null,
+        &quot;name&quot;: &quot;ens3&quot;,
+        &quot;sriov_max_vf&quot;: 0,
+        &quot;product&quot;: null,
+        &quot;vlan&quot;: {
+            &quot;vid&quot;: 0,
+            &quot;mtu&quot;: 1500,
+            &quot;dhcp_on&quot;: true,
+            &quot;external_dhcp&quot;: null,
+            &quot;relay_vlan&quot;: null,
+            &quot;fabric&quot;: &quot;fabric-2&quot;,
+            &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+            &quot;name&quot;: &quot;untagged&quot;,
+            &quot;id&quot;: 5003,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;secondary_rack&quot;: null,
+            &quot;fabric_id&quot;: 2,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+        },
+        &quot;parents&quot;: [],
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    },
+    &quot;hostname&quot;: &quot;ace-swan&quot;,
+    &quot;network_test_status&quot;: -1,
+    &quot;min_hwe_kernel&quot;: &quot;&quot;,
+    &quot;power_state&quot;: &quot;off&quot;,
+    &quot;interface_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;owner_data&quot;: {},
+    &quot;volume_groups&quot;: [],
+    &quot;power_type&quot;: &quot;virsh&quot;,
+    &quot;node_type&quot;: 0,
+    &quot;owner&quot;: &quot;admin&quot;,
+    &quot;cache_sets&quot;: [],
+    &quot;architecture&quot;: &quot;amd64/generic&quot;,
+    &quot;hwe_kernel&quot;: null,
+    &quot;zone&quot;: {
+        &quot;name&quot;: &quot;default&quot;,
+        &quot;description&quot;: &quot;&quot;,
+        &quot;id&quot;: 1,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/zones/default/&quot;
+    },
+    &quot;disable_ipv4&quot;: false,
+    &quot;boot_disk&quot;: {
+        &quot;firmware_version&quot;: &quot;2.5+&quot;,
+        &quot;serial&quot;: &quot;QM00001&quot;,
+        &quot;uuid&quot;: null,
+        &quot;numa_node&quot;: 0,
+        &quot;available_size&quot;: 5368709120,
+        &quot;size&quot;: 5368709120,
+        &quot;tags&quot;: [
+            &quot;ssd&quot;
+        ],
+        &quot;id&quot;: 3,
+        &quot;partition_table_type&quot;: null,
+        &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+        &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+        &quot;storage_pool&quot;: null,
+        &quot;used_for&quot;: &quot;Unused&quot;,
+        &quot;filesystem&quot;: null,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;used_size&quot;: 0,
+        &quot;partitions&quot;: [],
+        &quot;name&quot;: &quot;sda&quot;,
+        &quot;block_size&quot;: 512,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    },
+    &quot;status&quot;: 1,
+    &quot;iscsiblockdevice_set&quot;: [],
+    &quot;raids&quot;: [],
+    &quot;node_type_name&quot;: &quot;Machine&quot;,
+    &quot;hardware_info&quot;: {
+        &quot;system_vendor&quot;: &quot;QEMU&quot;,
+        &quot;system_product&quot;: &quot;Standard PC (i440FX + PIIX, 1996)&quot;,
+        &quot;system_family&quot;: &quot;Unknown&quot;,
+        &quot;system_version&quot;: &quot;pc-i440fx-focal&quot;,
+        &quot;system_sku&quot;: &quot;Unknown&quot;,
+        &quot;system_serial&quot;: &quot;Unknown&quot;,
+        &quot;cpu_model&quot;: &quot;Intel Core Processor (Skylake, IBRS)&quot;,
+        &quot;mainboard_vendor&quot;: &quot;Unknown&quot;,
+        &quot;mainboard_product&quot;: &quot;Unknown&quot;,
+        &quot;mainboard_serial&quot;: &quot;Unknown&quot;,
+        &quot;mainboard_version&quot;: &quot;Unknown&quot;,
+        &quot;mainboard_firmware_vendor&quot;: &quot;SeaBIOS&quot;,
+        &quot;mainboard_firmware_date&quot;: &quot;04/01/2014&quot;,
+        &quot;mainboard_firmware_version&quot;: &quot;1.13.0-1ubuntu1&quot;,
+        &quot;chassis_vendor&quot;: &quot;QEMU&quot;,
+        &quot;chassis_type&quot;: &quot;Other&quot;,
+        &quot;chassis_serial&quot;: &quot;Unknown&quot;,
+        &quot;chassis_version&quot;: &quot;pc-i440fx-focal&quot;
+    },
+    &quot;commissioning_status_name&quot;: &quot;Pending&quot;,
+    &quot;bios_boot_method&quot;: &quot;pxe&quot;,
+    &quot;interface_test_status&quot;: -1,
+    &quot;cpu_speed&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/machines/bhxws3/&quot;
+}
+</code></pre>
+<p></details></p>
+<p>If you need to find the machine&rsquo;s $SYSTEM_ID, you can use a command like this one:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machines read | jq '.[] | .hostname, .system_id'
+&quot;ace-swan&quot;
+&quot;bhxws3&quot;
+</code></pre>
 <p>Once commissioned, you may consider adding a tag to this machine.  The next step is testing and deployment.</p>
 <p><a href="#heading--how-to-test-machines"><h2 id="heading--how-to-test-machines">How to test machines</h2></a></p>
 <p>This section explains:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-locate-script-files">How to locate script files</a></li>
+<li><a href="#heading--how-to-locate-log-files">How to locate log files</a></li>
+<li><a href="#heading--how-to-run-all-scripts-manually">How to run all scripts manually</a></li>
+<li><a href="#heading--apply-a-hardware-test">How to apply a hardware test</a></li>
+<li><a href="#heading--network-link-testing">How to test network links</a></li>
+<li><a href="#heading--slow-link-detection">How to detect slow network links</a></li>
+<li><a href="#heading--network-validation-scripts-and-testing">How to configure network validation and testing scripts</a></li>
+<li><a href="#heading--customisable-network-testing">How to customise network testing</a></li>
+<li><a href="#heading--how-to-download-built-in-scripts">How to download built-in scripts</a></li>
+<li><a href="#heading--how-to-upload-hardware-testing-scripts">How to upload hardware testing scripts</a></li>
+<li><a href="#heading--how-to-list-all-uploaded-hardware-testing-scripts">How to list all uploaded hardware testing scripts</a></li>
+<li><a href="#heading--how-to-update-hardware-testing-scripts">How to update hardware testing scripts</a></li>
+<li><a href="#heading--how-to-revert-hardware-testing-scripts">How to revert hardware testing scripts</a></li>
+<li><a href="#heading--how-to-download-a-script">How to download a script</a></li>
+<li><a href="#heading--how-to-delete-a-script">How to delete a script</a></li>
+<li><a href="#heading--how-to-view-script-results">How to view script results</a></li>
+<li><a href="#heading--how-to-filter-script-results">How to filter script results</a></li>
+<li><a href="#heading--how-to-suppress-failed-results">How to suppress failed results</a></li>
+<li><a href="#heading--upload-test-scripts">How to upload hardware test scripts</a></li>
+<li><a href="#heading--tags-group-scripts">How to use tags to group commissioning and testing scripts</a></li>
+<li><a href="#heading--results">How to view testing results</a></li>
+<li><a href="#heading--network-link-testing">How to test network links</a></li>
+<li><a href="#heading--slow-link-detection">How to detect slow network links</a></li>
+<li><a href="#heading--network-validation-scripts-and-testing">How to configure network validation and testing scripts</a></li>
+<li><a href="#heading--customisable-network-testing">How to customise network testing</a></li>
+</ul>
 <p>You can also refer to technical details and examples for <a href="commissioning-scripts-reference.html">commissioning scripts</a> and <a href="hardware-test-scripts-reference.html">testing scripts</a> as needed.</p>
 <p><a href="#heading--how-to-download-built-in-scripts"><h3 id="heading--how-to-download-built-in-scripts">How to download built-in scripts</h3></a></p>
 <p>You can download the source for all commissioning and test scripts via the API with the following command:</p>
 <pre><code class="language-nohighlight">maas $PROFILE node-script download $SCRIPT_NAME
 </code></pre>
 <p>The source code to all built-in scripts is available on <a href="https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts">launchpad</a>.</p>
+<p><a href="#heading--how-to-upload-hardware-testing-scripts"><h3 id="heading--how-to-upload-hardware-testing-scripts">How to upload hardware testing scripts</h3></a></p>
+<p>To upload a hardware testing script to MAAS, enter the following:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-scripts create name=$SCRIPT_NAME name&gt; \
+ script=$PATH_TO_SCRIPT type=testing
+</code></pre>
+<p>Changing the type to commissioning adds the test script to the commissioning process.</p>
+<p><a href="#heading--how-to-list-all-uploaded-hardware-testing-scripts"><h3 id="heading--how-to-list-all-uploaded-hardware-testing-scripts">How to list all uploaded hardware testing scripts</h3></a></p>
+<p>You can list all uploaded scripts with the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-scripts read type=testing filters=$TAG
+</code></pre>
+<p>The optional filters argument lets you search for tags assigned to a script, such as using <code>TAG=cpu</code> with the above example.</p>
+<p><a href="#heading--how-to-update-hardware-testing-scripts"><h3 id="heading--how-to-update-hardware-testing-scripts">How to update hardware testing scripts</h3></a></p>
+<p>A script&rsquo;s metadata, and even the script itself, can be updated from the command line:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script update \
+ $SCRIPT_NAME script=$PATH_TO_SCRIPT comment=$COMMENT
+</code></pre>
+<p>The JSON formatted output to the above command will include &lsquo;history&rsquo; dictionary entries, detailing script modification times and associated comments:</p>
+<pre><code class="language-nohighlight">&quot;history&quot;: [
+    {
+        &quot;id&quot;: 40,
+        &quot;created&quot;: &quot;Tue, 12 Sep 2017 12:12:08 -0000&quot;,
+        &quot;comment&quot;: &quot;Updated version&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;created&quot;: &quot;Fri, 08 Sep 2017 17:07:46 -0000&quot;,
+        &quot;comment&quot;: null
+    }
+]
+</code></pre>
+<p><a href="#heading--how-to-revert-hardware-testing-scripts"><h3 id="heading--how-to-revert-hardware-testing-scripts">How to revert hardware testing scripts</h3></a></p>
+<p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version, using the <code>id</code> of the desired version:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
+</code></pre>
+<p><strong>NOTE:</strong> 
+The history for later modifications will be lost when reverting to an earlier version of the script.</p>
+<p><a href="#heading--how-to-download-a-script"><h3 id="heading--how-to-download-a-script">How to download a script</h3></a></p>
+<p>To download a script, enter the following:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script download $SCRIPT_NAME &gt; $LOCAL_FILENAME
+</code></pre>
+<p><a href="#heading--how-to-delete-a-script"><h3 id="heading--how-to-delete-a-script">How to delete a script</h3></a></p>
+<p>To delete a script, use <code>delete</code>:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script delete $SCRIPT_NAME
+</code></pre>
+<p><a href="#heading--how-to-view-script-results"><h3 id="heading--how-to-view-script-results">How to view script results</h3></a></p>
+<p>The command line allows you to not only view the current script&rsquo;s progress but also retrieve the verbatim output from any previous runs too.</p>
+<p>If you only want to see the latest or currently-running result, you can use <code>current-commissioning</code>, <code>current-testing</code>, or <code>current-installation</code> instead of an id:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
+</code></pre>
+<p><a href="#heading--how-to-filter-script-results"><h4 id="heading--how-to-filter-script-results">How to filter script results</h4></a></p>
+<p>You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-results read \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
+</code></pre>
+<p><a href="#heading--how-to-suppress-failed-results"><h3 id="heading--how-to-suppress-failed-results">How to suppress failed results</h3></a></p>
+<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-results update \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
+</code></pre>
+<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+<pre><code class="language-nohighlight">&quot;results&quot;: [
+    {
+        &quot;id&quot;: 21,
+        &quot;created&quot;: &quot;Tue, 02 Apr 2019 17:00:36 -0000&quot;,
+        &quot;updated&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;name&quot;: &quot;smartctl-validate&quot;,
+        &quot;status&quot;: 5,
+        &quot;status_name&quot;: &quot;Aborted&quot;,
+        &quot;exit_status&quot;: null,
+        &quot;started&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;ended&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;runtime&quot;: &quot;0:00:00&quot;,
+        &quot;starttime&quot;: 1554238601.765214,
+        &quot;endtime&quot;: 1554238601.765214,
+        &quot;estimated_runtime&quot;: &quot;0:00:00&quot;,
+        &quot;parameters&quot;: {
+            &quot;storage&quot;: {
+                &quot;argument_format&quot;: &quot;{path}&quot;,
+                &quot;type&quot;: &quot;storage&quot;,
+                &quot;value&quot;: {
+                    &quot;id_path&quot;: &quot;/dev/vda&quot;,
+                    &quot;model&quot;: &quot;&quot;,
+                    &quot;name&quot;: &quot;sda&quot;,
+                    &quot;physical_blockdevice_id&quot;: 1,
+                    &quot;serial&quot;: &quot;&quot;
+                }
+            }
+        },
+        &quot;script_id&quot;: 1,
+        &quot;script_revision_id&quot;: null,
+        &quot;suppressed&quot;: true
+    }
+]
+</code></pre>
+<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
+ filetype=tar.xz &gt; $LOCAL_FILENAME
+</code></pre>
+<p><strong>NOTE:</strong> 
+<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
 <p><a href="#heading--how-to-locate-script-files"><h3 id="heading--how-to-locate-script-files">How to locate script files</h3></a></p>
 <p>Commissioning and testing script files may be found in the following directories:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -485,10 +910,138 @@
 <p>Here, all the scripts are run again after downloading from MAAS, but no output data is sent to MAAS:</p>
 <pre><code class="language-nohighlight">/tmp/user_data.sh.*/bin/maas-run-remote-scripts --no-send /tmp/user_data.sh.*
 </code></pre>
+<p><a href="#heading--upload-test-scripts"><h3 id="heading--upload-test-scripts">How to upload hardware test scripts</h3></a></p>
+<p>To upload a hardware testing script to MAAS, enter the following:</p>
+<pre><code class="language-bash">maas $PROFILE node-scripts create name=$SCRIPT_NAME name&gt; \
+ script=$PATH_TO_SCRIPT type=testing
+</code></pre>
+<p>Changing the type to commissioning adds the test script to the commissioning process.</p>
+<p>You can list all uploaded scripts with the following command:</p>
+<pre><code class="language-bash">maas $PROFILE node-scripts read type=testing filters=$TAG
+</code></pre>
+<p>The optional filters argument lets you search for tags assigned to a script, such as using <code>TAG=cpu</code> with the above example.</p>
+<p>A script&rsquo;s metadata, and even the script itself, can be updated from the command line:</p>
+<pre><code class="language-bash">maas $PROFILE node-script update \
+ $SCRIPT_NAME script=$PATH_TO_SCRIPT comment=$COMMENT
+</code></pre>
+<p>The JSON formatted output to the above command will include &lsquo;history&rsquo; dictionary entries, detailing script modification times and associated comments:</p>
+<pre><code class="language-json">&quot;history&quot;: [
+    {
+        &quot;id&quot;: 40,
+        &quot;created&quot;: &quot;Tue, 12 Sep 2017 12:12:08 -0000&quot;,
+        &quot;comment&quot;: &quot;Updated version&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;created&quot;: &quot;Fri, 08 Sep 2017 17:07:46 -0000&quot;,
+        &quot;comment&quot;: null
+    }
+]
+</code></pre>
+<p>MAAS keeps a history of all uploaded script versions, allowing you to easily revert to a previous version using the <code>id</code> of the version you wish to revert to:</p>
+<pre><code class="language-bash">maas $PROFILE node-script revert $SCRIPT_NAME to=$VERSION_ID
+</code></pre>
+<p><strong>NOTE:</strong> 
+The history for later modifications will be lost when reverting to an earlier version of the script.</p>
+<p>To download a script, enter the following:</p>
+<pre><code class="language-bash">maas $PROFILE node-script download $SCRIPT_NAME &gt; $LOCAL_FILENAME
+</code></pre>
+<p>To delete a script, use <code>delete</code>:</p>
+<pre><code class="language-bash">maas $PROFILE node-script delete $SCRIPT_NAME
+</code></pre>
+<p><a href="#heading--tags-group-scripts"><h3 id="heading--tags-group-scripts">How to use tags to group commissioning and testing scripts</h3></a></p>
+<p>Tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+<pre><code class="language-bash">maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
+maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
+</code></pre>
+<p>MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:</p>
+<pre><code class="language-bash">maas $PROFILE machine commission \
+ commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+<p>You can also select which testing scripts to run by name or tag:</p>
+<pre><code class="language-bash">maas $PROFILE machine commission \
+ testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+<p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
+<p><a href="#heading--results"><h3 id="heading--results">How to view testing results</h3></a></p>
+<p>The command line allows you to not only view the current script&rsquo;s progress but also retrieve the verbatim output from any previous runs too.</p>
+<p>If you only want to see the latest or currently-running result, you can use <code>current-commissioning</code>, <code>current-testing</code>, or <code>current-installation</code> instead of an id:</p>
+<pre><code class="language-bash">maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
+</code></pre>
+<p>You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+<pre><code class="language-bash">maas $PROFILE node-script-results read \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
+</code></pre>
+<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+<pre><code class="language-bash">maas $PROFILE node-script-results update \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
+</code></pre>
+<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+<pre><code class="language-json">&quot;results&quot;: [
+    {
+        &quot;id&quot;: 21,
+        &quot;created&quot;: &quot;Tue, 02 Apr 2019 17:00:36 -0000&quot;,
+        &quot;updated&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;name&quot;: &quot;smartctl-validate&quot;,
+        &quot;status&quot;: 5,
+        &quot;status_name&quot;: &quot;Aborted&quot;,
+        &quot;exit_status&quot;: null,
+        &quot;started&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;ended&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;runtime&quot;: &quot;0:00:00&quot;,
+        &quot;starttime&quot;: 1554238601.765214,
+        &quot;endtime&quot;: 1554238601.765214,
+        &quot;estimated_runtime&quot;: &quot;0:00:00&quot;,
+        &quot;parameters&quot;: {
+            &quot;storage&quot;: {
+                &quot;argument_format&quot;: &quot;{path}&quot;,
+                &quot;type&quot;: &quot;storage&quot;,
+                &quot;value&quot;: {
+                    &quot;id_path&quot;: &quot;/dev/vda&quot;,
+                    &quot;model&quot;: &quot;&quot;,
+                    &quot;name&quot;: &quot;sda&quot;,
+                    &quot;physical_blockdevice_id&quot;: 1,
+                    &quot;serial&quot;: &quot;&quot;
+                }
+            }
+        },
+        &quot;script_id&quot;: 1,
+        &quot;script_revision_id&quot;: null,
+        &quot;suppressed&quot;: true
+    }
+]
+</code></pre>
+<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+<pre><code class="language-bash">maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
+ filetype=tar.xz &gt; $LOCAL_FILENAME
+</code></pre>
+<p><strong>NOTE:</strong> 
+<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
 <p><a href="#heading--network-link-testing"><h3 id="heading--network-link-testing">How to test network links</h3></a></p>
 <p>MAAS can check whether links are connected or disconnected, so that you can detect unplugged cables.  If you are not running MAAS 2.7 or higher, you must first upgrade and then recommission your machines to find disconnected links.  MAAS not only reports unplugged cables, but also gives a warning when trying to configure a disconnected interface.  In addition, administrators can change the cable connection status after manually resolving the issue.</p>
+<p>To check network testing results, enter the following command:</p>
+<pre><code>maas $PROFILE interfaces read $SYSTEM_ID \
+| jq -r '([&quot;LINK_NAME&quot;,&quot;LINK_CONNECTED?&quot;,&quot;LINK_SPEED&quot;, &quot;I/F_SPEED&quot;]
+| (., map(length*&quot;-&quot;))), (.[] | [.name, .link_connected, .link_speed, .interface_speed])
+| @tsv' | column -t
+</code></pre>
+<p>which produces an output similar to this:</p>
+<pre><code>LINK_NAME  LINK_CONNECTED?  LINK_SPEED  I/F_SPEED
+---------  ---------------  ----------  ---------
+ens3       false            -           1 Gpbs
+</code></pre>
+<p>From this screen, you can see that the <code>ens3</code> link is not connected (hence an unreported link speed). </p>
 <p>Once you have manually repaired the broken connection, an administrator can change cable connection status:</p>
+<pre><code>maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_connected=true
+</code></pre>
 <p><a href="#heading--slow-link-detection"><h2 id="heading--slow-link-detection">How to detect slow network links</h2></a></p>
+<p>As servers and hardware get faster, the chances increase that you might encounter a speed mismatch when connecting your NIC to a network device.  MAAS can warn you if your interface is connected to a link slower than what the interface supports, when you run the above command:</p>
+<pre><code>maas $PROFILE interfaces read $SYSTEM_ID \
+| jq -r '([&quot;LINK_NAME&quot;,&quot;LINK_CONNECTED?&quot;,&quot;LINK_SPEED&quot;, &quot;I/F_SPEED&quot;]
+| (., map(length*&quot;-&quot;))), (.[] | [.name, .link_connected, .link_speed, .interface_speed])
+| @tsv' | column -t
+</code></pre>
+<p>From the resulting output, you can detect when your link/interface speeds are slower than expected. Depending on your physical hardware, the problem may not be repairable, but once you identify a slow link, you can replace a slow switch without recommissioning.  </p>
 <p>Administrators can change or update the link and interface speeds after manual changes to the connection:</p>
 <pre><code>maas $PROFILE interface update $SYSTEM_ID $INTERFACE_ID link_speed=$NEW_LINK_SPEED \
 interface_speed=$NEW_INTERFACE_SPEED
@@ -504,6 +1057,8 @@ interface_speed=$NEW_INTERFACE_SPEED
 <li>Bonds that are not fully operational</li>
 <li>Broken gateways, rack controllers, and Internet links</li>
 </ul>
+<p>In addition, MAAS can comprehensively test Internet connectivity testing. You can give a list of URLs or IP addresses to check:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b92a8ca1821bc1ccf60cf7fddcb57f3fbeda4408.jpeg"></a> </p>
 <p>In the ephemeral environment, standard DHCP is still applied, but when network testing runs, MAAS can apply your specific configuration for the duration of the test.  While all URLs / IPs are tested with all interfaces, MAAS can test each of your interfaces individually, including breaking apart bonded NICS and testing each side of your redundant interfaces. You can also run different tests on each pass, e.g., a different set of URLs, although each run would be a different testing cycle.</p>
 <p>To test individual interfaces, for example, you could issue the following CLI command:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/7fadb56a2939f7a781510a55813141de03521e0d.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7fadb56a2939f7a781510a55813141de03521e0d.jpeg"></a> </p>
@@ -514,9 +1069,64 @@ interface_speed=$NEW_INTERFACE_SPEED
 <p>There are no particular restrictions on these scripts, so you can test a wide variety of possible conditions and situations.  Administrators can upload network tests and test scripts.  Administrators can also create tests which accept an interface parameter, or scripts which apply custom network configurations.  </p>
 <p>Users can specify unique parameters using the API, override machines which fail network testing (allowing their use), and suppress individual failed network tests.  Users can also review the health status from all interface tests, even sorting them by interface name and MAC.  In addition, MAAS can report the overall status of all interfaces.</p>
 <p><a href="#heading--allocate-machines"><h2 id="heading--allocate-machines">How to allocate machines</h2></a></p>
+<p>To allocate a random node:</p>
+<pre><code class="language-bash">maas $PROFILE machines allocate
+</code></pre>
+<p>To allocate a specific node:</p>
+<pre><code class="language-bash">maas $PROFILE machines allocate system_id=$SYSTEM_ID
+</code></pre>
 <p><strong>NOTE:</strong> 
 To allocate a node, it must have a status of &lsquo;Ready&rsquo;.</p>
 <p><a href="#heading--deploy"><h2 id="heading--deploy">How to deploy machines</h2></a></p>
+<p>To deploy a node:</p>
+<pre><code class="language-bash">maas $PROFILE machine deploy $SYSTEM_ID
+</code></pre>
+<p>To deploy a node as a KVM host:</p>
+<pre><code class="language-bash">maas $PROFILE machine deploy $SYSTEM_ID install_kvm=True
+</code></pre>
+<p><strong>NOTE:</strong> 
+To deploy with the CLI, the node must have a status of &lsquo;Allocated&rsquo;. See &lsquo;Allocate a node&rsquo; above.</p>
+<p><a href="#heading--configure-deployment-timeout"><h3 id="heading--configure-deployment-timeout">Configure deployment timeout</h3></a></p>
+<p>By default, when you deploy a machine, MAAS will consider the deployment a failure if it doesn&rsquo;t complete within 30 minutes.  You can configure this timeout, if you wish, with the command:</p>
+<pre><code>maas $PROFILE maas set-config name=node-timeout value=$NUMBER_OF_MINUTES
+</code></pre>
+<p><a href="#heading--enlisted-deployed-machines"><h3 id="heading--enlisted-deployed-machines">How to enlist a machine that’s already running a workload</h3></a></p>
+<p>In order to add machine that’s already running a workload, there are currently two options:</p>
+<p>Via the API/CLI, you can create a machine, passing the deployed flag:</p>
+<pre><code>$ maas $profile machines create deployed=true hostname=mymachine \   
+architecture=amd64 mac_addresses=00:16:3e:df:35:bb power_type=manual
+</code></pre>
+<p>On the machine itself (the recommended way, if the machine is running Ubuntu), you can download a helper script from MAAS and create the machine that way:</p>
+<pre><code>$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts register-machine --hostname mymachine \
+ &gt; http://$MAAS_IP:5240/MAAS $MAAS_API_TOKEN
+</code></pre>
+<p>Now you have a machine in MAAS that’s in the deployed state, with no hardware information yet.</p>
+<p><a href="#heading--update-deployed-hw-info"><h3 id="heading--update-deployed-hw-info">How to update hardware information for a deployed machine</h3></a></p>
+<p>The recommended way of updating the hardware information for a deployed machine is to download the maas-run-scripts script and run it on the machine itself:</p>
+<pre><code>$ wget http://$MAAS_IP:5240/MAAS/maas-run-scripts
+$ chmod 755 maas-run-scripts
+$ ./maas-run-scripts report-results --config mymachine-creds.yaml
+</code></pre>
+<p>If you created the machine with the maas-run-scripts, you should have such a mymachine-creds.yaml file already. If not, it should look like this:</p>
+<pre><code>reporting:
+          maas:
+            consumer_key: $CONSUMER_KEY
+            endpoint: http://$MAAS_IP:5240/MAAS/metadata/status/$SYSTEM_ID
+            token_key: $TOKEN_KEY
+            token_secret: $TOKEN_SECRET
+</code></pre>
+<p>You may get the needed credentials from the MAAS API, for example:</p>
+<pre><code>$ maas $profile machine get-token wxwwga
+Success.
+Machine-readable output follows:
+{
+        &quot;token_key&quot;: &quot;Lyy9BS4tKsQakDQScy&quot;,
+        &quot;token_secret&quot;: &quot;V8vta8Azwn6FZVkfHnuTvLGLScAvEufB&quot;,
+        &quot;consumer_key&quot;: &quot;YGT6QKSH65aap4tGnw&quot;
+}
+</code></pre>
     </div>
   </body>
 </html>

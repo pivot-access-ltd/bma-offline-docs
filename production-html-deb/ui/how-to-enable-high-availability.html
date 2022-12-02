@@ -455,7 +455,10 @@
 <p><a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">How to enable highly-available DHCP services</h3></a></p>
 <p>DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.</p>
 <p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-manage-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
+<p>Access the appropriate VLAN (via the &lsquo;Subnets&rsquo; page) and choose action &lsquo;Reconfigure DHCP&rsquo;. There, you will see the second rack controller in the &lsquo;Secondary controller&rsquo; field. All you should have to do is press the &lsquo;Reconfigure DHCP&rsquo; button:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a></p>
 <p><a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">How to configure multiple region endpoints</h3></a></p>
+<p>MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to <code>/etc/maas/rackd.conf</code>.  For example:</p>
 <pre><code>.
 .
 .
@@ -510,7 +513,13 @@ backend maas
 <p>The configuration of region controller HA is now complete.</p>
 <p><strong>The API server(s) must be now be referenced (e.g. web UI, MAAS CLI) using port 80 (as opposed to port 5240).</strong></p>
 <p><a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">Move a rack controller from one MAAS instance to another</h2></a></p>
+<p>In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the &ldquo;Controllers&rdquo; tab in the UI, select the rack controller you with to delete, choose &ldquo;Take action&rdquo; and select &ldquo;Delete.&rdquo;  You will be asked to confirm with a red button, entitled &ldquo;Delete 1 controller.&rdquo;</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
+<p>For this exercise, we&rsquo;re assuming you are using the already installed rack controller code that was previously running on the &ldquo;from&rdquo; MAAS instance.  All that&rsquo;s necessary is that you register a new rack controller with the &ldquo;to&rdquo; MAAS instance, like this:</p>
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
+<p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
+<p>Note that in the UI, if you go to the &ldquo;Controllers&rdquo; tab and press the button entitled, &ldquo;Add rack controller,&rdquo; at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">How to avoid the potential pitfalls of moving a rack controller</h3></a></p>
 <p>There are dangers associate with moving a rack controller &ndash; dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
