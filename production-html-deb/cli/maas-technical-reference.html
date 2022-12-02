@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/maas-technical-reference.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-cusdomise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="explanation.html">
+	Explanations
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    VM hosting
+	  </a>
+	</li>
+	<li>
+	  <a href="understanding-maas-events.html">
+	    MAAS events
+	  </a>
+	</li>
+	<li>
+	  <a href="undersdtanding-maas-audit-events.html">
+	    MAAS audit events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-rbac.html">
+	    RBAC
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>MAAS technical reference</h1><!-- "MAAS technical reference" -->
+
+<p><a href="#heading--Technical-reference-topics"><h2 id="heading--Technical-reference-topics">Technical reference topics</h2></a></p>
+<p>The following technical topics may be useful as you operate and administer MAAS:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="-.html">MAAS Terraform provider</a>: This article provides a pure reference on the MAAS Terraform provider, in terms of data sources and resources available through that provider, along with HCL examples culled from the source.</li>
+<li><a href="-.html">Audit event logs</a>: Audit events are a subset of the MAAS event logs. This article will provide reference material for those who want to review and report on events designated as MAAS audit events.</li>
+<li><a href="-.html">Commissioning scripts</a>: This article provides technical details about commissioning scripts. </li>
+<li><a href="-.html">Hardware test scripts</a>: This article enumerates and describes the various hardware tests you can engage when commissioning a machine.</li>
+<li><a href="-.html">Log files</a>: MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs. Each of these logs provides different information, or at the very least, different views of the same information. MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.</li>
+<li><a href="-.html">MAAS performance</a>: The MAAS engineering team actively works to improve the performance of MAAS.  This article documents those efforts and provides benchmarks.</li>
+<li><a href="-.html">Power management</a>: To manage a machine, MAAS must be able to power cycle it, usually through the machine’s BMC card. Until you configure the power type, a newly-added machine can’t be enlisted and used by MAAS. Often, choosing the right power driver is half the battle; this article can help.</li>
+<li><a href="-.html">Storage layouts</a>: There are several possible MAAS storage layouts, including flat, LVM, bcache, VMFS6, and the generic &ldquo;blank&rdquo; layout.  This article provides details and technical specifications on these layouts.</li>
+</ul>
+<p>You may also wish to consult the permuted index, below.</p>
+<p><a href="#heading--Technical-reference-permuted-index"><h2 id="heading--Technical-reference-permuted-index">Technical reference permuted index</h2></a></p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--sm15k">15000</a></td>
+<td align="left">SeaMicro</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-support">3.2</a></td>
+<td align="left">About better Redfish support in MAAS</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-support">About better Redfish support in MAAS 3.2</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-enabling-redfish">About enabling Redfish</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-ipmi-cipher-suites">About IPMI cipher suites</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="audit-event-log-reference.html#heading--about-maas-audit-events">About MAAS audit events</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish">About Redfish</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-with-maas">About the MAAS implementation of Redfish</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--path">About the syslog logging path</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">Access the HMC and login to the IBM Z</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">a MAAS machine</a></td>
+<td align="left">Set up IBM Z networking for</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">a MAAS machine</a></td>
+<td align="left">Set up a suitable IBM Z partition for</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">a MAAS machine</a></td>
+<td align="left">Set up IBM Z storage for</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--config-power-type">a machine&rsquo;s power type</a></td>
+<td align="left">How to configure</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--apc">American Power Conversion (APC) PDU</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--amt">AMT</a></td>
+<td align="left">Intel</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">and login to the IBM Z</a></td>
+<td align="left">Access the HMC</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">and use IBM Z with MAAS</a></td>
+<td align="left">How to configure</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--apc">(APC) PDU</a></td>
+<td align="left">American Power Conversion</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--using-a-remote-syslog-server">a remote syslog server</a></td>
+<td align="left">How to use</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--bmc-driver-support">are supported</a></td>
+<td align="left">Which BMC drivers</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">a suitable IBM Z partition for a MAAS machine</a></td>
+<td align="left">Set up</td>
+</tr>
+<tr>
+<td align="right"><a href="audit-event-log-reference.html#heading--about-maas-audit-events">audit events</a></td>
+<td align="left">About MAAS</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--included-scripts">Available test scripts reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--bcache-storage-layout-reference">bcache storage layout reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-support">better Redfish support in MAAS 3.2</a></td>
+<td align="left">About</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--blank-storage-layout-reference">Blank storage layout reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--bmc-driver-support">BMC drivers are supported</a></td>
+<td align="left">Which</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-the-boot-parameters">boot parameters</a></td>
+<td align="left">Set the partition</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--power-catalogue">catalogue</a></td>
+<td align="left">Power</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">Chassis Manager</a></td>
+<td align="left">HP Moonshot - iLO</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">- Chassis Manager</a></td>
+<td align="left">Microsoft OCS</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">Chassis Manager</a></td>
+<td align="left">Microsoft OCS -</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--recs_box">Christmann RECS-Box Power Driver</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-ipmi-cipher-suites">cipher suites</a></td>
+<td align="left">About IPMI</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ucsm">Cisco UCS Manager</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-configure-hpa">Commissioning script example: Configure HPA</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-update-firmware">Commissioning script example: Update firmware</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--manual">configuration</a></td>
+<td align="left">Manual power</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--config-power-type">configure a machine&rsquo;s power type</a></td>
+<td align="left">How to</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">configure and use IBM Z with MAAS</a></td>
+<td align="left">How to</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-configure-hpa">Configure HPA</a></td>
+<td align="left">Commissioning script example:</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--hmc">Console (HMC)</a></td>
+<td align="left">IBM Hardware Management</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--apc">Conversion (APC) PDU</a></td>
+<td align="left">American Power</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--hardware-test-script-example-cpu-stress-test">CPU stress test</a></td>
+<td align="left">Hardware test script example:</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--dli">Digital Loggers, Inc. PDU</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--bmc-driver-support">drivers are supported</a></td>
+<td align="left">Which BMC</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--openbmc">Driver</a></td>
+<td align="left">OpenBMC Power</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--recs_box">Driver</a></td>
+<td align="left">Christmann RECS-Box Power</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--eaton">Eaton PDU</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-enabling-redfish">enabling Redfish</a></td>
+<td align="left">About</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">enlistment</a></td>
+<td align="left">Set up your IBM Z virtual machine for</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--environment-variable-reference">Environment variable reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-requirements">Evaluate IBM Z requirements</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="audit-event-log-reference.html#heading--about-maas-audit-events">events</a></td>
+<td align="left">About MAAS audit</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-configure-hpa">example: Configure HPA</a></td>
+<td align="left">Commissioning script</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--hardware-test-script-example-cpu-stress-test">example: CPU stress test</a></td>
+<td align="left">Hardware test script</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-update-firmware">example: Update firmware</a></td>
+<td align="left">Commissioning script</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--wedge">Facebook&rsquo;s Wedge</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--metadata-field-reference">field reference</a></td>
+<td align="left">Metadata</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-update-firmware">firmware</a></td>
+<td align="left">Commissioning script example: Update</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--flat-storage-layout-reference">Flat layout storage reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">for a MAAS machine</a></td>
+<td align="left">Set up IBM Z networking</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">for a MAAS machine</a></td>
+<td align="left">Set up a suitable IBM Z partition</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">for a MAAS machine</a></td>
+<td align="left">Set up IBM Z storage</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">for enlistment</a></td>
+<td align="left">Set up your IBM Z virtual machine</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--power-management-reference">guide</a></td>
+<td align="left">Power management reference</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--hmc">Hardware Management Console (HMC)</a></td>
+<td align="left">IBM</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--hardware-test-script-example-cpu-stress-test">Hardware test script example: CPU stress test</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">HMC and login to the IBM Z</a></td>
+<td align="left">Access the</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--hmc">(HMC)</a></td>
+<td align="left">IBM Hardware Management Console</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--config-power-type">How to configure a machine&rsquo;s power type</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">How to configure and use IBM Z with MAAS</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--using-a-remote-syslog-server">How to use a remote syslog server</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--example-virsh-kvm-power-type">How to use the virsh power type</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-configure-hpa">HPA</a></td>
+<td align="left">Commissioning script example: Configure</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--moonshot">HP Moonshot - iLO4 (IPMI)</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">HP Moonshot - iLO Chassis Manager</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--hmc">IBM Hardware Management Console (HMC)</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">IBM Z networking for a MAAS machine</a></td>
+<td align="left">Set up</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">IBM Z partition for a MAAS machine</a></td>
+<td align="left">Set up a suitable</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-requirements">IBM Z requirements</a></td>
+<td align="left">Evaluate</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">IBM Z storage for a MAAS machine</a></td>
+<td align="left">Set up</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">IBM Z</a></td>
+<td align="left">Access the HMC and login to the</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">IBM Z virtual machine for enlistment</a></td>
+<td align="left">Set up your</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">IBM Z with MAAS</a></td>
+<td align="left">How to configure and use</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--moonshot">- iLO4 (IPMI)</a></td>
+<td align="left">HP Moonshot</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--moonshot">iLO4 (IPMI)</a></td>
+<td align="left">HP Moonshot -</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">- iLO Chassis Manager</a></td>
+<td align="left">HP Moonshot</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">iLO Chassis Manager</a></td>
+<td align="left">HP Moonshot -</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-with-maas">implementation of Redfish</a></td>
+<td align="left">About the MAAS</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--dli">Inc. PDU</a></td>
+<td align="left">Digital Loggers,</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-support">in MAAS 3.2</a></td>
+<td align="left">About better Redfish support</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--amt">Intel AMT</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-ipmi-cipher-suites">IPMI cipher suites</a></td>
+<td align="left">About</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ipmi">IPMI</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--moonshot">(IPMI)</a></td>
+<td align="left">HP Moonshot - iLO4</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--virsh">KVM</a></td>
+<td align="left">virsh - libvirt</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--bcache-storage-layout-reference">layout reference</a></td>
+<td align="left">bcache storage</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--blank-storage-layout-reference">layout reference</a></td>
+<td align="left">Blank storage</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--lvm-storage-layout-reference">layout reference</a></td>
+<td align="left">LVM storage</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--vmfs6-storage-layout-reference">layout reference</a></td>
+<td align="left">VMFS6 storage</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--flat-storage-layout-reference">layout storage reference</a></td>
+<td align="left">Flat</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--virsh">- libvirt KVM</a></td>
+<td align="left">virsh</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--virsh">libvirt KVM</a></td>
+<td align="left">virsh -</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--dli">Loggers, Inc. PDU</a></td>
+<td align="left">Digital</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--path">logging path</a></td>
+<td align="left">About the syslog</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">login to the IBM Z</a></td>
+<td align="left">Access the HMC and</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--lvm-storage-layout-reference">LVM storage layout reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--lxd">LXD VMs</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-support">MAAS 3.2</a></td>
+<td align="left">About better Redfish support in</td>
+</tr>
+<tr>
+<td align="right"><a href="audit-event-log-reference.html#heading--about-maas-audit-events">MAAS audit events</a></td>
+<td align="left">About</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-with-maas">MAAS implementation of Redfish</a></td>
+<td align="left">About the</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">MAAS machine</a></td>
+<td align="left">Set up IBM Z networking for a</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">MAAS machine</a></td>
+<td align="left">Set up a suitable IBM Z partition for a</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">MAAS machine</a></td>
+<td align="left">Set up IBM Z storage for a</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">MAAS</a></td>
+<td align="left">How to configure and use IBM Z with</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">machine for enlistment</a></td>
+<td align="left">Set up your IBM Z virtual</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--config-power-type">machine&rsquo;s power type</a></td>
+<td align="left">How to configure a</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">machine</a></td>
+<td align="left">Set up IBM Z networking for a MAAS</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">machine</a></td>
+<td align="left">Set up a suitable IBM Z partition for a MAAS</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">machine</a></td>
+<td align="left">Set up IBM Z storage for a MAAS</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--hmc">Management Console (HMC)</a></td>
+<td align="left">IBM Hardware</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--power-management-reference">management reference guide</a></td>
+<td align="left">Power</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">Manager</a></td>
+<td align="left">HP Moonshot - iLO Chassis</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">Manager</a></td>
+<td align="left">Microsoft OCS - Chassis</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ucsm">Manager</a></td>
+<td align="left">Cisco UCS</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--manual">Manual power configuration</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--metadata-field-reference">Metadata field reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">Microsoft OCS - Chassis Manager</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--moonshot">Moonshot - iLO4 (IPMI)</a></td>
+<td align="left">HP</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">Moonshot - iLO Chassis Manager</a></td>
+<td align="left">HP</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">networking for a MAAS machine</a></td>
+<td align="left">Set up IBM Z</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--nova">Nova</a></td>
+<td align="left">OpenStack</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--mscm">OCS - Chassis Manager</a></td>
+<td align="left">Microsoft</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-with-maas">of Redfish</a></td>
+<td align="left">About the MAAS implementation</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--openbmc">OpenBMC Power Driver</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--nova">OpenStack Nova</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--parameter-reference">Parameter reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-the-boot-parameters">parameters</a></td>
+<td align="left">Set the partition boot</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-the-boot-parameters">partition boot parameters</a></td>
+<td align="left">Set the</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">partition for a MAAS machine</a></td>
+<td align="left">Set up a suitable IBM Z</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--path">path</a></td>
+<td align="left">About the syslog logging</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--apc">PDU</a></td>
+<td align="left">American Power Conversion (APC)</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--dli">PDU</a></td>
+<td align="left">Digital Loggers, Inc.</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--eaton">PDU</a></td>
+<td align="left">Eaton</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--power-catalogue">Power catalogue</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--manual">power configuration</a></td>
+<td align="left">Manual</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--apc">Power Conversion (APC) PDU</a></td>
+<td align="left">American</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--openbmc">Power Driver</a></td>
+<td align="left">OpenBMC</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--recs_box">Power Driver</a></td>
+<td align="left">Christmann RECS-Box</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--power-management-reference">Power management reference guide</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--config-power-type">power type</a></td>
+<td align="left">How to configure a machine&rsquo;s</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--example-virsh-kvm-power-type">power type</a></td>
+<td align="left">How to use the virsh</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--proxmox">Proxmox</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--recs_box">RECS-Box Power Driver</a></td>
+<td align="left">Christmann</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-support">Redfish support in MAAS 3.2</a></td>
+<td align="left">About better</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-enabling-redfish">Redfish</a></td>
+<td align="left">About enabling</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish">Redfish</a></td>
+<td align="left">About</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-with-maas">Redfish</a></td>
+<td align="left">About the MAAS implementation of</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--redfish">Redfish</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--power-management-reference">reference guide</a></td>
+<td align="left">Power management</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--environment-variable-reference">reference</a></td>
+<td align="left">Environment variable</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--metadata-field-reference">reference</a></td>
+<td align="left">Metadata field</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--parameter-reference">reference</a></td>
+<td align="left">Parameter</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--included-scripts">reference</a></td>
+<td align="left">Available test scripts</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--bcache-storage-layout-reference">reference</a></td>
+<td align="left">bcache storage layout</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--blank-storage-layout-reference">reference</a></td>
+<td align="left">Blank storage layout</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--flat-storage-layout-reference">reference</a></td>
+<td align="left">Flat layout storage</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--lvm-storage-layout-reference">reference</a></td>
+<td align="left">LVM storage layout</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--vmfs6-storage-layout-reference">reference</a></td>
+<td align="left">VMFS6 storage layout</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--using-a-remote-syslog-server">remote syslog server</a></td>
+<td align="left">How to use a</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-requirements">requirements</a></td>
+<td align="left">Evaluate IBM Z</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-configure-hpa">script example: Configure HPA</a></td>
+<td align="left">Commissioning</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--hardware-test-script-example-cpu-stress-test">script example: CPU stress test</a></td>
+<td align="left">Hardware test</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-update-firmware">script example: Update firmware</a></td>
+<td align="left">Commissioning</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--included-scripts">scripts reference</a></td>
+<td align="left">Available test</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--sm15k">SeaMicro 15000</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--using-a-remote-syslog-server">server</a></td>
+<td align="left">How to use a remote syslog</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-the-boot-parameters">Set the partition boot parameters</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">Set up a suitable IBM Z partition for a MAAS machine</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">Set up IBM Z networking for a MAAS machine</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">Set up IBM Z storage for a MAAS machine</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">Set up your IBM Z virtual machine for enlistment</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">storage for a MAAS machine</a></td>
+<td align="left">Set up IBM Z</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--bcache-storage-layout-reference">storage layout reference</a></td>
+<td align="left">bcache</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--blank-storage-layout-reference">storage layout reference</a></td>
+<td align="left">Blank</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--lvm-storage-layout-reference">storage layout reference</a></td>
+<td align="left">LVM</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--vmfs6-storage-layout-reference">storage layout reference</a></td>
+<td align="left">VMFS6</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--flat-storage-layout-reference">storage reference</a></td>
+<td align="left">Flat layout</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--hardware-test-script-example-cpu-stress-test">stress test</a></td>
+<td align="left">Hardware test script example: CPU</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">suitable IBM Z partition for a MAAS machine</a></td>
+<td align="left">Set up a</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-ipmi-cipher-suites">suites</a></td>
+<td align="left">About IPMI cipher</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--bmc-driver-support">supported</a></td>
+<td align="left">Which BMC drivers are</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-support">support in MAAS 3.2</a></td>
+<td align="left">About better Redfish</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--path">syslog logging path</a></td>
+<td align="left">About the</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--using-a-remote-syslog-server">syslog server</a></td>
+<td align="left">How to use a remote</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--hardware-test-script-example-cpu-stress-test">test script example: CPU stress test</a></td>
+<td align="left">Hardware</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--included-scripts">test scripts reference</a></td>
+<td align="left">Available</td>
+</tr>
+<tr>
+<td align="right"><a href="hardware-test-scripts-reference.html#heading--hardware-test-script-example-cpu-stress-test">test</a></td>
+<td align="left">Hardware test script example: CPU stress</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">the HMC and login to the IBM Z</a></td>
+<td align="left">Access</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">the IBM Z</a></td>
+<td align="left">Access the HMC and login to</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--about-redfish-with-maas">the MAAS implementation of Redfish</a></td>
+<td align="left">About</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-the-boot-parameters">the partition boot parameters</a></td>
+<td align="left">Set</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--path">the syslog logging path</a></td>
+<td align="left">About</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--example-virsh-kvm-power-type">the virsh power type</a></td>
+<td align="left">How to use</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--config-power-type">to configure a machine&rsquo;s power type</a></td>
+<td align="left">How</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">to configure and use IBM Z with MAAS</a></td>
+<td align="left">How</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">to the IBM Z</a></td>
+<td align="left">Access the HMC and login</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--using-a-remote-syslog-server">to use a remote syslog server</a></td>
+<td align="left">How</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--example-virsh-kvm-power-type">to use the virsh power type</a></td>
+<td align="left">How</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--config-power-type">type</a></td>
+<td align="left">How to configure a machine&rsquo;s power</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--example-virsh-kvm-power-type">type</a></td>
+<td align="left">How to use the virsh power</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ucsm">UCS Manager</a></td>
+<td align="left">Cisco</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">up a suitable IBM Z partition for a MAAS machine</a></td>
+<td align="left">Set</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--commissioning-script-example-update-firmware">Update firmware</a></td>
+<td align="left">Commissioning script example:</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">up IBM Z networking for a MAAS machine</a></td>
+<td align="left">Set</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">up IBM Z storage for a MAAS machine</a></td>
+<td align="left">Set</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">up your IBM Z virtual machine for enlistment</a></td>
+<td align="left">Set</td>
+</tr>
+<tr>
+<td align="right"><a href="maas-logging-reference.html#heading--using-a-remote-syslog-server">use a remote syslog server</a></td>
+<td align="left">How to</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">use IBM Z with MAAS</a></td>
+<td align="left">How to configure and</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--example-virsh-kvm-power-type">use the virsh power type</a></td>
+<td align="left">How to</td>
+</tr>
+<tr>
+<td align="right"><a href="commissioning-scripts-reference.html#heading--environment-variable-reference">variable reference</a></td>
+<td align="left">Environment</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--virsh">virsh - libvirt KVM</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--example-virsh-kvm-power-type">virsh power type</a></td>
+<td align="left">How to use the</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">virtual machine for enlistment</a></td>
+<td align="left">Set up your IBM Z</td>
+</tr>
+<tr>
+<td align="right"><a href="storage-layouts-reference.html#heading--vmfs6-storage-layout-reference">VMFS6 storage layout reference</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--lxd">VMs</a></td>
+<td align="left">LXD</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--vmware">VMware</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--webhook">Webhook</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--wedge">Wedge</a></td>
+<td align="left">Facebook&rsquo;s</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--bmc-driver-support">Which BMC drivers are supported</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">with MAAS</a></td>
+<td align="left">How to configure and use IBM Z</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">your IBM Z virtual machine for enlistment</a></td>
+<td align="left">Set up</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-networking">Z networking for a MAAS machine</a></td>
+<td align="left">Set up IBM</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-partition">Z partition for a MAAS machine</a></td>
+<td align="left">Set up a suitable IBM</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-requirements">Z requirements</a></td>
+<td align="left">Evaluate IBM</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-storage">Z storage for a MAAS machine</a></td>
+<td align="left">Set up IBM</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--ibm-z-login">Z</a></td>
+<td align="left">Access the HMC and login to the IBM</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--set-up-ibm-z-enlistment">Z virtual machine for enlistment</a></td>
+<td align="left">Set up your IBM</td>
+</tr>
+<tr>
+<td align="right"><a href="power-management-reference.html#heading--configure-use-ibm-z">Z with MAAS</a></td>
+<td align="left">How to configure and use IBM</td>
+</tr>
+</tbody>
+</table>
+    </div>
+  </body>
+</html>
