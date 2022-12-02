@@ -462,6 +462,39 @@ tgt                              RUNNING   pid 8040, uptime 0:09:15
 <pre><code>sudo maas init --help
 </code></pre>
 <p><a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a></p>
+<p>Once you&rsquo;ve successfully installed MAAS (regardless of method), you can now login here:</p>
+<pre><code>http://${API_HOST}:5240/MAAS
+</code></pre>
+<p>where $API_HOST is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg"></a> </p>
+<p>Log in at the prompts, with the login information you created when initialising MAAS.</p>
+<p><a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a></p>
+<p>After a fresh MAAS installation, the web UI presents a couple of welcome  screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys.</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg"></a>  </p>
+<p>Your main concerns for this experiment are the DNS forwarder, the Ubuntu image import section, and the SSH public key, though you might want to set the region name to something memorable, since this text will appear at the bottom of every MAAS screen in this install domain. Set the DNS forwarder to something obvious, e.g., <code>8.8.8.8</code>, Google’s DNS server.  Set this to your own internal DNS server if you know the IP address.</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg"></a>  </p>
+<p>Select an Ubuntu image to import, noting that you may be required to select at least one LTS version, depending upon the version of MAAS that snap installed.  In this example, we&rsquo;ve already chosen an image, and downloading is partially complete.</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg"></a>  </p>
+<p>When you click on “Continue,” the screen will shift to a screen labelled, “SSH keys for admin:”  </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg"></a> </p>
+<p>In the source drop-down, select “Launchpad,” “Github,” or “Upload.”  If you choose one of the first two, you will need to enter your username for that service.  For example, if you want to upload your SSH public key from Launchpad, you would enter:</p>
+<pre><code>lp:&lt;username&gt;
+</code></pre>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg"></a> </p>
+<p>Likewise, if you want to upload your github public SSH key, you would enter:</p>
+<pre><code>gh:&lt;username&gt;
+</code></pre>
+<p>If you want to use your existing public key from your home directory, you can select “Upload”and then copy your entire public key from <code>.ssh/id_rsa.pub</code> (or wherever you may have stored the key):</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg"></a> </p>
+<p>and paste it into the block labelled “Public key.”  Finally, press the “Import” button to import this key:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg"></a> </p>
+<p>With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.</p>
+<p><strong>NOTE:</strong> 
+Note that you may have to wait a few moments for your selected images to sync locally.</p>
+<p><a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable DHCP</h3></a></p>
+<p>Before moving forward with MAAS, you&rsquo;ll want to enable DHCP.  You can do this very easily from the web UI by selecting &ldquo;Subnets&rdquo; from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, &ldquo;Enable DHCP.&rdquo;</p>
+<p><a href="#heading--networking"><h3 id="heading--networking">About network discovery</h3></a></p>
+<p>The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This network discovery process allows you to easily add or map devices already connected to your network &ndash; devices that you may not necessarily want to manage with MAAS.</p>
 <!--
 <a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a>
 

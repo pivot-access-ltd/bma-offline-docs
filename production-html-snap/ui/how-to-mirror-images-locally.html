@@ -449,9 +449,9 @@
 <p>Previously there was only one MAAS stream available, daily. This stream has been replaced by the stable stream. Any client using this stream will be automatically redirected to the stable stream.</p>
 <p><a href="#heading--changing-the-stream"><h2 id="heading--changing-the-stream">How to change the stream with the UI</h2></a></p>
 <p>To switch to the candidate stream simply select &ldquo;custom&rdquo; on the images page, set the URL to <code>http://images.maas.io/ephemeral-v3/candidate</code>, and click &ldquo;Connect&rdquo;</p>
-<p><a href="../images/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg"></a></p>
 <p>MAAS uses the stable stream by default. To switch back to it simply select <code>maas.io</code> on the images page</p>
-<p><a href="../images/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg"></a></p>
 <p><a href="#heading--changing-stream-with-cli"><h2 id="heading--changing-stream-with-cli">How to change the stream with the CLI</h2></a></p>
 <p>To switch to a stream with the CLI, enter the following commands:</p>
 <pre><code>BOOT_SOURCE_ID=$(maas $PROFILE boot-sources read | jq '.[] | select(.url | contains(&quot;images.maas.io/ephemeral-v3&quot;)) | .id')

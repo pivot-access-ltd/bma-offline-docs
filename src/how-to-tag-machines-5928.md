@@ -14,7 +14,7 @@ In general, names that do not conform to these rules cannot be created.
 <a href="#heading--automatic-tags"><h2 id="heading--automatic-tags">About automatic tags</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages"]
 Automatic tags are tags with a definition. The definition allows you to auto-apply tags to machines that match with an [XPath expression](#heading--xpath-expressions) you created. Setting up an automatic tag will help you recognise special hardware characteristics and settings. For instance, we can configure the gpu passthrough by creating an XPath expression that recognises a prospective GPU, as shown in the example below.  
 
 In our REST API, a tag has 4 attributes namely, name, definition, kernel options, and comment. The example below shows you how to fill in the definition attribute to create an automatic tag.  In this case, we are tagging all machines that have Intel VT-d enabled and have a Tesla v100 PCIe 16GB GPU:
@@ -240,7 +240,7 @@ Tag management UI is available starting in MAAS v3.2.
 [/tabs]
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages" view="UI"]
 <a href="#heading--create-and-assign-tags"><h2 id="heading--create-and-assign-tags">How to create and assign tags</h2></a>
 
 In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
@@ -333,7 +333,7 @@ To remove (unassign) a tag:
 
 >Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How to create a tag</h2></a>
 
 With the CLI, you can create a tag with the following command:

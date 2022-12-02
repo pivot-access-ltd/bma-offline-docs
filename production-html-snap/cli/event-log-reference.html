@@ -436,6 +436,13 @@
   Sun, 04 Oct. 2020 23:09:54    Powering on
   Sun, 04 Oct. 2020 23:09:53    Commissioning
 </code></pre>
+<p>To view the raw Events log, enter the following command:</p>
+<pre><code>maas $PROFILE events query
+</code></pre>
+<p>You can tabulate the results, sorted by machine, with the following command:</p>
+<p>```
+maas admin events query | jq -r &lsquo;([&ldquo;HOSTNAME&rdquo;,&rdquo;TIMESTAMP&rdquo;,&rdquo;TYPE&rdquo;,&rdquo;DESCRIPTION&rdquo;] | (., map(length*&rdquo;-&ldquo;))),
+(.events[] | [.hostname, .created, .type, .description // &ldquo;-&ldquo;]) | @tsv&rsquo; | column -t -s $&rsquo;\t&rsquo;</p>
     </div>
   </body>
 </html>

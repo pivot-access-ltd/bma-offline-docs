@@ -629,7 +629,7 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 <p>As images are constantly updated and refreshed, the backdoor will only ever be temporary, but it should help you login to see what may be going wrong with your node.</p>
 <p><a href="#heading--extract-the-cloud-image"><h4 id="heading--extract-the-cloud-image">Extract the cloud image</h4></a></p>
 <p>First, download the cloud image that corresponds to the architecture of your node. The <em>Images</em> page of the web UI lists the images currently being cached by MAAS:</p>
-<p><a href="../images/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
 <p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/">https://cloud-images.ubuntu.com/</a>.</p>
 <p>For example:</p>
 <pre><code class="language-bash">wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
@@ -672,7 +672,7 @@ cp /home/ubuntu/xenial-customized.squashfs .
 chown maas:maas squashfs
 </code></pre>
 <p>You can now use this image to commission or deploy a node and access the root account with the backdoor password, such as by deploying the same specific image from the web UI to the node you wish to troubleshoot.</p>
-<p><a href="../images/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
 <p><a href="#heading--Migrating-an-existing-snap-installation"><h3 id="heading--Migrating-an-existing-snap-installation">Migrating an existing snap installation</h3></a></p>
 <p>If you&rsquo;re currently running MAAS from a snap in <code>all</code> mode, you can easily migrate your database to a local PostgreSQL server with the following command:</p>
 <pre><code>sudo /snap/maas/current/helpers/migrate-vd Snapatabase

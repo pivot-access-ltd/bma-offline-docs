@@ -2,7 +2,7 @@
 This article will show you:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to create and assign network interface tags](#heading--create-and-assign-network-interface-tags)
 - [How to remove and delete network interface tags](#heading--remove-and-delete-network-interface-tags)
 - [How to view network interface tags](#heading--view-network-interface-tags)
@@ -89,7 +89,7 @@ The checkbox isn't strictly needed to apply the tag, but it helps prevent you fr
 
 Note that different machines may have the same physical interface name, but different MAC addresses, so it's not typical that interface tags carry over from one machine to the next.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to discover the ID of your network interface](#heading--discover-the-id-of-your-network-interface)
 - [How to assign tags to a network interface](#heading--assign-tags-to-a-network-interface)
 - [How to remove tags from a network interface](#heading--remove-tags-from-a-network-interface)

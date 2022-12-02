@@ -8,7 +8,7 @@ Prior to deployment, MAAS machines can be customised in a number of ways, includ
 - resource pools.
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages"]
 Machines can also be customised post-deployment, while running, either by changing out the physical hardware, or by altering the VM from the VM host side.  This will allow you to:
 
 - add or remove disks
@@ -130,10 +130,10 @@ Preseeding in MAAS can be achieved in two ways:
 <a href="#heading--templates"><h3 id="heading--templates">About templates</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/var/snap/maas/current/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
 [/tab]
-[tab version="v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+[tab version="v3.2 Packages,v3.3 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
 The [Tempita](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) template files are found in the `/etc/maas/preseeds/` directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:
 [/tab]
 [/tabs]
@@ -263,7 +263,7 @@ Administrators can manage resource pools on the Machines page in the web UI, und
 <a href="#heading--about-customising-deployed-machines"><h2 id="heading--about-customising-deployed-machines">About customising deployed machines</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages"]
 MAAS 3.2 provides the capability to customise deployed machines, in that you can update hardware for a running machine on-the-fly.  Specifically, MAAS will update a deployed machine’s data when you do any of the following things:
 
 - add or remove disks

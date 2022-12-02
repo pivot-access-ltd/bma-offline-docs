@@ -492,24 +492,24 @@ sudo apt install maas
 <p>LXD clusters in MAAS allow you to view and manage existing VM host clusters and compose VMs within clusters.  MAAS will not create a cluster, but it will discover existing clusters.</p>
 <p><a href="#heading--how-to-add-lxd-clusters"><h4 id="heading--how-to-add-lxd-clusters">How to add LXD clusters</h4></a></p>
 <p>MAAS assumes you have already configured an LXD cluster. You then need to configure the cluster with a single trust which MAAS uses to communicate it. Adding a LXD cluster is like adding a single LXD host: you provide authentication in a similar way, and then select a project. MAAS then connects to the provided host to discover other hosts within the cluster, renaming the cluster host with a name you supply.</p>
-<p><a href="../images/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a></p>
 <p>First, add an LXD KVM:</p>
-<p><a href="../images/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a></p>
 <p>Next, set up credentials and let LXD trust your MAAS certificate:</p>
-<p><a href="../images/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a></p>
 <p>Once connected, you can select the project in that cluster:</p>
-<p><a href="../images/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a></p>
 <p>If the KVM host address is part of a cluster, it will show as a cluster on the listing page. </p>
-<p><a href="../images/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a></p>
 <p><a href="#heading--how-to-compose-vms-in-lxd-clusters"><h4 id="heading--how-to-compose-vms-in-lxd-clusters">How to compose VMs in LXD clusters</h4></a></p>
 <p>Composing a VM in a LXD cluster via MAAS is similar to composing a VM for a single VM host. MAAS does not provide any sort of scheduling of said VM, and will instead target the host you select for composing the VM.</p>
 <p>From the KVM host listing page, click on the <code>+</code> icon to add a VM to a specific host:</p>
-<p><a href="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
 <p>If you are in a specific KVM host page, you can click <code>+ add virtual machine</code>:</p>
-<p><a href="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
 <p><a href="#heading--how-to-delete-lxd-clusters"><h3 id="heading--how-to-delete-lxd-clusters">How to delete LXD clusters</h3></a></p>
 <p>To delete an LXD cluster, simply delete any VM host within the cluster:</p>
-<p><a href="../images/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a></p>
 <p><a href="#heading--enlist-deployed-machines"><h3 id="heading--enlist-deployed-machines">Ability to enlist deployed machines</h3></a></p>
 <h4>Ten words or fewer</h4>
 <p>Users can enlist deployed machines, a top feature poll request.</p>
@@ -621,13 +621,13 @@ When uploading a custom image, there is a new required field: <code>base_image</
 </ol>
 <h4>How to clone a machine from the UI</h4>
 <p>Assume you have two machines available, like this:</p>
-<p><a href="../images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></p>
 <p>Select the machine <em>to which you want to clone configuration</em>, and select &ldquo;Clone from&hellip;&rdquo;</p>
-<p><a href="../images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></p>
 <p>Under &ldquo;1. Select the source machine&rdquo; &ndash; choose a machine from the attached list:</p>
-<p><a href="../images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></p>
 <p>Under &ldquo;2. Select what to clone&rdquo;, choose &ldquo;Network&rdquo;, &ldquo;Storage&rdquo;, or both (here, we&rsquo;ve chosen &ldquo;Storage&rdquo;):</p>
-<p><a href="../images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></p>
 <p>Click &ldquo;Clone to machine&rdquo;. MAAS will report the status of the attempt.</p>
 <p><a href="#heading--lxd-auth-ux-improvements"><h3 id="heading--lxd-auth-ux-improvements">LXD authentication UX improvements</h3></a></p>
 <h4>Ten words or fewer</h4>
@@ -702,7 +702,7 @@ $
 <p>Suppose that, after identifying your LXD KVM, you choose &ldquo;Provide certificate and private key&rdquo;.  When you do so, the screen will extend to allow you to upload these items:</p>
 <p><a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img alt="" src="upload://rQ83izglHaGONtR03yUSYuDY9Sc.png"></a></p>
 <p>Paste or upload your certificate and private key, then click &ldquo;Next&rdquo; to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren&rsquo;t usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):</p>
-<p><a href="../images/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a></p>
 <p><a href="#heading--image-sync-performance"><h3 id="heading--image-sync-performance">Improved image sync performance</h3></a></p>
 <h4>Ten words or fewer</h4>
 <p>After downloading images, the rack controller syncs them much faster.</p>

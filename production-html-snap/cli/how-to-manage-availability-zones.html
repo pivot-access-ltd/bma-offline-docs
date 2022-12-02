@@ -436,6 +436,43 @@
 <li><a href="#heading--assign-a-node-to-a-zone">How to assign a machine to an availability zone</a></li>
 <li><a href="#heading--allocate-a-node-in-a-zone">How to allocate a machine in a particular zone</a></li>
 </ul>
+<p><a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a></p>
+<p>To see a list of availability zones, enter the following command:</p>
+<pre><code>maas $PROFILE zones read \
+| jq -r '([&quot;ZONE&quot;,&quot;NAME&quot;,&quot;DESCRIPTION&quot;]
+| (., map(length*&quot;-&quot;))), (.[] | [.id, .name, .description])
+| @tsv' | column -t
+</code></pre>
+<p>which produces output similar to:</p>
+<pre><code>ZONE  NAME         DESCRIPTION
+----  ----         -----------
+5     BizOffice
+1     default
+4     Inventory
+2     Medications
+3     Payroll
+6     ProServ
+</code></pre>
+<p><a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">How to add an availability zone</h2></a></p>
+<p>To create a zone, enter the following command:</p>
+<pre><code>maas $PROFILE zones create name=$ZONE_NAME description=$ZONE_DESCRIPTION
+</code></pre>
+<p><a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">How to edit an existing availability zone</h2></a></p>
+<p>To edit a zone, enter a command similar to the following:</p>
+<pre><code>maas $PROFILE zone update $OLD_ZONE_NAME name=$NEW_ZONE_NAME \
+description=$ZONE_DESCRIPTION
+</code></pre>
+<p><a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">How to delete an existing availability zone</h2></a></p>
+<p>To delete a zone, enter a command like this:</p>
+<pre><code>maas $PROFILE zone delete $ZONE_NAME
+</code></pre>
+<p><a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">How to assign a machine to an availability zone</h2></a></p>
+<p>To assign a machine to a zone, first retrieve the machine&rsquo;s system ID like this:</p>
+<pre><code>maas PROFILE machines read | jq '.[] | .hostname, .system_id'
+</code></pre>
+<p>Then enter the following command, using the system ID you just retrieved:</p>
+<pre><code>maas admin machine update $SYSTEM_ID zone=$ZONE_NAME
+</code></pre>
 <p><a href="#heading--allocate-a-node-in-a-zone"><h2 id="heading--allocate-a-node-in-a-zone">How to allocate a machine in a particular zone</h2></a></p>
 <p>Allocating a machine in a particular zone can only be done via the MAAS CLI.</p>
 <p>To deploy in a particular zone, call the <code>acquire</code> method in the region-controller API &lt;region-controller-api&gt; as before, but pass the <code>zone</code> parameter with the name of the zone. This method will allocate a machine in that zone, or fail with an HTTP 409 (&ldquo;conflict&rdquo;) error if the zone has no machines available that match your request.</p>

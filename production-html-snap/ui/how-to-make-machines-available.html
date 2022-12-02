@@ -430,11 +430,80 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>How to make machines available</h1><!-- "How to make machines available" -->
 <p>This article explains:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</a></li>
+<li><a href="#heading--how-to-clone-machines">How to clone machines</a></li>
+<li><a href="#heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</a></li>
+<li><a href="#heading--how-to-use-resource-pools">How to use resource pools</a></li>
+<li><a href="#heading--how-to-use-machine-storage">How to use machine storage</a></li>
+</ul>
 <p>This article also provides a <a href="#heading--storage-layouts-reference">storage layouts reference</a>.</p>
 <p>Most of the day-to-day work of managing machines is covered here. Utilising machines to do work &ndash; for example, commissioning, testing, and deploying them &ndash; is discussed in <a href="how-to-deploy-machines.html">How to deploy machines</a>.</p>
 <p><a href="#heading--how-to-create-delete-and-configure-machines"><h2 id="heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</h2></a></p>
 <p>This section shows you:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-add-a-machine-manually">How to add a machine manually</a></li>
+<li><a href="#heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</a></li>
+<li><a href="#heading--usb-pci-devices">How to manage attached USB and PCI devices</a></li>
+</ul>
 <p><a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a></p>
+<p>On the &lsquo;Machines&rsquo; page of the web UI, click the &lsquo;Add hardware&rsquo; button and then select &lsquo;Machine&rsquo;.</p>
+<p>Fill in the form and hit &lsquo;Save machine&rsquo;. In this example, you are adding an IPMI machine:</p>
+<p><a href="../images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></p>
+<p>The fields on the &ldquo;Add machine&rdquo; screen include the following items:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>Machine name</strong>: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.</p>
+</li>
+<li>
+<p><strong>Domain</strong>: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name &ldquo;maas&rdquo; by default.</p>
+</li>
+<li>
+<p><strong>Architecture</strong>: This field refers to the architecture of the machine being added.</p>
+</li>
+<li>
+<p><strong>Minimum Kernel</strong>: This field supplies a drop-down of possible kernels available for deployment on this machine.</p>
+</li>
+<li>
+<p><strong>Zone</strong>: This field allows you to set the availability zone, selected from AZs that you have already created (if any).</p>
+</li>
+<li>
+<p><strong>Resource pool</strong>: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).</p>
+</li>
+<li>
+<p><strong>MAC Address</strong>: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (&ldquo;:&rdquo;) separator, although some MAC addresses are written with dash (&ldquo;-&ldquo;) separators.</p>
+</li>
+<li>
+<p><strong>Power type</strong>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management-reference.html">Power management reference</a> for details on the available power types and the relevant parameters for each type.</p>
+</li>
+</ul>
+<p><a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a></p>
+<p>You can use the chassis feature to add multiple machines at once. To do this, instead of selecting &lsquo;Machine&rsquo; as above, choose &lsquo;Chassis&rsquo; from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:</p>
+<p><a href="../images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></p>
+<p>The required fields will change based on the type of chassis you choose.</p>
+<p><strong>NOTE:</strong> 
+As with the manual method, the underlying machines will require netbooting.</p>
+<p><a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h3></a></p>
+<p>To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-device delete $SYSTEM_ID $DEVICE_ID
+</code></pre>
+<p>where:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>$PROFILE   = your user profile (e.g., &ldquo;admin&rdquo;)</li>
+<li>$SYSTEM_ID = the ID of the machine in question (e.g., &ldquo;ngx7ry&rdquo;)</li>
+<li>$DEVICE_ID = the ID of the device you want to delete </li>
+</ul>
+<p>If the device is still present in the system, it will be recognised again (and thus &ldquo;recreated&rdquo;) when the machine is commissioned again.</p>
+<p><a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a></p>
+<p>Assume you have two machines available, like this:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></a></p>
+<p>Select the machine <em>to which you want to clone configuration</em>, and select &ldquo;Clone from&hellip;&rdquo;</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></a></p>
+<p>Under &ldquo;1. Select the source machine&rdquo; &ndash; choose a machine from the attached list:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></a></p>
+<p>Under &ldquo;2. Select what to clone&rdquo;, choose &ldquo;Network&rdquo;, &ldquo;Storage&rdquo;, or both (here, we&rsquo;ve chosen &ldquo;Storage&rdquo;):</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></a></p>
+<p>Click &ldquo;Clone to machine&rdquo;. MAAS will report the status of the attempt.</p>
 <p><a href="#heading--how-to-examine-machines-and-machine-details"><h2 id="heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</h2></a></p>
 <p>This section describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -448,18 +517,482 @@
 <li><a href="#heading--event-logs">How to find a machine&rsquo;s event logs</a></li>
 <li><a href="#heading--machine-config">How to find machine configuration info</a></li>
 </ul>
+<p><a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a></p>
+<p>To view the machine list, enter a command similar to this one:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,
+&quot;POWER&quot;,&quot;STATUS&quot;,&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;,&quot;VLAN&quot;,&quot;FABRIC&quot;,
+&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),(.[] | [.hostname, .system_id, 
+.power_state, .status_name, .owner // &quot;-&quot;,.tag_names[0] // &quot;-&quot;, 
+.pool.name,.boot_interface.vlan.name,.boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+</code></pre>
+<p>This will return a relatively compact machine listing:</p>
+<pre><code class="language-nohighlight">HOSTNAME      SYSID   POWER  STATUS     OWNER  TAGS                 POOL     VLAN      FABRIC    SUBNET
+ --------      -----   -----  ------     -----  ----                 ----     ----      ------    ------
+ lxd-vm-1      r8d6yp  off    Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ lxd-vm-2      tfftrx  off    Allocated  admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ lxd-vm-3      grwpwc  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ lxd-vm-4      6s8dt4  off    Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ lxd-vm-5      pyebgm  off    Allocated  admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ lxd-vm-6      ebnww6  off    New        -      pod-console-logging  default  untagged  fabric-1  
+ libvirt-vm-1  m7ffsg  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ libvirt-vm-2  kpawad  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ libvirt-vm-3  r44hr6  error  Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ libvirt-vm-4  s3sdkw  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+ ```
+
+You can view various details for your machines, by changing the `jq` command as desired:
+
+```nohighlight
+maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name,
+.boot_interface.vlan.name, .boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+</code></pre>
+<p>This command, for example, will display machine power status, life-cycle status, and various networking parameters:</p>
+<pre><code class="language-nohighlight">HOSTNAME      SYSID   POWER  STATUS     OWNER  TAGS                 POOL     VLAN      FABRIC    SUBNET
+--------      -----   -----  ------     -----  ----                 ----     ----      ------    ------
+lxd-vm-1      r8d6yp  off    Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+lxd-vm-2      tfftrx  off    Allocated  admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+lxd-vm-3      grwpwc  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+lxd-vm-4      6s8dt4  off    Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+lxd-vm-5      pyebgm  off    Allocated  admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+lxd-vm-6      ebnww6  off    New        -      pod-console-logging  default  untagged  fabric-1  
+libvirt-vm-1  m7ffsg  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+libvirt-vm-2  kpawad  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+libvirt-vm-3  r44hr6  error  Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+libvirt-vm-4  s3sdkw  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+libvirt-vm-5  48dg8m  off    Ready      -      pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+libvirt-vm-6  bacx77  on     Deployed   admin  pod-console-logging  default  untagged  fabric-1  10.124.141.0/24
+</code></pre>
+<p><a href="#heading--how-to-view-machine-details"><h3 id="heading--how-to-view-machine-details">How to view machine details</h3></a></p>
+<p>To view output similar to the MAAS UI machine details page, execute the following shell script:</p>
+<pre><code class="language-nohighlight">#!/bin/nohighlight
+
+maas admin machine read r3rd6h | jq '.' &gt; /tmp/machine-json
+cat /tmp/machine-json | jq -r '([.hostname,.status_name,&quot;| Power:&quot;,.power_state,&quot;| Kernel:&quot;,.hwe_kernel,&quot;| Owner:&quot;,.owner]) | @tsv' | column -t -o &quot; &quot; &gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;CPU:&quot;,.architecture,&quot;/&quot;,.cpu_count,&quot;core(s) /&quot;,.cpu_speed,&quot;Mhz&quot;,&quot;| Type:&quot;,.hardware_info.cpu_model]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;Memory:&quot;,.memory,&quot;MB | Storage:&quot;,.storage,&quot;MB | Power type:&quot;,.power_type]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;Zone:&quot;,.zone.name,&quot;| Resource pool:&quot;,.pool.name,&quot;| Domain:&quot;,.domain.name]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;Tags:&quot;,.tag_names[]]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;SYSTEM Vendor:&quot;,.hardware_info.system_vendor,&quot;| Product:&quot;,.hardware_info.system_product]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;.......Vsn:&quot;,.hardware_info.system_version,&quot;| Serial:&quot;,.hardware_info.system_serial]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;MAINBOARD Vendor:&quot;,.hardware_info.mainboard_vendor,&quot;| Product:&quot;,.hardware_info.mainboard_product]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;..........Firmware:&quot;,.hardware_info.mainboard_firmware_vendor]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;..........Firmware Vsn:&quot;,.hardware_info.mainboard_firmware_version,&quot;| Date:&quot;,.hardware_info.mainboard_firmware_date]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;NETWORK: Vendor:&quot;,.boot_interface.vendor]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;.........Name:&quot;,.boot_interface.name,&quot;| MAC:&quot;,.boot_interface.mac_address,&quot;| Link speed:&quot;,.boot_interface.link_speed,&quot;Mbps&quot;]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-json | jq -r '([&quot;.........Fabric:&quot;,.boot_interface.vlan.fabric,&quot;| MAAS DHCP:&quot;,.boot_interface.vlan.dhcp_on,&quot;| SR-IOV:&quot;,.boot_interface.sriov_max_vf]) | @tsv' | column -t -o &quot; &quot; &gt;&gt; /tmp/machine-details
+cat /tmp/machine-details
+</code></pre>
+<p>This shell script should produce output similar to the following:</p>
+<pre><code class="language-nohighlight">merry-cobra Deployed | Power: on | Kernel: ga-20.04 | Owner: admin
+CPU: amd64/generic / 1 core(s) / 1600 Mhz | Type: Intel(R) Core(TM) i5-8265U CPU
+Memory: 2048 MB | Storage: 8000.004096 MB | Power type: lxd
+Zone: default | Resource pool: default | Domain: maas
+Tags: pod-console-logging virtual
+SYSTEM Vendor: QEMU | Product: Standard PC (Q35 + ICH9, 2009)
+.......Vsn: pc-q35-5.2 | Serial: Unknown
+MAINBOARD Vendor: Canonical Ltd. | Product: LXD
+..........Firmware: EFI Development Kit II / OVMF
+..........Firmware Vsn: 0.0.0 | Date: 02/06/2015
+NETWORK: Vendor: Red Hat, Inc.
+.........Name: enp5s0 | MAC: 00:16:3e:cc:17:58 | Link speed: 0 Mbps
+.........Fabric: fabric-5 | MAAS DHCP: true | SR-IOV: 0
+</code></pre>
 <p><a href="#heading--how-to-use-resource-pools"><h2 id="heading--how-to-use-resource-pools">How to use resource pools</h2></a></p>
 <p>This section will explain:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--add-a-resource-pool">How to add a resource pool</a></li>
+<li><a href="#heading--deleting-a-resource-pool">How to delete a resource pool</a></li>
+<li><a href="#heading--add-a-node-to-a-resource-pool">How to add a node to a resource pool</a></li>
+<li><a href="#heading--removing-a-node-from-a-resource-pool">How to remove a node from a resource pool</a></li>
+<li><a href="#heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</a></li>
+<li><a href="#heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</a></li>
+</ul>
+<p>Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab.   Also note that all MAAS installations have a resource pool named &ldquo;default.&rdquo; MAAS automatically adds new machines to the default resource pool.</p>
+<p><a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a></p>
+<p>Use the Add pool button to add a new resource pool.</p>
+<p>After giving your new pool a name and description, click the Add pool button:</p>
+<p><a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a></p>
+<p><a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a></p>
+<p>To delete a resource pool, click the trashcan icon next to the pool.</p>
+<p><a href="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a></p>
+<p><strong>NOTE:</strong> 
+If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.</p>
+<p><a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a></p>
+<p>To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.</p>
+<p><a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a></p>
+<p><a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a></p>
+<p>To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
+<p><a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a></p>
+<p>You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host&rsquo;s configuration:</p>
+<p><a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a></p>
+<p><a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a></p>
+<p>To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
 <p><a href="#heading--how-to-use-machine-storage"><h2 id="heading--how-to-use-machine-storage">How to use machine storage</h2></a></p>
 <p>This section will explain:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-set-global-storage-layouts">How to set global storage layouts</a></li>
+<li><a href="#heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</a></li>
+<li><a href="#heading--how-to-specify-conditional-erasure-types">How to specify conditional erasure types</a></li>
+<li><a href="#heading--how-to-erase-disks">How to erase disks</a></li>
+<li><a href="#heading--how-to-manage-block-devices">How to manage block devices</a></li>
+<li><a href="#heading--how-to-manage-partitions">How to manage partitions</a></li>
+<li><a href="#heading--how-to-manage-vmfs-datastores">How to manage VMFS datastores</a></li>
+<li><a href="#heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</a></li>
+</ul>
 <p><a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a></p>
 <p>Layouts can be set globally and on a per-machine basis.</p>
 <p><strong>NOTE:</strong> 
 The new default will only apply to newly-commissioned machines.</p>
 <p><a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a></p>
+<p>An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of &lsquo;Ready&rsquo;. This is only possible via the CLI: to see how, click the &ldquo;CLI&rdquo; option for your version and delivery method above.</p>
 <p><strong>NOTE:</strong> 
 Only an administrator can modify storage at the block device level (providing the machine has a status of &lsquo;Ready&rsquo;).</p>
+<p><a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a></p>
+<p>A default erasure configuration can be set on the &lsquo;Settings&rsquo; page by selecting the &lsquo;Storage&rsquo; tab.</p>
+<p><a href="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png"></a></p>
+<p>If option &lsquo;Erase machines&rsquo; disks prior to releasing&rsquo; is chosen then users will be compelled to use disk erasure. That option will be pre-filled in the machine&rsquo;s view and the user will be unable to remove the option.</p>
+<p>With the above defaults, the machine&rsquo;s view will look like this when the Release action is chosen:</p>
+<p><a href="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></p>
+<p>Where &lsquo;secure erase&rsquo; and &lsquo;quick erase&rsquo; can then be configured by the user.</p>
 <p><a href="#heading--how-to-define-custom-storage-layouts"><h2 id="heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</h2></a></p>
+<p>MAAS 3.1 allows you to define a custom storage layout for a machine, via a custom commissioning script.  You must upload a script which conforms to the following rules:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>it must run after the <code>40-maas-01-machine-resources</code> script and before the <code>50-maas-01-commissioning</code> one, so it should have a name that starts with anything between <code>41-</code> and <code>49-</code>. This ensures the script can access the JSON file created by the former which provides info about the machine hardware and network resources. In addition, the custom script can directly inspect the machine it&rsquo;s running on to determine how to configure storage.</li>
+<li>it can read machine hardware/network information from the JSON file at the path specified by <code>$MAAS_RESOURCES_FILE</code></li>
+<li>it must output a JSON file at the path specified by <code>$MAAS_STORAGE_CONFIG_FILE</code> with the desired storage layout</li>
+<li>names of disks provided in the custom layout must match the ones detected by MAAS and provided in the resources file.</li>
+</ul>
+<h3>Configuration format</h3>
+<p>The configuration contains two main sections:
+- <code>layout</code>, which lists the desired storage layout in terms of disks and volumes, along with their setup (partitions, volumes, &hellip;).
+  This consists of a dictionary of device names and their configuration. Each device must have a <code>type</code> property (see below for supported types).
+- <code>mounts</code>, which lists the desired filesystem mount points.
+  As an example:</p>
+<pre><code class="language-json">&quot;mounts&quot;: {
+  &quot;/&quot;: {
+    &quot;device&quot;: &quot;sda2&quot;,
+    &quot;options&quot;: &quot;noatime&quot;
+  },
+  &quot;/boot/efi&quot;: {
+    &quot;device&quot;: &quot;sda1&quot;
+  },
+  &quot;/data&quot;: {
+    &quot;device&quot;: &quot;raid0&quot;
+  }     
+}
+</code></pre>
+<p>A complete <code>$MAAS_STORAGE_CONFIG_FILE</code> would look like this:</p>
+<pre><code class="language-json">{
+    &quot;layouts&quot;: {
+        &quot;sda&quot;: {
+           ...
+        },
+        &quot;raid0&quot;: {
+           ...
+        },
+        ...
+    },
+    &quot;mounts&quot;: {
+       &quot;/&quot;: {
+           ...
+       },
+       ...
+    }
+}
+</code></pre>
+<p>The following device types are supported in the <code>"layout"</code> section:</p>
+<h4>Disk</h4>
+<pre><code class="language-json">&quot;sda&quot;: {
+  &quot;type&quot;: &quot;disk&quot;,
+  &quot;ptable&quot;: &quot;gpt&quot;,
+  &quot;boot&quot;: true,
+  &quot;partitions&quot;: [
+    {
+      &quot;name&quot;: &quot;sda1&quot;,
+      &quot;fs&quot;: &quot;vfat&quot;,
+      &quot;size&quot;: &quot;100M&quot;
+      &quot;bootable&quot;: true,
+    }
+  ]
+}
+</code></pre>
+<p>A <code>disk</code> entry defines a physical disk.
+The following details can be specified:
+- the partition table type (<code>ptable</code>), which can be <code>gpt</code> or <code>mbr</code>
+- whether it should be selected as <code>boot</code> disk
+- optionally, a list of partitions to create, with their <code>size</code> and filesystem type (<code>fs</code>)</p>
+<h4>LVM</h4>
+<pre><code class="language-json">&quot;lvm0&quot;: {
+  &quot;type&quot;: &quot;lvm&quot;,
+  &quot;members&quot;: [
+    &quot;sda1&quot;,
+    &quot;sdb1&quot;,
+  ],
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;data1&quot;,
+      &quot;size&quot;: &quot;5G&quot;,
+      &quot;fs&quot;: &quot;ext4&quot;
+    },
+    {
+      &quot;name&quot;: &quot;data2&quot;,
+      &quot;size&quot;: &quot;7G&quot;,
+      &quot;fs&quot;: &quot;btrfs&quot;
+    }
+  ]
+}
+</code></pre>
+<p>An <code>lvm</code> entry defines a VG (volume group) composed by a set of disks or partitions (listed as <code>members</code>). Optionally it&rsquo;s possible to specify the the LVs (logical volumes) to create.
+Those are defined similarly to partitions, with a name and size (and optionally the filesystem).</p>
+<h4>Bcache</h4>
+<pre><code class="language-json">&quot;bcache0&quot;: {
+  &quot;type&quot;: &quot;bcache&quot;,
+  &quot;cache-device&quot;: &quot;sda&quot;,
+  &quot;backing-device&quot;: &quot;sdf3&quot;,
+  &quot;cache-mode&quot;: &quot;writeback&quot;,
+  &quot;fs&quot;: &quot;ext4&quot;
+}
+</code></pre>
+<p>A <code>bcache</code>  entry must specify a device to use as cache and one to use as storage. Both can be either a partition or a disk.
+Optionally the <code>cache-mode</code> for the Bcache can be specified.</p>
+<h4>RAID</h4>
+<pre><code class="language-json">&quot;myraid&quot;: {
+  &quot;type&quot;: &quot;raid&quot;,
+  &quot;level&quot;: 5,
+  &quot;members&quot;: [
+    &quot;sda&quot;,
+    &quot;sdb&quot;,
+    &quot;sdc&quot;,
+  ],
+  &quot;spares&quot;: [
+    &quot;sdd&quot;,
+    &quot;sde&quot;
+  ],
+  &quot;fs&quot;: &quot;btrfs&quot;
+</code></pre>
+<p>A <code>raid</code> entry defines a RAID with a set of member devices.
+Spare devices can also be specified.</p>
+<h3>Configuration examples</h3>
+<p>Here&rsquo;s a few examples of custom storage layout configurations that a script could output to the <code>$MAAS_STORAGE_CONFIG_FILE</code>. The examples assumes that the machine has 5 disks (named <code>sda</code> to <code>sde</code>).</p>
+<p>Note that there&rsquo;s no need to add entries for those devices in the <code>layout</code> section if the disks are not explicitly partitioned, but just used by other devices (e.g. RAID or LVM).</p>
+<h4>Simple single-disk layout with GPT partitioning</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;sda&quot;: {
+      &quot;type&quot;: &quot;disk&quot;,
+      &quot;ptable&quot;: &quot;gpt&quot;,
+      &quot;boot&quot;: true,
+      &quot;partitions&quot;: [
+        {
+          &quot;name&quot;: &quot;sda1&quot;,
+          &quot;fs&quot;: &quot;vfat&quot;,
+          &quot;size&quot;: &quot;500M&quot;,
+          &quot;bootable&quot;: true
+        },
+        {
+          &quot;name&quot;: &quot;sda2&quot;,
+          &quot;size&quot;: &quot;5G&quot;,
+          &quot;fs&quot;: &quot;ext4&quot;
+        },
+        {
+          &quot;name&quot;: &quot;sda3&quot;,
+          &quot;size&quot;: &quot;2G&quot;,
+          &quot;fs&quot;: &quot;swap&quot;
+        },
+        {
+          &quot;name&quot;: &quot;sda4&quot;,
+          &quot;size&quot;: &quot;120G&quot;,
+          &quot;fS&quot;: &quot;ext4&quot;
+        }
+      ]
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/&quot;: {
+      &quot;device&quot;: &quot;sda2&quot;,
+      &quot;options&quot;: &quot;noatime&quot;
+    },
+    &quot;/boot/efi&quot;: {
+      &quot;device&quot;: &quot;sda1&quot;
+    },
+    &quot;/data&quot;: {
+      &quot;device&quot;: &quot;sda4&quot;
+    },
+    &quot;none&quot;: {
+      &quot;device&quot;: &quot;sda3&quot;
+    }
+  }
+}
+</code></pre>
+<p>In the <code>mounts</code> section, options for mount points can be specified. For swap, an entry must be present (with any unique name that doesn&rsquo;t start with a <code>/</code>), otherwise the swap will be created but not activated.</p>
+<h4>RAID 5 setup (with spare devices)</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;storage&quot;: {
+      &quot;type&quot;: &quot;raid&quot;,
+      &quot;level&quot;: 5,
+      &quot;members&quot;: [
+        &quot;sda&quot;,
+        &quot;sdb&quot;,
+        &quot;sdc&quot;
+      ],
+      &quot;spares&quot;: [
+        &quot;sdd&quot;,
+        &quot;sde&quot;
+      ],
+      &quot;fs&quot;: &quot;btrfs&quot;
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/data&quot;: {
+      &quot;device&quot;: &quot;storage&quot;
+    }
+  }
+}
+</code></pre>
+<p>Both full disks and partitions can be used as RAID members.</p>
+<h4>LVM with pre-defined volumes</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;storage&quot;: {
+      &quot;type&quot;: &quot;lvm&quot;,
+      &quot;members&quot;: [
+        &quot;sda&quot;,
+        &quot;sdb&quot;,
+        &quot;sdc&quot;,
+        &quot;sdd&quot;
+      ],
+      &quot;volumes&quot;: [
+        {
+          &quot;name&quot;: &quot;data1&quot;,
+          &quot;size&quot;: &quot;1T&quot;,
+          &quot;fs&quot;: &quot;ext4&quot;
+        },
+        {
+          &quot;name&quot;: &quot;data2&quot;,
+          &quot;size&quot;: &quot;2.5T&quot;,
+          &quot;fs&quot;: &quot;btrfs&quot;
+        }
+      ]
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/data1&quot;: {
+      &quot;device&quot;: &quot;data1&quot;
+    },
+    &quot;/data2&quot;: {
+      &quot;device&quot;: &quot;data2&quot;
+    }
+  }
+}
+</code></pre>
+<p>If no volumes are specified, the volume group is still created.</p>
+<h4>Bcache</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+     &quot;data1&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;cache-device&quot;: &quot;sda&quot;,
+      &quot;backing-device&quot;: &quot;sdb&quot;,
+      &quot;cache-mode&quot;: &quot;writeback&quot;,
+      &quot;fs&quot;: &quot;ext4&quot;
+    },
+    &quot;data2&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;cache-device&quot;: &quot;sda&quot;,
+      &quot;backing-device&quot;: &quot;sdc&quot;,
+      &quot;fs&quot;: &quot;btrfs&quot;
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/data1&quot;: {
+      &quot;device&quot;: &quot;data1&quot;
+    },
+    &quot;/data2&quot;: {
+      &quot;device&quot;: &quot;data2&quot;
+    }
+  }
+}
+</code></pre>
+<p>The same cache set can be used by different bcaches by specifying the same <code>backing-device</code> for them.</p>
+<h4>LVM on top of RAID with Bcache</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;bcache0&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sda&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache1&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sdb&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache2&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sdc&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache3&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sdd&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache4&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sde&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;raid&quot;: {
+      &quot;type&quot;: &quot;raid&quot;,
+      &quot;level&quot;: 5,
+      &quot;members&quot;: [
+        &quot;bcache0&quot;,
+        &quot;bcache1&quot;,
+        &quot;bcache2&quot;
+      ],
+      &quot;spares&quot;: [
+        &quot;bcache3&quot;,
+        &quot;bcache4&quot;
+      ]
+    },
+    &quot;lvm&quot;: {
+      &quot;type&quot;: &quot;lvm&quot;,
+      &quot;members&quot;: [
+        &quot;raid&quot;
+      ],
+      &quot;volumes&quot;: [
+        {
+          &quot;name&quot;: &quot;root&quot;,
+          &quot;size&quot;: &quot;10G&quot;,
+          &quot;fs&quot;: &quot;ext4&quot;
+        },
+        {
+          &quot;name&quot;: &quot;data&quot;,
+          &quot;size&quot;: &quot;3T&quot;,
+          &quot;fs&quot;: &quot;btrfs&quot;
+        }
+      ]
+    }
+  },
+  &quot;mounts&quot;: {
+   &quot;/&quot;: {
+      &quot;device&quot;: &quot;root&quot;
+    },
+    &quot;/data&quot;: {
+      &quot;device&quot;: &quot;data&quot;
+    }
+  }
+}
+</code></pre>
+<p>The RAID is created by using 5 bcache devices, each one using a different disk and the same SSD cache device. LVM is created on top of the RAID device and volumes are then created in it, to provide partitions.</p>
 <p><a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a></p>
 <p>There are three layout types:</p>
 <ol>

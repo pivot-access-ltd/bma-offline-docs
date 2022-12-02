@@ -86,7 +86,7 @@ All of these states and actions represent the possible life-cycle of a machine. 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following tables.
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages"]
 | Action/State | New | Ready | Allocated | Deployed | Locked | Rescue | Broken | Enlist deployed |
 |:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|:---------------:|	
 | Commission   | X   | X     |          |          |        |        |   X    |  X (w/scripts)  |
@@ -135,12 +135,12 @@ Since these actions are not necessarily sequential, and the available actions ch
 When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
 You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
 
 In the case of already-deployed machines enlisted by MAAS, some of the possible actions may appear to be available, but either don't work or ultimately appear to fail, without affecting the actual status of the deployed machine.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages" view="CLI"]
 You can change machine state, via the CLI, with the `machine` command, which offers the following options:
 
 ```nohighlight
@@ -327,7 +327,7 @@ Regardless of how MAAS adds a machine, there are no special requirements for the
 <a href="#heading--about-cloning-machines"><h4 id="heading--about-cloning-machines">About cloning machines</h4></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages"]
 MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. 
 
 Creating a machine profile is a repetitive task. Based on the responses to our survey -- and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   
@@ -372,7 +372,7 @@ Cloning machines is available starting with MAAS version 3.1.
 <a href="#heading--enlisting-deployed-machines"><h4 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h4></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages"]
 In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.
 
 For one, you might not be able to disrupt the workload in order to network boot it. But also, the machine would be marked as Ready, which is incorrect.
@@ -449,7 +449,7 @@ When a machine boots, MAAS first instructs it to run cloud-init to set up SSH ke
 - **maas-serial-ports:** this script lists what serial ports are available on the machine.  **Runs in parallel with other scripts.**
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 [note]
 As of MAAS version 3.0, **40-maas-01-network-interfaces** is no longer used by MAAS.
 [/note]
@@ -460,7 +460,7 @@ As of MAAS version 3.0, **40-maas-01-network-interfaces** is no longer used by M
 [/tabs]
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 - **50-maas-01-commissioning:** this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.
 [/tab]
 [tab version="v2.9 Snap,v2.9 Packages"]
@@ -517,7 +517,7 @@ MAAS keeps extensive logs of the commissioning process for each machine. These l
 <a href="#heading--about-disabling-individual-boot-methods"><h4 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h4></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 It is possible to disable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled `isc-dhcpd` to not respond to the associated [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture). External DHCP servers must be configured manually.
 
 To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or [boot architecture code](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture) in octet or hex form. 
@@ -727,7 +727,7 @@ The machine list is the basic dashboard for many MAAS operations.  In this subse
 In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a>
 
 Rolling the cursor over status icons often reveals more details. For example, a failed hardware test script will place a warning icon alongside the hardware type tested by the script. Rolling the cursor over this will reveal which test failed.  Likewise, you can find some immediate options by rolling over the column data items in the machines table.
@@ -747,7 +747,7 @@ The 'Filter by' section limits the machines listed in the table to selected keyw
 [/note]
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 ```nohighlight
 FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
 ----               -----  ------     -----  ----     ----       ----     ----
@@ -842,7 +842,7 @@ The rest of the cards on the Machine summary are either self-explanatory, or the
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognise these devices and make them visible to you when a machine is commissioned.
 
 For example, the machine details presents USB and PCI devices like this:

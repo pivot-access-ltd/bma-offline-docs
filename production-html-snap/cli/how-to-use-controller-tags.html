@@ -427,6 +427,182 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to use controller tags</h1><!-- "How to use controller tags" -->
 <p>This article will show you:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--discover-the-id-of-your-region-controllers">How to discover the ID of your region controller(s)</a></li>
+<li><a href="#heading--assign-tags-to-a-region-controller">How to assign tags to a region controller</a></li>
+<li><a href="#heading--remove-tags-from-a-region-controller">How to remove tags from a region controller</a></li>
+<li><a href="#heading--list-tags-for-all-region-controllers">How to list tags for all region controllers</a></li>
+<li><a href="#heading--view-tags-for-one-region-controller">How to view tags for one region controller</a></li>
+<li><a href="#heading--discover-the-id-of-your-rack-controllers">How to discover the ID of your rack controller(s)</a></li>
+<li><a href="#heading--assign-tags-to-a-rack-controller">How to assign tags to a rack controller</a></li>
+<li><a href="#heading--remove-tags-from-a-rack-controller">How to remove tags from a rack controller</a></li>
+<li><a href="#heading--list-tags-for-all-rack-controllers">How to list tags for all rack controllers</a></li>
+<li><a href="#heading--view-tags-for-one-rack-controller">How to view tags for one rack controller</a></li>
+</ul>
+<p><a href="#heading--discover-the-id-of-your-region-controllers"><h2 id="heading--discover-the-id-of-your-region-controllers">How to discover the ID of your region controller(s)</h2></a></p>
+<p>You can discover the ID of your region controller(s) with the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE region-controllers read \
+| jq -r '([&quot;name&quot;,&quot;id&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id])
+| @tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin region-controllers read \
+| jq -r '([&quot;name&quot;,&quot;id&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id])
+| @tsv' | column -t
+</code></pre>
+<p>Typical output would look something like this:</p>
+<pre><code class="language-nohighlight">name                         id
+----                         --
+bill-Lenovo-Yoga-C740-15IML  86xya8
+</code></pre>
+<p><a href="#heading--assign-tags-to-a-region-controller"><h2 id="heading--assign-tags-to-a-region-controller">How to assign tags to a region controller</h2></a></p>
+<p>To add tags to a region controller, you can use a command of this form:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+</code></pre>
+<p>If you need to find the ID of your region controller(s), you can <a href="#heading--discover-the-id-of-your-region-controllers">look it up</a>.</p>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin tag update-nodes virtual add=86xya8
+</code></pre>
+<p>This command produces output similar to the following:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;added&quot;: 1,
+    &quot;removed&quot;: 0
+}
+</code></pre>
+<p>You can check your work by <a href="#heading--list-tags-for-all-region-controllers">listing all tags for your region controllers</a>.</p>
+<p><a href="#heading--remove-tags-from-a-region-controller"><h2 id="heading--remove-tags-from-a-region-controller">How to remove tags from a region controller</h2></a></p>
+<p>To remove tags from a region controller, you can use a command like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
+</code></pre>
+<p>If you need to find the ID of your region controller(s), you can <a href="#heading--discover-the-id-of-your-region-controllers">look it up</a>.</p>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin tag update-nodes virtual remove=86xya8
+</code></pre>
+<p>This command produces output similar to the following:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;added&quot;: 0,
+    &quot;removed&quot;: 1
+}
+</code></pre>
+<p>You can check your work by <a href="#heading--list-tags-for-all-region-controllers">listing all tags for your region controllers</a>.</p>
+<p><a href="#heading--list-tags-for-all-region-controllers"><h2 id="heading--list-tags-for-all-region-controllers">How to list tags for all region controllers</h2></a></p>
+<p>To list tags for all region controllers, you can use a command similar to this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE region-controllers read | jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin region-controllers read | jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+</code></pre>
+<p>This will produce output something like this:</p>
+<pre><code class="language-nohighlight">hostname                     sysid   tags
+--------                     -----   ----
+bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
+</code></pre>
+<p><a href="#heading--view-tags-for-one-region-controller"><h2 id="heading--view-tags-for-one-region-controller">How to view tags for one region controller</h2></a></p>
+<p>To view tags for a specific region controller, you can try a command like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE region-controller read $SYSTEM_ID | jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]|(.,map(length*&quot;-&quot;))),([.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+</code></pre>
+<p>If you need to find the ID of your region controller(s), you can <a href="#heading--discover-the-id-of-your-region-controllers">look it up</a>.</p>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin region-controller read 86xya8 \
+| jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]
+|(.,map(length*&quot;-&quot;))),([.hostname,.system_id,.tag_names[]])
+| @tsv' | column -t
+</code></pre>
+<p>This should produce output similar to the following:</p>
+<pre><code class="language-nohighlight">hostname                     sysid   tags
+--------                     -----   ----
+bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
+</code></pre>
+<p><a href="#heading--discover-the-id-of-your-rack-controllers"><h2 id="heading--discover-the-id-of-your-rack-controllers">How to discover the ID of your rack controller(s)</h2></a></p>
+<p>You can discover the ID of your rack controller(s) with the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE rack-controllers read \
+| jq -r '([&quot;name&quot;,&quot;id&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id])
+| @tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin rack-controllers read \
+| jq -r '([&quot;name&quot;,&quot;id&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id])
+| @tsv' | column -t
+</code></pre>
+<p>Typical output would look something like this:</p>
+<pre><code class="language-nohighlight">name                         id
+----                         --
+bill-Lenovo-Yoga-C740-15IML  86xya8
+</code></pre>
+<p><a href="#heading--assign-tags-to-a-rack-controller"><h2 id="heading--assign-tags-to-a-rack-controller">How to assign tags to a rack controller</h2></a></p>
+<p>To add tags to a rack controller, you can use a command of this form:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tag update-nodes $TAG_NAME add=$SYSTEM_ID
+</code></pre>
+<p>If you need to find the ID of your rack controller(s), you can <a href="#heading--discover-the-id-of-your-rack-controllers">look it up</a>.</p>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin tag update-nodes virtual add=86xya8
+</code></pre>
+<p>This command produces output similar to the following:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;added&quot;: 1,
+    &quot;removed&quot;: 0
+}
+</code></pre>
+<p>You can check your work by <a href="#heading--list-tags-for-all-rack-controllers">listing all tags for your rack controllers</a>.</p>
+<p><a href="#heading--remove-tags-from-a-rack-controller"><h2 id="heading--remove-tags-from-a-rack-controller">How to remove tags from a rack controller</h2></a></p>
+<p>To remove tags from a rack controller, you can use a command like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE tag update-nodes $TAG_NAME remove=$SYSTEM_ID
+</code></pre>
+<p>If you need to find the ID of your rack controller(s), you can <a href="#heading--discover-the-id-of-your-rack-controllers">look it up</a>.</p>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin tag update-nodes virtual remove=86xya8
+</code></pre>
+<p>This command produces output similar to the following:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;added&quot;: 0,
+    &quot;removed&quot;: 1
+}
+</code></pre>
+<p>You can check your work by <a href="#heading--list-tags-for-all-rack-controllers">listing all tags for your rack controllers</a>.</p>
+<p><a href="#heading--list-tags-for-all-rack-controllers"><h2 id="heading--list-tags-for-all-rack-controllers">How to list tags for all rack controllers</h2></a></p>
+<p>To list tags for all rack controllers, you can use a command similar to this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE rack-controllers read | jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin rack-controllers read | jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+</code></pre>
+<p>This will produce output something like this:</p>
+<pre><code class="language-nohighlight">hostname                     sysid   tags
+--------                     -----   ----
+bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
+</code></pre>
+<p><a href="#heading--view-tags-for-one-rack-controller"><h2 id="heading--view-tags-for-one-rack-controller">How to view tags for one rack controller</h2></a></p>
+<p>To view tags for a specific rack controller, you can try a command like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE rack-controller read $SYSTEM_ID | jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]|(.,map(length*&quot;-&quot;))),([.hostname,.system_id,.tag_names[]]) | @tsv' | column -t
+'''
+
+If you need to find the ID of your rack controller(s), you can [look it up](#heading--discover-the-id-of-your-rack-controllers).
+
+For example:
+
+```nohighlight
+maas admin rack-controller read 86xya8 \
+| jq -r '([&quot;hostname&quot;,&quot;sysid&quot;,&quot;tags&quot;]
+|(.,map(length*&quot;-&quot;))),([.hostname,.system_id,.tag_names[]])
+| @tsv' | column -t
+</code></pre>
+<p>This should produce output similar to the following:</p>
+<pre><code class="language-nohighlight">hostname                     sysid   tags
+--------                     -----   ----
+bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
+</code></pre>
     </div>
   </body>
 </html>

@@ -432,6 +432,99 @@
 
 <p>Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.</p>
 <p><a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a></p>
+<p>This article will help you learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--work-with-static-annotations">How to work with static annotations</a></li>
+<li><a href="#heading--work-with-dynamic-workload-annotations">How to work with dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a></p>
+<p>This subsection will help you learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--create-and-assign-static-annotations">How to create and assign static annotations</a></li>
+<li><a href="#heading--delete-static-annotations">How to delete static annotations</a></li>
+<li><a href="#heading--view-static-annotations">How to view static annotations</a></li>
+<li><a href="#heading--work-with-dynamic-workload-annotations">How to work with with dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--create-and-assign-static-annotations"><h4 id="heading--create-and-assign-static-annotations">How to create and assign static annotations</h4></a></p>
+<p>To create and assign static annotations (a note) to a machine, follow this procedure:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Go to the machine list and click on the machine of interest:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>This will bring up a machine summary for that machine:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Select &ldquo;Configuration&rdquo; and click the &ldquo;Edit&rdquo; button to the right of the &ldquo;Machine configuration&rdquo; section:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Add free-form notes in the &ldquo;Note&rdquo; field, as desired.</p>
+</li>
+<li>
+<p>Click &ldquo;Save changes&rdquo; to update the machine&rsquo;s configuration.</p>
+</li>
+</ul>
+<p><a href="#heading--delete-static-annotations"><h4 id="heading--delete-static-annotations">How to delete static annotations</h4></a></p>
+<p>To delete static annotations (a note) from a machine, follow this procedure:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Go to the machine list and click on the machine of interest:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>This will bring up a machine summary for that machine:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a083bd0b3253839df3a57fc21e26439ce2e114dd.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Select &ldquo;Configuration&rdquo; and click the &ldquo;Edit&rdquo; button to the right of the &ldquo;Machine configuration&rdquo; section:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9fda18183c567e62dea80fce01497227727e7bb.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Edit the free-form notes in the &ldquo;Note&rdquo; field, as desired.</p>
+</li>
+<li>
+<p>Click &ldquo;Save changes&rdquo; to update the machine&rsquo;s configuration.</p>
+</li>
+</ul>
+<p><a href="#heading--view-static-annotations"><h4 id="heading--view-static-annotations">How to view static annotations</h4></a></p>
+<p>To view static annotations, you can follow this procedure:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Go to the machine list and look at the machine of interest; you should see the first few characters of a note in the bottom half of the column marked &ldquo;POOL/NOTE:&rdquo;</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3286feef733f4b56a94708d3af044c1523e78369.png"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Click on the machine, which will bring up a machine summary for that machine. Switch to the configuration tab to see the full note:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9a324a428a3374b616b2986ee5f56d13eb1e07d.png"></a></p>
+<p><a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">How to work with dynamic (workload) annotations</h3></a></p>
+<p>This subsection will help you learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--view-dynamic-workload-annotations-for-one-machine">How to view dynamic (workload) annotations for one machine</a></li>
+<li><a href="#heading--filter-on-dynamic-workload-annotations">How to filter on dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--view-dynamic-workload-annotations-for-one-machine"><h4 id="heading--view-dynamic-workload-annotations-for-one-machine">How to view dynamic (workload) annotations for one machine</h4></a></p>
+<p>To view the dynamic (workload) annotations for one machine, do the following:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Go to the machine list and select the machine of interest by clicking on its hyperlinked name.</p>
+</li>
+<li>
+<p>In the machine summary that comes up, look for the &ldquo;Workload Annotations&rdquo; card, in the lower, right-hand corner:</p>
+</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7def7a50f9c854f7aae0efc34897338c46c32c0.png"></a></p>
+<p><a href="#heading--filter-on-dynamic-workload-annotations"><h4 id="heading--filter-on-dynamic-workload-annotations">How to filter on dynamic (workload) annotations</h4></a></p>
+<p>To filter machines by dynamic (workload) annotations, use the following procedure:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Go to the machine list and select the &ldquo;Filter&rdquo; drop-down; open the &ldquo;Workload&rdquo; segment:</li>
+</ul>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/946fb41e9cefb10a0b59787ce22b70a91b248d01.jpeg"></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Select one or more values from this list to filter the machine list by these workload annotations.</li>
+</ul>
     </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <!-- "How to enable MAAS native TLS encryption" -->
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages"]
 <a href="#heading--about-maas-native-tls"><h2 id="heading--about-maas-native-tls">About MAAS Native TLS</h2></a>
 
 MAAS version 3.2 has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.
