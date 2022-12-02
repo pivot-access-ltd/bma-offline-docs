@@ -398,8 +398,7 @@ The following table describes the expanded filter set for the MAAS machine list:
 See [How to search MAAS](/t/how-to-search-maas/5192) for more details on how to use these parameters.
 
 
-| Parameter (in bold)                  | Shows nodes...                   | Dyn | Grp | Man |
-| (with example)                       |                                  |     |     |     |
+| Parameter (bold) w/example           | Shows nodes...                   | Dyn | Grp | Man |
 |--------------------------------------|----------------------------------|-----|-----|-----|
 | **arch**:(=architecture)             | with "architecture"              |     | Grp |     |
 | arch:(!=architecture)                | NOT with "architecture"          | Dyn |     |     |
