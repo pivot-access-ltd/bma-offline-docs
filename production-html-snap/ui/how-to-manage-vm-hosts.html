@@ -409,29 +409,11 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>How to manage VM hosts</h1><!-- "How to manage VM hosts" -->
+  <h1>How to create VM hosts</h1><!-- "How to create VM hosts" -->
 <p>In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself. Once that&rsquo;s done, you can add and manage VM hosts &ndash; and subsequently, create VMs to act as MAAS machines.  This article explains:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--maas-bridge-web-ui">How to set up a VM host bridge with the web UI</a></li>
-<li><a href="#heading--maas-bridge-netplan">How to set up a VM host bridge with netplan</a></li>
-<li><a href="#heading--maas-bridge-libvirt">How to set up a VM host bridge with libvirt</a></li>
-<li><a href="#heading--set-up-ssh">How to set up SSH for use by libvirt</a></li>
-<li><a href="#heading--adding-a-vm-host">How to add a VM host</a></li>
-<li><a href="#heading--configuration">How to configure a VM host</a></li>
-<li><a href="#heading--lxd-clusters">How to use LXD clusters</a></li>
-</ul>
 <p>To enable VM host networking features, MAAS must match the VM host IP address of a potential VM host with a known device (a machine or controller). For example, if a machine not known to MAAS is set up as a VM host, enhanced interface selection features will not be available.</p>
 <p><strong>NOTE:</strong> 
 It&rsquo;s essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.</p>
-<p><a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">How to set up a VM host bridge with the web UI</h2></a></p>
-<p>You can use the MAAS UI to configure a bridge to connect a VM host to MAAS:</p>
-<p>Select the machine you want to use as a VM host, switch to the &ldquo;Network&rdquo; tab. Select the network where you want to create the bridge and click &ldquo;Create bridge:&rdquo;</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg"></a> </p>
-<p>Configure the bridge on a subnet MAAS controls.  You may use any IP mode for the bridge:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg"></a> </p>
-<p>When you&rsquo;re done, it should look something like this:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg"></a> </p>
-<p>Then you can deploy Ubuntu.</p>
 <p><a href="#heading--maas-bridge-netplan"><h2 id="heading--maas-bridge-netplan">How to set up a VM host bridge with netplan</h2></a></p>
 <p>You can also use netplan to configure a VM host bridge:</p>
 <p>Open your netplan configuration file.  This should be in <code>/etc/netplan</code>.  It could be called <code>50-cloud-init.yaml</code>, <code>netplan.yaml</code>, or something else.  Modify the file to add a bridge, using the example below to guide you:</p>
@@ -503,100 +485,11 @@ virsh net-define maas.xml
 <pre><code class="language-nohighlight">virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 </code></pre>
 <p>Here, <code>$USER</code> is a user on your VM host who is a member of the <code>libvirtd</code> Unix group on the VM host, and <code>$VM_HOST_IP</code> is the IP of your VM host.  <strong>Note</strong> that insufficient permissions for <code>$USER</code> may cause the <code>virsh</code> command to fail with an error such as <code>failed to connect to the hypervisor</code>. Check the <code>$USER</code> group membership to make sure <code>$USER</code> is a member of the <code>libvirtd</code> group.</p>
-<p><a href="#heading--set-up-ssah-lv"><h3 id="heading--set-up-ssah-lv">How to set up SSH (libvirt only)</h3></a></p>
-<p>If you installed MAAS via snap, then create the needed SSH keys this way:</p>
-<pre><code class="language-nohighlight">sudo mkdir -p /var/snap/maas/current/root/.ssh
-cd /var/snap/maas/current/root/.ssh
-sudo ssh-keygen -f id_rsa
-</code></pre>
-<p>Finally, on the VM host, you&rsquo;ll need to add <code>id_rsa.pub</code> to the <code>authorized_keys</code> file in <code>/home/&lt;vm-host-user-homedir-name&gt;/.ssh/</code>,  where <code>&lt;vm-host-user-homedir-name&gt;</code> is the name of your VM host user.</p>
 <p><a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a></p>
-<p>After installing MAAS, the &lsquo;KVM&rsquo; page is typically empty:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png"></a></p>
-<p>If you want to add a LXD (or <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>) KVM host to a machine which is already installed, you can do so with the &lsquo;Add KVM&rsquo; button:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a></p>
-<h3>How to authenticate LXD VM hosts via certificates</h3>
-<p>Suppose that you&rsquo;re creating a new LXD KVM, beginning from the top tab in MAAS:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img alt="" src="upload://5Rn9eea7n648iKo1sjohP7r5ARY.png"></a></p>
-<p>Select &ldquo;Add KVM&rdquo;, which brings you to the definition screen:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img alt="" src="upload://2uPyI3yDteiWizFUhOM95C5B1Hg.png"></a></p>
-<p>From here, you&rsquo;ll continue by choosing your authentication method.</p>
-<h4>How to let MAAS create a certificate for you</h4>
-<p>If you choose &ldquo;Generate new certificate&rdquo;, as shown above, you&rsquo;ll come to a screen like this one:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img alt="" src="upload://vc5IuTP53xKYzCDYkkPhLxcZFUE.png"></a></p>
-<p>You can still choose to use the LXD trust password (entered when you ran <code>lxd init</code> during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window &ndash; then hit &ldquo;Enter&rdquo;:</p>
-<pre><code>$ lxc config trust add - &lt;&lt;EOF
-&gt; -----BEGIN CERTIFICATE-----
-&gt; MIIErTCCApUCEQCGa86XdjYUGm8h8YOh4HAEMA0GCSqGSIb3DQEBDQUAMAAwHhcN
-&gt; MjEwOTI0MjE1NDQ4WhcNMzEwOTIyMjE1NDQ4WjApMScwJQYDVQQDDB5teTBuZXh0
-&gt; LTMuMS4wLWJldGExLWt2bUB3YWxkZW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAw
-&gt; ggIKAoICAQC1tmJbSYx3Jb5JcuqLvyO6P0RtYWCbjVYOSAIM1PKHZJRvako6QhjR
-&gt; 6wWNcVLAjDJIMuEBysrI8mcAv9D/AfT2qLQ/5mg7anbxfrd3YXG2nc70QJazpFaw
-&gt; INDc85wrdJD5NEd50iaka+PztIAWzoZWQr/pLb7hUDnArzSHp5J+w0dRCUh54SyW
-&gt; Du4mLpDks5UqMeONO1o7lbaQuBdzGtR4btdmvOkJfg/Pu3i/rzFZ1vvn1JhZTX96
-&gt; +xH7tJQiqOk0SXG7F2RmbYiYDhAkiysbMoyOHBCf/qFWq4Vtd/VMxOAT1WERrgWn
-&gt; 8nL5kRBozV94QocJaOe+GUSWLHsRpsVa8jiAj3LS2CFQfpaEsrzLSlQOeN2rNB9z
-&gt; DO9yGXGql4tUpgtyEvxB/zVrIGd04iTC3D4S9b1KyzTbSsyjTc/XJhUStnn49ySW
-&gt; Iwv1eHa2jMvIjRVm5sRfpf0EOZW27HLI1AqDOXR0DmlM2mWvndjvfacX+41I8vuG
-&gt; +RPq0ZjDhwfRmUaLiebzcExwPmSHAxqiaV+t0n6ivDWTNk6cNc38rZBh3x6I7JMR
-&gt; /85Rc1blLSF7QBMA1HxheCUYzBPTKsdE2btygq9vShRXCdSekV0jGoL1g0n6T59r
-&gt; +9nHShgc/Bzk42kcddQySlrqWWHrXX6Z2N1R3eYpuvSEaKsnsjqjwwIDAQABMA0G
-&gt; CSqGSIb3DQEBDQUAA4ICAQA4d1Xqi941ssyJoiovTzBgMDSp9kqjpB83BRqbF9oZ
-&gt; fQGkezn2jF7SnaXbTyR/K+nir5Rms8OZfUxyZJwYh/YCdnIF8hzC32mLJbP6jcJV
-&gt; LS0OD+EipwyRLSe9g2it68TtAhhVXKPx3tGQWWiXtJOF631sJRcRUZATc9nco5H2
-&gt; 91GKog4LdFeKD3ArOq1GkE9r95WauTV37x0c474XBt2mVcEvFW50oZbIBPaWLt8E
-&gt; q8NG0KYkfIHkhXDGqPDkUtdPJlkiGwqXdaqghuG31a4Or9IKcNmDlli47apaWWJW
-&gt; /gqZfFALbOrSJHg10PCqNsfoKmQr2YZzPlTjG39RA7sA1XR6y+lQZqwcXnXk2iAE
-&gt; n62OkRUrYVXzBo99zk5jQJVEg6zhfPH9zl6Jmn/vBu0p6RqmqNLTTlMOio8VOp9e
-&gt; 9Gyb9uRwzwZ9zgydgI4bHMvcIAq+46wTruOfXBNATWLC2YqXbc+9QqemJebcXULW
-&gt; Wf7Sc+SHHx2cVb4OUvUD8keZN37No/2vfZ9NI2SJOI4SxlV2yf6ZRyb7MYIwpm1h
-&gt; YTzyS+ywUN4C8p1PsU5iT8DGdcg7Kcso4/DDZeZkLKNeCKizkdMreF7qV0qHTW8z
-&gt; PyfZHcR/xWMkjxYZoFu4rVyxpsUJYItJNUNk6vZvSnSDfC2e2JJFfMws+fntNy14
-&gt; /w==
-&gt; -----END CERTIFICATE-----
-&gt; EOF
-$ 
-</code></pre>
-<p>The certificate will be created for you.  When you click the &ldquo;Check authentication&rdquo; button, you will be brought to this screen:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img alt="" src="upload://5J5yTzf8p1wHMmyaB8Af6rRBTPC.png"></a></p>
-<p>from which you can continue with normal LXD KVM setup.</p>
-<h4>How to use your own, existing certificate</h4>
-<p>Suppose that, after identifying your LXD KVM, you choose &ldquo;Provide certificate and private key&rdquo;.  When you do so, the screen will extend to allow you to upload these items:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img alt="" src="upload://rQ83izglHaGONtR03yUSYuDY9Sc.png"></a></p>
-<p>Paste or upload your certificate and private key, then click &ldquo;Next&rdquo; to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren&rsquo;t usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a></p>
-<p>Upon selecting &ldquo;Authenticate&rdquo; (assuming successful authentication), you will receive a project selection screen similar to this:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg"></a></p>
-<p>You must either enter a new project name (which cannot contain spaces or special characters), or you must select an existing project.  If you&rsquo;re not really planning on using projects, selecting the &ldquo;default&rdquo; project will allow you to continue working as you have in the past.</p>
 <p><strong>NOTE:</strong> 
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the &lsquo;Machines&rsquo; page, and MAAS will automatically attempt to commission them.</p>
 <p><a href="#heading--configuration"><h2 id="heading--configuration">How to configure a VM host</h2></a></p>
-<p>VM hosts have several configuration options. Modify these by selecting the &lsquo;Configuration&rsquo; tab and editing options directly.  These options include a VM host&rsquo;s location, password, network zone, resource pool, and memory and CPU overcommit sliders.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png"></a></p>
 <p><a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a></p>
-<p>MAAS 3.1 allows MAAS to take advantage of the existing LXD clustering capability.</p>
-<p><a href="#heading--about-lxd-clusters"><h4 id="heading--about-lxd-clusters">About LXD clusters</h4></a></p>
-<p>LXD clusters within the context of MAAS are a way of viewing and managing existing VM host clusters and composing VMs within said cluster.  MAAS will not create a new cluster, but will discover an existing cluster when you provide the info for adding a single clustered host.</p>
-<p><a href="#heading--how-to-add-lxd-clusters"><h4 id="heading--how-to-add-lxd-clusters">How to add LXD clusters</h4></a></p>
-<p>MAAS assumes you have already configured a cluster within the context of LXD. You then need to configure said cluster with a single trust MAAS will use to communicate with said cluster. Adding a LXD cluster is similar to adding a single LXD host, in that you provide authentication the same way for a single host within the cluster, and then select a project. The only difference is the name you provide will be used for the cluster instead of the individual host. MAAS will then connect to the provided host and discover the other hosts within the cluster, and rename the initially defined host with the cluster member name configured in LXD.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3aba7d6e30eda61623f66cb162ca85814128864a.png"></a></p>
-<p>First, add an LXD KVM:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c7d35ad0d8e1d9038dd39a8965307a49f57d453a.png"></a></p>
-<p>Next, set up credentials and get your MAAS certificate trusted by LXD:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b3ea7559edc066e899e41f41846a268b2459b1a5.png"></a></p>
-<p>Once it is connected, you can select the project in that cluster:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/ba798351c1c2b37d0aa79bca8c44def38d4ab839.png"></a></p>
-<p>If the KVM host address is part of a cluster, it will show as a Cluster on the listing page. </p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/069bae193cbb09ead3c811fd1a1d28582b946ff4.png"></a></p>
-<p><a href="#heading--how-to-compose-vms-in-lxd-clusters"><h4 id="heading--how-to-compose-vms-in-lxd-clusters">How to compose VMs in LXD clusters</h4></a></p>
-<p>Composing a VM in a LXD cluster via MAAS is similar to composing a VM for a single VM host. MAAS does not provide any sort of scheduling of said VM, and will instead target the host you select for composing the VM.</p>
-<p>From the KVM host listing page, click on the <code>+</code> icon to add a VM to a specific host:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
-<p>If you are in a specific KVM host page, you can click <code>+ add virtual machine</code>:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/219a302c245992a390cd44ada341cfe5a93a7b5a.png"></a></p>
-<p><a href="#heading--how-to-delete-lxd-clusters"><h3 id="heading--how-to-delete-lxd-clusters">How to delete LXD clusters</h3></a></p>
-<p>To delete a LXD cluster, delete any one VM host within the cluster, this will delete the cluster and all members within the cluster:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea7cd2476ae8cafe6d8e78f2b029d0cd41afa592.png"></a></p>
     </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<!-- "How to use MAAS in an air-gapped environment" -->
+<!-- "How to set up an air-gapped MAAS" -->
 Many MAAS users maintain their data centres in an air-gapped environment that does not have an external Internet connection. MAAS runs well in this configuration, though keeping MAAS supplied with updates and images requires a bit of extra effort.
 
 There are essentially four things that must be available to an air-gapped MAAS for smooth operation:
@@ -12,14 +12,14 @@ There is at least one way to make each of these things available in an air-gappe
 
 #### This article will help you learn:
 
-- [How to use the snap proxy to refresh snaps in an air-gapped environment](#heading--using-the-snap-proxy)
+- [How to use the snap proxy to refresh snaps in an air-gapped environment](#heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment)
 - [How to make package updates available in an air-gapped environment](#heading--apt-mirror)
 - [How to retrieve or update MAAS images in an air-gapped environment](#heading--local-image-mirroring)
 - [How to retrieve or update non-MAAS-maintained images in an air-gapped environment](#heading--non-maas-images)
 - [How to use user_data to access non-MAAS-maintained images](#heading--other-os-user-data)
 - [How to set up a transparent proxy](#heading--transparent-proxy)
 
-<h2 id="heading--using-the-snap-proxy"><a href="#heading--using-the-snap-proxy">How to use the snap proxy to refresh snaps in an air-gapped environment</a></h2>
+<a href="#heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment"><h2 id="heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment">How to use the snap proxy to refresh snaps in an air-gapped environment</h2></a>
 
 Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/snap-store-proxy/en/airgap) mode are part of a password-protected internal Beta.  
 
@@ -63,11 +63,11 @@ MAAS only does this for Ubuntu, not CentOS or RHEL. If you deploy CentOS or RHEL
 
 Here's a thumbnail sketch of both of these methods.
 
-<h3 id="heading--other-os-user-data"><a href="#heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</a></h3>
+<a href="#heading--other-os-user-data"><h3 id="heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</h3></a>
 
 A user can create custom `user_data` which will configure CentOS or RHEL to use a specific mirror.  Check out the [machine customisation](/t/how-to-customise-machines/5108) page for details on how to make this work.
 
-<h3 id="heading--store-custom-images"><a href="#heading--store-custom-images">Storing customer images for non-MAAS-maintained images</a></h3>
+<a href="#heading--store-custom-images"><h3 id="heading--store-custom-images">Storing customer images for non-MAAS-maintained images</h3></a>
 
 You can also [create custom images](/t/how-to-create-custom-images/5104) and store them in your local mirror.  Once you have the image built, consult the page on [local image mirrors](/t/how-to-mirror-images-locally/5927) to see how to incorporate your newly-built image into the local stash.
 

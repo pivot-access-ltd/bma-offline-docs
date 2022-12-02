@@ -439,13 +439,11 @@
 <p>If you made a mistake during setup or you just need to reconfigure your MAAS server, you can simply run the setup again:</p>
 <pre><code class="language-bash">sudo dpkg-reconfigure maas-region-controller
 </code></pre>
-<h3 id="heading--ibm-power-server-pxe-boot">Network booting IBM Power servers</h3>
-
+<p><a href="#heading--Network-booting-IBM-Power-servers"><h3 id="heading--Network-booting-IBM-Power-servers">Network booting IBM Power servers</h3></a></p>
 <p>Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by <strong>Petitboot</strong>, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.</p>
 <p>When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in <a href="https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678">LP#1852678</a>, specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.</p>
 <p>So, when using IBM Power servers with multiple NICs that can network boot, it&rsquo;s strongly recommended to configure just a single <specific> NIC as the network boot device via <strong>Petitboot</strong>.</p>
-<h3 id="heading--maas-lxd-network-conflicts">Resolve DNS conflicts between LXD and MAAS</h3>
-
+<p><a href="#heading--Resolve-DNS-conflicts-between-LXD-and-MAAS"><h3 id="heading--Resolve-DNS-conflicts-between-LXD-and-MAAS">Resolve DNS conflicts between LXD and MAAS</h3></a></p>
 <p>If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there&rsquo;s a simple fix. You can turn off LXD&rsquo;s DNS management with the following command:</p>
 <pre><code class="language-bash">lxc network set $LXD_BRIDGE_NAME dns.mode=none
 </code></pre>
@@ -656,16 +654,14 @@ chown maas:maas squashfs
 </code></pre>
 <p>You can now use this image to commission or deploy a node and access the root account with the backdoor password, such as by deploying the same specific image from the web UI to the node you wish to troubleshoot.</p>
 <p><a href="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
-<h3 id="heading--migrating-maas">Migrating an existing snap installation</h3>
-
+<p><a href="#heading--Migrating-an-existing-snap-installation"><h3 id="heading--Migrating-an-existing-snap-installation">Migrating an existing snap installation</h3></a></p>
 <p>If you&rsquo;re currently running MAAS from a snap in <code>all</code> mode, you can easily migrate your database to a local PostgreSQL server with the following command:</p>
 <pre><code>sudo /snap/maas/current/helpers/migrate-vd Snapatabase
 </code></pre>
 <p>This will install PostgreSQL from the archive and migrate the MAAS database to it. </p>
 <p><strong>Note</strong> that if PostgreSQL is already installed on the machine, the script will move the current datadir out of the way and replace it with the one from the snap, after  confirmation with the user. If you want to keep the current database set and just import the MAAS database, you&rsquo;ll need to perform a manual dump/restore of the MAAS database, explained below.</p>
 <p>The migration script will automatically adjust the snap configuration to use the new database.  Note, though, that the target database must be at least the same version level as the one currently used in the snap (PostgreSQL 10).  Consequently, the migration script only supports Ubuntu 18.04 (bionic) or later.</p>
-<h3 id="heading--manual-export">Manually exporting the MAAS database</h3>
-
+<p><a href="#heading--Manually-exporting-the-MAAS-database"><h3 id="heading--Manually-exporting-the-MAAS-database">Manually exporting the MAAS database</h3></a></p>
 <p>If you want to export the database from the snap to an already setup PostgreSQL server, possibly on a different machine, you can manually export it from MAAS as follows. With MAAS running (as this ensures access to the database), run:</p>
 <pre><code>export PGPASS=$(sudo awk -F':\\s+' '$1 == "database_pass" {print $2}' \
     /var/snap/maas/current/regiond.conf)
@@ -692,11 +688,9 @@ sudo -u postgres createdb maasdb -O maas
 <li>change the content of <code>/var/snap/maas/common/snap_mode</code> from <code>all</code> to <code>region+rack</code></li>
 </ul>
 <p>Using a local PostgreSQL server is a little bit of work, but it provides great benefits in terms of MAAS scalability and performance.</p>
-<h3 id="heading--jq-machine-list">jq recipes using the CLI</h3>
-
+<p><a href="#heading--jq-recipes-using-the-CLI"><h3 id="heading--jq-recipes-using-the-CLI">jq recipes using the CLI</h3></a></p>
 <p>Here are some <code>jq</code> recipes to get some human-readable output from the MAAS CLI.</p>
-<h4 id="heading--jqml-sh">Basic machine list</h4>
-
+<p><a href="#heading--Basic-machine-list"><h4 id="heading--Basic-machine-list">Basic machine list</h4></a></p>
 <p>This recipe, which we keep in a file called <code>jqml.sh</code>, prints a basic machine list</p>
 <pre><code>#!/bin/bash
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
@@ -706,8 +700,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 .boot_interface.links[0].subnet.name]) | @tsv' | column -t
 </code></pre>
 <p>For this to work, you need to <strong>only</strong> break lines in the jq string (&lsquo;&hellip;&rsquo;) or add backslashes if you break outside that boundary.</p>
-<h4 id="heading--jqmltag-sh">Machine list with first tag added</h4>
-
+<p><a href="#heading--Machine-list-with-first-tag-added"><h4 id="heading--Machine-list-with-first-tag-added">Machine list with first tag added</h4></a></p>
 <p>It&rsquo;s a good idea to keep your most important machine tag first, as it&rsquo;s the first one you&rsquo;ll see.  It makes scanning your list (UI or CLI/jq) much more efficient.  Here&rsquo;s a recipe that adds the first tag to the console-printed machine list.  We keep it in <code>jqmltag.sh</code>, but of course, you can call it whatever you want.</p>
 <pre><code> #!/bin/bash
  maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",

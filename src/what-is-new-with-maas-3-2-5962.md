@@ -1,4 +1,4 @@
-<!-- "MAAS 3.2 release notes" -->
+<!-- "What is new with MAAS 3.2" -->
 
 Here you will find release notes for:
 
@@ -150,7 +150,7 @@ Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
 The following known issues exist for MAAS 3.2:
 
-<h3>Cannot update controller/device tags via WebSocket API</h3>
+<a href="#heading--Cannot-update-controller/device-tags-via-WebSocket-API"><h3 id="heading--Cannot-update-controller/device-tags-via-WebSocket-API">Cannot update controller/device tags via WebSocket API</h3></a>
 
 If you attempt to update a list of tags of a device with an automatic tag, you get an error: "Cannot add tag tag-name to node because it has a definition".
 

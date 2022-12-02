@@ -409,7 +409,7 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>About creating custom images</h1><!-- "About creating custom images" -->
+  <h1>About custom images</h1><!-- "About custom images" -->
 <p>MAAS is much more useful when you can upload images that aren&rsquo;t gathered from <a href="http://images.maas.io/">the MAAS image repository</a>, deploy them to MAAS-managed machines, and count on them to work properly. But there&rsquo;s a problem: the typical, off-the-shelf ISO image can&rsquo;t just be uploaded to MAAS and deployed to a machine.  For one thing, the machines couldn&rsquo;t write the image to their disks or boot the images once they&rsquo;re there.  For another, any non-standard configuration items (networking, storage, users, added software) wouldn&rsquo;t be loaded.</p>
 <p>We can help guide you in preparing ISO images to run on MAAS machines. Usable MAAS images need both a <code>curtin</code> hook script (to write and boot the image), and some <code>cloud-init</code> meta-data (to configure the image beyond the out-of-the-box experience).  As long as a prepared image meets these requirements, you can successfully upload it to MAAS, deploy it to a machine, and expect it to run properly on that machine.</p>
 <p>This article explains a little more about how MAAS images differ from a standard ISO, and what has to happen to make those off-the-shelf ISOs deployable and usable by MAAS.</p>

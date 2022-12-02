@@ -191,7 +191,7 @@ unknown   pbpncx  ruling-bobcat  WARNING  Thu, 10 Mar. 2022 18:01:47  Failed to 
 
 You'll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviours and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let's explore ways to filter this table.
 
-<a href="#heading--filter-parameters"><3 id="heading--filter-parameters">Filter parameters</h3></a>
+<a href="#heading--filter-parameters"><h3 id="heading--filter-parameters">Filter parameters</h3></a>
 
 The `events query` command accepts several different filters, all of them optional:
 
@@ -621,12 +621,3 @@ Finished importing boot images, the region does not have any boot images availab
 <a href="#heading--CRITICAL-errors"><h3 id="heading--CRITICAL-errors">CRITICAL errors</h3></a>
 
 `CRITICAL` errors represent major failures, often code failures or trace-backs.  Any `CRITICAL` errors should be immediately examined and resolved, if possible, and [reported as a bug](/t/how-to-report-a-bug/4446) if not resolvable.
-
-
-
-
-
-
-
-
-

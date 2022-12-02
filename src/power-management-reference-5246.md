@@ -391,29 +391,6 @@ where $POWER_TYPE can have the following values:
 | [vmware](#heading--vmware) | VMware |
 | [wedge](#heading--wedge) | Facebook's Wedge |
 
-| CLI power_type code | Description |
-|:-----|:-----|
-| [amt](#heading--amt) |Intel AMT |
-| [apc](#heading--apc) | American Power Conversion (APC) PDU |
-| [dli](#heading--dli) | Digital Loggers, Inc. PDU |
-| [eaton](#heading--eaton) | Eaton PDU |
-| [hmc](#heading--hmc) | IBM Hardware Management Console (HMC) |
-| [lxd](#heading--lxd) | LXD VM |
-| [ipmi](#heading--ipmi) | IPMI |
-| [manual](#heading--manual) | Manual power configuration |
-| [moonshot](#heading--moonshot) | HP Moonshot - iLO4 (IPMI) |
-| [mscm](#heading--mscm) | HP Moonshot - iLO Chassis Manager |
-| [msftocs](#heading--mscm) | Microsoft OCS - Chassis Manager |
-| [nova](#heading--nova) | OpenStack Nova |
-| [openbmc](#heading--openbmc) | OpenBMC Power Driver |
-| [recs_box](#heading--recs_box) | Christmann RECS-Box Power Driver |
-| [redfish](#heading--redfish) | Redfish |
-| [sm15k](#heading--sm15k) | SeaMicro 15000 |
-| [ucsm](#heading--ucsm) | Cisco UCS Manager |
-| [virsh](#heading--virsh) | libvirt KVM |
-| [vmware](#heading--vmware) | VMware |
-| [wedge](#heading--wedge) | Facebook's Wedge |
-
 Note the required and optional parameters associated with each power type.
 
 Once you've successfully processed the command (as indicated by a stream of JSON, headed by "Success!"), MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of "Power off". A failed attempt will return errors that should guide you to fix your power_parameters.
@@ -490,28 +467,28 @@ All parameters are entered as `key=value`, e.g., `power_type=lxd`.  The MAAS CLI
 
 <a href="#heading--ipmi"><h3 id="heading--ipmi">IPMI</h3></a>
 
-All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded.
+All parameters are entered as `key=value`, e.g., `power_type=amt`.  The MAAS CLI will refuse the request with informative errors if required parameters are excluded. Power driver specific parameters should be prefixed with `power_parameters_{key}`.
 
 Some of the fields for this power type have fixed choices, indicated in the "Choices" column.
 
 | Form field | Description | Choices | Required |
 |:-----------|:------------|:--------|:---------|
-| Power driver | Power driver |`LAN [IPMI 1.5]` | Required |
+| `power_driver` | Power driver |`LAN [IPMI 1.5]` | Required |
 | | | `LAN_2_0 [IPMI 2.0]`| |
-| Power boot type | Boot type | `Automatic` | Required |
+| `power_boot_type` | Boot type | `Automatic` | Required |
 | | | `Legacy boot` | |
 | | | `EFI boot` | |
-| IP address | IP address of unit || Required |
-| Power user | Username to login || Optional |
-| Power password | Password to access unit || Optional |
-| Power MAC | MAC address of unit || Optional |
-| K_g | K_g BMC key | | Optional |
-| Cipher suite | Cipher suite ID | - `17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
+| `power_address` | IP address of unit || Required |
+| `power_user` | Username to login || Optional |
+| `power_pass` | Password to access unit || Optional |
+| `mac_address` | MAC address of unit || Optional |
+| `k_g` | K_g BMC key | | Optional |
+| `cipher_suite_id` | Cipher suite ID |`17` <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small> | Optional |
 | | |`3` <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small> | |
 | | |` ` (blank) <small>(freeipmi-tools default)</small> | |
 | | |`8` <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small> | |
 | | |`12` <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small> | |
-| Privilege level | IPMI privilege level | `User` | Optional  |
+| `privilege_level` | IPMI privilege level | `User` | Optional  |
 | | | `Operator` | |
 | | | `Administrator` | |
 
@@ -1013,6 +990,15 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 <td></td>
 </tr>
 <tr class="even">
+<td align="left">Redfish</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+
+<tr class="odd">
 <td align="left">SeaMicro 15000</td>
 <td>X</td>
 <td>X</td>
@@ -1020,7 +1006,7 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Sentry Switch CDU - PDU</td>
 <td></td>
 <td></td>
@@ -1028,7 +1014,7 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">VMWare</td>
 <td>X</td>
 <td>X</td>
@@ -1036,7 +1022,7 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Virsh (virtual systems)</td>
 <td>X</td>
 <td>X</td>

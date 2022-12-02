@@ -187,44 +187,38 @@ These MAAS audit events consist of the following information:
  NODE_HARDWARE_SYNC_USB_DEVICE   | Node USB Device hardware sync state change
 ```
 
+<a href="#heading--table-of-audit-events"><h3 id="heading--table-of-audit-events">Table of audit events</h3></a>
+
 The following abridged listing gives a sense of the specific events associated with each of these event types:
 
 ```nohighlight
               name               | action  |                         description                          
 ---------------------------------+---------+--------------------------------------------------------------
  AUTHORISATION                   |         | Logged in admin.
- NODE                            |         | Started commissioning on 'valued-moth'.
- NODE                            |         | Started releasing 'valued-moth'.
- NODE                            |         | Acquired 'valued-moth'.
- NODE                            |         | Started releasing 'valued-moth'.
- NODE                            |         | Aborted 'commissioning' on 'valued-moth'.
- NODE                            |         | Acquired 'valued-moth'.
- NODE                            |         | Started deploying 'valued-moth'.
- NODE                            |         | Acquired 'valued-moth'.
- NODE                            |         | Started deploying 'valued-moth'.
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | added   | block device sda was added on node 8wmfx3
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | removed | block device sda was removed on node 8wmfx3
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | added   | block device nvme0n1 was added on node 8wmfx3
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | removed | block device nvme0n1 was removed on node 8wmfx3
- NODE_HARDWARE_SYNC_CPU          | added   | cpu Intel(R) Core(TM) i5-10210U CPU was added on node 8wmfx3
- NODE_HARDWARE_SYNC_INTERFACE    | updated | interface enp5s0 was updated on node 8wmfx3
- NODE_HARDWARE_SYNC_INTERFACE    | added   | interface enx606d3c64581d was added on node 8wmfx3
- NODE_HARDWARE_SYNC_INTERFACE    | added   | interface tap8ed34737 was added on node 8wmfx3
- NODE_HARDWARE_SYNC_INTERFACE    | added   | interface wlp0s20f3 was added on node 8wmfx3
- NODE_HARDWARE_SYNC_INTERFACE    | removed | interface enp5s0 was removed on node 8wmfx3
- NODE_HARDWARE_SYNC_MEMORY       | removed | 0 bytes of memory was removed on node 8wmfx3
- NODE_HARDWARE_SYNC_MEMORY       | removed | -10.1 kB of memory was removed on node 8wmfx3
- NODE_HARDWARE_SYNC_MEMORY       | added   | 10.1 kB of memory was added on node 8wmfx3
- NODE_HARDWARE_SYNC_PCI_DEVICE   | updated | pci device 2 was updated on node 8wmfx3
- NODE_HARDWARE_SYNC_PCI_DEVICE   | updated | pci device 31 was updated on node 8wmfx3
- NODE_HARDWARE_SYNC_PCI_DEVICE   | added   | pci device 0 was added on node 8wmfx3
- NODE_HARDWARE_SYNC_PCI_DEVICE   | removed | pci device 0 was removed on node 8wmfx3
- NODE_HARDWARE_SYNC_USB_DEVICE   | added   | usb device 3 was added on node 8wmfx3
- NODE_HARDWARE_SYNC_USB_DEVICE   | removed | usb device 8 was removed on node 8wmfx3
- SETTINGS                        |         | Updated configuration setting 'upstream_dns' to '8.8.8.8'.
- SETTINGS                        |         | Updated configuration setting 'maas_name' to 'neuromancer'.
- SETTINGS                        |         | Updated configuration setting 'http_proxy' to ''.
- SETTINGS                        |         | Updated configuration setting 'completed_intro' to 'True'.
+ NODE                            |         | Started commissioning a machine.
+ NODE                            |         | Started releasing a machine.
+ NODE                            |         | Acquired a machine.
+ NODE                            |         | Aborted commissioning on a machine.
+ NODE                            |         | Started deploying a machine.
+ NODE                            |         | Aborted deployment of a machine. 
+ NODE_HARDWARE_SYNC_BLOCK_DEVICE | added   | Added a block device to a machine.
+ NODE_HARDWARE_SYNC_BLOCK_DEVICE | removed | Removed a block device from a machine.
+ NODE_HARDWARE_SYNC_BLOCK_DEVICE | updated | Updated a block device on a machine.
+ NODE_HARDWARE_SYNC_CPU          | added   | Added a CPU to a machine.
+ NODE_HARDWARE_SYNC_CPU          | removed | Removed a CPU from a machine.
+ NODE_HARDWARE_SYNC_INTERFACE    | added   | Added an interface to a machine.
+ NODE_HARDWARE_SYNC_INTERFACE    | removed | Removed an interface from a machine.
+ NODE_HARDWARE_SYNC_INTERFACE    | updated | Updated an interface on a machine.  
+ NODE_HARDWARE_SYNC_MEMORY       | added   | Added memory to a machine.
+ NODE_HARDWARE_SYNC_MEMORY       | removed | Removed memory from a machine.
+ NODE_HARDWARE_SYNC_MEMORY       | updated | Updated memory on a machine.
+ NODE_HARDWARE_SYNC_PCI_DEVICE   | updated | Updated a PCI device on a machine.
+ NODE_HARDWARE_SYNC_PCI_DEVICE   | added   | Added a PCI device to a machine.
+ NODE_HARDWARE_SYNC_PCI_DEVICE   | removed | Removed a PCI device from a machine.
+ NODE_HARDWARE_SYNC_USB_DEVICE   | added   | Added a USB device to a machine.
+ NODE_HARDWARE_SYNC_USB_DEVICE   | removed | Removed a USB device from a machine.
+ NODE_HARDWARE_SYNC_USB_DEVICE   | updated | Updated a USB device on a machine.
+ SETTINGS                        |         | Updated MAAS settings.
 ```
 
 You will notice that these audit event logs are essentially state changes:
@@ -240,4 +234,3 @@ You will notice that these audit event logs are essentially state changes:
 - **NODE_HARDWARE_SYNC_USB_DEVICE**: Node USB Device hardware sync state changes.
 
 For information on how to use these audit events to answer specific questions, see [How to work with audit event logs](/t/how-to-work-with-audit-event-logs/5987).
-

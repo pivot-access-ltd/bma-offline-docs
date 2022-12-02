@@ -9,7 +9,7 @@ There are several possible MAAS storage layouts:
 
 The reference descriptions below include the EFI partition. If your system is not using UEFI, regard `sda2` as `sda1` (with an additional 512 MB available to it).
 
-<a href="#heading--flat-storage-layout-reference"><h3 id="heading--flat-storage-layout-reference">Flat layout storage reference</h3></a>
+<a href="#heading--flat-storage-layout-reference"><h2 id="heading--flat-storage-layout-reference">Flat layout storage reference</h2></a>
 
 With the Flat layout, a partition spans the entire boot disk. The partition is formatted with the ext4 filesystem and uses the `/` mount point:
 
@@ -27,7 +27,7 @@ The following three options are supported:
 
 3. `root_size`: Size of the root partition. Default is 100%, meaning the entire size of the root device.
 
-<a href="#heading--lvm-storage-layout-reference"><h3 id="heading--lvm-storage-layout-reference">LVM storage layout reference</h3></a>
+<a href="#heading--lvm-storage-layout-reference"><h2 id="heading--lvm-storage-layout-reference">LVM storage layout reference</h2></a>
 
 The LVM layout creates the volume group `vgroot` on a partition that spans the entire boot disk. A logical volume `lvroot` is created for the full size of the volume group; is formatted with the ext4 filesystem; and uses the `/` mount point:
 
@@ -48,7 +48,7 @@ The following six options are supported:
 5. `lv_name`: Name of the created logical volume. Default is `lvroot`.
 6. `lv_size`: Size of the created logical volume. Default is 100%, meaning the entire size of the volume group.
 
-<a href="#heading--bcache-storage-layout-reference"><h3 id="heading--bcache-storage-layout-reference">bcache storage layout reference</h3></a>
+<a href="#heading--bcache-storage-layout-reference"><h2 id="heading--bcache-storage-layout-reference">bcache storage layout reference</h2></a>
 
 A bcache layout will create a partition that spans the entire boot disk as the backing device. It uses the smallest block device tagged with 'ssd' as the cache device. The bcache device is formatted with the ext4 filesystem and uses the `/` mount point. If there are no 'ssd' tagged block devices on the machine, then the bcache device will not be created, and the Flat layout will be used instead:
 
@@ -71,7 +71,7 @@ The following seven options are supported:
 6. `cache_size`: The size of the partition on the cache device. Default is 100%, meaning the entire size of the cache device.
 7. `cache_no_part`: Whether or not to create a partition on the cache device. Default is false, meaning to create a partition using the given `cache_size`. If set to true, no partition will be created, and the raw cache device will be used as the cache.
 
-<a href="#heading--vmfs6-storage-layout-reference"><h3 id="heading--vmfs6-storage-layout-reference">VMFS6 storage layout reference</h3></a>
+<a href="#heading--vmfs6-storage-layout-reference"><h2 id="heading--vmfs6-storage-layout-reference">VMFS6 storage layout reference</h2></a>
 
 The VMFS6 layout is used for VMware ESXi deployments only. It is required when configuring VMware VMFS Datastores. This layout creates all operating system partitions, in addition to the default datastore. The datastore may be modified.  New datastores may be created or extended to include other storage devices. The base operating system partitions may not be modified because VMware ESXi requires them. Once applied another storage layout must be applied to remove the operating system partitions.
 
@@ -94,7 +94,7 @@ The following options are supported:
 
 2. `root_size`: Size of the default VMFS Datastore. Default is 100%, meaning the remaining size of the root disk.
 
-<a href="#heading--blank-storage-layout-reference"><h3 id="heading--blank-storage-layout-reference">Blank storage layout reference</h3></a>
+<a href="#heading--blank-storage-layout-reference"><h2 id="heading--blank-storage-layout-reference">Blank storage layout reference</h2></a>
 
 The blank layout removes all storage configuration from all storage devices. It is useful when needing to apply a custom storage configuration.
 
