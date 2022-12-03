@@ -22,11 +22,11 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
-- [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)&#1F855;
+- [Read our code of conduct](https://ubuntu.com/community/code-of-conduct) `⬀`
 - [Get support](/t/how-to-contact-us/5448)
 - [Learn about MAAS performance](/t/maas-performance/6178)
-- [Join our online chat](https://discourse.maas.io)&#1F855;
-- [Contribute code](https://launchpad.net/maas)&#1F855;
+- [Join our online chat](https://discourse.maas.io)`↗`
+- [Contribute code](https://launchpad.net/maas)`↗`
 - [Improve our doc](/t/how-to-help-improve-the-doc/4186)
 - [Request a feature](/t/how-to-request-a-feature/4447)
 - [Report a bug](/t/how-to-report-a-bug/4446)
