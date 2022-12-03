@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -338,33 +338,6 @@
 	</li>
       </ul>
       <strong>
-	<a href="explanation.html">
-	Explanations
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
-	  </a>
-	</li>
-	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
-	  </a>
-	</li>
-      </ul>
-      <strong>
 	API reference
       </strong>
       <ul>
@@ -456,7 +429,7 @@
 <p>DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.</p>
 <p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-manage-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
 <p>Access the appropriate VLAN (via the &lsquo;Subnets&rsquo; page) and choose action &lsquo;Reconfigure DHCP&rsquo;. There, you will see the second rack controller in the &lsquo;Secondary controller&rsquo; field. All you should have to do is press the &lsquo;Reconfigure DHCP&rsquo; button:</p>
-<p><a href="../images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a></p>
 <p><a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">How to configure multiple region endpoints</h3></a></p>
 <p>MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to <code>/var/snap/maas/current/rackd.conf</code>.  For example:</p>
 <pre><code>.

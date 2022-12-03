@@ -14,21 +14,22 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 |                                                                                                      |                                                                                             |
 |------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | [Tutorials](/t/6140)</br>  Get started - a hands-on introduction to MAAS for new users </br> | [How-to guides](/t/6142) </br> Step-by-step guides covering key operations and common tasks |
-| [Explanation](/t/6141) </br> Discussion and clarification of key topics                   | [Reference](/t/6143) </br> Technical information - specifications, APIs, architecture       |
+| | The landing pages for these How-to guides offer explain the theory behind the related topics |
+| **The API Reference** </br> Detailed instructions for using the MAAS API                   | [Reference](/t/6143) </br> Technical information - specifications, APIs, architecture       |
 
 
 ## Project and community
 
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
-- [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)
+- [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
 - [Get support](/t/how-to-contact-us/5448)
-- [Learn about MAAS performance](/t/-/6178)
-- [Join our online chat](https://discourse.maas.io)
-- [Contribute code](https://launchpad.net/maas)
+- [Learn about MAAS performance](/t/maas-performance/6178)
+- [Join our online chat](https://discourse.maas.io)`↗`
+- [Contribute code](https://launchpad.net/maas)`↗`
 - [Improve our doc](/t/how-to-help-improve-the-doc/4186)
-- [Request a feature](https://maas.io/docs/request-a-feature)
-- [Report a bug](https://maas.io/docs/report-a-bug)
+- [Request a feature](/t/how-to-request-a-feature/4447)
+- [Report a bug](/t/how-to-report-a-bug/4446)
 
 ### Our roadmap
 
@@ -63,7 +64,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Ask for help](/t/-/5428)
 - [Request a feature](https://maas.io/docs/request-a-feature)
 - [Report a bug](https://maas.io/docs/report-a-bug)
-- [Troubleshooting](/t/-/5333)
 
 ### [How to set up networks](/t/-/6174)
 
@@ -109,6 +109,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 - [Work with log files](/t/-/5240)
 - [Work with audit event logs](/t/-/5987)
+- [Troubleshooting](/t/-/5333)
 
 ### How to work securely
 
@@ -117,16 +118,14 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 - [Set up an air-gapped MAAS](/t/-/5212)
 - [Manage user accounts](/t/-/5184)
 
+### How to keep your secrets
+
+- [RBAC](/t/-/6131)
+
 ### How to operate reliably
 
 - [Keep MAAS backed up](/t/-/5096)
 - [Observe a live MAAS](/t/-/5204)
-
-### [Explanations](/t/-/6141)
-
-- [MAAS events](/t/-/6373)
-- [MAAS audit events](/t/-/6372)
-- [RBAC](/t/-/6131)
 
 ### API reference
 
