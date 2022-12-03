@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -334,33 +334,6 @@
 	<li>
 	  <a href="how-to-observe-a-live-maas.html">
 	    Observe a live MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="explanation.html">
-	Explanations
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
-	  </a>
-	</li>
-	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
 	  </a>
 	</li>
       </ul>
@@ -1078,13 +1051,13 @@ The curtin installer uses an image-based method and is now the only installer us
 <li><a href="#heading--about-storage">About storage</a></li>
 </ul>
 <p>In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:</p>
-<p><a href="../images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/30df04b0bcec5fcf6538590ed795cb0514a64675.jpeg"></a></p>
 <p>Rolling the cursor over status icons often reveals more details. For example, a failed hardware test script will place a warning icon alongside the hardware type tested by the script. Rolling the cursor over this will reveal which test failed.  Likewise, you can find some immediate options by rolling over the column data items in the machines table.</p>
-<p><a href="../images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a></p>
 <p>The &lsquo;Add hardware&rsquo; drop-down menu is used to add either new machines or a new chassis. This menu changes context when one or more machines are selected from the table, using either the individual checkboxes in the first column or the column title checkbox to select all.</p>
-<p><a href="../images/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg"></a></p>
 <p>With one or more machines selected, the &lsquo;Add hardware&rsquo; drop-down menu moves to the left, and is joined by the &lsquo;Take action&rsquo; menu.  This menu provides access to the various <a href="maas-concepts-and-terms-reference.html#node-actions">machine actions</a> that can be applied to the selected machine(s):</p>
-<p><a href="../images/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg"></a></p>
 <p><strong>NOTE:</strong> 
 The &lsquo;Filter by&rsquo; section limits the machines listed in the table to selected keywords and machine attributes.</p>
 <p>These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.</p>
@@ -1151,7 +1124,7 @@ The &lsquo;Filter by&rsquo; section limits the machines listed in the table to s
 <p><a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a></p>
 <p>The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognise these devices and make them visible to you when a machine is commissioned.</p>
 <p>For example, the machine details presents USB and PCI devices like this:</p>
-<p><a href="../images/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/87f42bafe321d45af94d73216f933a9067f01df2.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png"></a></p>
 <p>Note that this page now includes two new tabs: &ldquo;PCI devices&rdquo; and &ldquo;USB.&rdquo;  For each USB/PCI device attached to your machine, these tabs will list:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>device type</li>
@@ -1163,7 +1136,7 @@ The &lsquo;Filter by&rsquo; section limits the machines listed in the table to s
 <li>the device address</li>
 </ul>
 <p>A typical PCI device tab would look something like this:</p>
-<p><a href="../images/82e1e6f8bc511047ac5f773430f7e5812c7a24d4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/82e1e6f8bc511047ac5f773430f7e5812c7a24d4.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/82e1e6f8bc511047ac5f773430f7e5812c7a24d4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/82e1e6f8bc511047ac5f773430f7e5812c7a24d4.png"></a></p>
 <p>The USB tab presents similar information in the same format.</p>
 <p><strong>NOTE:</strong> 
 If you are upgrading from a previous version of MAAS, PCI and USB devices aren&rsquo;t modelled, so you will have to recommission the machine to capture these devices.</p>
@@ -1182,15 +1155,15 @@ only, using the following command:</p>
 when the machine is commissioned again.</p>
 <p><a href="#heading--about-machine-interfaces"><h3 id="heading--about-machine-interfaces">About machine network info</h3></a></p>
 <p>The Network &ldquo;tab&rdquo; provides you with a way to view/edit the network and interface configuration for a machine: </p>
-<p><a href="../images/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> </p>
 <p>In the case of this deployed machine, there are not many editing options.  If the machine is in a &lsquo;Ready&rsquo; state, though, altering the network configuration is possible, as shown in the screenshot above.</p>
 <p>Options on this tab are described in the introduction to <a href="about-networking.html">Networking</a> article in this documentation set.</p>
 <p><a href="#heading--machine-config"><h3 id="heading--machine-config">About machine configuration info</h3></a></p>
 <p>The final tab from the Machine menu allows you to update machine and power configuration options: </p>
-<p><a href="../images/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> </p>
 <p>There are two sections to this tab.  The &ldquo;Machine configuration&rdquo; section, shown above, offers some general parameters, mostly related to how this machine is grouped and categorised.  More information on these options are found in the relevant sections of the documentation (e.g., tags, resource pools, and so forth). </p>
 <p>The &ldquo;Power configuration&rdquo; supplies the parameters necessary for MAAS to access the machine to PXE-boot it: </p>
-<p><a href="../images/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/198898362285e4a1308535a4aa701156a67c9616.png"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> </p>
 <p>More information on Power configuration will be found in the <a href="power-management-reference.html">Power management</a> section of this documentation.</p>
 <p><a href="#heading--about-resource-pools"><h3 id="heading--about-resource-pools">About resource pools</h3></a></p>
 <p>Resource pools allow administrators to logically group resources &ndash; machines and VM hosts &ndash; into pools. Pools can help you budget machines for a particular set of functions.  For example, if you&rsquo;re using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. </p>

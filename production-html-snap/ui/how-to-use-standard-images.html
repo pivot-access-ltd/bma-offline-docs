@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -338,33 +338,6 @@
 	</li>
       </ul>
       <strong>
-	<a href="explanation.html">
-	Explanations
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
-	  </a>
-	</li>
-	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
-	  </a>
-	</li>
-      </ul>
-      <strong>
 	API reference
       </strong>
       <ul>
@@ -467,19 +440,19 @@ maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
 </code></pre>
 <p><a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">How to import standard images from maas.io</h2></a></p>
 <p>The &lsquo;Images&rsquo; page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:</p>
-<p><a href="../images/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a></p>
 <p>You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See <a href="about-images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
 <p>Click the &lsquo;Save selection&rsquo; button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:</p>
-<p><a href="../images/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png"></a></p>
 <p>To remove an image, un-select it and click &lsquo;Save selection&rsquo;.</p>
 <p><a href="#heading--image-mirrors"><h2 id="heading--image-mirrors">How to use other image mirrors to download images</h2></a></p>
 <p>You can also host Ubuntu images on a mirror. Configure this mirror by selecting &lsquo;Custom&rsquo; beneath &lsquo;Choose source&rsquo;. Enter the mirror URL and click &lsquo;Connect&rsquo;.</p>
 <p>Advanced options, such as using a GPG key or keyring to validate the mirror path (snap installation location: /snap/maas/current/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg), are revealed by clicking &lsquo;Show advanced options&rsquo;:</p>
-<p><a href="../images/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a></p>
 <p>Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See <a href="how-to-mirror-images-locally.html">Local image mirror</a> for instructions.</p>
 <p><a href="#heading--other-images"><h2 id="heading--other-images">How to import and provision non-Ubuntu images</h2></a></p>
 <p>It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear beneath the &lsquo;Other Images&rsquo; section. Currently, images for CentOS 6.6, CentOS 7.0, and CentOS 8.0 are available. These images can be imported and used just like the Ubuntu images above.</p>
-<p><a href="../images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a></p>
     </div>
   </body>
 </html>

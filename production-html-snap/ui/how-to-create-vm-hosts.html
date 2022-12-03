@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -338,33 +338,6 @@
 	</li>
       </ul>
       <strong>
-	<a href="explanation.html">
-	Explanations
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
-	  </a>
-	</li>
-	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
-	  </a>
-	</li>
-      </ul>
-      <strong>
 	API reference
       </strong>
       <ul>
@@ -524,9 +497,9 @@ virsh net-define maas.xml
 <p>Here, <code>$USER</code> is a user on your VM host who is a member of the <code>libvirtd</code> Unix group on the VM host, and <code>$VM_HOST_IP</code> is the IP of your VM host.  <strong>Note</strong> that insufficient permissions for <code>$USER</code> may cause the <code>virsh</code> command to fail with an error such as <code>failed to connect to the hypervisor</code>. Check the <code>$USER</code> group membership to make sure <code>$USER</code> is a member of the <code>libvirtd</code> group.</p>
 <p><a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a></p>
 <p>After installing MAAS, the &lsquo;KVM&rsquo; page is typically empty:</p>
-<p><a href="../images/883a61d38dea2c04010bf9286f0c68700b14975c.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/883a61d38dea2c04010bf9286f0c68700b14975c.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/883a61d38dea2c04010bf9286f0c68700b14975c.png"></a></p>
 <p>If you want to add a LXD (or <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>) KVM host to a machine which is already installed, you can do so with the &lsquo;Add KVM&rsquo; button:</p>
-<p><a href="../images/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/93fcb7aecee3eeea31f3939a884c12fe89f790ba.jpeg"></a></p>
 <p><a href="#heading--How-to-authenticate-LXD-VM-hosts-via-certificates"><h3 id="heading--How-to-authenticate-LXD-VM-hosts-via-certificates">How to authenticate LXD VM hosts via certificates</h3></a></p>
 <p>Suppose that you&rsquo;re creating a new LXD KVM, beginning from the top tab in MAAS:</p>
 <p><a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img alt="" src="upload://5Rn9eea7n648iKo1sjohP7r5ARY.png"></a></p>
@@ -578,13 +551,13 @@ $
 <p>Paste or upload your certificate and private key, then click &ldquo;Next&rdquo; to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren&rsquo;t usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a></p>
 <p>Upon selecting &ldquo;Authenticate&rdquo; (assuming successful authentication), you will receive a project selection screen similar to this:</p>
-<p><a href="../images/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/346c8e29fc8d4b74507843a956865ebd254aad57.jpeg"></a></p>
 <p>You must either enter a new project name (which cannot contain spaces or special characters), or you must select an existing project.  If you&rsquo;re not really planning on using projects, selecting the &ldquo;default&rdquo; project will allow you to continue working as you have in the past.</p>
 <p><strong>NOTE:</strong> 
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the &lsquo;Machines&rsquo; page, and MAAS will automatically attempt to commission them.</p>
 <p><a href="#heading--configuration"><h2 id="heading--configuration">How to configure a VM host</h2></a></p>
 <p>VM hosts have several configuration options. Modify these by selecting the &lsquo;Configuration&rsquo; tab and editing options directly.  These options include a VM host&rsquo;s location, password, network zone, resource pool, and memory and CPU overcommit sliders.</p>
-<p><a href="../images/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8b3fc96a8f1a1e4b25413a9f60388dc04dd886c9.png"></a></p>
 <p><a href="#heading--lxd-clusters"><h3 id="heading--lxd-clusters">LXD clusters</h3></a></p>
 <p>MAAS 3.1 allows MAAS to take advantage of the existing LXD clustering capability.</p>
 <p><a href="#heading--about-lxd-clusters"><h4 id="heading--about-lxd-clusters">About LXD clusters</h4></a></p>
