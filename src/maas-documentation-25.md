@@ -124,7 +124,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 
 ### [Explanations](/t/-/6141)
 
-- [VM hosting](/t/-/5068)
 - [MAAS events](/t/-/6373)
 - [MAAS audit events](/t/-/6372)
 - [RBAC](/t/-/6131)
