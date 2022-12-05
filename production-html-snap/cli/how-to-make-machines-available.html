@@ -1,14 +1,488 @@
 <!DOCTYPE html>
-    <html>
-    <body>
-    <div class="container">
-    <h1>How to make machines available</h1><!-- "How to make machines available" -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-make-machines-available.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-cusdomise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to make machines available</h1><!-- "How to make machines available" -->
 <p>This article explains:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</a></li>
+<li><a href="#heading--how-to-clone-machines">How to clone machines</a></li>
+<li><a href="#heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</a></li>
+<li><a href="#heading--how-to-use-resource-pools">How to use resource pools</a></li>
+<li><a href="#heading--how-to-use-annotations">How to use annotations</a></li>
+<li><a href="#heading--how-to-use-machine-storage">How to use machine storage</a></li>
+</ul>
 <p>This article also provides a <a href="#heading--storage-layouts-reference">storage layouts reference</a>.</p>
 <p>Most of the day-to-day work of managing machines is covered here. Utilising machines to do work &ndash; for example, commissioning, testing, and deploying them &ndash; is discussed in <a href="how-to-deploy-machines.html">How to deploy machines</a>.</p>
 <p><a href="#heading--how-to-create-delete-and-configure-machines"><h2 id="heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</h2></a></p>
 <p>This section shows you:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-add-a-machine-manually">How to add a machine manually</a></li>
+<li><a href="#heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</a></li>
+<li><a href="#heading--usb-pci-devices">How to manage attached USB and PCI devices</a></li>
+</ul>
 <p><a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a></p>
+<p>To create a new machine at the command line, enter the following information:</p>
+<pre><code class="language-nohighlight">stormrider@wintermute:~$ maas admin machines create \
+&gt; architecture=$ARCH \
+&gt; max_addresses=$MAC_ADDRESS \
+&gt; power_type=$POWER_TYPE \
+&gt; power_parameters_power_id=$POWER_ID \
+&gt; power_parameters_power_address=$POWER_ADDRESS \
+&gt; power_parameters_power_pass=$POWER_PASSWORD
+</code></pre>
+<p>When you enter the command (substituting the <code>$...</code> parameters for your own particulars), the screen will pause for a moment, and then return a stream of JSON relating to the added machine.</p>
+<p>Here&rsquo;s an example with a local laptop MAAS install, using KVMs as virtual machines:</p>
+<pre><code class="language-nohighlight">stormrider@wintermute:~$ maas admin machines create \
+&gt; architecture=amd64 \
+&gt; max_addresses=52:54:00:6f:b4:af \
+&gt; power_type=virsh \
+&gt; power_parameters_power_id=50f6cca2-5d89-43b9-941c-90c9fcd7c156 \
+&gt; power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system \
+&gt; power_parameters_power_pass=xxxxxxx
+</code></pre>
+<p>The variable fields in the <code>machines create</code> command (the <code>$...</code> items) are as follows, in this example: </p>
+<pre><code class="language-nohighlight">&gt; architecture=$ARCH \
+&gt; mac_addresses=$MAC_ADDRESS \
+&gt; power_type=$POWER_TYPE \
+&gt; power_parameters_power_id=$POWER_ID \
+&gt; power_parameters_power_address=$POWER_ADDRESS \
+&gt; power_parameters_power_pass=$POWER_PASSWORD
+</code></pre>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><code>$ARCH</code>: This field refers to the architecture of the machine being added, <code>amd64</code> in the local laptop example.</p>
+</li>
+<li>
+<p><code>$MAC_ADDRESS</code>: This is the MAC address of the boot-enabled NIC for the machine being added.  Note that the MAC address entered here must use a colon (&ldquo;:&rdquo;) separator, although some MAC addresses are written with dash (&ldquo;-&ldquo;) separators.</p>
+</li>
+<li>
+<p><code>$POWER_TYPE</code>: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See <a href="power-management-reference.html">Power management reference</a> for details on the available power types and the relevant parameters for each type. In this example, we&rsquo;ve used a &ldquo;virsh&rdquo; power type (a libvirt KVM), but your choice will depend on your hardware.</p>
+</li>
+<li>
+<p><code>$POWER_ID</code>: This is generally the UUID of the machine being added.</p>
+</li>
+<li>
+<p><code>$POWER_ADDRESS/$POWER_PASSWORD</code>: In the case of a KVM, these are the only parameters that need to be entered.  See <a href="https://maas.io/docs/api#power-types">Power types</a> in the API reference for details on the available power types and the relevant parameters for each type.</p>
+</li>
+</ul>
+<p><a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h3></a></p>
+<p>To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-device delete $SYSTEM_ID $DEVICE_ID
+</code></pre>
+<p>where:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>$PROFILE   = your user profile (e.g., &ldquo;admin&rdquo;)</li>
+<li>$SYSTEM_ID = the ID of the machine in question (e.g., &ldquo;ngx7ry&rdquo;)</li>
+<li>$DEVICE_ID = the ID of the device you want to delete </li>
+</ul>
+<p>If the device is still present in the system, it will be recognised again (and thus &ldquo;recreated&rdquo;) when the machine is commissioned again.</p>
+<p><a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a></p>
+<p>Assume you have two machines available, like this:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></a></p>
+<p>Select the machine <em>to which you want to clone configuration</em>, and select &ldquo;Clone from&hellip;&rdquo;</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></a></p>
+<p>Under &ldquo;1. Select the source machine&rdquo; &ndash; choose a machine from the attached list:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></a></p>
+<p>Under &ldquo;2. Select what to clone&rdquo;, choose &ldquo;Network&rdquo;, &ldquo;Storage&rdquo;, or both (here, we&rsquo;ve chosen &ldquo;Storage&rdquo;):</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></a></p>
+<p>Click &ldquo;Clone to machine&rdquo;. MAAS will report the status of the attempt.</p>
 <p><a href="#heading--how-to-examine-machines-and-machine-details"><h2 id="heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</h2></a></p>
 <p>This section describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -22,18 +496,1435 @@
 <li><a href="#heading--event-logs">How to find a machine&rsquo;s event logs</a></li>
 <li><a href="#heading--machine-config">How to find machine configuration info</a></li>
 </ul>
+<p><a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a></p>
+<p>To view the machine list, select &ldquo;Machines&rdquo; on the top menu of the MAAS web UI:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/19e038dbc6e669bfffc0ea5a9946432a75142bfb.jpeg"></a> </p>
+<p>To quickly view more details, roll the cursor over status icons:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/8f78a8877a029e7a44bcd4cf3d138499637fe790.jpeg"></a> </p>
+<p><a href="#heading--how-to-view-machine-details"><h3 id="heading--how-to-view-machine-details">How to view machine details</h3></a></p>
+<p>To open a detailed view of a machine&rsquo;s status and configuration, click a machine&rsquo;s FQDN or MAC address:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a></p>
+<p><a href="#heading--machine-interfaces"><h3 id="heading--machine-interfaces">How to find network info for a machine</h3></a></p>
+<p>To find network info for a specific machine, open that machine&rsquo;s &ldquo;Network&rdquo; tab in the machine summary:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> </p>
+<p>Options on this tab are described in the introduction to <a href="about-networking.html">Networking</a> article in this documentation set.</p>
+<p><a href="#heading--how-to-find-machine-storage-info"><h3 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h3></a></p>
+<p>To view/edit machine storage info, click on the &ldquo;Storage&rdquo; tab in the machine summary:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> </p>
+<p>See the section about <a href="about-machines.html#heading--about-storage">storage</a> for more information.</p>
+<p><a href="#heading--commissioning-log"><h3 id="heading--commissioning-log">How to find commissioning logs</h3></a></p>
+<p>The &ldquo;Commissioning&rdquo; tab brings up a summary log of commissioning events:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e98766009f32972dfe29293f9bc850b99a9a941f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e98766009f32972dfe29293f9bc850b99a9a941f.png"></a> </p>
+<p>Click on the dropdown at the end of the row you&rsquo;re interested in, and click on &ldquo;View details&rdquo;:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/8f7b4c02ce301fb867e7af33267be62498095bb5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8f7b4c02ce301fb867e7af33267be62498095bb5.png"></a></p>
+<p>This will bring up a detailed log view for that row:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a></p>
+<p>These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on <a href="maas-logging-reference.html">logging</a> for more details on how to read and interpret these logs.  </p>
+<p><a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware &amp; test logs</h3></a></p>
+<p>This tab presents a summary of tests run against this particular machine.  You can view the summary report, or choose the &ldquo;View details&rdquo; dropdown to get details on any particular tests:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a> </p>
+<p>The format of these screens is very similar to the Configuration logs shown above.   </p>
+<p><a href="#heading--raw-log-output"><h3 id="heading--raw-log-output">How to find raw log output for a machine</h3></a></p>
+<p>By choosing &ldquo;Installation output&rdquo; on the &ldquo;Logs&rdquo; tab, you can see the &ldquo;raw&rdquo; log output:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> </p>
+<p>Help interpreting these logs can be found under the <a href="maas-logging-reference.html">logging</a> section of this documentation.</p>
+<p><a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine&rsquo;s event logs</h3></a></p>
+<p>To view the Event log for a machine, choose the &ldquo;Event&rdquo; tab under &ldquo;Logs.&rdquo;  This displays a list of timestamped status updates for events and actions performed on the machine:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> </p>
+<p>There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the <a href="maas-logging-reference.html">logging</a> section of this documentation.</p>
+<p><a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a></p>
+<p>The final tab from the Machine menu allows you to update machine and power configuration options: </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> </p>
+<p>There are two sections to this tab.  The &ldquo;Machine configuration&rdquo; section, shown above, offers some general parameters, mostly related to how this machine is grouped and categorised.  More information on these options are found in the relevant sections of the documentation (e.g., tags, resource pools, and so forth). </p>
+<p>The &ldquo;Power configuration&rdquo; supplies the parameters necessary for MAAS to access the machine to PXE-boot it: </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> </p>
+<p>More information on Power configuration will be found in the <a href="power-management-reference.html">Power management</a> section of this documentation.</p>
 <p><a href="#heading--how-to-use-resource-pools"><h2 id="heading--how-to-use-resource-pools">How to use resource pools</h2></a></p>
 <p>This section will explain:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--creating-a-resource-pool">How to create a resource pool</a></li>
+<li><a href="#heading--list-available-resource-pools">How to list available resource pools</a></li>
+<li><a href="#heading--list-a-single-resource-pool">How to list a single resource pool</a></li>
+<li><a href="#heading--update-a-resource-pool">How to update a resource pool</a></li>
+<li><a href="#heading--delete-a-resource-pool">How to delete a resource pool</a></li>
+<li><a href="#heading--add-a-machine-to-a-resource-pool">How to add a machine to a resource pool</a></li>
+</ul>
+<p><a href="#heading--creating-a-resource-pool"><h3 id="heading--creating-a-resource-pool">How to create a resource pool</h3></a></p>
+<p>Here&rsquo;s an example that demonstrates how to create a new resource pool named <code>myresource</code>.</p>
+<pre><code class="language-nohighlight">maas $PROFILE resource-pools create name=myresource description=&quot;A new resource pool.&quot;
+</code></pre>
+<p><strong>NOTE:</strong> 
+The <code>description</code> field is optional.</p>
+<p><a href="#heading--list-available-resource-pools"><h3 id="heading--list-available-resource-pools">How to list available resource pools</h3></a></p>
+<pre><code class="language-nohighlight">maas $PROFILE resource-pools read
+</code></pre>
+<p><a href="#heading--list-a-single-resource-pool"><h3 id="heading--list-a-single-resource-pool">How to list a single resource pool</h3></a></p>
+<pre><code class="language-nohighlight">maas $PROFILE resource-pool read $RESOURCE_POOL_ID
+</code></pre>
+<p><a href="#heading--update-a-resource-pool"><h3 id="heading--update-a-resource-pool">How to update a resource pool</h3></a></p>
+<pre><code class="language-nohighlight">maas $PROFILE resource-pool update $RESOURCE_POOL_ID name=newname description=&quot;A new description.&quot;
+</code></pre>
+<p><strong>NOTE:</strong> 
+The <code>name</code> and <code>description</code> fields are optional.</p>
+<p><a href="#heading--delete-a-resource-pool"><h3 id="heading--delete-a-resource-pool">How to delete a resource pool</h3></a></p>
+<pre><code class="language-nohighlight">maas $PROFILE resource-pool delete $RESOURCE_POOL_ID
+</code></pre>
+<p><a href="#heading--add-a-machine-to-a-resource-pool"><h3 id="heading--add-a-machine-to-a-resource-pool">How to add a machine to a resource pool</h3></a></p>
+<pre><code class="language-nohighlight">maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
+</code></pre>
+<p><a href="#heading--how-to-use-annotations"><h2 id="heading--how-to-use-annotations">How to use annotations</h2></a></p>
+<p>This section will show you:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--work-with-static-annotations">How to use static annotations</a></li>
+<li><a href="#heading--work-with-dynamic-workload-annotations">How to use dynamic (workload) annotations</a></li>
+</ul>
+<p><a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to use static annotations</h3></a></p>
+<p>This subsection will show you how to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--identify-your-machines">How to identify your machines</a></li>
+<li><a href="#heading--set-a-static-annotation-for-a-machine">How to set a static annotation for a machine</a></li>
+<li><a href="#heading--change-or-clear-a-static-annotation-for-a-machine">How to change or clear a static annotation for a machine</a></li>
+<li><a href="#heading--list-static-annotations-for-all-machines">How to list static annotations for all machines</a></li>
+<li><a href="#heading--view-a-static-annotation-for-one-machine">How to view a static annotation for one machine</a></li>
+</ul>
+<p><a href="#heading--identify-your-machines"><h4 id="heading--identify-your-machines">How to identify your machines</h4></a></p>
+<p>To identify your available machines, use a command like this one:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id])
+|@tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id])
+|@tsv' | column -t
+</code></pre>
+<p>Typical output might look something like this:</p>
+<pre><code class="language-nohighlight">hostname       system_id
+--------       ---------
+divine-stork   8b3ypp
+casual-prawn   4end6r
+driven-teal    tgaat6
+immune-beetle  43xand
+good-osprey    napfxk
+smart-hen      c4rwq7
+boss-satyr     xn8taa
+golden-martin  8fxery
+crack-guinea   qk4b3g
+finer-leech    cy3dtr
+free-mouse     gxtbq4
+humble-bunny   srqnnb
+wanted-muskox  ekw7fh
+one-boa        by477d
+great-urchin   srnx4g
+ace-frog       g6arwg
+alive-marlin   gbwnfb
+picked-parrot  am77wn
+tough-kit      ke3wc7
+legal-whale    8nq3mt
+game-sponge    76pdc6
+fun-ghoul      qxfm7k
+aware-earwig   8m8hs7
+chief-crane    7fapx7
+select-tapir   4ascbr
+on-slug        snfs8d
+polite-llama   dbqd4m
+frank-coyote   wcmk48
+usable-condor  ed8hmy
+still-imp      h6ra6d
+</code></pre>
+<p><a href="#heading--set-a-static-annotation-for-a-machine"><h4 id="heading--set-a-static-annotation-for-a-machine">How to set a static annotation for a machine</h4></a></p>
+<p>If you want to set the static annotation for a given machine, you can do so with a command that looks like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine update $SYSTEM_ID description=&quot;$STATIC_ANNOTATION&quot;
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin machine update ke3wc7 description=&quot;kilo-echo-3-whisky-charlie-7&quot;
+</code></pre>
+<p>You can check your work by <a href="#heading--view-a-static-annotation-for-one-machine">viewing the static annotations for one machine</a>.</p>
+<p><a href="#heading--change-or-clear-a-static-annotation-for-a-machine"><h4 id="heading--change-or-clear-a-static-annotation-for-a-machine">How to change or clear a static annotation for a machine</h4></a></p>
+<p>If you want to set the static annotation for a given machine, use the same command you&rsquo;d use to set a static annotation:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine update $SYSTEM_ID description=&quot;$STATIC_ANNOTATION&quot;
+</code></pre>
+<p>The existing annotation will be overwritten by the new one you enter.  For example:</p>
+<pre><code class="language-nohighlight">maas admin machine update ke3wc7 description=&quot;&quot;
+</code></pre>
+<p>You can check your work by <a href="#heading--view-a-static-annotation-for-one-machine">viewing the static annotations for one machine</a>.</p>
+<p><a href="#heading--list-static-annotations-for-all-machines"><h4 id="heading--list-static-annotations-for-all-machines">How to list static annotations for all machines</h4></a></p>
+<p>To list static annotations for all machines, enter a command similar to this one:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;description&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.description])
+|@tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;description&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.description])
+|@tsv' | column -t
+</code></pre>
+<p>Output might look something like this:</p>
+<pre><code class="language-nohighlight">hostname       system_id  description
+--------       ---------  -----------
+driven-teal    tgaat6     tango-golf
+humble-bunny   srqnnb     sierra-romeo
+tough-kit      ke3wc7     kilo-echo
+</code></pre>
+<p><a href="#heading--view-a-static-annotation-for-one-machine"><h4 id="heading--view-a-static-annotation-for-one-machine">How to view a static annotation for one machine</h4></a></p>
+<p>To view a static annotation for one machine, try a command like this:</p>
+<pre><code class="language-nohighlight"> maas $PROFILE machine read $SYSTEM_ID \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;description&quot;]
+|(.,map(length*&quot;-&quot;))),([.hostname,.system_id,.description])
+|@tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight"> maas admin machine read tgaat6 \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;description&quot;]
+|(.,map(length*&quot;-&quot;))),([.hostname,.system_id,.description])
+|@tsv' | column -t
+</code></pre>
+<p>A command like this might produce output as follows:</p>
+<pre><code class="language-nohighlight">hostname     system_id  description
+--------     ---------  -----------
+driven-teal  tgaat6     tango-golf
+</code></pre>
+<p><a href="#heading--work-with-dynamic-workload-annotations"><h3 id="heading--work-with-dynamic-workload-annotations">How to use dynamic (workload) annotations</h3></a></p>
+<p>This section will show you how to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--identify-machines-that-can-receive-dynamic-annotations">How to identify machines that can receive dynamic annotations</a></li>
+<li><a href="#heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</a></li>
+<li><a href="#heading--clear-and-change-dynamic-annotations-for-a-machine">How to clear and change dynamic annotations for a machine</a></li>
+<li><a href="#heading--list-dynamic-annotations-for-all-machines">How to list dynamic annotations for all machines</a></li>
+<li><a href="#heading--list-dynamic-annotations-for-one-machine">How to list dynamic allocations for one machine</a></li>
+</ul>
+<p><a href="#heading--identify-machines-that-can-receive-dynamic-annotations"><h4 id="heading--identify-machines-that-can-receive-dynamic-annotations">How to identify machines that can receive dynamic annotations</h4></a></p>
+<p>You can only set dynamic annotations for machines that are in the &ldquo;Allocated&rdquo; or &ldquo;Deployed&rdquo; state.  To identify which of your machines are in these states, you can execute the following command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;status&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.status_name])
+|@tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;status&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.status_name])
+|@tsv' | column -t
+</code></pre>
+<p>Output should look something like this:</p>
+<pre><code class="language-nohighlight">hostname       system_id  status
+--------       ---------  ------
+divine-stork   8b3ypp     Deployed
+casual-prawn   4end6r     Ready
+driven-teal    tgaat6     Allocated
+immune-beetle  43xand     Allocated
+good-osprey    napfxk     Allocated
+smart-hen      c4rwq7     Allocated
+boss-satyr     xn8taa     Ready
+golden-martin  8fxery     Allocated
+crack-guinea   qk4b3g     Allocated
+finer-leech    cy3dtr     Deployed
+free-mouse     gxtbq4     Allocated
+humble-bunny   srqnnb     Allocated
+wanted-muskox  ekw7fh     Deployed
+one-boa        by477d     Allocated
+great-urchin   srnx4g     Allocated
+ace-frog       g6arwg     Ready
+alive-marlin   gbwnfb     Deployed
+picked-parrot  am77wn     Allocated
+tough-kit      ke3wc7     Deployed
+legal-whale    8nq3mt     Allocated
+game-sponge    76pdc6     Allocated
+fun-ghoul      qxfm7k     Allocated
+aware-earwig   8m8hs7     Deployed
+chief-crane    7fapx7     Ready
+select-tapir   4ascbr     Allocated
+on-slug        snfs8d     Allocated
+polite-llama   dbqd4m     Allocated
+frank-coyote   wcmk48     Allocated
+usable-condor  ed8hmy     Deployed
+still-imp      h6ra6d     Allocated
+</code></pre>
+<p><a href="#heading--set-dynamic-annotations-for-a-machine"><h4 id="heading--set-dynamic-annotations-for-a-machine">How to set dynamic annotations for a machine</h4></a></p>
+<p>Dynamic annotations, otherwise known as &ldquo;workload annotations&rdquo; or &ldquo;owner data,&rdquo; can be used to keep track of the runtime status of machines that are allocated or deployed.  These annotations are set using <code>key=value</code> pairs.  You can set any <code>key=value</code> pair that you wish for any machine, although it&rsquo;s probably more useful if you standardise your key names.</p>
+<p>To set a dynamic annotation for a machine, you can enter a command like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$VALUE
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin machine set-owner-data tgaat6 owner=gsmith@how-to-make-machines-available.htmlo.com
+</code></pre>
+<p>This command will return a JSON string representative of the machine&rsquo;s new configuration, including the dynamic annotations you&rsquo;ve added. You can check your work by <a href="#heading--list-dynamic-annotations-for-one-machine">listing the dynamic annotations for the one machine</a> you just edited, or by <a href="#heading--list-dynamic-annotations-for-all-machines">listing dynamic annotations for all machines</a>.</p>
+<p><a href="#heading--clear-and-change-dynamic-annotations-for-a-machine"><h4 id="heading--clear-and-change-dynamic-annotations-for-a-machine">How to clear and change dynamic annotations for a machine</h4></a></p>
+<p>You can change dynamic annotations for a machine simply by executing a new <code>set-owner-data</code> command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$NEW_VALUE
+</code></pre>
+<p>You can clear a dynamic annotation by entering the empty string (<code>""</code>) as the $VALUE:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=&quot;&quot;
+</code></pre>
+<p>These commands will return a JSON string representative of the machine&rsquo;s new configuration, including the dynamic annotations you&rsquo;ve changed or cleared. You can check your work by <a href="#heading--list-dynamic-annotations-for-one-machine">listing the dynamic annotations for the one machine</a> you just edited, or by <a href="#heading--list-dynamic-annotations-for-all-machines">listing dynamic annotations for all machines</a>.</p>
+<p><a href="#heading--list-dynamic-annotations-for-all-machines"><h4 id="heading--list-dynamic-annotations-for-all-machines">How to list dynamic annotations for all machines</h4></a></p>
+<p>You can list the current dynamic annotations for all machines with a command like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;owner_data&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin machines read \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;owner_data&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+</code></pre>
+<p>This command output might look something like this:</p>
+<pre><code class="language-nohighlight">hostname       system_id  owner_data
+--------       ---------  ----------
+divine-stork   8b3ypp
+casual-prawn   4end6r
+driven-teal    tgaat6     farquar     foobar
+immune-beetle  43xand
+good-osprey    napfxk
+smart-hen      c4rwq7
+</code></pre>
+<p><a href="#heading--list-dynamic-annotations-for-one-machine"><h4 id="heading--list-dynamic-annotations-for-one-machine">How to list dynamic allocations for one machine</h4></a></p>
+<p>You can list the dynamic annotations for one machine by entering a command of the form:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine read $SYSTEM_ID \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;owner_data&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-nohighlight">maas admin machine read tgaat6 \
+| jq -r '([&quot;hostname&quot;,&quot;system_id&quot;,&quot;owner_data&quot;]
+|(.,map(length*&quot;-&quot;))),(.[]|[.hostname,.system_id,.owner_data[]])
+|@tsv' | column -t
+</code></pre>
+<p>This will produce output similar to the following:</p>
+<pre><code class="language-nohighlight">hostname     system_id  owner_data
+--------     ---------  ----------
+driven-teal  tgaat6     farquar     foobar
+</code></pre>
 <p><a href="#heading--how-to-use-machine-storage"><h2 id="heading--how-to-use-machine-storage">How to use machine storage</h2></a></p>
 <p>This section will explain:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-set-global-storage-layouts">How to set global storage layouts</a></li>
+<li><a href="#heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</a></li>
+<li><a href="#heading--how-to-specify-conditional-erasure-types">How to specify conditional erasure types</a></li>
+<li><a href="#heading--how-to-erase-disks">How to erase disks</a></li>
+<li><a href="#heading--how-to-manage-block-devices">How to manage block devices</a></li>
+<li><a href="#heading--how-to-manage-partitions">How to manage partitions</a></li>
+<li><a href="#heading--how-to-manage-vmfs-datastores">How to manage VMFS datastores</a></li>
+<li><a href="#heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</a></li>
+</ul>
 <p><a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a></p>
 <p>Layouts can be set globally and on a per-machine basis.</p>
+<p>All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:</p>
+<pre><code class="language-nohighlight">maas $PROFILE maas set-config name=default_storage_layout value=$LAYOUT_TYPE
+</code></pre>
+<p>For example, to set the default layout to Flat:</p>
+<pre><code class="language-nohighlight">maas $PROFILE maas set-config name=default_storage_layout value=flat
+</code></pre>
+<p>Important: The new default will only apply to newly-commissioned machines.</p>
 <p><strong>NOTE:</strong> 
 The new default will only apply to newly-commissioned machines.</p>
 <p><a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a></p>
+<p>An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=$LAYOUT_TYPE [$OPTIONS]
+</code></pre>
+<p>For example, to set an LVM layout where the logical volume has a size of 5 GB:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5368709120
+
+```nohighlight
+You must specify all storage sizes in bytes.
+
+This action will remove the configuration that may exist on any block device.
+
+
+
+**NOTE:** 
+Only an administrator can modify storage at the block device level (providing the machine has a status of 'Ready').
+
+
+
+
+
+
+&lt;a href=&quot;#heading--how-to-erase-disks&quot;&gt;&lt;h3 id=&quot;heading--how-to-erase-disks&quot;&gt;How to erase disks&lt;/h3&gt;&lt;/a&gt;
+
+When using the [MAAS CLI](maas-cli.html), you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
+
+```nohighlight
+maas $PROFILE machine release...
+</code></pre>
+<p>and not:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machines release...
+</code></pre>
+<p>Note the difference in singular and plural &ldquo;machine/machines&rdquo; in the commands.  Releasing a machine requires that you have the <code>system_id</code> of the machine to be released, which you can obtain with a command like this one:</p>
+<pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;VLAN&quot;,&quot;FABRIC&quot;,&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .system_id, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name,
+.boot_interface.vlan.name, .boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+</code></pre>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
+</a></p>
+<p>The basic form of the release command, when erasing disks on releasing, is:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine release $SYSTEM_ID comment=&quot;some comment&quot; erase=true [secure_erase=true ||/&amp;&amp; quick_erase=true]
+</code></pre>
+<p>Parameters <code>secure_erase</code> and <code>quick_erase</code> are both optional, although if you don&rsquo;t specify either of them, the entire disk will be overwritten with null bytes.  Note that this overwrite process is very slow.</p>
+<p>Secure erasure uses the drive&rsquo;s secure erase feature, if it has one.  In some cases, this can be much faster than overwriting the entire drive.  Be aware, though, that some drives implement secure erasure as a complete drive overwrite, so this method may still be very slow.  Additionally, if you specify secure erasure and the drive doesn&rsquo;t have this feature, you&rsquo;ll get a complete overwrite anyway &ndash; again, possibly very slow.</p>
+<p>Quick erasure wipes 2MB at the start and end of the drive to make recovery both inconvenient and unlikely to happen by accident.  Note, though, that quick erasure is not secure.</p>
+<p><a href="#heading--how-to-specify-conditional-erasure-types"><h3 id="heading--how-to-specify-conditional-erasure-types">How to specify conditional erasure types</h3></a></p>
+<p>If you specify both erasure types, like this:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine release $SYSTEM_ID comment=&quot;some comment&quot; erase=true secure_erase=true quick_erase=true
+</code></pre>
+<p>then MAAS will perform a secure erasure if the drive has that feature; if not, it will perform a quick erasure.  Of course, if you&rsquo;re concerned about completely erasing the drive, and you&rsquo;re not sure whether the disk has secure erase features, the best way to handle that is to specify nothing, and allow the full disk to be overwritten by null bytes:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine release $SYSTEM_ID comment=&quot;some comment&quot; erase=true
+</code></pre>
+<p><a href="#heading--how-to-manage-block-devices"><h3 id="heading--how-to-manage-block-devices">How to manage block devices</h3></a></p>
+<p>This section will explain:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-list-block-devices">How to list block devices</a></li>
+<li><a href="#heading--how-to-read-a-block-device">How to read a block device</a></li>
+<li><a href="#heading--how-to-create-a-block-device">How to create a block device</a></li>
+<li><a href="#heading--how-to-update-a-block-device">How to update a block device</a></li>
+<li><a href="#heading--how-to-delete-a-block-device">How to delete a block device</a></li>
+<li><a href="#heading--format-block-device">How to format Block Device</a></li>
+<li><a href="#heading--how-to-unformat-a-block-device">How to unformat a block device</a></li>
+<li><a href="#heading--how-to-mount-a-block-device">How to mount a block device</a></li>
+<li><a href="#heading--how-to-unmount-a-block-device">How to unmount a block device</a></li>
+<li><a href="#heading--how-to-set-a-block-device-as-a-boot-disk">How to set a block device as a boot disk</a></li>
+</ul>
+<p><a href="#heading--how-to-list-block-devices"><h4 id="heading--how-to-list-block-devices">How to list block devices</h4></a></p>
+<p>To view all block devices on a machine use the read operation. This list both physical and virtual block devices, as you can see in the output from the following command:</p>
+<pre><code class="language-nohighlight">maas admin block-devices read &lt;node-id&gt;
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+[
+    {
+        &quot;id&quot;: 10,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/vda&quot;,
+        &quot;serial&quot;: &quot;&quot;,
+        &quot;block_size&quot;: 4096,
+        &quot;available_size&quot;: 0,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/&quot;,
+        &quot;filesystem&quot;: null,
+        &quot;id_path&quot;: &quot;/dev/vda&quot;,
+        &quot;size&quot;: 5368709120,
+        &quot;partition_table_type&quot;: &quot;MBR&quot;,
+        &quot;model&quot;: &quot;&quot;,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;uuid&quot;: null,
+        &quot;used_size&quot;: 5365563392,
+        &quot;used_for&quot;: &quot;MBR partitioned with 1 partition&quot;,
+        &quot;partitions&quot;: [
+            {
+                &quot;bootable&quot;: false,
+                &quot;id&quot;: 9,
+                &quot;resource_uri&quot;:&quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/9&quot;,
+                &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part1&quot;,
+                &quot;uuid&quot;: &quot;aae082cd-8be0-4a64-ab49-e998abd6ea43&quot;,
+                &quot;used_for&quot;: &quot;LVM volume for vgroot&quot;,
+                &quot;size&quot;: 5360320512,
+                &quot;type&quot;: &quot;partition&quot;,
+                &quot;filesystem&quot;: {
+                    &quot;uuid&quot;: &quot;a56ebfa6-8ef4-48b5-b6bc-9f9d27065d24&quot;,
+                    &quot;mount_options&quot;: null,
+                    &quot;label&quot;: null,
+                    &quot;fstype&quot;: &quot;lvm-pv&quot;,
+                    &quot;mount_point&quot;: null
+                }
+            }
+        ],
+        &quot;tags&quot;: [
+            &quot;rotary&quot;
+        ],
+        &quot;name&quot;: &quot;vda&quot;
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/lvroot&quot;,
+        &quot;serial&quot;: null,
+        &quot;block_size&quot;: 4096,
+        &quot;available_size&quot;: 0,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/11/&quot;,
+        &quot;filesystem&quot;: {
+            &quot;uuid&quot;: &quot;7181a0c0-9e16-4276-8a55-c77364d137ca&quot;,
+            &quot;mount_options&quot;: null,
+            &quot;label&quot;: &quot;root&quot;,
+            &quot;fstype&quot;: &quot;ext4&quot;,
+            &quot;mount_point&quot;: &quot;/&quot;
+        },
+        &quot;id_path&quot;: null,
+        &quot;size&quot;: 3221225472,
+        &quot;partition_table_type&quot;: null,
+        &quot;model&quot;: null,
+        &quot;type&quot;: &quot;virtual&quot;,
+        &quot;uuid&quot;: &quot;fc8ba89e-9149-412c-bcea-e596eb7c0d14&quot;,
+        &quot;used_size&quot;: 3221225472,
+        &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+        &quot;partitions&quot;: [],
+        &quot;tags&quot;: [],
+        &quot;name&quot;: &quot;vgroot-lvroot&quot;
+    }
+]
+</code></pre>
+<p><a href="#heading--how-to-read-a-block-device"><h4 id="heading--how-to-read-a-block-device">How to read a block device</h4></a></p>
+<p>If you want to read just one block device instead of listing all block devices the read operation on the block device endpoint provides that information. To display the details on device &lsquo;11&rsquo; from the previous output, for example, we could enter:</p>
+<pre><code class="language-nohighlight">maas admin block-device read &lt;node-id&gt; 11
+</code></pre>
+<p>The above command generates the following output:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;available_size&quot;: 0,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vgroot-lvroot&quot;,
+    &quot;name&quot;: &quot;vgroot-lvroot&quot;,
+    &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+    &quot;type&quot;: &quot;virtual&quot;,
+    &quot;used_size&quot;: 3221225472,
+    &quot;filesystem&quot;: {
+        &quot;uuid&quot;: &quot;7181a0c0-9e16-4276-8a55-c77364d137ca&quot;,
+        &quot;mount_point&quot;: &quot;/&quot;,
+        &quot;mount_options&quot;: null,
+        &quot;fstype&quot;: &quot;ext4&quot;,
+        &quot;label&quot;: &quot;root&quot;
+    },
+    &quot;id_path&quot;: null,
+    &quot;id&quot;: 11,
+    &quot;partition_table_type&quot;: null,
+    &quot;block_size&quot;: 4096,
+    &quot;tags&quot;: [],
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/11/&quot;,
+    &quot;uuid&quot;: &quot;fc8ba89e-9149-412c-bcea-e596eb7c0d14&quot;,
+    &quot;serial&quot;: null,
+    &quot;partitions&quot;: [],
+    &quot;size&quot;: 3221225472,
+    &quot;model&quot;: null
+}
+</code></pre>
+<p>It is also possible to use the name of the block device, such as &lsquo;sda&rsquo; or &lsquo;vda&rsquo;, instead of its &lsquo;id&rsquo;:</p>
+<pre><code class="language-nohighlight">s admin block-device read &lt;node-id&gt; vda
+</code></pre>
 <p><strong>NOTE:</strong> 
-Only an administrator can modify storage at the block device level (providing the machine has a status of &lsquo;Ready&rsquo;).</p>
+MAAS allows the name of a block device to be changed. If the block device name has changed then the API call needs to use the new name.</p>
+<pre><code>Using the ID is safer as it never changes.
+</code></pre>
+<p><a href="#heading--how-to-create-a-block-device"><h4 id="heading--how-to-create-a-block-device">How to create a block device</h4></a></p>
+<p>MAAS gathers the required information itself on block devices when re- commissioning a machine. If this doesn&rsquo;t provide the required information, it is also possible - though not recommended - for an administrator to use the API to manually add a physical block device to a machine.</p>
+<pre><code class="language-nohighlight">maas admin block-devices create &lt;node-id&gt; name=vdb model=&quot;QEMU&quot; serial=&quot;QM00001&quot; size=21474836480 block_size=4096
+</code></pre>
+<p>Depending on your configuration, output should be similar to the following:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;available_size&quot;: 21474836480,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vdb&quot;,
+    &quot;name&quot;: &quot;vdb&quot;,
+    &quot;used_for&quot;: &quot;Unused&quot;,
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;used_size&quot;: 0,
+    &quot;filesystem&quot;: null,
+    &quot;id_path&quot;: &quot;&quot;,
+    &quot;id&quot;: 12,
+    &quot;partition_table_type&quot;: null,
+    &quot;block_size&quot;: 4096,
+    &quot;tags&quot;: [],
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/12/&quot;,
+    &quot;uuid&quot;: null,
+    &quot;serial&quot;: &quot;QM00001&quot;,
+    &quot;partitions&quot;: [],
+    &quot;size&quot;: 21474836480,
+    &quot;model&quot;: &quot;QEMU&quot;
+}
+</code></pre>
+<p><strong>NOTE:</strong> 
+The serial number is what MAAS will use when a machine is deployed to find the specific block device. It&rsquo;s important that this be correct. In a rare chance that your block device does not provide a model or serial number you can provide an id_path. The id_path should be a path that is always the same, no matter the kernel version.</p>
+<p><a href="#heading--how-to-update-a-block-device"><h4 id="heading--how-to-update-a-block-device">How to update a block device</h4></a></p>
+<p>An administrator can also update the details held on a physical block device, such as its name, from the API:</p>
+<pre><code class="language-nohighlight">maas admin block-device update &lt;node-id&gt; 12 name=newroot
+</code></pre>
+<p>Output from this command will show that the &lsquo;name&rsquo; has changed:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;block_size&quot;: 4096,
+    &quot;size&quot;: 21474836480,
+    &quot;filesystem&quot;: null,
+    &quot;model&quot;: &quot;QEMU&quot;,
+    &quot;name&quot;: &quot;newroot&quot;,
+    &quot;partitions&quot;: [],
+    &quot;tags&quot;: [],
+    &quot;used_size&quot;: 0,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/newroot&quot;,
+    &quot;id_path&quot;: &quot;&quot;,
+    &quot;uuid&quot;: null,
+    &quot;available_size&quot;: 21474836480,
+    &quot;id&quot;: 12,
+    &quot;used_for&quot;: &quot;Unused&quot;,
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/12/&quot;,
+    &quot;partition_table_type&quot;: null,
+    &quot;serial&quot;: &quot;QM00001&quot;
+}
+</code></pre>
+<p><a href="#heading--how-to-delete-a-block-device"><h4 id="heading--how-to-delete-a-block-device">How to delete a block device</h4></a></p>
+<p>Physical and virtual block devices can be deleted by an administrator, while ordinary users can only delete virtual block devices:</p>
+<pre><code class="language-nohighlight">maas admin block-device delete &lt;node-id&gt; 12
+</code></pre>
+<p><a href="#heading--format-block-device"><h4 id="heading--format-block-device">How to format a block device</h4></a></p>
+<p>An entire block device can be formatted by defining a filesystem with the &lsquo;format&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas admin block-device format &lt;node-id&gt; 11 fstype=ext4
+</code></pre>
+<p>Successful output from this command will look similar to this:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;block_size&quot;: 4096,
+    &quot;size&quot;: 3221225472,
+    &quot;filesystem&quot;: {
+        &quot;label&quot;: &quot;&quot;,
+        &quot;fstype&quot;: &quot;ext4&quot;,
+        &quot;mount_options&quot;: null,
+        &quot;uuid&quot;: &quot;75e42f49-9a45-466c-8425-87a40e4f4148&quot;,
+        &quot;mount_point&quot;: null
+    },
+    &quot;model&quot;: null,
+    &quot;name&quot;: &quot;vgroot-lvroot&quot;,
+    &quot;partitions&quot;: [],
+    &quot;tags&quot;: [],
+    &quot;used_size&quot;: 3221225472,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vgroot-lvroot&quot;,
+    &quot;id_path&quot;: null,
+    &quot;uuid&quot;: &quot;fc8ba89e-9149-412c-bcea-e596eb7c0d14&quot;,
+    &quot;available_size&quot;: 0,
+    &quot;id&quot;: 11,
+    &quot;used_for&quot;: &quot;Unmounted ext4 formatted filesystem&quot;,
+    &quot;type&quot;: &quot;virtual&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/11/&quot;,
+    &quot;partition_table_type&quot;: null,
+    &quot;serial&quot;: null
+}
+</code></pre>
+<p><strong>NOTE:</strong> 
+You cannot format a block device that contains partitions or is used to make another virtual block device.</p>
+<p><a href="#heading--how-to-unformat-a-block-device"><h4 id="heading--how-to-unformat-a-block-device">How to unformat a block device</h4></a></p>
+<p>You can remove the filesystem from a block device with the &lsquo;unformat&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas admin block-device unformat &lt;node-id&gt; 11
+</code></pre>
+<p>The output from this command should show the filesystem is now &lsquo;null&rsquo;:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;available_size&quot;: 3221225472,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vgroot-lvroot&quot;,
+    &quot;name&quot;: &quot;vgroot-lvroot&quot;,
+    &quot;used_for&quot;: &quot;Unused&quot;,
+    &quot;type&quot;: &quot;virtual&quot;,
+    &quot;used_size&quot;: 0,
+    &quot;filesystem&quot;: null,
+    &quot;id_path&quot;: null,
+    &quot;id&quot;: 11,
+    &quot;partition_table_type&quot;: null,
+    &quot;block_size&quot;: 4096,
+    &quot;tags&quot;: [],
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/11/&quot;,
+    &quot;uuid&quot;: &quot;fc8ba89e-9149-412c-bcea-e596eb7c0d14&quot;,
+    &quot;serial&quot;: null,
+    &quot;partitions&quot;: [],
+    &quot;size&quot;: 3221225472,
+    &quot;model&quot;: null
+}
+</code></pre>
+<p><a href="#heading--how-to-mount-a-block-device"><h4 id="heading--how-to-mount-a-block-device">How to mount a block device</h4></a></p>
+<p>If a block device has a filesystem, you can use the &lsquo;maas&rsquo; command to mount a block devices at a given mount point:</p>
+<pre><code class="language-nohighlight">maas admin block-device mount &lt;node-id&gt; 11 mount_point=/srv
+</code></pre>
+<p>The mount point is included in the successful output from the command:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;available_size&quot;: 0,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vgroot-lvroot&quot;,
+    &quot;name&quot;: &quot;vgroot-lvroot&quot;,
+    &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /srv&quot;,
+    &quot;type&quot;: &quot;virtual&quot;,
+    &quot;used_size&quot;: 3221225472,
+    &quot;filesystem&quot;: {
+        &quot;uuid&quot;: &quot;6f5965ad-49f7-42da-95ff-8000b739c39f&quot;,
+        &quot;mount_point&quot;: &quot;/srv&quot;,
+        &quot;mount_options&quot;: &quot;&quot;,
+        &quot;fstype&quot;: &quot;ext4&quot;,
+        &quot;label&quot;: &quot;&quot;
+    },
+    &quot;id_path&quot;: null,
+    &quot;id&quot;: 11,
+    &quot;partition_table_type&quot;: null,
+    &quot;block_size&quot;: 4096,
+    &quot;tags&quot;: [],
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/11/&quot;,
+    &quot;uuid&quot;: &quot;fc8ba89e-9149-412c-bcea-e596eb7c0d14&quot;,
+    &quot;serial&quot;: null,
+    &quot;partitions&quot;: [],
+    &quot;size&quot;: 3221225472,
+    &quot;model&quot;: null
+}
+</code></pre>
+<p><a href="#heading--how-to-unmount-a-block-device"><h4 id="heading--how-to-unmount-a-block-device">How to unmount a block device</h4></a></p>
+<p>To remove the mount point from the block device, use the &lsquo;unmount&rsquo; call:</p>
+<pre><code class="language-nohighlight">maas admin block-device unmount &lt;node-id&gt; 11 mount_point=/srv
+</code></pre>
+<p>The previous command will include a nullified &lsquo;mount_point&rsquo; in its output:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;available_size&quot;: 0,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vgroot-lvroot&quot;,
+    &quot;name&quot;: &quot;vgroot-lvroot&quot;,
+    &quot;used_for&quot;: &quot;Unmounted ext4 formatted filesystem&quot;,
+    &quot;type&quot;: &quot;virtual&quot;,
+    &quot;used_size&quot;: 3221225472,
+    &quot;filesystem&quot;: {
+        &quot;uuid&quot;: &quot;6f5965ad-49f7-42da-95ff-8000b739c39f&quot;,
+        &quot;mount_point&quot;: null,
+        &quot;mount_options&quot;: null,
+        &quot;fstype&quot;: &quot;ext4&quot;,
+        &quot;label&quot;: &quot;&quot;
+    },
+    &quot;id_path&quot;: null,
+    &quot;id&quot;: 11,
+    &quot;partition_table_type&quot;: null,
+    &quot;block_size&quot;: 4096,
+    &quot;tags&quot;: [],
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/11/&quot;,
+    &quot;uuid&quot;: &quot;fc8ba89e-9149-412c-bcea-e596eb7c0d14&quot;,
+    &quot;serial&quot;: null,
+    &quot;partitions&quot;: [],
+    &quot;size&quot;: 3221225472,
+    &quot;model&quot;: null
+}
+</code></pre>
+<p><a href="#heading--how-to-set-a-block-device-as-a-boot-disk"><h4 id="heading--how-to-set-a-block-device-as-a-boot-disk">How to set a block device as a boot disk</h4></a></p>
+<p>By default, MAAS picks the first added block device to the machine as the boot disk. In most cases this works as expected as the BIOS usually enumerates the boot disk as the first block device. There are cases where this fails and the boot disk needs to be set to another disk. This API allow setting which block device on a machine MAAS should use as the boot disk.:</p>
+<pre><code class="language-nohighlight">maas admin block-device set-boot-disk &lt;node-id&gt; 10
+</code></pre>
+<p><strong>NOTE:</strong> 
+Only an administrator can set which block device should be used as the boot disk and only a physical block device can be set as as the boot disk. This operation should be done before a machine is allocated or the storage layout will be applied to the previous boot disk.</p>
+<p><a href="#heading--how-to-manage-partitions"><h3 id="heading--how-to-manage-partitions">How to manage partitions</h3></a></p>
+<p>This section will explain:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-list-partitions">How to list partitions</a></li>
+<li><a href="#heading--how-to-create-a-partition">How to create a partition</a></li>
+<li><a href="#heading--how-to-delete-a-partition">How to delete a partition</a></li>
+<li><a href="#heading--how-to-format-a-partition">How to format a partition</a></li>
+<li><a href="#heading--how-to-unformat-a-partition">How to unformat a partition</a></li>
+<li><a href="#heading--how-to-mount-a-partition">How to mount a partition</a></li>
+<li><a href="#heading--how-to-unmount-a-partition">How to unmount a partition</a></li>
+</ul>
+<p><a href="#heading--how-to-list-partitions"><h4 id="heading--how-to-list-partitions">How to list partitions</h4></a></p>
+<p>To view all the partitions on a block device, use the &lsquo;partitions read&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas admin partitions read &lt;node-id&gt; 10
+</code></pre>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+[
+    {
+        &quot;bootable&quot;: false,
+        &quot;id&quot;: 9,
+        &quot;resource_uri&quot;:
+&quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/9&quot;,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part1&quot;,
+        &quot;uuid&quot;: &quot;aae082cd-8be0-4a64-ab49-e998abd6ea43&quot;,
+        &quot;used_for&quot;: &quot;LVM volume for vgroot&quot;,
+        &quot;size&quot;: 5360320512,
+        &quot;type&quot;: &quot;partition&quot;,
+        &quot;filesystem&quot;: {
+            &quot;uuid&quot;: &quot;a56ebfa6-8ef4-48b5-b6bc-9f9d27065d24&quot;,
+            &quot;mount_options&quot;: null,
+            &quot;label&quot;: null,
+            &quot;fstype&quot;: &quot;lvm-pv&quot;,
+            &quot;mount_point&quot;: null
+        }
+    }
+]
+</code></pre>
+<p>To view the metadata for a specific partition on a block device, rather than all partitions, use the singular &lsquo;partition&rsquo; API call with an endpoint:</p>
+<pre><code class="language-nohighlight">maas admin partition read &lt;node-id&gt; 10 9
+</code></pre>
+<p><a href="#heading--how-to-create-a-partition"><h4 id="heading--how-to-create-a-partition">How to create a partition</h4></a></p>
+<p>To create a new partition on a block device, use the &lsquo;create&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas admin partitions create &lt;node-id&gt; 10 size=5360320512
+</code></pre>
+<p>In addition to bytes, as shown above, the &lsquo;size&rsquo; of a partition can also be defined with a &lsquo;G&rsquo; for gigabytes or &lsquo;M&rsquo; for megabytes. The output from the previous command will look like this:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;bootable&quot;: false,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part1&quot;,
+    &quot;filesystem&quot;: null,
+    &quot;used_for&quot;: &quot;Unused&quot;,
+    &quot;type&quot;: &quot;partition&quot;,
+    &quot;id&quot;: 10,
+    &quot;size&quot;: 5360320512,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10&quot;,
+    &quot;uuid&quot;: &quot;3d32adbf-9943-4785-ab38-963758338c6c&quot;
+}
+</code></pre>
+<p><a href="#heading--how-to-delete-a-partition"><h4 id="heading--how-to-delete-a-partition">How to delete a partition</h4></a></p>
+<p>Partitions can be deleted from a block device with the &lsquo;delete&rsquo; API call. Make sure you double check the partition details as the partition is deleted immediately, with no further confirmation:</p>
+<pre><code class="language-nohighlight">maas admin partition delete &lt;node-id&gt; 10 9
+</code></pre>
+<p>Successful output from the &lsquo;delete&rsquo; command will look like this:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+</code></pre>
+<p><a href="#heading--how-to-format-a-partition"><h4 id="heading--how-to-format-a-partition">How to format a partition</h4></a></p>
+<p>Partitions can be formatted in a similar way to block devices:</p>
+<pre><code class="language-nohighlight">maas admin partition format &lt;node-id&gt; 10 9 fstype=ext4
+</code></pre>
+<p>The output from the &lsquo;format&rsquo; command will be similar to the following:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;id&quot;: 9,
+    &quot;used_for&quot;: &quot;Unmounted ext4 formatted filesystem&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/9&quot;,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part1&quot;,
+    &quot;uuid&quot;: &quot;aae082cd-8be0-4a64-ab49-e998abd6ea43&quot;,
+    &quot;size&quot;: 5360320512,
+    &quot;bootable&quot;: false,
+    &quot;type&quot;: &quot;partition&quot;,
+    &quot;filesystem&quot;: {
+        &quot;uuid&quot;: &quot;ea593366-be43-4ea3-b2d5-0adf82085a62&quot;,
+        &quot;mount_point&quot;: null,
+        &quot;mount_options&quot;: null,
+        &quot;fstype&quot;: &quot;ext4&quot;,
+        &quot;label&quot;: &quot;&quot;
+    }
+}
+</code></pre>
+<p><strong>NOTE:</strong> 
+You cannot format partitions that are used to make another virtual block device.</p>
+<p><a href="#heading--how-to-unformat-a-partition"><h4 id="heading--how-to-unformat-a-partition">How to unformat a partition</h4></a></p>
+<p>You can also remove the filesystem from a partition with the &lsquo;unformat&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas admin partition unformat &lt;node-id&gt; 10 10 fstype=ext4
+</code></pre>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;bootable&quot;: false,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part1&quot;,
+    &quot;filesystem&quot;: null,
+    &quot;used_for&quot;: &quot;Unused&quot;,
+    &quot;type&quot;: &quot;partition&quot;,
+    &quot;id&quot;: 10,
+    &quot;size&quot;: 5360320512,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10&quot;,
+    &quot;uuid&quot;: &quot;3d32adbf-9943-4785-ab38-963758338c6c&quot;
+}
+</code></pre>
+<p><a href="#heading--how-to-mount-a-partition"><h4 id="heading--how-to-mount-a-partition">How to mount a partition</h4></a></p>
+<p>A formatted partition can be mounted at a given mount point with the &lsquo;mount&rsquo; command.</p>
+<pre><code class="language-nohighlight">maas admin partition mount &lt;node-id&gt; 10 10 mount_point=/srv
+</code></pre>
+<p>The mount point and the filesystem is visible in the output from the command:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;bootable&quot;: false,
+    &quot;id&quot;: 10,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10&quot;,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part1&quot;,
+    &quot;uuid&quot;: &quot;3d32adbf-9943-4785-ab38-963758338c6c&quot;,
+    &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /srv&quot;,
+    &quot;size&quot;: 5360320512,
+    &quot;type&quot;: &quot;partition&quot;,
+    &quot;filesystem&quot;: {
+        &quot;uuid&quot;: &quot;1949a5fb-f7bd-4ada-8ba5-d06d3f5857a8&quot;,
+        &quot;mount_options&quot;: &quot;&quot;,
+        &quot;label&quot;: &quot;&quot;,
+        &quot;fstype&quot;: &quot;ext4&quot;,
+        &quot;mount_point&quot;: &quot;/srv&quot;
+    }
+}
+</code></pre>
+<p><a href="#heading--how-to-unmount-a-partition"><h4 id="heading--how-to-unmount-a-partition">How to unmount a partition</h4></a></p>
+<p>A previous mounted partition can be unmounted with the &lsquo;unmount&rsquo; command:</p>
+<pre><code class="language-nohighlight">maas admin partition unmount 4y3h8a 10 10
+</code></pre>
+<p>After successfully running this command, the mount point will show as &lsquo;null&rsquo; in the output:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;bootable&quot;: false,
+    &quot;id&quot;: 10,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/partition/10&quot;,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part1&quot;,
+    &quot;uuid&quot;: &quot;3d32adbf-9943-4785-ab38-963758338c6c&quot;,
+    &quot;used_for&quot;: &quot;Unmounted ext4 formatted filesystem&quot;,
+    &quot;size&quot;: 5360320512,
+    &quot;type&quot;: &quot;partition&quot;,
+    &quot;filesystem&quot;: {
+        &quot;uuid&quot;: &quot;1949a5fb-f7bd-4ada-8ba5-d06d3f5857a8&quot;,
+        &quot;mount_options&quot;: null,
+        &quot;label&quot;: &quot;&quot;,
+        &quot;fstype&quot;: &quot;ext4&quot;,
+        &quot;mount_point&quot;: null
+    }
+    &quot;type&quot;: &quot;partition&quot;,
+    &quot;id&quot;: 3,
+    &quot;size&quot;: 2000003072
+}
+</code></pre>
+<p><a href="#heading--how-to-manage-vmfs-datastores"><h4 id="heading--how-to-manage-vmfs-datastores">How to manage VMFS datastores</h4></a></p>
+<p>This section will explain:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-list-vmfs-datastores">How to list VMFS datastores</a></li>
+<li><a href="#heading--how-to-view-a-vmfs-datastore">How to view a VMFS datastore</a></li>
+<li><a href="#heading--how-to-create-a-vmfs-datastore">How to create a VMFS datastore</a></li>
+<li><a href="#heading--how-to-edit-a-vmfs-datastore">How to edit a VMFS datastore</a></li>
+<li><a href="#heading--how-to-delete-a-vmfs-datastore">How to delete a VMFS datastore</a></li>
+</ul>
+<p><a href="#heading--how-to-list-vmfs-datastores"><h4 id="heading--how-to-list-vmfs-datastores">How to list VMFS datastores</h4></a></p>
+<p>To view all VMFS Datastores on a machine, use the &lsquo;vmfs-datastores read&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas $PROFILE vmfs-datastores read $SYSTEM_ID
+</code></pre>
+<pre><code class="language-nohighlight">[
+    {
+        &quot;human_size&quot;: &quot;45.8 GB&quot;,
+        &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;vmfs6&quot;,
+            &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore1&quot;
+        },
+        &quot;uuid&quot;: &quot;2779a745-1db3-4fd7-b06e-455b728fffd4&quot;,
+        &quot;name&quot;: &quot;datastore1&quot;,
+        &quot;system_id&quot;: &quot;4qxaga&quot;,
+        &quot;devices&quot;: [
+            {
+                &quot;uuid&quot;: &quot;c55fe657-689d-4570-8492-683dd5fa1c40&quot;,
+                &quot;size&quot;: 35026632704,
+                &quot;bootable&quot;: false,
+                &quot;tags&quot;: [],
+                &quot;used_for&quot;: &quot;VMFS extent for datastore1&quot;,
+                &quot;filesystem&quot;: {
+                    &quot;fstype&quot;: &quot;vmfs6&quot;,
+                    &quot;label&quot;: null,
+                    &quot;uuid&quot;: &quot;55ac6422-68b5-440e-ba65-153032605b51&quot;,
+                    &quot;mount_point&quot;: null,
+                    &quot;mount_options&quot;: null
+                },
+                &quot;type&quot;: &quot;partition&quot;,
+                &quot;device_id&quot;: 5,
+                &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part3&quot;,
+                &quot;system_id&quot;: &quot;4qxaga&quot;,
+                &quot;id&quot;: 71,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4qxaga/blockdevices/5/partition/71&quot;
+            },
+            {
+                &quot;uuid&quot;: &quot;5182e503-4ad4-446e-9660-fd5052b41cc5&quot;,
+                &quot;size&quot;: 10729029632,
+                &quot;bootable&quot;: false,
+                &quot;tags&quot;: [],
+                &quot;used_for&quot;: &quot;VMFS extent for datastore1&quot;,
+                &quot;filesystem&quot;: {
+                    &quot;fstype&quot;: &quot;vmfs6&quot;,
+                    &quot;label&quot;: null,
+                    &quot;uuid&quot;: &quot;a5949b18-d591-4627-be94-346d0fdaf816&quot;,
+                    &quot;mount_point&quot;: null,
+                    &quot;mount_options&quot;: null
+                },
+                &quot;type&quot;: &quot;partition&quot;,
+                &quot;device_id&quot;: 6,
+                &quot;path&quot;: &quot;/dev/disk/by-dname/sdb-part1&quot;,
+                &quot;system_id&quot;: &quot;4qxaga&quot;,
+                &quot;id&quot;: 77,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4qxaga/blockdevices/6/partition/77&quot;
+            }
+        ],
+        &quot;id&quot;: 17,
+        &quot;size&quot;: 45755662336,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/4qxaga/vmfs-datastore/17/&quot;
+    }
+]
+</code></pre>
+<p><a href="#heading--how-to-view-a-vmfs-datastore"><h4 id="heading--how-to-view-a-vmfs-datastore">How to view a VMFS datastore</h4></a></p>
+<p>To view a specific VMFS Datastores on a machine, use the &lsquo;vmfs-datastore read&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas $PROFILE vmfs-datastore read $SYSTEM_ID $VMFS_DATASTORE_ID
+</code></pre>
+<pre><code class="language-nohighlight">{
+    &quot;uuid&quot;: &quot;fb6fedc2-f711-40de-ab83-77eddc3e19ac&quot;,
+    &quot;name&quot;: &quot;datastore1&quot;,
+    &quot;system_id&quot;: &quot;b66fn6&quot;,
+    &quot;id&quot;: 18,
+    &quot;filesystem&quot;: {
+        &quot;fstype&quot;: &quot;vmfs6&quot;,
+        &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore1&quot;
+    },
+    &quot;human_size&quot;: &quot;2.8 GB&quot;,
+    &quot;devices&quot;: [
+        {
+            &quot;uuid&quot;: &quot;b91df576-ba02-4acb-914f-03ba9a2865b7&quot;,
+            &quot;size&quot;: 2814377984,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore1&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 80,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;4a098d71-1e59-4b5f-932d-fc30a1c0dc96&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;device_id&quot;: 1,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part3&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/1/partition/80&quot;
+        }
+    ],
+    &quot;size&quot;: 2814377984,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/18/&quot;
+}
+</code></pre>
+<p><a href="#heading--how-to-create-a-vmfs-datastore"><h4 id="heading--how-to-create-a-vmfs-datastore">How to create a VMFS datastore</h4></a></p>
+<p>A VMware VMFS datastore is created on one or more <a href="#heading--about-block-devices">block devices</a> or <a href="#heading--about-partitions">partitions</a>.</p>
+<p>To create a VMFS Datastores on a machine use the &lsquo;vmfs-datastores create&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas $PROFILE vmfs-datastores create $SYSTEM_ID name=$VMFS_NAME block_devices=$BLOCK_ID_1,$BLOCK_ID_2 partitions=$PARTITION_ID_1,$PARTITION_ID_2
+</code></pre>
+<pre><code class="language-nohighlight">{
+    &quot;system_id&quot;: &quot;b66fn6&quot;,
+    &quot;devices&quot;: [
+        {
+            &quot;uuid&quot;: &quot;b91df576-ba02-4acb-914f-03ba9a2865b7&quot;,
+            &quot;size&quot;: 2814377984,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;device_id&quot;: 1,
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore42&quot;,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;fc374367-a2fb-4e50-9377-768bfe9705b6&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part3&quot;,
+            &quot;id&quot;: 80,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/1/partition/80&quot;
+        }
+    ],
+    &quot;name&quot;: &quot;datastore42&quot;,
+    &quot;filesystem&quot;: {
+        &quot;fstype&quot;: &quot;vmfs6&quot;,
+        &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore42&quot;
+    },
+    &quot;id&quot;: 19,
+    &quot;size&quot;: 2814377984,
+    &quot;uuid&quot;: &quot;2711566c-2df4-4cc4-8c06-7392bb1f9532&quot;,
+    &quot;human_size&quot;: &quot;2.8 GB&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/19/&quot;
+}
+</code></pre>
+<p><a href="#heading--how-to-edit-a-vmfs-datastore"><h4 id="heading--how-to-edit-a-vmfs-datastore">How to edit a VMFS datastore</h4></a></p>
+<p>To edit an existing VMFS Datastores on a machine use the &lsquo;vmfs-datastore update&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas $PROFILE vmfs-datastore update $SYSTEM_ID $VMFS_ID name=$NEW_VMFS_NAME add_block_devices=$NEW_BLOCK_ID_1,$NEW_BLOCK_ID_2 add_partitions=$NEW_PARTITION_ID_1,$NEW_PARTITION_ID_2 remove_partitions=$EXISTING_PARTITION_ID1,$EXISTING_PARTITION_ID2
+</code></pre>
+<pre><code class="language-nohighlight">{
+    &quot;uuid&quot;: &quot;2711566c-2df4-4cc4-8c06-7392bb1f9532&quot;,
+    &quot;name&quot;: &quot;datastore42&quot;,
+    &quot;system_id&quot;: &quot;b66fn6&quot;,
+    &quot;id&quot;: 19,
+    &quot;filesystem&quot;: {
+        &quot;fstype&quot;: &quot;vmfs6&quot;,
+        &quot;mount_point&quot;: &quot;/vmfs/volumes/datastore42&quot;
+    },
+    &quot;human_size&quot;: &quot;13.5 GB&quot;,
+    &quot;devices&quot;: [
+        {
+            &quot;uuid&quot;: &quot;b91df576-ba02-4acb-914f-03ba9a2865b7&quot;,
+            &quot;size&quot;: 2814377984,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore42&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 80,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;fc374367-a2fb-4e50-9377-768bfe9705b6&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;device_id&quot;: 1,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vda-part3&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/1/partition/80&quot;
+        },
+        {
+            &quot;uuid&quot;: &quot;f21fe54e-b5b1-4562-ab6b-e699e99f002f&quot;,
+            &quot;size&quot;: 10729029632,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;system_id&quot;: &quot;b66fn6&quot;,
+            &quot;used_for&quot;: &quot;VMFS extent for datastore42&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 86,
+            &quot;filesystem&quot;: {
+                &quot;fstype&quot;: &quot;vmfs6&quot;,
+                &quot;label&quot;: null,
+                &quot;uuid&quot;: &quot;f3d9b6a3-bab3-4677-becb-bf5a421bfcc2&quot;,
+                &quot;mount_point&quot;: null,
+                &quot;mount_options&quot;: null
+            },
+            &quot;device_id&quot;: 2,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/vdb-part1&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/blockdevices/2/partition/86&quot;
+        }
+    ],
+    &quot;size&quot;: 13543407616,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/b66fn6/vmfs-datastore/19/&quot;
+}
+</code></pre>
+<p><a href="#heading--how-to-delete-a-vmfs-datastore"><h4 id="heading--how-to-delete-a-vmfs-datastore">How to delete a VMFS datastore</h4></a></p>
+<p>To delete a VMFS Datastores on a machine use the &lsquo;vmfs-datastore delete&rsquo; API call:</p>
+<pre><code class="language-nohighlight">maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
+</code></pre>
 <p><a href="#heading--how-to-define-custom-storage-layouts"><h2 id="heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</h2></a></p>
+<p>MAAS 3.1 allows you to define a custom storage layout for a machine, via a custom commissioning script.  You must upload a script which conforms to the following rules:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>it must run after the <code>40-maas-01-machine-resources</code> script and before the <code>50-maas-01-commissioning</code> one, so it should have a name that starts with anything between <code>41-</code> and <code>49-</code>. This ensures the script can access the JSON file created by the former which provides info about the machine hardware and network resources. In addition, the custom script can directly inspect the machine it&rsquo;s running on to determine how to configure storage.</li>
+<li>it can read machine hardware/network information from the JSON file at the path specified by <code>$MAAS_RESOURCES_FILE</code></li>
+<li>it must output a JSON file at the path specified by <code>$MAAS_STORAGE_CONFIG_FILE</code> with the desired storage layout</li>
+<li>names of disks provided in the custom layout must match the ones detected by MAAS and provided in the resources file.</li>
+</ul>
+<h3>Configuration format</h3>
+<p>The configuration contains two main sections:
+- <code>layout</code>, which lists the desired storage layout in terms of disks and volumes, along with their setup (partitions, volumes, &hellip;).
+  This consists of a dictionary of device names and their configuration. Each device must have a <code>type</code> property (see below for supported types).
+- <code>mounts</code>, which lists the desired filesystem mount points.
+  As an example:</p>
+<pre><code class="language-json">&quot;mounts&quot;: {
+  &quot;/&quot;: {
+    &quot;device&quot;: &quot;sda2&quot;,
+    &quot;options&quot;: &quot;noatime&quot;
+  },
+  &quot;/boot/efi&quot;: {
+    &quot;device&quot;: &quot;sda1&quot;
+  },
+  &quot;/data&quot;: {
+    &quot;device&quot;: &quot;raid0&quot;
+  }     
+}
+</code></pre>
+<p>A complete <code>$MAAS_STORAGE_CONFIG_FILE</code> would look like this:</p>
+<pre><code class="language-json">{
+    &quot;layouts&quot;: {
+        &quot;sda&quot;: {
+           ...
+        },
+        &quot;raid0&quot;: {
+           ...
+        },
+        ...
+    },
+    &quot;mounts&quot;: {
+       &quot;/&quot;: {
+           ...
+       },
+       ...
+    }
+}
+</code></pre>
+<p>The following device types are supported in the <code>"layout"</code> section:</p>
+<h4>Disk</h4>
+<pre><code class="language-json">&quot;sda&quot;: {
+  &quot;type&quot;: &quot;disk&quot;,
+  &quot;ptable&quot;: &quot;gpt&quot;,
+  &quot;boot&quot;: true,
+  &quot;partitions&quot;: [
+    {
+      &quot;name&quot;: &quot;sda1&quot;,
+      &quot;fs&quot;: &quot;vfat&quot;,
+      &quot;size&quot;: &quot;100M&quot;
+      &quot;bootable&quot;: true,
+    }
+  ]
+}
+</code></pre>
+<p>A <code>disk</code> entry defines a physical disk.
+The following details can be specified:
+- the partition table type (<code>ptable</code>), which can be <code>gpt</code> or <code>mbr</code>
+- whether it should be selected as <code>boot</code> disk
+- optionally, a list of partitions to create, with their <code>size</code> and filesystem type (<code>fs</code>)</p>
+<h4>LVM</h4>
+<pre><code class="language-json">&quot;lvm0&quot;: {
+  &quot;type&quot;: &quot;lvm&quot;,
+  &quot;members&quot;: [
+    &quot;sda1&quot;,
+    &quot;sdb1&quot;,
+  ],
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;data1&quot;,
+      &quot;size&quot;: &quot;5G&quot;,
+      &quot;fs&quot;: &quot;ext4&quot;
+    },
+    {
+      &quot;name&quot;: &quot;data2&quot;,
+      &quot;size&quot;: &quot;7G&quot;,
+      &quot;fs&quot;: &quot;btrfs&quot;
+    }
+  ]
+}
+</code></pre>
+<p>An <code>lvm</code> entry defines a VG (volume group) composed by a set of disks or partitions (listed as <code>members</code>). Optionally it&rsquo;s possible to specify the the LVs (logical volumes) to create.
+Those are defined similarly to partitions, with a name and size (and optionally the filesystem).</p>
+<h4>Bcache</h4>
+<pre><code class="language-json">&quot;bcache0&quot;: {
+  &quot;type&quot;: &quot;bcache&quot;,
+  &quot;cache-device&quot;: &quot;sda&quot;,
+  &quot;backing-device&quot;: &quot;sdf3&quot;,
+  &quot;cache-mode&quot;: &quot;writeback&quot;,
+  &quot;fs&quot;: &quot;ext4&quot;
+}
+</code></pre>
+<p>A <code>bcache</code>  entry must specify a device to use as cache and one to use as storage. Both can be either a partition or a disk.
+Optionally the <code>cache-mode</code> for the Bcache can be specified.</p>
+<h4>RAID</h4>
+<pre><code class="language-json">&quot;myraid&quot;: {
+  &quot;type&quot;: &quot;raid&quot;,
+  &quot;level&quot;: 5,
+  &quot;members&quot;: [
+    &quot;sda&quot;,
+    &quot;sdb&quot;,
+    &quot;sdc&quot;,
+  ],
+  &quot;spares&quot;: [
+    &quot;sdd&quot;,
+    &quot;sde&quot;
+  ],
+  &quot;fs&quot;: &quot;btrfs&quot;
+</code></pre>
+<p>A <code>raid</code> entry defines a RAID with a set of member devices.
+Spare devices can also be specified.</p>
+<h3>Configuration examples</h3>
+<p>Here&rsquo;s a few examples of custom storage layout configurations that a script could output to the <code>$MAAS_STORAGE_CONFIG_FILE</code>. The examples assumes that the machine has 5 disks (named <code>sda</code> to <code>sde</code>).</p>
+<p>Note that there&rsquo;s no need to add entries for those devices in the <code>layout</code> section if the disks are not explicitly partitioned, but just used by other devices (e.g. RAID or LVM).</p>
+<h4>Simple single-disk layout with GPT partitioning</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;sda&quot;: {
+      &quot;type&quot;: &quot;disk&quot;,
+      &quot;ptable&quot;: &quot;gpt&quot;,
+      &quot;boot&quot;: true,
+      &quot;partitions&quot;: [
+        {
+          &quot;name&quot;: &quot;sda1&quot;,
+          &quot;fs&quot;: &quot;vfat&quot;,
+          &quot;size&quot;: &quot;500M&quot;,
+          &quot;bootable&quot;: true
+        },
+        {
+          &quot;name&quot;: &quot;sda2&quot;,
+          &quot;size&quot;: &quot;5G&quot;,
+          &quot;fs&quot;: &quot;ext4&quot;
+        },
+        {
+          &quot;name&quot;: &quot;sda3&quot;,
+          &quot;size&quot;: &quot;2G&quot;,
+          &quot;fs&quot;: &quot;swap&quot;
+        },
+        {
+          &quot;name&quot;: &quot;sda4&quot;,
+          &quot;size&quot;: &quot;120G&quot;,
+          &quot;fS&quot;: &quot;ext4&quot;
+        }
+      ]
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/&quot;: {
+      &quot;device&quot;: &quot;sda2&quot;,
+      &quot;options&quot;: &quot;noatime&quot;
+    },
+    &quot;/boot/efi&quot;: {
+      &quot;device&quot;: &quot;sda1&quot;
+    },
+    &quot;/data&quot;: {
+      &quot;device&quot;: &quot;sda4&quot;
+    },
+    &quot;none&quot;: {
+      &quot;device&quot;: &quot;sda3&quot;
+    }
+  }
+}
+</code></pre>
+<p>In the <code>mounts</code> section, options for mount points can be specified. For swap, an entry must be present (with any unique name that doesn&rsquo;t start with a <code>/</code>), otherwise the swap will be created but not activated.</p>
+<h4>RAID 5 setup (with spare devices)</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;storage&quot;: {
+      &quot;type&quot;: &quot;raid&quot;,
+      &quot;level&quot;: 5,
+      &quot;members&quot;: [
+        &quot;sda&quot;,
+        &quot;sdb&quot;,
+        &quot;sdc&quot;
+      ],
+      &quot;spares&quot;: [
+        &quot;sdd&quot;,
+        &quot;sde&quot;
+      ],
+      &quot;fs&quot;: &quot;btrfs&quot;
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/data&quot;: {
+      &quot;device&quot;: &quot;storage&quot;
+    }
+  }
+}
+</code></pre>
+<p>Both full disks and partitions can be used as RAID members.</p>
+<h4>LVM with pre-defined volumes</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;storage&quot;: {
+      &quot;type&quot;: &quot;lvm&quot;,
+      &quot;members&quot;: [
+        &quot;sda&quot;,
+        &quot;sdb&quot;,
+        &quot;sdc&quot;,
+        &quot;sdd&quot;
+      ],
+      &quot;volumes&quot;: [
+        {
+          &quot;name&quot;: &quot;data1&quot;,
+          &quot;size&quot;: &quot;1T&quot;,
+          &quot;fs&quot;: &quot;ext4&quot;
+        },
+        {
+          &quot;name&quot;: &quot;data2&quot;,
+          &quot;size&quot;: &quot;2.5T&quot;,
+          &quot;fs&quot;: &quot;btrfs&quot;
+        }
+      ]
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/data1&quot;: {
+      &quot;device&quot;: &quot;data1&quot;
+    },
+    &quot;/data2&quot;: {
+      &quot;device&quot;: &quot;data2&quot;
+    }
+  }
+}
+</code></pre>
+<p>If no volumes are specified, the volume group is still created.</p>
+<h4>Bcache</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+     &quot;data1&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;cache-device&quot;: &quot;sda&quot;,
+      &quot;backing-device&quot;: &quot;sdb&quot;,
+      &quot;cache-mode&quot;: &quot;writeback&quot;,
+      &quot;fs&quot;: &quot;ext4&quot;
+    },
+    &quot;data2&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;cache-device&quot;: &quot;sda&quot;,
+      &quot;backing-device&quot;: &quot;sdc&quot;,
+      &quot;fs&quot;: &quot;btrfs&quot;
+    }
+  },
+  &quot;mounts&quot;: {
+    &quot;/data1&quot;: {
+      &quot;device&quot;: &quot;data1&quot;
+    },
+    &quot;/data2&quot;: {
+      &quot;device&quot;: &quot;data2&quot;
+    }
+  }
+}
+</code></pre>
+<p>The same cache set can be used by different bcaches by specifying the same <code>backing-device</code> for them.</p>
+<h4>LVM on top of RAID with Bcache</h4>
+<pre><code class="language-json">{
+  &quot;layout&quot;: {
+    &quot;bcache0&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sda&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache1&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sdb&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache2&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sdc&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache3&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sdd&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;bcache4&quot;: {
+      &quot;type&quot;: &quot;bcache&quot;,
+      &quot;backing-device&quot;: &quot;sde&quot;,
+      &quot;cache-device&quot;: &quot;sdf&quot;
+    },
+    &quot;raid&quot;: {
+      &quot;type&quot;: &quot;raid&quot;,
+      &quot;level&quot;: 5,
+      &quot;members&quot;: [
+        &quot;bcache0&quot;,
+        &quot;bcache1&quot;,
+        &quot;bcache2&quot;
+      ],
+      &quot;spares&quot;: [
+        &quot;bcache3&quot;,
+        &quot;bcache4&quot;
+      ]
+    },
+    &quot;lvm&quot;: {
+      &quot;type&quot;: &quot;lvm&quot;,
+      &quot;members&quot;: [
+        &quot;raid&quot;
+      ],
+      &quot;volumes&quot;: [
+        {
+          &quot;name&quot;: &quot;root&quot;,
+          &quot;size&quot;: &quot;10G&quot;,
+          &quot;fs&quot;: &quot;ext4&quot;
+        },
+        {
+          &quot;name&quot;: &quot;data&quot;,
+          &quot;size&quot;: &quot;3T&quot;,
+          &quot;fs&quot;: &quot;btrfs&quot;
+        }
+      ]
+    }
+  },
+  &quot;mounts&quot;: {
+   &quot;/&quot;: {
+      &quot;device&quot;: &quot;root&quot;
+    },
+    &quot;/data&quot;: {
+      &quot;device&quot;: &quot;data&quot;
+    }
+  }
+}
+</code></pre>
+<p>The RAID is created by using 5 bcache devices, each one using a different disk and the same SSD cache device. LVM is created on top of the RAID device and volumes are then created in it, to provide partitions.</p>
 <p><a href="#heading--storage-layouts-reference"><h2 id="heading--storage-layouts-reference">Storage layouts reference</h2></a></p>
 <p>There are three layout types:</p>
 <ol>
@@ -305,6 +2196,5 @@ Only an administrator can modify storage at the block device level (providing th
 <p><strong>NOTE:</strong> 
 Machines with the blank layout applied are not deployable; you must first configure storage manually.</p>
     </div>
-    </body>
-    </html>
-    
+  </body>
+</html>

@@ -1,8 +1,404 @@
 <!DOCTYPE html>
-    <html>
-    <body>
-    <div class="container">
-    <h1>How to deploy physical machines</h1><!-- "How to deploy physical machines" -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-deploy-physical-machines.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-cusdomise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to deploy physical machines</h1><!-- "How to deploy physical machines" -->
 
 <p>With your network properly configured, and suitable images selected and downloaded, you&rsquo;re ready to <a href="how-to-make-machines-available.html">add</a>, <a href="how-to-customise-machines.html">customise</a>, and <a href="how-to-put-machines-to-work.html">deploy</a> machines.  This article will help you sort out the theoretical aspects and procedures regarding the MAAS machine life-cycle, if you wish, before diving into the how-to procedures. </p>
 <p>Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.</p>
@@ -102,7 +498,269 @@
 </li>
 </ol>
 <p>Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it&rsquo;s not very useful to make a state diagram or flowchart.  Instead, consider the following tables.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Action/State</th>
+<th align="center">New</th>
+<th align="center">Ready</th>
+<th align="center">Allocated</th>
+<th align="center">Deployed</th>
+<th align="center">Locked</th>
+<th align="center">Rescue</th>
+<th align="center">Broken</th>
+<th align="center">Enlist deployed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Commission</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X (w/scripts)</td>
+</tr>
+<tr>
+<td align="left">Allocate</td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Deploy</td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Release</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X (no return)</td>
+</tr>
+<tr>
+<td align="left">Power on</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Power off</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Test</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Rescue mode</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Exit rescue</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Mark broken</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X (no return)</td>
+</tr>
+<tr>
+<td align="left">Mark fixed</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Lock</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+</tr>
+<tr>
+<td align="left">Unlock</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">X</td>
+</tr>
+<tr>
+<td align="left">Tag</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+</tr>
+<tr>
+<td align="left">Set zone</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+</tr>
+<tr>
+<td align="left">Set&hellip;pool</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+</tr>
+<tr>
+<td align="left">Delete</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X*</td>
+</tr>
+</tbody>
+</table>
+<p>*Machine is removed from the view of MAAS, but remains deployed with original workload.</p>
 <p>When a machine is in the state listed in a column, it is possible to take the row actions marked with an &ldquo;X.&rdquo;</p>
+<p>You can change machine state, via the CLI, with the <code>machine</code> command, which offers the following options:</p>
+<pre><code class="language-nohighlight">$ maas admin machine -h
+usage: maas admin machine [-h] COMMAND ...
+
+Manage an individual machine.
+
+optional arguments:
+ -h, --help            show this help message and exit
+
+drill down:
+ COMMAND
+   details             Get system details
+   power-parameters    Get power parameters
+   set-workload-annotations
+            Set key=value data
+   set-owner-data      Deprecated, use set-workload-annotations.
+   query-power-state   Get the power state of a node
+   power-on            Turn on a node
+   power-off           Power off a node
+   test                Begin testing process for a node
+   override-failed-testing
+            Ignore failed tests
+   abort               Abort a node operation
+   deploy              Deploy a machine
+   release             Release a machine
+   commission          Commission a machine
+   set-storage-layout  Change storage layout
+   mount-special       Mount a special-purpose filesystem
+   unmount-special     Unmount a special-purpose filesystem
+   clear-default-gateways
+            Clear set default gateways
+   get-curtin-config   Get curtin configuration
+   restore-networking-configuration
+            Restore networking options
+   restore-storage-configuration
+            Restore storage configuration
+   restore-default-configuration
+            Restore default configuration
+   mark-broken         Mark a machine as Broken
+   mark-fixed          Mark a machine as Fixed
+   rescue-mode         Enter rescue mode
+   exit-rescue-mode    Exit rescue mode
+   lock                Lock a machine
+   unlock              Unlock a machine
+   read                Read a node
+   update              Update a machine
+   delete              Delete a machine
+
+A machine is identified by its system_id.
+</code></pre>
+<p>In the case of already-deployed machines enlisted by MAAS, some of the possible actions may fail with unusual results, such as this exchange when attempting to turn off an already-deployed machine enlisted by MAAS:</p>
+<pre><code class="language-nohighlight">$ maas admin machine power-off t8b7cw
+Success.
+Machine-readable output follows:
+null
+</code></pre>
+<p>Note that the immediate return is <code>Success</code>, but the machine-readable output is <code>null</code>.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the <code>power-off</code> command, since the <code>power-type</code> was set to <code>manual</code>.  This is an expected behaviour.</p>
 <p>For a better understanding of these states and actions, see <a href="maas-concepts-and-terms-reference.html#heading--node-statuses">Node statuses</a> and <a href="maas-concepts-and-terms-reference.html#heading--machine-actions">Machine actions</a>.</p>
 <p><a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a></p>
 <p>MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine &ndash; as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.</p>
@@ -146,7 +804,41 @@ MAAS runs built-in commissioning scripts during the enlistment phase. When you c
 <p>Additional steps will vary widely by machine type and architecture.</p>
 <p>Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine itself, other than being able to netboot. In particular, there is no need to install an operating system on it.</p>
 <p><a href="#heading--about-cloning-machines"><h4 id="heading--about-cloning-machines">About cloning machines</h4></a></p>
+<p>MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. </p>
+<p>Creating a machine profile is a repetitive task. Based on the responses to our survey &ndash; and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   </p>
+<p>MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.</p>
+<h3>About copying machine configurations</h3>
+<p>As a MAAS user &ndash; API or UI &ndash; you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>select the source machine to copy from.</li>
+<li>validate that the source machine exists.</li>
+<li>select at least 1 destination machine.</li>
+<li>validate that the destination machine(s) exist.</li>
+<li>edit the source machine or destination machines, if needed.</li>
+<li>know at all times which machines are affected.</li>
+<li>see the cloned machines when cloning is successful, or</li>
+<li>get clear failure information, if cloning fails. </li>
+</ul>
+<h3>About choosing configuration items to copy</h3>
+<p>As a MAAS user, you will likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature should allow the user to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>clone only the interface (network) configuration.</li>
+<li>clone only the storage configuration.</li>
+<li>clone both configurations.</li>
+</ul>
+<h3>About cloning restrictions</h3>
+<p>In order for cloning to succeed, a few restrictions must be met:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The destination interface names must be the same source.</li>
+<li>The destination drive must be equal to or larger than the source drive.</li>
+<li>For static IPs, a new IP will be allocated to the interface on the destination machine</li>
+</ul>
 <p><a href="#heading--enlisting-deployed-machines"><h4 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h4></a></p>
+<p>In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.</p>
+<p>For one, you might not be able to disrupt the workload in order to network boot it. But also, the machine would be marked as Ready, which is incorrect.</p>
+<p>When adding a machine, you may specify that the machine is already deployed. In that case, it won’t be going through the normal commissioning process and will be marked as being deployed.</p>
+<p>Such machines lack hardware information. In order to update the information, a script is provided to run a subset of the commissioning scripts and send them back to MAAS.</p>
+<p>Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behaviour; the goal of enlisting deployed machines is to avoid disturbing their workload. </p>
 <p><a href="#heading--about-commissioning-machines"><h3 id="heading--about-commissioning-machines">About commissioning machines</h3></a></p>
 <p>When MAAS commissions a machine, the following sequence of events takes place:</p>
 <ol>
@@ -194,6 +886,13 @@ You must recommission NUMA/SR-IOV machines that were previously commissioned und
 </li>
 <li>
 <p><strong>maas-serial-ports:</strong> this script lists what serial ports are available on the machine.  <strong>Runs in parallel with other scripts.</strong></p>
+</li>
+</ul>
+<p><strong>NOTE:</strong> 
+As of MAAS version 3.0, <strong>40-maas-01-network-interfaces</strong> is no longer used by MAAS.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>50-maas-01-commissioning:</strong> this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.</p>
 </li>
 <li>
 <p><strong>maas-capture-lldp:</strong> this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  <strong>Runs in parallel with other scripts.</strong></p>
@@ -256,6 +955,16 @@ To commission a node, it must have a status of &ldquo;New&rdquo;.</p>
 <p><a href="#heading--commissioning-log"><h4 id="heading--commissioning-log">About machine commissioning logs</h4></a></p>
 <p>MAAS keeps extensive logs of the commissioning process for each machine. These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.</p>
 <p><a href="#heading--about-disabling-individual-boot-methods"><h4 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h4></a></p>
+<p>It is possible to disable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled <code>isc-dhcpd</code> to not respond to the associated <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a>. External DHCP servers must be configured manually.</p>
+<p>To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a> in octet or hex form. </p>
+<p>For MAAS 3.0 and above, the following boot method changes have been implemented:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>UEFI AMD64 HTTP(00:10) has been re-enabled.</li>
+<li>UEFI ARM64 HTTP(00:13) has been enabled.</li>
+<li>UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.</li>
+<li>grub.cfg for all UEFI platforms has been updated to replace the deprecated <code>linuxefi</code> and <code>initrdefi</code> commands with the standard <code>linux</code> and <code>initrd</code> commands.</li>
+<li>GRUB debug may now be enabled by enabling rackd debug logging.</li>
+</ul>
 <p><a href="#heading--about-automatic-script-selection-by-hardware-type"><h4 id="heading--about-automatic-script-selection-by-hardware-type">About automatic script selection by hardware type</h4></a></p>
 <p>When selecting multiple machines, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
 <p>Similarly, scripts selected by tag on the command line which specify the <code>for_hardware</code> field will only run on matching hardware.</p>
@@ -394,6 +1103,23 @@ The curtin installer uses an image-based method and is now the only installer us
 <li><a href="#heading--about-storage">About storage</a></li>
 </ul>
 <p>In the illustration below, you see the machine list for a typical small hospital data centre, including servers ready and allocated for functions like Pharmacy, Orders, Charts, and so on:</p>
+<pre><code class="language-nohighlight">FQDN               POWER  STATUS     OWNER  TAGS     POOL       NOTE     ZONE
+----               -----  ------     -----  ----     ----       ----     ----
+52-54-00-15-36-f2  off    Ready      -      Orders   Prescrbr   @md-all  Medications
+52-54-00-17-64-c8  off    Ready      -      HRMgmt   StaffComp  @tmclck  Payroll
+52-54-00-1d-47-95  off    Ready      -      MedSupp  SuppServ   @storag  Inventory
+52-54-00-1e-06-41  off    Ready      -      PatPrtl  BusOfc     @bzstns  BizOffice
+52-54-00-1e-a5-7e  off    Ready      -      Pharm    Prescrbr   @rxonly  Pharmacy
+52-54-00-2e-b7-1e  off    Allocated  admin  NursOrd  NurServ    @nstns   Nursing
+52-54-00-2e-c4-40  off    Allocated  admin  MedAdmn  NurServ    @rxonly  Nursing
+52-54-00-2e-ee-17  off    Deployed   admin  Charts   ProServ    @md-all  Physician
+</code></pre>
+<p>You can generate a list similar to this for your machines with the command:</p>
+<pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;FQDN&quot;,&quot;POWER&quot;,&quot;STATUS&quot;,
+&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;, &quot;NOTE&quot;, &quot;ZONE&quot;] | (., map(length*&quot;-&quot;))),
+(.[] | [.hostname, .power_state, .status_name, .owner // &quot;-&quot;, 
+.tag_names[0] // &quot;-&quot;, .pool.name, .description // &quot;-&quot;, .zone.name]) | @tsv' | column -t
+</code></pre>
 <p>These example machines would typically be duplicated in several different geographies, with a quick way to switch to a redundant node, should anything go wrong (e.g., high availability).  We used the word node there because, In the network language of MAAS, machines are one of several different types of nodes.  A node is simply a network-connected object or, more specifically, an object that can independently communicate on a network. MAAS nodes include controllers, network devices, and of course, machines.</p>
 <p>Looking back at the example above, you can see that there are several columns in the machine list, depending on your view:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -456,6 +1182,49 @@ The curtin installer uses an image-based method and is now the only installer us
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a> </p>
 <p>The rest of the cards on the Machine summary are either self-explanatory, or they&rsquo;re covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu&rsquo;s &ldquo;Machines&rdquo; option. </p>
 <p><a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a></p>
+<p>The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognise these devices and make them visible to you when a machine is commissioned.</p>
+<p>For example, the machine details presents USB and PCI devices like this:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png"></a></p>
+<p>Note that this page now includes two new tabs: &ldquo;PCI devices&rdquo; and &ldquo;USB.&rdquo;  For each USB/PCI device attached to your machine, these tabs will list:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>device type</li>
+<li>vendor ID</li>
+<li>a product description</li>
+<li>a product ID</li>
+<li>the driver name</li>
+<li>the containing NUMA node (if any)</li>
+<li>the device address</li>
+</ul>
+<p>A typical PCI device tab would look something like this:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/82e1e6f8bc511047ac5f773430f7e5812c7a24d4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/82e1e6f8bc511047ac5f773430f7e5812c7a24d4.png"></a></p>
+<p>The USB tab presents similar information in the same format.</p>
+<p><strong>NOTE:</strong> 
+If you are upgrading from a previous version of MAAS, PCI and USB devices aren&rsquo;t modelled, so you will have to recommission the machine to capture these devices.</p>
+<p>Once you&rsquo;ve commissioned the machine, you have the option of deleting
+PCI/USB devices from the machine in any machine state, via the CLI
+only, using the following command:</p>
+<pre><code>maas $PROFILE node-device delete $SYSTEM_ID $DEVICE_ID
+</code></pre>
+<p>where:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>$PROFILE   = your user profile (e.g., &ldquo;admin&rdquo;)</li>
+<li>$SYSTEM_ID = the ID of the machine in question (e.g., &ldquo;ngx7ry&rdquo;)</li>
+<li>$DEVICE_ID = the ID of the device you want to delete </li>
+</ul>
+<p>If the device is still present in the system, it will be recognised again (and thus &ldquo;recreated&rdquo;)
+when the machine is commissioned again.</p>
+<p><a href="#heading--about-machine-interfaces"><h3 id="heading--about-machine-interfaces">About machine network info</h3></a></p>
+<p>The Network &ldquo;tab&rdquo; provides you with a way to view/edit the network and interface configuration for a machine: </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> </p>
+<p>In the case of this deployed machine, there are not many editing options.  If the machine is in a &lsquo;Ready&rsquo; state, though, altering the network configuration is possible, as shown in the screenshot above.</p>
+<p>Options on this tab are described in the introduction to <a href="about-networking.html">Networking</a> article in this documentation set.</p>
+<p><a href="#heading--machine-config"><h3 id="heading--machine-config">About machine configuration info</h3></a></p>
+<p>The final tab from the Machine menu allows you to update machine and power configuration options: </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> </p>
+<p>There are two sections to this tab.  The &ldquo;Machine configuration&rdquo; section, shown above, offers some general parameters, mostly related to how this machine is grouped and categorised.  More information on these options are found in the relevant sections of the documentation (e.g., tags, resource pools, and so forth). </p>
+<p>The &ldquo;Power configuration&rdquo; supplies the parameters necessary for MAAS to access the machine to PXE-boot it: </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/198898362285e4a1308535a4aa701156a67c9616.png"></a> </p>
+<p>More information on Power configuration will be found in the <a href="power-management-reference.html">Power management</a> section of this documentation.</p>
 <p><a href="#heading--about-resource-pools"><h3 id="heading--about-resource-pools">About resource pools</h3></a></p>
 <p>Resource pools allow administrators to logically group resources &ndash; machines and VM hosts &ndash; into pools. Pools can help you budget machines for a particular set of functions.  For example, if you&rsquo;re using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. </p>
 <p><a href="#heading--about-tags"><h3 id="heading--about-tags">About tags</h3></a></p>
@@ -618,6 +1387,7 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 </li>
 </ol>
 <p><a href="#heading--templates"><h3 id="heading--templates">About templates</h3></a></p>
+<p>The <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita</a> template files are found in the <code>/etc/maas/preseeds/</code> directory on the region controller. Each template uses a filename prefix that corresponds to a particular phase of MAAS machine deployment:</p>
 <table>
 <thead>
 <tr>
@@ -725,6 +1495,5 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <p>Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab, or with the MAAS CLI.   Also note that all MAAS installations have a resource pool named &ldquo;default.&rdquo; MAAS automatically adds new machines to the default resource pool.</p>
 <p><a href="#heading--about-customising-deployed-machines"><h2 id="heading--about-customising-deployed-machines">About customising deployed machines</h2></a></p>
     </div>
-    </body>
-    </html>
-    
+  </body>
+</html>
