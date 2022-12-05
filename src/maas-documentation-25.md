@@ -23,7 +23,7 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
 - [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
-- [Get support](/t/how-to-contact-us/5448)
+- [Get support](https://maas.io/docs/how-to-contact-u)`↗`
 - [Learn about MAAS performance](/t/maas-performance/6178)
 - [Join our online chat](https://discourse.maas.io)`↗`
 - [Contribute code](https://launchpad.net/maas)`↗`
