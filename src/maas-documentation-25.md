@@ -157,7 +157,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/6373|/docs/understanding-maas-events|
 |https://discourse.maas.io/t/-/6347|/docs/configuration-settings-reference|
 |https://discourse.maas.io/t/-/6327|/docs/maas-terraform-provider|
-|https://discourse.maas.io/t/-/6233|/docs/installation-requirements|
+|https://discourse.maas.io/t/-/6233|/docs/maas-installation-requirements|
 |https://discourse.maas.io/t/-/6203|/docs/technical-reference|
 |https://discourse.maas.io/t/-/6202|/docs/how-to-get-maas-running|
 |https://discourse.maas.io/t/-/6201|/docs/how-to-operate-maas|
@@ -170,7 +170,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/6141|/docs/explanation|
 |https://discourse.maas.io/t/-/6142|/docs/how-to-guides|
 |https://discourse.maas.io/t/-/6143|/docs/general-reference|
-|https://discourse.maas.io/t/-/6102|/docs/create-a-custom-image|
+|https://discourse.maas.io/t/-/6102|/docs/custom-image-tutorial|
 |https://discourse.maas.io/t/-/6099|/docs/about-creating-custom-images|
 |https://discourse.maas.io/t/-/6027|/docs/using-jq-with-the-maas-cli|
 |https://discourse.maas.io/t/-/5987|/docs/how-to-work-with-audit-event-logs|
@@ -217,8 +217,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/5144|/docs/how-to-manage-vmware-images|
 |https://discourse.maas.io/t/-/5333|/docs/how-to-troubleshoot-maas|
 |https://discourse.maas.io/t/-/5927|/docs/how-to-mirror-images-locally|
-|https://discourse.maas.io/t/-/5416|/docs/maas-concepts-and-terms-reference|
-|https://discourse.maas.io/t/-/5236|/docs/how-to-use-the-maas-cli|
+|https://discourse.maas.io/t/-/5416|/docs/maas-glossary|
+|https://discourse.maas.io/t/-/5236|/docs/try-out-the-maas-cli|
 |https://discourse.maas.io/t/-/5314|/docs/test-log-reference|
 |https://discourse.maas.io/t/-/5329|/docs/tips-and-tricks|
 |https://discourse.maas.io/t/-/5404|/docs/python-api-client-reference|
@@ -806,7 +806,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/4299|/docs/snap/2.8/ui/whats-new-in-maas|
 |https://discourse.maas.io/t/-/4300|/docs/snap/2.7/cli/whats-new-in-maas|
 |https://discourse.maas.io/t/-/4301|/docs/snap/2.7/ui/whats-new-in-maas|
-|https://discourse.maas.io/t/-/5292|/docs/whats-new-in-maas|
+|https://discourse.maas.io/t/-/5292|/docs/what-is-new-with-maas|
 |https://discourse.maas.io/t/-/3258|/docs/snap/2.7/cli/writing-guide|
 |https://discourse.maas.io/t/-/3259|/docs/snap/2.7/ui/writing-guide|
 |https://discourse.maas.io/t/-/3260|/docs/snap/2.8/cli/writing-guide|
@@ -885,16 +885,22 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 |https://discourse.maas.io/t/-/5962|/docs/what-is-new-with-maas-3-2|
 |https://discourse.maas.io/t/-/5993|/docs/what-is-new-with-maas-2-7|
 |https://discourse.maas.io/t/-/5994|/docs/what-is-new-with-maas-2-8|
-|https://discourse.maas.io/t/-/6140|/docs/tutorials|
-|https://discourse.maas.io/t/-/5092|/docs/get-started-with-maas|
+|https://discourse.maas.io/t/-/6140|/docs/basic-tutorials|
+|https://discourse.maas.io/t/-/5092|/docs/maas-bootstrap-tutorial|
 [/details]
 
 ## Redirects
 
 [details=Mapping table]
 |PATH|LOCATION|
-|--------|--------|
-
+|--------|--------||
+|/docs/create-a-custom-image|/docs/custom-image-tutorial|
+|/docs/how-to-use-the-maas-cli|/docs/try-out-the-maas-cli|
+|/docs/maas-bootstrap-tutorial|/docs/get-started-with-maas|
+|/docs/tutorials|/docs/basic-tutorials|
+|/docs/maas-concepts-and-terms-reference|/docs/maas-glossary|
+|/docs/installation-requirements|/docs/maas-installation-requirements|
+|/docs/whats-new-in-maas|/docs/what-is-new-with-maas|
 |/docs/vmware-images|/docs/how-to-manage-vmware-images|
 |/docs/about-tags|/docs/how-to-use-tags|
 |/docs/ssl|/docs/how-to-enable-tls-encryption|
