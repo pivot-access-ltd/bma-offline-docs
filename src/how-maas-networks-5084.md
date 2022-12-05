@@ -107,7 +107,7 @@ When you enable management for a subnet, MAAS will:
 - Lease addresses for DHCP from a reserved dynamic IP range
 - Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
 
-See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+See [Concepts and terms](/t/maas-glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 If needed, you can also define a static route between two subnets. A static route is defined on a per-subnet basis to use a particular gateway, using a configured destination.
 

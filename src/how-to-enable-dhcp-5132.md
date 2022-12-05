@@ -113,7 +113,7 @@ To relay from one VLAN (source) to another VLAN (target):
 
 1.  Ensure the target VLAN has DHCP enabled.
 
-2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/maas-concepts-and-terms-reference/5246#heading--dhcp-relay) for software suggestions.
+2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/maas-glossary/5246#heading--dhcp-relay) for software suggestions.
 
 [tabs]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
@@ -355,7 +355,7 @@ Below is an example window when creating a 'reserved range' (the windows are ide
 Click the 'Reserve' button when done.
 [/tab]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+See [Concepts and terms](/t/maas-glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:
 

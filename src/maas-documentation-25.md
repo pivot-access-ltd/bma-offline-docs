@@ -932,7 +932,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |/docs/how-to-use-the-maas-cli|/docs/try-out-the-maas-cli|
 |/docs/maas-bootstrap-tutorial|/docs/get-started-with-maas|
 |/docs/tutorials|/docs/basic-tutorials|
-|/docs/maas-concepts-and-terms-reference|/docs/maas-glossary|
+|/docs/maas-glossary|/docs/maas-glossary|
 |/docs/installation-requirements|/docs/maas-installation-requirements|
 |/docs/whats-new-in-maas|/docs/what-is-new-with-maas|
 |/docs/vmware-images|/docs/how-to-manage-vmware-images|

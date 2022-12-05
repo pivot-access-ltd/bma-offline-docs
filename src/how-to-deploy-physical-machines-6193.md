@@ -267,7 +267,7 @@ A machine is identified by its system_id.
 [/tab]
 [/tabs]
 
-For a better understanding of these states and actions, see [Node statuses](/t/maas-concepts-and-terms-reference/5416#heading--node-statuses) and [Machine actions](/t/maas-concepts-and-terms-reference/5416#heading--machine-actions).
+For a better understanding of these states and actions, see [Node statuses](/t/maas-glossary/5416#heading--node-statuses) and [Machine actions](/t/maas-glossary/5416#heading--machine-actions).
 
 <a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a>
 
@@ -741,7 +741,7 @@ The 'Add hardware' drop-down menu is used to add either new machines or a new ch
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/9a0747649e6aff999d3c04335eb752accedaf3de.jpeg"></a>
 
-With one or more machines selected, the 'Add hardware' drop-down menu moves to the left, and is joined by the 'Take action' menu.  This menu provides access to the various [machine actions](/t/maas-concepts-and-terms-reference/5416#node-actions) that can be applied to the selected machine(s):
+With one or more machines selected, the 'Add hardware' drop-down menu moves to the left, and is joined by the 'Take action' menu.  This menu provides access to the various [machine actions](/t/maas-glossary/5416#node-actions) that can be applied to the selected machine(s):
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e03d5ac8de9ea4f4827ed057bb2dd83e241aac3b.jpeg"></a>
 
@@ -1024,7 +1024,7 @@ Once MAAS provisions a machine with block devices, via a layout or administrator
 
 <a href="#heading--about-disk-erasure"><h2 id="heading--about-disk-erasure">About disk erasure</h2></a>
 
-Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action, and a default erasure configuration can also be set.  This section will help you learn:
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-glossary/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action, and a default erasure configuration can also be set.  This section will help you learn:
 
 - [About disk erasure types](#heading--about-disk-erasure-types)
 - [About standard erasure](#heading--about-standard-erase)
@@ -1168,7 +1168,7 @@ Once MAAS provisions a machine with block devices, via a layout or administrator
 
 <a href="#heading--about-disk-erasure"><h4 id="heading--about-disk-erasure">About disk erasure</h4></a>
 
-Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-concepts-and-terms-reference/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/maas-glossary/5416#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
 
 <a href="#heading--about-disk-erasure-types"><h4 id="heading--about-disk-erasure-types">About disk erasure types</h4></a>
 
