@@ -23,13 +23,13 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
 - [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
-- [Get support](https://maas.io/docs/how-to-contact-u)`↗`
-- [Learn about MAAS performance](/t/maas-performance/6178)
+- [Get support](https://maas.io/docs/how-to-contact-us)`↗`
+- [Learn about MAAS performance](https://maas.io/docs/maas-performance)`↗`
 - [Join our online chat](https://discourse.maas.io)`↗`
 - [Contribute code](https://launchpad.net/maas)`↗`
-- [Improve our doc](/t/how-to-help-improve-the-doc/4186)
-- [Request a feature](/t/how-to-request-a-feature/4447)
-- [Report a bug](/t/how-to-report-a-bug/4446)
+- [Improve our doc](https://maas.io/docs/how-to-help-improve-the-doc)`↗`
+- [Request a feature](https://maas.io/docs/request-a-feature)`↗`
+- [Report a bug](https://maas.io/docs/report-a-bug)`↗`
 
 ### Our roadmap
 
@@ -37,7 +37,7 @@ Here's a view of our current roadmap:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg"></a>
 
-Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448).
+Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-to-contact-us)`↗`
 
 <!-- nohtml begin-nohtml -->
 ## Navigation
