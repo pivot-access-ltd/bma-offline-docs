@@ -424,7 +424,7 @@
 <p>HA for BMC control (node power cycling) is provided out-of-the-box, once a second rack controller is present. MAAS will automatically identify which rack controller is responsible for a BMC and set up communication accordingly.</p>
 <p><a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">How to enable highly-available DHCP services</h3></a></p>
 <p>DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.</p>
-<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-manage-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
+<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-enable-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
 <p>To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:</p>
 <pre><code>vid=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.vid')
 fabric_name=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.fabric')

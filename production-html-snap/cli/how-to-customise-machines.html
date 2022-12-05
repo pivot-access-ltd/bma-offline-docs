@@ -1175,7 +1175,7 @@ Machine-readable output follows:
 <pre><code class="language-bash">maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 </code></pre>
 <p><a href="#heading--how-to-pre-seed-with-curtin"><h2 id="heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</h2></a></p>
-<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
+<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see <a href="how-to-acquire-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p>Curtin provides hooks to execute custom code before and after installation takes place. These hooks are named <code>early</code> and <code>late</code> respectively, and they can both be overridden to execute the Curtin configuration in the ephemeral environment. Additionally, the <code>late</code> hook can be used to execute a configuration for a machine being installed, a state known as in-target.</p>
 <p>Curtin commands look like this:</p>
 <pre><code>foo: ["command", "--command-arg", "command-arg-value"]
@@ -1197,7 +1197,7 @@ Machine-readable output follows:
   custom: [&quot;curtin&quot;, &quot;in-target&quot;, &quot;--&quot;, &quot;sh&quot;, &quot;-c&quot;, &quot;/bin/echo -en 'Installed ' &gt; /tmp/maas_system_id&quot;]
 </code></pre>
 <p><a href="#heading--cloud-init"><h2 id="heading--cloud-init">How to pre-seed with cloud-init</h2></a></p>
-<p>For a flowchart, showing where cloud-init fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
+<p>For a flowchart, showing where cloud-init fits into the deployment picture, see <a href="how-to-acquire-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p>Using cloud-init to customise a machine after deployment is relatively easy. After you&rsquo;re logged in, use the following command to deploy a machine with a custom script you&rsquo;ve written:</p>
 <pre><code>maas $PROFILE machine deploy $SYSTEM_ID user_data=&lt;base-64-encoded-script&gt;
 </code></pre>

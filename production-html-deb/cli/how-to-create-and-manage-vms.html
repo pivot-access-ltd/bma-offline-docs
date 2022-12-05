@@ -493,7 +493,7 @@ maas admin partition mount $SYSTEM_ID $DISK2_ID $HOME_PARTITION_ID "mount_point=
 <p>Consider the following interfaces constraint:</p>
 <pre><code>interfaces=eth0:space=maas;eth1:space=storage
 </code></pre>
-<p>Assuming you deploy the VM host on a machine or controller with access to the <code>maas</code> and <code>storage</code> <a href="maas-concepts-and-terms-reference.html#heading--spaces">spaces</a>, MAAS will create an <code>eth0</code> interface bound to the <code>maas</code> space and an <code>eth1</code> interface bound to the <code>storage</code> space.</p>
+<p>Assuming you deploy the VM host on a machine or controller with access to the <code>maas</code> and <code>storage</code> <a href="maas-glossary.html#heading--spaces">spaces</a>, MAAS will create an <code>eth0</code> interface bound to the <code>maas</code> space and an <code>eth1</code> interface bound to the <code>storage</code> space.</p>
 <p>Another example tells MAAS to assign unallocated IP addresses:</p>
 <pre><code>interfaces=eth0:ip=172.16.99.42
 </code></pre>

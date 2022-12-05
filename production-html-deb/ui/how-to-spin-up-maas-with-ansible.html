@@ -584,7 +584,7 @@ install_metrics: false          # Whether metrics should be enabled for this MAA
 <p>The rack controller should be accessible at the specified host IP address, just as if you had installed it there manually.</p>
 <p><a href="#heading--MAAS-de-installation"><h3 id="heading--MAAS-de-installation">MAAS de-installation</h3></a></p>
 <p>As an operator, you want to be able to revert the MAAS setup installed by this playbook, such that the machine is clean of all MAAS packages or snaps.  In order to teardown a MAAS deployment, you can run a separate entry-point within the playbook to teardown the installed MAAS packages or snaps.  This entry-point is provided in the playbook to remove the installation that the default entry-point provides: Running this playbook with the default configuration with perfectly undo the default installation.</p>
-<p>You must <a href="how-to-back-up-maas.html">back up</a> the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.</p>
+<p>You must <a href="how-to-keep-maas-backed-up.html">back up</a> the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.</p>
 <p><a href="#heading--MAAS-high-availability"><h3 id="heading--MAAS-high-availability">MAAS high availability</h3></a></p>
 <p>As an operator, you want to install a reverse proxy and configure high-availability region controllers for a given host using Ansible.  Note that HA region controllers require an HAProxy configuration. You can accomplish this with the following steps:</p>
 <ul style="margin-left:4px; list-style-type:disc;">

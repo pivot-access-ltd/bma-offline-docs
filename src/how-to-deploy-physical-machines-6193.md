@@ -277,7 +277,7 @@ Enlistment happens when MAAS starts; it reaches out on connected subnets to loca
 
 Since MAAS doesn't know whether you might intend to actually include these discovered machines in your cloud configuration, it won't automatically take them over, but it will read them to get an idea how they're set up. MAAS then presents these machines to you with a MAAS state of "New." This allows you to examine them and decide whether or not you want MAAS to manage them.
 
-When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.
+When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/how-to-make-machines-available/5160#heading--how-to-add-a-machine-manually). In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.
 
 <a href="#heading--about-the-enlistment-process"><h4 id="heading--about-the-enlistment-process">About the enlistment process</h4></a>
 
@@ -658,7 +658,7 @@ You can also examine the "raw" log output:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a>
 
-Help interpreting these logs can be found under the [Logging](/t/maas-logging-reference/5240) section of this documentation.
+Help interpreting these logs can be found under the [Logging](/t/how-to-work-with-log-files/5240) section of this documentation.
 
 <a href="#heading--about-testing-machine-networking"><h4 id="heading--about-testing-machine-networking">About testing machine networking</h4></a>
 
@@ -672,7 +672,7 @@ Once commissioned, you can configure the machine's network interface(s). Specifi
 
 <a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a>
 
-Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to [install an operating system on it](/t/about-images/5076#heading--how-images-deploy), along with any other application loads you wish to run on that machine.
+Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to [install an operating system on it](/t/how-to-acquire-images/6192#heading--how-images-deploy), along with any other application loads you wish to run on that machine.
 
 Before deploying a machine, MAAS must allocate it (status 'Allocated'). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
 
@@ -712,7 +712,7 @@ Event logs display a list of timestamped status updates for events and actions p
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a>
 
-Detailed discussion of this event log can be found under the [Logging](/t/maas-logging-reference/5240) section of this documentation.
+Detailed discussion of this event log can be found under the [Logging](/t/how-to-work-with-log-files/5240) section of this documentation.
 
 <a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a>
 
@@ -1187,7 +1187,7 @@ It is very important to pay close attention to your selections when erasing disk
 
 <a href="#heading--about-pre-seeding"><h3 id="heading--about-pre-seeding">About pre-seeding</h3></a>
 
-During machine [enlistment](/t/about-machines/5080), [deployment](/t/how-to-deploy-machines/5112), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**. These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+During machine [enlistment](/t/about-machines/5080), [deployment](/t/how-to-put-machines-to-work/5112), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**. These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
 
 Preseeding in MAAS can be achieved in two ways:
 

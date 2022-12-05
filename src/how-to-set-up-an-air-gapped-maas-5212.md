@@ -69,7 +69,7 @@ A user can create custom `user_data` which will configure CentOS or RHEL to use 
 
 <a href="#heading--store-custom-images"><h3 id="heading--store-custom-images">Storing customer images for non-MAAS-maintained images</h3></a>
 
-You can also [create custom images](/t/how-to-create-custom-images/5104) and store them in your local mirror.  Once you have the image built, consult the page on [local image mirrors](/t/how-to-mirror-images-locally/5927) to see how to incorporate your newly-built image into the local stash.
+You can also [create custom images](/t/how-to-build-custom-images/5104) and store them in your local mirror.  Once you have the image built, consult the page on [local image mirrors](/t/how-to-mirror-images-locally/5927) to see how to incorporate your newly-built image into the local stash.
 
 <a href="#heading--transparent-proxy"><h2 id="heading--transparent-proxy">How to set up a transparent proxy</h2></a>
 

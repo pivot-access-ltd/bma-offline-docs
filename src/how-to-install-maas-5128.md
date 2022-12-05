@@ -3,7 +3,7 @@
 MAAS is relatively easy to install and configure.  Let's give it a try.
 
 [note]
-MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-reference/6233).
+MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 [/note]
 
 [note]

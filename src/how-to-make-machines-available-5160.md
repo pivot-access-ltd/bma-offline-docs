@@ -34,7 +34,7 @@ This article explains:
 
 This article also provides a [storage layouts reference](#heading--storage-layouts-reference).
 
-Most of the day-to-day work of managing machines is covered here. Utilising machines to do work -- for example, commissioning, testing, and deploying them -- is discussed in [How to deploy machines](/t/how-to-deploy-machines/5112).
+Most of the day-to-day work of managing machines is covered here. Utilising machines to do work -- for example, commissioning, testing, and deploying them -- is discussed in [How to deploy machines](/t/how-to-put-machines-to-work/5112).
 
 <a href="#heading--how-to-create-delete-and-configure-machines"><h2 id="heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</h2></a>
 
@@ -360,7 +360,7 @@ This will bring up a detailed log view for that row:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a>
 
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [logging](/t/maas-logging-reference/5240) for more details on how to read and interpret these logs.  
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [logging](/t/how-to-work-with-log-files/5240) for more details on how to read and interpret these logs.  
 
 <a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware & test logs</h3></a>
 
@@ -376,7 +376,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
-Help interpreting these logs can be found under the [logging](/t/maas-logging-reference/5240) section of this documentation.
+Help interpreting these logs can be found under the [logging](/t/how-to-work-with-log-files/5240) section of this documentation.
 
 <a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine's event logs</h3></a>
 
@@ -384,7 +384,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
 
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [logging](/t/maas-logging-reference/5240) section of this documentation.
+There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [logging](/t/how-to-work-with-log-files/5240) section of this documentation.
 
 <a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a>
 

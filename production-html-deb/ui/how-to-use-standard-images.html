@@ -437,7 +437,7 @@
 <li><a href="#heading--image-mirrors">How to use other image mirrors to download images</a></li>
 <li><a href="#heading--other-images">How to import and provision non-Ubuntu images</a></li>
 </ul>
-<p>Note that it is possible to build your own images in a limited sense: see <a href="how-to-create-custom-images.html#heading--how-to-build-maas-images">MAAS Image Builder</a>.</p>
+<p>Note that it is possible to build your own images in a limited sense: see <a href="how-to-build-custom-images.html#heading--how-to-build-maas-images">MAAS Image Builder</a>.</p>
 <p><a href="#heading--maas-image-streams"><h2 id="heading--maas-image-streams">How to use MAAS image streams</h2></a></p>
 <p>Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both streams contain Ubuntu images, CentOS images, bootloaders extracted from the Ubuntu archive, and release notifications. Either stream can be used in any version of MAAS greater than 2.1 &ndash; but not all images are supported in older versions.</p>
 <p>This subsection will help you learn:</p>
@@ -468,7 +468,7 @@ maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
 <p><a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">How to import standard images from maas.io</h2></a></p>
 <p>The &lsquo;Images&rsquo; page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a></p>
-<p>You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See <a href="about-images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
+<p>You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See <a href="how-to-acquire-images.html#boot-image-sources">Boot image sources</a>) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.</p>
 <p>Click the &lsquo;Save selection&rsquo; button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png"></a></p>
 <p>To remove an image, un-select it and click &lsquo;Save selection&rsquo;.</p>

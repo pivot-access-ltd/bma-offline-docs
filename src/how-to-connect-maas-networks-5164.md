@@ -292,7 +292,7 @@ The reserved ranges section of the subnet screen looks like this:
 
 <a href="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png"></a>
 
-More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-manage-ip-addresses/5132#heading--how-to-manage-ip-ranges).
+More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-enable-dhcp/5132#heading--how-to-manage-ip-ranges).
 [/tab]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a>
@@ -432,7 +432,7 @@ The following window will appear:
 
 Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu.
 
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/how-to-manage-networks/5164#heading--how-to-toggle-subnet-management)).
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/how-to-connect-maas-networks/5164#heading--how-to-toggle-subnet-management)).
 
 -   **Static assign**: The administrator will specify a static address using a secondary field.
 

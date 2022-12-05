@@ -209,7 +209,7 @@ make: *** [Makefile:21: custom-ubuntu-lvm.dd.gz] Error 1
 rm OVMF_VARS.fd
 ```
 
-In both cases, the problem is the same: `packer` has not been installed. You can fix it by [following these instructions](https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer).
+In both cases, the problem is the same: `packer` has not been installed. You can fix it by [following these instructions](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer).
 
 <a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target ...OVMF_VARS.fd</h3></a>
 
@@ -221,7 +221,7 @@ sudo rm -f -rf output-qemu custom-ubuntu*.gz
 make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF_VARS.fd'.  Stop.
 ```
 
-then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer).
+then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer).
 
 <a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a>
 
@@ -235,7 +235,7 @@ If you encounter an error such as this one:
 Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: "qemu-img": executable file not found in $PATH
 ```
 
-then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer).
+then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer).
 
 <a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a>
 

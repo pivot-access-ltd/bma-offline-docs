@@ -98,17 +98,17 @@ MAAS works with any system configuration tools. Both the [Chef](https://www.chef
 Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.ubuntu.com/support) to work correctly with MAAS.
 [/note]
 
-<a href="heading--colocation-of-key-components"><h3 id="heading--colocation-of-key-components">Colocation of key components</h3></a>
+<a href="#heading--colocation-of-key-components"><h3 id="heading--colocation-of-key-components">Colocation of key components</h3></a>
 
 MAAS relies on two key components: the *region controller* and the *rack controller*. The region controller handles operator requests; the rack controller provides high-bandwidth services to multiple racks. In essence, rack controllers manage racks, while the region controller manages the data centre. We generally recommended installing both controllers on the same system.  The default MAAS install delivers this co-located configuration automatically. This all-in-one solution also provides DHCP. 
 
-See [Concepts and terms](/t/maas-glossary/5416#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/how-to-enable-high-availability/5120), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/how-to-manage-dhcp/5132) will cause problems.
+See [Concepts and terms](/t/maas-glossary/5416#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/how-to-enable-high-availability/5120), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/how-to-enable-dhcp/5132) will cause problems.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg"></a>
 
-<a href="heading--how-maas-works"><h3 id="heading--how-maas-works">How MAAS works</h3></a>
+<a href="#heading--how-maas-works"><h3 id="heading--how-maas-works">How MAAS works</h3></a>
 
-When you [add a new machine](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/about-machines/5080#heading--about-enlistment), MAAS [commissions](/t/about-machines/5080#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+When you [add a new machine](/t/how-to-make-machines-available/5160#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/about-machines/5080#heading--about-enlistment), MAAS [commissions](/t/about-machines/5080#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 
 <details><summary>Tell me, quickly, about enlistment and commissioning.</summary>
 

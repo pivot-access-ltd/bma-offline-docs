@@ -522,7 +522,7 @@
 <p><a href="#heading--how-to-view-reserved-ranges"><h3 id="heading--how-to-view-reserved-ranges">How to view reserved ranges</h3></a></p>
 <p>The reserved ranges section of the subnet screen looks like this:</p>
 <p><a href="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png"></a></p>
-<p>More details and instructions regarding these ranges can be found in <a href="how-to-manage-ip-addresses.html#heading--how-to-manage-ip-ranges">IP ranges</a>.</p>
+<p>More details and instructions regarding these ranges can be found in <a href="how-to-enable-dhcp.html#heading--how-to-manage-ip-ranges">IP ranges</a>.</p>
 <p><a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a></p>
 <p>This section displays hosts (including controllers) associated with the used addresses along with related bits of host information.</p>
 <p><a href="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png"></a></p>
@@ -620,7 +620,7 @@ It&rsquo;s essential to enforce usage of IP addresses to avoid domain name confl
 <p>Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the &ldquo;IP mode&rdquo; drop-down menu.</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
-<p><strong>Auto assign</strong>: MAAS will assign a random static address (<code>iface eth0 inet static</code>). The pool of available addresses depends on whether the subnet is managed or unmanaged (see <a href="how-to-manage-networks.html#heading--how-to-toggle-subnet-management">Subnet management</a>).</p>
+<p><strong>Auto assign</strong>: MAAS will assign a random static address (<code>iface eth0 inet static</code>). The pool of available addresses depends on whether the subnet is managed or unmanaged (see <a href="how-to-connect-maas-networks.html#heading--how-to-toggle-subnet-management">Subnet management</a>).</p>
 </li>
 <li>
 <p><strong>Static assign</strong>: The administrator will specify a static address using a secondary field.</p>
@@ -633,7 +633,7 @@ It&rsquo;s essential to enforce usage of IP addresses to avoid domain name confl
 </li>
 </ul>
 <p>Press the &ldquo;Save&rdquo; button to apply the changes.</p>
-<p>See <a href="maas-concepts-and-terms-reference.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
+<p>See <a href="maas-glossary.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
 <p><a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">How to create a bond interface</h3></a></p>
 <p>A bond is created by selecting more than one interface and clicking the now-active &ldquo;Create bond&rdquo; button:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a></p>

@@ -445,7 +445,7 @@
 <p>MAAS Playbooks are available from a <a href="https://github.com/maas/MAAS-ansible-playbook">repository</a>.  They will eventually be available through Ansible Galaxy.</p>
 <p>There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.</p>
 <p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
-<p>Read the <a href="ansible-playbooks-reference.html">Ansible playbooks reference</a> document to learn more.</p>
+<p>Read the <a href="how-to-spin-up-maas-with-ansible.html">Ansible playbooks reference</a> document to learn more.</p>
 <!--
 <a href="#heading--vault-integration"><h3 id="heading--vault-integration">Integration of Vault for credential storage</h3></a>
 
@@ -472,7 +472,7 @@ You can read the [MAAS Vault reference](maas-vault-reference.html) documentation
 <li>Items which are not dynamic present the entire range of possible values, regardless of whether that value currently exists in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.</li>
 <li>Items marked as &ldquo;Grouping&rdquo; can be used to group machines, instead of the default machine status.</li>
 </ul>
-<p>See <a href="how-to-search-maas.html">How to search MAAS</a> for details on how to use these parameters.</p>
+<p>See <a href="how-to-find-machines.html">How to search MAAS</a> for details on how to use these parameters.</p>
 <table>
 <thead>
 <tr>
@@ -898,11 +898,11 @@ Long-term, we know that MAAS administrators want to enlist and use DPUs with MAA
 <p>We wanted to improve the performance of the machine list page for large (&gt;10000 machines) MAASes, and allow users to search and filter machines as quickly as possible. In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.</p>
 <p>With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  See <a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a>, in these release notes, for details on the enhanced filtering capabilities that were included in this work.</p>
 <p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h3 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h3></a></p>
-<p>The <a href="https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
+<p>The <a href="https://maas.io/docs/how-to-build-custom-images#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
 <p><a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a></p>
 <p>MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult <a href="https://maas.io/docs/api">the API documentation</a> for details.</p>
 <p><a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h3></a></p>
-<p>MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the <a href="configuration-settings-reference.html">Configuration settings reference</a>.</p>
+<p>MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the <a href="how-to-change-maas-settings.html">Configuration settings reference</a>.</p>
 <p><a href="#heading--Improved-MAAS-event-documentation"><h3 id="heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</h3></a></p>
 <p>MAAS event documentation has been expanded to include <a href="understanding-maas-events.html">much better explanations</a> of MAAS events, including many examples.</p>
 <p><a href="#heading--Improved-MAAS-audit-event-documentation"><h3 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h3></a></p>

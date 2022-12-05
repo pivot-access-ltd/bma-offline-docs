@@ -30,7 +30,7 @@ HA for BMC control (node power cycling) is provided out-of-the-box, once a secon
 
 DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.
 
-If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/how-to-manage-dhcp/5132#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/how-to-enable-dhcp/5132#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
 
 [tabs]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
