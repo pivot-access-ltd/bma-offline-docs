@@ -65,10 +65,10 @@ A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-rem
 MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS can be listed via the CLI. If a device advertises a hostname using `mDNS` (such as with `avahi` or `Bonjour`), MAAS will also present the discovered hostname when listing devices.
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Using the Dashboard, an unknown discovered device can be added to MAAS as a device or as a network interface belonging to a machine or device. Clicking the down arrow to the right of a new device allows values such as 'Type', 'Domain', 'IP Assignment' and 'Parent' to be changed prior to the device being added. Selecting a Parent device is optional.
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 An unknown discovered device can be added to MAAS as a device, or as a network interface belonging to a machine or device. You can specify values such as 'Type', 'Domain', 'IP Assignment' and 'Parent' to be changed prior to the device being added. Indicating a Parent device is optional.
 [/tab]
 [/tabs]
@@ -115,7 +115,7 @@ When you enable management for a subnet, MAAS will:
 - Lease addresses for DHCP from a reserved dynamic IP range
 - Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
 
-See [the glossary](/t/glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+See [the glossary](/t/maas-glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 If needed, you can also define a static route between two subnets. A static route is defined on a per-subnet basis to use a particular gateway, using a configured destination.
 
@@ -141,7 +141,7 @@ A rack controller in an IPv6 context needs to have the region API server URL spe
 http://[::1]:5240/MAAS/
 ```
 
-You can access the Web UI and the [MAAS CLI](/t/how-to-use-the-maas-cli/5236) (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
+You can access the Web UI and the [MAAS CLI](/t/try-out-the-maas-cli/5236) (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
 
 [note]
 MAAS can only control most BMCs using IPv4.
@@ -452,7 +452,7 @@ In theory, the Internet infrastructure and a cloud network should be very simila
 
 <a href="#heading--about-network-traffic"><h4 id="heading--about-network-traffic">About Internet network traffic</h4></a>
 
-On-the-fly, Internet network paths can become very complicated and somewhat unpredictable.  As a result, there's rarely a reason to even count how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute]([https://linux.die.net/man/8/traceroute).  From a TCP/IP point of view, it's much easier to ignore the specific network, since each one is custom built, so to speak.  The path can theoretically change every time a message is sent, even between the same two computers.
+On-the-fly, Internet network paths can become very complicated and somewhat unpredictable.  As a result, there's rarely a reason to even count how many hops a message takes, or where it hops, unless you're trying to debug a broken route with, say, [traceroute](https://linux.die.net/man/8/traceroute)‘↗‘.  From a TCP/IP point of view, it's much easier to ignore the specific network, since each one is custom built, so to speak.  The path can theoretically change every time a message is sent, even between the same two computers.
 
 When it comes to designing and troubleshooting networks, knowing the specific route (almost) never helps.  What we do want to know about is the network traffic between computers.  We have to understand what kind of data travels between computers, besides just the data we send.  Internet data flows are governed by the OSI model.   
 
