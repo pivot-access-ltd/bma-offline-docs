@@ -3,7 +3,7 @@
 MAAS is relatively easy to install and configure.  Let's give it a try.
 
 [note]
-MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-reference/6233).
+MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 [/note]
 
 [note]
@@ -1364,7 +1364,7 @@ The `init` command can takes optional arguments. To list them, as well as read a
 <a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a>
 
 [tabs]
-[tab version="v3.3 Beta 1 Snap, v3.3 Beta 1 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Beta 1 Snap, v3.3 Beta 1 Packages,v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Once you've successfully installed MAAS (regardless of method), you can now login here:
 
 ```
@@ -1428,7 +1428,7 @@ Before moving forward with MAAS, you'll want to enable DHCP.  You can do this ve
 
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This network discovery process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
 [/tab]
-[tab version="v3.3 Beta 1 Snap,v3.3 Beta 1 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Beta 1 Snap,v3.3 Beta 1 Packages,v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
 
 ```
