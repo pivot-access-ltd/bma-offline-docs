@@ -54,7 +54,7 @@ IPMI provides many other functions and capabilities besides power-cycling the ma
 
 A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  
 
-MAAS provides an [internal proxy](/t/how-to-connect-maas-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-connect-maas-networks/5164#heading--configure-proxy) if desired.
+MAAS provides an [internal proxy](/t/how-to-manage-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-manage-networks/5164#heading--configure-proxy) if desired.
 
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">RPC</h3></a>
 
@@ -96,7 +96,7 @@ A "Default VLAN" is created for every fabric, to which every new VLAN-aware obje
 
 <a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">You manage subnets</h3></a>
 
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-enable-dhcp/5132#heading--enabling-dhcp).  None of these options requires detailed instruction.
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-manage-dhcp/5132#heading--enabling-dhcp).  None of these options requires detailed instruction.
 
 This subsection will help you learn:
 
