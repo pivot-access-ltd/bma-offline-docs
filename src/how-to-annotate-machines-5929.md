@@ -5,7 +5,7 @@ Annotations are descriptive, searchable phrases that apply only to machines.  Th
 <a href="#heading--work-with-annotations"><h2 id="heading--work-with-annotations">Work with annotations</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 This article will help you learn:
 
 - [How to work with static annotations](#heading--work-with-static-annotations)
@@ -17,7 +17,7 @@ This section explains how to work with notes, also known as "static annotations"
 [/tabs]
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a>
 
 This subsection will help you learn:
@@ -107,7 +107,7 @@ To filter machines by dynamic (workload) annotations, use the following procedur
 - Select one or more values from this list to filter the machine list by these workload annotations.
 
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.3 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 <a href="#heading--work-with-static-annotations"><h3 id="heading--work-with-static-annotations">How to work with static annotations</h3></a>
 
 This subsection will help you learn:
