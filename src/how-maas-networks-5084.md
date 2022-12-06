@@ -133,7 +133,7 @@ A rack controller in an IPv6 context needs to have the region API server URL spe
 http://[::1]:5240/MAAS/
 ```
 
-You can access the Web UI and the [MAAS CLI](/t/how-to-use-the-maas-cli/5236) (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
+You can access the Web UI and the [MAAS CLI](/t/try-out-the-maas-cli/5236) (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
 
 [note]
 MAAS can only control most BMCs using IPv4.

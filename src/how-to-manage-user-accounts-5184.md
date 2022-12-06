@@ -93,7 +93,7 @@ Public keys residing on either [Launchpad](https://help.launchpad.net/YourAccoun
 
 <a href="#heading--api-key"><h3 id="heading--api-key">How to add an API key for a user</h3></a>
 
-The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/how-to-use-the-maas-cli/5236).  Other services connecting to MAAS such as Juju will also need this key.
+The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/try-out-the-maas-cli/5236).  Other services connecting to MAAS such as Juju will also need this key.
 [/tab]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 We recommend that you use the web UI to set or change a user's API key.  To see how, select the "UI" choice in the dropdown above.

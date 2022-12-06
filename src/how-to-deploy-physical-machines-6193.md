@@ -293,7 +293,7 @@ Finally, cloud-init runs enlistment and setup scripts:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a>
 
-The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/about-networking/5084#heading--about-network-discovery).
+The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/how-to-set-up-networks/6174#heading--about-network-discovery).
 
 Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually. Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
 
@@ -898,7 +898,7 @@ The Network "tab" provides you with a way to view/edit the network and interface
 
 In the case of this deployed machine, there are not many editing options.  If the machine is in a 'Ready' state, though, altering the network configuration is possible, as shown in the screenshot above.
 
-Options on this tab are described in the introduction to [Networking](/t/about-networking/5084) article in this documentation set.
+Options on this tab are described in the introduction to [Networking](/t/how-to-set-up-networks/6174) article in this documentation set.
 
 <a href="#heading--machine-config"><h3 id="heading--machine-config">About machine configuration info</h3></a>
 
@@ -1187,7 +1187,7 @@ It is very important to pay close attention to your selections when erasing disk
 
 <a href="#heading--about-pre-seeding"><h3 id="heading--about-pre-seeding">About pre-seeding</h3></a>
 
-During machine [enlistment](/t/about-machines/5080), [deployment](/t/how-to-put-machines-to-work/5112), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**. These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+During machine [enlistment](/t/how-to-deploy-physical-machines/6193), [deployment](/t/how-to-put-machines-to-work/5112), commissioning and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**. These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
 
 Preseeding in MAAS can be achieved in two ways:
 

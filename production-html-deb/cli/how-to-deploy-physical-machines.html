@@ -774,7 +774,7 @@ null
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a></p>
 <p>Finally, cloud-init runs enlistment and setup scripts:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a></p>
-<p>The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as <a href="about-networking.html#heading--about-network-discovery">automatic discovery or network discovery</a>.</p>
+<p>The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as <a href="how-to-set-up-networks.html#heading--about-network-discovery">automatic discovery or network discovery</a>.</p>
 <p>Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually. Typically this is done when enlistment doesn&rsquo;t work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you&rsquo;ve added it.</p>
 <p>After the commissioning process, MAAS places the machine in the ‘Ready’ state. ‘Ready’ is a holding state for machines that are commissioned, waiting to be deployed when needed.</p>
 <p><strong>NOTE:</strong> 
@@ -1217,7 +1217,7 @@ when the machine is commissioned again.</p>
 <p>The Network &ldquo;tab&rdquo; provides you with a way to view/edit the network and interface configuration for a machine: </p>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> </p>
 <p>In the case of this deployed machine, there are not many editing options.  If the machine is in a &lsquo;Ready&rsquo; state, though, altering the network configuration is possible, as shown in the screenshot above.</p>
-<p>Options on this tab are described in the introduction to <a href="about-networking.html">Networking</a> article in this documentation set.</p>
+<p>Options on this tab are described in the introduction to <a href="how-to-set-up-networks.html">Networking</a> article in this documentation set.</p>
 <p><a href="#heading--machine-config"><h3 id="heading--machine-config">About machine configuration info</h3></a></p>
 <p>The final tab from the Machine menu allows you to update machine and power configuration options: </p>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7cfd77228a5cf1a6f779897d501f14fbf78fd4b4.png"></a> </p>
@@ -1376,7 +1376,7 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 </ol>
 <p>It is very important to pay close attention to your selections when erasing disks.</p>
 <p><a href="#heading--about-pre-seeding"><h3 id="heading--about-pre-seeding">About pre-seeding</h3></a></p>
-<p>During machine <a href="about-machines.html">enlistment</a>, <a href="how-to-put-machines-to-work.html">deployment</a>, commissioning and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>. These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
+<p>During machine <a href="how-to-deploy-physical-machines.html">enlistment</a>, <a href="how-to-put-machines-to-work.html">deployment</a>, commissioning and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>. These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
 <p>Preseeding in MAAS can be achieved in two ways:</p>
 <ol>
 <li>

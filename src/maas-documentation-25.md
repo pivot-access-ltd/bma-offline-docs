@@ -159,7 +159,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |https://discourse.maas.io/t/-/6327|/docs/maas-terraform-provider-reference|
 |https://discourse.maas.io/t/-/6233|/docs/maas-installation-requirements|
 |https://discourse.maas.io/t/-/6203|/docs/maas-technical-reference|
-|https://discourse.maas.io/t/-/6202|/docs/how-to-get-started-with-maas|
+|https://discourse.maas.io/t/-/6202|/docs/how-to-how-to-get-started-with-maas|
 |https://discourse.maas.io/t/-/6201|/docs/how-to-operate-maas|
 |https://discourse.maas.io/t/-/6200|/docs/how-to-label-and-find-machines|
 |https://discourse.maas.io/t/-/6193|/docs/how-to-deploy-physical-machines|
@@ -927,10 +927,10 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |/docs/how-to-get-help|/docs/how-to-ask-for-help| 
 |/docs/how-to-change-maas-settings|/docs/how-to-change-maas-settings|
 |/docs/how-to-spin-up-maas-with-ansible|/docs/how-to-spin-up-maas-with-ansible|
-|/docs/how-to-get-maas-running|/docs/how-to-get-started-with-maas|
+|/docs/how-to-get-maas-running|/docs/how-to-how-to-get-started-with-maas|
 |/docs/create-a-custom-image|/docs/custom-image-tutorial|
-|/docs/how-to-use-the-maas-cli|/docs/try-out-the-maas-cli|
-|/docs/maas-bootstrap-tutorial|/docs/get-started-with-maas|
+|/docs/try-out-the-maas-cli|/docs/try-out-the-maas-cli|
+|/docs/maas-bootstrap-tutorial|/docs/how-to-get-started-with-maas|
 |/docs/tutorials|/docs/basic-tutorials|
 |/docs/maas-glossary|/docs/maas-glossary|
 |/docs/installation-requirements|/docs/maas-installation-requirements|

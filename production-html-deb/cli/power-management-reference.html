@@ -415,7 +415,7 @@
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SIS'S&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id]) | @tsv' | column -t
 </code></pre>
-<p>Next, use the <a href="how-to-use-the-maas-cli.html">MAAS CLI</a> command <code>maas machines...</code> to (re)set the machine&rsquo;s power type, like this:</p>
+<p>Next, use the <a href="try-out-the-maas-cli.html">MAAS CLI</a> command <code>maas machines...</code> to (re)set the machine&rsquo;s power type, like this:</p>
 <pre><code>maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 </code></pre>
 <p>where $POWER_TYPE can have the following values:</p>

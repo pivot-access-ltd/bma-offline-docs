@@ -5,7 +5,7 @@ Let's see if we can't create and deploy a custom Ubuntu image with packer, just 
 
 <a href="#heading--install-maas"><h2 id="heading--install-maas">First, install MAAS</h2></a>
 
-If we're going to create custom images for MAAS, then first, we'll need MAAS!  You can use [this tutorial](https://maas.io/docs/how-to-use-the-maas-cli) to accomplish that, and get a feel for MAAS while you're at it.
+If we're going to create custom images for MAAS, then first, we'll need MAAS!  You can use [this tutorial](https://maas.io/docs/try-out-the-maas-cli) to accomplish that, and get a feel for MAAS while you're at it.
 
 <a href="#heading--install-packer"><h2 id="heading--install-packer">Install packer</h2></a>
 
@@ -104,7 +104,7 @@ $ maas admin boot-resources create \
 
 <a href="#heading--deploy-your-image"><h2 id="heading--deploy-your-image">Deploy the image in MAAS</h2></a>
 
-What good is an image if we can't deploy it?  Pick one of the VMs you created in the [last tutorial](https://maas.io/docs/how-to-use-the-maas-cli) and deploy your new OS image to it.  Then use a command like this one to see it running:
+What good is an image if we can't deploy it?  Pick one of the VMs you created in the [last tutorial](https://maas.io/docs/try-out-the-maas-cli) and deploy your new OS image to it.  Then use a command like this one to see it running:
 
 ```nohighlight
 maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",

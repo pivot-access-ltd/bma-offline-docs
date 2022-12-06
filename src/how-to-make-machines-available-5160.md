@@ -336,7 +336,7 @@ To find network info for a specific machine, open that machine's "Network" tab i
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> 
 
-Options on this tab are described in the introduction to [Networking](/t/about-networking/5084) article in this documentation set.
+Options on this tab are described in the introduction to [Networking](/t/how-to-set-up-networks/6174) article in this documentation set.
 
 <a href="#heading--how-to-find-machine-storage-info"><h3 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h3></a>
 
@@ -344,7 +344,7 @@ To view/edit machine storage info, click on the "Storage" tab in the machine sum
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
-See the section about [storage](/t/about-machines/5080#heading--about-storage) for more information.
+See the section about [storage](/t/how-to-deploy-physical-machines/6193#heading--about-storage) for more information.
 
 <a href="#heading--commissioning-log"><h3 id="heading--commissioning-log">How to find commissioning logs</h3></a>
 
