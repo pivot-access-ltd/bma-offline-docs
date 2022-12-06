@@ -77,7 +77,7 @@ The following table describes the expanded filter set for the MAAS machine list:
 - Items marked "Grp" can be used to group machines, instead of the default machine status.
 - Items marked "Man" must be manually entered, i.e., they are not in the UI filter dropdown, but can be entered in the "Search" box if properly formatted (as in the examples given).
 
-See [How to search MAAS](/t/how-to-search-maas/5192) for more details on how to use these parameters.
+See [How to search MAAS](/t/how-to-find-machines/5192) for more details on how to use these parameters.
 
 
 | Parameter (bold) w/example           | Shows nodes...                   | Dyn | Grp | Man |
@@ -148,3 +148,4 @@ See [How to search MAAS](/t/how-to-search-maas/5192) for more details on how to 
 | **devices**:(=)                      | Devices                          | Dyn |     | Man |
 | **interfaces**:(=)                   | Interfaces                       | Dyn |     | Man |
 | **parent**:(=)                       | Parent node                      | Dyn | Grp | Man |
+
