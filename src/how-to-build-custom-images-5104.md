@@ -1,6 +1,6 @@
 <!-- "How to build custom images" -->
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, as well as other OS images.  Note that MAAS Image Builder requires the purchase of Ubuntu Advantage support.
 
 [note]
