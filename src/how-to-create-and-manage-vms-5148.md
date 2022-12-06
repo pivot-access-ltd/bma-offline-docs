@@ -2,7 +2,7 @@
 If you have already created a VM host, you will want to create and delete virtual machines (VMs); this article will explain:
 
 [tabs]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to add a VM](#heading--add-vm-from-ui)
 - [How to delete a VM](#heading--delete-a-machine)
 
@@ -28,7 +28,7 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to add a VM](#heading--adding-a-vm-from-the-cli)
 - [How to set resources while adding a VM](#heading--set-resources)
 - [How to set the architecture while adding a VM](#heading--architecture)
@@ -154,7 +154,7 @@ Consider the following interfaces constraint:
 
     interfaces=eth0:space=maas;eth1:space=storage
 
-Assuming you deploy the VM host on a machine or controller with access to the `maas` and `storage` [spaces](/t/maas-concepts-and-terms-reference/5416#heading--spaces), MAAS will create an `eth0` interface bound to the `maas` space and an `eth1` interface bound to the `storage` space.
+Assuming you deploy the VM host on a machine or controller with access to the `maas` and `storage` [spaces](/t/maas-glossary/5416#heading--spaces), MAAS will create an `eth0` interface bound to the `maas` space and an `eth1` interface bound to the `storage` space.
 
 Another example tells MAAS to assign unallocated IP addresses:
 
