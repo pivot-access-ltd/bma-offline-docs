@@ -1,6 +1,6 @@
 <!-- "Commissioning log reference" -->
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.3 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="CLI"]
 The command line allows you to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.
 
 If you only want to see the latest or currently-running result, you can use `current-commissioning`, `current-testing`, or `current-installation` instead of an id:
@@ -72,14 +72,14 @@ maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
 **$RUN_ID** is labelled `id` in the verbose result output.
 [/note]
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.3 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages" view="UI"]
 Commissioning logs, which are presented on the "Commissioning" tab for any machine in the "Ready" state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.
 
 When you click on the "Commissioning" tab under a given machine, you will see a screen similar to this one:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> 
 
-Each of the items in the "NAME" column is the name of a [commissioning script](/t/how-to-put-machines-to-work/5112#heading--how-to-commission-a-machine).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+Each of the items in the "NAME" column is the name of a [commissioning script](/t/how-to-deploy-machines/5112#heading--how-to-commission-a-machine).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
 [/tab]
 [/tabs]
 
@@ -1214,7 +1214,7 @@ This script is just used to get the IP address, which can then be associated wit
        valid_lft forever preferred_lft forever
 ```
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" version="UI,CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" version="UI,CLI"]
 The commissioning script `40-maas-01-network-interfaces` is no longer used in MAAS versions 3.0 and higher.
 [/tab]
 [/tabs]
