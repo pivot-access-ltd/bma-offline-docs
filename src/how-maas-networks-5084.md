@@ -46,7 +46,7 @@ IPMI provides many other functions and capabilities besides power-cycling the ma
 
 A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  
 
-MAAS provides an [internal proxy](/t/how-to-connect-maas-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-connect-maas-networks/5164#heading--configure-proxy) if desired.
+MAAS provides an [internal proxy](/t/how-to-manage-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-manage-networks/5164#heading--configure-proxy) if desired.
 
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a>
 
@@ -57,10 +57,10 @@ A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-rem
 MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS can be listed via the CLI. If a device advertises a hostname using `mDNS` (such as with `avahi` or `Bonjour`), MAAS will also present the discovered hostname when listing devices.
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Using the Dashboard, an unknown discovered device can be added to MAAS as a device or as a network interface belonging to a machine or device. Clicking the down arrow to the right of a new device allows values such as 'Type', 'Domain', 'IP Assignment' and 'Parent' to be changed prior to the device being added. Selecting a Parent device is optional.
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 An unknown discovered device can be added to MAAS as a device, or as a network interface belonging to a machine or device. You can specify values such as 'Type', 'Domain', 'IP Assignment' and 'Parent' to be changed prior to the device being added. Indicating a Parent device is optional.
 [/tab]
 [/tabs]
@@ -88,7 +88,7 @@ A "Default VLAN" is created for every fabric, to which every new VLAN-aware obje
 
 <a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">About subnet management</h3></a>
 
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-enable-dhcp/5132#heading--enabling-dhcp).  None of these options requires detailed instruction.
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-manage-dhcp/5132#heading--enabling-dhcp).  None of these options requires detailed instruction.
 
 This subsection will help you learn:
 
@@ -107,7 +107,7 @@ When you enable management for a subnet, MAAS will:
 - Lease addresses for DHCP from a reserved dynamic IP range
 - Assign static addresses not included in a reserved IP range, typically via 'Auto assign' IP allocation mode for a node.
 
-See [Concepts and terms](/t/maas-glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 If needed, you can also define a static route between two subnets. A static route is defined on a per-subnet basis to use a particular gateway, using a configured destination.
 
@@ -133,7 +133,7 @@ A rack controller in an IPv6 context needs to have the region API server URL spe
 http://[::1]:5240/MAAS/
 ```
 
-You can access the Web UI and the [MAAS CLI](/t/try-out-the-maas-cli/5236) (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
+You can access the Web UI and the [MAAS CLI](/t/how-to-use-the-maas-cli/5236) (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
 
 [note]
 MAAS can only control most BMCs using IPv4.
