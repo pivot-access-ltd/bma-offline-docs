@@ -5,7 +5,7 @@ If you need background information on [images](#heading--About-images) -- or [cu
 
 <a href="#heading--About-images"><h2 id="heading--About-images">About images</h2></a>
 
-MAAS provides supported images for stable Ubuntu releases, and for CentOS 7 and CentOS 8.0 releases.  Other images can be [customised](/t/how-to-build-custom-images/5104) for use with MAAS.
+MAAS provides supported images for stable Ubuntu releases, and for CentOS 7 and CentOS 8.0 releases.  Other images can be [customised](/t/how-to-create-custom-images/5104) for use with MAAS.
 
 This article will help you learn:
 
