@@ -3,7 +3,7 @@
 MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
 
 [tabs]
-[tab version="v3.1 Snap,v3.1 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
+[tab version="v3.1 Snap,v3.1 Packages,v3.2 Snap,v3.3 Snap,v3.2 Packages" view="UI"]
 A *Settings* tab is available at the top of the MAAS interface.
 
 <a href="#heading--General-items"><h2 id="heading--General-items">General</h2></a>
@@ -212,7 +212,7 @@ You can manage your MAAS repositories with the *Settings* > *Package repos* opti
 
 Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages" view="UI"]
+[tab version="v3.3 Snap,,v3.3 Packages" view="UI"]
 A *Settings* tab is available at the top of the MAAS interface.
 
 <a href="#heading--General-items"><h2 id="heading--General-items">General</h2></a>
@@ -425,7 +425,7 @@ You can manage your MAAS repositories with the *Settings* > *Package repos* opti
 
 Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
 [/tab]
-[tab version="v3.1 Snap,v3.1 Packages,v3.2 Snap,v3.2 Packages,v3.3 Snap,v3.3 Packages" view="CLI"]
+[tab version="v3.1 Snap,v3.1 Packages,v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.3 Snap,,v3.3 Packages" view="CLI"]
 
 <a href="#heading--changing-settings-with-the-cli"><h2 id="heading--changing-settings-with-the-cli">Changing MAAS settings via the MAAS CLI</h2></a>
 
