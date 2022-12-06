@@ -54,11 +54,11 @@ IPMI provides many other functions and capabilities besides power-cycling the ma
 
 A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  
 
-MAAS provides an [internal proxy](/t/how-to-manage-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-manage-networks/5164#heading--configure-proxy) if desired.
+MAAS provides an [internal proxy](/t/how-to-connect-maas-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-connect-maas-networks/5164#heading--configure-proxy) if desired.
 
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">RPC</h3></a>
 
-A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, [RPC is used for communication between the region and rack controllers](/t/about-controllers/5072#heading--rackregion), specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine's DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. 
+A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, [RPC is used for communication between the region and rack controllers](/t/how-to-tune-controllers-6498#heading--rackregion), specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine's DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. 
 
 <a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">Waht is network discovery?</h3></a>
 
@@ -96,7 +96,7 @@ A "Default VLAN" is created for every fabric, to which every new VLAN-aware obje
 
 <a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">You manage subnets</h3></a>
 
-Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-manage-dhcp/5132#heading--enabling-dhcp).  None of these options requires detailed instruction.
+Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/how-to-enable-dhcp/5132#heading--enabling-dhcp).  None of these options requires detailed instruction.
 
 This subsection will help you learn:
 
@@ -407,7 +407,7 @@ This article is designed to help you learn:
 - [About other network elements](#heading--other-network-elements)
 
 [note]
-While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are sometimes used in a unique way by MAAS -- so we explain these concepts in the article entitled "[About MAAS networking](/t/about-networking/5084)".
+While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are sometimes used in a unique way by MAAS -- so we explain these concepts in the article entitled "[About MAAS networking](#heading--How-MAAS-networks)".
 [/note]
 
 <a href="#heading--about-the-internet"><h3 id="heading--about-the-internet">About the Internet</h3></a>
@@ -418,7 +418,7 @@ A network could be nothing more than a bunch of computers connected with wires. 
 
 Routers are the multiplexing elements in AAC networks.  Ladders of lateral paths aren't theoretical; they exist mostly for performance reasons, like latency, redundancy, cost, and so on.  This means an AAC network incorporates redundant loops or "packet-traps".  TCP/IP has a dedicated solution for this problem, called ["Time To Live"](https://en.wikipedia.org/wiki/Time_to_live#firstHeading).
 
-Issues with ladder networks drove the development of cloud network architectures (also known as Clos architectures), which address financial and performance impacts of large networks in a much simpler way. [Cloud networking](/t/about-cloud-networks/5808) is covered elsewhere, and should be next on your reading list.
+Issues with ladder networks drove the development of cloud network architectures (also known as Clos architectures), which address financial and performance impacts of large networks in a much simpler way. [Cloud networking](#About-cloud-networks) is covered elsewhere, and should be next on your reading list.
 
 [Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading) is a very large topic unto itself.  It's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading), [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading), and bonded NICs, aka [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation#firstHeading).  All of these come into play every time a MAAS network is modified.
 
@@ -498,7 +498,7 @@ Variable latency is the important thing to know about the physical layer, becaus
 3. Transmission delay - how long it takes layer 1 to push the packet's bits onto the link.
 4. Propagation delay - how long it takes the bits to travel through the wire to the other end.
 
-The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay doesn't just depend on the speed of light, because there may be lots of other "relay" computers in the link.  Propagation depends on network architecture, network congestion, and the number of hops (how many routers between source and destination), among other things.  As we'll see later on, within your enterprise, [modern cloud architectures](/t/about-cloud-networks/5808) usually create significantly less propagation delay.
+The size of the queue directly influences how fast data can get onto the link.  The processing and transmission delays are real, though relatively constant.  The propagation delay doesn't just depend on the speed of light, because there may be lots of other "relay" computers in the link.  Propagation depends on network architecture, network congestion, and the number of hops (how many routers between source and destination), among other things.  As we'll see later on, within your enterprise, [modern cloud architectures](#About-cloud-networks) usually create significantly less propagation delay.
 
 Variable-latency networks are "variable" because of the density of network traffic and the complexity of the route between hosts.  We can't predict congestion or routing, although we can influence local routing by choosing the right network architecture.  We can't predict transmission delays, though we can statistically bound them.  Almost all digital networks are considered "variable-latency".
 
@@ -1111,7 +1111,7 @@ A [metro area network or MAN](https://en.wikipedia.org/wiki/Metropolitan_area_ne
 
 <a href="#heading--router"><h4 id="heading--router">Router</h4></a>
 
-A [router](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading) is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.  Choices about routing are so important that we'll spend a [great deal of time on the subject](/t/about-cloud-networks/5808#heading--routing-still-rules) when we learn about cloud networking.
+A [router](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading) is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.  Choices about routing are so important that we'll spend a [great deal of time on the subject](#heading--routing-still-rules) when we learn about cloud networking.
 
 <a href="#heading--About-cloud-networks"><h2 id="heading--About-cloud-networks">About cloud networks</h2></a>
 
@@ -1162,7 +1162,7 @@ Regardless of your network vintage, packet routing is still the fundamental algo
 
 Routing is fundamentally simple: you're trying to get a packet from a source to a destination, using the destination IP address embedded in that packet.  In practice, routing is more complicated.  Most of the routers in a network path are not forwarding directly to the destination.  Instead, they're sending the packet to the next hop, that is, another, reachable router that is closer to the intended destination.
 
-In [the TCP/IP tutorial](/t/about-tcp-ip-networks/5806#heading--borrowed-from-ma-bell), we talked about telephone-line repeaters that refreshed the signal to keep it crystal clear over long runs of wire.  The signals didn't have to make it to the intended recipient, they just had to make it to the next repeater, which boosted the signal, cleaned up the noise, and sent the call on down the line to another repeater.  Eventually the call would make it to the subscriber.
+In [the TCP/IP tutorial](#heading--borrowed-from-ma-bell), we talked about telephone-line repeaters that refreshed the signal to keep it crystal clear over long runs of wire.  The signals didn't have to make it to the intended recipient, they just had to make it to the next repeater, which boosted the signal, cleaned up the noise, and sent the call on down the line to another repeater.  Eventually the call would make it to the subscriber.
 
 Routing works very much the same way: most of the routers in the loop understand how to find another router which is close to the intended destination.  That "next hop" will take care of repackaging the packets and sending them further down the line.  What matters in high-traffic cloud networks is not routing, per se, but how the packets are routed.  The choice of routing protocols can make all the difference in whether or not your network lags.  For this reason, we're going to take a more extended look at routing.
 
