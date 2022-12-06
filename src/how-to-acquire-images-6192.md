@@ -5,7 +5,7 @@ If you need background information on [images](#heading--About-images) -- or [cu
 
 <a href="#heading--About-images"><h2 id="heading--About-images">About images</h2></a>
 
-MAAS provides supported images for stable Ubuntu releases, and for CentOS 7 and CentOS 8.0 releases.  Other images can be [customised](/t/how-to-create-custom-images/5104) for use with MAAS.
+MAAS provides supported images for stable Ubuntu releases, and for CentOS 7 and CentOS 8.0 releases.  Other images can be [customised](/t/how-to-build-custom-images/5104) for use with MAAS.
 
 This article will help you learn:
 
@@ -73,7 +73,7 @@ Here's a conceptual view of the way that images get deployed to create a running
 
 This is a good place to explain how images work, including the nuances of `cloud-init` and `curtin` configurations.  Let's take it from the top.
 
-Before a machine can be deployed, it must be added to MAAS, commissioned, and allocated.  Machines can be added to MAAS either by [enlistment](/t/about-machines/5080#heading--about-enlistment) or by direct user action.  This machine must then be [commissioned](/t/about-machines/5080#heading--about-commissioning-machines), which establishes the configuration and resources of the machine.  Finally, that machine must be allocated, that is, assigned to the control of one and only one user, so that conflicting commands to the same machine are not possible.  This aggregate step is represented by the green lines in the above diagram.
+Before a machine can be deployed, it must be added to MAAS, commissioned, and allocated.  Machines can be added to MAAS either by [enlistment](/t/how-to-deploy-physical-machines/6193#heading--about-enlistment) or by direct user action.  This machine must then be [commissioned](/t/how-to-deploy-physical-machines/6193#heading--about-commissioning-machines), which establishes the configuration and resources of the machine.  Finally, that machine must be allocated, that is, assigned to the control of one and only one user, so that conflicting commands to the same machine are not possible.  This aggregate step is represented by the green lines in the above diagram.
 
 When MAAS receives the "deploy" command from the user (blue lines), it must first retrieve (from the MAAS DB) the machine info that was gathered about the machine during commissioning (red lines).  MAAS then boots the machine and waits for the machine's firmware to request a bootable "ephemeral" OS.  This ephemeral OS must be one of the images supplied by [the MAAS simplestreams](https://images.maas.io) and cannot be a custom OS image.
 
