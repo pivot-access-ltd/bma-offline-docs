@@ -1,5 +1,5 @@
 <!-- "MAAS Terraform provider reference" -->
-If you wish to use MAAS with [Terraform](https://www.terraform.io/), we have made a [provider available](https://github.com/maas/terraform-provider-maas).  This article provides reference information about the data sources and resources that can be accessed via this provider.  It does not attempt to explain the mechanics or usage of Terraform or offer any tutorial information related to this MAAS Terraform provider.
+If you wish to use MAAS with [Terraform](https://www.terraform.io/), we have made a [provider available](https://github.com/maas/terraform-provider-maas)`↗`.  This article provides reference information about the data sources and resources that can be accessed via this provider.  It does not attempt to explain the mechanics or usage of Terraform or offer any tutorial information related to this MAAS Terraform provider.
 
 <a href="#heading--what-is-this"><h1 id="heading--what-is-this">The MAAS Terraform provider</h1></a>
 
@@ -11,7 +11,7 @@ These aspects can be divided into three categories of Terraform-compliant HCL:
 - [Data sources](#heading--data-sources)
 - [Resources](#heading--resources)
 
-We will deal with each of these categories in turn.  For each data source and resource, we will offer a brief definition and description of how that item is employed in MAAS.  If you are new to [Terraform](https://www.terraform.io/), or want to explore what terraforming may provide for your MAAS instance, you may wish to consult the [Terraform documentation](https://www.terraform.io/intro) or one of the many [tutorials available](https://learn.hashicorp.com/collections/terraform/aws-get-started?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS).
+We will deal with each of these categories in turn.  For each data source and resource, we will offer a brief definition and description of how that item is employed in MAAS.  If you are new to [Terraform](https://www.terraform.io/), or want to explore what terraforming may provide for your MAAS instance, you may wish to consult the [Terraform documentation](https://www.terraform.io/intro) or one of the many [tutorials available](https://learn.hashicorp.com/collections/terraform/aws-get-started?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS)`↗`.
 
 <a href="#heading--terraform-api-linkage"><h2 id="heading--terraform-api-linkage">API linkages</h2></a>
 
@@ -103,21 +103,21 @@ resource "maas_subnet" "tf_subnet" {
 }
 ```
 
-See the [Terraform HCL documentation](https://www.terraform.io/language) for more details about these blocks.
+See the [Terraform HCL documentation](https://www.terraform.io/language)`↗` for more details about these blocks.
 
 <a href="#heading--data-sources"><h2 id="heading--data-sources">Data sources</h2></a>
 
 The MAAS Terraform provider offers three data sources, all representing network elements:
 
-- a [fabric](https://discourse.maas.io/t/maas-glossary/5416#heading--fabrics), which is essentially a VLAN namespace -- that is, it connects two or more VLANs together.
-- a [subnet](https://discourse.maas.io/t/maas-glossary/5416#heading--subnets), which is the traditional way of dividing up IP addresses into smaller networks, e.g., 192.168.15.0/24.
-- a [VLAN](https://en.wikipedia.org/wiki/VLAN), a "virtual LAN", which is a collection of specific addresses or ports that are connected together to form a restricted network.
+- a [fabric](https://discourse.maas.io/t/maas-glossary/5416#heading--fabrics)`↗`, which is essentially a VLAN namespace -- that is, it connects two or more VLANs together.
+- a [subnet](https://discourse.maas.io/t/maas-glossary/5416#heading--subnets)`↗`, which is the traditional way of dividing up IP addresses into smaller networks, e.g., 192.168.15.0/24.
+- a [VLAN](https://en.wikipedia.org/wiki/VLAN)`↗`, a "virtual LAN", which is a collection of specific addresses or ports that are connected together to form a restricted network.
 
 Each of these data sources has a specific HCL block with elements structured appropriately to manage that MAAS element.
 
 <a href="#heading--fabric"><h3 id="heading--fabric">Fabric</h3></a>
 
-The [fabric](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_fabric.md) data source provides minimal details, namely, the fabric ID, of an existing MAAS fabric.  It takes one argument (the fabric name) and exports one attribute (the fabric ID):
+The [fabric](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_fabric.md) data source provides minimal details, namely, the fabric ID, of an existing MAAS fabric.  It takes one argument (the fabric name) and exports one attribute (the fabric ID)`↗`:
 
 ```nohighlight
 data "maas_fabric" "default" {
@@ -129,7 +129,7 @@ Fabrics within MAAS are not widely manipulated in and of themselves, but rather 
 
 <a href="#heading--subnet"><h3 id="heading--subnet">Subnet</h3></a>
 
-The [subnet](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_subnet.md) data source provides a number of details about an existing MAAS network subnet.  The element takes one argument, the subnet CIDR, and exports a number of attributes:
+The [subnet](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_subnet.md)`↗` data source provides a number of details about an existing MAAS network subnet.  The element takes one argument, the subnet CIDR, and exports a number of attributes:
 
 - id - The subnet ID.
 - fabric - The subnet fabric.
@@ -156,7 +156,7 @@ Subnets are the network backbone of MAAS, and thus provide a number of attribute
 
 <a href="#heading--vlan"><h3 id="heading--vlan">VLAN</h3></a>
 
-The [VLAN](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_vlan.md) data source provides details about an existing MAAS VLAN.  A VLAN takes two arguments:
+The [VLAN](https://github.com/maas/terraform-provider-maas/blob/master/docs/data_sources/maas_vlan.md)`↗` data source provides details about an existing MAAS VLAN.  A VLAN takes two arguments:
 
 - fabric - (Required) The fabric identifier (ID or name) for the VLAN.
 - vlan - (Required) The VLAN identifier (ID or traffic segregation ID).
@@ -168,7 +168,7 @@ A VLAN data source exports a few useful attributes:
 - name - The VLAN name.
 - space - The VLAN space.
 
-VLAN [spaces](https://discourse.maas.io/t/maas-glossary/5416#heading--spaces) are used mostly by Juju, but can be employed by other tools, if desired.
+VLAN [spaces](https://discourse.maas.io/t/maas-glossary/5416#heading--spaces)`↗` are used mostly by Juju, but can be employed by other tools, if desired.
 
 The typical definition of a MAAS VLAN in HCL might look like this:
 
@@ -185,21 +185,21 @@ VLANs are available as data sources, but generally, subnets are the workhorses o
 
 The MAAS Terraform provider makes a large number of resources available, currently including the following items.  Because of the large number of items, details of arguments and attributes are not duplicated here, but instead provided from a single source at the given links:
 
-- A [maas_instance](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_instance.md) provides a resource to deploy and release machines already configured in MAAS, based on the specified parameters. If no parameters are given, a random machine will be allocated and deployed using the defaults.
-- A [maas_vm_host](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_vm_host.md) provides a resource to manage MAAS VM hosts.  Note that MAAS VM hosts are not machines, but the host(s) upon which virtual machines are created.
-- A [maas_vm_host_machine](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_vm_host_machine.md) provides a resource to manage MAAS VM host machines, which represent the individual machines that are spun up on a given VM host.
-- A [maas_machine](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_machine.md) provides a resource to manage MAAS machines; note that these are typically physical machines (rather than VMs), so they tend to respond differently at times.
-- A [maas_network_interface_physical](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_network_interface_physical.md) provides a resource to manage a physical network interface from an existing MAAS machine.  Network interfaces can be created and deleted at will via the MAAS CLI/UI, so there may be more than one of these associate with any given machine.
-- A [maas_network_interface_link](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_network_interface_link.md) provides a resource to manage network configuration on a network interface.  Note that this does not represent the interface itself, but the parameter set that configure that interface.
-- A [maas_fabric](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_fabric.md) provides a resource to manage MAAS network fabrics, which are [described above](#heading--fabric). 
-- A [maas_vlan](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_vlan.md) provides a resource to manage MAAS network VLANs, also [described above](#heading--vlan).
-- A [maas_subnet](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_subnet.md) provides a resource to manage MAAS network subnets, also [described above](#heading--subnet)
-- A [maas_subnet_ip_range](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_subnet_ip_range.md) provides a resource to manage MAAS network subnets IP ranges.  IP ranges carry particular importance when managing DHCP with multiple DHCP servers, for example.
-- A [maas_dns_domain](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_dns_domain.md) provides a resource to manage MAAS DNS domains.
-- A [maas_dns_record](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_dns_record.md) provides a resource to manage MAAS DNS domain records.
-- A [maas_space](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_space.md) provides a resource to manage MAAS network [spaces](https://juju.is/docs/olm/network-spaces).
-- A [maas_block_device](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_block_device.md) provides a resource to manage block devices on MAAS machines.
-- A [maas_tag](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_tag.md) provides a resource to manage a MAAS tag.  MAAS tags have multiple roles in controlling how machines are configured, booted, and monitored.
-- A [maas_user](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_user.md) provides a resource to manage MAAS users.  This resource does not provide any control over any Candid or RBAC restrictions that may be in place.
+- A [maas_instance](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_instance.md)`↗` provides a resource to deploy and release machines already configured in MAAS, based on the specified parameters. If no parameters are given, a random machine will be allocated and deployed using the defaults.
+- A [maas_vm_host](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_vm_host.md) provides a resource to manage MAAS VM hosts.  Note that MAAS VM hosts are not machines, but the host(s)`↗` upon which virtual machines are created.
+- A [maas_vm_host_machine](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_vm_host_machine.md)`↗` provides a resource to manage MAAS VM host machines, which represent the individual machines that are spun up on a given VM host.
+- A [maas_machine](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_machine.md) provides a resource to manage MAAS machines; note that these are typically physical machines (rather than VMs)`↗`, so they tend to respond differently at times.
+- A [maas_network_interface_physical](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_network_interface_physical.md)`↗` provides a resource to manage a physical network interface from an existing MAAS machine.  Network interfaces can be created and deleted at will via the MAAS CLI/UI, so there may be more than one of these associate with any given machine.
+- A [maas_network_interface_link](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_network_interface_link.md)`↗` provides a resource to manage network configuration on a network interface.  Note that this does not represent the interface itself, but the parameter set that configure that interface.
+- A [maas_fabric](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_fabric.md) provides a resource to manage MAAS network fabrics, which are [described above](#heading--fabric)`↗`. 
+- A [maas_vlan](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_vlan.md) provides a resource to manage MAAS network VLANs, also [described above](#heading--vlan)`↗`.
+- A [maas_subnet](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_subnet.md) provides a resource to manage MAAS network subnets, also [described above](#heading--subnet)`↗`
+- A [maas_subnet_ip_range](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_subnet_ip_range.md)`↗` provides a resource to manage MAAS network subnets IP ranges.  IP ranges carry particular importance when managing DHCP with multiple DHCP servers, for example.
+- A [maas_dns_domain](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_dns_domain.md)`↗` provides a resource to manage MAAS DNS domains.
+- A [maas_dns_record](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_dns_record.md)`↗` provides a resource to manage MAAS DNS domain records.
+- A [maas_space](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_space.md) provides a resource to manage MAAS network [spaces](https://juju.is/docs/olm/network-spaces)`↗`.
+- A [maas_block_device](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_block_device.md)`↗` provides a resource to manage block devices on MAAS machines.
+- A [maas_tag](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_tag.md)`↗` provides a resource to manage a MAAS tag.  MAAS tags have multiple roles in controlling how machines are configured, booted, and monitored.
+- A [maas_user](https://github.com/maas/terraform-provider-maas/blob/master/docs/resources/maas_user.md)`↗` provides a resource to manage MAAS users.  This resource does not provide any control over any Candid or RBAC restrictions that may be in place.
 
 Please visit the links to get details on these resources, since the documentation at those links will always be the most current information available.
