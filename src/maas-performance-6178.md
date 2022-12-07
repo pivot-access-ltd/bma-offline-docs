@@ -36,7 +36,7 @@ Note that this list only captures the bigger, sustained efforts, although there 
 
 <a href="#heading--collecting-your-own-metrics"><h2 id="heading--collecting-your-own-metrics">Collecting your own metrics</h2></a>
 
-It's possible to [collect your own MAAS metrics](/t/how-to-observe-a-live-maas/5204) -- and even share them with the MAAS engineering team.  We are keen to know everything we can about machine counts, network sizes, and MAAS performance in all areas.  Please use the [discourse performance forum](https://discourse.maas.io/c/maas-performance/26) to share your feedback and observations.
+It's possible to [collect your own MAAS metrics](/t/how-to-observe-a-live-maas/5204) -- and even share them with the MAAS engineering team.  We are keen to know everything we can about machine counts, network sizes, and MAAS performance in all areas.  Please use the [discourse performance forum](https://discourse.maas.io/c/maas-performance/26)`↗` to share your feedback and observations.
 
 <a href="#headings--recent-developments"><h2 id="heading--recent-developments">Recent developments</h2></a>
 
