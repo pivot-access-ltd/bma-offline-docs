@@ -1,5 +1,5 @@
 <!-- "How to employ VMWare images" -->
-MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. To automate the image creation process, Canonical [hosts a repository](https://github.com/canonical/packer-maas) with community-contributed [packer](https://www.packer.io/) templates.
+MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. To automate the image creation process, Canonical [hosts a repository](https://github.com/canonical/packer-maas) with community-contributed [packer](https://www.packer.io/)`↗` templates.
 
 #### This article will tell you:
 
@@ -10,7 +10,7 @@ MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directl
 - [How to upload a VMWare image](#heading--uploading-an-image)
 
 [note]
-VMware [does not support cloning boot devices](https://kb.vmware.com/s/article/84280) - you may run into issues triggered by non-unique UUID.  [One such issue](https://kb.vmware.com/s/article/84349) may lead to data corruption on VMFS datastores when using cloned boot devices.
+VMware [does not support cloning boot devices](https://kb.vmware.com/s/article/84280) - you may run into issues triggered by non-unique UUID.  [One such issue](https://kb.vmware.com/s/article/84349)`↗` may lead to data corruption on VMFS datastores when using cloned boot devices.
 [/note]
 
 <a href="#heading--prerequisites-to-create-the-images"><h2 id="heading--prerequisites-to-create-the-images">About the prerequisites for creating a VMWare image</h2></a>
@@ -22,8 +22,8 @@ The following are required in order to create and deploy a VMWare image:
 - **CPU**: 4 2GHz cores
 - **Memory**: 8 GB RAM (16 GB RAM recommended)
 - **Disk space**: 11 GB
-- [The VMWare ESXi ISO](https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6)
-- [Packer - https://www.packer.io/intro/getting-started/install.html](https://www.packer.io/intro/getting-started/install.html)
+- [The VMWare ESXi ISO](https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6)`↗`
+- [Packer - https://www.packer.io/intro/getting-started/install.html](https://www.packer.io/intro/getting-started/install.html)`↗`
 - Procedure was tested with precompiled 64-bit Packer 1.3.4 Linux binaries
 - <a href="https://github.com/canonical/packer-maas">Packer template</a> for MAAS custom image
 
@@ -31,7 +31,7 @@ The following are required in order to create and deploy a VMWare image:
 
 <a href="#heading--no-cloning-support"><h3 id="heading--no-cloning-support">About cloning VMWare images</h3></a>
 
-VMware [does not support cloning boot devices](https://kb.vmware.com/s/article/84280) - you may run into issues triggered by non-unique UUID.  [One such issue](https://kb.vmware.com/s/article/84349) may lead to data corruption on VMFS datastores when using cloned boot devices.
+VMware [does not support cloning boot devices](https://kb.vmware.com/s/article/84280) - you may run into issues triggered by non-unique UUID.  [One such issue](https://kb.vmware.com/s/article/84349)`↗` may lead to data corruption on VMFS datastores when using cloned boot devices.
 
 <a href="#heading--networking"><h3 id="heading--networking">About VMWare images and MAAS networking</h3></a>
 
@@ -51,11 +51,11 @@ Custom storage configuration is not supported because VMware ESXi expects specif
 
 <a href="#heading--esxi-hardware-support"><h3 id="heading--esxi-hardware-support">About ESXi Hardware Support</h3></a>
 
-VMware has [very specific hardware requirements](https://www.vmware.com/resources/compatibility/search.php). In particular, running VMware ESXi is not supported in a virtual machine or MAAS virsh Pod.
+VMware has [very specific hardware requirements](https://www.vmware.com/resources/compatibility/search.php)`↗`. In particular, running VMware ESXi is not supported in a virtual machine or MAAS virsh Pod.
 
 <a href="#heading--customising-the-image"><h2 id="heading--customising-the-image">How to customise VMWare images</h2></a>
 
-The image may be customize by modifying packer-maas/vmware-esxi/http/vmware-esxi-ks.cfg see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf) for more information.
+The image may be customize by modifying packer-maas/vmware-esxi/http/vmware-esxi-ks.cfg see Installation and Upgrade Scripts in the [VMware ESXi installation and Setup manual](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf)`↗` for more information.
 
 <a href="#heading--building-an-image"><h2 id="heading--building-an-image">How to build a VMWare image</h2></a>
 
