@@ -131,7 +131,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [API authentication](/t/-/5060)
 - [Python API client](/t/-/5404)
-- [API documentation](https://maas.io/docs/api)
+- [API documentation](https://maas.io/docs/api)`↗`
 
 ### [MAAS technical reference](/t/-/6203)
 
