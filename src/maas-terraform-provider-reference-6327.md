@@ -109,8 +109,8 @@ See the [Terraform HCL documentation](https://www.terraform.io/language) for mor
 
 The MAAS Terraform provider offers three data sources, all representing network elements:
 
-- a [fabric](https://discourse.maas.io/t/maas-glossary/5416#heading--fabrics), which is essentially a VLAN namespace -- that is, it connects two or more VLANs together.
-- a [subnet](https://discourse.maas.io/t/maas-glossary/5416#heading--subnets), which is the traditional way of dividing up IP addresses into smaller networks, e.g., 192.168.15.0/24.
+- a [fabric](https://discourse.maas.io/t/maas-concepts-and-terms-reference/5416#heading--fabrics), which is essentially a VLAN namespace -- that is, it connects two or more VLANs together.
+- a [subnet](https://discourse.maas.io/t/maas-concepts-and-terms-reference/5416#heading--subnets), which is the traditional way of dividing up IP addresses into smaller networks, e.g., 192.168.15.0/24.
 - a [VLAN](https://en.wikipedia.org/wiki/VLAN), a "virtual LAN", which is a collection of specific addresses or ports that are connected together to form a restricted network.
 
 Each of these data sources has a specific HCL block with elements structured appropriately to manage that MAAS element.
@@ -168,7 +168,7 @@ A VLAN data source exports a few useful attributes:
 - name - The VLAN name.
 - space - The VLAN space.
 
-VLAN [spaces](https://discourse.maas.io/t/maas-glossary/5416#heading--spaces) are used mostly by Juju, but can be employed by other tools, if desired.
+VLAN [spaces](https://discourse.maas.io/t/maas-concepts-and-terms-reference/5416#heading--spaces) are used mostly by Juju, but can be employed by other tools, if desired.
 
 The typical definition of a MAAS VLAN in HCL might look like this:
 
