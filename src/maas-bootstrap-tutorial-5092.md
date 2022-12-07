@@ -164,7 +164,7 @@ You can handle this lowest level with individual [machines](/t/how-to-deploy-phy
 
 <a href="#heading--Creating-some-sample-VMs"><h3 id="heading--Creating-some-sample-VMs">Creating some sample VMs</h3></a>
 
-Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) on the machine where you'll be running MAAS, you can create virtual machines like this:
+Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html)`↗` on the machine where you'll be running MAAS, you can create virtual machines like this:
 
 Open the Virtual Machine Manager application.  You'll see a screen that looks something like this:
 
