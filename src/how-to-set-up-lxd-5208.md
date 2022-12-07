@@ -2,7 +2,7 @@
 LXD and MAAS are separate products, and it's useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we've taken advantage of LXD projects.
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 - [How to make LXD available for hosting](#heading--lxd-setup)
 - [About LXD projects and MAAS](#heading--projects-explanation)
 - [An LXD project tutorial](#heading--projects-tutorial)
@@ -271,7 +271,7 @@ Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM hos
 When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profile, or (if that doesn't exist) the 'default' LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 <a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">About LXD projects and MAAS</h2></a>
 
 It may be beneficial to understand how LXD projects fit into the overall MAAS ecosystem.  LXD projects are not intended to be MAAS projects; they are only intended to limit which LXD containers and VMs are available to MAAS. This section will tell you:
