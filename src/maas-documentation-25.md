@@ -894,7 +894,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 [details=Mapping table]
 |PATH|LOCATION|
-|--------|--------||
+|--------|--------|
 |/docs/maas-terraform-provider|/docs/maas-terraform-provider-reference|
 |/docs/commissioning-script-reference|/docs/commissioning-scripts-reference|
 |/docs/technical-reference|/docs/maas-technical-reference|
