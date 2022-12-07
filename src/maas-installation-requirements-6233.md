@@ -9,9 +9,9 @@ Here is a proof-of-concept scenario, with all MAAS components installed on a sin
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
 |:---|----:|----:|----:|
-| [Region controller](/t/maas-glossary/785#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
+| [Region controller](/t/maas-concepts-and-terms-reference/785#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
 | PostgreSQL | 512 | 0.5 | 5 |
-| [Rack controller](/t/maas-glossary/785#heading--controllers") | 512 | 0.5 | 5 |
+| [Rack controller](/t/maas-concepts-and-terms-reference/785#heading--controllers") | 512 | 0.5 | 5 |
 | Ubuntu Server (including logs)| 512 | 0.5 | 5 |
 
 Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.
@@ -22,9 +22,9 @@ Here is a production scenario designed to handle a high number of sustained clie
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
 |:---|----:|----:|----:|
-| [Region controller](/t/maas-glossary/785#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
+| [Region controller](/t/maas-concepts-and-terms-reference/785#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
 | PostgreSQL | 2048 | 2.0 | 20 |
-| [Rack controller](/t/maas-glossary/785#heading--controllers") | 2048 | 2.0 | 20 |
+| [Rack controller](/t/maas-concepts-and-terms-reference/785#heading--controllers") | 2048 | 2.0 | 20 |
 | Ubuntu Server (including logs)| 512 | 0.5 | 5 |
 
 So, based on the above, the approximate requirements for this scenario are:
