@@ -137,7 +137,7 @@ The following conceptual diagram shows two fabrics in the same data centre or re
 
 A space is a logical grouping of subnets that can communicate with one another. Spaces can be arranged to group subnets according to various parameters.  One of the most common examples is a DMZ space, which might group subnets presenting a web interface to the public Internet.  Behind this DMZ would be specific applications that aren't allowed to interact directly with the user, but instead must interact with a Web UI in the DMZ space.  MAAS does not create a default space during installation.
 
-Spaces facilitate machine allocation for [Juju](https://jaas.ai/). See [Juju network spaces](https://jaas.ai/docs/spaces) for more details.
+Spaces facilitate machine allocation for [Juju](https://jaas.ai/). See [Juju network spaces](https://jaas.ai/docs/spaces)`↗` for more details.
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
@@ -403,9 +403,9 @@ A private repository can be built to assist with offline operations, based on th
 
 <a href="#heading--personal-package-archives-ppa"><h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2></a>
 
-A Personal Package Archive (PPA) is a [Launchpad](https://launchpad.net)-based method for any individual (or team) to build and distribute packages for Ubuntu.
+A Personal Package Archive (PPA) is a [Launchpad](https://launchpad.net)-based method for any individual (or team)`↗` to build and distribute packages for Ubuntu.
 
-Adding a PPA is equally straightforward. Using the [`sosreport` PPA](https://launchpad.net/~canonical-support/+archive/ubuntu/support-tools) as an example, first retrieve the PPA's address from its page on Launchpad:
+Adding a PPA is equally straightforward. Using the [`sosreport` PPA](https://launchpad.net/~canonical-support/+archive/ubuntu/support-tools)`↗` as an example, first retrieve the PPA's address from its page on Launchpad:
 
 `ppa:canonical-support/support-tools`
 
@@ -417,7 +417,7 @@ To add this PPA, then, hit the 'Add repository' button and fill in the fields. B
 
 Click 'Add repository' to save the configuration.
 
-See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA) for more information on PPAs.
+See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA)`↗` for more information on PPAs.
 
 <a href="#heading--numa"><h2 id="heading--numa">NUMA/vNUMA</h2></a>
 
@@ -429,7 +429,7 @@ There is more flexibility in creating affinity when using virtual machines, beca
 
 In practice, this means that VMs would be "pinned" to specific cores to create stability.  While the user has the choice of how to pin VMs, MAAS provides visual information that helps the user see how VMs are allocated to physical hardware, and make adjustments if that arrangement isn't (or turns out not to be) optimal.
 
-If you want to dig deeper, there is a [more through treatment of NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access) on Wikipedia.
+If you want to dig deeper, there is a [more through treatment of NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)`↗` on Wikipedia.
 
 <a href="#heading--sr-iov"><h2 id="heading--sr-iov">SR-IOV</h2></a>
 
@@ -439,7 +439,7 @@ Many smart NICs are able to sort network packets into queues, based on MAC addre
 
 With SR-IOV, it's possible to have no core interrupts when packets come in.  SR-IOV creates "virtual functions," with dedicated queues for transmitting and receiving.  Each VM is directly assigned hardware resources via a virtual function driver, which knows how to DMA-copy data directly between the NIC and the memory space of the relevant VM. Essentially, SR-IOV is like a "jumper wire" between the NIC and the VM, bypassing the core.  This prevents interrupting the core when packets arrive for it, and significantly reduces the core workload when sending network packets.
 
-For a deeper dive, try this [SR-IOV presentation](https://www.youtube.com/watch?v=hRHsk8Nycdg) from Intel.
+For a deeper dive, try this [SR-IOV presentation](https://www.youtube.com/watch?v=hRHsk8Nycdg)`↗` from Intel.
 
 <a href="#heading--isolcpus"><h2 id="heading--isolcpus">Isolating CPUs</h2></a>
 
@@ -485,7 +485,7 @@ DHCP operates using the four-step "DORA" model -- Discovery, Offer, Request, and
 
 - The DHCP server responds with a DHCPACK (acknowledgement) which includes various important configuration parameters, such as the lease duration.
 
-Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol), but what's covered here should be sufficient understanding for using MAAS.
+Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)`↗`, but what's covered here should be sufficient understanding for using MAAS.
 
 <a href="#heading--network-interface"><h3 id="heading--network-interface">Network interface</h3></a>
 
