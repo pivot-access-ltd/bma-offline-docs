@@ -908,6 +908,14 @@ MAAS provides an internal proxy server. Although it is set up to work well with 
 By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.
 
 [tabs]
+[tab version="v3.3 Snap"]
+MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
+[/tab]
+[tab version="v3.3 Packages"]
+MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
+
+You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
+[/tab]
 [tab version="v3.2 Snap"]
 MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
 [/tab]
