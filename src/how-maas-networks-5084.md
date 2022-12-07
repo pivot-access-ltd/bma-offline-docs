@@ -24,7 +24,7 @@ If the machine receives a PXE-enabled DHCPOFFER, it will be able to not only set
 
 Here are some related concepts you may want to explore:
 
-- [UEFI](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)Y
+- [UEFI](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)`↗`
 - [BOOTP](https://en.wikipedia.org/wiki/Bootstrap_Protocol)`↗`
 - [TFTP](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)`↗`
 - [HTTP booting](https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-deployment-prep-uefi-httpboot.html)`↗`
