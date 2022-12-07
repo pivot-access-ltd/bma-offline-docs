@@ -10,7 +10,7 @@ TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following ciphe
 - AES256+EECDH
 - AES256+EDH
 
-You will need to obtain your own certificates via some provider, e.g., [small step](https://smallstep.com/docs/step-ca).
+You will need to obtain your own certificates via some provider, e.g., [small step](https://smallstep.com/docs/step-ca)`↗`.
 
 <a href="#heading--about-auto-renewal-for-certificates"><h3 id="heading--about-auto-renewal-for-certificates">About certificate auto-renewal</h3></a>
 
@@ -159,10 +159,10 @@ MAAS does not auto-renew certificates, but there's no reason why we cannot provi
 
 You can setup your own Certificate Authority (CA) server that supports the ACME protocol with these components:
 
-- [step-ca from Smallstep](https://smallstep.com/docs/step-ca)
-- [Caddy server with ACME support](https://caddyserver.com/docs/caddyfile/directives/acme_server)  (available since version 2.5)
+- [step-ca from Smallstep](https://smallstep.com/docs/step-ca)`↗`
+- [Caddy server with ACME support](https://caddyserver.com/docs/caddyfile/directives/acme_server)  (available since version 2.5)`↗`
 
-If you have a CA server with ACME protocol support, you can use any ACME client for an automated certificate renewal and use crontab to renew on a desired time interval.  Consider [acme.sh](https://github.com/acmesh-official/acme.sh): 
+If you have a CA server with ACME protocol support, you can use any ACME client for an automated certificate renewal and use crontab to renew on a desired time interval.  Consider [acme.sh](https://github.com/acmesh-official/acme.sh)`↗`: 
 
 ```nohighlight
 $> acme.sh --issue -d mymaas.internal --standalone --server https://ca.internal/acme/acme/directory
@@ -185,11 +185,11 @@ $> acme.sh --installcert -d maas.internal \
 
 Please note that if you have MAAS installed via snap, you need to run above command as root, in order to place cert and key under `/var/snap/maas`.
 
-Another approach would be to write a bash script and pass it to a [`--renew-hook`](https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd).
+Another approach would be to write a bash script and pass it to a [`--renew-hook`](https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd)`↗`.
 
 <a href="#heading--using-certbot"><h4 id="heading--using-certbot">Using certbot</h4></a>
 
-[certbot](https://certbot.eff.org) can be used to renew certificates and execute a post-renewal hook.  We can use this hook to re-configure MAAS to use fresh certificates.
+[certbot](https://certbot.eff.org)`↗` can be used to renew certificates and execute a post-renewal hook.  We can use this hook to re-configure MAAS to use fresh certificates.
 
 To create a post-renewal hook, you can put this sample script under `/etc/letsencrypt/renewal-hooks/post/001-update-maas.sh`.
 
@@ -229,7 +229,7 @@ To test the renewal process and verify that the hook is executed correctly, you 
 sudo REQUESTS_CA_BUNDLE=ca.pem certbot renew --standalone --server https://ca.internal/acme/acme/directory --dry-run
 ```
 
-Please refer to the [cerbot documentation](https://certbot.eff.org/instructions?ws=other&os=ubuntufocal) for more information.
+Please refer to the [cerbot documentation](https://certbot.eff.org/instructions?ws=other&os=ubuntufocal)`↗` for more information.
 
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
