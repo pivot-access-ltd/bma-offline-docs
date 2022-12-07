@@ -6,15 +6,15 @@ A user should probably have a solid grasp of the standard terminology in relatio
 - Hosts and groups
 - Inventory
 
-[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) is a sophisticated IT automation tool that allows users to set up [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html), which automate complex, repetitive (or error-prone) setup activities.  While we won't provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:
+[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) is a sophisticated IT automation tool that allows users to set up [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html), which automate complex, repetitive (or error-prone)`↗` setup activities.  While we won't provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:
 
-- **[Modules](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules)** are binaries (or even pieces of code) that Ansible can run on a managed node.  These modules can be grouped into named collections.
-- **[Tasks](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks)** are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as "partition and format /sda".
-- **[Plays](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays)** are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., "install the OS" ==> "partition and format /sda", "install binary x.7.iso", etc.
-- **[Playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)** are YAML files that run plays in a specific order; for example, "install the OS", "install MAAS", "create a region controller", "sync images", etc.
-- **[Inventory](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3)** is a source(s) of managed nodes; also called a "hostfile".
+- **[Modules](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules)** are binaries (or even pieces of code)`↗` that Ansible can run on a managed node.  These modules can be grouped into named collections.
+- **[Tasks](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks)`↗`** are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as "partition and format /sda".
+- **[Plays](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays)`↗`** are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., "install the OS" ==> "partition and format /sda", "install binary x.7.iso", etc.
+- **[Playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗`** are YAML files that run plays in a specific order; for example, "install the OS", "install MAAS", "create a region controller", "sync images", etc.
+- **[Inventory](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3)** is a source(s)`↗` of managed nodes; also called a "hostfile".
 
-These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms "[hosts and groups](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html)", since these are applied somewhat differently than we use them in MAAS.
+These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms "[hosts and groups](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html)`↗`", since these are applied somewhat differently than we use them in MAAS.
 
 Playbooks are available to automate the setup for:
 
@@ -68,7 +68,7 @@ As an operator, you want want to install a MAAS region controller onto a given h
 
 <a href="#heading--Setting-the-maas_region_controller-role"><h3 id="heading--Setting-the-maas_region_controller-role">Setting the maas_region_controller role</h3></a>
 
-To attach roles to hosts, a user adds each role to their [Inventory file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups) in the form of either an INI or a YAML file where each role is followed by the addresses of each host to attach the role to. The example  below attaches the region controller role to a host running on `10.10.0.20` with the user `ubuntu`:*
+To attach roles to hosts, a user adds each role to their [Inventory file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups)`↗` in the form of either an INI or a YAML file where each role is followed by the addresses of each host to attach the role to. The example  below attaches the region controller role to a host running on `10.10.0.20` with the user `ubuntu`:*
 
 INI:
 ```INI
