@@ -5,7 +5,7 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-We are happy to announce that MAAS 3.3 Beta 3 has been released, bringing [many additional bug fixes](#heading--MAAS-3-3-Beta-3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+We are happy to announce that MAAS 3.3 RC1 has been released, with [one additional bug fixes](#heading--MAAS-3-3-RC1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
@@ -941,6 +941,10 @@ More bug-fixes are planned for later 3.3 releases.
 - [1997281](https://bugs.launchpad.net/bugs/1997281): machine.count fails for new filter options
 - [1997599](https://bugs.launchpad.net/bugs/1997599): Losing LXD certificate 
 	
+<a href="#heading--MAAS-3-3-RC1-bug-list"><h3 id="heading--MAAS-3-3-RC1-bug-list">MAAS 3.3 RC1 bug list</h3></a>
+
+- [1997975](https://bugs.launchpad.net/maas/+bug/1997975): Update grafana_agent/agent.yaml.example
+
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 
 Here are release notes for other relatively recent MAAS versions:
