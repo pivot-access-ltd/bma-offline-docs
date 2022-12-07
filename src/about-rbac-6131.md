@@ -30,7 +30,7 @@ Consequently, there must also be some means of active authorisation that allows 
 
 <a href="#heading--about-identity-services"><h3 id="heading--about-identity-services">About identity services</h3></a>
 
-MAAS/RBAC will interface with many identity services, using Candid as a mediator.  While the choice of identity service is up to you, we should cover some general principles of identity servers as they relate to MAAS/RBAC.  Let's take a closer look at [Ubuntu Single Sign-On (SSO)](https://help.ubuntu.com/community/SingleSignOn).
+MAAS/RBAC will interface with many identity services, using Candid as a mediator.  While the choice of identity service is up to you, we should cover some general principles of identity servers as they relate to MAAS/RBAC.  Let's take a closer look at [Ubuntu Single Sign-On (SSO)](https://help.ubuntu.com/community/SingleSignOn)`↗`
 
 SSO permits users to log in once to access many network services.  SSO centralises authentication (via Kerberos), account management (via LDAP), resource-sharing (via `pam_mount`), and limited authorisation through group memberships in LDAP, coupled with file system permissions.
 
@@ -40,9 +40,9 @@ RBAC (Role-based access control) does not authenticate users or verify their ide
 
 Direct authentication involves a user entering something unique in response to a challenge, in order to gain access.  "Something unique" means "something you know, something you have, or something you are", e.g., a password, a hardware key, or a fingerprint, respectively.  Authentication can be automated with private/public key exchanges, protected with a password on the first exchange.  Adding another access point (another trusted client) usually means providing a public key, setting a password, or registering some biometric data.  Direct authentication works well when there are a limited number of clients and not a lot of user turnover.
 
-Increase the number of users and services that need to authenticate, and direct authentication becomes an IT nightmare: generating access requests; validating requests; setting up authentication; and then managing access as users move around the organisation.  [Candid](https://github.com/canonical/candid), the Canonical identity service, was designed to meet this need.  Candid acts as an authentication gateway that connects a service like RBAC to your chosen identity service.
+Increase the number of users and services that need to authenticate, and direct authentication becomes an IT nightmare: generating access requests; validating requests; setting up authentication; and then managing access as users move around the organisation.  [Candid](https://github.com/canonical/candid)`↗`, the Canonical identity service, was designed to meet this need.  Candid acts as an authentication gateway that connects a service like RBAC to your chosen identity service.
 
-Candid manages authenticated users via special access tokens ([macaroons](https://askubuntu.com/questions/940640/what-is-a-macaroon)) that confirm user identity.  Unlike standard access tokens, macaroons can be verified independently, in a standard way, so they reduce the network traffic and delays of repeatedly querying the identity server.  Traditional access tokens must be short-lived; macaroons are valid for much longer and they can be refreshed easily.  Macaroons can also be bound to TLS certificates.  And macaroons can be used by multiple clients and services with no loss of security.
+Candid manages authenticated users via special access tokens ([macaroons](https://askubuntu.com/questions/940640/what-is-a-macaroon))`↗` that confirm user identity.  Unlike standard access tokens, macaroons can be verified independently, in a standard way, so they reduce the network traffic and delays of repeatedly querying the identity server.  Traditional access tokens must be short-lived; macaroons are valid for much longer and they can be refreshed easily.  Macaroons can also be bound to TLS certificates.  And macaroons can be used by multiple clients and services with no loss of security.
 
 Candid can do the following things:
 
