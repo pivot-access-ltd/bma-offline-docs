@@ -27,7 +27,7 @@ You may also wish to consult the permuted index, below.
 | [About MAAS audit events](/t/audit-event-log-reference/5256#heading--about-maas-audit-events) | |
 | [About Redfish](/t/power-management-reference/5246#heading--about-redfish) | |
 | [About the MAAS implementation of Redfish](/t/power-management-reference/5246#heading--about-redfish-with-maas) | |
-| [About the syslog logging path](/t/maas-logging-reference/5240#heading--path) | |
+| [About the syslog logging path](/t/how-to-work-with-log-files/5240#heading--path) | |
 | [Access the HMC and login to the IBM Z](/t/power-management-reference/5246#heading--ibm-z-login) | |
 | [a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-networking) |Set up IBM Z networking for |
 | [a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-partition) |Set up a suitable IBM Z partition for |
@@ -38,7 +38,7 @@ You may also wish to consult the permuted index, below.
 | [and login to the IBM Z](/t/power-management-reference/5246#heading--ibm-z-login) |Access the HMC |
 | [and use IBM Z with MAAS](/t/power-management-reference/5246#heading--configure-use-ibm-z) |How to configure |
 | [(APC) PDU](/t/power-management-reference/5246#heading--apc) |American Power Conversion |
-| [a remote syslog server](/t/maas-logging-reference/5240#heading--using-a-remote-syslog-server) |How to use |
+| [a remote syslog server](/t/how-to-work-with-log-files/5240#heading--using-a-remote-syslog-server) |How to use |
 | [are supported](/t/power-management-reference/5246#heading--bmc-driver-support) |Which BMC drivers |
 | [a suitable IBM Z partition for a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-partition) |Set up |
 | [audit events](/t/audit-event-log-reference/5256#heading--about-maas-audit-events) |About MAAS |
@@ -92,7 +92,7 @@ You may also wish to consult the permuted index, below.
 | [(HMC)](/t/power-management-reference/5246#heading--hmc) |IBM Hardware Management Console |
 | [How to configure a machine's power type](/t/power-management-reference/5246#heading--config-power-type) | |
 | [How to configure and use IBM Z with MAAS](/t/power-management-reference/5246#heading--configure-use-ibm-z) | |
-| [How to use a remote syslog server](/t/maas-logging-reference/5240#heading--using-a-remote-syslog-server) | |
+| [How to use a remote syslog server](/t/how-to-work-with-log-files/5240#heading--using-a-remote-syslog-server) | |
 | [How to use the virsh power type](/t/power-management-reference/5246#heading--example-virsh-kvm-power-type) | |
 | [HPA](/t/commissioning-scripts-reference/5375#heading--commissioning-script-example-configure-hpa) |Commissioning script example: Configure |
 | [HP Moonshot - iLO4 (IPMI)](/t/power-management-reference/5246#heading--moonshot) | |
@@ -125,7 +125,7 @@ You may also wish to consult the permuted index, below.
 | [- libvirt KVM](/t/power-management-reference/5246#heading--virsh) |virsh |
 | [libvirt KVM](/t/power-management-reference/5246#heading--virsh) |virsh - |
 | [Loggers, Inc. PDU](/t/power-management-reference/5246#heading--dli) |Digital |
-| [logging path](/t/maas-logging-reference/5240#heading--path) |About the syslog |
+| [logging path](/t/how-to-work-with-log-files/5240#heading--path) |About the syslog |
 | [login to the IBM Z](/t/power-management-reference/5246#heading--ibm-z-login) |Access the HMC and |
 | [LVM storage layout reference](/t/storage-layouts-reference/5973#heading--lvm-storage-layout-reference) | |
 | [LXD VMs](/t/power-management-reference/5246#heading--lxd) | |
@@ -161,7 +161,7 @@ You may also wish to consult the permuted index, below.
 | [parameters](/t/power-management-reference/5246#heading--set-the-boot-parameters) |Set the partition boot |
 | [partition boot parameters](/t/power-management-reference/5246#heading--set-the-boot-parameters) |Set the |
 | [partition for a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-partition) |Set up a suitable IBM Z |
-| [path](/t/maas-logging-reference/5240#heading--path) |About the syslog logging |
+| [path](/t/how-to-work-with-log-files/5240#heading--path) |About the syslog logging |
 | [PDU](/t/power-management-reference/5246#heading--apc) |American Power Conversion (APC) |
 | [PDU](/t/power-management-reference/5246#heading--dli) |Digital Loggers, Inc. |
 | [PDU](/t/power-management-reference/5246#heading--eaton) |Eaton |
@@ -190,14 +190,14 @@ You may also wish to consult the permuted index, below.
 | [reference](/t/storage-layouts-reference/5973#heading--flat-storage-layout-reference) |Flat layout storage |
 | [reference](/t/storage-layouts-reference/5973#heading--lvm-storage-layout-reference) |LVM storage layout |
 | [reference](/t/storage-layouts-reference/5973#heading--vmfs6-storage-layout-reference) |VMFS6 storage layout |
-| [remote syslog server](/t/maas-logging-reference/5240#heading--using-a-remote-syslog-server) |How to use a |
+| [remote syslog server](/t/how-to-work-with-log-files/5240#heading--using-a-remote-syslog-server) |How to use a |
 | [requirements](/t/power-management-reference/5246#heading--ibm-z-requirements) |Evaluate IBM Z |
 | [script example: Configure HPA](/t/commissioning-scripts-reference/5375#heading--commissioning-script-example-configure-hpa) |Commissioning |
 | [script example: CPU stress test](/t/hardware-test-scripts-reference/5392#heading--hardware-test-script-example-cpu-stress-test) |Hardware test |
 | [script example: Update firmware](/t/commissioning-scripts-reference/5375#heading--commissioning-script-example-update-firmware) |Commissioning |
 | [scripts reference](/t/hardware-test-scripts-reference/5392#heading--included-scripts) |Available test |
 | [SeaMicro 15000](/t/power-management-reference/5246#heading--sm15k) | |
-| [server](/t/maas-logging-reference/5240#heading--using-a-remote-syslog-server) |How to use a remote syslog |
+| [server](/t/how-to-work-with-log-files/5240#heading--using-a-remote-syslog-server) |How to use a remote syslog |
 | [Set the partition boot parameters](/t/power-management-reference/5246#heading--set-the-boot-parameters) | |
 | [Set up a suitable IBM Z partition for a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-partition) | |
 | [Set up IBM Z networking for a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-networking) | |
@@ -214,8 +214,8 @@ You may also wish to consult the permuted index, below.
 | [suites](/t/power-management-reference/5246#heading--about-ipmi-cipher-suites) |About IPMI cipher |
 | [supported](/t/power-management-reference/5246#heading--bmc-driver-support) |Which BMC drivers are |
 | [support in MAAS 3.2](/t/power-management-reference/5246#heading--about-redfish-support) |About better Redfish |
-| [syslog logging path](/t/maas-logging-reference/5240#heading--path) |About the |
-| [syslog server](/t/maas-logging-reference/5240#heading--using-a-remote-syslog-server) |How to use a remote |
+| [syslog logging path](/t/how-to-work-with-log-files/5240#heading--path) |About the |
+| [syslog server](/t/how-to-work-with-log-files/5240#heading--using-a-remote-syslog-server) |How to use a remote |
 | [test script example: CPU stress test](/t/hardware-test-scripts-reference/5392#heading--hardware-test-script-example-cpu-stress-test) |Hardware |
 | [test scripts reference](/t/hardware-test-scripts-reference/5392#heading--included-scripts) |Available |
 | [test](/t/hardware-test-scripts-reference/5392#heading--hardware-test-script-example-cpu-stress-test) |Hardware test script example: CPU stress |
@@ -223,12 +223,12 @@ You may also wish to consult the permuted index, below.
 | [the IBM Z](/t/power-management-reference/5246#heading--ibm-z-login) |Access the HMC and login to |
 | [the MAAS implementation of Redfish](/t/power-management-reference/5246#heading--about-redfish-with-maas) |About |
 | [the partition boot parameters](/t/power-management-reference/5246#heading--set-the-boot-parameters) |Set |
-| [the syslog logging path](/t/maas-logging-reference/5240#heading--path) |About |
+| [the syslog logging path](/t/how-to-work-with-log-files/5240#heading--path) |About |
 | [the virsh power type](/t/power-management-reference/5246#heading--example-virsh-kvm-power-type) |How to use |
 | [to configure a machine's power type](/t/power-management-reference/5246#heading--config-power-type) |How |
 | [to configure and use IBM Z with MAAS](/t/power-management-reference/5246#heading--configure-use-ibm-z) |How |
 | [to the IBM Z](/t/power-management-reference/5246#heading--ibm-z-login) |Access the HMC and login |
-| [to use a remote syslog server](/t/maas-logging-reference/5240#heading--using-a-remote-syslog-server) |How |
+| [to use a remote syslog server](/t/how-to-work-with-log-files/5240#heading--using-a-remote-syslog-server) |How |
 | [to use the virsh power type](/t/power-management-reference/5246#heading--example-virsh-kvm-power-type) |How |
 | [type](/t/power-management-reference/5246#heading--config-power-type) |How to configure a machine's power |
 | [type](/t/power-management-reference/5246#heading--example-virsh-kvm-power-type) |How to use the virsh power |
@@ -238,7 +238,7 @@ You may also wish to consult the permuted index, below.
 | [up IBM Z networking for a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-networking) |Set |
 | [up IBM Z storage for a MAAS machine](/t/power-management-reference/5246#heading--set-up-ibm-z-storage) |Set |
 | [up your IBM Z virtual machine for enlistment](/t/power-management-reference/5246#heading--set-up-ibm-z-enlistment) |Set |
-| [use a remote syslog server](/t/maas-logging-reference/5240#heading--using-a-remote-syslog-server) |How to |
+| [use a remote syslog server](/t/how-to-work-with-log-files/5240#heading--using-a-remote-syslog-server) |How to |
 | [use IBM Z with MAAS](/t/power-management-reference/5246#heading--configure-use-ibm-z) |How to configure and |
 | [use the virsh power type](/t/power-management-reference/5246#heading--example-virsh-kvm-power-type) |How to |
 | [variable reference](/t/commissioning-scripts-reference/5375#heading--environment-variable-reference) |Environment |
