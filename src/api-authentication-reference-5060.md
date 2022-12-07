@@ -10,7 +10,7 @@ Here are two examples on how to perform an authenticated GET request to retrieve
 
 <a href="#heading--python"><h2 id="heading--python">How to perform authenticated requests in Python</h2></a>
 
-Note: the below example uses [fades](https://fades.readthedocs.io/), but you can also install the `requests_oauthlib` ([pypi link](https://pypi.org/project/requests-oauthlib/)) and `oauthlib` ([pypi link](https://pypi.org/project/oauthlib/)) packages with `pip`. Replace `<MAAS_SERVER_IP>` with your server's IP address, and `<API-KEY>` with your API key.
+Note: the below example uses [fades](https://fades.readthedocs.io/)`↗`, but you can also install the `requests_oauthlib` ([pypi link](https://pypi.org/project/requests-oauthlib/)`↗`) and `oauthlib` ([pypi link](https://pypi.org/project/oauthlib/)`↗`) packages with `pip`. Replace `<MAAS_SERVER_IP>` with your server's IP address, and `<API-KEY>` with your API key.
 
 ``` python
 from oauthlib.oauth1 import SIGNATURE_PLAINTEXT # fades
