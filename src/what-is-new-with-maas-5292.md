@@ -22,7 +22,7 @@ Improved capabilities include the following:
 
 - [UI performance improvements for large machine counts](#heading--UI-performance-improvements): We've improved the performance of the UI machine list for large (>10000 machines) MAAS instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.
 
-- [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images): The [procedure](https://maas.io/docs/how-to-build-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
+- [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images): The [procedure](https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
 <!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
 <!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
 
@@ -43,7 +43,7 @@ This first Beta release also includes over one-hundred [bug fixes](#heading--MAA
 
 <a href="#heading--How-to-install-MAAS-3-3-Beta"><h2 id="heading--How-to-install-MAAS-3-3-Beta">How to install MAAS 3.3 Beta</h2></a>
 
-MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
+MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-reference/6233).
 
 [note]
 **NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
@@ -355,7 +355,7 @@ When running the playbook for a host with the `maas_region_controller` role, the
 
 The default installation is a snap. A successful run of the playbook should give the operator an accessible and ready MAAS instance.  The playbook uses an Ansible variable to determine what version of MAAS to deploy. The playbook won’t execute (i.e “skipped” in the context of Ansible) if the Ubuntu version is incompatible with the version and install method. The Region Controller tasks should be able to execute on multiple hosts in a single execution if the target is an Ansible Group rather than a single host.  The newly-installed region controller should be accessible at the specified host ip address, as though the controller had been installed manually.
 
-Read the [Ansible playbooks reference](/t/how-to-spin-up-maas-with-ansible/6367) document to learn more about the feature and the additional playbooks that are available.
+Read the [Ansible playbooks reference](/t/ansible-playbooks-reference/6367) document to learn more about the feature and the additional playbooks that are available.
 
 <!--
 <a href="#heading--vault-integration"><h2 id="heading--vault-integration">Integration of Vault for credential storage</h2></a>
@@ -395,7 +395,7 @@ The following table describes the expanded filter set for the MAAS machine list:
 - Items marked "Grp" can be used to group machines, instead of the default machine status.
 - Items marked "Man" must be manually entered, i.e., they are not in the UI filter dropdown, but can be entered in the "Search" box if properly formatted (as in the examples given).
 
-See [How to search MAAS](/t/how-to-find-machines/5192) for more details on how to use these parameters.
+See [How to search MAAS](/t/how-to-search-maas/5192) for more details on how to use these parameters.
 
 
 | Parameter (bold) w/example           | Shows nodes...                   | Dyn | Grp | Man |
@@ -505,7 +505,7 @@ In MAAS 3.2 and earlier, machine search and filter requires that all machines be
 
 <a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h2 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h2></a>
 
-The [procedure](https://maas.io/docs/how-to-build-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
+The [procedure](https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
 
 <a href="#heading--Ten-words-or-less-5"><h3 id="heading--Ten-words-or-less-5">Ten words or less</h3></a>
 
@@ -570,7 +570,7 @@ MAAS 3.3 documentation consolidates configuration settings in one article, in ad
 
 <a href="#heading--What-is-new-about-this-update"><h3 id="heading--What-is-new-about-this-update">What is new about this update</h3></a>
 
-MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the [Configuration settings reference](/t/how-to-change-maas-settings/6347).
+MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the [Configuration settings reference](/t/configuration-settings-reference/6347).
 
 A minor new feature added with MAAS 3.3 is MAAS site identity, which enables some new configuration parameters:
 
