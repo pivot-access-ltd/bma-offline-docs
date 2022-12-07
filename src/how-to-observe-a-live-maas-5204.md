@@ -12,7 +12,7 @@ In this document, you will learn:
 
 Depicted below we have a reference observability stack composed of Prometheus (metrics ingestion and alerting based on metrics), Loki (log ingestion and alerting based on logs), Grafana (visualisation), Alertmanager (notification routing and dispatching) and Grafana Agent (telemetry collector).
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank">![](upload://eGnGAB4W9qzA8wgGzGaWozgmMTl.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png"></a>
 
 This document shows how to configure this stack to consume telemetry and to raise alerts of failures.
 
@@ -271,7 +271,7 @@ maas $ADMIN maas set-config name=promtail_enabled value=true
 You should be able to add Loki and Prometheus as datasources in Grafana and to create dashboards for visualising MAAS metrics, and to receive alerts through Alertmanager.
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
-MAAS services can provide [Prometheus](https://prometheus.io/) endpoints for collecting performance metrics.
+MAAS services can provide [Prometheus](https://prometheus.io/)`↗` endpoints for collecting performance metrics.
 
 <a href="#heading--how-to-set-up-prometheus-for-maas"><h2 id="heading--how-to-set-up-prometheus-for-maas">How to set up Prometheus for MAAS</h2></a>
 
@@ -325,7 +325,7 @@ After installing the `python3-prometheus-client` library as describe above, run 
 
 <a href="#heading--configuring-prometheus"><h3 id="heading--configuring-prometheus">Configuring Prometheus</h3></a>
 
-Once the `/metrics` endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the [prometheus configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/):
+Once the `/metrics` endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the [prometheus configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)`↗`:
 
 ``` yaml
     - job_name: maas
@@ -353,9 +353,9 @@ In case of a multi-host deploy, adding a single IP for any of the MAAS hosts run
 
 <a href="#heading--deploying-prometheus-and-grafana"><h3 id="heading--deploying-prometheus-and-grafana">Deploying Prometheus and Grafana</h3></a>
 
-[Grafana](https://grafana.com/) and Prometheus can be easily deployed using Juju.
+[Grafana](https://grafana.com/)`↗` and Prometheus can be easily deployed using Juju.
 
-The [MAAS performance repo](https://git.launchpad.net/~maas-committers/maas/+git/maas-performance) repository provides a sample `deploy-stack` script that will deploy and configure the stack on LXD containers.
+The [MAAS performance repo](https://git.launchpad.net/~maas-committers/maas/+git/maas-performance)`↗` repository provides a sample `deploy-stack` script that will deploy and configure the stack on LXD containers.
 
 First, you must install juju via:
 
