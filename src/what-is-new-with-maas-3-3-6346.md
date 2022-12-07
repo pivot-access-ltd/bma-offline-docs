@@ -49,7 +49,7 @@ There is also a set of groups that will automate setting up specific sections of
 
 After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.
 
-Read the [Ansible playbooks reference](/t/how-to-spin-up-maas-with-ansible/6367) document to learn more.
+Read the [Ansible playbooks reference](/t/ansible-playbooks-reference/6367) document to learn more.
 
 <!--
 <a href="#heading--vault-integration"><h3 id="heading--vault-integration">Integration of Vault for credential storage</h3></a>
@@ -78,7 +78,7 @@ The following table describes the proposed filter set for the MAAS machine list:
 - Items which are not dynamic present the entire range of possible values, regardless of whether that value currently exists in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.
 - Items marked as "Grouping" can be used to group machines, instead of the default machine status.
 
-See [How to search MAAS](/t/how-to-find-machines/5192) for details on how to use these parameters.
+See [How to search MAAS](/t/how-to-search-maas/5192) for details on how to use these parameters.
 
 
 | Parameter            | Description                                              | Dynamic | Grouping |
@@ -174,7 +174,7 @@ With the release of MAAS 3.3, when a MAAS UI user wants to find a particular mac
 
 <a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h3 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h3></a>
 
-The [procedure](https://maas.io/docs/how-to-build-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
+The [procedure](https://maas.io/docs/how-to-create-custom-images#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
 
 <a href="#heading--openapi-support"><h3 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h3></a>
 
@@ -182,7 +182,7 @@ MAAS API User want to experience the MAAS API in a more standard way, along the 
 
 <a href="#heading--maas-config-settings-ref"><h3 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h3></a>
 
-MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the [Configuration settings reference](/t/how-to-change-maas-settings/6347).
+MAAS configuration settings are scattered in various (generally relevant) places throughout the documentation, but there has never been one reference page that addresses all settings in one place.  MAAS 3.3 remedies this by adding the [Configuration settings reference](/t/configuration-settings-reference/6347).
 
 <a href="#heading--Improved-MAAS-event-documentation"><h3 id="heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</h3></a>
 
