@@ -20,13 +20,13 @@ We are happy to announce that MAAS 3.1 is now available. This release provides n
 
 Critical and high-priority fixes also extend or repair MAAS features:
 
-- [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
+- [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394)`↗`: Some proxies require authentication; MAAS now respects peer proxy username and password
 
-- [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
+- [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410)`↗`: The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
 
-- [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
+- [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485)`↗`: MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
  
-- [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
+- [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500)`↗`: UI cloning has been repaired to prevent "unsuccessful cloning" of storage
 
 <a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
@@ -179,7 +179,7 @@ Users can upload, deploy and reuse a bootable ubuntu image
 
 #### About this feature
 
-MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to create custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, deployed as described below. Canonical still suggests customising Ubuntu using cloud-init user_data or Curtin preseed data, if possible.
+MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas)`↗` to create custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, deployed as described below. Canonical still suggests customising Ubuntu using cloud-init user_data or Curtin preseed data, if possible.
 
 #### About static Ubuntu images
 
@@ -187,9 +187,9 @@ MAAS allows you to build an Ubuntu image to deploy with MAAS, using any chosen i
 
 #### About uploading hand-built Ubuntu images
 
-You can upload and deploy hand-built Ubuntu images, containing kernel, bootloader, and fixed configuration.  The image can be built by tool, e.g., [packer](https://github.com/canonical/packer-maas), or by scripts. You can upload these images to the boot-resources endpoint, where they will be available for deployment.
+You can upload and deploy hand-built Ubuntu images, containing kernel, bootloader, and fixed configuration.  The image can be built by tool, e.g., [packer](https://github.com/canonical/packer-maas)`↗`, or by scripts. You can upload these images to the boot-resources endpoint, where they will be available for deployment.
 
-The minimum image must contain a kernel, bootloader, and `/curtin/curtin-hooks` script that configures the network. Samples can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format so MAAS will accept the upload.  When built, you will upload this img file to the boot-resources endpoint, specifying the image architecture.
+The minimum image must contain a kernel, bootloader, and `/curtin/curtin-hooks` script that configures the network. Samples can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts)`↗`. The image must be in raw img file format so MAAS will accept the upload.  When built, you will upload this img file to the boot-resources endpoint, specifying the image architecture.
 
 #### About how MAAS handles these images
 
@@ -420,8 +420,8 @@ There is nothing required of our users to experience this improved sync performa
 
 MAAS 3.1 bug fixes can be found in the following milestones:
 
-- [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
-- [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
-- [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
-- [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
-- [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
+- [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)`↗`
+- [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)`↗`
+- [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)`↗`
+- [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)`↗`
+- [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)`↗`
