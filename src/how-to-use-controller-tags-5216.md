@@ -2,7 +2,7 @@
 This article will show you:
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 - [How to discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
 - [How to assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
@@ -287,7 +287,7 @@ hostname                     sysid   tags
 bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 ```
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to create and assign controller tags ](#heading--create-and-assign-controller-tags-)
 - [How to remove and delete controller tags](#heading--remove-and-delete-controller-tags)
 - [How to view controller tags](#heading--view-controller-tags)
