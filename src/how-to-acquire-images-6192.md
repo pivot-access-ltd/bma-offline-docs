@@ -17,7 +17,7 @@ This article will help you learn:
 
 MAAS images are more than just the operating system kernel.  In fact, a usable MAAS image consists of at least four things:
 
-- a [bootloader](https://images.maas.io/ephemeral-v3/stable/bootloaders/), which boots the computer to the point that an operating system can be loaded.  MAAS currently uses one of three types of bootloaders: open firmware, PXE, and UEFI.
+- a [bootloader](https://images.maas.io/ephemeral-v3/stable/bootloaders/)`↗`, which boots the computer to the point that an operating system can be loaded.  MAAS currently uses one of three types of bootloaders: open firmware, PXE, and UEFI.
 - a bootable kernel.
 - an initial ramdisk.
 - a squashfs filesystem.
@@ -75,11 +75,11 @@ This is a good place to explain how images work, including the nuances of `cloud
 
 Before a machine can be deployed, it must be added to MAAS, commissioned, and allocated.  Machines can be added to MAAS either by [enlistment](/t/how-to-deploy-physical-machines/6193#heading--about-enlistment) or by direct user action.  This machine must then be [commissioned](/t/how-to-deploy-physical-machines/6193#heading--about-commissioning-machines), which establishes the configuration and resources of the machine.  Finally, that machine must be allocated, that is, assigned to the control of one and only one user, so that conflicting commands to the same machine are not possible.  This aggregate step is represented by the green lines in the above diagram.
 
-When MAAS receives the "deploy" command from the user (blue lines), it must first retrieve (from the MAAS DB) the machine info that was gathered about the machine during commissioning (red lines).  MAAS then boots the machine and waits for the machine's firmware to request a bootable "ephemeral" OS.  This ephemeral OS must be one of the images supplied by [the MAAS simplestreams](https://images.maas.io) and cannot be a custom OS image.
+When MAAS receives the "deploy" command from the user (blue lines), it must first retrieve (from the MAAS DB) the machine info that was gathered about the machine during commissioning (red lines).  MAAS then boots the machine and waits for the machine's firmware to request a bootable "ephemeral" OS.  This ephemeral OS must be one of the images supplied by [the MAAS simplestreams](https://images.maas.io)`↗` and cannot be a custom OS image.
 
 At the point that MAAS must send the ephemeral OS to the machine, MAAS needs to have this OS downloaded to the rack controller, based on earlier selections made by the user (yellow lines).  Assuming that the a suitable simplestreams image is available, MAAS can send it to the machine.  This ephemeral OS is not deployed, but it is used to download and deploy the image you've chosen for the machine.
 
-When the ephemeral OS boots, it immediately spawns [curtin](https://curtin.readthedocs.io/en/latest/topics/overview.html).  Curtin's deployment of the target image can be customised with pre-seeds, shown by the brown lines in the diagram.  These pre-seeds control things which are difficult to change once the target OS has been installed (such as [partitioning](http://caribou.kamikamamak.com/2015/06/26/custom-partitioning-with-maas-and-curtin-2/)].  Things which can be customized after the target image is running are generally configured with [cloud-init](https://cloudinit.readthedocs.io/en/latest/), represented by the pink lines.
+When the ephemeral OS boots, it immediately spawns [curtin](https://curtin.readthedocs.io/en/latest/topics/overview.html)`↗`.  Curtin's deployment of the target image can be customised with pre-seeds, shown by the brown lines in the diagram.  These pre-seeds control things which are difficult to change once the target OS has been installed (such as [partitioning](http://caribou.kamikamamak.com/2015/06/26/custom-partitioning-with-maas-and-curtin-2/)].  Things which can be customized after the target image is running are generally configured with [cloud-init](https://cloudinit.readthedocs.io/en/latest/)`↗`, represented by the pink lines.
 
 To continue with the deployment flow, curtin retrieves the target image, either from the rack controller's cache (if the image is standard) or from the MAAS DB (if the image is custom).  Curtin then installs the target image and reboots the machine.  When the target image boots, it retrieves cloud-init configuration either from the MAAS metadata server (proxied by the region controller), or from cloud-init configuration data packed with the target image -- whichever is "closer".
 
@@ -127,7 +127,7 @@ Bonds are mapped to NIC teaming in only three ways:
 
 MAAS comes configured with a boot source that should suffice for most users:
 
-[`https://images.maas.io/ephemeral-v3/stable/`](https://images.maas.io/ephemeral-v3/stable/)
+[`https://images.maas.io/ephemeral-v3/stable/`](https://images.maas.io/ephemeral-v3/stable/)`↗`
 
 The above URL points to the 'stable' stream (for the v3 format). See [Local image mirror](/t/how-to-mirror-images-locally/5927) for some explanation regarding the availability of other streams.
 
@@ -143,9 +143,9 @@ This article explains a little more about how MAAS images differ from a standard
 
 <a href="#heading--about-transforming-an-iso"><h3 id="heading--about-transforming-an-iso">About transforming an ISO</h3></a>
 
-When it comes to creating images for MAAS machines, you can hand-build images, as long as they meet the `curtin` and `cloud-init` requirements; or you can use a third-party tool called  [packer](https://www.packer.io) to prepare special versions of these images that will work with MAAS.  There are also static Ubuntu images targeted at older MAAS versions (<3.1).  Beyond providing a bit of technical detail here, we won't shepherd you through hand-building images: you're pretty much on your own there.  We will try to help you understand how to create and customise MAAS-friendly images, mostly focusing on packer templates.
+When it comes to creating images for MAAS machines, you can hand-build images, as long as they meet the `curtin` and `cloud-init` requirements; or you can use a third-party tool called  [packer](https://www.packer.io)`↗` to prepare special versions of these images that will work with MAAS.  There are also static Ubuntu images targeted at older MAAS versions (<3.1).  Beyond providing a bit of technical detail here, we won't shepherd you through hand-building images: you're pretty much on your own there.  We will try to help you understand how to create and customise MAAS-friendly images, mostly focusing on packer templates.
 
-We maintain a [git repo](https://github.com/canonical/packer-maas) of packer templates for a few popular operating systems.  You can check out this graphic of a real, running lab MAAS instance to get an idea:
+We maintain a [git repo](https://github.com/canonical/packer-maas)`↗` of packer templates for a few popular operating systems.  You can check out this graphic of a real, running lab MAAS instance to get an idea:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a>
 
@@ -176,9 +176,9 @@ If you're using newer versions of MAAS (>3.0), we recommend choosing packer, sin
 
 <a href="#heading--about-uploading-hand-built-ubuntu-images"><h4 id="heading--about-uploading-hand-built-ubuntu-images">About uploading hand-built Ubuntu images</h4></a>
 
-You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as [packer](https://www.packer.io), or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.
+You can upload hand-built Ubuntu images, containing a kernel, bootloader, and a fixed configuration, for deployment to multiple machines.  The image can be built via a tool, such as [packer](https://www.packer.io)`↗`, or build with scripts. You can upload these images to the boot-resources endpoint, where it will then be available for deployment to machines.
 
-At a minimum, this image must contain a kernel, a bootloader, and a `/curtin/curtin-hooks` script that configures the network. A sample can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.
+At a minimum, this image must contain a kernel, a bootloader, and a `/curtin/curtin-hooks` script that configures the network. A sample can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts)`↗`. The image must be in raw img file format, since that is the format MAAS accepts for upload.  This is the most portable format, and the format most builders support. Upon completing the image build, you will upload this img file to the boot-resources endpoint, specifying the architecture for the image.
 
 <a href="#heading--about-how-maas-handles-these-images"><h4 id="heading--about-how-maas-handles-these-images">How MAAS handles static Ubuntu images</h4></a>
 
@@ -213,13 +213,13 @@ As a user, you want to keep track of how many static images are being used, and 
 - [About the image installation process](#heading--about-the-image-installation-process)
 - [About packer-created images](#heading--about-packer-created-images)
 
-The [packer documentation](https://www.packer.io/docs) has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarise packer with the following linearised flowchart:
+The [packer documentation](https://www.packer.io/docs)`↗` has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarise packer with the following linearised flowchart:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg"></a>
 
 We can walk through packer operation like this:
 
- - A template is created or obtained which drives the packer build.  The [packer-maas](https://github.com/canonical/packer-maas) repository uses HCL2 templates.
+ - A template is created or obtained which drives the packer build.  The [packer-maas](https://github.com/canonical/packer-maas)`↗` repository uses HCL2 templates.
 
  - The template specifies packer commands and data sources.
 
@@ -248,12 +248,12 @@ These dependencies -- and the functionality they provide -- will be explained in
 
 <a href="#heading--about-packer-templates"><h3 id="heading--about-packer-templates">About packer templates</h3></a>
 
-A [packer template](https://www.packer.io/docs/templates) could just as easily be called a "packer script".  It contains declarations and commands that sequence and configure plugins.  Templates also have built-in functions to help you customise your artefacts. Our packer-maas templates are implemented in HCL2.
+A [packer template](https://www.packer.io/docs/templates)`↗` could just as easily be called a "packer script".  It contains declarations and commands that sequence and configure plugins.  Templates also have built-in functions to help you customise your artefacts. Our packer-maas templates are implemented in HCL2.
 
-Templates are run by the packer `build` command.  Within packer-maas, packer commands (like `build`) are collected into makefiles that prevent you from having to know a lot about how packer works.  Even so, it's beneficial to take a quick tour of how a typical packer template works.  Let's use the [ubuntu-cloudimg](https://github.com/canonical/packer-maas/blob/master/ubuntu/ubuntu-cloudimg.pkr.hcl) template as a simple example.
+Templates are run by the packer `build` command.  Within packer-maas, packer commands (like `build`) are collected into makefiles that prevent you from having to know a lot about how packer works.  Even so, it's beneficial to take a quick tour of how a typical packer template works.  Let's use the [ubuntu-cloudimg](https://github.com/canonical/packer-maas/blob/master/ubuntu/ubuntu-cloudimg.pkr.hcl)`↗` template as a simple example.
 
 [note]
-Building workable templates can be extremely difficult. This section is intended to familiarise you with templates and their components so that you can possibly pinpoint bugs in community-provided templates.  If you want to build your own template, you should rely on the [packer documentation](https://www.packer.io/docs) as your guide.
+Building workable templates can be extremely difficult. This section is intended to familiarise you with templates and their components so that you can possibly pinpoint bugs in community-provided templates.  If you want to build your own template, you should rely on the [packer documentation](https://www.packer.io/docs)`↗` as your guide.
 [/note]
 
 This template builds a customised Ubuntu image with packer:
