@@ -98,9 +98,9 @@ Links to internal files or external URLs use the following format:
 
 The `visible text` is what will appear on the web page. The `URL` is used to refer to the destination, which is a  fully-qualified URL.  For example:
 
-    Refer to [Google](https://www.google.com).
+    Refer to [Google](https://www.google.com)`↗`.
 
-which would show up as "Refer to [Google](https://www.google.com)."
+which would show up as "Refer to [Google](https://www.google.com)`↗`."
 
 <h2 id="heading--images">Images</h2>
 
