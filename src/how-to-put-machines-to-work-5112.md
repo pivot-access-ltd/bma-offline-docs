@@ -428,7 +428,7 @@ You can download the source for all commissioning and test scripts via the API w
 maas $PROFILE node-script download $SCRIPT_NAME
 ```
 
-The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
+The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts)`↗`.
 
 [tabs]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
