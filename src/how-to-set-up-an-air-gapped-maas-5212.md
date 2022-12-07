@@ -21,7 +21,7 @@ There is at least one way to make each of these things available in an air-gappe
 
 <a href="#heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment"><h2 id="heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment">How to use the snap proxy to refresh snaps in an air-gapped environment</h2></a>
 
-Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/snap-store-proxy/en/airgap) mode are part of a password-protected internal Beta.  
+Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/snap-store-proxy/en/airgap)`↗` mode are part of a password-protected internal Beta.  
 
 Client devices connect to the air-gapped proxy and never contact the general Snap Store nor the Internet.  Proxy operators will need to side-load all needed snaps and updates into the proxy. 
 
@@ -31,7 +31,7 @@ There are three main steps to setting up this proxy:
 2. Set up HTTPS access to ensure adequate security.
 3. Fetch the necessary snaps as needed by your MAAS environment (on the Internet-connected machine).
 
-This proxy requires a properly configured PostgreSQL database -- see the [setup instructions](https://docs.ubuntu.com/snap-store-proxy/en/airgap) for the Snap Store Proxy for more details.
+This proxy requires a properly configured PostgreSQL database -- see the [setup instructions](https://docs.ubuntu.com/snap-store-proxy/en/airgap)`↗` for the Snap Store Proxy for more details.
 
 <a href="#heading--apt-mirror"><h2 id="heading--apt-mirror">How to make package updates available in an air-gapped environment</h2></a>
 
