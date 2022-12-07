@@ -44,7 +44,7 @@ As a MAAS administrator, you have the critical responsibility of hardening your 
 </tbody>
 </table>
 
-Consider setting your [firewall ](https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-logs) on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed `ufw`, you could execute:
+Consider setting your [firewall ](https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-logs)`↗` on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed `ufw`, you could execute:
 
     sudo ufw enable
     sudo ufw default deny incoming
@@ -62,15 +62,15 @@ Recognise that your particular configuration and version may vary, so consult th
 
 <a href="#heading--tls"><h2 id="heading--tls">How to configure a TLS-terminating load balancer</h2></a>
 
-One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using [HAProxy ](https://www.haproxy.com).  This section explains how to set one up.
+One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using [HAProxy ](https://www.haproxy.com)`↗`.  This section explains how to set one up.
 
 <details><summary>What is a TLS-terminated load balancer?</summary>
 
-In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/how-to-enable-high-availability/5120) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
+In the context of MAAS, a [load balancer ](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/how-to-enable-high-availability/5120) that can be enabled for MAAS: one for BMC access (for powering on machines)`↗`, and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
 
 A TLS-terminated load balancer is a load balancer that carries encryption and decryption as far down the pipe as possible, in this case, all the way to the load balancer itself. Note that, even though the "SSL" keyword may be used to enable operation, the term SSL is considered obsolete.  Hence we choose to use the term "TLS" instead, referring to **Transport Layer Security**.
 
-TLS is meant to provide privacy and data integrity between two or more applications.  Privacy is provided by [symmetric cryptography ](https://en.wikipedia.org/wiki/Symmetric-key_algorithm), based on a shared secret and uniquely-generated keys negotiated at the start of a session (during the [TLS handshake ](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_handshake)).  Identity of each app can be authenticated, though this feature can be optional.  Authenticity of messages is ensured by using [message authentication codes ](https://en.wikipedia.org/wiki/Message_authentication_code) to detect tampering.
+TLS is meant to provide privacy and data integrity between two or more applications.  Privacy is provided by [symmetric cryptography ](https://en.wikipedia.org/wiki/Symmetric-key_algorithm), based on a shared secret and uniquely-generated keys negotiated at the start of a session (during the [TLS handshake ](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_handshake)).  Identity of each app can be authenticated, though this feature can be optional.  Authenticity of messages is ensured by using [message authentication codes ](https://en.wikipedia.org/wiki/Message_authentication_code)`↗` to detect tampering.
 
 </details>
 
@@ -132,7 +132,7 @@ Finally, restart the (already-running) load balancer so that these changes can t
 
     sudo systemctl restart haproxy
 
-Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04) if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  
+Note that you can also [enable HAProxy logging ](https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04)`↗` if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  
 
 If desired, you can [bypass the use of SSL](/t/how-to-enable-high-availability/5120#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/how-to-enable-maas-native-tls/5116) without implementing HAProxy.
 
@@ -149,7 +149,7 @@ This section will offer some advice, as well as links to more detailed informati
 
 <a href="#heading--firewall-logs-subsection"><h3 id="heading--firewall-logs-subsection">Firewall logs</h3></a>
 
-The Ubuntu firewall, [UFW ](https://wiki.ubuntu.com/UncomplicatedFirewall), is a front-end for [iptables ](https://help.ubuntu.com/community/IptablesHowTo), so the UFW log output is very similar to what you'll encounter in iptables itself.  If you want to secure your MAAS installation, it's very important to periodically review your UFW logs, found in `/var/log/ufw*`.
+The Ubuntu firewall, [UFW ](https://wiki.ubuntu.com/UncomplicatedFirewall), is a front-end for [iptables ](https://help.ubuntu.com/community/IptablesHowTo)`↗`, so the UFW log output is very similar to what you'll encounter in iptables itself.  If you want to secure your MAAS installation, it's very important to periodically review your UFW logs, found in `/var/log/ufw*`.
 
 Learning to recognise issues in the UFW/iptables log is an art form, so we're not going to give an extended tutorial here.  Still, there are some key indicators that might help you spot security issues.
 
@@ -279,11 +279,11 @@ You can also use the standard system logs to detect malicious activity, though t
 
 From here, you can either use `whois` to locate the attacker and work with the ISP to block them, or simply use your UFW firewall to block them directly.
 
-As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the [Ubuntu journalctl manpage](https://manpages.ubuntu.com/manpages/journalctl.1.html) or [another, similar source ](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs).  
+As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the [Ubuntu journalctl manpage](https://manpages.ubuntu.com/manpages/journalctl.1.html) or [another, similar source ](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs)`↗`.  
 
 <a href="#heading--postgres-security"><h2 id="heading--postgres-security">How to implement PostgreSQL security</h2></a>
 
-PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider [full disk encryption ](https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019).  Also recommended is [TLS encryption between MAAS and PostgreSQL ]( https://www.postgresql.org/docs/current/ssl-tcp.html).
+PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider [full disk encryption ](https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019).  Also recommended is [TLS encryption between MAAS and PostgreSQL ]( https://www.postgresql.org/docs/current/ssl-tcp.html)`↗`.
 
 <a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">About other things you can do to harden MAAS</h2></a>
 
@@ -312,7 +312,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look)`↗`.
 [/tab]
 [tab version="v3.2 Packages"]
 ``` bash
@@ -341,7 +341,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look)`↗`.
 [/tab]
 [tab version="v3.1 Packages"]
 ``` bash
@@ -370,7 +370,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look)`↗`.
 [/tab]
 [tab version="v3.0 Packages"]
 ``` bash
@@ -399,7 +399,7 @@ After:
 ```
 <a href="#heading--snaps-and-security"><h3 id="heading--snaps-and-security">About snap security</h3></a>
 
-Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look).
+Since snaps are fully confined or "sandboxed," they bring a lot of inherent security to the contained application.  More detailed information can be found in [this snap blog ](https://snapcraft.io/blog/where-eagles-snap-a-closer-look)`↗`.
 [/tab]
 [tab version="v2.9 Packages"]
 ``` bash
