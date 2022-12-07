@@ -180,7 +180,7 @@ The rack controller should be accessible at the specified host IP address, just 
 
 As an operator, you want to be able to revert the MAAS setup installed by this playbook, such that the machine is clean of all MAAS packages or snaps.  In order to teardown a MAAS deployment, you can run a separate entry-point within the playbook to teardown the installed MAAS packages or snaps.  This entry-point is provided in the playbook to remove the installation that the default entry-point provides: Running this playbook with the default configuration with perfectly undo the default installation.
 
-You must [back up](/t/how-to-back-up-maas/5096) the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.
+You must [back up](/t/how-to-keep-maas-backed-up/5096) the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.
 
 <a href="#heading--MAAS-high-availability"><h3 id="heading--MAAS-high-availability">MAAS high availability</h3></a>
 
