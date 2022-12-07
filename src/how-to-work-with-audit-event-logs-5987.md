@@ -12,7 +12,7 @@ This article gives concise procedures for working with audit events.  Here you w
 - [How to move the audit event window](#heading--How-to-move-the-audit-event-window)
 - [How to audit a machine's life-cycle with audit events](#heading--How-to-audit-a-machines-life-cycle-with-audit-events)
 
-For an explanation of MAAS audit events, see [Understanding MAAS audit events](/t/understanding-maas-audit-events/6372).  For a general explanation of MAAS events and how to examine them, see [Understanding MAAS events](/t/understanding-maas-events/6373).  Note that for this article, we will assume you have installed [the `jq` tool](https://stedolan.github.io/jq/), which makes the JSON output of `events query` more human-readable.
+For an explanation of MAAS audit events, see [Understanding MAAS audit events](/t/understanding-maas-audit-events/6372).  For a general explanation of MAAS events and how to examine them, see [Understanding MAAS events](/t/understanding-maas-events/6373).  Note that for this article, we will assume you have installed [the `jq` tool](https://stedolan.github.io/jq/)`↗`, which makes the JSON output of `events query` more human-readable.
 
 <a href="#heading--How-to-report-audit-events"><h2 id="heading--How-to-report-audit-events">How to report audit events</h2></a>
 
