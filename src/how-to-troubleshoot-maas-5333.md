@@ -43,7 +43,7 @@ sudo dpkg-reconfigure maas-region-controller
 
 Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by **Petitboot**, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.
 
-When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in [LP#1852678](https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678), specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.
+When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in [LP#1852678](https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678)`↗`, specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.
 
 So, when using IBM Power servers with multiple NICs that can network boot, it's strongly recommended to configure just a single <specific> NIC as the network boot device via **Petitboot**.
 
@@ -209,7 +209,7 @@ make: *** [Makefile:21: custom-ubuntu-lvm.dd.gz] Error 1
 rm OVMF_VARS.fd
 ```
 
-In both cases, the problem is the same: `packer` has not been installed. You can fix it by [following these instructions](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer).
+In both cases, the problem is the same: `packer` has not been installed. You can fix it by [following these instructions](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer)`↗`.
 
 <a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target ...OVMF_VARS.fd</h3></a>
 
@@ -221,7 +221,7 @@ sudo rm -f -rf output-qemu custom-ubuntu*.gz
 make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF_VARS.fd'.  Stop.
 ```
 
-then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer).
+then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer)`↗`.
 
 <a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a>
 
@@ -235,7 +235,7 @@ If you encounter an error such as this one:
 Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: "qemu-img": executable file not found in $PATH
 ```
 
-then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer).
+then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer)`↗`.
 
 <a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a>
 
@@ -282,7 +282,7 @@ By default, the web UI is located at `http://<hostname>:5240/MAAS/`. If you can'
 
 <a href="#heading--backdoor-image-login"><h3 id="heading--backdoor-image-login">Backdoor image login</h3></a>
 
-Ephemeral images are used by MAAS to boot nodes during commissioning, as well as during deployment. By design, these images are not built to be edited or tampered with, instead they're used to probe the hardware and launch [cloud-init](https://launchpad.net/cloud-init).
+Ephemeral images are used by MAAS to boot nodes during commissioning, as well as during deployment. By design, these images are not built to be edited or tampered with, instead they're used to probe the hardware and launch [cloud-init](https://launchpad.net/cloud-init)`↗`.
 
 However, if you find yourself with no other way to access a node, especially if a node fails during commissioning, Linux-based ephemeral images can be modified to enable a *backdoor* that adds or resets a user's password. You can then login to check the **cloud-init** logs, for example, and troubleshoot the problem.
 
@@ -294,7 +294,7 @@ First, download the cloud image that corresponds to the architecture of your nod
 
 <a href="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png"></a>
 
-Images can be downloaded from [https://cloud-images.ubuntu.com/](https://cloud-images.ubuntu.com/).
+Images can be downloaded from [https://cloud-images.ubuntu.com/](https://cloud-images.ubuntu.com/)`↗`.
 
 For example:
 
