@@ -31,7 +31,7 @@ Here's a summary of the bugs that were fixed in 2.8.3:
     $ sudo -u postgres psql $MAAS_DB -c "UPDATE maasserver_staticipaddress SET alloc_type=5 WHERE ip = '$IP_ADDRESS' AND alloc_type=6;"
     $ maas $PROFILE ipaddresses release ip='$IP_ADDRESS' force=true
 ```
-- [MAAS is unable to handle duplicate UUIDs](https://bugs.launchpad.net/maas/+bug/1893690): The firmware for Dell servers (and possibly others)`↗` has a bug whereby they use the service number for the UUID, which is not guaranteed to be unique.  This caused MAAS commissioning to fail. The code was modified in 2.8.3 to detect and remove duplicate UUIDs, allowing MAAS to fall back to the MAC address.  There is also a database workaround for those who cannot upgrade to 2.8.3 right away:
+- [MAAS is unable to handle duplicate UUIDs](https://bugs.launchpad.net/maas/+bug/1893690)`↗`: The firmware for Dell servers (and possibly others)`↗` has a bug whereby they use the service number for the UUID, which is not guaranteed to be unique.  This caused MAAS commissioning to fail. The code was modified in 2.8.3 to detect and remove duplicate UUIDs, allowing MAAS to fall back to the MAC address.  There is also a database workaround for those who cannot upgrade to 2.8.3 right away:
 ```
      $ sudo -u postgres psql $MAAS_DB -c "UPDATE maasserver_node SET hardware_uuid=NULL where hardware_uuid='$DUPLICATE_UUID'";
 ```
@@ -79,9 +79,9 @@ Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now availa
 
 - [What are the new features & fixes for 2.8?](#heading--2-8-release-notes)
 - [What known issues should I be aware of?](#heading--2-8-known-issues)
-- [How do I install MAAS 2.8 as a snap?](https://maas.io/docs/snap/2.8/ui/installation)`↗``↗`
-- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](https://maas.io/docs/snap/2.8/ui/installation#heading--upgrade-maas-snap)`↗``↗`
-- [How do I install MAAS 2.8 from packages?](https://maas.io/docs/deb/2.8/ui/installation)`↗``↗`
+- [How do I install MAAS 2.8 as a snap?](https://maas.io/docs/snap/2.8/ui/installation)`↗`
+- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](https://maas.io/docs/snap/2.8/ui/installation#heading--upgrade-maas-snap)`↗`
+- [How do I install MAAS 2.8 from packages?](https://maas.io/docs/deb/2.8/ui/installation)`↗`
 - [What bugs were fixed in this release?](#heading--bug-fixes)
 
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
