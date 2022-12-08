@@ -2,7 +2,7 @@
 MAAS provides the capability to customise machines.  This article will help you learn:
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
 - [How to customise machine storage](#heading--how-to-customise-machine-storage)
 - [How to pre-seed with curtin](#heading--how-to-pre-seed-with-curtin)
 - [How to pre-seed with cloud-init](#heading--cloud-init)
@@ -30,12 +30,12 @@ MAAS provides the capability to customise machines.  This article will help you 
 This section will show you:
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
 - [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
 - [How to set the default erasure configuration](#heading--how-to-set-default-erasure-configuration)
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
 - [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
 - [How to erase disks](#heading--how-to-erase-disks)
@@ -70,12 +70,12 @@ Note that layouts can be set globally and on a per-machine basis.  For additiona
 <a href="#heading--how-to-set-global-storage-layouts"><h3 id="heading--how-to-set-global-storage-layouts">How to set global storage layouts</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
 
 ```
@@ -100,10 +100,10 @@ The new default will only apply to newly-commissioned machines.
 <a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
 
 ```
@@ -127,7 +127,7 @@ Only an administrator can modify storage at the block device level (providing th
 [/note]
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
@@ -143,7 +143,7 @@ With the above defaults, the machine's view will look like this when the Release
 Where 'secure erase' and 'quick erase' can then be configured by the user.
 
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--how-to-erase-disks"><h3 id="heading--how-to-erase-disks">How to erase disks</h3></a>
 
 When using the MAAS CLI, you can erase a disk when releasing an individual machine.  Note that this option is not available when releasing multiple machines, so you'll want to make sure you're using:
@@ -1075,7 +1075,7 @@ late_commands:
 For a flowchart, showing where cloud-init fits into the deployment picture, see [How images get deployed](/t/how-to-acquire-images/6192#heading--how-images-deploy).
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a>
@@ -1098,7 +1098,7 @@ ssh-import-id foobar_user
 No script validation of any kind is provided with this capability.  You will need to test and debug your own cloud-init scripts.
 [/note]
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Using cloud-init to customise a machine after deployment is relatively easy. After you're logged in, use the following command to deploy a machine with a custom script you've written:
 
     maas $PROFILE machine deploy $SYSTEM_ID user_data=<base-64-encoded-script>
@@ -1157,7 +1157,7 @@ This section will show you:
 <a href="#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning"><h3 id="heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning">How to set a default minimum kernel for enlistment and commissioning</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the 'General' tab of the 'Settings' page and select a kernel in the 'Default Minimum Kernel Version' field of the *Commissioning* section. Don't forget to click 'Save'.
 
 <a href="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png"></a>
@@ -1176,7 +1176,7 @@ To set a specific kernel during deployment, select a machine from the 'Machines'
 
 MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 To set a default minimum kernel for all new and commissioned machines:
 
@@ -1237,14 +1237,14 @@ The command option `hwe_kernel` appears to apply to only HWE kernels but this is
 <a href="#heading--how-to-set-global-kernel-boot-options"><h2 id="heading--how-to-set-global-kernel-boot-options">How to set global kernel boot options</h2></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To set kernel boot options globally, as an admin, open the 'Settings' page and on the 'General' tab scroll down to the 'Global Kernel Parameters' section:
 
 <a href="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png"></a>
 
 Type in the desired (space separated) options and click 'Save'. The contents of the field will be used as-is. Do not use extra characters.
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can set kernel boot options and apply them to all machines with the CLI command:
 
 ``` bash
@@ -1310,7 +1310,7 @@ nomodeset_tag        nomodeset_kernel_option      nomodeset       vga
 This section will explain:
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to add a resource pool](#heading--add-a-resource-pool)
 - [How to delete a resource pool](#heading--deleting-a-resource-pool)
 - [How to add a node to a resource pool](#heading--add-a-node-to-a-resource-pool)
@@ -1357,7 +1357,7 @@ You can add a VM host to a resource pool when you create a new VM host, or you c
 
 To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to create a resource pool](#heading--creating-a-resource-pool)
 - [How to list available resource pools](#heading--list-available-resource-pools)
 - [How to list a single resource pool](#heading--list-a-single-resource-pool)
@@ -1415,7 +1415,7 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 [/tabs]
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
 <a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a>
 
 To enable Hardware sync on a machine, select a machine from the machine list and choose deploy from the "Take action" dropdown menu:
@@ -1445,7 +1445,7 @@ The hardware sync interval is configured globally in MAAS settings:
 This value is then applied to the machine at time of deployment. You cannot modify a deployed machine’s sync interval.  You can view a machine’s specific sync interval via the `sync_interval` field on a given machine.
 
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
 <a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a>
 
 To enable Hardware sync on a machine, deploy the machine from the command line, adding `enable_hw_sync=true`:
