@@ -16,7 +16,7 @@ Examples of such secrets are
 
 For MAAS to be able to integrate with Vault, a few steps are required.  Specifically, you must get a role_id and wrapped_token via Vault CLI (follow the instructions from [Hashicorp Vault](https://learn.hashicorp.com/tutorials/vault/approle-best-practices?in=vault/auth-methods#approle-response-wrapping)).
 
-As a summary only, these can be performed by a Vault admin using the `vault` CLI.
+As an example only, MAAS can be configured by a Vault admin using the `vault` CLI.
 
 1) The `approle` engine must be enabled. This can be checked with:
 
@@ -110,24 +110,19 @@ If you've configured all region controllers with Vault, but haven't yet migrated
 
 ![|670x338](https://lh3.googleusercontent.com/v2_glOaBx8hTy7TmhD3Y5qe34iFePJN5Z46ZeY6UvGXF7eD4m7chplXtbKIKZMchs2D5WAJSit0tlH27onPV1oUnLZVKwyVOncje3QaZ0n4d-1sjTV5sfuQFopuql_COE0FfvDSFTcKeElnThC3_gKIg6YlNQ-JKvLH6t9sgp6UwrTPAnHzoGpQ6eSmeBQ)
 
-<a href="#heading--When-the-Vault-is-sealed"><h2 id="heading--When-the-Vault-is-sealed">When the Vault is unreachable</h2></a>
+<a href="#heading--When-the-Vault-is-sealed"><h2 id="heading--When-the-Vault-is-sealed">When the Vault is sealed</h2></a>
 
-There are two conditions that may cause secrets to become unavailable: when the Vault is sealed, and when the Vault is unreachable through misconfiguration or other failure.
+There are two conditions that may cause secrets to become unavailable: when the Vault is sealed (using `vault operator seal` -- see the [Vault documentation](https://www.hashicorp.com/products/vault) and when the Vault is unreachable through misconfiguration or other failure.
 
-When the Vault is sealed, all queries involving secrets will fail with a user error mentioning that the Vault has been sealed.  Unsealing the Vault requires operator intervention.  MAAS will indicate when this is needed.
+When the Vault is sealed, all queries involving secrets will fail with a user error mentioning that the Vault has been sealed.  Unsealing the Vault requires operator intervention, via the `vault operator unseal` command (again, see the [Vault documentation](https://www.hashicorp.com/products/vault).  MAAS will indicate when this is needed.
 
 Vault may become unreachable due to a network failure, due to incorrect configuration of a region controller, or other unintentional situations.  When the Vault is unreachable, MAAS will inform the users that interactions with Vault will fail.
 
 MAAS will make every attempt to present a meaningful error if Vault is not functional.  This includes related authentication errors when attempting to login to MAAS.
-
-<a href="#heading--How-to-unseal-Vault"><h2 id="heading--How-to-unseal-Vault">How to unseal Vault</h2></a>
-
-In certain situations, outside of MAAS control, the Vault might be sealed. In this case, we will display this notification because MAAS cannot access Vault. The user will be logged out of the UI because MAAS cannot access Vault. The user needs to unseal the Vault to restore access to MAAS:
-
-![|974x255](https://lh4.googleusercontent.com/Sf49gilbeLRTYIch19bZvsYMgWXDbqMFJjKIVRocblIddQ0k5PsprW_M5MJkpCy9YfydNAuS_qzevcPputSJJ8odOxnACOq5wuLQHFPoS8Ak0UK4San-q6qw1v0bkluPXxnS8oELl4yaphI95enJR4iWs9X0g6nkeWcqPM7VILs55YngTfm2VG68GxRSpw)
 
 <a href="#heading--Updating-secrets-directly"><h2 id="heading--Updating-secrets-directly">Updating secrets directly</h2></a>
 
 Secrets related to MAAS stored in Vault could be changed outside of MAAS, directly in Vault. If this happens, MAAS automatically uses the new value, as MAAS elements do not cache secrets -- they are fetched every time they're needed.
 
 MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …). Those are currently stored in the database, which is not secure by default.
+
