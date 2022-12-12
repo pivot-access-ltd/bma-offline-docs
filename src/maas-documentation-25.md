@@ -945,7 +945,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |/docs/how-to-manage-regions|/docs/how-to-adjust-your-controllers|
 |/docs/how-to-manage-racks|/docs/how-to-adjust-your-controllers|
 |/docs/how-to-create-a-custom-ubuntu-image|/docs/how-to-build-custom-images|
-|/docs/how-to-build-maas-images/docs/how-to-build-custom-images|
+|/docs/how-to-build-maas-images|/docs/how-to-build-custom-images|
 |/docs/how-to-use-image-streams|/docs/how-use-standard-images|
 |/docs/how-to-manage-dhcp|/docs/how-to-enable-dhcp|
 |/docs/how-to-manage-ip-ranges|/docs//docs/how-to-enable-dhcp|
