@@ -118,9 +118,11 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Set up an air-gapped MAAS](/t/-/5212)
 - [Manage user accounts](/t/-/5184)
 
-### How to keep your secrets
+### [How to protect your secrets](t/-/6503)
 
-- [About RBAC](/t/-/6131)
+- [Enable Vault](/t/-/6501)
+- [Unseal Vault](/t/-/6502)
+
 
 ### How to operate reliably
 
@@ -149,6 +151,9 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6501|/docs/how-to-enable-vault|
+|https://discourse.maas.io/t/-/6502|/docs/how-to-unseal-vault|
+|https://discourse.maas.io/t/-/6503|/docs/how-to-protect-your-secrets|
 |https://discource.maas.io/t/-/6500|/docs/how-to-deploy-virtual-machines|
 |https://discourse.maas.io/t/-/6498|/docs/how-to-tune-controllers|
 |https://discourse.maas.io/t/-/6346|/docs/what-is-new-with-maas-3-3|
@@ -895,6 +900,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/about-rbac|/docs/how-to-protect-your-secrets|
 |/docs/maas-terraform-provider|/docs/maas-terraform-provider-reference|
 |/docs/commissioning-script-reference|/docs/commissioning-scripts-reference|
 |/docs/technical-reference|/docs/maas-technical-reference|
@@ -945,7 +951,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |/docs/how-to-manage-regions|/docs/how-to-adjust-your-controllers|
 |/docs/how-to-manage-racks|/docs/how-to-adjust-your-controllers|
 |/docs/how-to-create-a-custom-ubuntu-image|/docs/how-to-build-custom-images|
-|/docs/how-to-build-maas-images|/docs/how-to-build-custom-images|
+|/docs/how-to-build-maas-images/docs/how-to-build-custom-images|
 |/docs/how-to-use-image-streams|/docs/how-use-standard-images|
 |/docs/how-to-manage-dhcp|/docs/how-to-enable-dhcp|
 |/docs/how-to-manage-ip-ranges|/docs//docs/how-to-enable-dhcp|
