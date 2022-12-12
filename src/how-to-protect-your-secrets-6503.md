@@ -1,0 +1,1 @@
+This is the article about Vault integration.
