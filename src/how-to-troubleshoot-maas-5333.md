@@ -1,9 +1,76 @@
 <!-- "How to troubleshoot MAAS" -->
 This article may help you deal with some common problems.  It is organised by topic:
 
+- [Find and fix a leaked MAAS admin API key](#heading--Find-and-fix-a-leaked-MAAS-admin-API-key)
 - [Networking issues](#heading--networking-issues)
 - [Machine life-cycle failures](#heading--machine-life-cycle-failures)
 - [Custom image creation problems](#heading--custom-image-creation-problems)
+
+<a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key"><h2 id="heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</h2></a>
+
+MAAS hardware sync may leak the MAAS admin API key.  The simple solution for this is to:
+
+- Rotate all admin tokens
+- Re-deploy all machines that have hardware sync enabled
+
+For users who don’t want to re-deploy, the following instructions explain how to manually swap the token.
+
+<a href="#heading--Manually-swapping-the-MAAS-admin-API-token"><h3 id="heading--Manually-swapping-the-MAAS-admin-API-token">Manually swapping the MAAS admin API token</h3></a>
+
+Check if you have any machines with Hardware Sync enabled.  The easiest way to do this is a database query:
+
+```nohighlight
+select system_id 
+from maasserver_node 
+where enable_hw_sync = true;
+```
+
+On each of the reported machines there might be a leaked API key that belongs to the user with admin permissions. This will show only machines that do exist now. It is possible that such machines existed before, but were removed. We still do recommend you to rotate API keys.
+
+Here, on one of the machines, we have a leaked API key `PMmKvCw26reY7SaDet:g5rY7FNDu2ZDKER5zL:pNAHKcpR7eLWA6g2RSxrqdgSXEKgTAMT`:
+
+```nohighlight
+cat /lib/systemd/system/maas_hardware_sync.service
+
+[Unit]
+Description=MAAS Hardware Sync Service
+Documentation=<https://maas.io>
+Wants=maas_hardware_sync.timer
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/wget -O /usr/bin/maas-run-scripts <http://10.100.0.10:5248/MAAS/maas-run-scripts>
+ExecStartPre=/bin/chmod 0755 /usr/bin/maas-run-scripts
+ExecStartPre=/usr/bin/maas-run-scripts get-machine-token\
+    '<http://10.100.0.10:5248/MAAS'\>
+    'PMmKvCw26reY7SaDet:g5rY7FNDu2ZDKER5zL:pNAHKcpR7eLWA6g2RSxrqdgSXEKgTAMT'\
+    knt4rm\
+    /tmp/maas-machine-creds.yml
+ExecStart=/usr/bin/maas-run-scripts report-results --config /tmp/maas-machine-creds.yml
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Just to ensure this token actually belongs to an admin account, we can do another database query:
+
+```nohighlight
+select u.username, u.email 
+from auth_user u
+left join piston3_consumer c 
+on u.id = c.user_id
+-- we need only the consumer key of the token. token.split(":")[0]
+where key = 'PMmKvCw26reY7SaDet';
+```
+
+You should login into MAAS UI with an account owning a leaked API key, find a leaked API key and remove it. This is the most convinient way; it guarantees that all steps will be audited and all caches will be reset.  After API key is removed, MAAS CLI will stop working (if you were using the same token), so you will need to go through setting up the CLI credentials again.
+
+The hardware sync feature will stop working as well.  Here are two options:
+
+- Redeploy the machine, so it will use the new systemd template 
+- Manually create a credentials file and modify `/lib/systemd/system/maas_hardware_sync.service` to match
+
 
 <a href="#heading--networking-issues"><h2 id="heading--networking-issues">Networking issues</h2></a>
 
