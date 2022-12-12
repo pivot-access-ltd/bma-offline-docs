@@ -118,7 +118,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Set up an air-gapped MAAS](/t/-/5212)
 - [Manage user accounts](/t/-/5184)
 
-### [How to protect your secrets](t/-/6503)
+### [How to protect your secrets](/t/-/6503)
 
 - [Enable Vault](/t/-/6501)
 - [Unseal Vault](/t/-/6502)
