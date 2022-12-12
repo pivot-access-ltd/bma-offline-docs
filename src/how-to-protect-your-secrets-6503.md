@@ -26,7 +26,7 @@ Vault protects the secrets engine with a sort of upscale `chroot jail`, called a
 Aside from this short overview, we won't repeat all of the Vault documentation.  Instead, we recommend that you [study the Vault documentation carefully](https://developer.hashicorp.com/vault/docs), or even consider [getting certified](https://developer.hashicorp.com/vault/tutorials/associate-cert) on the Vault product.
 
 [/tab]
-[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages]
+[tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 Beginning with version 3.3, MAAS secrets can be stored in [HashiCorp Vault](https://www.hashicorp.com/products/vault).  To use Vault to protect your secrets, please upgrade to MAAS 3.3.
 [/tab]
 [/tabs]
@@ -148,3 +148,4 @@ Here is a quick breakdown of how the four roles experience MAAS:
 - Auditor: an auditor can view anything about machines in the resource pool(s) for which they are permitted.  Auditors cannot change or access settings.
 
 MAAS makes no assumptions about how these roles might be used in the day-to-day operation of your MAAS instance.  The capabilities listed above form the complete set of what these roles can do.
+
