@@ -1418,6 +1418,10 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
 <a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a>
 
+[note]
+MAAS hardware sync may leak the MAAS admin API token.  You may need to rotate all admin tokens and re-deploy all machines that have hardware sync enabled.  To find out whether this is an issue, and how to fix it, see the [troubleshooting instructions](/t/how-to-troubleshoot-maas/5333#heading--Manually-swapping-the-MAAS-admin-API-token) for this problem.
+[/note]
+
 To enable Hardware sync on a machine, select a machine from the machine list and choose deploy from the "Take action" dropdown menu:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png"></a>
@@ -1447,6 +1451,10 @@ This value is then applied to the machine at time of deployment. You cannot modi
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
 <a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a>
+
+[note]
+MAAS hardware sync may leak the MAAS admin API token.  You may need to rotate all admin tokens and re-deploy all machines that have hardware sync enabled.  To find out whether this is an issue, and how to fix it, see the [troubleshooting instructions](/t/how-to-troubleshoot-maas/5333#heading--Manually-swapping-the-MAAS-admin-API-token) for this problem.
+[/note]
 
 To enable Hardware sync on a machine, deploy the machine from the command line, adding `enable_hw_sync=true`:
 
