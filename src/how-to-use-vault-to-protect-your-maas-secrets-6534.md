@@ -36,4 +36,3 @@ If you've configured all region controllers with Vault, but haven't yet migrated
 In certain situations, outside of MAAS control, the Vault might be sealed. In this case, we will display this notification because MAAS cannot access Vault. The user will be logged out of the UI because MAAS cannot access Vault. The user needs to unseal the Vault to restore access to MAAS:
 
 ![|974x255](https://lh4.googleusercontent.com/Sf49gilbeLRTYIch19bZvsYMgWXDbqMFJjKIVRocblIddQ0k5PsprW_M5MJkpCy9YfydNAuS_qzevcPputSJJ8odOxnACOq5wuLQHFPoS8Ak0UK4San-q6qw1v0bkluPXxnS8oELl4yaphI95enJR4iWs9X0g6nkeWcqPM7VILs55YngTfm2VG68GxRSpw)
-
