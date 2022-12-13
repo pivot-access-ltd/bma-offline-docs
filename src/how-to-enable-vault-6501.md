@@ -73,7 +73,7 @@ $ vault write -wrap-ttl=5m auth/approle/role/$ROLE_NAME/secret-id
 Once MAAS is installed and configured, it's possible to integrate it with Vault with a few steps, using the CLI:
 
 ```nohighlight
-sudo maas config-vault configure $URL $APPROLE_ID $WRAPPED_TOKEN $SECRETS_PATH --secrets-mount $SECRET_MOUNT
+sudo maas config-vault configure $URL $APPROLE_ID $WRAPPED_TOKEN $SECRETS_PATH --mount $SECRET_MOUNT
 ```
 where the `$APPROLE_ID` and `$WRAPPED_TOKEN` are the ones obtained by Vault in the previous steps.
 
