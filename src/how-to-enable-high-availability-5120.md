@@ -185,7 +185,7 @@ Please see [Region controllers](/t/how-to-manage-controllers/5172) and [Multiple
 
 <a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">How to enable load balancing for API services</h3></a>
 
-You can add load balancing with [HAProxy](http://www.haproxy.org/) load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.
+You can add load balancing with [HAProxy](http://www.haproxy.org/)`↗` load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.
 
 [note]
 If you happen to have Apache running on the same server where you intend to install HAProxy, you will need to stop and disable `apache2`, because HAProxy binds to port 80.
@@ -199,7 +199,7 @@ sudo apt install haproxy
 
 <a href="#heading--configure"><h4 id="heading--configure">How to configure HAProxy</h4></a>
 
-Configure each API server's load balancer by copying the following into `/etc/haproxy/haproxy.cfg` (see the [upstream configuration manual (external link)](http://cbonte.github.io/haproxy-dconv/1.6/configuration.html) as a reference). Replace $PRIMARY_API_SERVER_IP and $SECONDARY_API_SERVER_IP with their respective IP addresses:
+Configure each API server's load balancer by copying the following into `/etc/haproxy/haproxy.cfg` (see the [upstream configuration manual (external link)](http://cbonte.github.io/haproxy-dconv/1.6/configuration.html)`↗` as a reference). Replace $PRIMARY_API_SERVER_IP and $SECONDARY_API_SERVER_IP with their respective IP addresses:
 
 ``` yaml
 frontend maas
