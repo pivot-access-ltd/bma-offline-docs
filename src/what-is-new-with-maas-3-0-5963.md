@@ -55,13 +55,13 @@ Note that new features are categorised by the level of release at which they bec
 
 The logs and events tabs have combined and now live under "Logs". In addition to a number of small improvements, navigating and displaying events has been made easier.
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png" target = "_blank">![](upload://zvQSdbcenjYrkYsq2mtDx8UCGgS.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png"></a>
 
 #### Downloading logs
 
 A helpful new feature is the ability to download the machine and installation output, and if a machine has failed deployment you can now download a full tar of the curtain logs.
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png" target = "_blank">![](upload://m0CtHR0E4GvNFqRQkcfcFpeSCId.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png"></a>
 
 <h3 id="heading--disabling-boot-methods">Disabling boot methods</h3>
 
@@ -241,7 +241,7 @@ In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, whic
 
 MAAS 3.0 incorporates a large number of bug fixes, summarised in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn't seem to work as presented in the bug request.
 
-One particular bug, [#1916860](https://bugs.launchpad.net/maas/+bug/1916860), involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can't fix this (hence the assignment of "Won't Fix"), the team did provide a easy [workaround](https://bugs.launchpad.net/maas/+bug/1916860/comments/27)`↗` which helps circumvent this issue.
+One particular bug, [#1916860](https://bugs.launchpad.net/maas/+bug/1916860)`↗`, involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can't fix this (hence the assignment of "Won't Fix"), the team did provide a easy [workaround](https://bugs.launchpad.net/maas/+bug/1916860/comments/27)`↗` which helps circumvent this issue.
 
 <h3 id="heading--maas-3-0-bug-fixes">MAAS 3.0 bug fixes</h3>
 
@@ -295,7 +295,7 @@ Here are the bugs that have been 'Fix Released' in MAAS 3.0 RC1:
 [#1927559](https://bugs.launchpad.net/bugs/1927559)`↗`|Default logical volume size too big in UI|Undecided|
 [#1928024](https://bugs.launchpad.net/bugs/1928024)`↗`|UI states commissioning/testing scripts were never uploaded|Undecided|
 [#1928226](https://bugs.launchpad.net/bugs/1928226)`↗`|Information "not available" indicates that it''s an error of some sort|Undecided|
-[#1928235](https://bugs.launchpad.net/bugs/1928235)|notes field won't update properly: MAAS 3.0 RC]()`↗`|Undecided|
+[#1928235](https://bugs.launchpad.net/bugs/1928235)`↗`|notes field won't update properly: MAAS 3.0 RC]()`↗`|Undecided|
 [#1928324](https://bugs.launchpad.net/bugs/1928324)`↗`|updating a machine zone or resource pool doesn't refresh details|Undecided|
 <h3 id="heading--maas-3-beta-5-bug-fixes">MAAS 3.0 Beta 5 bug fixes</h3>
 
@@ -344,7 +344,7 @@ Here are the bugs that have been `Fix Released` in MAAS 3.0 Beta 3:
 |[#1923251](https://bugs.launchpad.net/bugs/1923251)`↗`| Creating an LXD VM host now requires a project name |High|
 |[#1809939](https://bugs.launchpad.net/bugs/1809939)`↗`| dhcp snippet create fail when dhcp subnet is relayed |Medium|
 |[#1913460](https://bugs.launchpad.net/bugs/1913460)`↗`| Add option to pick whether to keep or decompose machines in a VM host |Undecided|
-|[#1922787](https://bugs.launchpad.net/bugs/1922787)| make "LXD" the default VM host in MAAS UI (rather than virsh)`↗` |Undecided|
+|[#1922787](https://bugs.launchpad.net/bugs/1922787)`↗`| make "LXD" the default VM host in MAAS UI (rather than virsh) |Undecided|
 |[#1922876](https://bugs.launchpad.net/bugs/1922876)`↗`| Deploy KVM hosts with LXD by default |Undecided|
 |[#1922972](https://bugs.launchpad.net/bugs/1922972)`↗`| MAAS 3.0 Beta2 UI says "machine cannot be deployed" while successfully deploying machine |Undecided|
 |[#1923719](https://bugs.launchpad.net/bugs/1923719)`↗`| MAAS 3.0 : snap refresh maas from 3.0.0~beta2-9826-g.13cc184d5 |Undecided|
