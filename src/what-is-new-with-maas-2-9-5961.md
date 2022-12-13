@@ -73,7 +73,7 @@ Specifically, there are five new features available to support NUMA, SR-IOV, and
 
 This functionality comes with an enhanced panel in the "KVM" details section:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank">![](upload://5qDhxTUUitJxRzlVYIhaxShZXS9.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
 See the [VM hosting](/t/about-vm-hosting/5068) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
@@ -169,7 +169,7 @@ Three substantial improvements to BMC usage have been released:
 Three new configuration options have been added to the IPMI power driver:
 
 - K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
-- Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
+- Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf `↗` for more information.
 - Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
 See the [2.9 UI](https://maas.io/docs/power-management#heading--ipmi)`↗` or [2.9 CLI](https://maas.io/doc/power-management#heading--ipmi)`↗` power management pages for details.
