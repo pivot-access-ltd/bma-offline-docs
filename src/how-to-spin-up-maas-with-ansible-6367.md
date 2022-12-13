@@ -49,8 +49,7 @@ In general terms, you can run any of the MAAS Ansible plays with a command of th
 ansible-playbook -i hosts \
 --extra_vars \
 "maas_version=$MAAS_VERSION 
-maas_postgres_password=$MAAS_PG_PASSWORD 
-maas_postgres_replication_password=$MAAS_PG_REP_PASSWORD 
+maas_postgres_password=$MAAS_PG_PASSWORD  
 maas_installation_type=<deb|snap> 
 maas_url=$MAAS_URL" \
 ./site.yaml
