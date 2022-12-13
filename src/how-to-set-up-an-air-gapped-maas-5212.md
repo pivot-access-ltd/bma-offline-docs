@@ -35,7 +35,7 @@ This proxy requires a properly configured PostgreSQL database -- see the [setup 
 
 <a href="#heading--apt-mirror"><h2 id="heading--apt-mirror">How to make package updates available in an air-gapped environment</h2></a>
 
-The simplest way to use local package repos is via the [reprepro](http://manpages.ubuntu.com/manpages/focal/man1/reprepro.1.html) command.  There is an older command, `apt-mirror`, which is no longer maintained; it's not recommended.
+The simplest way to use local package repos is via the [reprepro](https://manpages.ubuntu.com/manpages/focal/man1/reprepro.1.html)`↗` command.  There is an older command, `apt-mirror`, which is no longer maintained; it's not recommended.
 
 The `reprepro` command manages a local repository of Debian packages.  You can add files manually or download them from some other repository.  It does not require an external database.  This command also handles signatures of mirrored repos, and can create signatures for the generated package indices, if desired.  
 
