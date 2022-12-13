@@ -2,7 +2,7 @@
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages"]
-For MAAS to be able to integrate with Vault, a few steps are required.  Specifically, you must get a role_id and wrapped_token via Vault CLI (follow the instructions from [Hashicorp Vault](https://learn.hashicorp.com/tutorials/vault/approle-best-practices?in=vault/auth-methods#approle-response-wrapping)).
+For MAAS to be able to integrate with Vault, a few steps are required.  Specifically, you must get a role_id and wrapped_token via Vault CLI (follow the instructions from [Hashicorp Vault](https://learn.hashicorp.com/tutorials/vault/approle-best-practices?in=vault/auth-methods#approle-response-wrapping)`↗`).
 
 As an example only, MAAS can be configured by a Vault admin using the `vault` CLI.
 
@@ -88,7 +88,7 @@ $ sudo maas config-vault migrate
 ```
 During migration, MAAS might be offline for a few seconds, but it will refresh quickly.  After this command, MAAS will be fully integrated and functional with Vault. You can confirm success in the UI by checking **Settings --> Configuration --> Security**:
 
-![|649x586](https://lh3.googleusercontent.com/6huwJZKrnraNHM3hiiVGcrTgOSHD_b0KJOLL1N4s05rKnhQ09UYgMdQHuo5MT_N3lqKn02C_Qg7RQmfrELC4Xjj1pOjIo-N4mMBB8oRj1mfPLbyuw5oKO6jNvvAtUQxwrnKww5DDT1IYDfh9jFCwIoy6MLnOR831kzYHVsgDASfUNEMAW-dwJNdSAt_xTA)
+<a href="https://discourse.maas.io/uploads/default/original/2X/d/dadf8cb6b03710ab19868b77c23d3d2062afb22d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dadf8cb6b03710ab19868b77c23d3d2062afb22d.png"></a>
 
 [note] 
 If you try to migrate secrets before all region controllers are configured with Vault, the migrate command will fail with an error message.
@@ -96,15 +96,10 @@ If you try to migrate secrets before all region controllers are configured with 
 
 If you've configured all region controllers with Vault, but haven't yet migrated the secrets, the integration process will simply remain incomplete.  The UI will remind you:
 
-![|670x338](https://lh3.googleusercontent.com/v2_glOaBx8hTy7TmhD3Y5qe34iFePJN5Z46ZeY6UvGXF7eD4m7chplXtbKIKZMchs2D5WAJSit0tlH27onPV1oUnLZVKwyVOncje3QaZ0n4d-1sjTV5sfuQFopuql_COE0FfvDSFTcKeElnThC3_gKIg6YlNQ-JKvLH6t9sgp6UwrTPAnHzoGpQ6eSmeBQ)
+<a href="https://discourse.maas.io/uploads/default/original/2X/5/558b495841536f38600bbe67c4d4293a3e94bd0b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/558b495841536f38600bbe67c4d4293a3e94bd0b.png"></a>
 
-<a href="#heading--Updating-secrets-directly"><h2 id="heading--Updating-secrets-directly">Updating secrets directly</h2></a>
-
-Secrets related to MAAS stored in Vault could be changed outside of MAAS, directly in Vault. If this happens, MAAS automatically uses the new value, as MAAS elements do not cache secrets -- they are fetched every time they're needed.
-
-MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …). Those are currently stored in the database, which is not secure by default.
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
-[Hashicorp Vault](https://www.vaultproject.io/) is integrated with MAAS version 3.3.  To enable Vault for use with your MAAS, please upgrade to MAAS 3.3.
+[Hashicorp Vault](https://www.vaultproject.io/)`↗` is integrated with MAAS version 3.3.  To enable Vault for use with your MAAS, please upgrade to MAAS 3.3.
 [/tab]
 [/tabs]
