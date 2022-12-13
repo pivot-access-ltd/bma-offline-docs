@@ -1,9 +1,8 @@
 <!-- "What is new with MAAS 3.2" -->
 
-Here you will find release notes for:
+<a href="#heading--MAAS-3.2-release-notes"><h2 id="heading--MAAS-3.2-release-notes">MAAS 3.2 release notes</h2></a>
 
-- [The current version of MAAS](#heading--current-maas-release-notes)
-- [Other MAAS versions](#heading--other-maas-versions)
+Here you will find release notes for all releases under the 3.2 version.
 
 <a href="#heading--3-2-6-maas-release-notes"><h2 id="heading--3-2-6-maas-release-notes">MAAS 3.2.6 release notes</h2></a>
 
