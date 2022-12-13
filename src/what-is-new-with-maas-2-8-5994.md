@@ -13,7 +13,7 @@ MAAS 2.8.3 has been released, replacing the `2.8/stable` channel in snap and the
 
     snap refresh --channel=2.8/stable
 
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://bugs.launchpad.net/maas/+milestone/2.8.3rc1) and [more bugfixing](https://bugs.launchpad.net/maas/+milestone/2.8.3)`↗`.  No other changes have been made to MAAS with this release.
+or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://bugs.launchpad.net/maas/+milestone/2.8.3rc1)`↗` and [more bugfixing](https://bugs.launchpad.net/maas/+milestone/2.8.3)`↗`.  No other changes have been made to MAAS with this release.
 
 Here's a summary of the bugs that were fixed in 2.8.3:
 
@@ -86,7 +86,7 @@ Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now availa
 
 <h2 id="heading--2-8-release-notes">LXD-based VM host support (Beta)</h2>
 
-MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)-based VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU)`↗`. Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
+MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)-based`↗` VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU)`↗`. Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
 
 ## UI performance improvements for the machine listing page
 
