@@ -6,13 +6,13 @@ A user should probably have a solid grasp of the standard terminology in relatio
 - Hosts and groups
 - Inventory
 
-[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) is a sophisticated IT automation tool that allows users to set up [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html), which automate complex, repetitive (or error-prone)`↗` setup activities.  While we won't provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:
+[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible)`↗` is a sophisticated IT automation tool that allows users to set up [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗`, which automate complex, repetitive (or error-prone)`↗` setup activities.  While we won't provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:
 
-- **[Modules](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules)** are binaries (or even pieces of code)`↗` that Ansible can run on a managed node.  These modules can be grouped into named collections.
+- **[Modules](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules)`↗`** are binaries (or even pieces of code)`↗` that Ansible can run on a managed node.  These modules can be grouped into named collections.
 - **[Tasks](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks)`↗`** are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as "partition and format /sda".
 - **[Plays](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays)`↗`** are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., "install the OS" ==> "partition and format /sda", "install binary x.7.iso", etc.
 - **[Playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗`** are YAML files that run plays in a specific order; for example, "install the OS", "install MAAS", "create a region controller", "sync images", etc.
-- **[Inventory](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3)** is a source(s)`↗` of managed nodes; also called a "hostfile".
+- **[Inventory](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3)`↗`** is a source(s)`↗` of managed nodes; also called a "hostfile".
 
 These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms "[hosts and groups](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html)`↗`", since these are applied somewhat differently than we use them in MAAS.
 
@@ -49,7 +49,8 @@ In general terms, you can run any of the MAAS Ansible plays with a command of th
 ansible-playbook -i hosts \
 --extra_vars \
 "maas_version=$MAAS_VERSION 
-maas_postgres_password=$MAAS_PG_PASSWORD  
+maas_postgres_password=$MAAS_PG_PASSWORD 
+maas_postgres_replication_password=$MAAS_PG_REP_PASSWORD 
 maas_installation_type=<deb|snap> 
 maas_url=$MAAS_URL" \
 ./site.yaml
