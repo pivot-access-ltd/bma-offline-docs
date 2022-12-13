@@ -11,11 +11,11 @@ We are happy to announce that MAAS 3.3 RC2 has been released, with [one addition
 
 New features created for MAAS 3.3 include:
 
-- [Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations](#heading--ansible-playbooks): [Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS, making it easy to automate routine setup and configuration of MAAS.
+- [Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations](#heading--ansible-playbooks): [Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible)`↗` [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS, making it easy to automate routine setup and configuration of MAAS.
 
 - [Improved machine list filtering](#heading--Improved-machine-list-filtering): MAAS 3.3 enhances the presentation and filtering of the machine list, with a shorter wait to start filtering and a wider range of filter choices.
 
-- [Integration of Vault for credential storage](#heading--vault-integration): MAAS 3.3 allows you to use [Hashicorp Vault](https://www.vaultproject.io/) to protect your secrets, if you wish.
+- [Integration of Vault for credential storage](#heading--vault-integration): MAAS 3.3 allows you to use [Hashicorp Vault](https://www.vaultproject.io/)`↗` to protect your secrets, if you wish.
 
 Improved capabilities include the following:
 
@@ -37,11 +37,11 @@ Several forward-looking improvements are included as well:
 
 - Reliability improvements for simultaneous machine deployments
 
-- The first phase of [Nvidia DPU](https://www.nvidia.com/en-us/networking/products/data-processing-unit/) support
+- The first phase of [Nvidia DPU](https://www.nvidia.com/en-us/networking/products/data-processing-unit/)`↗` support
 
-- Shifting the MAAS API documentation toward [OpenAPI standards](https://www.openapis.org/)
+- Shifting the MAAS API documentation toward [OpenAPI standards](https://www.openapis.org/)`↗`
 
-- Shifting the MAAS documentation toward the [Diátaxis](https://diataxis.fr/) style of documentation
+- Shifting the MAAS documentation toward the [Diátaxis](https://diataxis.fr/)`↗` style of documentation
 
 These will be documented later in blog posts.
 
@@ -292,7 +292,7 @@ If this didn’t work, you will need to restore from the backup you made in step
 
 <a href="#heading--ansible-playbooks"><h2 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h2></a>
 
-[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  
+[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible)`↗` [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  
 
 <a href="#heading--Ten-words-or-less-1"><h3 id="heading--Ten-words-or-less-1">Ten words or less</h3></a>
 
@@ -562,10 +562,10 @@ Some news Windows-specific platform options include:
 
 This update should make it much simpler to use custom-built Windows images with MAAS.
 
-<!--
+
 <a href="#heading--openapi-support"><h2 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h2></a>
 
-MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult [the API documentation](https://maas.io/docs/api)`↗` for details. -->
+MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult [the API documentation](https://maas.io/docs/api)`↗` for details.
 
 <a href="#heading--maas-config-settings-ref"><h2 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h2></a>
 
@@ -808,11 +808,11 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 
 - [1762673](https://bugs.launchpad.net/bugs/1762673)`↗`: maas insists on running the proxy, even when it's disabled
 - [1802505](https://bugs.launchpad.net/bugs/1802505)`↗`: [ui][2.4][2.5] maas ignores ttl parameter for address records
-- [1806707](https://bugs.launchpad.net/bugs/1806707): [2.5] Composing a VM with an interface attached to a (macvtap) network (on a KVM host NIC that is not a bridge)`↗` resulted in disconnect interface
+- [1806707](https://bugs.launchpad.net/bugs/1806707)`↗`: [2.5] Composing a VM with an interface attached to a (macvtap) network (on a KVM host NIC that is not a bridge) resulted in disconnect interface
 - [1811109](https://bugs.launchpad.net/bugs/1811109)`↗`: [2.5, UI, RBAC] Normal users can unmount the root file system, but not remount it
 - [1818004](https://bugs.launchpad.net/bugs/1818004)`↗`: Slow response in the UI
 - [1822640](https://bugs.launchpad.net/bugs/1822640)`↗`: [websocket, UI] Admins should be able to change ownership of resources over the UI
-- [1822840](https://bugs.launchpad.net/bugs/1822840): [UI, feature] Add ability to edit/delete (manage)`↗` tags over the UI
+- [1822840](https://bugs.launchpad.net/bugs/1822840)`↗`: [UI, feature] Add ability to edit/delete (manage) tags over the UI
 - [1825255](https://bugs.launchpad.net/bugs/1825255)`↗`: TestPostgresListenerService test fails erroneously in CI
 - [1826011](https://bugs.launchpad.net/bugs/1826011)`↗`: [UI] Compose machine from pod misaligned message
 - [1826789](https://bugs.launchpad.net/bugs/1826789)`↗`: stress-ng-cpu-long times out in bionic
@@ -945,7 +945,7 @@ More bug-fixes are planned for later 3.3 releases.
 - [1995624](https://bugs.launchpad.net/bugs/1995624)`↗`: suppressing script results no longer available on machine listing
 - [1996065](https://bugs.launchpad.net/bugs/1996065)`↗`: CLI errors when redirecting the output to a file
 - [1996074](https://bugs.launchpad.net/bugs/1996074)`↗`: Machine details stuck at "Loading" for machines with no disks
-- [1996419](https://bugs.launchpad.net/bugs/1996419): renaming a DNS record to a previous name fails with error: list.remove(x)`↗`: x not in list
+- [1996419](https://bugs.launchpad.net/bugs/1996419)`↗`: renaming a DNS record to a previous name fails with error: list.remove(x): x not in list
 - [1996935](https://bugs.launchpad.net/bugs/1996935)`↗`: agent.yaml.example is missing when maas is installed via snap
 - [1997190](https://bugs.launchpad.net/bugs/1997190)`↗`: Power parameters access attempt from non-db thread 
 - [1997191](https://bugs.launchpad.net/bugs/1997191)`↗`: Uncaught exception when configuring DNS
