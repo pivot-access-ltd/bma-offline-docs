@@ -1,20 +1,21 @@
-<!-- "What is new with MAAS" -->
+<!-- "What is new with MAAS 3.3" -->
 
 Here you will find release notes for:
 
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-We are happy to announce that MAAS 3.3 RC1 has been released, with [one additional bug fixes](#heading--MAAS-3-3-RC1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+We are happy to announce that MAAS 3.3 RC2 has been released, with [one additional bug fixes](#heading--MAAS-3-3-RC1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
 New features created for MAAS 3.3 include:
 
-- [Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations](#heading--ansible-playbooks): [Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS, making it easy to automate routine setup and configuration of MAAS.
+- [Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations](#heading--ansible-playbooks): [Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible)`↗` [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS, making it easy to automate routine setup and configuration of MAAS.
 
 - [Improved machine list filtering](#heading--Improved-machine-list-filtering): MAAS 3.3 enhances the presentation and filtering of the machine list, with a shorter wait to start filtering and a wider range of filter choices.
-<!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
+
+- [Integration of Vault for credential storage](#heading--vault-integration): MAAS 3.3 allows you to use [Hashicorp Vault](https://www.vaultproject.io/)`↗` to protect your secrets, if you wish.
 
 Improved capabilities include the following:
 
@@ -23,25 +24,31 @@ Improved capabilities include the following:
 - [UI performance improvements for large machine counts](#heading--UI-performance-improvements): We've improved the performance of the UI machine list for large (>10000 machines) MAAS instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.
 
 - [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images): The [procedure](/t/how-to-build-custom-images/5104#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
-<!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
-<!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
 
 Greatly expanded documentation sections include:
 
-<!-- - [Shifting the MAAS API documentation to OpenAPI standards](#heading--openapi-support) -->
 - [MAAS configuration settings reference](#heading--maas-config-settings-ref): There is now one reference page that addresses all MAAS settings in one place.  Other references throughout the document are preserved for now.
 
 - [Improved MAAS event documentation](#heading--Improved-MAAS-event-documentation): MAAS event documentation has been expanded to include [much better explanations](/t/understanding-maas-events/6373) of MAAS events, including many examples.
 
 - [Improved MAAS audit event documentation](#heading--Improved-MAAS-audit-event-documentation): MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including many examples and use cases.
 
-This first Beta release also includes over one-hundred [bug fixes](#heading--MAAS-3-3-Beta-1-bug-list).  Read on to catch up with what we've done so far this cycle.
+Several forward-looking improvements are included as well:
 
-[note]
-**NOTE** that this is a Beta release. Although we aim to ensure there is no regression, there still may be bugs. While we work to stabilise this release, we advise against using beta releases in production environments.
-[/note]
+- Reliability improvements for simultaneous machine deployments
 
-<a href="#heading--How-to-install-MAAS-3-3-Beta"><h2 id="heading--How-to-install-MAAS-3-3-Beta">How to install MAAS 3.3 Beta</h2></a>
+- The first phase of [Nvidia DPU](https://www.nvidia.com/en-us/networking/products/data-processing-unit/)`↗` support
+
+- Shifting the MAAS API documentation toward [OpenAPI standards](https://www.openapis.org/)`↗`
+
+- Shifting the MAAS documentation toward the [Diátaxis](https://diataxis.fr/)`↗` style of documentation
+
+These will be documented later in blog posts.
+
+
+This release also includes well over one-hundred [bug fixes](#heading--MAAS-3.3-bug-list).  Read on to catch up with what we've done so far this cycle.
+
+<a href="#heading--How-to-install-MAAS-3-3"><h2 id="heading--How-to-install-MAAS-3-3">How to install MAAS 3.3</h2></a>
 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 
@@ -53,7 +60,7 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 
 To install MAAS 3.3 from a snap, simply enter the following:
 
-    $ sudo snap install --channel=3.3/beta maas
+    $ sudo snap install --channel=3.3/candidate maas
 
 After entering your password, the snap will download and install from the 3.3 channel.
 
@@ -61,9 +68,9 @@ After entering your password, the snap will download and install from the 3.3 ch
 
 Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.3/beta maas
+    $ sudo snap refresh --channel=3.3/candidate maas
 
-After entering your password, the snap will refresh from the 3.3 Beta channel.  You will **not** need to re-initialise MAAS.
+After entering your password, the snap will refresh from the 3.3 candidate channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 
@@ -218,7 +225,7 @@ Release:	xx.yy
 Codename:	$RELEASE_NAME
 ```
 
-The minimum “xx.yy” required for MAAS 3.2 is “22.04,” code-named “jammy”.
+The minimum “xx.yy” required for MAAS 3.3 is “22.04,” code-named “jammy”.
 
 If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:
 
@@ -251,7 +258,7 @@ If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the f
 
 Back up your MAAS server completely; the tools and media are left entirely to your discretion. Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-Add the MAAS 3.3 Beta 1 PPA to your repository list with the following command, ignoring any apparent error messages:
+Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```nohighlight
 sudo apt-add-repository ppa:maas/3.3-next
@@ -285,7 +292,7 @@ If this didn’t work, you will need to restore from the backup you made in step
 
 <a href="#heading--ansible-playbooks"><h2 id="heading--ansible-playbooks">Ansible playbooks for HA MAAS, PostgreSQL, and other MAAS configurations</h2></a>
 
-[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible) [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  
+[Ansible](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible)`↗` [playbooks](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)`↗` are now available for MAAS.  These extended YAML files automate various routine aspects of MAAS setup and configuration.  
 
 <a href="#heading--Ten-words-or-less-1"><h3 id="heading--Ten-words-or-less-1">Ten words or less</h3></a>
 
@@ -555,10 +562,10 @@ Some news Windows-specific platform options include:
 
 This update should make it much simpler to use custom-built Windows images with MAAS.
 
-<!--
+
 <a href="#heading--openapi-support"><h2 id="heading--openapi-support">Shifting the MAAS API documentation to OpenAPI standards</h2></a>
 
-MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult [the API documentation](https://maas.io/docs/api)`↗` for details. -->
+MAAS API User want to experience the MAAS API in a more standard way, along the lines of the OpenAPI definition.  MAAS 3.3 begins this process by providing most of the MAAS API functionality in a discover-able form.  You should now be able to easily retrieve human-readable service documentation and API definitions using standard methods.  Consult [the API documentation](https://maas.io/docs/api)`↗` for details.
 
 <a href="#heading--maas-config-settings-ref"><h2 id="heading--maas-config-settings-ref">MAAS configuration settings reference</h2></a>
 
@@ -791,17 +798,21 @@ As part of the updates to our "[How to work with audit event logs](/t/how-to-wor
 
 In this case, we managed to recognise, rather quickly, that no physical interface had been defined for `ruling-bobcat`, hence deployment fails because MAAS can't communicate with the node's BMC.  There are many other issues you can recognise with careful use of MAAS events to audit machine behaviours.  We welcome your feedback on this new documentation endeavour.
 
-<a href="#heading--MAAS-3-3-Beta-1-bug-list"><h2 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h2></a>
+<a href="#heading--MAAS-3.3-bug-list"><h2 id="heading--MAAS-3.3-bug-list">MAAS 3.3 bug list</h2></a>
+
+The following sections enumerate the bugs we've fixed in MAAS 3.3.
+
+<a href="#heading--MAAS-3-3-Beta-1-bug-list"><h3 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h3></a>
 
 So far in MAAS 3.3, we've fixed well over 100 bugs:
 
 - [1762673](https://bugs.launchpad.net/bugs/1762673)`↗`: maas insists on running the proxy, even when it's disabled
 - [1802505](https://bugs.launchpad.net/bugs/1802505)`↗`: [ui][2.4][2.5] maas ignores ttl parameter for address records
-- [1806707](https://bugs.launchpad.net/bugs/1806707): [2.5] Composing a VM with an interface attached to a (macvtap) network (on a KVM host NIC that is not a bridge)`↗` resulted in disconnect interface
+- [1806707](https://bugs.launchpad.net/bugs/1806707)`↗`: [2.5] Composing a VM with an interface attached to a (macvtap) network (on a KVM host NIC that is not a bridge) resulted in disconnect interface
 - [1811109](https://bugs.launchpad.net/bugs/1811109)`↗`: [2.5, UI, RBAC] Normal users can unmount the root file system, but not remount it
 - [1818004](https://bugs.launchpad.net/bugs/1818004)`↗`: Slow response in the UI
 - [1822640](https://bugs.launchpad.net/bugs/1822640)`↗`: [websocket, UI] Admins should be able to change ownership of resources over the UI
-- [1822840](https://bugs.launchpad.net/bugs/1822840): [UI, feature] Add ability to edit/delete (manage)`↗` tags over the UI
+- [1822840](https://bugs.launchpad.net/bugs/1822840)`↗`: [UI, feature] Add ability to edit/delete (manage) tags over the UI
 - [1825255](https://bugs.launchpad.net/bugs/1825255)`↗`: TestPostgresListenerService test fails erroneously in CI
 - [1826011](https://bugs.launchpad.net/bugs/1826011)`↗`: [UI] Compose machine from pod misaligned message
 - [1826789](https://bugs.launchpad.net/bugs/1826789)`↗`: stress-ng-cpu-long times out in bionic
@@ -890,7 +901,7 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 - [1988874](https://bugs.launchpad.net/bugs/1988874)`↗`: Release command is failing for ppc64 machine in our lab
 - [1989949](https://bugs.launchpad.net/bugs/1989949)`↗`: provisioningserver TestGetSourceAddress.test_returns_none_if_no_route_found sometimes fails locally
 - [1989970](https://bugs.launchpad.net/bugs/1989970)`↗`: Can't enlist machines on subnets with DNS set
-- [1989974](https://bugs.launchpad.net/bugs/1989974): rackd fails on CIS-hardened machine with "Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)`↗`"
+- [1989974](https://bugs.launchpad.net/bugs/1989974)`↗`: rackd fails on CIS-hardened machine with "Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)"
 - [1990014](https://bugs.launchpad.net/bugs/1990014)`↗`: regiond.conf "debug_http: true" causes image downloads from regiond to fail with 500 error code
 - [1990649](https://bugs.launchpad.net/bugs/1990649)`↗`: Kernel parameters form resets to previous value after save
 - [1990873](https://bugs.launchpad.net/bugs/1990873)`↗`: TestKeys - test_get_launchpad_crashes_for_user_not_found
@@ -934,7 +945,7 @@ More bug-fixes are planned for later 3.3 releases.
 - [1995624](https://bugs.launchpad.net/bugs/1995624)`↗`: suppressing script results no longer available on machine listing
 - [1996065](https://bugs.launchpad.net/bugs/1996065)`↗`: CLI errors when redirecting the output to a file
 - [1996074](https://bugs.launchpad.net/bugs/1996074)`↗`: Machine details stuck at "Loading" for machines with no disks
-- [1996419](https://bugs.launchpad.net/bugs/1996419): renaming a DNS record to a previous name fails with error: list.remove(x)`↗`: x not in list
+- [1996419](https://bugs.launchpad.net/bugs/1996419)`↗`: renaming a DNS record to a previous name fails with error: list.remove(x): x not in list
 - [1996935](https://bugs.launchpad.net/bugs/1996935)`↗`: agent.yaml.example is missing when maas is installed via snap
 - [1997190](https://bugs.launchpad.net/bugs/1997190)`↗`: Power parameters access attempt from non-db thread 
 - [1997191](https://bugs.launchpad.net/bugs/1997191)`↗`: Uncaught exception when configuring DNS
@@ -949,9 +960,9 @@ More bug-fixes are planned for later 3.3 releases.
 
 Here are release notes for other relatively recent MAAS versions:
 
-- [MAAS 3.2](https://maas.io/docs/what-is-new-with-maas-3-2)`↗`‘↗‘
-- [MAAS 3.1](https://maas.io/docs/what-is-new-with-maas-3-1)`↗`‘↗‘
-- [MAAS 3.0](https://maas.io/docs/what-is-new-with-maas-3-0)`↗`‘↗‘
-- [MAAS 2.9](https://maas.io/docs/what-is-new-with-maas-2-9)`↗`‘↗‘
-- [MAAS 2.8](https://maas.io/docs/what-is-new-with-maas-2-8)`↗`‘↗‘
-- [MAAS 2.7](https://maas.io/docs/what-is-new-with-maas-2-7)`↗`‘↗‘
+- [MAAS 3.2](https://maas.io/docs/what-is-new-with-maas-3-2)`↗`
+- [MAAS 3.1](https://maas.io/docs/what-is-new-with-maas-3-1)`↗`
+- [MAAS 3.0](https://maas.io/docs/what-is-new-with-maas-3-0)`↗`
+- [MAAS 2.9](https://maas.io/docs/what-is-new-with-maas-2-9)`↗`
+- [MAAS 2.8](https://maas.io/docs/what-is-new-with-maas-2-8)`↗`
+- [MAAS 2.7](https://maas.io/docs/what-is-new-with-maas-2-7)`↗`
