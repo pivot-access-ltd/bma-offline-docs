@@ -1,5 +1,5 @@
 <!-- "How to employ VMWare images" -->
-MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. To automate the image creation process, Canonical [hosts a repository](https://github.com/canonical/packer-maas) with community-contributed [packer](https://www.packer.io/)`↗` templates.
+MAAS 2.5 and above can deploy VMware ESXi as a custom image. MAAS cannot directly deploy the VMware ESXi ISO; you must create a specialised image from an official VMWare ISO. To automate the image creation process, Canonical [hosts a repository](https://github.com/canonical/packer-maas)`↗` with community-contributed [packer](https://www.packer.io/)`↗` templates.
 
 #### This article will tell you:
 
@@ -25,13 +25,13 @@ The following are required in order to create and deploy a VMWare image:
 - [The VMWare ESXi ISO](https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6)`↗`
 - [Packer - https://www.packer.io/intro/getting-started/install.html](https://www.packer.io/intro/getting-started/install.html)`↗`
 - Procedure was tested with precompiled 64-bit Packer 1.3.4 Linux binaries
-- <a href="https://github.com/canonical/packer-maas">Packer template</a> for MAAS custom image
+- <a href="https://github.com/canonical/packer-maas">Packer template</a> `↗` for MAAS custom image
 
 <a href="#heading--features-and-limitations"><h2 id="heading--features-and-limitations">About the features and limitations of VMWare images in MAAS</h2></a>
 
 <a href="#heading--no-cloning-support"><h3 id="heading--no-cloning-support">About cloning VMWare images</h3></a>
 
-VMware [does not support cloning boot devices](https://kb.vmware.com/s/article/84280) - you may run into issues triggered by non-unique UUID.  [One such issue](https://kb.vmware.com/s/article/84349)`↗` may lead to data corruption on VMFS datastores when using cloned boot devices.
+VMware [does not support cloning boot devices](https://kb.vmware.com/s/article/84280)`↗` - you may run into issues triggered by non-unique UUID.  [One such issue](https://kb.vmware.com/s/article/84349)`↗` may lead to data corruption on VMFS datastores when using cloned boot devices.
 
 <a href="#heading--networking"><h3 id="heading--networking">About VMWare images and MAAS networking</h3></a>
 
