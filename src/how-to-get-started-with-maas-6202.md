@@ -1,6 +1,6 @@
 <!-- "How to get started with MAAS" -->
 
-Our [Ansible playbooks](/t/how-to-spin-up-maas-with-ansible/6367) make getting started easy -- from basic installation to setting up high availability.  If you prefer the manual approach, MAAS is still relatively easy to [install](/t/how-to-install-maas/5128), [upgrade](/t/how-to-upgrade-maas/5436), and [configure](/t/how-to-change-maas-settings/6347).  We try to make it easy to [ask for new features](/t/how-to-request-a-feature/4447) or -- better yet -- [just contribute some code](https://launchpad.net/maas).  You can also [report bugs](/t/how-to-report-a-bug/4446), [get help](/t/how-to-ask-for-help/5428), and even do some [self-help troubleshooting](/t/how-to-troubleshoot-maas/5333)`↗`.
+Our [Ansible playbooks](/t/how-to-spin-up-maas-with-ansible/6367) make getting started easy -- from basic installation to setting up high availability.  If you prefer the manual approach, MAAS is still relatively easy to [install](/t/how-to-install-maas/5128), [upgrade](/t/how-to-upgrade-maas/5436), and [configure](/t/how-to-change-maas-settings/6347).  We try to make it easy to [ask for new features](/t/how-to-request-a-feature/4447) or -- better yet -- [just contribute some code](https://launchpad.net/maas)`↗`.  You can also [report bugs](/t/how-to-report-a-bug/4446), [get help](/t/how-to-ask-for-help/5428), and even do some [self-help troubleshooting](/t/how-to-troubleshoot-maas/5333).
 
 Start with any of these links, or -- if you want a little background information about MAAS -- read on in this article before you jump to the how-to guides.
 
@@ -19,7 +19,7 @@ This section will answer a few questions:
 
 MAAS expands to "Metal As A Service" -- it converts bare-metal servers into cloud instances of virtual machines. There is no need to manage individual units. You can quickly provision or destroy machines, as if they were instances hosted in a public cloud like Amazon AWS, Google GCE, or Microsoft Azure.
 
-MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://juju.is/docs/olm/maas), the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs)`↗` can even act as MAAS machines if they boot from the network via PXE.
+MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://juju.is/docs/olm/maas)`↗`, the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs)`↗` can even act as MAAS machines if they boot from the network via PXE.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg"></a>
 
@@ -92,7 +92,7 @@ MAAS integrates all the tools you need into a smooth system-management experienc
 [/tab]
 [/tabs]
 
-MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef) and [Juju](https://jaas.ai/)`↗` teams recommend MAAS as a physical provisioning system.
+MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef)`↗` and [Juju](https://jaas.ai/)`↗` teams recommend MAAS as a physical provisioning system.
 
 [note]
 Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.ubuntu.com/support)`↗` to work correctly with MAAS.
