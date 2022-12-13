@@ -167,8 +167,6 @@ You can reserve IP addresses by adding one or more reserved ranges to a subnet c
 
 A DHCP relay, or relay agent, is a network device that forwards requests and replies between a DHCP client and a DHCP server when both are not on the same physical subnet.
 
-Two common software implementations are [isc-dhcp-relay](http://packages.ubuntu.com/xenial/isc-dhcp-relay) and [dhcp-helper](http://packages.ubuntu.com/xenial/dhcp-helper).
-
 <a href="#heading--interfaces"><h2 id="heading--interfaces">Interfaces</h2></a>
 
 <a href="#heading--physical"><h3 id="heading--physical">Physical</h3></a>
