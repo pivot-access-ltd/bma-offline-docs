@@ -12,7 +12,7 @@ You can also find a [digest](#heading--bug-fixes-2-9-2) of the 2.9.2 bug fixes b
 
 <h2>MAAS 2.9.1 release notes</h2>
 
-Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading--bug-fixes-2-9-1)`↗` of these fixes below.
+Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1)`↗`.  You can find a [digest](#heading--bug-fixes-2-9-1)`↗` of these fixes below.
 
 <h2>MAAS 2.9 release notes</h2>
 
@@ -73,7 +73,7 @@ Specifically, there are five new features available to support NUMA, SR-IOV, and
 
 This functionality comes with an enhanced panel in the "KVM" details section:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank">![](upload://5qDhxTUUitJxRzlVYIhaxShZXS9.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/1X/57245bbbfe6d28e83c9b7fb30e52caf05714eb00_2_485x500.png"></a>
 
 See the [VM hosting](/t/about-vm-hosting/5068) page for more details, and be sure to use the menu at the top of that page to select your desired build method and interface, so that you'll see the most relevant instructions.
 
@@ -113,7 +113,7 @@ A number of MAAS issues have actually been issues with an older version of Curti
 
 <h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
 
-MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
+MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581 `↗`)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
 
 <h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
 
@@ -172,7 +172,7 @@ Three new configuration options have been added to the IPMI power driver:
 - Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
 - Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docs/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/doc/power-management#heading--ipmi)`↗` power management pages for details.
+See the [2.9 UI](https://maas.io/docs/power-management#heading--ipmi)`↗` or [2.9 CLI](https://maas.io/doc/power-management#heading--ipmi)`↗` power management pages for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -239,15 +239,15 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 <a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a>
 
-- In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135)`↗`, released 2021-02-05.
+- In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946)`↗`.  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135)`↗`, released 2021-02-05.
 
-- Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed)`↗`, and install clean with the latest PPA enabled, which will install the correct versions.
+- Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910)`↗` trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed)`↗`, and install clean with the latest PPA enabled, which will install the correct versions.
 
 - CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067)`↗`.  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
 
 - Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588)`↗`.  This has been remedied.
 
-- The MAAS [Backup doc article](https://maas.io/docs/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998)`↗`.  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+- The MAAS [Backup doc article](https://maas.io/docs/backup)`↗` [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998)`↗`.  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
 - Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116)`↗`.  The default architectures have been changed to prevent this issue.
 
