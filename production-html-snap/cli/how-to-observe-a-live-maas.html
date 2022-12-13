@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,7 +366,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -408,7 +425,7 @@
 </ul>
 <p><a href="#heading--about-maas-observability"><h2 id="heading--about-maas-observability">About MAAS observability</h2></a></p>
 <p>Depicted below we have a reference observability stack composed of Prometheus (metrics ingestion and alerting based on metrics), Loki (log ingestion and alerting based on logs), Grafana (visualisation), Alertmanager (notification routing and dispatching) and Grafana Agent (telemetry collector).</p>
-<p><a href="../images/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/d/d6f66cbb3ea314818894b4f07ca8037628993ae2_2_690x437.png"></a></p>
 <p>This document shows how to configure this stack to consume telemetry and to raise alerts of failures.</p>
 <p><a href="#heading--maas-observability-requirements"><h3 id="heading--maas-observability-requirements">MAAS observability requirements</h3></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">

@@ -22,7 +22,7 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/maas-documentation.html">
+	<a href="../ui/how-to-unseal-vault.html">
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -119,11 +119,6 @@
 	<li>
 	  <a href="how-to-report-a-bug.html">
 	    Report a bug
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
 	  </a>
 	</li>
       </ul>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,7 +366,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -398,51 +415,12 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>MAAS documentation</h1><!-- "MAAS documentation" -->
-<p>MAAS is <strong>Metal As A Service</strong>, a service that treats physical servers like virtual machines (instances) in the cloud.</p>
-<p>No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource. Enlist and deploy standard or customised operating systems to hardware and virtual machines &ndash; remotely.  Monitor, manage, and secure your metal infrastructure easily and efficiently.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a></p>
-<p>MAAS comprehensively meets the need to rapidly deploy, destroy, and reconfigure constellations of bare metal.  Any application that requires frequently rearranging the server topology will benefit.</p>
-<p>MAAS is applicable to nearly any situation.  It is currently deployed in banking, telecom, and industrial environments, as well as niche uses as diverse as national lotteries, supercomputer front-end validation, streaming music services, disaster recovery, and computer security risk analysis.</p>
-<h2>In this documentation</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/t/6140">Tutorials</a></br>  Get started - a hands-on introduction to MAAS for new users </br></td>
-<td><a href="/t/6142">How-to guides</a> </br> Step-by-step guides covering key operations and common tasks</td>
-</tr>
-<tr>
-<td></td>
-<td>The landing pages for these How-to guides offer explain the theory behind the related topics</td>
-</tr>
-<tr>
-<td><strong>The API Reference</strong> </br> Detailed instructions for using the MAAS API</td>
-<td><a href="/t/6143">Reference</a> </br> Technical information - specifications, APIs, architecture</td>
-</tr>
-</tbody>
-</table>
-<h2>Project and community</h2>
-<p>MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="https://ubuntu.com/community/code-of-conduct">Read our code of conduct</a><code>↗</code></li>
-<li><a href="https://maas.io/docs/how-to-contact-us">Get support</a><code>↗</code></li>
-<li><a href="https://maas.io/docs/maas-performance">Learn about MAAS performance</a><code>↗</code></li>
-<li><a href="https://discourse.maas.io">Join our online chat</a><code>↗</code></li>
-<li><a href="https://launchpad.net/maas">Contribute code</a><code>↗</code></li>
-<li><a href="https://maas.io/docs/how-to-help-improve-the-doc">Improve our doc</a><code>↗</code></li>
-<li><a href="https://maas.io/docs/request-a-feature">Request a feature</a><code>↗</code></li>
-<li><a href="https://maas.io/docs/report-a-bug">Report a bug</a><code>↗</code></li>
-</ul>
-<h3>Our roadmap</h3>
-<p>Here&rsquo;s a view of our current roadmap:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg"></a></p>
-<p>Considering MAAS for your next project? <a href="https://maas.io/docs/how-to-contact-us">Get in touch</a><code>↗</code></p>
+  <h1>How to unseal Vault</h1><!-- "How to unseal Vault" -->
+
+<p>There are two conditions that may cause Vault-protected secrets to become unavailable: when the Vault is sealed (using <code>vault operator seal</code> &ndash; see the <a href="https://www.hashicorp.com/products/vault">Vault documentation</a> and when the Vault is unreachable through misconfiguration or other failure.</p>
+<p>When the Vault is sealed, all queries involving secrets will fail with a user error mentioning that the Vault has been sealed.  Unsealing the Vault requires operator intervention, via the <code>vault operator unseal</code> command (again, see the <a href="https://www.hashicorp.com/products/vault">Vault documentation</a>.  MAAS will indicate when this is needed.</p>
+<p>Vault may become unreachable due to a network failure, due to incorrect configuration of a region controller, or other unintentional situations.  When the Vault is unreachable, MAAS will inform the users that interactions with Vault will fail.</p>
+<p>MAAS will make every attempt to present a meaningful error if Vault is not functional.  This includes related authentication errors when attempting to login to MAAS.</p>
     </div>
   </body>
 </html>

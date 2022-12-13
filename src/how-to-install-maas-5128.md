@@ -18,7 +18,7 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 
 <a href="#heading--fresh-install-3-3-snap"><h2 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h2></a>
 
-To install MAAS 3.2 from a snap, simply enter the following:
+To install MAAS 3.3 from a snap, simply enter the following:
 
     $ sudo snap install --channel=3.3/beta maas
 

@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,7 +366,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -458,7 +475,7 @@ cron    3.0pl1-137ubuntu3
 <p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.</p>
 <p><a href="#heading--how-images-deploy"><h3 id="heading--how-images-deploy">How images get deployed onto a machine</h3></a></p>
 <p>Here&rsquo;s a conceptual view of the way that images get deployed to create a running MAAS machine:</p>
-<p><a href="../images/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg"></a></p>
 <p>This is a good place to explain how images work, including the nuances of <code>cloud-init</code> and <code>curtin</code> configurations.  Let&rsquo;s take it from the top.</p>
 <p>Before a machine can be deployed, it must be added to MAAS, commissioned, and allocated.  Machines can be added to MAAS either by <a href="how-to-deploy-physical-machines.html#heading--about-enlistment">enlistment</a> or by direct user action.  This machine must then be <a href="how-to-deploy-physical-machines.html#heading--about-commissioning-machines">commissioned</a>, which establishes the configuration and resources of the machine.  Finally, that machine must be allocated, that is, assigned to the control of one and only one user, so that conflicting commands to the same machine are not possible.  This aggregate step is represented by the green lines in the above diagram.</p>
 <p>When MAAS receives the &ldquo;deploy&rdquo; command from the user (blue lines), it must first retrieve (from the MAAS DB) the machine info that was gathered about the machine during commissioning (red lines).  MAAS then boots the machine and waits for the machine&rsquo;s firmware to request a bootable &ldquo;ephemeral&rdquo; OS.  This ephemeral OS must be one of the images supplied by <a href="https://images.maas.io">the MAAS simplestreams</a><code>↗</code> and cannot be a custom OS image.</p>
@@ -520,7 +537,7 @@ A boot resource is another name for an image. So boot resources are found within
 <p><a href="#heading--about-transforming-an-iso"><h3 id="heading--about-transforming-an-iso">About transforming an ISO</h3></a></p>
 <p>When it comes to creating images for MAAS machines, you can hand-build images, as long as they meet the <code>curtin</code> and <code>cloud-init</code> requirements; or you can use a third-party tool called  <a href="https://www.packer.io">packer</a><code>↗</code> to prepare special versions of these images that will work with MAAS.  There are also static Ubuntu images targeted at older MAAS versions (&lt;3.1).  Beyond providing a bit of technical detail here, we won&rsquo;t shepherd you through hand-building images: you&rsquo;re pretty much on your own there.  We will try to help you understand how to create and customise MAAS-friendly images, mostly focusing on packer templates.</p>
 <p>We maintain a <a href="https://github.com/canonical/packer-maas">git repo</a><code>↗</code> of packer templates for a few popular operating systems.  You can check out this graphic of a real, running lab MAAS instance to get an idea:</p>
-<p><a href="../images/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a80ed5eb191a798d049cb82fade4ee117f5128fd.png"></a></p>
 <p>Packer uses templates (built in HCL2) to run different build, provisioning, and post-processing tools that produce an image MAAS can deploy &ndash; one that you can successfully access and use. These tools might be as simple as a shell command, or as specialised as the RedHat <code>anaconda</code> installer.  It really just depends on what&rsquo;s needed to prepare an image so that MAAS can deploy it.</p>
 <p>We encourage and document custom images &ndash; and help informally as much as we can &ndash; but we&rsquo;re really not able to offer much support.  After all, other OS images are built from code we don&rsquo;t own, and licensed in ways that may or may not be compatible with a MAAS deployment.  For those reasons, among others, we recommend you customise machines using <code>cloud-init</code> user_data and/or <code>curtin</code> preseed data, whenever you can, instead of creating a custom image.</p>
 <p><strong>NOTE:</strong> 
@@ -562,7 +579,7 @@ That warning bears repeating: While it may be possible to deploy a certain image
 <li><a href="#heading--about-packer-created-images">About packer-created images</a></li>
 </ul>
 <p>The <a href="https://www.packer.io/docs">packer documentation</a><code>↗</code> has an excellent, in-depth discussion of what packer does, how it works, and where it is limited.  Simply put, packer creates OS images that can be uploaded and deployed using MAAS. We can summarise packer with the following linearised flowchart:</p>
-<p><a href="../images/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/47cb177f4ee2f52ac00c877449770a23cfa0c9b4.jpeg"></a></p>
 <p>We can walk through packer operation like this:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>

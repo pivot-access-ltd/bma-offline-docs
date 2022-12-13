@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,7 +366,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -566,17 +583,17 @@ $ maas $PROFILE node read $SYSTEM_ID
 <p>Tables for detected PCI and USB devices have been added to the machine details page for MAAS 3.0:</p>
 <p><a  href="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/87f42bafe321d45af94d73216f933a9067f01df2.png"></a></p>
 <p>These tables include a new skeleton loading state while node devices are being fetched:</p>
-<p><a href="../images/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4faa1d8cd996a25ee5089ada924b405bc8903aa4.png"></a></p>
 <p>The user is prompted to commission the machine if no devices are detected.</p>
 <h3 id="heading--workload-annotations">Workload annotations</h3>
 
 <p>Workload annotations have been added to the machine summary page in MAAS 3.0.  These allow you to apply <code>owner_data</code> to a machine and make it visible while the machine is in allocated or deployed state:</p>
-<p><a href="../images/54682ae5f9c7bb449a1ad222679be0156f27d109.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/54682ae5f9c7bb449a1ad222679be0156f27d109.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/54682ae5f9c7bb449a1ad222679be0156f27d109.png"></a></p>
 <p>This data is cleared once the machine state changes to something other than &ldquo;allocated&rdquo; or &ldquo;deployed.&rdquo;  The machine list can be filtered by these workload annotations.  MAAS will warn you on the release page to remind you that workload annotations will be cleared upon releasing the machine.</p>
 <h3 id="heading--fixed-status-bar">Fixed status bar</h3>
 
 <p>In MAAS 3.0, a fixed status bar has been added to the bottom of the screen, which will always display the MAAS name and version on the left.  The right side of the status bar is intended to show contextual data, depending on the UI panel currently displayed. For now, the only data shown is a “last commissioned” timestamp when the user is on a machine details page:</p>
-<p><a href="../images/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a15d7e1d7251f3e928e3054a2aab71f414503bd.png"></a></p>
 <h2 id="heading--maas-3-bug-fixes">MAAS 3.0 bug fixes</h2>
 
 <p>MAAS 3.0 incorporates a large number of bug fixes, summarised in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn&rsquo;t seem to work as presented in the bug request.</p>

@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,7 +369,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -408,7 +425,7 @@
 <li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
 <li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
 </ul>
-<p>We are happy to announce that MAAS 3.3 RC1 has been released, with <a href="#heading--MAAS-3-3-RC1-bug-list">one additional bug fixes</a>.  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
+<p>We are happy to announce that MAAS 3.3 RC2 has been released, with <a href="#heading--MAAS-3-3-RC1-bug-list">one additional bug fixes</a>.  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
 <p><a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a></p>
 <p>New features created for MAAS 3.3 include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -418,9 +435,10 @@
 <li>
 <p><a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a>: MAAS 3.3 enhances the presentation and filtering of the machine list, with a shorter wait to start filtering and a wider range of filter choices.</p>
 </li>
+<li>
+<p><a href="#heading--vault-integration">Integration of Vault for credential storage</a>: MAAS 3.3 allows you to use <a href="https://www.vaultproject.io/">Hashicorp Vault</a> to protect your secrets, if you wish.</p>
+</li>
 </ul>
-<!-- - [Integration of Vault for credential storage](#heading--vault-integration) -->
-
 <p>Improved capabilities include the following:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
@@ -433,11 +451,7 @@
 <p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</a>: The <a href="how-to-build-custom-images.html#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
 </li>
 </ul>
-<!-- - [Reliability improvements for simultaneous machine deployments](#heading--simultaneous-deployment-improvements) -->
-<!-- - [The first phase of Nvidia DPU support](#heading--nvidia-dpu-support) -->
-
 <p>Greatly expanded documentation sections include:</p>
-<!-- - [Shifting the MAAS API documentation to OpenAPI standards](#heading--openapi-support) -->
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><a href="#heading--maas-config-settings-ref">MAAS configuration settings reference</a>: There is now one reference page that addresses all MAAS settings in one place.  Other references throughout the document are preserved for now.</p>
@@ -449,23 +463,37 @@
 <p><a href="#heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</a>: MAAS audit event documentation has been greatly expanded to include <a href="understanding-maas-audit-events.html">much better explanations</a> of MAAS audit events, including many examples and use cases.</p>
 </li>
 </ul>
-<p>This first Beta release also includes over one-hundred <a href="#heading--MAAS-3-3-Beta-1-bug-list">bug fixes</a>.  Read on to catch up with what we&rsquo;ve done so far this cycle.</p>
-<p><strong>NOTE:</strong> 
-<strong>NOTE</strong> that this is a Beta release. Although we aim to ensure there is no regression, there still may be bugs. While we work to stabilise this release, we advise against using beta releases in production environments.</p>
-<p><a href="#heading--How-to-install-MAAS-3-3-Beta"><h2 id="heading--How-to-install-MAAS-3-3-Beta">How to install MAAS 3.3 Beta</h2></a></p>
+<p>Several forward-looking improvements are included as well:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Reliability improvements for simultaneous machine deployments</p>
+</li>
+<li>
+<p>The first phase of <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">Nvidia DPU</a> support</p>
+</li>
+<li>
+<p>Shifting the MAAS API documentation toward <a href="https://www.openapis.org/">OpenAPI standards</a></p>
+</li>
+<li>
+<p>Shifting the MAAS documentation toward the <a href="https://diataxis.fr/">Diátaxis</a> style of documentation</p>
+</li>
+</ul>
+<p>These will be documented later in blog posts.</p>
+<p>This release also includes well over one-hundred <a href="#heading--MAAS-3.3-bug-list">bug fixes</a>.  Read on to catch up with what we&rsquo;ve done so far this cycle.</p>
+<p><a href="#heading--How-to-install-MAAS-3-3"><h2 id="heading--How-to-install-MAAS-3-3">How to install MAAS 3.3</h2></a></p>
 <p>MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-requirements.html">you can always double-check</a>.</p>
 <p><strong>NOTE:</strong> 
 <strong>NOTE</strong> that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.</p>
 <p><a href="#heading--fresh-install-3-3-snap"><h3 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h3></a></p>
 <p>To install MAAS 3.3 from a snap, simply enter the following:</p>
-<pre><code>$ sudo snap install --channel=3.3/beta maas
+<pre><code>$ sudo snap install --channel=3.3/candidate maas
 </code></pre>
 <p>After entering your password, the snap will download and install from the 3.3 channel.</p>
 <p><a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h3 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h3></a></p>
 <p>Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
-<pre><code>$ sudo snap refresh --channel=3.3/beta maas
+<pre><code>$ sudo snap refresh --channel=3.3/candidate maas
 </code></pre>
-<p>After entering your password, the snap will refresh from the 3.3 Beta channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
+<p>After entering your password, the snap will refresh from the 3.3 candidate channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
 <p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
 <p><a href="#heading--init-maas-poc"><h3 id="heading--init-maas-poc">How to initialise MAAS 3.3 snap for a test or POC environment</h3></a></p>
 <p>You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called <code>maas-test-db</code>, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.</p>
@@ -610,7 +638,7 @@ Codename:   focal
 </code></pre>
 <p>If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the following procedures should work, note that they are untested. Use at your own risk. Start by making a verifiable backup; see step 1, below.</p>
 <p>Back up your MAAS server completely; the tools and media are left entirely to your discretion. Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
-<p>Add the MAAS 3.3 Beta 1 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
+<p>Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
 <pre><code class="language-nohighlight">sudo apt-add-repository ppa:maas/3.3-next
 </code></pre>
 <p>Run the release upgrade like this, answering any questions with the given default values:</p>
@@ -1472,7 +1500,9 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 418627  ERROR    Failed to power on node           Wed, 17 Nov. 2021 00:05:32  Power on for the node failed: Failed talking to node's BMC: Failed to power pbpncx. BMC never transitioned from off to on.
 </code></pre>
 <p>In this case, we managed to recognise, rather quickly, that no physical interface had been defined for <code>ruling-bobcat</code>, hence deployment fails because MAAS can&rsquo;t communicate with the node&rsquo;s BMC.  There are many other issues you can recognise with careful use of MAAS events to audit machine behaviours.  We welcome your feedback on this new documentation endeavour.</p>
-<p><a href="#heading--MAAS-3-3-Beta-1-bug-list"><h2 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h2></a></p>
+<p><a href="#heading--MAAS-3.3-bug-list"><h2 id="heading--MAAS-3.3-bug-list">MAAS 3.3 bug list</h2></a></p>
+<p>The following sections enumerate the bugs we&rsquo;ve fixed in MAAS 3.3.</p>
+<p><a href="#heading--MAAS-3-3-Beta-1-bug-list"><h3 id="heading--MAAS-3-3-Beta-1-bug-list">MAAS 3.3 Beta 1 bug list</h3></a></p>
 <p>So far in MAAS 3.3, we&rsquo;ve fixed well over 100 bugs:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://bugs.launchpad.net/bugs/1762673">1762673</a><code>↗</code>: maas insists on running the proxy, even when it&rsquo;s disabled</li>
@@ -1570,7 +1600,7 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 <li><a href="https://bugs.launchpad.net/bugs/1988874">1988874</a><code>↗</code>: Release command is failing for ppc64 machine in our lab</li>
 <li><a href="https://bugs.launchpad.net/bugs/1989949">1989949</a><code>↗</code>: provisioningserver TestGetSourceAddress.test_returns_none_if_no_route_found sometimes fails locally</li>
 <li><a href="https://bugs.launchpad.net/bugs/1989970">1989970</a><code>↗</code>: Can&rsquo;t enlist machines on subnets with DNS set</li>
-<li><a href="https://bugs.launchpad.net/bugs/1989974">1989974</a>: rackd fails on CIS-hardened machine with &ldquo;Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)<code>↗</code>&ldquo;</li>
+<li><a href="https://bugs.launchpad.net/bugs/1989974">1989974</a><code>↗</code>: rackd fails on CIS-hardened machine with &ldquo;Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)&rdquo;</li>
 <li><a href="https://bugs.launchpad.net/bugs/1990014">1990014</a><code>↗</code>: regiond.conf &ldquo;debug_http: true&rdquo; causes image downloads from regiond to fail with 500 error code</li>
 <li><a href="https://bugs.launchpad.net/bugs/1990649">1990649</a><code>↗</code>: Kernel parameters form resets to previous value after save</li>
 <li><a href="https://bugs.launchpad.net/bugs/1990873">1990873</a><code>↗</code>: TestKeys - test_get_launchpad_crashes_for_user_not_found</li>
@@ -1627,12 +1657,12 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 <p><a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a></p>
 <p>Here are release notes for other relatively recent MAAS versions:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="https://maas.io/docs/what-is-new-with-maas-3-2">MAAS 3.2</a><code>↗</code>‘↗‘</li>
-<li><a href="https://maas.io/docs/what-is-new-with-maas-3-1">MAAS 3.1</a><code>↗</code>‘↗‘</li>
-<li><a href="https://maas.io/docs/what-is-new-with-maas-3-0">MAAS 3.0</a><code>↗</code>‘↗‘</li>
-<li><a href="https://maas.io/docs/what-is-new-with-maas-2-9">MAAS 2.9</a><code>↗</code>‘↗‘</li>
-<li><a href="https://maas.io/docs/what-is-new-with-maas-2-8">MAAS 2.8</a><code>↗</code>‘↗‘</li>
-<li><a href="https://maas.io/docs/what-is-new-with-maas-2-7">MAAS 2.7</a><code>↗</code>‘↗‘</li>
+<li><a href="https://maas.io/docs/what-is-new-with-maas-3-2">MAAS 3.2</a><code>↗</code></li>
+<li><a href="https://maas.io/docs/what-is-new-with-maas-3-1">MAAS 3.1</a><code>↗</code></li>
+<li><a href="https://maas.io/docs/what-is-new-with-maas-3-0">MAAS 3.0</a><code>↗</code></li>
+<li><a href="https://maas.io/docs/what-is-new-with-maas-2-9">MAAS 2.9</a><code>↗</code></li>
+<li><a href="https://maas.io/docs/what-is-new-with-maas-2-8">MAAS 2.8</a><code>↗</code></li>
+<li><a href="https://maas.io/docs/what-is-new-with-maas-2-7">MAAS 2.7</a><code>↗</code></li>
 </ul>
     </div>
   </body>

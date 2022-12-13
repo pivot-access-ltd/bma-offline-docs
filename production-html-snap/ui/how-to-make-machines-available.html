@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,7 +369,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -422,7 +439,7 @@
 <p><a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a></p>
 <p>On the &lsquo;Machines&rsquo; page of the web UI, click the &lsquo;Add hardware&rsquo; button and then select &lsquo;Machine&rsquo;.</p>
 <p>Fill in the form and hit &lsquo;Save machine&rsquo;. In this example, you are adding an IPMI machine:</p>
-<p><a href="../images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/faebe2fb37cd73252eaf9521ed1bcf31fb0e76f6.jpeg"></a></p>
 <p>The fields on the &ldquo;Add machine&rdquo; screen include the following items:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
@@ -452,7 +469,7 @@
 </ul>
 <p><a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a></p>
 <p>You can use the chassis feature to add multiple machines at once. To do this, instead of selecting &lsquo;Machine&rsquo; as above, choose &lsquo;Chassis&rsquo; from the drop-down menu. In the following example, MAAS will add all available VMs from the given  virsh address:</p>
-<p><a href="../images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e7f88bce68318cf3c6a8e97b4d31d0b6980e0f32.jpeg"></a></p>
 <p>The required fields will change based on the type of chassis you choose.</p>
 <p><strong>NOTE:</strong> 
 As with the manual method, the underlying machines will require netbooting.</p>
@@ -469,13 +486,13 @@ As with the manual method, the underlying machines will require netbooting.</p>
 <p>If the device is still present in the system, it will be recognised again (and thus &ldquo;recreated&rdquo;) when the machine is commissioned again.</p>
 <p><a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a></p>
 <p>Assume you have two machines available, like this:</p>
-<p><a href="../images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6f662618011e3eb1f8e0bfe85748825db4a6ac25.png"></a></p>
 <p>Select the machine <em>to which you want to clone configuration</em>, and select &ldquo;Clone from&hellip;&rdquo;</p>
-<p><a href="../images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/b4e42a59f1d4bc6d63f2cd24d77316eea3aada1b.png"></a></p>
 <p>Under &ldquo;1. Select the source machine&rdquo; &ndash; choose a machine from the attached list:</p>
-<p><a href="../images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/287bbf3db4bbc3253a976ecde8965c341fc1bee3.png"></a></p>
 <p>Under &ldquo;2. Select what to clone&rdquo;, choose &ldquo;Network&rdquo;, &ldquo;Storage&rdquo;, or both (here, we&rsquo;ve chosen &ldquo;Storage&rdquo;):</p>
-<p><a href="../images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/622afe3c0bcd4775ef4c19460cf0f1f480c11efb.png"></a></p>
 <p>Click &ldquo;Clone to machine&rdquo;. MAAS will report the status of the attempt.</p>
 <p><a href="#heading--how-to-examine-machines-and-machine-details"><h2 id="heading--how-to-examine-machines-and-machine-details">How to examine machines and machine details</h2></a></p>
 <p>This section describes the various ways you can evaluate the health and status of your MAAS machines, using the machine list.  It will show you:</p>
@@ -591,20 +608,20 @@ NETWORK: Vendor: Red Hat, Inc.
 <p><a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a></p>
 <p>Use the Add pool button to add a new resource pool.</p>
 <p>After giving your new pool a name and description, click the Add pool button:</p>
-<p><a href="../images/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/2f010325-nodes-resource-pools__2.5_add-pool.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a></p>
 <p><a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a></p>
 <p>To delete a resource pool, click the trashcan icon next to the pool.</p>
-<p><a href="../images/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a></p>
 <p><strong>NOTE:</strong> 
 If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.</p>
 <p><a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a></p>
 <p>To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.</p>
-<p><a href="../images/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a></p>
 <p><a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a></p>
 <p>To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
 <p><a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a></p>
 <p>You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host&rsquo;s configuration:</p>
-<p><a href="../images/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a></p>
 <p><a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a></p>
 <p>To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
 <p><a href="#heading--how-to-use-machine-storage"><h2 id="heading--how-to-use-machine-storage">How to use machine storage</h2></a></p>
@@ -629,10 +646,10 @@ The new default will only apply to newly-commissioned machines.</p>
 Only an administrator can modify storage at the block device level (providing the machine has a status of &lsquo;Ready&rsquo;).</p>
 <p><a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a></p>
 <p>A default erasure configuration can be set on the &lsquo;Settings&rsquo; page by selecting the &lsquo;Storage&rsquo; tab.</p>
-<p><a href="../images/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/4e90c4c7-installconfig-storage-erasure__defaults.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png"></a></p>
 <p>If option &lsquo;Erase machines&rsquo; disks prior to releasing&rsquo; is chosen then users will be compelled to use disk erasure. That option will be pre-filled in the machine&rsquo;s view and the user will be unable to remove the option.</p>
 <p>With the above defaults, the machine&rsquo;s view will look like this when the Release action is chosen:</p>
-<p><a href="../images/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></p>
 <p>Where &lsquo;secure erase&rsquo; and &lsquo;quick erase&rsquo; can then be configured by the user.</p>
 <p><a href="#heading--how-to-define-custom-storage-layouts"><h2 id="heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</h2></a></p>
 <p>MAAS 3.1 allows you to define a custom storage layout for a machine, via a custom commissioning script.  You must upload a script which conforms to the following rules:</p>

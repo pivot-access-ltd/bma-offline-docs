@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,7 +369,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -415,17 +432,17 @@
 <p>This article also includes a <a href="#heading--filter-properties">filter properties reference</a></p>
 <p><a href="#heading--How-to-construct-a-MAAS-search-parameter"><h2 id="heading--How-to-construct-a-MAAS-search-parameter">How to construct a MAAS search parameter</h2></a></p>
 <p>A valid MAAS search parameter looks like this:</p>
-<p><a href="../images/dcf5037cdd886eb85a2d305fd3df111b38865cea.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/dcf5037cdd886eb85a2d305fd3df111b38865cea.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/dcf5037cdd886eb85a2d305fd3df111b38865cea.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dcf5037cdd886eb85a2d305fd3df111b38865cea.png"></a></p>
 <p>Each search attribute is placed in the Search box, separated by spaces (if it&rsquo;s an &ldquo;AND&rdquo; search operation), or by parentheses and commas (if&rsquo;s it&rsquo;s an &ldquo;OR&rdquo; operation).  Specific search parameters use the notation &ldquo;parameter-name&rdquo; followed by a colon (&ldquo;:&rdquo;).  For example, here we&rsquo;re searching for &ldquo;pod:&rdquo;, which equates to the pod name (VM name).  </p>
 <p>You can match exactly by using the equals sign (&ldquo;=&rdquo;) with a filter fragment, or make a partial match by excluding the &ldquo;=&rdquo;.  You can get an idea how these parameters work by using the filter dropdowns in the UI, which generate a valid search expression in the &ldquo;Search&rdquo; box.  There is also a &ldquo;not&rdquo; operator (&ldquo;!&rdquo;) which can be applied to partial or exact matches.</p>
 <p><a href="#heading--simple-searches"><h2 id="heading--simple-searches">How to do simple searches</h2></a></p>
 <p>To begin searching, enter your search text. As you type, MAAS will update search results in real time. You can search across virtually every parameter, including domain, name, tag, power type, IP, status, zone, and so on.</p>
-<p><a href="../images/ccb90c91-manage-search__2.5_searchbar.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/ccb90c91-manage-search__2.5_searchbar.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png"></a></p>
 <p><a href="#heading--filtered-searches"><h2 id="heading--filtered-searches">How to do filtered searches</h2></a></p>
 <p>Filter your searches to major categories by selecting one from the Filters drop-down menu next to the search bar.</p>
-<p><a href="../images/6ac5b4ec-manage-search__2.5_filters.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6ac5b4ec-manage-search__2.5_filters.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png"></a></p>
 <p>For example, to find all &ldquo;New&rdquo; machines containing the name or tag &lsquo;quail&rsquo;, select Status/New from the drop-down Filters menu, and then type the word &lsquo;quail&rsquo; next to it:</p>
-<p><a href="../images/7b5d8e86-manage-search__2.5_filtered-search.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/7b5d8e86-manage-search__2.5_filtered-search.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png"></a></p>
 <p><a href="#heading--manual-filters"><h3 id="heading--manual-filters">How to create manual filters</h3></a></p>
 <p>Enter filters manually in the search bar to more precisely control your searches:</p>
 <pre><code class="language-no-highlight">filter-name:([=]val1,...,[=]val2)

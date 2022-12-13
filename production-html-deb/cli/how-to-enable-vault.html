@@ -22,7 +22,7 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../ui/basic-tutorials.html">
+	<a href="../ui/how-to-enable-vault.html">
 	  UI-only
 	</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -119,11 +119,6 @@
 	<li>
 	  <a href="how-to-report-a-bug.html">
 	    Report a bug
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
 	  </a>
 	</li>
       </ul>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,7 +366,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -398,15 +415,66 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>Basic tutorials</h1><!-- "Basic tutorials" -->
+  <h1>How to enable Vault</h1><!-- "How to enable Vault" -->
 
-<p>Here are some to tutorials to help you build confidence using MAAS:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="-.html">MAAS bootstrap tutorial</a></li>
-<li><a href="-.html">Try out the MAAS CLI</a></li>
-<li><a href="-.html">Create a custom image</a></li>
-<li><a href="-.html">Using jq with the MAAS CLI</a></li>
-</ul>
+<p>For MAAS to be able to integrate with Vault, a few steps are required.  Specifically, you must get a role_id and wrapped_token via Vault CLI (follow the instructions from <a href="https://learn.hashicorp.com/tutorials/vault/approle-best-practices?in=vault/auth-methods#approle-response-wrapping">Hashicorp Vault</a>).</p>
+<p>As an example only, MAAS can be configured by a Vault admin using the <code>vault</code> CLI.</p>
+<p>1) The <code>approle</code> engine must be enabled. This can be checked with:</p>
+<pre><code class="language-nohighlight">$ vault auth list
+</code></pre>
+<p>You should verify that it&rsquo;s mounted under <code>approle/</code>.  If not, it can be enabled via:</p>
+<pre><code class="language-nohighlight">$ vault auth enable approle
+</code></pre>
+<p>2) The KV v2 engine is mounted under the desired path (<code>secret/</code> by default, but can be configured as desired). A new KV engine can be mounted with:</p>
+<pre><code class="language-nohighlight">$ vault secrets enable -path $SECRETS_MOUNT kv-v2
+</code></pre>
+<p>3) An appropriate policy that can be assigned to approles configured in MAAS should be configured, providing read/write access to the secrets paths that MAAS will use.  As an example, here is a minimal policy:</p>
+<pre><code class="language-nohighlight">path &quot;$SECRETS_MOUNT/metadata/$SECRETS_PATH/&quot; {
+    capabilities = [&quot;list&quot;]
+}
+
+path &quot;$SECRETS_MOUNT/metadata/$SECRETS_PATH/*&quot; {
+    capabilities = [&quot;read&quot;, &quot;update&quot;, &quot;delete&quot;, &quot;list&quot;]
+}
+
+path &quot;$SECRETS_MOUNT/data/${SECRETS_PATH}/*&quot; {
+    capabilities = [&quot;read&quot;, &quot;create&quot;, &quot;update&quot;, &quot;delete&quot;]
+}
+</code></pre>
+<p>Here, <code>$SECRETS_PATH</code> is the desired path prefix under which MAAS will store secrets. This, together with <code>$SECRETS_MOUNT</code>, will be used when configuring MAAS later. Such a policy can be created in Vault as follows (assuming it was written to <code>$POLICY_FILE</code>):</p>
+<pre><code class="language-nohighlight">$ vault policy write $MAAS_POLICY $POLICY_FILE
+</code></pre>
+<p>4) For each MAAS region controller, create a role using the policy created above:</p>
+<pre><code class="language-nohighlight">$ vault write auth/approle/role/$ROLE_NAME \
+policies=$MAAS_POLICY token_ttl=5m
+</code></pre>
+<p>Tthe TTL for tokens can be tweaked as desired.</p>
+<p>While it&rsquo;s technically possible to use the same approle for all controllers, it&rsquo;s suggested to use different ones for each.  This increases security and reduces exposure in case credentials are leaked from one controller.</p>
+<p>Fetch the role ID for the created role with the following command:</p>
+<pre><code class="language-nohighlight">$ vault read auth/approle/role/$ROLE_NAME/role-id
+</code></pre>
+<p>5) For each created role, create a secret ID, returned with a wrapping token. This, together with the role ID, will be provided to the MAAS controller:</p>
+<pre><code class="language-nohighlight">$ vault write -wrap-ttl=5m auth/approle/role/$ROLE_NAME/secret-id
+</code></pre>
+<p><a href="#heading--Integrating-Vault-with-MAAS"><h2 id="heading--Integrating-Vault-with-MAAS">Integrating Vault with MAAS</h2></a></p>
+<p>Once MAAS is installed and configured, it&rsquo;s possible to integrate it with Vault with a few steps, using the CLI:</p>
+<pre><code class="language-nohighlight">sudo maas config-vault configure $URL $APPROLE_ID $WRAPPED_TOKEN $SECRETS_PATH --secrets-mount $SECRET_MOUNT
+</code></pre>
+<p>where the <code>$APPROLE_ID</code> and <code>$WRAPPED_TOKEN</code> are the ones obtained by Vault in the previous steps.</p>
+<p><strong>NOTE:</strong> 
+This operation must be performed on each region controller before the integration process can continue.</p>
+<p>Once this operation has been performed on all region controllers, it&rsquo;s possible to migrate secrets to Vault and complete the integration process, with the following command:</p>
+<pre><code class="language-nohighlight">$ sudo maas config-vault migrate
+</code></pre>
+<p>During migration, MAAS might be offline for a few seconds, but it will refresh quickly.  After this command, MAAS will be fully integrated and functional with Vault. You can confirm success in the UI by checking <strong>Settings &ndash;&gt; Configuration &ndash;&gt; Security</strong>:</p>
+<p><img alt="|649x586" src="https://lh3.googleusercontent.com/6huwJZKrnraNHM3hiiVGcrTgOSHD_b0KJOLL1N4s05rKnhQ09UYgMdQHuo5MT_N3lqKn02C_Qg7RQmfrELC4Xjj1pOjIo-N4mMBB8oRj1mfPLbyuw5oKO6jNvvAtUQxwrnKww5DDT1IYDfh9jFCwIoy6MLnOR831kzYHVsgDASfUNEMAW-dwJNdSAt_xTA"></p>
+<p><strong>NOTE:</strong><br>
+If you try to migrate secrets before all region controllers are configured with Vault, the migrate command will fail with an error message.</p>
+<p>If you&rsquo;ve configured all region controllers with Vault, but haven&rsquo;t yet migrated the secrets, the integration process will simply remain incomplete.  The UI will remind you:</p>
+<p><img alt="|670x338" src="https://lh3.googleusercontent.com/v2_glOaBx8hTy7TmhD3Y5qe34iFePJN5Z46ZeY6UvGXF7eD4m7chplXtbKIKZMchs2D5WAJSit0tlH27onPV1oUnLZVKwyVOncje3QaZ0n4d-1sjTV5sfuQFopuql_COE0FfvDSFTcKeElnThC3_gKIg6YlNQ-JKvLH6t9sgp6UwrTPAnHzoGpQ6eSmeBQ"></p>
+<p><a href="#heading--Updating-secrets-directly"><h2 id="heading--Updating-secrets-directly">Updating secrets directly</h2></a></p>
+<p>Secrets related to MAAS stored in Vault could be changed outside of MAAS, directly in Vault. If this happens, MAAS automatically uses the new value, as MAAS elements do not cache secrets &ndash; they are fetched every time they&rsquo;re needed.</p>
+<p>MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …). Those are currently stored in the database, which is not secure by default.</p>
     </div>
   </body>
 </html>

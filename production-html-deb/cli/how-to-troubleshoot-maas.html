@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,7 +366,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -401,9 +418,61 @@
   <h1>How to troubleshoot MAAS</h1><!-- "How to troubleshoot MAAS" -->
 <p>This article may help you deal with some common problems.  It is organised by topic:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</a></li>
 <li><a href="#heading--networking-issues">Networking issues</a></li>
 <li><a href="#heading--machine-life-cycle-failures">Machine life-cycle failures</a></li>
 <li><a href="#heading--custom-image-creation-problems">Custom image creation problems</a></li>
+</ul>
+<p><a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key"><h2 id="heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</h2></a></p>
+<p>MAAS hardware sync may leak the MAAS admin API key.  The simple solution for this is to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Rotate all admin tokens</li>
+<li>Re-deploy all machines that have hardware sync enabled</li>
+</ul>
+<p>For users who don’t want to re-deploy, the following instructions explain how to manually swap the token.</p>
+<p><a href="#heading--Manually-swapping-the-MAAS-admin-API-token"><h3 id="heading--Manually-swapping-the-MAAS-admin-API-token">Manually swapping the MAAS admin API token</h3></a></p>
+<p>Check if you have any machines with Hardware Sync enabled.  The easiest way to do this is a database query:</p>
+<pre><code class="language-nohighlight">select system_id 
+from maasserver_node 
+where enable_hw_sync = true;
+</code></pre>
+<p>On each of the reported machines there might be a leaked API key that belongs to the user with admin permissions. This will show only machines that do exist now. It is possible that such machines existed before, but were removed. We still do recommend you to rotate API keys.</p>
+<p>Here, on one of the machines, we have a leaked API key <code>PMmKvCw26reY7SaDet:g5rY7FNDu2ZDKER5zL:pNAHKcpR7eLWA6g2RSxrqdgSXEKgTAMT</code>:</p>
+<pre><code class="language-nohighlight">cat /lib/systemd/system/maas_hardware_sync.service
+
+[Unit]
+Description=MAAS Hardware Sync Service
+Documentation=&lt;https://maas.io&gt;
+Wants=maas_hardware_sync.timer
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/wget -O /usr/bin/maas-run-scripts &lt;http://10.100.0.10:5248/MAAS/maas-run-scripts&gt;
+ExecStartPre=/bin/chmod 0755 /usr/bin/maas-run-scripts
+ExecStartPre=/usr/bin/maas-run-scripts get-machine-token\
+    '&lt;http://10.100.0.10:5248/MAAS'\&gt;
+    'PMmKvCw26reY7SaDet:g5rY7FNDu2ZDKER5zL:pNAHKcpR7eLWA6g2RSxrqdgSXEKgTAMT'\
+    knt4rm\
+    /tmp/maas-machine-creds.yml
+ExecStart=/usr/bin/maas-run-scripts report-results --config /tmp/maas-machine-creds.yml
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Just to ensure this token actually belongs to an admin account, we can do another database query:</p>
+<pre><code class="language-nohighlight">select u.username, u.email 
+from auth_user u
+left join piston3_consumer c 
+on u.id = c.user_id
+-- we need only the consumer key of the token. token.split(&quot;:&quot;)[0]
+where key = 'PMmKvCw26reY7SaDet';
+</code></pre>
+<p>You should login into MAAS UI with an account owning a leaked API key, find a leaked API key and remove it. This is the most convinient way; it guarantees that all steps will be audited and all caches will be reset.  After API key is removed, MAAS CLI will stop working (if you were using the same token), so you will need to go through setting up the CLI credentials again.</p>
+<p>The hardware sync feature will stop working as well.  Here are two options:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Redeploy the machine, so it will use the new systemd template </li>
+<li>Manually create a credentials file and modify <code>/lib/systemd/system/maas_hardware_sync.service</code> to match</li>
 </ul>
 <p><a href="#heading--networking-issues"><h2 id="heading--networking-issues">Networking issues</h2></a></p>
 <p>The following networking issues may be creating problems for you:</p>
@@ -599,7 +668,7 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 <p>As images are constantly updated and refreshed, the backdoor will only ever be temporary, but it should help you login to see what may be going wrong with your node.</p>
 <p><a href="#heading--extract-the-cloud-image"><h4 id="heading--extract-the-cloud-image">Extract the cloud image</h4></a></p>
 <p>First, download the cloud image that corresponds to the architecture of your node. The <em>Images</em> page of the web UI lists the images currently being cached by MAAS:</p>
-<p><a href="../images/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
 <p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/">https://cloud-images.ubuntu.com/</a><code>↗</code>.</p>
 <p>For example:</p>
 <pre><code class="language-bash">wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
@@ -642,7 +711,7 @@ cp /home/ubuntu/xenial-customized.squashfs .
 chown maas:maas squashfs
 </code></pre>
 <p>You can now use this image to commission or deploy a node and access the root account with the backdoor password, such as by deploying the same specific image from the web UI to the node you wish to troubleshoot.</p>
-<p><a href="../images/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f622d104-troulbeshoot-faq__2.3_deploy.png"></a></p>
 <p><a href="#heading--Migrating-an-existing-snap-installation"><h3 id="heading--Migrating-an-existing-snap-installation">Migrating an existing snap installation</h3></a></p>
 <p>If you&rsquo;re currently running MAAS from a snap in <code>all</code> mode, you can easily migrate your database to a local PostgreSQL server with the following command:</p>
 <pre><code>sudo /snap/maas/current/helpers/migrate-vd Snapatabase

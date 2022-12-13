@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,7 +366,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -412,9 +429,9 @@
 <li>machines in a random status, but mostly Ready or Deployed (which best emulates a real-world scenario)</li>
 </ul>
 <p>To measure performance, we use continuous performance monitoring, arranged like this:</p>
-<p><a href="../images/d8a0887dd9d6f01311966c10f5d9093feb76806f.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d8a0887dd9d6f01311966c10f5d9093feb76806f.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/d8a0887dd9d6f01311966c10f5d9093feb76806f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d8a0887dd9d6f01311966c10f5d9093feb76806f.png"></a></p>
 <p>On a daily basis, we generate simulation data based on the assumptions above, for 10, 100, and 1000 machines.  These three datapoints help us get a sense of how our performance improvements scale.  A Jenkins tool exercises both the REST API and the WebSocket API, trapping the results in a database, from which we can build a dashboard.  The dashboard looks something like this:</p>
-<p><a href="../images/f5f831164e70273e81b4120b442469f665e16b47.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f5f831164e70273e81b4120b442469f665e16b47.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f5f831164e70273e81b4120b442469f665e16b47.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f5f831164e70273e81b4120b442469f665e16b47.png"></a></p>
 <p>Note that we always compare the current stable release with the release in development, so that we can spot issues before they become harder to find and fix.  We also capture profiling data that allows us to find bottlenecks, generating a heatmap that shows which parts of the code are causing issues at the moment.</p>
 <p>For example, comparing MAAS 3.2 to MAAS 3.1, machine listings load, on average, 32% faster for the datasets we&rsquo;re using.  </p>
 <p><a href="#heading--history-of-performance-efforts"><h3 id="heading--history-of-performance-efforts">Performance efforts to date</h3></a></p>

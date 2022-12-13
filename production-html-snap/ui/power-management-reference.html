@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,7 +369,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -417,9 +434,9 @@
 <p>You may also like to try <strong><a href="https://gilesknap.github.io/maaspower/main/index.html">maaspower</a></strong><code>↗</code> which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.</p>
 <p><a href="#heading--config-power-type"><h2 id="heading--config-power-type">How to configure a machine&rsquo;s power type</h2></a></p>
 <p>To configure a machine&rsquo;s power type, click on the machine from the &lsquo;Machines&rsquo; page of the web UI, then select its &lsquo;Configuration&rsquo; tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:</p>
-<p><a href="../images/4fae5977-nodes-power-types__2.4_undefined.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/4fae5977-nodes-power-types__2.4_undefined.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/4fae5977-nodes-power-types__2.4_undefined.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/4fae5977-nodes-power-types__2.4_undefined.png"></a></p>
 <p>Choose a type in the drop-down menu that corresponds to the machine&rsquo;s underlying machine&rsquo;s BMC card.</p>
-<p><a href="../images/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b53c6613-nodes-power-types__2.4_selection.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b53c6613-nodes-power-types__2.4_selection.png"></a></p>
 <p>Fill in the resulting form; the information required will depends on the power type:</p>
 <table>
 <thead>
@@ -516,7 +533,7 @@
 </tbody>
 </table>
 <p>Click &lsquo;Save changes&rsquo; to finish. Once that&rsquo;s done, MAAS performs a power check on the machine. A successful power check is a good indication that MAAS can properly communicate with the machine, that is, it should quickly result in a power status of &ldquo;Power off&rdquo;. A failed attempt will show:</p>
-<p><a href="../images/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3bd5e93b-nodes-power-types__2.4_power-error.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/3bd5e93b-nodes-power-types__2.4_power-error.png"></a></p>
 <p>If you see this error, double-check your entered values by editing the power type, or  consider another power type altogether.</p>
 <p>Another possible cause for this error may be the networking: traffic may be getting filtered between the rack controller and the BMC card.</p>
 <p><a href="#heading--power-catalogue"><h2 id="heading--power-catalogue">Power catalogue</h2></a></p>
@@ -1277,7 +1294,7 @@
 </table>
 <p><a href="#heading--example-virsh-kvm-power-type"><h2 id="heading--example-virsh-kvm-power-type">How to use the virsh power type</h2></a></p>
 <p>Consider a machine backed by VM. Below, a &lsquo;Power type&rsquo; of <code>Virsh</code> has been selected, and the &lsquo;Power address&rsquo; of <code>qemu+ssh://ubuntu@192.168.1.2/system</code> has been entered (replace values as appropriate).  The value of &lsquo;Power ID&rsquo; is the VM domain (guest) name, here <code>node2</code>.</p>
-<p><a href="../images/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></p>
+<p><a href="https://assets.ubuntu.com/v1/c75e00a8-nodes-power-types__2.4_example-virsh.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/c75e00a8-nodes-power-types__2.4_example-virsh.png"></a></p>
 <p><strong>NOTE:</strong> 
 The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly chosen string (here <code>dear.ant</code>). You should change this hostname to something descriptive, that helps you remember why this machine is in your MAAS network.</p>
 <p><a href="#heading--webhook"><h3 id="heading--webhook">Webhook</h3></a></p>
@@ -1522,9 +1539,9 @@ The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly cho
 <p><a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How to configure and use IBM Z with MAAS</h2></a></p>
 <p>The IBM Z or LinuxONE system can host MAAS controllers and is able to deploy predefined logical partitions (LPARs) KVM host(s), and virtual machines, if the mainframe is set up properly for MAAS.</p>
 <p>The basic architecture is similar to this:</p>
-<p><a href="../images/d78aec0bd5d5f485697701ed7316944f918fef94.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d78aec0bd5d5f485697701ed7316944f918fef94.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/d78aec0bd5d5f485697701ed7316944f918fef94.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d78aec0bd5d5f485697701ed7316944f918fef94.png"></a></p>
 <p>Networking would be structured like this:</p>
-<p><a href="../images/841305949182ba64037f9806396a0e60fdc46d23.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/841305949182ba64037f9806396a0e60fdc46d23.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/841305949182ba64037f9806396a0e60fdc46d23.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/841305949182ba64037f9806396a0e60fdc46d23.png"></a></p>
 <p>Note that net-booting the KVM guests (through the two bridges) can be problematic.  There are two options:</p>
 <ol>
 <li>
@@ -1568,53 +1585,53 @@ The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly cho
 <p>Be aware that these are minimum system requirements.</p>
 <p><a href="#heading--ibm-z-login"><h3 id="heading--ibm-z-login">Access the HMC and login to the IBM Z</h3></a></p>
 <p>To login to the HMC, you must have at least “system programmer” privileges. Gaining that level of access is beyond the scope of this document. Once you are sure that you have the necessary access, you first need to navigate to the Hardware Management Console (HMC) application in your Web browser:</p>
-<p><a href="../images/d085c8113e403546484778c858c27344e8986597.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d085c8113e403546484778c858c27344e8986597.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/d085c8113e403546484778c858c27344e8986597.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d085c8113e403546484778c858c27344e8986597.png"></a></p>
 <p>Click on the &ldquo;Log on&hellip;&rdquo; link, which will bring you to a login screen:</p>
-<p><a href="../images/5ccdfac4dc985260dcedd01284d24c5e8e5199d9.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/5ccdfac4dc985260dcedd01284d24c5e8e5199d9.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/5/5ccdfac4dc985260dcedd01284d24c5e8e5199d9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5ccdfac4dc985260dcedd01284d24c5e8e5199d9.png"></a></p>
 <p>Upon successfully logging on, you will land on the Welcome Screen:</p>
-<p><a href="../images/d18afe140a1971621ed44fa5fae36033927e293e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d18afe140a1971621ed44fa5fae36033927e293e.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/d18afe140a1971621ed44fa5fae36033927e293e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d18afe140a1971621ed44fa5fae36033927e293e.png"></a></p>
 <p>Select the &ldquo;Tasks Index&rdquo; on the left-hand navigation:</p>
-<p><a href="../images/c030c8280b0a6dcfdd0365f9cf50238ae708e34b.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c030c8280b0a6dcfdd0365f9cf50238ae708e34b.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c030c8280b0a6dcfdd0365f9cf50238ae708e34b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c030c8280b0a6dcfdd0365f9cf50238ae708e34b.jpeg"></a></p>
 <p>From here, you will be able to access the commands needed to prepare your IBM Z to host MAAS.</p>
 <p><a href="#heading--set-up-ibm-z-partition"><h3 id="heading--set-up-ibm-z-partition">Set up a suitable IBM Z partition for a MAAS machine</h3></a></p>
 <p>In order to prevent MAAS from taking over the entire system, you must assign both the controller and the ‘machines’ / KVM hosts to specific partitions, with suitable limitations. To set up suitable IBM Z partitions for hosting MAAS, you must choose “Partition Details” from the “Tasks Index,” which will bring you to a screen like this one:</p>
-<p><a href="../images/29e0cc00d68a5add1b13b1d50313ff6966f251a9.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/29e0cc00d68a5add1b13b1d50313ff6966f251a9.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/29e0cc00d68a5add1b13b1d50313ff6966f251a9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/29e0cc00d68a5add1b13b1d50313ff6966f251a9.png"></a></p>
 <p>You must then choose the “target object” (in this case we’ve chosen TA05) to be operated upon:</p>
-<p><a href="../images/754c4926ecf5d9330b60c9b58bdd15bde6f24144.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/754c4926ecf5d9330b60c9b58bdd15bde6f24144.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/7/754c4926ecf5d9330b60c9b58bdd15bde6f24144.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/754c4926ecf5d9330b60c9b58bdd15bde6f24144.png"></a></p>
 <p>Click “OK,” and you’ll arrive at a screen similar to the one below:</p>
-<p><a href="../images/0ecf9bd89c132fd2c7ff8b879dd6c1b4d3090a99.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/0ecf9bd89c132fd2c7ff8b879dd6c1b4d3090a99.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/0/0ecf9bd89c132fd2c7ff8b879dd6c1b4d3090a99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0ecf9bd89c132fd2c7ff8b879dd6c1b4d3090a99.png"></a></p>
 <p>Make sure you’re on the “Partitions” tab, and select the desired object (“TA05…”):</p>
-<p><a href="../images/018d8309a1a16571df56a6672cff26e60f42075a.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/018d8309a1a16571df56a6672cff26e60f42075a.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/0/018d8309a1a16571df56a6672cff26e60f42075a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/018d8309a1a16571df56a6672cff26e60f42075a.jpeg"></a></p>
 <p>Right-click on the selected object and select “Partition Details:”</p>
-<p><a href="../images/5a7f696435b504eb212234acdd09c928f16b1670.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/5a7f696435b504eb212234acdd09c928f16b1670.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/5/5a7f696435b504eb212234acdd09c928f16b1670.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5a7f696435b504eb212234acdd09c928f16b1670.jpeg"></a></p>
 <p>On the “General” tab, edit the partition details to suit your proposed MAAS deployment:</p>
-<p><a href="../images/60ff5ca98d8b615ee4a947607872c973cf2c7f41.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/60ff5ca98d8b615ee4a947607872c973cf2c7f41.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/60ff5ca98d8b615ee4a947607872c973cf2c7f41.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/60ff5ca98d8b615ee4a947607872c973cf2c7f41.png"></a></p>
 <p>Next, you will set up the networking details for this partition, as shown in the following section.</p>
 <p><a href="#heading--set-up-ibm-z-networking"><h3 id="heading--set-up-ibm-z-networking">Set up IBM Z networking for a MAAS machine</h3></a></p>
 <p>To properly enable networking within the IBMZ partitions, you must change to the “Network” tab under “Partition Details:”</p>
-<p><a href="../images/daf386497781df42ba7ffaa518c1f186ebef66ee.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/daf386497781df42ba7ffaa518c1f186ebef66ee.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/daf386497781df42ba7ffaa518c1f186ebef66ee.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/daf386497781df42ba7ffaa518c1f186ebef66ee.png"></a></p>
 <p>Click on the NIC of interest to bring up the “NIC Details” screen:</p>
-<p><a href="../images/e9b65711cf97dd722db1b1df4b69d4f590166a99.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e9b65711cf97dd722db1b1df4b69d4f590166a99.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e9b65711cf97dd722db1b1df4b69d4f590166a99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e9b65711cf97dd722db1b1df4b69d4f590166a99.png"></a></p>
 <p>Confirm that the parameters on this screen are consistent with your planned MAAS deployment, then bring up the network adapter(either OSA or Hipersockets) by selecting it:</p>
-<p><a href="../images/0a0873d7cd40147884c861d1fcde15ddc37c8853.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/0a0873d7cd40147884c861d1fcde15ddc37c8853.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png"></a></p>
 <p>Ensure that all settings on the “General” tab conform to your planned MAAS deployment; then select the “Network Interface Cards” tab on the left-hand navigation:</p>
-<p><a href="../images/0a0873d7cd40147884c861d1fcde15ddc37c8853.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/0a0873d7cd40147884c861d1fcde15ddc37c8853.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0a0873d7cd40147884c861d1fcde15ddc37c8853.png"></a></p>
 <p>Again, ensure that the parameters associated with the networking arrangement are consistent with your planned MAAS deployment.</p>
 <p>Next, you will set up the storage layout for your MAAS partition(s).</p>
 <p><a href="#heading--set-up-ibm-z-storage"><h3 id="heading--set-up-ibm-z-storage">Set up IBM Z storage for a MAAS machine</h3></a></p>
 <p>To set up suitable storage for a MAAS deployment, you should bring up the “Partition Details” for your chosen MAAS partition and select the “Storage” tab from the left-hand navigation:</p>
-<p><a href="../images/c25792eeacd5aef57ca74a68b203c23ed74268d7.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c25792eeacd5aef57ca74a68b203c23ed74268d7.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c25792eeacd5aef57ca74a68b203c23ed74268d7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c25792eeacd5aef57ca74a68b203c23ed74268d7.png"></a></p>
 <p>Choose the “VOLUMES” sub-tab, and lick on the hyperlinked partition name to bring up the storage configuration tab:</p>
-<p><a href="../images/cf8d1427abda94ccd3b79966d06bee210ac1240b.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/cf8d1427abda94ccd3b79966d06bee210ac1240b.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/cf8d1427abda94ccd3b79966d06bee210ac1240b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/cf8d1427abda94ccd3b79966d06bee210ac1240b.png"></a></p>
 <p>Click on “GET DETAILS” for the Boot Volume in the Volume list to bring up the “Configuration details” screen:</p>
-<p><a href="../images/a081c97b8196e708495156187b983b70c32fcdc5.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a081c97b8196e708495156187b983b70c32fcdc5.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a081c97b8196e708495156187b983b70c32fcdc5.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a081c97b8196e708495156187b983b70c32fcdc5.png"></a></p>
 <p>Ensure that the Boot Volume is configured appropriately for your planned MAAS deployment, then click “Done.” Then return to the storage configuration tab and choose the Data Volume, and tune it to the appropriate parameters.</p>
 <p>Next, choose the “ADAPTERS” sub-tab to bring up information on the storage adapters:</p>
-<p><a href="../images/821edff17e3fe8f2fbf9b5cb1682928dc9bb34d7.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/821edff17e3fe8f2fbf9b5cb1682928dc9bb34d7.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/8/821edff17e3fe8f2fbf9b5cb1682928dc9bb34d7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/821edff17e3fe8f2fbf9b5cb1682928dc9bb34d7.png"></a></p>
 <p>Set any necessary parameters to conform to your planned MAAS deployment.</p>
 <p><a href="#heading--set-the-boot-parameters"><h3 id="heading--set-the-boot-parameters">Set the partition boot parameters</h3></a></p>
 <p>Return to the “Partition Details” screen and select the “Boot” tab in the left-hand navigation:</p>
-<p><a href="../images/c5df4937135c1a9a1758b20855742bd038700c65.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/c5df4937135c1a9a1758b20855742bd038700c65.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/c/c5df4937135c1a9a1758b20855742bd038700c65.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5df4937135c1a9a1758b20855742bd038700c65.png"></a></p>
 <p>Change any settings as necessary to support your planned MAAS deployment.</p>
 <p><a href="#heading--set-up-ibm-z-enlistment"><h3 id="heading--set-up-ibm-z-enlistment">Set up your IBM Z virtual machine for enlistment</h3></a></p>
 <p>To cause IBM Z KVM partition guests to enlist, it’s necessary to manually put in the BMC information for each guest. MAAS can then detect the guest, enlist it, and boot it as necessary.</p>

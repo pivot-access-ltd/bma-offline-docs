@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -122,11 +122,6 @@
 	<li>
 	  <a href="how-to-report-a-bug.html">
 	    Report a bug
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
 	  </a>
 	</li>
       </ul>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -338,29 +338,19 @@
 	</li>
       </ul>
       <strong>
-	<a href="explanation.html">
-	Explanations
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
 	</a>
       </strong>
       <ul>
 	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
 	  </a>
 	</li>
 	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
 	  </a>
 	</li>
       </ul>
@@ -379,7 +369,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -465,7 +455,7 @@
 <p>The rack controller installs and configures <code>bind</code> as a forwarder. All machines communicate via the rack controller directly.</p>
 <p><strong>NOTE:</strong> 
 Zone management and maintenance still happen within the region controller.</p>
-<p><a href="../images/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"></a></p>
 <p><a href="#heading--rackregion"><h4 id="heading--rackregion">How region and rack controllers communicate</h4></a></p>
 <p>The MAAS region and rack controllers interact in a number of different ways, depending upon the operation you&rsquo;ve requested.  Consider the process of commissioning a machine, that is, taking over the machine and gathering information on its available resources, including CPU, RAM, storage, and MIB information (obtainable via LLDP requests).  Here&rsquo;s a rough idea of what that sequence looks like &ndash; a sequence that is representative of the communication between rack and region controllers:</p>
 <ol>

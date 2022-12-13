@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,7 +369,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
@@ -504,7 +521,7 @@ This was fixed in 2.9 and backported to 2.8.3.</p>
 <p>MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a>-based VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU)<code>↗</code>. Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.</p>
 <h2>UI performance improvements for the machine listing page</h2>
 <p>Within MAAS 2.8, we have made a number of performance improvements to everything related to the machine listing.  Some of the most visible changes involve the way that long lists are presented within categories (see the example below), but there are a number of other changes that make the list easier and more efficient to use.</p>
-<p><a href="../images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a> </p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/b4ec4124225f052fb8646f754c22d287fffcc850.jpeg"></a> </p>
 <p>Among those other changes are persisting UI state for grouping, new grouping options, bookmark-able URLs with filter and search parameters, and many other performance improvements. If you&rsquo;re interested in more details, see this <a href="https://ubuntu.com/blog/building-a-cross-framework-ui-with-single-spa-in-maas-2-8">blog post</a><code>↗</code>.</p>
 <h2>Support for using an external/remote PostgreSQL MAAS database with the snap version of MAAS</h2>
 <p>In order to make MAAS more scalable, we have separated the MAAS database from the MAAS snap, so that the DB can be situated separately.  MAAS 2.8 now allows the MAAS DB to be located outside the snap on localhost, or on a separate, external or remote server.  We complement this capability with extensive instructions for setting up and managing this configuration.  To support those who are testing MAAS, we&rsquo;ve also provided a test DB configuration that embeds the database in a separate snap that can easily be connected to MAAS.</p>
