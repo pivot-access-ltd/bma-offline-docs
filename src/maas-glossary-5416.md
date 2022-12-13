@@ -137,7 +137,7 @@ The following conceptual diagram shows two fabrics in the same data centre or re
 
 A space is a logical grouping of subnets that can communicate with one another. Spaces can be arranged to group subnets according to various parameters.  One of the most common examples is a DMZ space, which might group subnets presenting a web interface to the public Internet.  Behind this DMZ would be specific applications that aren't allowed to interact directly with the user, but instead must interact with a Web UI in the DMZ space.  MAAS does not create a default space during installation.
 
-Spaces facilitate machine allocation for [Juju](https://jaas.ai/). See [Juju network spaces](https://jaas.ai/docs/spaces)`↗` for more details.
+Spaces facilitate machine allocation for [Juju](https://jaas.ai/)`↗`. See [Juju network spaces](https://jaas.ai/docs/spaces)`↗` for more details.
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
