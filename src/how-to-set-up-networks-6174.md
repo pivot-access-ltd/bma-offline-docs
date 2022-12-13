@@ -22,9 +22,9 @@ Some elements of MAAS networking are unique to the product, while others are sta
 
 <a href="#heading--about-pxe-booting"><h3 id="heading--about-pxe-booting">PXE booting is essential</h3></a>
 
-PXE booting, or [Preboot eXecution Environment](https://en.wikipedia.org/wiki/Preboot_Execution_Environment), refers to the ability to boot a machine via a Network Interface Card (NIC).  PXE booting requires a Network Interface Card (NIC)`↗` which is equipped with a PXE API which can be accessed by the server wishing to boot the device.
+PXE booting, or [Preboot eXecution Environment](https://en.wikipedia.org/wiki/Preboot_Execution_Environment)`↗`, refers to the ability to boot a machine via a Network Interface Card (NIC).  PXE booting requires a Network Interface Card (NIC)`↗` which is equipped with a PXE API which can be accessed by the server wishing to boot the device.
 
-This PXE API has a very small hardware footprint, both to keep NIC density smaller (small footprint PXE ROMs) and to simplify the PXE boot process.  Typically a PXE-capable NIC implements the PXE API with a simple universal network device interface, a tiny UDP/IP stack, a special pre-boot DHCP module, and a trivial file transfer protocol (TFTP) module.  TFTP does have low throughput, but it has been amended twice, once with [better block sizes](https://datatracker.ietf.org/doc/html/rfc2348), and once with [better window sizes](https://datatracker.ietf.org/doc/html/rfc7440)`↗`.  Both of these help to allow for payload deliveries large enough to accommodate basic bootable images, such as the ephemeral Ubuntu image that MAAS transmits, via TFTP, in order to commission a machine.
+This PXE API has a very small hardware footprint, both to keep NIC density smaller (small footprint PXE ROMs) and to simplify the PXE boot process.  Typically a PXE-capable NIC implements the PXE API with a simple universal network device interface, a tiny UDP/IP stack, a special pre-boot DHCP module, and a trivial file transfer protocol (TFTP) module.  TFTP does have low throughput, but it has been amended twice, once with [better block sizes](https://datatracker.ietf.org/doc/html/rfc2348)`↗`, and once with [better window sizes](https://datatracker.ietf.org/doc/html/rfc7440)`↗`.  Both of these help to allow for payload deliveries large enough to accommodate basic bootable images, such as the ephemeral Ubuntu image that MAAS transmits, via TFTP, in order to commission a machine.
 
 PXE absolutely depends on DHCP, which kicks off the process by assigning an IP address, so that the TFTP server can send a network boot program and its peripheral files.  The machine in question is powered on via its baseboard management controller (BMC).  The UEFI PXE firmware broadcasts a DHCPDISCOVER message (customised for PXE) to the UDP port (67), requesting network config and booting parameters.  Because the discover message is PXE-specific, a PXE-enabled DHCP server is normally required.  Otherwise, the DHCPOFFER will have networking information, but not PXE parameters, which include the IP address of the TFTP server and the name of the network booting program; thus the PXE client would not be able to boot.
 
@@ -46,19 +46,19 @@ Power drivers are units of software, embedded in MAAS, that interface with the [
 
 IPMI is designed as a set of protocols that bypass the system's CPU, BIOS, UEFI, and/or OS.  Essentially, IPMI provides a network connection directly to the hardware, allowing a number of management and monitoring functions.  From the perspective of MAAS, the main use of IPMI is to access the machine's BMC to power-cycle the machine.  In order for [PXE-booting](#heading--about-pxe-booting) to start, the machine itself must send a PXE-enabled DHCPDISCOVER, which requires the machine to be powered on.
 
-Specific machine models have different IPMI parameters that can or must be used to successfully power on a machine, although many models respond reasonably well to standard IPMI or [Redfish](https://en.wikipedia.org/wiki/Redfish_(specification)) commands. MAAS includes customised power drivers for all of the machines listed in the [power catalogue](/t/power-management-reference/5246#heading--power-catalogue)`↗`.
+Specific machine models have different IPMI parameters that can or must be used to successfully power on a machine, although many models respond reasonably well to standard IPMI or [Redfish](https://en.wikipedia.org/wiki/Redfish_(specification)`↗`) commands. MAAS includes customised power drivers for all of the machines listed in the [power catalogue](/t/power-management-reference/5246#heading--power-catalogue)`↗`.
 
 IPMI provides many other functions and capabilities besides power-cycling the machine, such as monitoring system state (e.g., temperature) and possibly adjusting some parameters remotely.  MAAS generally does not avail itself of these additional features.
 
 <a href="#heading--about-proxies"><h3 id="heading--about-proxies">Proxies</h3></a>
 
-A [proxy server](https://en.wikipedia.org/wiki/Proxy_server) ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm)`↗`.  
+A [proxy server](https://en.wikipedia.org/wiki/Proxy_server)`↗` ("proxy service" or just "proxy") is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm)`↗`.  
 
 MAAS provides an [internal proxy](/t/how-to-connect-maas-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-connect-maas-networks/5164#heading--configure-proxy) if desired.
 
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">RPC</h3></a>
 
-A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call), or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, [RPC is used for communication between the region and rack controllers](/t/how-to-tune-controllers-6498#heading--rackregion)`↗`, specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine's DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. 
+A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call)`↗`, or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, [RPC is used for communication between the region and rack controllers](/t/how-to-tune-controllers-6498#heading--rackregion)`↗`, specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine's DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. 
 
 <a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">Waht is network discovery?</h3></a>
 
@@ -75,7 +75,7 @@ An unknown discovered device can be added to MAAS as a device, or as a network i
 
 <a href="#heading--subnets"><h2 id="heading--subnets">Subnets</h2></a>
 
-A [subnet](https://en.wikipedia.org/wiki/Subnetwork#firstHeading) is a "layer 3" network, defined by a network address and a network mask length (in bits)`↗` and usually written in "CIDR" format. MAAS supports IPv4 and IPv6 subnets. Examples include:
+A [subnet](https://en.wikipedia.org/wiki/Subnetwork#firstHeading)`↗` is a "layer 3" network, defined by a network address and a network mask length (in bits)`↗` and usually written in "CIDR" format. MAAS supports IPv4 and IPv6 subnets. Examples include:
 
 ``` no-highlight
 - 0.0.0/8
@@ -420,13 +420,13 @@ Routers are the multiplexing elements in AAC networks.  Ladders of lateral paths
 
 Issues with ladder networks drove the development of cloud network architectures (also known as Clos architectures), which address financial and performance impacts of large networks in a much simpler way. [Cloud networking](#About-cloud-networks) is covered elsewhere, and should be next on your reading list.
 
-[Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading) is a very large topic unto itself.  It's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading), [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading), and bonded NICs, aka [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation#firstHeading)`↗`.  All of these come into play every time a MAAS network is modified.
+[Network switching](https://en.wikipedia.org/wiki/Network_switch#firstHeading)`↗` is a very large topic unto itself.  It's worth catching up if you're weak in this area, since some elements of switching are exposed in MAAS networks.  Also important to review are [routers](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading)`↗`, [bridges](https://en.wikipedia.org/wiki/Network_bridge#firstHeading)`↗`, and bonded NICs, aka [link aggregation](https://en.wikipedia.org/wiki/Link_aggregation#firstHeading)`↗`.  All of these come into play every time a MAAS network is modified.
 
 <a href="#heading--borrowed-from-ma-bell"><h4 id="heading--borrowed-from-ma-bell">Yesterday's phone network is today's Internet</h4></a>
 
 Most of today's modern networking is a direct translation of the landline telephone system into the digital space.  Network switching is really just an outgrowth of [crossbar](https://en.wikipedia.org/wiki/Number_Five_Crossbar_Switching_System#firstHeading)`↗`, which is how local phone calls were "switched" or "routed" to the correct telephone line.  In most cases, every number dialled closed one more relay, with all seven relays making a connection to the target phone line.
 
-Small exchanges often "swallowed" dialled digits. For example, if every local phone number had the exchange "881", those numbers wouldn't trigger any relays beyond just sending the call to the "881" [frameset](https://en.wikipedia.org/wiki/Distribution_frame#firstHeading).  In some small exchanges, it wasn't even necessary to dial the exchange, just the four digits of the phone number, if the caller had the same exchange.  Essentially, these were the early [subnets](https://en.wikipedia.org/wiki/Subnetwork#firstHeading)`↗`.
+Small exchanges often "swallowed" dialled digits. For example, if every local phone number had the exchange "881", those numbers wouldn't trigger any relays beyond just sending the call to the "881" [frameset](https://en.wikipedia.org/wiki/Distribution_frame#firstHeading)`↗`.  In some small exchanges, it wasn't even necessary to dial the exchange, just the four digits of the phone number, if the caller had the same exchange.  Essentially, these were the early [subnets](https://en.wikipedia.org/wiki/Subnetwork#firstHeading)`↗`.
 
 Over time, the increasing density of telephone coverage and self-service long-distance changed all this.  More wires had to be installed, and repeaters were needed to get signals across longer distances as local exchanges were replaced by centralised exchanges called "central offices" (CO).  A CO would have frames for 8 or 10 exchanges, essentially serving the same function as today's network routers.
 
@@ -440,7 +440,7 @@ The T1 lines used ordinary, double-twisted-pair copper wiring, with repeaters at
 
 <a href="#heading--internet-infrastructure"><h4 id="heading--internet-infrastructure">More about Internet infrastructure</h4></a>
 
-The Internet is theoretically survivable because every computer can connect to every other computer.  That's not standard operating procedure.  High-level networks [(Network Service Providers, NSPs)](https://en.wikipedia.org/wiki/Internet_service_provider#firstHeading) connect to at least three top level nodes called Network Access Points (NAPs), aka [Internet Exchange Points](https://en.wikipedia.org/wiki/Internet_exchange_point#firstHeading)`↗`.  At these points, packets to jump from one NSP to another. NAPs are public access points, Metropolitan Area Exchanges are private. These are virtually indistinguishable for the purposes of this discussion.
+The Internet is theoretically survivable because every computer can connect to every other computer.  That's not standard operating procedure.  High-level networks [(Network Service Providers, NSPs)](https://en.wikipedia.org/wiki/Internet_service_provider#firstHeading)`↗` connect to at least three top level nodes called Network Access Points (NAPs), aka [Internet Exchange Points](https://en.wikipedia.org/wiki/Internet_exchange_point#firstHeading)`↗`.  At these points, packets to jump from one NSP to another. NAPs are public access points, Metropolitan Area Exchanges are private. These are virtually indistinguishable for the purposes of this discussion.
 
 As an aside, many of the MAEs are the residue of the phone company's early T1 lines, which was the initial backbone for the Internet.  These MAEs act just like a NAP for the purposes of this discussion.
 
@@ -965,7 +965,7 @@ There is also gratuitous ARP, when the source and destination IP addresses are t
 
 2. To update the source machine's new MAC address (e.g., a new NIC card was installed) in upstream ARP cache entries.  This is something akin to pre-caching MAC addresses before they're actually needed.
 
-You can [read more about](https://en.wikipedia.org/wiki/Address_Resolution_Protocol) these (and many more)`↗` nuances of ARP, but this introduction should answer most of the immediate questions. 
+You can [read more about](https://en.wikipedia.org/wiki/Address_Resolution_Protocol)`↗` these (and many more) nuances of ARP, but this introduction should answer most of the immediate questions. 
 
 <a href="#heading--about-tcp"><h3 id="heading--about-tcp">About TCP</h3></a>
 
@@ -1058,7 +1058,7 @@ A [server](https://en.wikipedia.org/wiki/Server_%28computing%29#Classes_of_compu
 
 <a href="#heading--hub"><h4 id="heading--hub">Hub</h4></a>
 
-[Hubs](https://en.wikipedia.org/wiki/Ethernet_hub#firstHeading) essentially started as repeaters.  While they may be able to connect more than two computers together (i.e., multiple RJ45 ports)`↗`, they provide no improvement over simple bus networks, since every connected NIC must examine every packet.  They are rarely used anymore.
+[Hubs](https://en.wikipedia.org/wiki/Ethernet_hub#firstHeading)`↗` essentially started as repeaters.  While they may be able to connect more than two computers together (i.e., multiple RJ45 ports)`↗`, they provide no improvement over simple bus networks, since every connected NIC must examine every packet.  They are rarely used anymore.
 
 <a href="#heading--mac-address"><h4 id="heading--mac-address">MAC address</h4></a>
 
@@ -1066,14 +1066,14 @@ A [MAC address](https://en.wikipedia.org/wiki/MAC_address#firstHeading)`↗` or 
 
 <a href="#heading--network-cable"><h4 id="heading--network-cable">Network cable</h4></a>
 
-[Network cables](https://en.wikipedia.org/wiki/Category_5_cable#firstHeading) are special cables that connect non-wireless-based nodes.  They consist of our pairs of insulated, 24-gauge wire, colour-coded (solid/striped)`↗`, usually in four colours: blue, green, orange, and brown.  The matching colour pairs are twisted together, each pair at a different turn rate to prevent electromagnetic interference between pairs.
+[Network cables](https://en.wikipedia.org/wiki/Category_5_cable#firstHeading)`↗` are special cables that connect non-wireless-based nodes.  They consist of our pairs of insulated, 24-gauge wire, colour-coded (solid/striped)`↗`, usually in four colours: blue, green, orange, and brown.  The matching colour pairs are twisted together, each pair at a different turn rate to prevent electromagnetic interference between pairs.
 These twists must be maintained all the way up to the (RJ45) connector.
 
 Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable length is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with [repeaters](#heading--repeater), which amplify the signal and relay it to the next repeater or NIC.
 
 <a href="#heading--repeater"><h4 id="heading--repeater">Repeater</h4></a>
 
-Technically, a [repeater](https://en.wikipedia.org/wiki/Repeater#firstHeading) is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](#heading--hub) or [switches](#heading--switch)`↗`, which can usually perform other functions as well.
+Technically, a [repeater](https://en.wikipedia.org/wiki/Repeater#firstHeading)`↗` is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](#heading--hub) or [switches](#heading--switch)`↗`, which can usually perform other functions as well.
 
 <a href="#heading--switch"><h4 id="heading--switch">Switch</h4></a>
 
@@ -1099,7 +1099,7 @@ A [patch panel](https://en.wikipedia.org/wiki/Patch_panel#firstHeading)`↗` is 
 
 <a href="#heading--lan"><h4 id="heading--lan">LAN</h4></a>
 
-Besides topology, networks can also be classified by their size, range, or "reach."  One such classification is the [Local Area Network (LAN)](https://en.wikipedia.org/wiki/Local_area_network#firstHeading), which connects computers in close proximity (about 300 feet)`↗`.
+Besides topology, networks can also be classified by their size, range, or "reach."  One such classification is the [Local Area Network (LAN)](https://en.wikipedia.org/wiki/Local_area_network#firstHeading)`↗`, which connects computers in close proximity (about 300 feet)`↗`.
 
 <a href="#heading--WAN"><h4 id="heading--WAN">WAN</h4></a>
 
@@ -1111,7 +1111,7 @@ A [metro area network or MAN](https://en.wikipedia.org/wiki/Metropolitan_area_ne
 
 <a href="#heading--router"><h4 id="heading--router">Router</h4></a>
 
-A [router](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading) is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.  Choices about routing are so important that we'll spend a [great deal of time on the subject](#heading--routing-still-rules)`↗` when we learn about cloud networking.
+A [router](https://en.wikipedia.org/wiki/Router_%28computing%29#firstHeading)`↗` is a device that transfers packets from one network to another.  Unlike switches, which only ensure that pre-addressed packets get to the correct recipient machines, routers actually modify or encapsulate packets to ensure that they can travel on other networks to reach a remote destination.  Choices about routing are so important that we'll spend a [great deal of time on the subject](#heading--routing-still-rules)`↗` when we learn about cloud networking.
 
 <a href="#heading--About-cloud-networks"><h2 id="heading--About-cloud-networks">About cloud networks</h2></a>
 
@@ -1124,19 +1124,19 @@ Cloud network architectures deviate significantly from the architecture of the I
 
 <a href="#heading--clos-architecture"><h3 id="heading--clos-architecture">About old and new network architectures</h3></a>
 
-Before there were networks, monolithic applications ran on a mainframe with hardwired I/O devices.  As CPUs proliferated in separate enclosures, LANs like [Banyan Vines](https://en.wikipedia.org/wiki/Banyan_VINES) grew up.  Proprietary mismatch led to the [OSI model](https://maas.io/docs/about-tcp-ip-networks#heading--about-the-osi-model).  Next came the Web, which distributed processing to client devices.  Now, we have the idea of generic switches and servers in cloud and bare-metal clusters.  Servers have shifted from dedicated applications to being completely [virtualised](https://en.wikipedia.org/wiki/Virtualization)`↗`.
+Before there were networks, monolithic applications ran on a mainframe with hardwired I/O devices.  As CPUs proliferated in separate enclosures, LANs like [Banyan Vines](https://en.wikipedia.org/wiki/Banyan_VINES)`↗` grew up.  Proprietary mismatch led to the [OSI model](https://maas.io/docs/about-tcp-ip-networks#heading--about-the-osi-model)`↗`.  Next came the Web, which distributed processing to client devices.  Now, we have the idea of generic switches and servers in cloud and bare-metal clusters.  Servers have shifted from dedicated applications to being completely [virtualised](https://en.wikipedia.org/wiki/Virtualization)`↗`.
 
 A traditional AAC architecture looks like this:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a>
 
-It’s heavy on network hardware; that is, the radio of switches to servers is (too) high.  Switch-driven networks used hardware packet switching ([merchant silicon](https://etherealmind.com/analysis-merchant-custom-silicon)) to serve proprietary network configurations.  In theory, bridges needed no configuration, although [congestion](https://en.wikipedia.org/wiki/Network_congestion) and [mistaken identity](https://en.wikipedia.org/wiki/IP_address#Addressing_conflicts) led to the need for [STP](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol), [per-VLAN trees](https://networklessons.com/spanning-tree/per-vlan-spanning-tree-pvst)`↗`, and IP address redundancy management techniques.
+It’s heavy on network hardware; that is, the radio of switches to servers is (too) high.  Switch-driven networks used hardware packet switching ([merchant silicon](https://etherealmind.com/analysis-merchant-custom-silicon)`↗`) to serve proprietary network configurations.  In theory, bridges needed no configuration, although [congestion](https://en.wikipedia.org/wiki/Network_congestion)`↗` and [mistaken identity](https://en.wikipedia.org/wiki/IP_address#Addressing_conflicts)`↗` led to the need for [STP](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol)`↗`, [per-VLAN trees](https://networklessons.com/spanning-tree/per-vlan-spanning-tree-pvst)`↗`, and IP address redundancy management techniques.
 
 A cloud architecture simplifies these networks:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/fd86954e48538ce9ba8fc6e02df23b0a2337ef12.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fd86954e48538ce9ba8fc6e02df23b0a2337ef12.jpeg"></a>
 
-Cloud architecture is a simple [spine-and-leaf network](https://networklessons.com/cisco/ccna-200-301/spine-and-leaf-architecture), built from cheap, identical switches connecting cheap, identical servers.  Every switch has a path to every other switch, mitigating congestion.  Any switch can route any traffic anywhere, and any server can do any job (at any time)`↗`.  This architecture moves the developer’s focus from metal to actual computing problems.
+Cloud architecture is a simple [spine-and-leaf network](https://networklessons.com/cisco/ccna-200-301/spine-and-leaf-architecture)`↗`, built from cheap, identical switches connecting cheap, identical servers.  Every switch has a path to every other switch, mitigating congestion.  Any switch can route any traffic anywhere, and any server can do any job (at any time)`↗`.  This architecture moves the developer’s focus from metal to actual computing problems.
 
 <a href="#heading--aag-problems"><h3 id="heading--aag-problems">Problems with the AAG architecture</h3></a>
 
@@ -1170,6 +1170,6 @@ Routing works very much the same way: most of the routers in the loop understand
 
 One helpful tool for modern cloud networks is the concept of multicast routing.  Stated simply, multicast routing allows one packet to be received by many servers, but only if those servers are interested in receiving it.  Multicast receivers -- which have to subscribe in order to receive the packets -- support a much larger (and more flat) network.  This layout more easily scales to the cloud architecture shown above. Multicasting is generally faster and more efficient for certain payloads; unlike broadcast packets, multicast packets are not examined by every NIC in the packet's path.
 
-For example, all IPv6 communications are multicast, so there's no ARP.  Instead, a process called [neighbour discovery](https://en.wikipedia.org/wiki/Neighbor_Discovery_Protocol) (NDP) is used.  But IPv4 networks can also handle multicast transactions.  Both IPv4 and IPv6 protocols support [multicast address blocks](https://en.wikipedia.org/wiki/Multicast_address)`↗`, which enable multicasting.
+For example, all IPv6 communications are multicast, so there's no ARP.  Instead, a process called [neighbour discovery](https://en.wikipedia.org/wiki/Neighbor_Discovery_Protocol)`↗` (NDP) is used.  But IPv4 networks can also handle multicast transactions.  Both IPv4 and IPv6 protocols support [multicast address blocks](https://en.wikipedia.org/wiki/Multicast_address)`↗`, which enable multicasting.
 
-A multicasting server sends one packet, and the network handles replication and addressing (multiplexing) of the packets to the subscribed servers.  Multicast is a one-way protocol: any responses have to be sent by other protocols.  For larger server farms, multicast is a good way to handle things like a software update or a database refresh.  Two special protocols handle subscriptions: [IGMP](https://en.wikipedia.org/wiki/Internet_Group_Management_Protocol), used by individual IPv4 receivers, and [PIM](https://en.wikipedia.org/wiki/Protocol_Independent_Multicast), which is used by L3 devices (like routers)`↗` to manage multicast "trees" across a network or subnet.
+A multicasting server sends one packet, and the network handles replication and addressing (multiplexing) of the packets to the subscribed servers.  Multicast is a one-way protocol: any responses have to be sent by other protocols.  For larger server farms, multicast is a good way to handle things like a software update or a database refresh.  Two special protocols handle subscriptions: [IGMP](https://en.wikipedia.org/wiki/Internet_Group_Management_Protocol)`↗`, used by individual IPv4 receivers, and [PIM](https://en.wikipedia.org/wiki/Protocol_Independent_Multicast)`↗`, which is used by L3 devices (like routers) to manage multicast "trees" across a network or subnet.
