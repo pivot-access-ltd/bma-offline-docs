@@ -11,23 +11,23 @@ Other examples of such secrets are:
 - VMhost credentials
 - Macaroon keys
 
-Beginning with version 3.3, MAAS secrets should instead be stored in [HashiCorp Vault](https://www.hashicorp.com/products/vault).
+Beginning with version 3.3, MAAS secrets should instead be stored in [HashiCorp Vault](https://www.hashicorp.com/products/vault)`↗`.
 
 <a href="#heading--Summary-of-Hashicorp-Vault"><h2 id="heading--Summary-of-Hashicorp-Vault">Summary of Hashicorp Vault</h2></a>
 
-Ideally, you should consult the [Vault documentation](https://developer.hashicorp.com/vault/docs), but for convenience, we will provide a brief summary here.
+Ideally, you should consult the [Vault documentation](https://developer.hashicorp.com/vault/docs)`↗`, but for convenience, we will provide a brief summary here.
 
 Vault uses identity to protect secrets and encryption keys.  The core component is the `kv` secrets engine, which uses key-value pairs to store arbitrary secrets within an encrypted storage extent managed by Vault.  It's similar to the full-disk-encryption tools that you'd use to protect your hard drive, but limited to a specific path assigned to the secrets engine(s).  
 
-If you're interested, you can [read more about secrets engines](https://developer.hashicorp.com/vault/docs/secrets) at your leisure.
+If you're interested, you can [read more about secrets engines](https://developer.hashicorp.com/vault/docs/secrets)`↗` at your leisure.
 
-Vault protects the secrets engine with a sort of upscale `chroot jail`, called a [barrier view](https://developer.hashicorp.com/vault/docs/secrets#barrier-view).  This barrier view consists of a folder, named to a randomly-generated UUID, which forms the abolute root directory for that engine.  Secrets engines cannot, for example, `cd ..` above their UUID folder, which becomes an effective barrier for what that engine can view.  
+Vault protects the secrets engine with a sort of upscale `chroot jail`, called a [barrier view](https://developer.hashicorp.com/vault/docs/secrets#barrier-view)`↗`.  This barrier view consists of a folder, named to a randomly-generated UUID, which forms the abolute root directory for that engine.  Secrets engines cannot, for example, `cd ..` above their UUID folder, which becomes an effective barrier for what that engine can view.  
 
-Aside from this short overview, we won't repeat all of the Vault documentation.  Instead, we recommend that you [study the Vault documentation carefully](https://developer.hashicorp.com/vault/docs), or even consider [getting certified](https://developer.hashicorp.com/vault/tutorials/associate-cert) on the Vault product.
+Aside from this short overview, we won't repeat all of the Vault documentation.  Instead, we recommend that you [study the Vault documentation carefully](https://developer.hashicorp.com/vault/docs)`↗`, or even consider [getting certified](https://developer.hashicorp.com/vault/tutorials/associate-cert)`↗` on the Vault product.
 
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
-Beginning with version 3.3, MAAS secrets can be stored in [HashiCorp Vault](https://www.hashicorp.com/products/vault).  To use Vault to protect your secrets, please upgrade to MAAS 3.3.
+Beginning with version 3.3, MAAS secrets can be stored in [HashiCorp Vault](https://www.hashicorp.com/products/vault)`↗`.  To use Vault to protect your secrets, please upgrade to MAAS 3.3.
 [/tab]
 [/tabs]
 
@@ -148,3 +148,4 @@ Here is a quick breakdown of how the four roles experience MAAS:
 - Auditor: an auditor can view anything about machines in the resource pool(s) for which they are permitted.  Auditors cannot change or access settings.
 
 MAAS makes no assumptions about how these roles might be used in the day-to-day operation of your MAAS instance.  The capabilities listed above form the complete set of what these roles can do.
+
