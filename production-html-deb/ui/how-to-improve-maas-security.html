@@ -536,7 +536,7 @@ option http-server-close
 blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6003
 blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6004
 </code></pre>
-<p>You can also compare attempts on unusual port numbers against <a href="http://www.relevanttechnologies.com/resources_4.asp">well-known hacker tools </a>.  For instance, repeated attempts against port 12361 might mean that someone is attempting to attack with the Whack-a-mole exploit.</p>
+<p>You can also compare attempts on unusual port numbers against <a href="http://www.relevanttechnologies.com/resources_4.asp">well-known hacker tools </a><code>↗</code>.  For instance, repeated attempts against port 12361 might mean that someone is attempting to attack with the Whack-a-mole exploit.</p>
 <p>Also suspicious are repeated, unsuccessful access attempts, against the same port or service, from the same domain, IP address, or subnet. These attempts may be spread out in time (<code>grep</code> is your friend, here).  For example, a group of login attempts that look like this may indicate that an attacker is trying to disguise port scans by switching IP addresses within a block of addresses available to them:</p>
 <pre><code>blocked incoming tcp connection request from 96.39.208.43:49343 to 64.242.119.18:31337
 blocked incoming tcp connection request from 96.39.208.62:49343 to 64.242.119.18:31337
@@ -552,7 +552,7 @@ blocked incoming tcp connection request from 96.39.208.208:49343 to 64.242.119.1
 </code></pre>
 <p>This message will usually be repeated a number of times, since Trojans are fairly persistent.</p>
 <p>Look for source-routed packets, that is, packets with a source address internal to your network, but which originate from outside your network, indicating that someone is trying to spoof one of your internal addresses.</p>
-<p>Review the IP addresses that are being rejected and dropped.  Try to identify them with a <code>ping -a &lt;IP address&gt;</code>.  Spoofed addresses won&rsquo;t have an owner (and you can block them).  Real addresses have a <a href="http://www.internic.net/whois.html">whois </a> entry, so it&rsquo;s possible you can contact the ISP to report and resolve this issue.</p>
+<p>Review the IP addresses that are being rejected and dropped.  Try to identify them with a <code>ping -a &lt;IP address&gt;</code>.  Spoofed addresses won&rsquo;t have an owner (and you can block them).  Real addresses have a <a href="https://lookup.icann.org/en">whois</a><code>↗</code> entry, so it&rsquo;s possible you can contact the ISP to report and resolve this issue.</p>
 <p>There are many other firewall log analysis techniques, and a number of good open-source and commercial log analysis programs.  If you decide to analyse directly, though, you&rsquo;re basically looking for blocked connection issues, connections to (potentially) open ports you&rsquo;re not using, and suspicious-looking outbound connections.</p>
 <p><a href="#heading--web-server-logs-subsection"><h3 id="heading--web-server-logs-subsection">Web server logs</h3></a></p>
 <p>Detecting malicious activity directed toward your Web server is best done with a log analysis tool.  If you want to review the raw logs directly, you can look for them in two places:</p>

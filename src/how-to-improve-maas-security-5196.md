@@ -159,7 +159,7 @@ You might look for something probing a port that's not supporting an application
     blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6003
     blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6004
 
-You can also compare attempts on unusual port numbers against [well-known hacker tools ](http://www.relevanttechnologies.com/resources_4.asp).  For instance, repeated attempts against port 12361 might mean that someone is attempting to attack with the Whack-a-mole exploit.
+You can also compare attempts on unusual port numbers against [well-known hacker tools ](http://www.relevanttechnologies.com/resources_4.asp)`↗`.  For instance, repeated attempts against port 12361 might mean that someone is attempting to attack with the Whack-a-mole exploit.
 
 Also suspicious are repeated, unsuccessful access attempts, against the same port or service, from the same domain, IP address, or subnet. These attempts may be spread out in time (`grep` is your friend, here).  For example, a group of login attempts that look like this may indicate that an attacker is trying to disguise port scans by switching IP addresses within a block of addresses available to them:
 
@@ -180,7 +180,7 @@ This message will usually be repeated a number of times, since Trojans are fairl
 
 Look for source-routed packets, that is, packets with a source address internal to your network, but which originate from outside your network, indicating that someone is trying to spoof one of your internal addresses.
 
-Review the IP addresses that are being rejected and dropped.  Try to identify them with a `ping -a <IP address>`.  Spoofed addresses won't have an owner (and you can block them).  Real addresses have a [whois ](http://www.internic.net/whois.html) entry, so it's possible you can contact the ISP to report and resolve this issue.
+Review the IP addresses that are being rejected and dropped.  Try to identify them with a `ping -a <IP address>`.  Spoofed addresses won't have an owner (and you can block them).  Real addresses have a [whois](https://lookup.icann.org/en)`↗` entry, so it's possible you can contact the ISP to report and resolve this issue.
 
 There are many other firewall log analysis techniques, and a number of good open-source and commercial log analysis programs.  If you decide to analyse directly, though, you're basically looking for blocked connection issues, connections to (potentially) open ports you're not using, and suspicious-looking outbound connections.
 
