@@ -1,8 +1,415 @@
 <!DOCTYPE html>
-    <html>
-    <body>
-    <div class="container">
-    <h1>How to deploy physical machines</h1><!-- "How to deploy physical machines" -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-deploy-physical-machines.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Tutorials
+      </strong>
+      <ul>
+	<li>
+	  <a href="get-started-with-maas.html">
+	    Get started with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-cli-tutorial.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to get MAAS running
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Installation
+	  </a>
+	</li>
+		<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade older versions
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshooting
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to configure networking
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-networks.html">
+	    Manage networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-ip-addresses.html">
+	    Manage IP addresses
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-tls-encryption.html">
+	    Enable TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to choose images
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-import-images.html">
+	    Import images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-custom-images.html">
+	    Create custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vmware-images.html">
+	    Manage VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to deploy MAAS
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-manage-controllers.html">
+	    Manage controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-machines.html">
+	    Manage machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-machines.html">
+	    Deploy machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vms.html">
+	    Manage VMs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-lxd.html">
+	    Use LXD
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to use tags
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-tags.html">
+	    Work with tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-annotations.html">
+	    Work with annotations
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	  How to operate MAAS
+      </strong>
+	<ul>
+	  <li>
+	    <a href="how-to-enable-high-availability.html">
+	      Enable HA
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-set-up-maas-metrics.html">
+	      Set up MAAS metrics
+	    </a>
+	  </li>
+	  <li>
+	    <a href="how-to-work-with-audit-event-logs.html">
+	      Work with audit event logs
+	    </a>
+	  </li>
+	<li>
+	  <a href="how-to-use-maas-in-an-air-gapped-environment.html">
+	    Use air-gapped MAAS
+	  </a>
+	</li>
+	  <li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-secure-maas.html">
+	    Secure MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage users
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-search-maas.html">
+	    Search MAAS
+	  </a>
+	</li>
+	</ul>
+      <p/>
+      <strong>
+	  API Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="api.html">
+	    API documentation
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	Technical Reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event log reference
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-logging-reference.html">
+	    Log files
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage reference
+	  </a>
+	</li>
+	<p/>
+	<strong>
+	  General Reference
+	</strong>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+
+	<li>
+	  <a href="maas-concepts-and-terms-reference.html">
+	    Concepts & terms
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Getting help
+	  </a>
+	</li>
+      </ul>
+      <p/>
+      <strong>
+	  Explanations
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-tcp-ip-networks.html">
+	    TCP/IP networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-cloud-networks.html">
+	    Cloud networks
+	  </a>
+	</li>
+	<li>
+	  <a href="about-dhcp.html">
+	    DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    MAAS networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    Images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-creating-custom-images.html">
+	    Custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    Controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    Machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-customising-machines.html">
+	    Customising machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-vm-hosting.html">
+	    VM hosting
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to deploy physical machines</h1><!-- "How to deploy physical machines" -->
 
 <p>With your network properly configured, and suitable images selected and downloaded, you&rsquo;re ready to <a href="how-to-make-machines-available.html">add</a>, <a href="how-to-customise-machines.html">customise</a>, and <a href="how-to-put-machines-to-work.html">deploy</a> machines.  This article will help you sort out the theoretical aspects and procedures regarding the MAAS machine life-cycle, if you wish, before diving into the how-to procedures. </p>
 <p>Machines are the heart of MAAS. They are the backbone of your data centre application(s), providing the functions that are relevant to your customers. MAAS manages their transit through a life-cycle, from adding and enlistment, through commissioning, allocation, and deployment, finally being released back to the pool, or retired altogether.  You can move them around, create redundant versions (even in other geographies you can access), and basically rearrange them to the extent that your network allows.</p>
@@ -607,11 +1014,11 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 </ol>
 <p>It is very important to pay close attention to your selections when erasing disks.</p>
 <p><a href="#heading--about-pre-seeding"><h3 id="heading--about-pre-seeding">About pre-seeding</h3></a></p>
-<p>During machine <a href="how-to-deploy-physical-machines.html">enlistment</a>, <a href="how-to-put-machines-to-work.html">deployment</a>, commissioning and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a><code>↗</code> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>. These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
+<p>During machine <a href="how-to-deploy-physical-machines.html">enlistment</a>, <a href="how-to-put-machines-to-work.html">deployment</a>, commissioning and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a><code>↗</code> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a><code>↗</code> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>. These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
 <p>Preseeding in MAAS can be achieved in two ways:</p>
 <ol>
 <li>
-<p><a href="https://launchpad.net/curtin">Curtin</a>, a preseeding system similar to Kickstart or d-i (Debian Installer), applies customisation during operating system (OS) image installation. MAAS performs these changes on deployment, during OS installation, but before the machine reboots into the installed OS. Curtin customisations are perfect for administrators who want their deployments to have identical setups all the time, every time. <a href="https://blog.ubuntu.com/2017/06/02/customising-maas-installs">This blog post</a><code>↗</code> contains an excellent high-level overview of custom MAAS installs using Curtin.</p>
+<p><a href="https://launchpad.net/curtin">Curtin</a><code>↗</code>, a preseeding system similar to Kickstart or d-i (Debian Installer), applies customisation during operating system (OS) image installation. MAAS performs these changes on deployment, during OS installation, but before the machine reboots into the installed OS. Curtin customisations are perfect for administrators who want their deployments to have identical setups all the time, every time. <a href="https://blog.ubuntu.com/2017/06/02/customising-maas-installs">This blog post</a><code>↗</code> contains an excellent high-level overview of custom MAAS installs using Curtin.</p>
 </li>
 <li>
 <p><a href="https://launchpad.net/cloud-init">Cloud-init</a><code>↗</code>, a system for setting up machines immediately after instantiation. cloud-init applies customisations after the first boot, when MAAS changes a machine&rsquo;s status to &lsquo;Deployed.&rsquo; Customisations are per-instance, meaning that user-supplied scripts must be re-specified on redeployment. Cloud-init customisations are the best way for MAAS users to customise their deployments, similar to how the various cloud services prepare VMs when launching instances.</p>
@@ -697,14 +1104,14 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <p>Note that these back-ported/HWE kernels are only available for LTS releases (e.g. Trusty, Xenial, etc.). For example, the first available HWE kernel for Ubuntu 16.04 LTS (Xenial) will be the GA kernel from Ubuntu 16.10 (Yakkety).</p>
 <p>Before MAAS 2.1 on Xenial, HWE kernels are referred to by the notation <code>hwe-&lt;release letter&gt;</code>. So, to install the Yakkety HWE kernel on Xenial, the <code>hwe-y</code> kernel is used. By default, when using the web UI, MAAS imports all available HWE kernels along with its generic boot images. So if you are importing Trusty images, then the following HWE kernels are included: <code>hwe-u</code>, <code>hwe-v</code>, <code>hwe-w</code>, <code>hwe-x</code> (presuming the Xenial HWE kernel is available).</p>
 <p>In MAAS 2.1, starting with Xenial kernels, the notation has changed. The following is used to refer to the latest HWE kernel available for Xenial: <code>hwe-16.04</code>.</p>
-<p>See <a href="https://wiki.ubuntu.com/Kernel/LTSEnablementStack">LTS Enablement Stack</a> (Ubuntu wiki)<code>↗</code> for the latest information on HWE.</p>
+<p>See <a href="https://wiki.ubuntu.com/Kernel/LTSEnablementStack">LTS Enablement Stack</a><code>↗</code> (Ubuntu wiki) for the latest information on HWE.</p>
 <p><a href="#heading--hardware-enablement-kernels-pre-release"><h3 id="heading--hardware-enablement-kernels-pre-release">About pre-release hardware enablement kernels</h3></a></p>
 <p>The pre-release HWE kernel is known as the <em>edge</em> HWE kernel.</p>
 <p>MAAS denotes the edge kernel like this: <code>hwe-&lt;version&gt;-edge</code>.</p>
 <p>So &lsquo;hwe-16.04&rsquo; is considered older than &lsquo;hwe-16.04-edge&rsquo;.</p>
 <p>See <a href="https://wiki.ubuntu.com/Kernel/RollingLTSEnablementStack#hwe-16.04-edge">Rolling LTS Enablement Stack</a> (Ubuntu wiki)<code>↗</code> for more information.</p>
 <p><a href="#heading--low-latency-kernels"><h3 id="heading--low-latency-kernels">About low latency kernels</h3></a></p>
-<p>The low-latency kernel is based on the GA kernel, but uses a more aggressive configuration to reduce latency. It is categorised as a soft real-time kernel. For more information, see <a href="https://en.wikipedia.org/wiki/Real-time_computing#Criteria_for_real-time_computing">Criteria for real-time computing</a> (Wikipedia)<code>↗</code>.</p>
+<p>The low-latency kernel is based on the GA kernel, but uses a more aggressive configuration to reduce latency. It is categorised as a soft real-time kernel. For more information, see <a href="https://en.wikipedia.org/wiki/Real-time_computing#Criteria_for_real-time_computing">Criteria for real-time computing</a><code>↗</code> (Wikipedia).</p>
 <p>MAAS denotes a low latency kernel in three ways:</p>
 <ol>
 <li><code>hwe-x-lowlatency</code>: the Xenial low latency HWE kernel for Trusty</li>
@@ -719,12 +1126,11 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 <li>per machine during deployment (specific deploy kernel)</li>
 </ol>
 <p><a href="#heading--about-kernel-boot-options"><h3 id="heading--about-kernel-boot-options">About kernel boot options</h3></a></p>
-<p>MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the <a href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">Linux kernel parameters list</a> at <a href="https://www.kernel.org">kernel.org</a><code>↗</code>.</p>
+<p>MAAS can specify kernel boot options to machines on both a global basis (UI and CLI) and a per-machine basis (CLI-only). A full catalogue of available options can be found in the <a href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">Linux kernel parameters list</a><code>↗</code> at <a href="https://www.kernel.org">kernel.org</a><code>↗</code>.</p>
 <p><a href="#heading--about-resource-pools"><h3 id="heading--about-resource-pools">About resource pools</h3></a></p>
 <p>Resource pools allow administrators to logically group resources &ndash; machines and VM hosts &ndash; into pools. Pools can help you budget machines for a particular set of functions.  For example, if you&rsquo;re using MAAS to manage a hospital data centre, you may want to keep a certain number of machines reserved for provider use, whether that be for the charts, documentation, or orders application.  You can use resource pools to reserve those machines, regardless of which of the three applications you end up loading onto a particular machine at any given time. </p>
 <p>Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab, or with the MAAS CLI.   Also note that all MAAS installations have a resource pool named &ldquo;default.&rdquo; MAAS automatically adds new machines to the default resource pool.</p>
 <p><a href="#heading--about-customising-deployed-machines"><h2 id="heading--about-customising-deployed-machines">About customising deployed machines</h2></a></p>
     </div>
-    </body>
-    </html>
-    
+  </body>
+</html>
