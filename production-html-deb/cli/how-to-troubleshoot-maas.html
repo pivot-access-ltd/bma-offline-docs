@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -401,9 +418,61 @@
   <h1>How to troubleshoot MAAS</h1><!-- "How to troubleshoot MAAS" -->
 <p>This article may help you deal with some common problems.  It is organised by topic:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</a></li>
 <li><a href="#heading--networking-issues">Networking issues</a></li>
 <li><a href="#heading--machine-life-cycle-failures">Machine life-cycle failures</a></li>
 <li><a href="#heading--custom-image-creation-problems">Custom image creation problems</a></li>
+</ul>
+<p><a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key"><h2 id="heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</h2></a></p>
+<p>MAAS hardware sync may leak the MAAS admin API key.  The simple solution for this is to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Rotate all admin tokens</li>
+<li>Re-deploy all machines that have hardware sync enabled</li>
+</ul>
+<p>For users who don’t want to re-deploy, the following instructions explain how to manually swap the token.</p>
+<p><a href="#heading--Manually-swapping-the-MAAS-admin-API-token"><h3 id="heading--Manually-swapping-the-MAAS-admin-API-token">Manually swapping the MAAS admin API token</h3></a></p>
+<p>Check if you have any machines with Hardware Sync enabled.  The easiest way to do this is a database query:</p>
+<pre><code class="language-nohighlight">select system_id 
+from maasserver_node 
+where enable_hw_sync = true;
+</code></pre>
+<p>On each of the reported machines there might be a leaked API key that belongs to the user with admin permissions. This will show only machines that do exist now. It is possible that such machines existed before, but were removed. We still do recommend you to rotate API keys.</p>
+<p>Here, on one of the machines, we have a leaked API key <code>PMmKvCw26reY7SaDet:g5rY7FNDu2ZDKER5zL:pNAHKcpR7eLWA6g2RSxrqdgSXEKgTAMT</code>:</p>
+<pre><code class="language-nohighlight">cat /lib/systemd/system/maas_hardware_sync.service
+
+[Unit]
+Description=MAAS Hardware Sync Service
+Documentation=&lt;https://maas.io&gt;
+Wants=maas_hardware_sync.timer
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/wget -O /usr/bin/maas-run-scripts &lt;http://10.100.0.10:5248/MAAS/maas-run-scripts&gt;
+ExecStartPre=/bin/chmod 0755 /usr/bin/maas-run-scripts
+ExecStartPre=/usr/bin/maas-run-scripts get-machine-token\
+    '&lt;http://10.100.0.10:5248/MAAS'\&gt;
+    'PMmKvCw26reY7SaDet:g5rY7FNDu2ZDKER5zL:pNAHKcpR7eLWA6g2RSxrqdgSXEKgTAMT'\
+    knt4rm\
+    /tmp/maas-machine-creds.yml
+ExecStart=/usr/bin/maas-run-scripts report-results --config /tmp/maas-machine-creds.yml
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Just to ensure this token actually belongs to an admin account, we can do another database query:</p>
+<pre><code class="language-nohighlight">select u.username, u.email 
+from auth_user u
+left join piston3_consumer c 
+on u.id = c.user_id
+-- we need only the consumer key of the token. token.split(&quot;:&quot;)[0]
+where key = 'PMmKvCw26reY7SaDet';
+</code></pre>
+<p>You should login into MAAS UI with an account owning a leaked API key, find a leaked API key and remove it. This is the most convinient way; it guarantees that all steps will be audited and all caches will be reset.  After API key is removed, MAAS CLI will stop working (if you were using the same token), so you will need to go through setting up the CLI credentials again.</p>
+<p>The hardware sync feature will stop working as well.  Here are two options:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Redeploy the machine, so it will use the new systemd template </li>
+<li>Manually create a credentials file and modify <code>/lib/systemd/system/maas_hardware_sync.service</code> to match</li>
 </ul>
 <p><a href="#heading--networking-issues"><h2 id="heading--networking-issues">Networking issues</h2></a></p>
 <p>The following networking issues may be creating problems for you:</p>
@@ -430,7 +499,7 @@
 </code></pre>
 <p><a href="#heading--Network-booting-IBM-Power-servers"><h3 id="heading--Network-booting-IBM-Power-servers">Network booting IBM Power servers</h3></a></p>
 <p>Some IBM Power server servers have OPAL firmware which uses an embedded Linux distribution as the boot environment. All the PXE interactions are handled by <strong>Petitboot</strong>, which runs in the user space of this embedded Linux rather than a PXE ROM on the NIC itself.</p>
-<p>When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in <a href="https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678">LP#1852678</a>, specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.</p>
+<p>When no specific interface is assigned as the network boot device, petitboot has a known issue which is detailed in <a href="https://bugs.launchpad.net/ubuntu-power-systems/+bug/1852678">LP#1852678</a><code>↗</code>, specifically comment #24, that can cause issues when deploying systems using MAAS, since in this case all active NICs are used for PXE boot with the same address.</p>
 <p>So, when using IBM Power servers with multiple NICs that can network boot, it&rsquo;s strongly recommended to configure just a single <specific> NIC as the network boot device via <strong>Petitboot</strong>.</p>
 <p><a href="#heading--Resolve-DNS-conflicts-between-LXD-and-MAAS"><h3 id="heading--Resolve-DNS-conflicts-between-LXD-and-MAAS">Resolve DNS conflicts between LXD and MAAS</h3></a></p>
 <p>If you get into a situation where MAAS and LXD are both managing DNS on your MAAS network, there&rsquo;s a simple fix. You can turn off LXD&rsquo;s DNS management with the following command:</p>
@@ -462,7 +531,7 @@ lxc network set $LXD_BRIDGE_NAME ipv6.dhcp=false
 <p>Sometimes the hardware can boot from PXE, but fail to load correct drivers when booting the received image. This is sometimes the case when no open source drivers are available for the network hardware.</p>
 <p><strong>SOLUTION:</strong> The best fix for this problem is to install a Linux-friendly network adaptor. It <em>is</em> theoretically possible to modify the boot image to include proprietary drivers, but it is not a straightforward task.</p>
 <p><a href="#heading--node-deployment-fails"><h3 id="heading--node-deployment-fails">Node deployment fails</h3></a></p>
-<p>When deployment fails the <a href="maas-concepts-and-terms-reference.html#heading--rescue-mode">Rescue mode</a> action can be used to boot ephemerally into the node, followed by an investigation.</p>
+<p>When deployment fails the <a href="maas-glossary.html#heading--rescue-mode">Rescue mode</a> action can be used to boot ephemerally into the node, followed by an investigation.</p>
 <p>As an example, an improperly configured PPA was added to MAAS which caused nodes to fail deployment. After entering Rescue mode and connecting via SSH, the following was discovered in file <code>/var/log/cloud-init-output.log</code>:</p>
 <pre><code class="language-no-highlight">2016-11-28 18:21:48,982 - cc_apt_configure.py[ERROR]: failed to add apt GPG Key
 to apt keyring
@@ -547,14 +616,14 @@ sudo: packer: command not found
 make: *** [Makefile:21: custom-ubuntu-lvm.dd.gz] Error 1
 rm OVMF_VARS.fd
 </code></pre>
-<p>In both cases, the problem is the same: <code>packer</code> has not been installed. You can fix it by <a href="https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer">following these instructions</a>.</p>
+<p>In both cases, the problem is the same: <code>packer</code> has not been installed. You can fix it by <a href="https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer">following these instructions</a><code>↗</code>.</p>
 <p><a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target &hellip;OVMF_VARS.fd</h3></a></p>
 <p>If you encounter an error like this:</p>
 <pre><code class="language-nohighlight">stormrider@neuromancer:~/mnt/Dropbox/src/git/packer-maas/ubuntu$ make
 sudo rm -f -rf output-qemu custom-ubuntu*.gz
 make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF_VARS.fd'.  Stop.
 </code></pre>
-<p>then you have forgotten to <a href="https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer">install a needed dependency</a>.</p>
+<p>then you have forgotten to <a href="https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer">install a needed dependency</a><code>↗</code>.</p>
 <p><a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a></p>
 <p>If you encounter an error such as this one:</p>
 <pre><code class="language-nohighlight">2022/06/04 17:04:47 machine readable: error-count []string{&quot;1&quot;}
@@ -563,7 +632,7 @@ make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF
 ==&gt; Builds finished but no artefacts were created.
 Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: &quot;qemu-img&quot;: executable file not found in $PATH
 </code></pre>
-<p>then you have forgotten to <a href="https://maas.io/docs/how-to-create-custom-images#heading--how-to-install-packer">install a needed dependency</a>.</p>
+<p>then you have forgotten to <a href="https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer">install a needed dependency</a><code>↗</code>.</p>
 <p><a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a></p>
 <p>Finally, you may be facing an issue which doesn&rsquo;t fit into any category, such as one of these:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -594,13 +663,13 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 <li>If you are still getting &ldquo;404 - Page not found&rdquo; errors, check that the MAAS web interface has been installed in the right place. There should be a file present called <code>/usr/share/maas/maas/urls.py</code>.</li>
 </ul>
 <p><a href="#heading--backdoor-image-login"><h3 id="heading--backdoor-image-login">Backdoor image login</h3></a></p>
-<p>Ephemeral images are used by MAAS to boot nodes during commissioning, as well as during deployment. By design, these images are not built to be edited or tampered with, instead they&rsquo;re used to probe the hardware and launch <a href="https://launchpad.net/cloud-init">cloud-init</a>.</p>
+<p>Ephemeral images are used by MAAS to boot nodes during commissioning, as well as during deployment. By design, these images are not built to be edited or tampered with, instead they&rsquo;re used to probe the hardware and launch <a href="https://launchpad.net/cloud-init">cloud-init</a><code>↗</code>.</p>
 <p>However, if you find yourself with no other way to access a node, especially if a node fails during commissioning, Linux-based ephemeral images can be modified to enable a <em>backdoor</em> that adds or resets a user&rsquo;s password. You can then login to check the <strong>cloud-init</strong> logs, for example, and troubleshoot the problem.</p>
 <p>As images are constantly updated and refreshed, the backdoor will only ever be temporary, but it should help you login to see what may be going wrong with your node.</p>
 <p><a href="#heading--extract-the-cloud-image"><h4 id="heading--extract-the-cloud-image">Extract the cloud image</h4></a></p>
 <p>First, download the cloud image that corresponds to the architecture of your node. The <em>Images</em> page of the web UI lists the images currently being cached by MAAS:</p>
 <p><a href="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/130aa580-troulbeshoot-faq__2.3_images.png"></a></p>
-<p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/">https://cloud-images.ubuntu.com/</a>.</p>
+<p>Images can be downloaded from <a href="https://cloud-images.ubuntu.com/">https://cloud-images.ubuntu.com/</a><code>↗</code>.</p>
 <p>For example:</p>
 <pre><code class="language-bash">wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-root.tar.gz
 </code></pre>

@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -440,7 +457,7 @@ Only an administrator can modify storage at the block device level (providing th
 <p><a href="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a></p>
 <p>Where &lsquo;secure erase&rsquo; and &lsquo;quick erase&rsquo; can then be configured by the user.</p>
 <p><a href="#heading--how-to-pre-seed-with-curtin"><h2 id="heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</h2></a></p>
-<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
+<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see <a href="how-to-acquire-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p>Curtin provides hooks to execute custom code before and after installation takes place. These hooks are named <code>early</code> and <code>late</code> respectively, and they can both be overridden to execute the Curtin configuration in the ephemeral environment. Additionally, the <code>late</code> hook can be used to execute a configuration for a machine being installed, a state known as in-target.</p>
 <p>Curtin commands look like this:</p>
 <pre><code>foo: ["command", "--command-arg", "command-arg-value"]
@@ -462,7 +479,7 @@ Only an administrator can modify storage at the block device level (providing th
   custom: [&quot;curtin&quot;, &quot;in-target&quot;, &quot;--&quot;, &quot;sh&quot;, &quot;-c&quot;, &quot;/bin/echo -en 'Installed ' &gt; /tmp/maas_system_id&quot;]
 </code></pre>
 <p><a href="#heading--cloud-init"><h2 id="heading--cloud-init">How to pre-seed with cloud-init</h2></a></p>
-<p>For a flowchart, showing where cloud-init fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
+<p>For a flowchart, showing where cloud-init fits into the deployment picture, see <a href="how-to-acquire-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p>It&rsquo;s easy to customise cloud-init via the web UI.  When you&rsquo;ve selected a machine and choose &lsquo;Take action &gt;&gt; Deploy,&rsquo; you&rsquo;ll be presented with the following screen:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a></p>
 <p>Select a viable release (in this case, &ldquo;Ubuntu 18.04&hellip;&rdquo;) and check the box labelled &ldquo;Cloud-init user-data&hellip;&rdquo;:</p>
@@ -562,6 +579,8 @@ If you delete a resource pool, all machines that belong to that resource pool wi
 <p><a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a></p>
 <p>To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select &ldquo;default&rdquo; as the new resource pool. This action will return the machine to the default resource pool.</p>
 <p><a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a></p>
+<p><strong>NOTE:</strong> 
+MAAS hardware sync may leak the MAAS admin API token.  You may need to rotate all admin tokens and re-deploy all machines that have hardware sync enabled.  To find out whether this is an issue, and how to fix it, see the <a href="how-to-troubleshoot-maas.html#heading--Manually-swapping-the-MAAS-admin-API-token">troubleshooting instructions</a> for this problem.</p>
 <p>To enable Hardware sync on a machine, select a machine from the machine list and choose deploy from the &ldquo;Take action&rdquo; dropdown menu:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png"></a></p>
 <p>Set the parameters as indicated below, and choose &ldquo;Start deployment for machine&rdquo;:</p>

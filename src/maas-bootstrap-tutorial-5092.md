@@ -155,7 +155,7 @@ You'll need to start with a little network thinking (and design).  Talking throu
 <tr><td>Food service</td><td>Instrumentation</td><td>Information technology</td></tr>
 </table>
 
-You can handle this lowest level with individual [machines](/t/about-machines/5080).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
+You can handle this lowest level with individual [machines](/t/how-to-deploy-physical-machines/6192).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
 
 <details>
 <summary>
@@ -164,7 +164,7 @@ You can handle this lowest level with individual [machines](/t/about-machines/50
 
 <a href="#heading--Creating-some-sample-VMs"><h3 id="heading--Creating-some-sample-VMs">Creating some sample VMs</h3></a>
 
-Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html) on the machine where you'll be running MAAS, you can create virtual machines like this:
+Assuming you've [installed libvirt](https://help.ubuntu.com/lts/serverguide/libvirt.html)`↗` on the machine where you'll be running MAAS, you can create virtual machines like this:
 
 Open the Virtual Machine Manager application.  You'll see a screen that looks something like this:
 
@@ -242,7 +242,7 @@ No need to create a lot of VMs for this example (unless you just want to do so).
 
 <a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a>
 
-Once you've created the necessary VMs, you'll want to [manually add machines](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually) to MAAS that correspond to your VMs.
+Once you've created the necessary VMs, you'll want to [manually add machines](/t/how-to-make-machines-available/5160#heading--how-to-add-a-machine-manually) to MAAS that correspond to your VMs.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> 
 
@@ -274,7 +274,7 @@ When finished, the commissioned machines with be at the "Ready" state.
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
-Assigning machines to specific functions is something you can do after you [commission](/t/how-to-deploy-machines/5112#heading--how-to-commission-a-machine) and [deploy](/t/how-to-deploy-machines/5112) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/how-to-use-tags/6200) to machines.  
+Assigning machines to specific functions is something you can do after you [commission](/t/how-to-put-machines-to-work/5112#heading--how-to-commission-a-machine) and [deploy](/t/how-to-put-machines-to-work/5112) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/how-to-tag-machines/6200) to machines.  
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> 
 
@@ -327,7 +327,7 @@ As you look at the list of functions you've created, and talk more with the staf
 <tr><td>Instrumentation</td><td>Information technology</td><td></td></tr>
 </table>
 
-You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/about-machines/5080#heading--about-resource-pools) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
+You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/how-to-deploy-physical-machines/6193#heading--about-resource-pools) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
 
 <details>
 <summary><em>Try it!</em></summary>

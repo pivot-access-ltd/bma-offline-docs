@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,29 +338,19 @@
 	</li>
       </ul>
       <strong>
-	<a href="explanation.html">
-	Explanations
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
 	</a>
       </strong>
       <ul>
 	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
 	  </a>
 	</li>
 	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
 	  </a>
 	</li>
       </ul>
@@ -379,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -433,7 +423,7 @@
 <p>Commissioning logs, which are presented on the &ldquo;Commissioning&rdquo; tab for any machine in the &ldquo;Ready&rdquo; state, contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts from this tab.</p>
 <p>When you click on the &ldquo;Commissioning&rdquo; tab under a given machine, you will see a screen similar to this one:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f2e52a4bf55b37e5ff63e7d1fab1aac32aebc48c.jpeg"></a> </p>
-<p>Each of the items in the &ldquo;NAME&rdquo; column is the name of a <a href="how-to-deploy-machines.html#heading--how-to-commission-a-machine">commissioning script</a>.  Each entry gives a timestamp and a result (e.g. passed, failed, &hellip;). At the end of each line is a link to view the log. It&rsquo;s worth taking a look at each of the script logs and their typical output.</p>
+<p>Each of the items in the &ldquo;NAME&rdquo; column is the name of a <a href="how-to-put-machines-to-work.html#heading--how-to-commission-a-machine">commissioning script</a>.  Each entry gives a timestamp and a result (e.g. passed, failed, &hellip;). At the end of each line is a link to view the log. It&rsquo;s worth taking a look at each of the script logs and their typical output.</p>
 <p><a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a></p>
 <p>MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  This script gathers this information, mostly as a bundle to be provided to a support specialist to help get the baseline for the machine in question.</p>
 <p>This script runs in parallel with other scripts to speed commissioning. Typical output, generated when a machine passes this script, is shown in the foldout below.</p>

@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -414,6 +431,13 @@
 <li><a href="#heading--increasing-regiond-daemon-workers">How to improve region controller performance</a></li>
 </ul>
 <p><a href="#heading--install-a-rack-controller"><h2 id="heading--install-a-rack-controller">How to install a rack controller</h2></a></p>
+<p>To install and register a rack controller with the MAAS:</p>
+<pre><code class="language-bash">sudo apt install maas-rack-controller
+sudo maas-rack register --url $MAAS_URL --secret $SECRET
+</code></pre>
+<p><strong>NOTE:</strong> 
+The register command is not required when you are adding a rack controller to a system that already houses an API server.</p>
+<p>The $SECRET is stored in file <code>/var/lib/maas/secret</code> on the API server.</p>
 <p>Note that on the UI, you can find complete instructions for adding a rack controller under the &ldquo;Controllers&rdquo; tab.  Simply click on the button labelled, &ldquo;Add rack controller&rdquo; and choose the instructions relevant to your build model (snap or packages).  The commands there will already include the correct MAAS URL and secret, so you can cut and paste them at the command line.</p>
 <p><a href="#heading--list-rack-controllers"><h2 id="heading--list-rack-controllers">How to list rack controllers</h2></a></p>
 <p>You can also list and confirm all registered rack controllers:</p>
@@ -455,6 +479,10 @@
 </code></pre>
 <p>There is no confirmation step, so make sure you have the right rack controller before proceeding.</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
+<p>For this exercise, we&rsquo;re assuming you are using the already installed rack controller code that was previously running on the &ldquo;from&rdquo; MAAS instance.  All that&rsquo;s necessary is that you register a new rack controller with the &ldquo;to&rdquo; MAAS instance, like this:</p>
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
+<p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
 <p>Note that in the UI, if you go to the &ldquo;Controllers&rdquo; tab and press the button entitled, &ldquo;Add rack controller,&rdquo; at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--about-moving-rack-controller"><h3 id="heading--about-moving-rack-controller">About moving a rack controller from one MAAS instance to another</h3></a></p>
 <p>In the course of normal operations, you may wish to move a device acting as a rack controller from one MAAS instance to another.  From the point of view of MAAS, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance. From your perspective, of course, you are moving one box performing rack controller functions, either physically or network-wise, from one MAAS to another. </p>
@@ -467,6 +495,10 @@
 </code></pre>
 <p>There is no confirmation step, so make sure you have the right rack controller before proceeding.</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
+<p>For this exercise, we&rsquo;re assuming you are using the already installed rack controller code that was previously running on the &ldquo;from&rdquo; MAAS instance.  All that&rsquo;s necessary is that you register a new rack controller with the &ldquo;to&rdquo; MAAS instance, like this:</p>
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
+<p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
 <p>Note that in the UI, if you go to the &ldquo;Controllers&rdquo; tab and press the button entitled, &ldquo;Add rack controller,&rdquo; at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">How to set up PostgreSQL for the region</h2></a></p>
 <p>Any number of API servers (region controllers) can be present as long as each connects to the same PostgreSQL database and allows the required number of connections.</p>
@@ -493,6 +525,11 @@ sudo systemctl restart bind9
 sudo systemctl start maas-regiond
 </code></pre>
 <p>Check three log files for any errors:</p>
+<ol>
+<li><code>/var/log/maas/regiond.log</code></li>
+<li><code>/var/log/maas/maas.log</code></li>
+<li><code>/var/log/syslog</code></li>
+</ol>
 <p><a href="#heading--increasing-regiond-daemon-workers"><h2 id="heading--increasing-regiond-daemon-workers">How to improve region controller performance</h2></a></p>
 <p><strong>NOTE:</strong> 
 This functionality is available starting from MAAS 2.4.</p>

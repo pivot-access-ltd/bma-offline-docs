@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -405,19 +422,19 @@
 
 <h2>MAAS 2.9.2 release notes</h2>
 
-<p>We have released MAAS 2.9.2, which contains two new features, and some notable <a href="https://launchpad.net/maas/+milestone/2.9.2">bug fixes</a>. The two new features are:</p>
+<p>We have released MAAS 2.9.2, which contains two new features, and some notable <a href="https://launchpad.net/maas/+milestone/2.9.2">bug fixes</a><code>↗</code>. The two new features are:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Proxmox driver: A driver has been added to MAAS 2.9.2 which interacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don&rsquo;t assign any permissions by default, so you must add <code>power on</code>, <code>power off</code>, and <code>query power</code> permissions to the token before using it.</p>
 </li>
 <li>
-<p>Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that&rsquo;s running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a <a href="maas-show-and-tell-proxmox-and-webhook.html/3">video tutorial</a> available on this new feature.</p>
+<p>Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that&rsquo;s running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a <a href="maas-show-and-tell-proxmox-and-webhook.html/3">video tutorial</a><code>↗</code> available on this new feature.</p>
 </li>
 </ul>
 <p>You can also find a <a href="#heading--bug-fixes-2-9-2">digest</a> of the 2.9.2 bug fixes below.</p>
 <h2>MAAS 2.9.1 release notes</h2>
 
-<p>Building upon MAAS 2.9, we have released 2.9.1, which contains some notable <a href="https://launchpad.net/maas/+milestone/2.9.1">bug fixes</a>.  You can find a <a href="#heading--bug-fixes-2-9-1">digest</a> of these fixes below.</p>
+<p>Building upon MAAS 2.9, we have released 2.9.1, which contains some notable <a href="https://launchpad.net/maas/+milestone/2.9.1">bug fixes</a><code>↗</code>.  You can find a <a href="#heading--bug-fixes-2-9-1">digest</a><code>↗</code> of these fixes below.</p>
 <h2>MAAS 2.9 release notes</h2>
 
 <p>Following on from MAAS 2.8, we are happy to announce that MAAS 2.9 is now available.</p>
@@ -478,7 +495,7 @@
 <h2 id="heading--improved-perf-large-maas">Improved performance for large MAAS installations</h2>
 
 <p>MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.</p>
-<p>You can see the results of the investigation in <a href="maas-show-and-tell-improving-ui-performance-for-large-maas-installs.html">this video podcast</a>.</p>
+<p>You can see the results of the investigation in <a href="maas-show-and-tell-improving-ui-performance-for-large-maas-installs.html">this video podcast</a><code>↗</code>.</p>
 <h2 id="heading--new-release-notifications">New release notifications</h2>
 
 <p>MAAS now includes new release notifications for users and administrators.  These appear when a new release is available:</p>
@@ -496,10 +513,10 @@
 <p>This description appears in that machine&rsquo;s row on the machine list.</p>
 <h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
 
-<p>A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including <a href="maas-is-changing-my-boot-order.html">MAAS is changing my boot order!</a>.</p>
+<p>A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including <a href="maas-is-changing-my-boot-order.html">MAAS is changing my boot order!</a><code>↗</code>.</p>
 <h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
 
-<p>MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.</p>
+<p>MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581 <code>↗</code>)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.</p>
 <h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
 
 <p>Four new parameters have been added for IPMI BMC configuration.  These parameters will pull from the global defaults, eliminating the need to set the corresponding parameter in each instance.</p>
@@ -549,10 +566,10 @@
 <p>Three new configuration options have been added to the IPMI power driver:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.</li>
-<li>Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.</li>
+<li>Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf <code>↗</code> for more information.</li>
 <li>Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.</li>
 </ul>
-<p>See the <a href="https://maas.io/docs/power-management#heading--ipmi">2.9 UI</a> or <a href="https://maas.io/doc/power-management#heading--ipmi">2.9 CLI</a> power management pages for details.</p>
+<p>See the <a href="https://maas.io/docs/power-management#heading--ipmi">2.9 UI</a><code>↗</code> or <a href="https://maas.io/doc/power-management#heading--ipmi">2.9 CLI</a><code>↗</code> power management pages for details.</p>
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
 <p>Script flow and capabilities have been improved in three ways:</p>
@@ -598,7 +615,7 @@
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-<p>See the <a href="https://maas.io/docs/commissioning-logs">commissioning logs page</a> for more details on these changes.</p>
+<p>See the <a href="https://maas.io/docs/commissioning-logs">commissioning logs page</a><code>↗</code> for more details on these changes.</p>
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
 <p>Four improvements have been made to speed up the commissioning process, mostly by running scripts in parallel (see above):</p>
@@ -613,41 +630,41 @@
 <p><a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
-<p>In the MAAS UI, ARM servers based on the <a href="https://bugs.launchpad.net/maas/+bug/1897946">Hi1620 ARM SoC appear as an &ldquo;Unknown model&rdquo;</a>.  A fix was added to <a href="https://discuss.linuxcontainers.orglxd-4-11-has-been-released.html">lxd-4.11</a>, released 2021-02-05.</p>
+<p>In the MAAS UI, ARM servers based on the <a href="https://bugs.launchpad.net/maas/+bug/1897946">Hi1620 ARM SoC appear as an &ldquo;Unknown model&rdquo;</a><code>↗</code>.  A fix was added to <a href="https://discuss.linuxcontainers.orglxd-4-11-has-been-released.html">lxd-4.11</a><code>↗</code>, released 2021-02-05.</p>
 </li>
 <li>
-<p>Debian package installs of MAAS <a href="https://bugs.launchpad.net/maas/+bug/1910910">reached an &ldquo;impossible situation&rdquo;</a> trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.</p>
+<p>Debian package installs of MAAS <a href="https://bugs.launchpad.net/maas/+bug/1910910">reached an &ldquo;impossible situation&rdquo;</a><code>↗</code> trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed)<code>↗</code>, and install clean with the latest PPA enabled, which will install the correct versions.</p>
 </li>
 <li>
-<p>CentOS/RHEL 7+ ship with an unsigned version of GRUB <a href="https://bugs.launchpad.net/curtin/+bug/1895067">which breaks UEFI secure boot</a>.  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.</p>
+<p>CentOS/RHEL 7+ ship with an unsigned version of GRUB <a href="https://bugs.launchpad.net/curtin/+bug/1895067">which breaks UEFI secure boot</a><code>↗</code>.  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.</p>
 </li>
 <li>
-<p>Debug <a href="https://bugs.launchpad.net/maas/+bug/1914588">could not be properly enabled for MAAS snap version 2.9.1</a>.  This has been remedied.</p>
+<p>Debug <a href="https://bugs.launchpad.net/maas/+bug/1914588">could not be properly enabled for MAAS snap version 2.9.1</a><code>↗</code>.  This has been remedied.</p>
 </li>
 <li>
-<p>The MAAS <a href="https://maas.io/docs/backup">Backup doc article</a> <a href="https://bugs.launchpad.net/maas/+bug/1892998">was not clearly written with respect to stopping critical services</a>.  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.</p>
+<p>The MAAS <a href="https://maas.io/docs/backup">Backup doc article</a><code>↗</code> <a href="https://bugs.launchpad.net/maas/+bug/1892998">was not clearly written with respect to stopping critical services</a><code>↗</code>.  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.</p>
 </li>
 <li>
-<p>Deselecting all architectures in the Ubuntu extra architectures repo <a href="https://bugs.launchpad.net/maas/+bug/1894116">blocks all deployments</a>.  The default architectures have been changed to prevent this issue.</p>
+<p>Deselecting all architectures in the Ubuntu extra architectures repo <a href="https://bugs.launchpad.net/maas/+bug/1894116">blocks all deployments</a><code>↗</code>.  The default architectures have been changed to prevent this issue.</p>
 </li>
 <li>
-<p>MAAS does not allow <a href="https://bugs.launchpad.net/maas/+bug/1911825">FQDNs to be used in place of IPs</a> when a BMC extracts the address from the <code>power_address</code>.  This incorrect behaviour was changed in 2.9.2.</p>
+<p>MAAS does not allow <a href="https://bugs.launchpad.net/maas/+bug/1911825">FQDNs to be used in place of IPs</a><code>↗</code> when a BMC extracts the address from the <code>power_address</code>.  This incorrect behaviour was changed in 2.9.2.</p>
 </li>
 <li>
-<p>The Proxmox driver <a href="https://bugs.launchpad.net/maas/+bug/1914165">uses a hard-coded port that cannot be customised</a>.  This port is now customisable in 2.9.2.</p>
+<p>The Proxmox driver <a href="https://bugs.launchpad.net/maas/+bug/1914165">uses a hard-coded port that cannot be customised</a><code>↗</code>.  This port is now customisable in 2.9.2.</p>
 </li>
 </ul>
 <p><a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>It is now possible to <a href="https://bugs.launchpad.net/maas/+bug/1908434">delete an LXD VM in an offline state</a>.</li>
-<li>MAAS now handles multiple NUMA nodes even when there are <a href="https://bugs.launchpad.net/maas/+bug/1910473">gaps in the numbering</a>.</li>
-<li>A <a href="https://bugs.launchpad.net/maas/+bug/1910909">snap install issue</a> was fixed.</li>
-<li>The way MAAS handles <a href="https://bugs.launchpad.net/maas/+bug/1910909">gateways WRT DHCP</a> was adjusted.</li>
-<li>A majority of the document <a href="https://bugs.launchpad.net/maas/+bug/1900010">headings have been converted to links</a> for easy bookmarking.</li>
+<li>It is now possible to <a href="https://bugs.launchpad.net/maas/+bug/1908434">delete an LXD VM in an offline state</a><code>↗</code>.</li>
+<li>MAAS now handles multiple NUMA nodes even when there are <a href="https://bugs.launchpad.net/maas/+bug/1910473">gaps in the numbering</a><code>↗</code>.</li>
+<li>A <a href="https://bugs.launchpad.net/maas/+bug/1910909">snap install issue</a><code>↗</code> was fixed.</li>
+<li>The way MAAS handles <a href="https://bugs.launchpad.net/maas/+bug/1910909">gateways WRT DHCP</a><code>↗</code> was adjusted.</li>
+<li>A majority of the document <a href="https://bugs.launchpad.net/maas/+bug/1900010">headings have been converted to links</a><code>↗</code> for easy bookmarking.</li>
 </ul>
 <p><a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>MAAS 2.9 includes a fix for <a href="https://bugs.launchpad.net/maas/+bug/1894727">Bug #1894727: Admin uses cannot change other user&rsquo;s passwords via the UI</a>.</li>
+<li>MAAS 2.9 includes a fix for <a href="https://bugs.launchpad.net/maas/+bug/1894727">Bug #1894727: Admin uses cannot change other user&rsquo;s passwords via the UI</a><code>↗</code>.</li>
 </ul>
 <h2 id="heading--known-issues">Known issues</h2>
 

@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -431,16 +448,16 @@
 <p>Critical and high-priority fixes also extend or repair MAAS features:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
-<p><a href="https://bugs.launchpad.net/maas/+bug/1867394">Expanded proxies</a>: Some proxies require authentication; MAAS now respects peer proxy username and password</p>
+<p><a href="https://bugs.launchpad.net/maas/+bug/1867394">Expanded proxies</a><code>↗</code>: Some proxies require authentication; MAAS now respects peer proxy username and password</p>
 </li>
 <li>
-<p><a href="https://bugs.launchpad.net/bugs/1949410">Accurate storage pool sizes</a>: The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked</p>
+<p><a href="https://bugs.launchpad.net/bugs/1949410">Accurate storage pool sizes</a><code>↗</code>: The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked</p>
 </li>
 <li>
-<p><a href="https://bugs.launchpad.net/bugs/1949485">Refresh wipeout bug</a>: MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed</p>
+<p><a href="https://bugs.launchpad.net/bugs/1949485">Refresh wipeout bug</a><code>↗</code>: MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed</p>
 </li>
 <li>
-<p><a href="https://bugs.launchpad.net/bugs/1948500">Cloning issue fixed</a>: UI cloning has been repaired to prevent &ldquo;unsuccessful cloning&rdquo; of storage</p>
+<p><a href="https://bugs.launchpad.net/bugs/1948500">Cloning issue fixed</a><code>↗</code>: UI cloning has been repaired to prevent &ldquo;unsuccessful cloning&rdquo; of storage</p>
 </li>
 </ul>
 <p><a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a></p>
@@ -530,12 +547,12 @@ Machine-readable output follows:
 <h4>Ten words or fewer</h4>
 <p>Users can upload, deploy and reuse a bootable ubuntu image</p>
 <h4>About this feature</h4>
-<p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a> and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a> to create custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, deployed as described below. Canonical still suggests customising Ubuntu using cloud-init user_data or Curtin preseed data, if possible.</p>
+<p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a><code>↗</code> and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a><code>↗</code> to create custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, deployed as described below. Canonical still suggests customising Ubuntu using cloud-init user_data or Curtin preseed data, if possible.</p>
 <h4>About static Ubuntu images</h4>
 <p>MAAS allows you to build an Ubuntu image to deploy with MAAS, using any chosen image-building tool.  You can create the image with a fixed configuration and deploy it to many machines.  This fixed configuration can contain anything a normal image would contain: users, packages, etc.</p>
 <h4>About uploading hand-built Ubuntu images</h4>
-<p>You can upload and deploy hand-built Ubuntu images, containing kernel, bootloader, and fixed configuration.  The image can be built by tool, e.g., <a href="https://github.com/canonical/packer-maas">packer</a>, or by scripts. You can upload these images to the boot-resources endpoint, where they will be available for deployment.</p>
-<p>The minimum image must contain a kernel, bootloader, and <code>/curtin/curtin-hooks</code> script that configures the network. Samples can be found in the <a href="https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts">packer-maas repos</a>. The image must be in raw img file format so MAAS will accept the upload.  When built, you will upload this img file to the boot-resources endpoint, specifying the image architecture.</p>
+<p>You can upload and deploy hand-built Ubuntu images, containing kernel, bootloader, and fixed configuration.  The image can be built by tool, e.g., <a href="https://github.com/canonical/packer-maas">packer</a><code>↗</code>, or by scripts. You can upload these images to the boot-resources endpoint, where they will be available for deployment.</p>
+<p>The minimum image must contain a kernel, bootloader, and <code>/curtin/curtin-hooks</code> script that configures the network. Samples can be found in the <a href="https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts">packer-maas repos</a><code>↗</code>. The image must be in raw img file format so MAAS will accept the upload.  When built, you will upload this img file to the boot-resources endpoint, specifying the image architecture.</p>
 <h4>About how MAAS handles these images</h4>
 <p>MAAS will save the image as a <code>tar.gz</code> file in the database.  MAAS can differentiate between image types and generate appropriate pre-seed configurations.  MAAS also recognises the base Ubuntu version, so it can apply the correct ephemeral OS for installation.  Custom images are always deployed with the ephemeral OS, where the <code>base_image</code> field indicates the appropriate ephemeral version to avoid errors, ensuring smooth deployment later.</p>
 <h4>About how MAAS boots these images</h4>
@@ -628,13 +645,13 @@ When uploading a custom image, there is a new required field: <code>base_image</
 The imported key must not have a passphrase; otherwise, MAAS will not be able to use it.</p>
 <h4>How to get started</h4>
 <p>Suppose that you&rsquo;re creating a new LXD KVM, beginning from the top tab in MAAS:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img alt="" src="upload://5Rn9eea7n648iKo1sjohP7r5ARY.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png"></a></p>
 <p>Select &ldquo;Add KVM&rdquo;, which brings you to the definition screen:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img alt="" src="upload://2uPyI3yDteiWizFUhOM95C5B1Hg.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png"></a></p>
 <p>From here, you&rsquo;ll continue by choosing your authentication method.</p>
 <h4>How to let MAAS create a certificate for you</h4>
 <p>If you choose &ldquo;Generate new certificate&rdquo;, as shown above, you&rsquo;ll come to a screen like this one:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img alt="" src="upload://vc5IuTP53xKYzCDYkkPhLxcZFUE.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png"></a></p>
 <p>You can still choose to use the LXD trust password (entered when you ran <code>lxd init</code> during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window &ndash; then hit &ldquo;Enter&rdquo;:</p>
 <pre><code>$ lxc config trust add - &lt;&lt;EOF
 &gt; -----BEGIN CERTIFICATE-----
@@ -669,11 +686,11 @@ The imported key must not have a passphrase; otherwise, MAAS will not be able to
 $ 
 </code></pre>
 <p>The certificate will be created for you.  When you click the &ldquo;Check authentication&rdquo; button, you will be brought to this screen:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img alt="" src="upload://5J5yTzf8p1wHMmyaB8Af6rRBTPC.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a></p>
 <p>from which you can continue with normal LXD KVM setup.</p>
 <h4>How to use your own, existing certificate</h4>
 <p>Suppose that, after identifying your LXD KVM, you choose &ldquo;Provide certificate and private key&rdquo;.  When you do so, the screen will extend to allow you to upload these items:</p>
-<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img alt="" src="upload://rQ83izglHaGONtR03yUSYuDY9Sc.png"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a></p>
 <p>Paste or upload your certificate and private key, then click &ldquo;Next&rdquo; to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren&rsquo;t usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/286e648de20c9db3bb6c56c5855647c23a5d9e2e.png"></a></p>
 <p><a href="#heading--image-sync-performance"><h3 id="heading--image-sync-performance">Improved image sync performance</h3></a></p>
@@ -686,11 +703,11 @@ $
 <p><a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a></p>
 <p>MAAS 3.1 bug fixes can be found in the following milestones:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta5">MAAS 3.1 Beta5 bug fixes</a></li>
-<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta4">MAAS 3.1 Beta4 bug fixes</a></li>
-<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta3">MAAS 3.1 Beta3 bug fixes</a></li>
-<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta2">MAAS 3.1 Beta2 bug fixes</a></li>
-<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta1">MAAS 3.1 Beta1 bug fixes</a></li>
+<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta5">MAAS 3.1 Beta5 bug fixes</a><code>↗</code></li>
+<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta4">MAAS 3.1 Beta4 bug fixes</a><code>↗</code></li>
+<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta3">MAAS 3.1 Beta3 bug fixes</a><code>↗</code></li>
+<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta2">MAAS 3.1 Beta2 bug fixes</a><code>↗</code></li>
+<li><a href="https://launchpad.net/maas/+milestone/3.1.0-beta1">MAAS 3.1 Beta1 bug fixes</a><code>↗</code></li>
 </ul>
     </div>
   </body>

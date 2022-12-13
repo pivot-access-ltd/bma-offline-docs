@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -454,13 +471,14 @@
 <p>Ensure the target VLAN has DHCP enabled.</p>
 </li>
 <li>
-<p>Set up the external relay. This relay is set up independently from MAAS. See <a href="maas-concepts-and-terms-reference.html#heading--dhcp-relay">DHCP relay</a> for software suggestions.</p>
+<p>Set up the external relay. This relay is set up independently from MAAS. See <a href="maas-glossary.html#heading--dhcp-relay">DHCP relay</a> for software suggestions.</p>
 </li>
 <li>
 <p>Configure MAAS-managed DHCP. Navigate to the source VLAN page and select the &lsquo;Relay DHCP&rsquo; action. Fill in the fields in the resulting form. The crucial setting is the target VLAN (&lsquo;Relay VLAN&rsquo;). Press the &lsquo;Relay DHCP&rsquo; button to finish.</p>
 </li>
 </ol>
 <p><a href="#heading--dhcp-snippets"><h3 id="heading--dhcp-snippets">How to customise MAAS with DHCP snippets</h3></a></p>
+<p>When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in <code>/var/snap/maas/common/maas/dhcpd.conf</code> or <code>/var/snap/maas/common/maas/dhcpd6.conf</code>. Be aware that if you edit these files directly, you will need to <code>sudo</code> to <code>root</code>, as there is no <code>maas</code> user in the snap (all relevant files are owned by <code>root</code>). For information on what options to use, refer to the <a href="http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf"><code>dhcpd.conf</code> man page</a><code>↗</code>.</p>
 <p><strong>NOTE:</strong> 
 Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.conf.template</code> are not supported.</p>
 <p>To manage snippets, as an admin, open the &lsquo;Settings&rsquo; page and click on the &lsquo;DHCP snippets&rsquo; tab.</p>

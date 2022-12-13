@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -738,7 +755,7 @@ Machine-readable output follows:
 </code></pre>
 <p>That definitely confirms that we have some images.  But what are those three or four on top?  Looking at the massive JSON output, notice that they have names like &ldquo;open-firmware,&rdquo; &ldquo;uefi,&rdquo; and &ldquo;pxe.&rdquo;  Those are images that can PXE-boot machines, basically.  But how can we sort this information out in a neat way?</p>
 <p><a href="#heading--Get-familiar-with-jq"><h3 id="heading--Get-familiar-with-jq">Get familiar with jq</h3></a></p>
-<p>Well, if you&rsquo;re going to use anything with JSON-based output, you&rsquo;ll want to consider learning the command line tool <a href="https://stedolan.github.io/jq/">jq</a>.  It&rsquo;s quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through <code>jq</code> like this:</p>
+<p>Well, if you&rsquo;re going to use anything with JSON-based output, you&rsquo;ll want to consider learning the command line tool <a href="https://stedolan.github.io/jq/">jq</a><code>↗</code>.  It&rsquo;s quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through <code>jq</code> like this:</p>
 <pre><code class="language-nohighlight">maas admin boot-resources read | jq -r '.[] | &quot;\(.name)\t\(.architecture)&quot;'
 </code></pre>
 <p>This gives us a cleaner image list that looks something like this:</p>

@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -516,13 +533,13 @@ Import SSH keys [] (lp:user-id or gh:user-id): xxxxxxxxxxx
 <tr><td>Food service</td><td>Instrumentation</td><td>Information technology</td></tr>
 </table>
 
-<p>You can handle this lowest level with individual <a href="about-machines.html">machines</a>.  With MAAS, you&rsquo;ll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let&rsquo;s assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren&rsquo;t going to name them for their functions; instead, you&rsquo;re just going to use the MAC address of each machine to uniquely identify it.</p>
+<p>You can handle this lowest level with individual <a href="how-to-deploy-physical-machines.html">machines</a>.  With MAAS, you&rsquo;ll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let&rsquo;s assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren&rsquo;t going to name them for their functions; instead, you&rsquo;re just going to use the MAC address of each machine to uniquely identify it.</p>
 <p><details>
 <summary>
 <em>Try it!</em>
 </summary></p>
 <p><a href="#heading--Creating-some-sample-VMs"><h3 id="heading--Creating-some-sample-VMs">Creating some sample VMs</h3></a></p>
-<p>Assuming you&rsquo;ve <a href="https://help.ubuntu.com/lts/serverguide/libvirt.html">installed libvirt</a> on the machine where you&rsquo;ll be running MAAS, you can create virtual machines like this:</p>
+<p>Assuming you&rsquo;ve <a href="https://help.ubuntu.com/lts/serverguide/libvirt.html">installed libvirt</a><code>↗</code> on the machine where you&rsquo;ll be running MAAS, you can create virtual machines like this:</p>
 <p>Open the Virtual Machine Manager application.  You&rsquo;ll see a screen that looks something like this:</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/f66940a21313a27734bcaef6c539d36a720a6834.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f66940a21313a27734bcaef6c539d36a720a6834.jpeg"></a> </p>
 <p>Click on &ldquo;New Virtual Machine,&rdquo; which brings you to a corresponding dialog:</p>
@@ -561,7 +578,7 @@ Import SSH keys [] (lp:user-id or gh:user-id): xxxxxxxxxxx
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/f9f302d8de9344908758a433dae9abfada0b0db3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f9f302d8de9344908758a433dae9abfada0b0db3.jpeg"></a> </p>
 <p>No need to create a lot of VMs for this example (unless you just want to do so).  </p>
 <p><a href="#heading--manually-add-machines"><h3 id="heading--manually-add-machines">Manually adding machines</h3></a></p>
-<p>Once you&rsquo;ve created the necessary VMs, you&rsquo;ll want to <a href="how-to-manage-machines.html#heading--how-to-add-a-machine-manually">manually add machines</a> to MAAS that correspond to your VMs.</p>
+<p>Once you&rsquo;ve created the necessary VMs, you&rsquo;ll want to <a href="how-to-make-machines-available.html#heading--how-to-add-a-machine-manually">manually add machines</a> to MAAS that correspond to your VMs.</p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/91679cd615868eda4654541a68e59de57328ddfa.jpeg"></a> </p>
 <p><details>
 <summary><em>Try it!</em></summary></p>
@@ -578,7 +595,7 @@ Import SSH keys [] (lp:user-id or gh:user-id): xxxxxxxxxxx
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/37f1df9e4072b29c7183d4ae8ec1768504c4f66f.jpeg"></a> </p>
 <p>When finished, the commissioned machines with be at the &ldquo;Ready&rdquo; state.</p>
 <p><a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a></p>
-<p>Assigning machines to specific functions is something you can do after you <a href="how-to-deploy-machines.html#heading--how-to-commission-a-machine">commission</a> and <a href="how-to-deploy-machines.html">deploy</a> them.  (Later on, we&rsquo;ll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you&rsquo;ve got machines running apps, you want to keep up-to-date about which machine is doing what, when you&rsquo;re looking at the machine list.  You&rsquo;ll want to assign <a href="how-to-use-tags.html">tags</a> to machines.  </p>
+<p>Assigning machines to specific functions is something you can do after you <a href="how-to-put-machines-to-work.html#heading--how-to-commission-a-machine">commission</a> and <a href="how-to-put-machines-to-work.html">deploy</a> them.  (Later on, we&rsquo;ll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you&rsquo;ve got machines running apps, you want to keep up-to-date about which machine is doing what, when you&rsquo;re looking at the machine list.  You&rsquo;ll want to assign <a href="how-to-tag-machines.html">tags</a> to machines.  </p>
 <p><a href="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2ea0827b9ef327b59ad722215d556969218cc22f.jpeg"></a> </p>
 <p><details>
 <summary><em>Try it!</em></summary>
@@ -617,7 +634,7 @@ Adding a tag to a machine is simple.  Just decide which machine you want to tag:
 <tr><td>Instrumentation</td><td>Information technology</td><td></td></tr>
 </table>
 
-<p>You&rsquo;re aware that the number of machines you&rsquo;ll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you&rsquo;d prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating <a href="about-machines.html#heading--about-resource-pools">resource pools</a> and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.</p>
+<p>You&rsquo;re aware that the number of machines you&rsquo;ll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you&rsquo;d prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating <a href="how-to-deploy-physical-machines.html#heading--about-resource-pools">resource pools</a> and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.</p>
 <p><details>
 <summary><em>Try it!</em></summary></p>
 <p>Notice at the top of the machine list, there is a tab labelled, &ldquo;Resource pools:&rdquo;</p>

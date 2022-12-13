@@ -21,7 +21,7 @@ There is at least one way to make each of these things available in an air-gappe
 
 <a href="#heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment"><h2 id="heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment">How to use the snap proxy to refresh snaps in an air-gapped environment</h2></a>
 
-Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/snap-store-proxy/en/airgap) mode are part of a password-protected internal Beta.  
+Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an [air-gapped](https://docs.ubuntu.com/snap-store-proxy/en/airgap)`↗` mode are part of a password-protected internal Beta.  
 
 Client devices connect to the air-gapped proxy and never contact the general Snap Store nor the Internet.  Proxy operators will need to side-load all needed snaps and updates into the proxy. 
 
@@ -31,11 +31,11 @@ There are three main steps to setting up this proxy:
 2. Set up HTTPS access to ensure adequate security.
 3. Fetch the necessary snaps as needed by your MAAS environment (on the Internet-connected machine).
 
-This proxy requires a properly configured PostgreSQL database -- see the [setup instructions](https://docs.ubuntu.com/snap-store-proxy/en/airgap) for the Snap Store Proxy for more details.
+This proxy requires a properly configured PostgreSQL database -- see the [setup instructions](https://docs.ubuntu.com/snap-store-proxy/en/airgap)`↗` for the Snap Store Proxy for more details.
 
 <a href="#heading--apt-mirror"><h2 id="heading--apt-mirror">How to make package updates available in an air-gapped environment</h2></a>
 
-The simplest way to use local package repos is via the [reprepro](http://manpages.ubuntu.com/manpages/focal/man1/reprepro.1.html) command.  There is an older command, `apt-mirror`, which is no longer maintained; it's not recommended.
+The simplest way to use local package repos is via the [reprepro](https://manpages.ubuntu.com/manpages/focal/man1/reprepro.1.html)`↗` command.  There is an older command, `apt-mirror`, which is no longer maintained; it's not recommended.
 
 The `reprepro` command manages a local repository of Debian packages.  You can add files manually or download them from some other repository.  It does not require an external database.  This command also handles signatures of mirrored repos, and can create signatures for the generated package indices, if desired.  
 
@@ -69,7 +69,7 @@ A user can create custom `user_data` which will configure CentOS or RHEL to use 
 
 <a href="#heading--store-custom-images"><h3 id="heading--store-custom-images">Storing customer images for non-MAAS-maintained images</h3></a>
 
-You can also [create custom images](/t/how-to-create-custom-images/5104) and store them in your local mirror.  Once you have the image built, consult the page on [local image mirrors](/t/how-to-mirror-images-locally/5927) to see how to incorporate your newly-built image into the local stash.
+You can also [create custom images](/t/how-to-build-custom-images/5104) and store them in your local mirror.  Once you have the image built, consult the page on [local image mirrors](/t/how-to-mirror-images-locally/5927) to see how to incorporate your newly-built image into the local stash.
 
 <a href="#heading--transparent-proxy"><h2 id="heading--transparent-proxy">How to set up a transparent proxy</h2></a>
 

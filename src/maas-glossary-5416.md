@@ -2,33 +2,33 @@
 Built on a foundation of networking knowledge, MAAS introduces a number of new terms, and adds some nuances to common terms.  Some of these terms may be common networking terms you never looked up; others represent more complex concepts that may be unique to MAAS.  This article presents and explains some of these important terms.
 
 <details><summary>Show me an alphabetical list of terms</summary>
-- [Availability zones](/t/maas-concepts-and-terms-reference/5416#heading--zones)
-- [cloud-init](/t/maas-concepts-and-terms-reference/5416#heading--cloud-init)
-- [Controller](/t/maas-concepts-and-terms-reference/5416#heading--controllers)
-- [Device](/t/maas-concepts-and-terms-reference/5416#heading--devices)
-- [DHCP](/t/maas-concepts-and-terms-reference/5416#heading--dhcp)
-- [DHCP relay](/t/maas-concepts-and-terms-reference/5416#heading--dhcp-relay)
-- [Edge clouds](/t/maas-concepts-and-terms-reference/5416#heading--edge-clouds)
-- [Fabrics](/t/maas-concepts-and-terms-reference/5416#heading--fabrics)
-- [Images](/t/maas-concepts-and-terms-reference/5416#heading--images)
-- [Interfaces](/t/maas-concepts-and-terms-reference/5416#heading--interfaces)
-- [isolcpus](/t/maas-concepts-and-terms-reference/5416#heading--isolcpus)
-- [Machine](/t/maas-concepts-and-terms-reference/5416#heading--machines)
-- [Machine actions](/t/maas-concepts-and-terms-reference/5416#heading--machine-actions)
-- [Machine statuses](/t/maas-concepts-and-terms-reference/5416#heading--machine-statuses)
-- [Network infrastructure](/t/maas-concepts-and-terms-reference/5416#heading--network-infrastructure)
-- [Network interface](/t/maas-concepts-and-terms-reference/5416#heading--network-interface)
-- [Network topology](/t/maas-concepts-and-terms-reference/5416#heading--network-topology)
-- [NUMA](/t/maas-concepts-and-terms-reference/5416#heading--numa)
-- [Nodes](/t/maas-concepts-and-terms-reference/5416#heading--nodes)
-- [Package repositories](/t/maas-concepts-and-terms-reference/5416#heading--package-repositories)
-- [Regions](/t/maas-concepts-and-terms-reference/5416#heading--regions)
-- [Series](/t/maas-concepts-and-terms-reference/5416#heading--series)
-- [Spaces](/t/maas-concepts-and-terms-reference/5416#heading--spaces)
-- [SR-IOV](/t/maas-concepts-and-terms-reference/5416#heading--sr-iov)
-- [Tags](/t/maas-concepts-and-terms-reference/5416#heading--tags)
-- [Ubuntu package repositories](/t/maas-concepts-and-terms-reference/5416#heading--ubuntu-package-repositories)
-- [VM hosts](/t/maas-concepts-and-terms-reference/5416#heading--vm-hosts)
+- [Availability zones](/t/maas-glossary/5416#heading--zones)
+- [cloud-init](/t/maas-glossary/5416#heading--cloud-init)
+- [Controller](/t/maas-glossary/5416#heading--controllers)
+- [Device](/t/maas-glossary/5416#heading--devices)
+- [DHCP](/t/maas-glossary/5416#heading--dhcp)
+- [DHCP relay](/t/maas-glossary/5416#heading--dhcp-relay)
+- [Edge clouds](/t/maas-glossary/5416#heading--edge-clouds)
+- [Fabrics](/t/maas-glossary/5416#heading--fabrics)
+- [Images](/t/maas-glossary/5416#heading--images)
+- [Interfaces](/t/maas-glossary/5416#heading--interfaces)
+- [isolcpus](/t/maas-glossary/5416#heading--isolcpus)
+- [Machine](/t/maas-glossary/5416#heading--machines)
+- [Machine actions](/t/maas-glossary/5416#heading--machine-actions)
+- [Machine statuses](/t/maas-glossary/5416#heading--machine-statuses)
+- [Network infrastructure](/t/maas-glossary/5416#heading--network-infrastructure)
+- [Network interface](/t/maas-glossary/5416#heading--network-interface)
+- [Network topology](/t/maas-glossary/5416#heading--network-topology)
+- [NUMA](/t/maas-glossary/5416#heading--numa)
+- [Nodes](/t/maas-glossary/5416#heading--nodes)
+- [Package repositories](/t/maas-glossary/5416#heading--package-repositories)
+- [Regions](/t/maas-glossary/5416#heading--regions)
+- [Series](/t/maas-glossary/5416#heading--series)
+- [Spaces](/t/maas-glossary/5416#heading--spaces)
+- [SR-IOV](/t/maas-glossary/5416#heading--sr-iov)
+- [Tags](/t/maas-glossary/5416#heading--tags)
+- [Ubuntu package repositories](/t/maas-glossary/5416#heading--ubuntu-package-repositories)
+- [VM hosts](/t/maas-glossary/5416#heading--vm-hosts)
 </details>
 
 <a href="#heading--nodes"><h2 id="heading--nodes">Nodes</h2></a>
@@ -137,7 +137,7 @@ The following conceptual diagram shows two fabrics in the same data centre or re
 
 A space is a logical grouping of subnets that can communicate with one another. Spaces can be arranged to group subnets according to various parameters.  One of the most common examples is a DMZ space, which might group subnets presenting a web interface to the public Internet.  Behind this DMZ would be specific applications that aren't allowed to interact directly with the user, but instead must interact with a Web UI in the DMZ space.  MAAS does not create a default space during installation.
 
-Spaces facilitate machine allocation for [Juju](https://jaas.ai/). See [Juju network spaces](https://jaas.ai/docs/spaces) for more details.
+Spaces facilitate machine allocation for [Juju](https://jaas.ai/)`↗`. See [Juju network spaces](https://jaas.ai/docs/spaces)`↗` for more details.
 
 <a href="#heading--tags"><h2 id="heading--tags">Tags</h2></a>
 
@@ -166,8 +166,6 @@ You can reserve IP addresses by adding one or more reserved ranges to a subnet c
 <a href="#heading--dhcp-relay"><h2 id="heading--dhcp-relay">DHCP relay</h2></a>
 
 A DHCP relay, or relay agent, is a network device that forwards requests and replies between a DHCP client and a DHCP server when both are not on the same physical subnet.
-
-Two common software implementations are [isc-dhcp-relay](http://packages.ubuntu.com/xenial/isc-dhcp-relay) and [dhcp-helper](http://packages.ubuntu.com/xenial/dhcp-helper).
 
 <a href="#heading--interfaces"><h2 id="heading--interfaces">Interfaces</h2></a>
 
@@ -403,9 +401,9 @@ A private repository can be built to assist with offline operations, based on th
 
 <a href="#heading--personal-package-archives-ppa"><h2 id="heading--personal-package-archives-ppa">Personal Package Archives (PPA)</h2></a>
 
-A Personal Package Archive (PPA) is a [Launchpad](https://launchpad.net)-based method for any individual (or team) to build and distribute packages for Ubuntu.
+A Personal Package Archive (PPA) is a [Launchpad](https://launchpad.net)-based method for any individual (or team)`↗` to build and distribute packages for Ubuntu.
 
-Adding a PPA is equally straightforward. Using the [`sosreport` PPA](https://launchpad.net/~canonical-support/+archive/ubuntu/support-tools) as an example, first retrieve the PPA's address from its page on Launchpad:
+Adding a PPA is equally straightforward. Using the [`sosreport` PPA](https://launchpad.net/~canonical-support/+archive/ubuntu/support-tools)`↗` as an example, first retrieve the PPA's address from its page on Launchpad:
 
 `ppa:canonical-support/support-tools`
 
@@ -417,7 +415,7 @@ To add this PPA, then, hit the 'Add repository' button and fill in the fields. B
 
 Click 'Add repository' to save the configuration.
 
-See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA) for more information on PPAs.
+See [Launchpad PPAs](https://help.launchpad.net/Packaging/PPA)`↗` for more information on PPAs.
 
 <a href="#heading--numa"><h2 id="heading--numa">NUMA/vNUMA</h2></a>
 
@@ -429,7 +427,7 @@ There is more flexibility in creating affinity when using virtual machines, beca
 
 In practice, this means that VMs would be "pinned" to specific cores to create stability.  While the user has the choice of how to pin VMs, MAAS provides visual information that helps the user see how VMs are allocated to physical hardware, and make adjustments if that arrangement isn't (or turns out not to be) optimal.
 
-If you want to dig deeper, there is a [more through treatment of NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access) on Wikipedia.
+If you want to dig deeper, there is a [more through treatment of NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)`↗` on Wikipedia.
 
 <a href="#heading--sr-iov"><h2 id="heading--sr-iov">SR-IOV</h2></a>
 
@@ -439,7 +437,7 @@ Many smart NICs are able to sort network packets into queues, based on MAC addre
 
 With SR-IOV, it's possible to have no core interrupts when packets come in.  SR-IOV creates "virtual functions," with dedicated queues for transmitting and receiving.  Each VM is directly assigned hardware resources via a virtual function driver, which knows how to DMA-copy data directly between the NIC and the memory space of the relevant VM. Essentially, SR-IOV is like a "jumper wire" between the NIC and the VM, bypassing the core.  This prevents interrupting the core when packets arrive for it, and significantly reduces the core workload when sending network packets.
 
-For a deeper dive, try this [SR-IOV presentation](https://www.youtube.com/watch?v=hRHsk8Nycdg) from Intel.
+For a deeper dive, try this [SR-IOV presentation](https://www.youtube.com/watch?v=hRHsk8Nycdg)`↗` from Intel.
 
 <a href="#heading--isolcpus"><h2 id="heading--isolcpus">Isolating CPUs</h2></a>
 
@@ -485,7 +483,7 @@ DHCP operates using the four-step "DORA" model -- Discovery, Offer, Request, and
 
 - The DHCP server responds with a DHCPACK (acknowledgement) which includes various important configuration parameters, such as the lease duration.
 
-Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol), but what's covered here should be sufficient understanding for using MAAS.
+Of course, there is [much more to DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)`↗`, but what's covered here should be sufficient understanding for using MAAS.
 
 <a href="#heading--network-interface"><h3 id="heading--network-interface">Network interface</h3></a>
 

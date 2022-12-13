@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -608,7 +625,7 @@ maas $PROFILE interface link-subnet exqn37 58 mode=dhcp subnet=192.168.1.0/24
 <p>If instead of DHCP, you desire a static address, then the second command would look like this:</p>
 <pre><code class="language-bash">maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 ip_address=192.168.1.113
 </code></pre>
-<p>See <a href="maas-concepts-and-terms-reference.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
+<p>See <a href="maas-glossary.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
 <p><a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">How to create a bond interface</h3></a></p>
 <p>A bond can be created with the following command:</p>
 <pre><code>maas $PROFILE interfaces create-bond $SYSTEM_ID name=$BOND_NAME \
@@ -943,6 +960,7 @@ Machine-readable output follows:
 <p><a href="#heading--internal-proxy-maas-proxy"><h3 id="heading--internal-proxy-maas-proxy">About the MAAS internal proxy</h3></a></p>
 <p>MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.</p>
 <p>By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.</p>
+<p>MAAS manages its proxy. So although the active configuration, located in file <code>/var/snap/maas/current/proxy</code>, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.</p>
 <p><a href="#heading--configure-proxy"><h3 id="heading--configure-proxy">How to create an external proxy</h3></a></p>
 <p>Enabling and disabling proxying, in general, is done via a Boolean option (&lsquo;true&rsquo; or &lsquo;false&rsquo;). The following command will disable proxying completely:</p>
 <pre><code class="language-bash">maas $PROFILE maas set-config name=enable_http_proxy value=false
@@ -962,7 +980,7 @@ maas $PROFILE maas set-config name=http_proxy value=http://squid.example.com:312
 </code></pre>
 <p><strong>NOTE</strong> that the proxy service will still be running.</p>
 <p><a href="#heading--how-to-set-up-ntp"><h2 id="heading--how-to-set-up-ntp">How to set up Network Time Protocol (NTP)</h2></a></p>
-<p>MAAS provides managed NTP services (with <a href="https://chrony.tuxfamily.org/">Chrony</a>) for all region and rack controllers. This arrangement allows MAAS to both keep its controllers synchronised, and keep deployed machines synchronised as well. You can configure NTP on the &lsquo;Network services&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
+<p>MAAS provides managed NTP services (with <a href="https://chrony.tuxfamily.org/">Chrony</a><code>↗</code>) for all region and rack controllers. This arrangement allows MAAS to both keep its controllers synchronised, and keep deployed machines synchronised as well. You can configure NTP on the &lsquo;Network services&rsquo; tab of the &lsquo;Settings&rsquo; page.</p>
 <p>The region controller configures the NTP service to keep its time synchronised from one or more external sources. By default, the MAAS region controller uses <code>ntp.ubuntu.com</code>. Rack controllers also configure the NTP service, synchronising their time with the region controllers.  Rack controllers also configure DHCP with the correct NTP information. Any machine on the network that obtains a DHCP lease from MA/snap/3AS will benefit from NTP support.</p>
 <p><a href="#heading--setting-ntp-server"><h2 id="heading--setting-ntp-server">Setting an external NTP server</h2></a></p>
 <p>External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines.</p>

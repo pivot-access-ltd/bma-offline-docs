@@ -395,7 +395,7 @@ That definitely confirms that we have some images.  But what are those three or 
 
 <a href="#heading--Get-familiar-with-jq"><h3 id="heading--Get-familiar-with-jq">Get familiar with jq</h3></a>
 
-Well, if you're going to use anything with JSON-based output, you'll want to consider learning the command line tool [jq](https://stedolan.github.io/jq/).  It's quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through `jq` like this:
+Well, if you're going to use anything with JSON-based output, you'll want to consider learning the command line tool [jq](https://stedolan.github.io/jq/)`↗`.  It's quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through `jq` like this:
 
 ```nohighlight
 maas admin boot-resources read | jq -r '.[] | "\(.name)\t\(.architecture)"'

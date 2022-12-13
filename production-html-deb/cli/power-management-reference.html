@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -399,7 +416,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>Power management reference</h1><!-- "Power management reference" -->
-<p>To manage a machine, MAAS must be able to power cycle it, usually through the machine&rsquo;s <a href="https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller">BMC</a> card.  Until you configure the power type, a newly-added machine can&rsquo;t be enlisted and used by MAAS.</p>
+<p>To manage a machine, MAAS must be able to power cycle it, usually through the machine&rsquo;s <a href="https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller">BMC</a><code>↗</code> card.  Until you configure the power type, a newly-added machine can&rsquo;t be enlisted and used by MAAS.</p>
 <p><a href="#heading--power-management-reference"><h2 id="heading--power-management-reference">Power management reference guide</h2></a></p>
 <h4>This article will help you learn:</h4>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -409,13 +426,13 @@
 <li><a href="#heading--bmc-driver-support">Which BMC drivers are supported</a></li>
 </ul>
 <p>In addition, this article provides a <a href="#heading--power-catalogue">complete catalogue of power parameters, by type</a>.</p>
-<p>You may also like to try <strong><a href="https://gilesknap.github.io/maaspower/main/index.html">maaspower</a></strong> which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.</p>
+<p>You may also like to try <strong><a href="https://gilesknap.github.io/maaspower/main/index.html">maaspower</a></strong><code>↗</code> which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.</p>
 <p><a href="#heading--config-power-type"><h2 id="heading--config-power-type">How to configure a machine&rsquo;s power type</h2></a></p>
 <p>To (re)configure a machine&rsquo;s power type, first find the machine&rsquo;s $SYSTEM_ID with the following recipe:</p>
 <pre><code>maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SIS'S&quot;] | (., map(length*&quot;-&quot;))),
 (.[] | [.hostname, .system_id]) | @tsv' | column -t
 </code></pre>
-<p>Next, use the <a href="how-to-use-the-maas-cli.html">MAAS CLI</a> command <code>maas machines...</code> to (re)set the machine&rsquo;s power type, like this:</p>
+<p>Next, use the <a href="try-out-the-maas-cli.html">MAAS CLI</a> command <code>maas machines...</code> to (re)set the machine&rsquo;s power type, like this:</p>
 <pre><code>maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 </code></pre>
 <p>where $POWER_TYPE can have the following values:</p>

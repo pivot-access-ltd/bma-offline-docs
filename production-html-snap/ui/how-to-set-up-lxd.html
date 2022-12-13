@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -603,7 +620,7 @@ status: Created
 locations:
 - none
 </code></pre>
-<p>There is a <a href="https://github.com/lxc/lxd/blob/master/doc/networks.md">quick tutorial</a> on the possible settings here.  For simplicity, to turn off LXD-provided DHCP, you need to change three settings, as follows:</p>
+<p>There is a <a href="https://github.com/lxc/lxd/blob/master/doc/networks.md">quick tutorial</a><code>↗</code> on the possible settings here.  For simplicity, to turn off LXD-provided DHCP, you need to change three settings, as follows:</p>
 <pre><code class="language-nohighlight">lxc network set lxdbr0 dns.mode=none
 lxc network set lxdbr0 ipv4.dhcp=false
 lxc network set lxdbr0 ipv6.dhcp=false
@@ -638,7 +655,7 @@ locations:
 <li><a href="#heading--projects-alternatives">About alternatives to LXD projects in MAAS</a></li>
 </ul>
 <p><a href="#heading--projects-big-picture"><h3 id="heading--projects-big-picture">About LXD projects</h3></a></p>
-<p><a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">LXD projects</a> are a feature of the <a href="https://ubuntu.com/server/docs/containers-lxd">LXD lightweight container hypervisor</a> &ndash; a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.</p>
+<p><a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">LXD projects</a> are a feature of the <a href="https://ubuntu.com/server/docs/containers-lxd">LXD lightweight container hypervisor</a><code>↗</code> &ndash; a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.</p>
 <p>To help with this potential confusion, LXD provides a &ldquo;projects&rdquo; feature, which allows you to group one or more containers together into related projects.  These projects can be manipulated and managed with the same <code>lxc</code> tool used to manage the containers and virtual machines themselves.</p>
 <p>Since MAAS makes use of LXD as a VM host, it&rsquo;s useful to be able to manipulate and manage projects not only through MAAS, but also directly through LXD.  In fact, to properly scope MAAS access to your LXD resources, it&rsquo;s essential that you understand how to use LXD projects in some detail.</p>
 <p><a href="#heading--projects-history"><h3 id="heading--projects-history">About design choices</h3></a></p>
@@ -670,9 +687,9 @@ locations:
 <p>You can see from the discussion above that LXD projects were used primarily to cordon off some LXD VMs from MAAS, to avoid them from being enlisted and commissioned by MAAS (and thus, essentially, destroyed, from an operational perspective).  These LXD project features provide some limited capabilities to group machines. Because LXD projects only deal with LXD VMs and VM hosts, they are not a complete or comprehensive set of project tools.  MAAS already has those machine grouping capabilities in the form of resource pools.</p>
 <p>We realised, though, as we were working with LXD projects, that we could vastly improve the documentation for resource pools in the area of projects and project management.  You&rsquo;ll find significant new material in the resource pools section of the doc.  We also realised that it would be helpful to have &ldquo;real-time tags&rdquo; for machines, that is, annotations that persist only while a machine is allocated or deployed.  These new &ldquo;tags&rdquo; are known as workload annotations, and they have also been given a thorough treatment, also with their own page in the left-hand navigation.</p>
 <p><a href="#heading--projects-tutorial"><h2 id="heading--projects-tutorial">An LXD project tutorial</h2></a></p>
-<p>A good understanding of LXD projects is essential for those using LXD VM hosts, especially if you plan to include non-MAAS-controlled VMs in your LXD instance.  Normally, we wouldn&rsquo;t revisit instructions <a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">found elsewhere</a>, but because the discussion flows quickly and naturally into MAAS-related usage, it seemed prudent to give a light overview of some basic feature information.</p>
+<p>A good understanding of LXD projects is essential for those using LXD VM hosts, especially if you plan to include non-MAAS-controlled VMs in your LXD instance.  Normally, we wouldn&rsquo;t revisit instructions <a href="https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview">found elsewhere</a><code>↗</code>, but because the discussion flows quickly and naturally into MAAS-related usage, it seemed prudent to give a light overview of some basic feature information.</p>
 <p><a href="#heading--projects-s1-list"><h3 id="heading--projects-s1-list">How to list LXD projects</h3></a></p>
-<p>Before you try to manipulate projects, it&rsquo;s useful to understand how to list them, so that you can check your results as you go.  If you&rsquo;ve successfully <a href="https://linuxcontainers.org/lxd/getting-started-cli/">installed and initialised lxd</a>, you should be able to list projects.  A basic project list can be obtained with the following command:</p>
+<p>Before you try to manipulate projects, it&rsquo;s useful to understand how to list them, so that you can check your results as you go.  If you&rsquo;ve successfully <a href="https://linuxcontainers.org/lxd/getting-started-cli/">installed and initialised lxd</a><code>↗</code>, you should be able to list projects.  A basic project list can be obtained with the following command:</p>
 <pre><code class="language-nohighlight">lxc project list
 </code></pre>
 <p>You should get a listing something like this:</p>

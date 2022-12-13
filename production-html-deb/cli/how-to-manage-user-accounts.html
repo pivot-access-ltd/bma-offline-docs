@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -408,38 +425,16 @@
 <li><a href="#heading--api-key">How to add an API key for a user</a></li>
 <li><a href="#heading--change-password">How users can change their password</a></li>
 </ul>
-<pre><code>USERNAME        EMAIL                     ADMIN?
---------        -----                     ------
-admin           admin@admin.com           true
-billwear        bwear@stormrider.io       true
-MAAS            maas@localhost            false
-maas-init-node  node-init-user@localhost  false
-</code></pre>
-<p>You can generate a list like this with the command:</p>
-<pre><code>maas admin users read \
-| jq -r '([&quot;USERNAME&quot;, &quot;EMAIL&quot;, &quot;ADMIN?&quot;]
-| (., map(length*&quot;-&quot;))), (.[]
-| [.username, .email, .is_superuser]) | @tsv' \
-| column -t
-</code></pre>
-<p>Note that you do not need line continuations within the <code>jq</code> command because it&rsquo;s quoted for the shell.</p>
 <p><a href="#heading--add-a-user"><h2 id="heading--add-a-user">How to add a user</h2></a></p>
-<p>To add a regular user, enter the following command:</p>
-<pre><code>maas $PROFILE users create username=$USERNAME \
-    email=$EMAIL_ADDRESS password=$PASSWORD is_superuser=0
-</code></pre>
-<p>All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment.</p>
 <p><a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">How to add an SSH key for a user</h3></a></p>
-<p>Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See <a href="https://www.ssh.com/ssh/public-key-authentication">Public key authentication</a> (ssh.com) if you&rsquo;re not familiar with SSH keys.</p>
+<p>Before a user can deploy a machine, they must import at least one public SSH key into MAAS. This key allows the user to access the deployed machine with the corresponding private key, which the user must possess. See <a href="https://www.ssh.com/ssh/public-key-authentication">Public key authentication</a> (ssh.com)<code>↗</code> if you&rsquo;re not familiar with SSH keys.</p>
 <p>Assuming a public key exists in <code>/home/ubuntu/.ssh/id_rsa.pub</code> - add a key with the following command:</p>
 <pre><code>ubuntu@maas:~$ maas $PROFILE sshkeys create key=&quot;$(cat /home/ubuntu/.ssh/id_rsa.pub)&quot;
 Success.
 </code></pre>
 <p><strong>NOTE:</strong> 
 The user normally imports their initial SSH key on the first login to the web UI.</p>
-<p>We recommend that you use the web UI to set or change a user&rsquo;s API key.  To see how, select the &ldquo;UI&rdquo; choice in the dropdown above.</p>
 <p><a href="#heading--change-password"><h3 id="heading--change-password">How users can change their password</h3></a></p>
-<p>We recommend that you use the web UI to change user passwords.  To see how, select the &ldquo;UI&rdquo; choice in the dropdown above.</p>
     </div>
   </body>
 </html>

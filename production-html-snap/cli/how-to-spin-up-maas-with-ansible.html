@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -406,15 +423,15 @@
 <li>Hosts and groups</li>
 <li>Inventory</li>
 </ul>
-<p><a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a> is a sophisticated IT automation tool that allows users to set up <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a>, which automate complex, repetitive (or error-prone) setup activities.  While we won&rsquo;t provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:</p>
+<p><a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a><code>↗</code> is a sophisticated IT automation tool that allows users to set up <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a><code>↗</code>, which automate complex, repetitive (or error-prone)<code>↗</code> setup activities.  While we won&rsquo;t provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules">Modules</a></strong> are binaries (or even pieces of code) that Ansible can run on a managed node.  These modules can be grouped into named collections.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks">Tasks</a></strong> are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as &ldquo;partition and format /sda&rdquo;.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays">Plays</a></strong> are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., &ldquo;install the OS&rdquo; ==&gt; &ldquo;partition and format /sda&rdquo;, &ldquo;install binary x.7.iso&rdquo;, etc.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">Playbooks</a></strong> are YAML files that run plays in a specific order; for example, &ldquo;install the OS&rdquo;, &ldquo;install MAAS&rdquo;, &ldquo;create a region controller&rdquo;, &ldquo;sync images&rdquo;, etc.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3">Inventory</a></strong> is a source(s) of managed nodes; also called a &ldquo;hostfile&rdquo;.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules">Modules</a><code>↗</code></strong> are binaries (or even pieces of code)<code>↗</code> that Ansible can run on a managed node.  These modules can be grouped into named collections.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks">Tasks</a><code>↗</code></strong> are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as &ldquo;partition and format /sda&rdquo;.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays">Plays</a><code>↗</code></strong> are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., &ldquo;install the OS&rdquo; ==&gt; &ldquo;partition and format /sda&rdquo;, &ldquo;install binary x.7.iso&rdquo;, etc.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">Playbooks</a><code>↗</code></strong> are YAML files that run plays in a specific order; for example, &ldquo;install the OS&rdquo;, &ldquo;install MAAS&rdquo;, &ldquo;create a region controller&rdquo;, &ldquo;sync images&rdquo;, etc.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3">Inventory</a><code>↗</code></strong> is a source(s)<code>↗</code> of managed nodes; also called a &ldquo;hostfile&rdquo;.</li>
 </ul>
-<p>These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms &ldquo;<a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">hosts and groups</a>&rdquo;, since these are applied somewhat differently than we use them in MAAS.</p>
+<p>These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms &ldquo;<a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">hosts and groups</a><code>↗</code>&rdquo;, since these are applied somewhat differently than we use them in MAAS.</p>
 <p>Playbooks are available to automate the setup for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
@@ -466,7 +483,7 @@ maas_url=$MAAS_URL&quot; \
 <li>and <a href="#heading--Finding-the-new-region-controller">find the newly-configured region controller</a> present on that host .</li>
 </ul>
 <p><a href="#heading--Setting-the-maas_region_controller-role"><h3 id="heading--Setting-the-maas_region_controller-role">Setting the maas_region_controller role</h3></a></p>
-<p>To attach roles to hosts, a user adds each role to their <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups">Inventory file</a> in the form of either an INI or a YAML file where each role is followed by the addresses of each host to attach the role to. The example  below attaches the region controller role to a host running on <code>10.10.0.20</code> with the user <code>ubuntu</code>:*</p>
+<p>To attach roles to hosts, a user adds each role to their <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups">Inventory file</a><code>↗</code> in the form of either an INI or a YAML file where each role is followed by the addresses of each host to attach the role to. The example  below attaches the region controller role to a host running on <code>10.10.0.20</code> with the user <code>ubuntu</code>:*</p>
 <p>INI:</p>
 <pre><code class="language-INI">[maas_region_controller]
 10.10.0.20 ansible_user=ubuntu
@@ -554,7 +571,7 @@ install_metrics: false          # Whether metrics should be enabled for this MAA
 <p>The rack controller should be accessible at the specified host IP address, just as if you had installed it there manually.</p>
 <p><a href="#heading--MAAS-de-installation"><h3 id="heading--MAAS-de-installation">MAAS de-installation</h3></a></p>
 <p>As an operator, you want to be able to revert the MAAS setup installed by this playbook, such that the machine is clean of all MAAS packages or snaps.  In order to teardown a MAAS deployment, you can run a separate entry-point within the playbook to teardown the installed MAAS packages or snaps.  This entry-point is provided in the playbook to remove the installation that the default entry-point provides: Running this playbook with the default configuration with perfectly undo the default installation.</p>
-<p>You must <a href="how-to-back-up-maas.html">back up</a> the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.</p>
+<p>You must <a href="how-to-keep-maas-backed-up.html">back up</a> the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.</p>
 <p><a href="#heading--MAAS-high-availability"><h3 id="heading--MAAS-high-availability">MAAS high availability</h3></a></p>
 <p>As an operator, you want to install a reverse proxy and configure high-availability region controllers for a given host using Ansible.  Note that HA region controllers require an HAProxy configuration. You can accomplish this with the following steps:</p>
 <ul style="margin-left:4px; list-style-type:disc;">

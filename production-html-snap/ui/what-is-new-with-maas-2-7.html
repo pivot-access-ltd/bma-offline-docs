@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -405,17 +422,17 @@
 
 <h3>MAAS 2.7.3 released</h3>
 
-<p>On 24 August 2020, MAAS 2.7.3 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7</a>.  You can update your 2.7 release to 2.7.3 by with:</p>
+<p>On 24 August 2020, MAAS 2.7.3 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7</a><code>↗</code>.  You can update your 2.7 release to 2.7.3 by with:</p>
 <pre><code>snap refresh --channel=2.7/stable
 </code></pre>
-<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.3rc1">bugfixing</a> &ndash; there were no changes to MAAS since RC1.</p>
+<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.3rc1">bugfixing</a><code>↗</code> &ndash; there were no changes to MAAS since RC1.</p>
 <p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
 <h3>MAAS 2.7.2 released</h3>
 
-<p>On 30 July 2020, MAAS 2.7.2 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7</a>.  You can update your 2.7 release to 2.7.2 by with:</p>
+<p>On 30 July 2020, MAAS 2.7.2 was released, replacing the <code>2.7/stable</code> channel in snap and the <a href="https://launchpad.net/~maas/+archive/ubuntu/2.7">ppa:maas/2.7</a><code>↗</code>.  You can update your 2.7 release to 2.7.2 by with:</p>
 <pre><code>snap refresh --channel=2.7/stable
 </code></pre>
-<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.2rc1">bugfixing</a> &ndash; there were no changes to MAAS since RC1.</p>
+<p>or by using the aforementioned PPA.  The focus for this release has been <a href="https://launchpad.net/maas/+milestone/2.7.2rc1">bugfixing</a><code>↗</code> &ndash; there were no changes to MAAS since RC1.</p>
 <p>Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.</p>
 <p><a href="#heading--upgrade-2-6-to-2-7-snap"><h3 id="heading--upgrade-2-6-to-2-7-snap">Upgrading from MAAS 2.6 snap</h3></a> </p>
 <p>If you are using the MAAS 2.6 snap, which had to be installed with <code>--devmode</code>, you can update to 2.7 with the following parameters:</p>
@@ -468,7 +485,7 @@
 <h3>Update to hardware information gathering methods</h3>
 <p>MAAS has switched hardware information gathering from lshw/lsblk to lxd output during commissioning, because it more easily provides the information needed to complete resource discovery. Note that this information may not be particularly reliable for your use, so you may need to create your own commissioning scripts if you need something more detailed or specific.</p>
 <h3>Bug fixes</h3>
-<p>A number of bug fixes (see the <a href="https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&amp;field.milestone%3Alist=89662&amp;field.milestone%3Alist=89714&amp;field.milestone%3Alist=89840&amp;field.milestone%3Alist=89954&amp;field.milestone%3Alist=89682&amp;field.status%3Alist=FIXRELEASED">list in Launchpad</a>).</p>
+<p>A number of bug fixes (see the <a href="https://bugs.launchpad.net/maas/+bugs?field.milestone%3Alist=87757&amp;field.milestone%3Alist=89662&amp;field.milestone%3Alist=89714&amp;field.milestone%3Alist=89840&amp;field.milestone%3Alist=89954&amp;field.milestone%3Alist=89682&amp;field.status%3Alist=FIXRELEASED">list in Launchpad</a>)<code>↗</code>.</p>
     </div>
   </body>
 </html>

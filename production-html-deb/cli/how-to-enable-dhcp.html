@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -464,7 +481,7 @@ You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.</p>
 <p>Ensure the target VLAN has DHCP enabled.</p>
 </li>
 <li>
-<p>Set up the external relay. This relay is set up independently from MAAS. See <a href="maas-concepts-and-terms-reference.html#heading--dhcp-relay">DHCP relay</a> for software suggestions.</p>
+<p>Set up the external relay. This relay is set up independently from MAAS. See <a href="maas-glossary.html#heading--dhcp-relay">DHCP relay</a> for software suggestions.</p>
 </li>
 <li>
 <p>To relay DHCP traffic for a VLAN (source) through another VLAN (target):</p>
@@ -476,6 +493,7 @@ You must enable DHCP for PXE booting on the &lsquo;untagged&rsquo; VLAN.</p>
 <pre><code class="language-nohighlight">maas $PROFILE vlan update 2 0 relay_van=5002
 </code></pre>
 <p><a href="#heading--dhcp-snippets"><h3 id="heading--dhcp-snippets">How to customise MAAS with DHCP snippets</h3></a></p>
+<p>When MAAS manages DHCP, you customise it through the use of DHCP snippets. These are user-defined configuration options that can be applied either globally, per subnet, or per machine. You apply a global snippet to all VLANs, subnets, and machines. All three types end up in <code>/var/lib/maas/dhcpd.conf</code> or <code>/var/lib/maas/dhcpd6.conf</code>. For information on what options to use, refer to the <a href="http://manpages.ubuntu.com/cgi-bin/search.py?q=dhcpd.conf"><code>dhcpd.conf</code> man page</a><code>↗</code>.</p>
 <p><strong>NOTE:</strong> 
 Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.conf.template</code> are not supported.</p>
 <p>When you create a snippet, MAAS enables it by default.</p>
@@ -559,7 +577,7 @@ Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.
 <li><a href="#heading--delete-a-range">How to delete an existing IP range</a></li>
 </ul>
 <p><a href="#heading--create-a-range"><h3 id="heading--create-a-range">How to create an IP range</h3></a></p>
-<p>See <a href="maas-concepts-and-terms-reference.html#heading--ip-ranges">Concepts and terms</a> for an explanation of the two kinds of reserved IP ranges MAAS uses.</p>
+<p>See <a href="maas-glossary.html#heading--ip-ranges">Concepts and terms</a> for an explanation of the two kinds of reserved IP ranges MAAS uses.</p>
 <p>To create a range of dynamic IP addresses that will be used by MAAS for node enlistment, commissioning, and possibly deployment:</p>
 <pre><code class="language-bash">maas $PROFILE ipranges create type=dynamic \
     start_ip=$IP_DYNAMIC_RANGE_LOW end_ip=$IP_DYNAMIC_RANGE_HIGH \

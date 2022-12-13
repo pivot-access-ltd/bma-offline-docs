@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/how-to-enable-maas-native-tls.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="../../api/docs">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>How to enable MAAS native TLS encryption</h1><!-- "How to enable MAAS native TLS encryption" -->
+
+<p><a href="#heading--about-maas-native-tls"><h2 id="heading--about-maas-native-tls">About MAAS Native TLS</h2></a></p>
+<p>MAAS version 3.2 has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.</p>
+<p>TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following ciphers are accepted:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>AES256+EECDH</li>
+<li>AES256+EDH</li>
+</ul>
+<p>You will need to obtain your own certificates via some provider, e.g., <a href="https://smallstep.com/docs/step-ca">small step</a><code>↗</code>.</p>
+<p><a href="#heading--about-auto-renewal-for-certificates"><h3 id="heading--about-auto-renewal-for-certificates">About certificate auto-renewal</h3></a></p>
+<p>At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level.  We <a href="#heading--how-to-auto-renew-certificates">do provide some examples</a> of how to set this up, as long as you understand that these are just gratuitous helps, not supported configurations.</p>
+<p><a href="#heading--how-to-use-maas-native-tls"><h2 id="heading--how-to-use-maas-native-tls">How to use MAAS native TLS</h2></a></p>
+<p>TLS can be enabled/disabled with the new <code>maas config-tls</code> command:</p>
+<pre><code class="language-nohighlight">usage: maas config-tls [-h] COMMAND ...
+
+Configure MAAS Region TLS.
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+drill down:
+  COMMAND
+    enable    Enable TLS and switch to a secured mode (https).
+    disable   Disable TLS and switch to a non-secured mode (http).
+
+the following arguments are required: COMMAND
+</code></pre>
+<p><a href="#heading--how-to-enable-tls"><h3 id="heading--how-to-enable-tls">How to enable TLS</h3></a></p>
+<p>To enable TLS in MAAS, a private key and a X509 certificate containing the corresponding public key are required. Both key and certificate must be encoded in PEM format.</p>
+<pre><code class="language-nohighlight">usage: maas config-tls enable [-h] [--cacert CACERT] [-p PORT] key cert
+
+positional arguments:
+  key                   path to the private key
+  cert                  path to certificate in PEM format
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --cacert CACERT       path to CA certificates chain in PEM format (default: None)
+  -p PORT, --port PORT  HTTPS port (default: 5443)
+
+the following arguments are required: key, cert
+</code></pre>
+<p>By default, the port for HTTPS traffic will be 5443. It’s possible to specify a different one via the <code>–port</code> option.  If your certificate is not self-signed, you can pass a cacert.pem, so that the full chain will be included in the certificate served by MAAS.</p>
+<p>If you have HA setup, please note that every MAAS instance will use the same certificate, so you need to create one certificate with multiple domain names or IP addresses; for example:</p>
+<pre><code class="language-nohighlight">X509v3 Subject Alternative Name:
+                DNS:example.com, IP Address:10.211.55.9
+</code></pre>
+<p><a href="#heading--how-to-disable-tls"><h3 id="heading--how-to-disable-tls">How to disable TLS</h3></a></p>
+<p>If for some reason you want to disable TLS, you can do it using the following command:</p>
+<pre><code class="language-nohighlight">usage: maas config-tls disable [-h]
+
+optional arguments:
+  -h, --help  show this help message and exit
+</code></pre>
+<p>After this, MAAS API and UI will be again reachable on port 5240, over plain HTTP.</p>
+<p><a href="#heading--using-the-cli-with-a-tls-enabled-maas"><h2 id="heading--using-the-cli-with-a-tls-enabled-maas">Using the CLI with a TLS-enabled MAAS</h2></a></p>
+<p>To connect to the MAAS API when TLS is enabled, an https URL must be provided to the maas login command, e.g.:</p>
+<pre><code class="language-nohighlight">maas login &lt;profile_name&gt; https://mymaas:5443/MAAS &lt;api_key&gt;
+
+usage: maas login [-h] [--cacerts CACERTS] [-k] profile-name url [credentials]
+
+Log in to a remote API, and remember its description and credentials.
+
+positional arguments:
+  profile-name       The name with which you will later refer to this remote server and credentials within this tool.
+  url                The URL of the remote API, e.g. http://example.com/MAAS/ or http://example.com/MAAS/api/2.0/ if you wish to specify the API
+                     version.
+  credentials        The credentials, also known as the API key, for the remote MAAS server. These can be found in the user preferences page in
+                     the web UI; they take the form of a long random-looking string composed of three parts, separated by colons.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --cacerts CACERTS  Certificate CA file in PEM format
+  -k, --insecure     Disable SSL certificate check
+
+If credentials are not provided on the command-line, they will be prompted
+for interactively.
+
+the following arguments are required: profile-name, url
+</code></pre>
+<p>Certificates provided via <code>--cacerts</code> will be stored as a part of your profile and used for next CLI commands invocations.</p>
+<p><a href="#heading--certificate-renewal"><h2 id="heading--certificate-renewal">Certificate renewal</h2></a></p>
+<p>Once a certificate has expired, you can update it by running the same command used for enabling TLS:</p>
+<pre><code class="language-nohighlight">$ ​​sudo maas config-tls enable new-server-key.pem new-server.pem --port 5443
+</code></pre>
+<p>If you’re using the snap, the certificate and key must be placed in a directory that’s readable by the CLI, such as <code>/var/snap/maas/common</code> (e.g., if you&rsquo;re using the snap version).</p>
+<p><a href="#heading--ui-changes"><h2 id="heading--ui-changes">UI Changes</h2></a></p>
+<p>There is a new &ldquo;Security&rdquo; subsection under &ldquo;Configuration&rdquo; that will indicate the status of TLS in the specific server (enabled or disabled).</p>
+<p><a href="#heading--tls-enabled"><h3 id="heading--tls-enabled">TLS enabled</h3></a></p>
+<p>When TLS is enabled, the following certificate information is displayed:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>CN </li>
+<li>Expiration date</li>
+<li>Fingerprint</li>
+<li>Certificate</li>
+</ul>
+<p>It is also possible to download certificate and configure notification reminder settings. Once the notification reminder is enabled, MAAS administrators will be notified about certificate expiration.</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/34053a14fbf38b96f8a70886e8fac3d120323a29.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/34053a14fbf38b96f8a70886e8fac3d120323a29.jpeg"></a></p>
+<p><a href="#heading--tls-disabled"><h3 id="heading--tls-disabled">TLS disabled</h3></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f27c091d2335ecbb1db65193891e8d24b7e94715.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f27c091d2335ecbb1db65193891e8d24b7e94715.png"></a></p>
+<p>We recommend that you enable TLS for secure communication.</p>
+<p><a href="#heading--notifications"><h3 id="heading--notifications">Notifications</h3></a></p>
+<p>When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expiration notification. This notification is dismissible, but once it is dismissed, it won&rsquo;t appear again.</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/ea8d6c4a84adb581d4eb664b1d6d917bea9ed783.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea8d6c4a84adb581d4eb664b1d6d917bea9ed783.png"></a></p>
+<p>A certificate expiration check runs every twelve hours.  When the certificate has expired, the notification will change to “certificate has expired”.</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg"></a></p>
+<p><a href="#heading--how-to-auto-renew-certificates"><h3 id="heading--how-to-auto-renew-certificates">How to auto-renew certificates</h3></a></p>
+<p>MAAS does not auto-renew certificates, but there&rsquo;s no reason why we cannot provide a gratuitous example.  Use at your own risk.</p>
+<p><a href="#heading--set-up-your-own-certificate-authority"><h4 id="heading--set-up-your-own-certificate-authority">Set up your own certificate authority</h4></a></p>
+<p>You can setup your own Certificate Authority (CA) server that supports the ACME protocol with these components:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://smallstep.com/docs/step-ca">step-ca from Smallstep</a><code>↗</code></li>
+<li><a href="https://caddyserver.com/docs/caddyfile/directives/acme_server">Caddy server with ACME support</a>  (available since version 2.5)<code>↗</code></li>
+</ul>
+<p>If you have a CA server with ACME protocol support, you can use any ACME client for an automated certificate renewal and use crontab to renew on a desired time interval.  Consider <a href="https://github.com/acmesh-official/acme.sh">acme.sh</a><code>↗</code>: </p>
+<pre><code class="language-nohighlight">$&gt; acme.sh --issue -d mymaas.internal --standalone --server https://ca.internal/acme/acme/directory
+
+Your cert is in: /root/.acme.sh/mymaas.internal/mymaas.internal.cer
+Your cert key is in: /root/.acme.sh/mymaas.internal/mymaas.internal.key
+The intermediate CA cert is in: /root/.acme.sh/mymaas.internal/ca.cer
+And the full chain certs is there: /root/.acme.sh/foo/fullchain.cer
+</code></pre>
+<p>Once the certificate is issued, you can install it. </p>
+<pre><code class="language-nohighlight">$&gt; acme.sh --installcert -d maas.internal \
+   --certpath /var/snap/maas/certs/server.pem \
+   --keypath /var/snap/maas/certs/server-key.pem  \
+   --capath  /var/snap/maas/certs/cacerts.pem  \
+   --reloadcmd  &quot;(echo y) | maas config-tls enable /var/snap/maas/certs/server-key.pem /var/snap/maas/certs/server.pem --port 5443&quot;
+</code></pre>
+<p>Please note that if you have MAAS installed via snap, you need to run above command as root, in order to place cert and key under <code>/var/snap/maas</code>.</p>
+<p>Another approach would be to write a bash script and pass it to a <a href="https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd"><code>--renew-hook</code></a><code>↗</code>.</p>
+<p><a href="#heading--using-certbot"><h4 id="heading--using-certbot">Using certbot</h4></a></p>
+<p><a href="https://certbot.eff.org">certbot</a><code>↗</code> can be used to renew certificates and execute a post-renewal hook.  We can use this hook to re-configure MAAS to use fresh certificates.</p>
+<p>To create a post-renewal hook, you can put this sample script under <code>/etc/letsencrypt/renewal-hooks/post/001-update-maas.sh</code>.</p>
+<pre><code class="language-nohighlight">#!/bin/bash -e
+
+DOMAIN=&quot;maas.internal&quot;
+CERTSDIR=&quot;/etc/letsencrypt/live/$DOMAIN&quot;
+
+cd /var/snap/maas/common
+
+# need to copy certs where the snap can read them
+cp &quot;$CERTSDIR&quot;/{privkey,cert,chain}.pem .
+yes | maas config-tls enable privkey.pem cert.pem --cacert chain.pem --port 5443
+
+# we don’t want to keep private key and certs around
+rm {privkey,cert,chain}.pem
+</code></pre>
+<p>Don’t forget to make the script executable:</p>
+<pre><code class="language-nohighlight">chmod +x /etc/letsencrypt/renewal-hooks/post/001-update-maas.sh
+</code></pre>
+<p>Of course, you&rsquo;ll first need to obtain a new certificate.  </p>
+<pre><code class="language-nohighlight">sudo REQUESTS_CA_BUNDLE=ca.pem certbot certonly --standalone -d maas.internal     --server https://ca.internal/acme/acme/directory
+</code></pre>
+<p>Don&rsquo;t worry, new certs will not run the hook, since hooks are run only on renewal.</p>
+<p>To test the renewal process and verify that the hook is executed correctly, you can use the following command with a <code>--dry-run flag</code>. Please note, that the hook will be executed and existing certificates will be removed (if you are using an example hook script):</p>
+<pre><code class="language-nohighlight">sudo REQUESTS_CA_BUNDLE=ca.pem certbot renew --standalone --server https://ca.internal/acme/acme/directory --dry-run
+</code></pre>
+<p>Please refer to the <a href="https://certbot.eff.org/instructions?ws=other&amp;os=ubuntufocal">cerbot documentation</a><code>↗</code> for more information.</p>
+    </div>
+  </body>
+</html>

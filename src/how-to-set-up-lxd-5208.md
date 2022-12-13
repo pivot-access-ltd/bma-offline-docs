@@ -235,7 +235,7 @@ locations:
 - none
 ```
 
-There is a [quick tutorial](https://github.com/lxc/lxd/blob/master/doc/networks.md) on the possible settings here.  For simplicity, to turn off LXD-provided DHCP, you need to change three settings, as follows:
+There is a [quick tutorial](https://github.com/lxc/lxd/blob/master/doc/networks.md)`↗` on the possible settings here.  For simplicity, to turn off LXD-provided DHCP, you need to change three settings, as follows:
 
 ```nohighlight
 lxc network set lxdbr0 dns.mode=none
@@ -282,7 +282,7 @@ It may be beneficial to understand how LXD projects fit into the overall MAAS ec
 
 <a href="#heading--projects-big-picture"><h3 id="heading--projects-big-picture">About LXD projects</h3></a>
 
-[LXD projects](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview) are a feature of the [LXD lightweight container hypervisor](https://ubuntu.com/server/docs/containers-lxd) -- a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.
+[LXD projects](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview) are a feature of the [LXD lightweight container hypervisor](https://ubuntu.com/server/docs/containers-lxd)`↗` -- a next-generation container manager which makes containers as easy to manage as virtual machines.  With LXD, you can create lots of containers, providing different services across many different use cases.  As a result of this flexibility, it can become confusing to keep track of exactly which containers are providing what services to answer which use case.
 
 To help with this potential confusion, LXD provides a "projects" feature, which allows you to group one or more containers together into related projects.  These projects can be manipulated and managed with the same `lxc` tool used to manage the containers and virtual machines themselves.
 
@@ -329,11 +329,11 @@ We realised, though, as we were working with LXD projects, that we could vastly 
 
 <a href="#heading--projects-tutorial"><h2 id="heading--projects-tutorial">An LXD project tutorial</h2></a>
 
-A good understanding of LXD projects is essential for those using LXD VM hosts, especially if you plan to include non-MAAS-controlled VMs in your LXD instance.  Normally, we wouldn't revisit instructions [found elsewhere](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview), but because the discussion flows quickly and naturally into MAAS-related usage, it seemed prudent to give a light overview of some basic feature information.
+A good understanding of LXD projects is essential for those using LXD VM hosts, especially if you plan to include non-MAAS-controlled VMs in your LXD instance.  Normally, we wouldn't revisit instructions [found elsewhere](https://ubuntu.com/tutorials/introduction-to-lxd-projects#1-overview)`↗`, but because the discussion flows quickly and naturally into MAAS-related usage, it seemed prudent to give a light overview of some basic feature information.
 
 <a href="#heading--projects-s1-list"><h3 id="heading--projects-s1-list">How to list LXD projects</h3></a>
 
-Before you try to manipulate projects, it's useful to understand how to list them, so that you can check your results as you go.  If you've successfully [installed and initialised lxd](https://linuxcontainers.org/lxd/getting-started-cli/), you should be able to list projects.  A basic project list can be obtained with the following command:
+Before you try to manipulate projects, it's useful to understand how to list them, so that you can check your results as you go.  If you've successfully [installed and initialised lxd](https://linuxcontainers.org/lxd/getting-started-cli/)`↗`, you should be able to list projects.  A basic project list can be obtained with the following command:
 
 ```nohighlight
 lxc project list

@@ -20,13 +20,13 @@ We are happy to announce that MAAS 3.1 is now available. This release provides n
 
 Critical and high-priority fixes also extend or repair MAAS features:
 
-- [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394): Some proxies require authentication; MAAS now respects peer proxy username and password
+- [Expanded proxies](https://bugs.launchpad.net/maas/+bug/1867394)`↗`: Some proxies require authentication; MAAS now respects peer proxy username and password
 
-- [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410): The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
+- [Accurate storage pool sizes](https://bugs.launchpad.net/bugs/1949410)`↗`: The UI now calculates storage pool sizes correctly for CEPH pools; shared pools are no longer stacked
 
-- [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485): MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
+- [Refresh wipeout bug](https://bugs.launchpad.net/bugs/1949485)`↗`: MAAS does not destroy existing VMs on a refresh, or when the memory overcommit ratio is changed
  
-- [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500): UI cloning has been repaired to prevent "unsuccessful cloning" of storage
+- [Cloning issue fixed](https://bugs.launchpad.net/bugs/1948500)`↗`: UI cloning has been repaired to prevent "unsuccessful cloning" of storage
 
 <a href="#heading--installing-3-1-0"><h3 id="heading--installing-3-1-0">How to install MAAS 3.1</h3></a>
 
@@ -179,7 +179,7 @@ Users can upload, deploy and reuse a bootable ubuntu image
 
 #### About this feature
 
-MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to create custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, deployed as described below. Canonical still suggests customising Ubuntu using cloud-init user_data or Curtin preseed data, if possible.
+MAAS supports deploying custom OS images.  Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder)`↗` and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas)`↗` to create custom images. With 3.1, these custom images can include static Ubuntu images, created with whatever tool you choose, deployed as described below. Canonical still suggests customising Ubuntu using cloud-init user_data or Curtin preseed data, if possible.
 
 #### About static Ubuntu images
 
@@ -187,9 +187,9 @@ MAAS allows you to build an Ubuntu image to deploy with MAAS, using any chosen i
 
 #### About uploading hand-built Ubuntu images
 
-You can upload and deploy hand-built Ubuntu images, containing kernel, bootloader, and fixed configuration.  The image can be built by tool, e.g., [packer](https://github.com/canonical/packer-maas), or by scripts. You can upload these images to the boot-resources endpoint, where they will be available for deployment.
+You can upload and deploy hand-built Ubuntu images, containing kernel, bootloader, and fixed configuration.  The image can be built by tool, e.g., [packer](https://github.com/canonical/packer-maas)`↗`, or by scripts. You can upload these images to the boot-resources endpoint, where they will be available for deployment.
 
-The minimum image must contain a kernel, bootloader, and `/curtin/curtin-hooks` script that configures the network. Samples can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts). The image must be in raw img file format so MAAS will accept the upload.  When built, you will upload this img file to the boot-resources endpoint, specifying the image architecture.
+The minimum image must contain a kernel, bootloader, and `/curtin/curtin-hooks` script that configures the network. Samples can be found in the [packer-maas repos](https://github.com/canonical/packer-maas/tree/master/ubuntu/scripts)`↗`. The image must be in raw img file format so MAAS will accept the upload.  When built, you will upload this img file to the boot-resources endpoint, specifying the image architecture.
 
 #### About how MAAS handles these images
 
@@ -336,11 +336,11 @@ The imported key must not have a passphrase; otherwise, MAAS will not be able to
 
 Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank">![](upload://5Rn9eea7n648iKo1sjohP7r5ARY.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png"></a>
 
 Select "Add KVM", which brings you to the definition screen:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank">![](upload://2uPyI3yDteiWizFUhOM95C5B1Hg.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png"></a>
 
 From here, you'll continue by choosing your authentication method.
 
@@ -348,7 +348,7 @@ From here, you'll continue by choosing your authentication method.
 
 If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank">![](upload://vc5IuTP53xKYzCDYkkPhLxcZFUE.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png"></a>
 
 You can still choose to use the LXD trust password (entered when you ran `lxd init` during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window -- then hit "Enter":
 
@@ -388,7 +388,7 @@ $
 
 The certificate will be created for you.  When you click the "Check authentication" button, you will be brought to this screen:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank">![](upload://5J5yTzf8p1wHMmyaB8Af6rRBTPC.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a>
 
 from which you can continue with normal LXD KVM setup.
 
@@ -396,7 +396,7 @@ from which you can continue with normal LXD KVM setup.
 
 Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank">![](upload://rQ83izglHaGONtR03yUSYuDY9Sc.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a>
 
 Paste or upload your certificate and private key, then click "Next" to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren't usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):
 
@@ -420,8 +420,8 @@ There is nothing required of our users to experience this improved sync performa
 
 MAAS 3.1 bug fixes can be found in the following milestones:
 
-- [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)
-- [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)
-- [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)
-- [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)
-- [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)
+- [MAAS 3.1 Beta5 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta5)`↗`
+- [MAAS 3.1 Beta4 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta4)`↗`
+- [MAAS 3.1 Beta3 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta3)`↗`
+- [MAAS 3.1 Beta2 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta2)`↗`
+- [MAAS 3.1 Beta1 bug fixes](https://launchpad.net/maas/+milestone/3.1.0-beta1)`↗`

@@ -1,5 +1,5 @@
 <!-- "How to put machines to work" -->
-The ultimate purpose of MAAS is to deploy and manage machines.  It's important to understand [how images get deployed](/t/about-images/5076#heading--how-images-deploy) -- as explained in [About the machine life-cycle](/t/about-machines/5080#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then allocated, then deployed.  This article will help you build on that understanding by explaining:
+The ultimate purpose of MAAS is to deploy and manage machines.  It's important to understand [how images get deployed](/t/how-to-acquire-images/6192#heading--how-images-deploy) -- as explained in [About the machine life-cycle](/t/how-to-deploy-physical-machines/6193#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then allocated, then deployed.  This article will help you build on that understanding by explaining:
 
 - [How to commission a machine](#heading--how-to-commission-a-machine)
 - [How to test machines](#heading--how-to-test-machines)
@@ -41,9 +41,9 @@ These options include:
 
 - **Allow SSH access and prevent machine powering off**: Machines are normally powered off after commissioning. This option keeps the machine on and enables SSH so you can access the machine.
 
-- **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/about-networking/5084) for more information.
+- **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/how-to-set-up-networks/6174) for more information.
 
-- **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/about-machines/5080#heading--about-storage) for more details.
+- **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/how-to-deploy-physical-machines/6193#heading--about-storage) for more details.
 
 - **Update firmware**: Runs scripts tagged with `update_firmware`.
 
@@ -51,7 +51,7 @@ These options include:
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5f196ca5e175e3f37d7cffbb2341fb0ee9cee16a.png"></a>
 
-- Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/about-machines/5080#heading--about-testing-hardware) for more information on hardware testing scripts.
+- Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/how-to-deploy-physical-machines/6193#heading--about-testing-hardware) for more information on hardware testing scripts.
 
 - Finalise the directive by hitting "Commission machine".
 
@@ -428,7 +428,7 @@ You can download the source for all commissioning and test scripts via the API w
 maas $PROFILE node-script download $SCRIPT_NAME
 ```
 
-The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts).
+The source code to all built-in scripts is available on [launchpad](https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts)`↗`.
 
 [tabs]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
@@ -436,7 +436,7 @@ The source code to all built-in scripts is available on [launchpad](https://git.
 
 Scripts can be uploaded to MAAS using the web UI. Select the 'User scripts' tab of the 'Settings' page - the 'Commissioning scripts' section is near the top. Within the Commissioning scripts section, click the Upload script button followed by 'Choose file' to open a requester, locate the script, and select Upload to upload it to MAAS.
 
-A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/about-machines/5080#heading--about-testing-hardware) from a machine's 'Take action' menu.
+A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/how-to-deploy-physical-machines/6193#heading--about-testing-hardware) from a machine's 'Take action' menu.
 
 <a href="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/50e08fdf-nodes-hw-scripts__2.4_select.png"></a>
 

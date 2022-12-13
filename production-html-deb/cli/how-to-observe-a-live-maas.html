@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -401,7 +418,7 @@
   <h1>How to observe a live MAAS</h1><!-- "How to observe a live MAAS" -->
 
 <p><a href="#heading--configuring-prometheus"><h3 id="heading--configuring-prometheus">Configuring Prometheus</h3></a></p>
-<p>Once the <code>/metrics</code> endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">prometheus configuration</a>:</p>
+<p>Once the <code>/metrics</code> endpoint is available in MAAS services, Prometheus can be configured to scrape metric values from these. You can configure this by adding a stanza like the following to the <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">prometheus configuration</a><code>↗</code>:</p>
 <pre><code class="language-yaml">    - job_name: maas
       static_configs:
         - targets:
@@ -420,8 +437,8 @@
 </code></pre>
 <p>In case of a multi-host deploy, adding a single IP for any of the MAAS hosts running <code>regiond</code> will suffice.</p>
 <p><a href="#heading--deploying-prometheus-and-grafana"><h3 id="heading--deploying-prometheus-and-grafana">Deploying Prometheus and Grafana</h3></a></p>
-<p><a href="https://grafana.com/">Grafana</a> and Prometheus can be easily deployed using Juju.</p>
-<p>The <a href="https://git.launchpad.net/~maas-committers/maas/+git/maas-performance">MAAS performance repo</a> repository provides a sample <code>deploy-stack</code> script that will deploy and configure the stack on LXD containers.</p>
+<p><a href="https://grafana.com/">Grafana</a><code>↗</code> and Prometheus can be easily deployed using Juju.</p>
+<p>The <a href="https://git.launchpad.net/~maas-committers/maas/+git/maas-performance">MAAS performance repo</a><code>↗</code> repository provides a sample <code>deploy-stack</code> script that will deploy and configure the stack on LXD containers.</p>
 <p>First, you must install juju via:</p>
 <pre><code>sudo snap install --classic juju
 </code></pre>

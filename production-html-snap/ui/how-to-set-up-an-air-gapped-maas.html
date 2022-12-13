@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -421,7 +438,7 @@
 <li><a href="#heading--transparent-proxy">How to set up a transparent proxy</a></li>
 </ul>
 <p><a href="#heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment"><h2 id="heading--How-to-use-the-snap-proxy-to-refresh-snaps-in-an-air-gapped-environment">How to use the snap proxy to refresh snaps in an air-gapped environment</h2></a></p>
-<p>Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an <a href="https://docs.ubuntu.com/snap-store-proxy/en/airgap">air-gapped</a> mode are part of a password-protected internal Beta.  </p>
+<p>Using snaps in an air-gapped environment is possible with the Snap Store Proxy, which can be deployed in networks that are disconnected from the Internet.  Currently, the features required to use this proxy in an <a href="https://docs.ubuntu.com/snap-store-proxy/en/airgap">air-gapped</a><code>↗</code> mode are part of a password-protected internal Beta.  </p>
 <p>Client devices connect to the air-gapped proxy and never contact the general Snap Store nor the Internet.  Proxy operators will need to side-load all needed snaps and updates into the proxy. </p>
 <p>There are three main steps to setting up this proxy:</p>
 <ol>
@@ -429,9 +446,9 @@
 <li>Set up HTTPS access to ensure adequate security.</li>
 <li>Fetch the necessary snaps as needed by your MAAS environment (on the Internet-connected machine).</li>
 </ol>
-<p>This proxy requires a properly configured PostgreSQL database &ndash; see the <a href="https://docs.ubuntu.com/snap-store-proxy/en/airgap">setup instructions</a> for the Snap Store Proxy for more details.</p>
+<p>This proxy requires a properly configured PostgreSQL database &ndash; see the <a href="https://docs.ubuntu.com/snap-store-proxy/en/airgap">setup instructions</a><code>↗</code> for the Snap Store Proxy for more details.</p>
 <p><a href="#heading--apt-mirror"><h2 id="heading--apt-mirror">How to make package updates available in an air-gapped environment</h2></a></p>
-<p>The simplest way to use local package repos is via the <a href="http://manpages.ubuntu.com/manpages/focal/man1/reprepro.1.html">reprepro</a> command.  There is an older command, <code>apt-mirror</code>, which is no longer maintained; it&rsquo;s not recommended.</p>
+<p>The simplest way to use local package repos is via the <a href="https://manpages.ubuntu.com/manpages/focal/man1/reprepro.1.html">reprepro</a><code>↗</code> command.  There is an older command, <code>apt-mirror</code>, which is no longer maintained; it&rsquo;s not recommended.</p>
 <p>The <code>reprepro</code> command manages a local repository of Debian packages.  You can add files manually or download them from some other repository.  It does not require an external database.  This command also handles signatures of mirrored repos, and can create signatures for the generated package indices, if desired.  </p>
 <p>You may wish to create a <a href="#heading--transparent-proxy">transparent proxy</a> to make using your local repo easier.</p>
 <p><a href="#heading--local-image-mirroring"><h2 id="heading--local-image-mirroring">How to retrieve or update MAAS images in an air-gapped environment</h2></a></p>
@@ -454,7 +471,7 @@
 <p><a href="#heading--other-os-user-data"><h3 id="heading--other-os-user-data">How to use user_data to access non-MAAS-maintained images</h3></a></p>
 <p>A user can create custom <code>user_data</code> which will configure CentOS or RHEL to use a specific mirror.  Check out the <a href="how-to-customise-machines.html">machine customisation</a> page for details on how to make this work.</p>
 <p><a href="#heading--store-custom-images"><h3 id="heading--store-custom-images">Storing customer images for non-MAAS-maintained images</h3></a></p>
-<p>You can also <a href="how-to-create-custom-images.html">create custom images</a> and store them in your local mirror.  Once you have the image built, consult the page on <a href="how-to-mirror-images-locally.html">local image mirrors</a> to see how to incorporate your newly-built image into the local stash.</p>
+<p>You can also <a href="how-to-build-custom-images.html">create custom images</a> and store them in your local mirror.  Once you have the image built, consult the page on <a href="how-to-mirror-images-locally.html">local image mirrors</a> to see how to incorporate your newly-built image into the local stash.</p>
 <p><a href="#heading--transparent-proxy"><h2 id="heading--transparent-proxy">How to set up a transparent proxy</h2></a></p>
 <p>If you don&rsquo;t wish to disturb the default configurations for Ubuntu and MAAS, you can create a transparent proxy for Debian packages and images, via the following general steps:</p>
 <ol>

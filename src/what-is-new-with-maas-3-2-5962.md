@@ -1,15 +1,14 @@
 <!-- "What is new with MAAS 3.2" -->
 
-Here you will find release notes for:
+<a href="#heading--MAAS-3.2-release-notes"><h2 id="heading--MAAS-3.2-release-notes">MAAS 3.2 release notes</h2></a>
 
-- [The current version of MAAS](#heading--current-maas-release-notes)
-- [Other MAAS versions](#heading--other-maas-versions)
+Here you will find release notes for all releases under the 3.2 version.
 
 <a href="#heading--3-2-6-maas-release-notes"><h2 id="heading--3-2-6-maas-release-notes">MAAS 3.2.6 release notes</h2></a>
 
 We are happy to announced that MAAS 3.2.6 has been released. This point release of MAAS 3.2 provides a fix for a critical bug that prevented MAAS from enlisting machines on subnets with active DNS:
 
-- #1989970 [Can't enlist machines on subnets with DNS set](https://bugs.launchpad.net/bugs/1989970)
+- #1989970 [Can't enlist machines on subnets with DNS set](https://bugs.launchpad.net/bugs/1989970)`↗`
 
 No other changes were made for this point release.
 
@@ -21,7 +20,7 @@ MAAS 3.2.5 was an attempt to fix a critical issue in 3.2.4.  This issue was reso
 
 We are happy to announce that MAAS 3.2.4 has been released.  This point release of MAAS 3.2 provides a fix for a critical bug that prevented the controllers page from displaying under certain conditions:
 
--  #1983624 [Fresh MAAS 3.2 install failed to find controller](https://bugs.launchpad.net/bugs/1983624)
+-  #1983624 [Fresh MAAS 3.2 install failed to find controller](https://bugs.launchpad.net/bugs/1983624)`↗`
 
 This release also addresses build issues found in prior point releases.
 
@@ -31,18 +30,18 @@ MAAS 3.2.2 and MAAS 3.2.3 were successive attempts to fix issues in MAAS.  These
 
 <a href="#heading--3-2-1-maas-release-notes"><h2 id="heading--3-2-1-maas-release-notes">MAAS 3.2.1 release notes</h2></a>
 
-We are happy to announce that MAAS 3.2.1 has been released.  This point release of MAAS 3.2.1 provides support for Rocky Linux UEFI ([bug number 1955671](https://bugs.launchpad.net/bugs/1955671)), along with fixes for a number of recently-reported bugs:
+We are happy to announce that MAAS 3.2.1 has been released.  This point release of MAAS 3.2.1 provides support for Rocky Linux UEFI ([bug number 1955671](https://bugs.launchpad.net/bugs/1955671))`↗`, along with fixes for a number of recently-reported bugs:
 
-- #1955671: [support for rocky linux UEFI](https://bugs.launchpad.net/bugs/1955671)
-- #1980436: [MAAS CLI with anonymous access fails when TLS is enabled](https://bugs.launchpad.net/bugs/1980436)
-- #1980490: [MAAS regiond IPC crash due to a machine-resources binary crash when parsing some VPDs](https://bugs.launchpad.net/bugs/1980490)
-- #1980818: [Configure DHCP for VLAN](https://bugs.launchpad.net/bugs/1980818)
-- #1981536: [volume group creation fails on md device - MAAS 3.2](https://bugs.launchpad.net/bugs/1981536)
-- #1981560: [upgrade from 3.1 to 3.2 using debian packages missing steps](https://bugs.launchpad.net/bugs/1981560)
-- #1982984: [reverse-proxy service is not displayed for region controller](https://bugs.launchpad.net/bugs/1982984)
-- #1929478: [Commissioning fails with binary data in IPMI Lan_Conf_Security_Keys](https://bugs.launchpad.net/bugs/1929478)
-- #1982208: [agent.yaml.example is missing when maas is installed via deb package](https://bugs.launchpad.net/bugs/1982208)
-- #1982846: [Missing update_interface method on controller websocket handler](https://bugs.launchpad.net/bugs/1982846)
+- #1955671: [support for rocky linux UEFI](https://bugs.launchpad.net/bugs/1955671)`↗`
+- #1980436: [MAAS CLI with anonymous access fails when TLS is enabled](https://bugs.launchpad.net/bugs/1980436)`↗`
+- #1980490: [MAAS regiond IPC crash due to a machine-resources binary crash when parsing some VPDs](https://bugs.launchpad.net/bugs/1980490)`↗`
+- #1980818: [Configure DHCP for VLAN](https://bugs.launchpad.net/bugs/1980818)`↗`
+- #1981536: [volume group creation fails on md device - MAAS 3.2](https://bugs.launchpad.net/bugs/1981536)`↗`
+- #1981560: [upgrade from 3.1 to 3.2 using debian packages missing steps](https://bugs.launchpad.net/bugs/1981560)`↗`
+- #1982984: [reverse-proxy service is not displayed for region controller](https://bugs.launchpad.net/bugs/1982984)`↗`
+- #1929478: [Commissioning fails with binary data in IPMI Lan_Conf_Security_Keys](https://bugs.launchpad.net/bugs/1929478)`↗`
+- #1982208: [agent.yaml.example is missing when maas is installed via deb package](https://bugs.launchpad.net/bugs/1982208)`↗`
+- #1982846: [Missing update_interface method on controller websocket handler](https://bugs.launchpad.net/bugs/1982846)`↗`
 
 Please see the release notes for the 3.2 release, below, for a summary of 3.2 features.
 	
@@ -81,15 +80,15 @@ If the machine has been enlisted by MAAS, you can also check the output of the `
 
 <a href="#heading--maas-native-tls"><h3 id="heading--maas-native-tls">MAAS native TLS</h3></a>
 
-MAAS 3.2 provides [native TLS](/t/how-to-enable-tls-encryption/5116#heading--about-maas-native-tls). MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.  Note that you can still set up an HA proxy if you are using multiple controllers.
+MAAS 3.2 provides [native TLS](/t/how-to-enable-maas-native-tls/5116#heading--about-maas-native-tls). MAAS now has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.  Note that you can still set up an HA proxy if you are using multiple controllers.
 
 <a href="#heading--hardware-sync-for-deployed-machines"><h3 id="heading--hardware-sync-for-deployed-machines">Hardware sync for deployed machines</h3></a>
 
-MAAS 3.2 allows you to [sync hardware changes for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine).  You can see real-time updates to storage, etc., for a running machine.  This feature requires a special parameter be set prior to deployment.  Coupled with the existing ability to commission deployed machines, MAAS 3.2 moves a step closer to real-time reconfiguration of active, deployed, bare-metal.
+MAAS 3.2 allows you to [sync hardware changes for deployed machines](https://maas.io/docs/how-to-customise-machines#heading--how-to-enable-hardware-sync-on-a-machine)`↗`.  You can see real-time updates to storage, etc., for a running machine.  This feature requires a special parameter be set prior to deployment.  Coupled with the existing ability to commission deployed machines, MAAS 3.2 moves a step closer to real-time reconfiguration of active, deployed, bare-metal.
 
 <a href="#heading--expanded-tagging-capability"><h3 id="heading--expanded-tagging-capability">Expanded tagging capability</h3></a>
  
-MAAS 3.2 provides greatly [expanded tagging capability](/t/how-to-work-with-tags/5928#heading--automatic-tags).  You can auto-apply tags to machines that match a custom XPath expression. Setting up an automatic tag lets you recognise special hardware characteristics and settings, e.g., the gpu passthrough.
+MAAS 3.2 provides greatly [expanded tagging capability](/t/how-to-tag-machines/5928#heading--automatic-tags).  You can auto-apply tags to machines that match a custom XPath expression. Setting up an automatic tag lets you recognise special hardware characteristics and settings, e.g., the gpu passthrough.
 
 <a href="#heading--more-new-features"><h3 id="heading--more-new-features">More new features</h3></a>
 
@@ -135,16 +134,16 @@ At this point, proceed with a normal installation.
 
 Here is the breakdown of bugs fixed across the MAAS 3.2 release:
 
-- [MAAS 3.2.1](https://launchpad.net/maas/+milestone/3.2.1)
-- [MAAS 3.2](https://launchpad.net/maas/3.2/3.2.0)
-- [MAAS 3.2 RC 2](https://launchpad.net/maas/3.2/3.2.0-rc2)
-- [MAAS 3.2 RC 1](https://launchpad.net/maas/+milestone/3.2.0-rc1)
-- [MAAS 3.2 Beta 6](https://launchpad.net/maas/3.2/3.2.0-beta6)
-- [MAAS 3.2 Beta 5](https://launchpad.net/maas/3.2/3.2.0-beta5)
-- [MAAS 3.2 Beta 4](https://launchpad.net/maas/3.2/3.2.0-beta4)
-- [MAAS 3.2 Beta 3](https://launchpad.net/maas/3.2/3.2.0-beta3)
-- [MAAS 3.2 Beta 2](https://launchpad.net/maas/+milestone/3.2.0-beta2)
-- [MAAS 3.2 Beta 1](https://launchpad.net/maas/3.2/3.2.0-beta1)
+- [MAAS 3.2.1](https://launchpad.net/maas/+milestone/3.2.1)`↗`
+- [MAAS 3.2](https://launchpad.net/maas/3.2/3.2.0)`↗`
+- [MAAS 3.2 RC 2](https://launchpad.net/maas/3.2/3.2.0-rc2)`↗`
+- [MAAS 3.2 RC 1](https://launchpad.net/maas/+milestone/3.2.0-rc1)`↗`
+- [MAAS 3.2 Beta 6](https://launchpad.net/maas/3.2/3.2.0-beta6)`↗`
+- [MAAS 3.2 Beta 5](https://launchpad.net/maas/3.2/3.2.0-beta5)`↗`
+- [MAAS 3.2 Beta 4](https://launchpad.net/maas/3.2/3.2.0-beta4)`↗`
+- [MAAS 3.2 Beta 3](https://launchpad.net/maas/3.2/3.2.0-beta3)`↗`
+- [MAAS 3.2 Beta 2](https://launchpad.net/maas/+milestone/3.2.0-beta2)`↗`
+- [MAAS 3.2 Beta 1](https://launchpad.net/maas/3.2/3.2.0-beta1)`↗`
  
 <a href="#heading--known-issues-maas-3-2"><h2 id="heading--known-issues-maas-3-2">Known issues for MAAS 3.2</h2></a>
 

@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -485,7 +502,7 @@ It&rsquo;s essential to enforce usage of IP addresses to avoid domain name confl
 </code></pre>
 <p>Apply the new configuration with <code>netplan apply</code>.</p>
 <p><a href="#heading--maas-bridge-libvirt"><h2 id="heading--maas-bridge-libvirt">How to set up a VM host bridge with libvirt</h2></a></p>
-<p>It is also possible to use <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a> to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.</p>
+<p>It is also possible to use <a href="https://ubuntu.com/server/docs/virtualization-libvirt">libvirt</a><code>↗</code> to configure a virtual bridge.  This method will also work for LXD VM hosts running on Ubuntu.  Be aware that other methods may be required if you are configuring LXD on an OS other than Ubuntu.</p>
 <p>By default, libvirt creates a virtual bridge, <code>virbr0</code>, through which VMs communicate with each other and the Internet. DHCP, supplied by libvirt, automatically assigns an IP address to each VM.  However, to enable network booting in MAAS, you’ll need to provide DHCP in MAAS and either:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Disable DHCP on libvirt’s <code>default</code> network, or</li>
@@ -515,6 +532,14 @@ virsh net-define maas.xml
 <pre><code class="language-nohighlight">virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 </code></pre>
 <p>Here, <code>$USER</code> is a user on your VM host who is a member of the <code>libvirtd</code> Unix group on the VM host, and <code>$VM_HOST_IP</code> is the IP of your VM host.  <strong>Note</strong> that insufficient permissions for <code>$USER</code> may cause the <code>virsh</code> command to fail with an error such as <code>failed to connect to the hypervisor</code>. Check the <code>$USER</code> group membership to make sure <code>$USER</code> is a member of the <code>libvirtd</code> group.</p>
+<p><a href="#heading--libvirt-ssh"><h3 id="heading--libvirt-ssh">How to set up SSH (libvirt only)</h3></a></p>
+<p>The <code>maas</code> user on your rack controllers will issue all libvirt commands. Therefore, you&rsquo;ll need to set up SSH public keys on every rack controller for user <code>maas</code>.  First create SSH keys on all rack controllers:</p>
+<pre><code class="language-nohighlight">$ sudo -i
+root@maas:~$ mkdir -p /var/snap/maas/current/root/.ssh
+root@maas:~$ cd /var/snap/maas/current/root/.ssh
+root@maas:~$ ssh-keygen -f id_rsa
+</code></pre>
+<p>Next, add the contents of <code>~maas/.ssh/id_rsa.pub</code> to the VM host user&rsquo;s <code>~$USER/.ssh/authorized_keys</code>. To accomplish this, log into your VM host node, via SSH, from a host for which MAAS has a matching public SSH key.</p>
 <p><a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a></p>
 <p>To add a VM host:</p>
 <pre><code class="language-nohighlight">maas $PROFILE vm-host create type=$VM_HOST_TYPE power_address=$POWER_ADDRESS \

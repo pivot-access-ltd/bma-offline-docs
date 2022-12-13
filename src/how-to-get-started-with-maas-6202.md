@@ -1,6 +1,6 @@
 <!-- "How to get started with MAAS" -->
 
-Our [Ansible playbooks](/t/how-to-spin-up-maas-with-ansible/6367) make getting started easy -- from basic installation to setting up high availability.  If you prefer the manual approach, MAAS is still relatively easy to [install](/t/how-to-install-maas/5128), [upgrade](/t/how-to-upgrade-maas/5436), and [configure](/t/how-to-change-maas-settings/6347).  We try to make it easy to [ask for new features](/t/how-to-request-a-feature/4447) or -- better yet -- [just contribute some code](https://launchpad.net/maas).  You can also [report bugs](/t/how-to-report-a-bug/4446), [get help](/t/how-to-get-help/5428), and even do some [self-help troubleshooting](/t/how-to-troubleshoot-maas/5333).
+Our [Ansible playbooks](/t/how-to-spin-up-maas-with-ansible/6367) make getting started easy -- from basic installation to setting up high availability.  If you prefer the manual approach, MAAS is still relatively easy to [install](/t/how-to-install-maas/5128), [upgrade](/t/how-to-upgrade-maas/5436), and [configure](/t/how-to-change-maas-settings/6347).  We try to make it easy to [ask for new features](/t/how-to-request-a-feature/4447) or -- better yet -- [just contribute some code](https://launchpad.net/maas)`↗`.  You can also [report bugs](/t/how-to-report-a-bug/4446), [get help](/t/how-to-ask-for-help/5428), and even do some [self-help troubleshooting](/t/how-to-troubleshoot-maas/5333).
 
 Start with any of these links, or -- if you want a little background information about MAAS -- read on in this article before you jump to the how-to guides.
 
@@ -19,7 +19,7 @@ This section will answer a few questions:
 
 MAAS expands to "Metal As A Service" -- it converts bare-metal servers into cloud instances of virtual machines. There is no need to manage individual units. You can quickly provision or destroy machines, as if they were instances hosted in a public cloud like Amazon AWS, Google GCE, or Microsoft Azure.
 
-MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://juju.is/docs/olm/maas), the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs) can even act as MAAS machines if they boot from the network via PXE.
+MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://juju.is/docs/olm/maas)`↗`, the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs)`↗` can even act as MAAS machines if they boot from the network via PXE.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d19eff9ef45c554d085ee1d657e4ddd810eac6df.jpeg"></a>
 
@@ -92,23 +92,23 @@ MAAS integrates all the tools you need into a smooth system-management experienc
 [/tab]
 [/tabs]
 
-MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef) and [Juju](https://jaas.ai/) teams recommend MAAS as a physical provisioning system.
+MAAS works with any system configuration tools. Both the [Chef](https://www.chef.io/chef)`↗` and [Juju](https://jaas.ai/)`↗` teams recommend MAAS as a physical provisioning system.
 
 [note]
-Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.ubuntu.com/support) to work correctly with MAAS.
+Please note that Windows and RHEL images require [Ubuntu Advantage](https://www.ubuntu.com/support)`↗` to work correctly with MAAS.
 [/note]
 
-<a href="heading--colocation-of-key-components"><h3 id="heading--colocation-of-key-components">Colocation of key components</h3></a>
+<a href="#heading--colocation-of-key-components"><h3 id="heading--colocation-of-key-components">Colocation of key components</h3></a>
 
 MAAS relies on two key components: the *region controller* and the *rack controller*. The region controller handles operator requests; the rack controller provides high-bandwidth services to multiple racks. In essence, rack controllers manage racks, while the region controller manages the data centre. We generally recommended installing both controllers on the same system.  The default MAAS install delivers this co-located configuration automatically. This all-in-one solution also provides DHCP. 
 
-See [Concepts and terms](/t/maas-concepts-and-terms-reference/5416#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/how-to-enable-high-availability/5120), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/how-to-manage-dhcp/5132) will cause problems.
+See [Concepts and terms](/t/maas-glossary/5416#heading--controllers) for a deeper understanding of these components. Note that in special cases, such as [high availability or load balancing](/t/how-to-enable-high-availability/5120), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/how-to-enable-dhcp/5132) will cause problems.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3ad2b128fbc034e9f575f21c0415a6e6c55baea3.jpeg"></a>
 
-<a href="heading--how-maas-works"><h3 id="heading--how-maas-works">How MAAS works</h3></a>
+<a href="#heading--how-maas-works"><h3 id="heading--how-maas-works">How MAAS works</h3></a>
 
-When you [add a new machine](/t/how-to-manage-machines/5160#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/about-machines/5080#heading--about-enlistment), MAAS [commissions](/t/about-machines/5080#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+When you [add a new machine](/t/how-to-make-machines-available/5160#heading--how-to-add-a-machine-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/how-to-deploy-physical-machines/6193#heading--about-enlistment), MAAS [commissions](/t/how-to-deploy-physical-machines/6193#heading--about-commissioning-machines) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
 
 <details><summary>Tell me, quickly, about enlistment and commissioning.</summary>
 
@@ -150,4 +150,4 @@ When allocating machines from the API/CLI, you can specify requirements ("constr
 
 An allocated MAAS machine is more flexible than a virtual instance in a cloud. You have complete control, including hardware drivers and root access. If you want to upgrade the BIOS, for example, you can allocate a machine to yourself and complete the upgrade.  Once you have completed the upgrade, you can send the machine back to the pool.
 
-Note that [Juju](https://juju.is/docs/olm/maas) is designed to work with MAAS. MAAS becomes a back-end Juju resource pool with all functionality fully available. For instance, if Juju removes a machine, then MAAS will release that machine to the pool.  With Juju, MAAS can become an integral part of your data centre strategy and operations.
+Note that [Juju](https://juju.is/docs/olm/maas)`↗` is designed to work with MAAS. MAAS becomes a back-end Juju resource pool with all functionality fully available. For instance, if Juju removes a machine, then MAAS will release that machine to the pool.  With Juju, MAAS can become an integral part of your data centre strategy and operations.

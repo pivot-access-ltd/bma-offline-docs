@@ -2,17 +2,17 @@
 
 <h2>MAAS 2.9.2 release notes</h2>
 
-We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2). The two new features are:
+We have released MAAS 2.9.2, which contains two new features, and some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.2)`↗`. The two new features are:
 
 - Proxmox driver: A driver has been added to MAAS 2.9.2 which interacts with the Proxmox API.  Only one URL is needed, though a username and credentials are required.  Credentials can be either a password or an API token.  Note that if you use a token, you have to configure the permissions for the token.  Newly-created Proxmox tokens don't assign any permissions by default, so you must add `power on`, `power off`, and `query power` permissions to the token before using it.
 
-- Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3) available on this new feature.
+- Power driver Webhook:  A webhook was added to 2.9.2, which allows MAAS to interface with another web service that's running the power commands.  This webhook is provided for interacting with objects that MAAS does not support, that is, the MAAS team supports the driver itself, but whatever is interfacing to the driver is not supported.  This webhook as three URLs, one each for power on, power off, and power query.  Optionally, this webhook also supports a power user and password or token (RFC 6717).  This gives you a way to add your own power drivers without waiting for the driver to be added to MAAS.  There is a [video tutorial](https://discourse.maas.io/t/maas-show-and-tell-proxmox-and-webhook/3754/3)`↗` available on this new feature.
 
 You can also find a [digest](#heading--bug-fixes-2-9-2) of the 2.9.2 bug fixes below.
 
 <h2>MAAS 2.9.1 release notes</h2>
 
-Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1).  You can find a [digest](#heading--bug-fixes-2-9-1) of these fixes below.
+Building upon MAAS 2.9, we have released 2.9.1, which contains some notable [bug fixes](https://launchpad.net/maas/+milestone/2.9.1)`↗`.  You can find a [digest](#heading--bug-fixes-2-9-1)`↗` of these fixes below.
 
 <h2>MAAS 2.9 release notes</h2>
 
@@ -81,7 +81,7 @@ See the [VM hosting](/t/about-vm-hosting/5068) page for more details, and be sur
 
 MAAS 2.9 includes changes to the machine batch size that the UI loads. Previously the UI loaded machines in batches of 25; it now pulls in 25 for the first call, then 100 at a time in subsequent batches.
 
-You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515).
+You can see the results of the investigation in [this video podcast](https://discourse.maas.io/t/maas-show-and-tell-improving-ui-performance-for-large-maas-installs/3515)`↗`.
 
 <h2 id="heading--new-release-notifications">New release notifications</h2>
 
@@ -109,11 +109,11 @@ This description appears in that machine's row on the machine list.
 
 <h2 id="heading--curtin-20-2-included">Curtin 20.2 now included</h2>
 
-A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491).
+A number of MAAS issues have actually been issues with an older version of Curtin.  MAAS now includes Curtin 20.2, which fixes many of these issues, including [MAAS is changing my boot order!](https://discourse.maas.io/t/maas-is-changing-my-boot-order/3491)`↗`.
 
 <h2 id="heading--http-boot-disabled">HTTP boot disabled</h2>
 
-MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
+MAAS 2.9 disables HTTP boot. There are known issues with HTTP boot in MAAS, as well as known issues for HTTP boot with grub (e.g. https://bugs.launchpad.net/maas/+bug/1899581 `↗`)  This shouldn’t affect machine boot, as machines will normally try PXE as a fallback boot method if HTTP boot fails.  Be aware, though, that machine boot will fail if the BIOS is configured to boot only over HTTP; those machines need to be reconfigured to use PXE.
 
 <h2 id="heading--bmc-param-additions">30-maas-01-bmc-config parameter additions</h2>
 
@@ -169,10 +169,10 @@ Three substantial improvements to BMC usage have been released:
 Three new configuration options have been added to the IPMI power driver:
 
 - K_g - The BMC Key of the IPMI device. Used to encrypt all traffic to and from the device during communication.
-- Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf for more information.
+- Cipher Suite ID - The cipher suite to use when communicating with the IPMI BMC. Only 3, 8, 12, and 17 are available as only those enable ciphers for authentication, integrity, and confidentiality. Defaults to 3, freeipmi-tools default. See http://fish2.com/ipmi/bp.pdf `↗` for more information.
 - Privilege Level - The IPMI privilege level to use when communicating with the BMC. Defaults to OPERATOR.
 
-See the [2.9 UI](https://maas.io/docs/power-management#heading--ipmi) or [2.9 CLI](https://maas.io/doc/power-management#heading--ipmi) power management pages for details.
+See the [2.9 UI](https://maas.io/docs/power-management#heading--ipmi)`↗` or [2.9 CLI](https://maas.io/doc/power-management#heading--ipmi)`↗` power management pages for details.
 
 <h2 id="heading--enlistment-scripts">Improvements in enlistment scripting</h2>
 
@@ -222,7 +222,7 @@ Commissioning scripts have been reordered and some are now set to run in paralle
 <li>99-maas-01-capture-lldp -> maas-capture-lldp(now runs in parallel)</li>
 </ol>
 
-See the [commissioning logs page](https://maas.io/docs/commissioning-logs) for more details on these changes.
+See the [commissioning logs page](https://maas.io/docs/commissioning-logs)`↗` for more details on these changes.
 
 <h2 id="heading--commissioning-speed">Improvements in commissioning speed and logging</h2>
 
@@ -239,33 +239,33 @@ Four improvements have been made to speed up the commissioning process, mostly b
 
 <a href="#heading--bug-fixes-2-9-2"><h3 id="heading--bug-fixes-2-9-2">Bugs fixed in 2.9.2 release</h3></a>
 
-- In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946).  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135), released 2021-02-05.
+- In the MAAS UI, ARM servers based on the [Hi1620 ARM SoC appear as an "Unknown model"](https://bugs.launchpad.net/maas/+bug/1897946)`↗`.  A fix was added to [lxd-4.11]( https://discuss.linuxcontainers.org/t/lxd-4-11-has-been-released/10135)`↗`, released 2021-02-05.
 
-- Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910) trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed), and install clean with the latest PPA enabled, which will install the correct versions.
+- Debian package installs of MAAS [reached an "impossible situation"](https://bugs.launchpad.net/maas/+bug/1910910)`↗` trying to install the MAAS region controller. This is caused because of an unsupported move from the transitional MAAS PPA to the latest PPA.  The workaround is to purge the MAAS packages (and the snap, if installed)`↗`, and install clean with the latest PPA enabled, which will install the correct versions.
 
-- CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067).  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
+- CentOS/RHEL 7+ ship with an unsigned version of GRUB [which breaks UEFI secure boot](https://bugs.launchpad.net/curtin/+bug/1895067)`↗`.  This bug is believed to be fixed in curtin version 21.1, which is now supported by MAAS 2.9.2.
 
-- Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588).  This has been remedied.
+- Debug [could not be properly enabled for MAAS snap version 2.9.1](https://bugs.launchpad.net/maas/+bug/1914588)`↗`.  This has been remedied.
 
-- The MAAS [Backup doc article](https://maas.io/docs/backup) [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998).  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
+- The MAAS [Backup doc article](https://maas.io/docs/backup)`↗` [was not clearly written with respect to stopping critical services](https://bugs.launchpad.net/maas/+bug/1892998)`↗`.  The article has been reworked to make clear in what order steps should be performed so that services are not stopped before appropriate data has been retrieved for backup.
 
-- Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116).  The default architectures have been changed to prevent this issue.
+- Deselecting all architectures in the Ubuntu extra architectures repo [blocks all deployments](https://bugs.launchpad.net/maas/+bug/1894116)`↗`.  The default architectures have been changed to prevent this issue.
 
-- MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825) when a BMC extracts the address from the `power_address`.  This incorrect behaviour was changed in 2.9.2.
+- MAAS does not allow [FQDNs to be used in place of IPs](https://bugs.launchpad.net/maas/+bug/1911825)`↗` when a BMC extracts the address from the `power_address`.  This incorrect behaviour was changed in 2.9.2.
 
-- The Proxmox driver [uses a hard-coded port that cannot be customised](https://bugs.launchpad.net/maas/+bug/1914165).  This port is now customisable in 2.9.2.
+- The Proxmox driver [uses a hard-coded port that cannot be customised](https://bugs.launchpad.net/maas/+bug/1914165)`↗`.  This port is now customisable in 2.9.2.
 
 <a href="#heading--bug-fixes-2-9-1"><h3 id="heading--bug-fixes-2-9-1">Bugs fixed in 2.9.1 release</h3></a>
 
-- It is now possible to [delete an LXD VM in an offline state](https://bugs.launchpad.net/maas/+bug/1908434).
-- MAAS now handles multiple NUMA nodes even when there are [gaps in the numbering](https://bugs.launchpad.net/maas/+bug/1910473).
-- A [snap install issue](https://bugs.launchpad.net/maas/+bug/1910909) was fixed.
-- The way MAAS handles [gateways WRT DHCP](https://bugs.launchpad.net/maas/+bug/1910909) was adjusted.
-- A majority of the document [headings have been converted to links](https://bugs.launchpad.net/maas/+bug/1900010) for easy bookmarking.
+- It is now possible to [delete an LXD VM in an offline state](https://bugs.launchpad.net/maas/+bug/1908434)`↗`.
+- MAAS now handles multiple NUMA nodes even when there are [gaps in the numbering](https://bugs.launchpad.net/maas/+bug/1910473)`↗`.
+- A [snap install issue](https://bugs.launchpad.net/maas/+bug/1910909)`↗` was fixed.
+- The way MAAS handles [gateways WRT DHCP](https://bugs.launchpad.net/maas/+bug/1910909)`↗` was adjusted.
+- A majority of the document [headings have been converted to links](https://bugs.launchpad.net/maas/+bug/1900010)`↗` for easy bookmarking.
 
 <a href="#heading--bug-fixes-2-9"><h3 id="heading--bug-fixes-2-9">Bugs fixed in 2.9 release</h3></a>
 
-- MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727).
+- MAAS 2.9 includes a fix for [Bug #1894727: Admin uses cannot change other user's passwords via the UI](https://bugs.launchpad.net/maas/+bug/1894727)`↗`.
 
 <h2 id="heading--known-issues">Known issues</h2>
 

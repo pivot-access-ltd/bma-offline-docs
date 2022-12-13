@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,29 +338,19 @@
 	</li>
       </ul>
       <strong>
-	<a href="explanation.html">
-	Explanations
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
 	</a>
       </strong>
       <ul>
 	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
 	  </a>
 	</li>
 	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
 	  </a>
 	</li>
       </ul>
@@ -379,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -430,10 +420,10 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>How to build custom images</h1><!-- "How to build custom images" -->
 
-<p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a> and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a> to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, as well as other OS images.  Note that MAAS Image Builder requires the purchase of Ubuntu Advantage support.</p>
+<p>MAAS supports deploying custom OS images.  Canonical provides both <a href="https://launchpad.net/maas-image-builder">lp:maas-image-builder</a><code>↗</code> and <a href="https://github.com/canonical/packer-maas">gh:canonical/packer-maas</a><code>↗</code> to support creating custom images. These custom images can include static Ubuntu images, created with whatever tool you choose, as well as other OS images.  Note that MAAS Image Builder requires the purchase of Ubuntu Advantage support.</p>
 <p><strong>NOTE:</strong> 
 While it may be possible to deploy a certain image with MAAS, the particular use case may not be supported by that image’s vendor due to licensing or technical reasons. Canonical recommends that, whenever possible, you should customise machines using cloud-init user_data or Curtin preseed data, instead of creating a custom image.</p>
-<p>There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and <a href="https://www.packer.io/">packer</a>.  This section will help you learn:</p>
+<p>There are two methods for building custom images to be deployed to MAAS machines: MAAS Image Builder, and <a href="https://www.packer.io/">packer</a><code>↗</code>.  This section will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--how-to-verify-packer-prequisites">How to verify packer prequisites</a></li>
 <li><a href="#heading--how-to-verify-packer-deployment-requirements">How to verify packer deployment requirements</a></li>
@@ -452,7 +442,7 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>A machine running Ubuntu 18.04+ or higher with the ability to run KVM virtual machines.</li>
 <li>Various dependencies required by the chosen template (see the template directory for details)</li>
-<li><a href="https://www.packer.io/intro/getting-started/install.html">Packer</a></li>
+<li><a href="https://www.packer.io/intro/getting-started/install.html">Packer</a><code>↗</code></li>
 </ul>
 <p>As an example for this article, we will be building a custom Ubuntu image from the default template, which has the following prerequisites:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -465,15 +455,15 @@ While it may be possible to deploy a certain image with MAAS, the particular use
 <p><a href="#heading--how-to-verify-packer-deployment-requirements"><h3 id="heading--how-to-verify-packer-deployment-requirements">How to verify packer deployment requirements</h3></a></p>
 <p>The following are required to deploy a packer MAAS image:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="https://maas.io">MAAS</a> 3.0+</li>
-<li><a href="https://launchpad.net/curtin">Curtin</a> 21.0+</li>
+<li><a href="https://maas.io">MAAS</a><code>↗</code> 3.0+</li>
+<li><a href="https://launchpad.net/curtin">Curtin</a><code>↗</code> 21.0+</li>
 </ul>
 <p><a href="#heading--how-to-customise-images"><h3 id="heading--heading--how-to-customise-images">How to customise images</h3></a></p>
-<p>It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing <a href="https://ubuntu.com/server/docs/install/autoinstall">autoinstall config</a>, editing the <em>user-data-flat</em> and <em>user-data-lvm</em> files. The latter is performed by the <em>install-custom-packages</em> script.</p>
+<p>It is possible to customize the image either during the Ubuntu installation, or afterwards (before packing the final image). The former is done by providing <a href="https://ubuntu.com/server/docs/install/autoinstall">autoinstall config</a><code>↗</code>, editing the <em>user-data-flat</em> and <em>user-data-lvm</em> files. The latter is performed by the <em>install-custom-packages</em> script.</p>
 <p><a href="#heading--how-to-build-images-via-a-proxy"><h3 id="heading--how-to-build-images-via-a-proxy">How to build images via a proxy</h3></a></p>
 <p>The Packer template downloads the Ubuntu net installer from the Internet. To tell Packer to use a proxy, set the HTTP_PROXY environment variable to your proxy server. Alternatively, you may redefine iso_url to a local file, set iso_checksum_type to none to disable the checksums, and remove iso_checksum_url.</p>
 <p><a href="#heading--how-to-use-packer-to-build-maas-images"><h3 id="heading--how-to-use-packer-to-build-maas-images">How to use packer to build MAAS images</h3></a></p>
-<p><a href="https://www.packer.io/">Packer</a> can be used to build images to be deployed by MAAS.  In order to use packer, you must have a <a href="https://github.com/canonical/packer-maas">packer template</a> for the OS version you intend to build.</p>
+<p><a href="https://www.packer.io/">Packer</a><code>↗</code> can be used to build images to be deployed by MAAS.  In order to use packer, you must have a <a href="https://github.com/canonical/packer-maas">packer template</a><code>↗</code> for the OS version you intend to build.</p>
 <p>Currently, templates are available for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Ubuntu custom images</li>
@@ -503,7 +493,7 @@ sudo apt install cloud-image-utils
 </code></pre>
 <p>All of these should install without additional prompts.</p>
 <p><a href="#heading--how-to-obtain-templates"><h4 id="heading--how-to-obtain-templates">How to obtain templates</h4></a></p>
-<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
+<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a><code>↗</code>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
 </code></pre>
 <p>Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a Ubuntu AMD64 image for use with MAAS.</p>
@@ -601,7 +591,7 @@ sudo apt install cloud-image-utils
 </code></pre>
 <p>All of these should install with no additional prompts.</p>
 <h3>Get the available packer templates</h3>
-<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
+<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a><code>↗</code>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
 </code></pre>
 <p>Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a Ubuntu AMD64 image for use with MAAS.</p>
@@ -703,7 +693,7 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  ubuntu-raw
 <pre><code class="language-nohighlight">sudo apt install qemu-utils
 </code></pre>
 <h3>Get the available packer templates</h3>
-<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
+<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a><code>↗</code>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
 </code></pre>
 <p>Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a RHEL7 AMD64 image for use with MAAS.</p>
@@ -711,7 +701,7 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  ubuntu-raw
 <h3>Locate the RHEL7 template</h3>
 <p>The packer template in the directory <code>rhel7</code> subdirectory creates a RHEL 7 AMD64 image for use with MAAS.</p>
 <h3>Obtain the RHEL7 DVD ISO</h3>
-<p>Download the <a href="https://developers.redhat.com/products/rhel/download">RHEL7 DVD ISO</a> to your <code>rhel7</code> subdirectory.</p>
+<p>Download the <a href="https://developers.redhat.com/products/rhel/download">RHEL7 DVD ISO</a><code>↗</code> to your <code>rhel7</code> subdirectory.</p>
 <p><strong>NOTE:</strong> 
 You may have to scroll down the page at the above link to find the RHEL7 version. <strong>Be sure you are getting the ISO image</strong> (a much larger file) and not the bootstrap file.</p>
 <h3>Customizing the image, if desired</h3>
@@ -841,7 +831,7 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  rhel7-raw
 <pre><code class="language-nohighlight">sudo apt install qemu-utils
 </code></pre>
 <h3>Get the available packer templates</h3>
-<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
+<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a><code>↗</code>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
 </code></pre>
 <p>Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a RHEL8 AMD64 image for use with MAAS.</p>
@@ -849,7 +839,7 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  rhel7-raw
 <h3>Locate the RHEL8 template</h3>
 <p>The packer template in the directory <code>rhel8</code> subdirectory creates a RHEL 8 AMD64 image for use with MAAS.</p>
 <h3>Obtain the RHEL8 DVD ISO</h3>
-<p>Download the <a href="https://developers.redhat.com/products/rhel/download">RHEL8 DVD ISO</a> to your <code>rhel8</code> subdirectory.</p>
+<p>Download the <a href="https://developers.redhat.com/products/rhel/download">RHEL8 DVD ISO</a><code>↗</code> to your <code>rhel8</code> subdirectory.</p>
 <p><strong>NOTE:</strong> 
 You may have to scroll down the page at the above link to find the RHEL8 version. <strong>Be sure you are getting the ISO image</strong> (a much larger file) and not the bootstrap file.</p>
 <h3>Customizing the image, if desired</h3>
@@ -983,7 +973,7 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  rhel8-raw
 <pre><code class="language-nohighlight">sudo apt install qemu-utils
 </code></pre>
 <h3>Get the available packer templates</h3>
-<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
+<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a><code>↗</code>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
 </code></pre>
 <p>Make sure to pay attention to where the repository is cloned.  The Packer template in this cloned repository creates a CentOS 7 AMD64 image for use with MAAS.</p>
@@ -1129,7 +1119,7 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  centos7-raw
 <li>qemu-utils</li>
 <li>Python Pip</li>
 <li>Packer</li>
-<li>The VMware ESXi installation ISO must be <a href="https://www.vmware.com/go/get-free-esxi">downloaded manually</a>.</li>
+<li>The VMware ESXi installation ISO must be <a href="https://www.vmware.com/go/get-free-esxi">downloaded manually</a><code>↗</code>.</li>
 <li>MAAS 2.5 or above, MAAS 2.6 required for storage configuration</li>
 </ul>
 <h3>Install packer</h3>
@@ -1144,14 +1134,14 @@ open-gannet  nk7x8y  on     Deployed  admin  custom  centos7-raw
 <pre><code class="language-nohighlight">sudo apt install pip
 </code></pre>
 <h3>Get the available packer templates</h3>
-<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a>, like this:</p>
+<p>You can obtain the packer templates by cloning the <a href="https://github.com/canonical/packer-maas.git">packer-maas github repository</a><code>↗</code>, like this:</p>
 <pre><code class="language-nohighlight">git clone https://github.com/canonical/packer-maas.git
 </code></pre>
 <p>Make sure to pay attention to where the repository is cloned. This package should install with no additional prompts.</p>
 <h3>Locate the ESXi template</h3>
 <p>The appropriate packer template can be found in the subdirectory <code>vmware-esxi</code> in the packer repository.</p>
 <h3>Customise the image, if desired</h3>
-<p>The deployment image may be customized by modifying <code>packer-maas/vmware-esxi/KS.CFG</code> see Installation and Upgrade Scripts in the <a href="https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf">VMware ESXi installation and Setup manual</a> for more information.</p>
+<p>The deployment image may be customized by modifying <code>packer-maas/vmware-esxi/KS.CFG</code> see Installation and Upgrade Scripts in the <a href="https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-67-installation-setup-guide.pdf">VMware ESXi installation and Setup manual</a><code>↗</code> for more information.</p>
 <h3>Build the ESXi image</h3>
 <p>You can easily build the image using the Makefile:</p>
 <pre><code class="language-nohighlight">$ make ISO=/path/to/VMware-VMvisor-Installer-6.7.0.update03-14320388.x86_64.iso
@@ -1174,7 +1164,7 @@ $ sudo PACKER_LOG=1 packer build -var 'vmware_esxi_iso_path=/path/to/VMware-VMvi
 <p><a href="#heading--how-to-use-maas-image-builder-to-build-maas-images"><h2 id="heading--how-to-use-maas-image-builder-to-build-maas-images">How to use MAAS Image Builder to build MAAS images</h2></a></p>
 <p>MAAS Image Builder is an older tool, still required to build some images (e.g., Windows images).  Wherever possible, we recommend you use <code>packer</code>, as described above.</p>
 <p><strong>NOTE:</strong> 
-In order to use MAAS Image Builder, you must purchase <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a>.</p>
+In order to use MAAS Image Builder, you must purchase <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a><code>↗</code>.</p>
 <p>This article will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--install-mib">How to install MAAS Image Builder</a> via a private Canonical PPA (which you can request)</li>
@@ -1185,7 +1175,7 @@ In order to use MAAS Image Builder, you must purchase <a href="https://support.c
 </ul>
 <p>You can customise most images as much or as little as you wish, then use them to commission machines with MAAS. </p>
 <p><a href="#heading--install-mib"><h3 id="heading--install-mib">How to install MAAS Image Builder</h3></a></p>
-<p>To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a>.  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.</p>
+<p>To get MAAS Image Builder, you must be subscribed to a private PPA provided by Canonical Support to those customers who have purchased <a href="https://support.canonical.com/ua/s/article/How-to-access-the-MAAS-Image-Builder-tool">Ubuntu Advantage for Infrastructure</a><code>↗</code>.  Note that the steps below will fail if you have not purchased Ubuntu Advantage and been subscribed to the private PPA by your Canonical support rep.</p>
 <p>Once subscribed, you need to obtain your credentials at this external link:</p>
 <p>https://launchpad.net/~/+archivesubscriptions</p>
 <p>Also, you must add the repository with the <code>add-apt-repository</code> command.  Note: Be sure to substitute your unique URL in the command below:</p>
@@ -1228,8 +1218,8 @@ $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --editio
 <p>In order to create RHEL images, you will need access to these sites:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>A RHEL DVD ISO - Contains all RHEL archives which are not available without a license</li>
-<li>https://download.fedoraproject.org - Access to the EPEL repository to install required deps</li>
-<li>https://copr-be.cloud.fedoraproject.org - Access to the Canonical maintained cloud-init copr repository</li>
+<li>https://download.fedoraproject.org <code>↗</code> - Access to the EPEL repository to install required deps</li>
+<li>https://copr-be.cloud.fedoraproject.org <code>↗</code> - Access to the Canonical maintained cloud-init copr repository</li>
 </ul>
 <p><a href="#heading--Creating-RHEL-images-behind-a-proxy"><h4 id="heading--Creating-RHEL-images-behind-a-proxy">Creating RHEL images behind a proxy</h4></a></p>
 <p>MAAS image builder supports creating RHEL images behind a proxy. To use a proxy when building a RHEL image, just set the ‘http_proxy’ environment variable to <em>your</em> local proxy. Once deployed, <code>yum</code> will use the MAAS-configured proxy.</p>
@@ -1244,7 +1234,7 @@ $ sudo maas-image-builder -o centos7-amd64-root-tgz --arch amd64 centos --editio
 <p><a href="#heading--custom-windows-images"><h3 id="heading--custom-windows-images">How to create Windows images</h3></a></p>
 <p>Since Windows is a proprietary operating system, MAAS can&rsquo;t download these images. You need to manually generate images to use with MAAS by using Windows ISO images.  On the upside, the end result will be much simpler, since there are CLI and WebUI tools to upload a Windows image &ndash; which <em>helps</em> automate the process.</p>
 <p>You can obtain Windows ISO images at the Microsoft Evaluation Center:</p>
-<p>https://www.microsoft.com/en-us/evalcenter</p>
+<p>https://www.microsoft.com/en-us/evalcenter <code>↗</code></p>
 <p><b>Windows editions</b></p>
 <p>There are several Windows editions/install options supported by <code>maas-image-builder</code> (<code>--windows-edition</code> options):</p>
 <ul style="margin-left:4px; list-style-type:disc;">

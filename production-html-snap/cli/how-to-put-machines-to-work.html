@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -399,7 +416,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to put machines to work</h1><!-- "How to put machines to work" -->
-<p>The ultimate purpose of MAAS is to deploy and manage machines.  It&rsquo;s important to understand <a href="about-images.html#heading--how-images-deploy">how images get deployed</a> &ndash; as explained in <a href="about-machines.html#heading--about-the-machine-life-cycle">About the machine life-cycle</a>, machines must first be enlisted or commissioned, then allocated, then deployed.  This article will help you build on that understanding by explaining:</p>
+<p>The ultimate purpose of MAAS is to deploy and manage machines.  It&rsquo;s important to understand <a href="how-to-acquire-images.html#heading--how-images-deploy">how images get deployed</a> &ndash; as explained in <a href="how-to-deploy-physical-machines.html#heading--about-the-machine-life-cycle">About the machine life-cycle</a>, machines must first be enlisted or commissioned, then allocated, then deployed.  This article will help you build on that understanding by explaining:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--how-to-commission-a-machine">How to commission a machine</a></li>
 <li><a href="#heading--how-to-test-machines">How to test machines</a></li>
@@ -751,7 +768,7 @@ Machine-readable output follows:
 <p>You can download the source for all commissioning and test scripts via the API with the following command:</p>
 <pre><code class="language-nohighlight">maas $PROFILE node-script download $SCRIPT_NAME
 </code></pre>
-<p>The source code to all built-in scripts is available on <a href="https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts">launchpad</a>.</p>
+<p>The source code to all built-in scripts is available on <a href="https://git.launchpad.net/maas/tree/src/metadataserver/builtin_scripts">launchpad</a><code>↗</code>.</p>
 <p><a href="#heading--how-to-upload-hardware-testing-scripts"><h3 id="heading--how-to-upload-hardware-testing-scripts">How to upload hardware testing scripts</h3></a></p>
 <p>To upload a hardware testing script to MAAS, enter the following:</p>
 <pre><code class="language-nohighlight">maas $PROFILE node-scripts create name=$SCRIPT_NAME name&gt; \

@@ -35,7 +35,7 @@
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <strong>
-	<a href="maas-documentation.html">
+	<a href="maas-documentation-25.html">
 	  Home
 	</a>
       </strong>
@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,29 +338,19 @@
 	</li>
       </ul>
       <strong>
-	<a href="explanation.html">
-	Explanations
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
 	</a>
       </strong>
       <ul>
 	<li>
-	  <a href="about-vm-hosting.html">
-	    VM hosting
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
 	  </a>
 	</li>
 	<li>
-	  <a href="understanding-maas-events.html">
-	    MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="undersdtanding-maas-audit-events.html">
-	    MAAS audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-rbac.html">
-	    RBAC
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
 	  </a>
 	</li>
       </ul>
@@ -379,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -474,8 +464,8 @@ sudo apt install maas
 <p><a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fe9df81b810fa3dd502b303b08978d1c60bff933_2_690x465.png"></a></p>
 <h3 id="heading--disabling-boot-methods">Disabling boot methods</h3>
 
-<p>Individual boot methods may now be disabled. When a boot method is disabled MAAS will configure MAAS controlled isc-dhcpd to not respond to the associated <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a>. External DHCP servers must be configured manually.</p>
-<p>To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a> in octet or hex form. For example the following disabled i386/AMD64 PXE, AMD64 UEFI TFTP, and AMD64 UEFI HTTP</p>
+<p>Individual boot methods may now be disabled. When a boot method is disabled MAAS will configure MAAS controlled isc-dhcpd to not respond to the associated <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a><code>↗</code>. External DHCP servers must be configured manually.</p>
+<p>To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a><code>↗</code> in octet or hex form. For example the following disabled i386/AMD64 PXE, AMD64 UEFI TFTP, and AMD64 UEFI HTTP</p>
 <pre><code>maas $PROFILE subnet update $SUBNET disabled_boot_architectures=&quot;0x00 uefi_amd64_tftp 00:10&quot;
 </code></pre>
 <h4>GRUB</h4>
@@ -484,7 +474,7 @@ sudo apt install maas
 <li>UEFI ARM64 HTTP(00:13) has been enabled.</li>
 <li>UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.</li>
 <li>grub.cfg for all UEFI platforms has been updated to replace the deprecated <code>linuxefi</code> and <code>initrdefi</code> commands with the standard <code>linux</code> and <code>initrd</code> commands.</li>
-<li>GRUB debug may now be enabled by enabling <a href="running-installed-maas-in-debug-logging-mode.html">rackd debug logging</a>.</li>
+<li>GRUB debug may now be enabled by enabling <a href="running-installed-maas-in-debug-logging-mode.html">rackd debug logging</a><code>↗</code>.</li>
 </ul>
 <h2>New feature in MAAS 3.0 Beta 4</h2>
 
@@ -610,7 +600,7 @@ $ maas $PROFILE node read $SYSTEM_ID
 <h2 id="heading--maas-3-bug-fixes">MAAS 3.0 bug fixes</h2>
 
 <p>MAAS 3.0 incorporates a large number of bug fixes, summarised in the sections below. Please feel free to validate these fixes at your convenience and give us feedback if anything doesn&rsquo;t seem to work as presented in the bug request.</p>
-<p>One particular bug, <a href="https://bugs.launchpad.net/maas/+bug/1916860">#1916860</a>, involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can&rsquo;t fix this (hence the assignment of &ldquo;Won&rsquo;t Fix&rdquo;), the team did provide a easy <a href="https://bugs.launchpad.net/maas/+bug/1916860/comments/27">workaround</a> which helps circumvent this issue.</p>
+<p>One particular bug, <a href="https://bugs.launchpad.net/maas/+bug/1916860">#1916860</a><code>↗</code>, involves failures in the IPMI cipher suite in MAAS 2.9.2 and up, on the Lenovo x3650 M5 (and others).  This particular bug is a not a MAAS bug, but a firmware issue with the subject machines.  While the MAAS team can&rsquo;t fix this (hence the assignment of &ldquo;Won&rsquo;t Fix&rdquo;), the team did provide a easy <a href="https://bugs.launchpad.net/maas/+bug/1916860/comments/27">workaround</a><code>↗</code> which helps circumvent this issue.</p>
 <h3 id="heading--maas-3-0-bug-fixes">MAAS 3.0 bug fixes</h3>
 
 <p>Here are the bugs that were &lsquo;Fix Released&rsquo; for the MAAS 3.0 release:</p>
@@ -624,12 +614,12 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1932136">#1932136</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1932136">#1932136</a><code>↗</code></td>
 <td align="left">interface with a warning is not configured properly</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1896771">#1896771</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1896771">#1896771</a><code>↗</code></td>
 <td align="left">interfaces that are not connected are detected as &lsquo;connected to slow interface&rsquo;</td>
 <td align="left">Medium</td>
 </tr>
@@ -648,62 +638,62 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1929552">#1929552</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929552">#1929552</a><code>↗</code></td>
 <td align="left">Deb-based controller fails to run machine-resources</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1929576">#1929576</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929576">#1929576</a><code>↗</code></td>
 <td align="left">Machines fail to commission using the 3.0 snap due to possible? DNS issue</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1930227">#1930227</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1930227">#1930227</a><code>↗</code></td>
 <td align="left">Failure to commission when interfaces has a /32 IP</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1930554">#1930554</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1930554">#1930554</a><code>↗</code></td>
 <td align="left">vm-host CLI command is now named vmhosts</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1930587">#1930587</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1930587">#1930587</a><code>↗</code></td>
 <td align="left">Different disks with same LUN detected as multipath</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1931215">#1931215</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1931215">#1931215</a><code>↗</code></td>
 <td align="left">[.0~rc2-10023 testing] two IPs assigned to one interface</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1931838">#1931838</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1931838">#1931838</a><code>↗</code></td>
 <td align="left">Reverse DNS lookup fails for subnets smaller than /24</td>
 <td align="left">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1835292">#1835292</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1835292">#1835292</a><code>↗</code></td>
 <td align="left">UI should add button to download curtin-logs.tar on deployment failure MAAS</td>
 <td align="left">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1908552">#1908552</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1908552">#1908552</a><code>↗</code></td>
 <td align="left">maas init fails; &lsquo;relation &ldquo;maasserver_routable_pairs&rdquo; does not exist&rsquo;</td>
 <td align="left">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1929086">#1929086</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929086">#1929086</a><code>↗</code></td>
 <td align="left">LXD VM hosts can&rsquo;t be refreshed if VLANs interfaces aren&rsquo;t named $parent.$vid</td>
 <td align="left">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1929643">#1929643</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1929643">#1929643</a><code>↗</code></td>
 <td align="left">MAAS often fails and and returns a Pickled object if request header is set to Accept: <em>/</em></td>
 <td align="left">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1924820">#1924820</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1924820">#1924820</a><code>↗</code></td>
 <td align="left">Trying to edit a disconnected NIC, then cancelling the edit and connecting the NIC via its drop-down menu, many drop-down menu options then disappear</td>
 <td align="left">Undecided</td>
 </tr>
@@ -722,107 +712,107 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1774529">#1774529</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1774529">#1774529</a><code>↗</code></td>
 <td align="left">Cannot delete some instances of model &lsquo;Domain&rsquo; because they are referenced through a protected foreign key</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1919001">#1919001</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1919001">#1919001</a><code>↗</code></td>
 <td align="left">Unable to network boot VM on IBM Z DPM Partition</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1925249">#1925249</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1925249">#1925249</a><code>↗</code></td>
 <td align="left">MAAS detects 0 cores, RAM available for KVM host, reports negative availability on pod compose</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1927292">#1927292</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1927292">#1927292</a><code>↗</code></td>
 <td align="left">Updating controller has vlan_ids error</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1927657">#1927657</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1927657">#1927657</a><code>↗</code></td>
 <td align="left">Global kernel command line options not passed with tags</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1928098">#1928098</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1928098">#1928098</a><code>↗</code></td>
 <td align="left">If a workload annotation has a key with spaces in it, filtering doesn&rsquo;t work</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1926140">#1926140</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1926140">#1926140</a><code>↗</code></td>
 <td align="left">maas_url not returned to the UI</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1926171">#1926171</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1926171">#1926171</a><code>↗</code></td>
 <td align="left">Failure processing network information when adding a rack</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1927036">#1927036</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1927036">#1927036</a><code>↗</code></td>
 <td align="left">Incorrect value &ldquo;accept_ra&rdquo; in interface definition</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1927340">#1927340</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1927340">#1927340</a><code>↗</code></td>
 <td align="left">Deb to snap migration script should support remote Postgres</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1928104">#1928104</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1928104">#1928104</a><code>↗</code></td>
 <td align="left">New workload annotations don&rsquo;t show up without a reload</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1928115">#1928115</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1928115">#1928115</a><code>↗</code></td>
 <td align="left">API still refers to &ldquo;owner data&rdquo; rather than &ldquo;workload annotations&rdquo;</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1922891">#1922891</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1922891">#1922891</a><code>↗</code></td>
 <td align="left">MAAS configures nodes with incorrect DNS server addresses when using multiple IP addresses</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923268">#1923268</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923268">#1923268</a><code>↗</code></td>
 <td align="left">grubnet default grub.cfg should try /grub/grub.cfg-${net_default_mac} before /grub/grub.cfg</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1926164">#1926164</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1926164">#1926164</a><code>↗</code></td>
 <td align="left">VLAN page shows odd &ldquo;Rack controllers&rdquo; value</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1926510">#1926510</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1926510">#1926510</a><code>↗</code></td>
 <td align="left">dhcp subnet snippets are NOT inside the pool block</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1927559">#1927559</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1927559">#1927559</a><code>↗</code></td>
 <td align="left">Default logical volume size too big in UI</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1928024">#1928024</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1928024">#1928024</a><code>↗</code></td>
 <td align="left">UI states commissioning/testing scripts were never uploaded</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1928226">#1928226</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1928226">#1928226</a><code>↗</code></td>
 <td align="left">Information &ldquo;not available&rdquo; indicates that it&rsquo;&lsquo;s an error of some sort</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1928235">#1928235</a></td>
-<td align="left">notes field won&rsquo;t update properly: MAAS 3.0 RC]()</td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1928235">#1928235</a><code>↗</code></td>
+<td align="left">notes field won&rsquo;t update properly: MAAS 3.0 RC]()<code>↗</code></td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1928324">#1928324</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1928324">#1928324</a><code>↗</code></td>
 <td align="left">updating a machine zone or resource pool doesn&rsquo;t refresh details</td>
 <td align="center">Undecided</td>
 </tr>
@@ -841,22 +831,22 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1925784">#1925784</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1925784">#1925784</a><code>↗</code></td>
 <td align="left">Processing LXD results failure with loopback</td>
 <td align="center">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923871">#1923871</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923871">#1923871</a><code>↗</code></td>
 <td align="left">LXD vmhost project usage includes usage for other projects</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1815084">#1815084</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1815084">#1815084</a><code>↗</code></td>
 <td align="left">MAAS web ui should perform Save action when Enter/Return is pressed</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923867">#1923867</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923867">#1923867</a><code>↗</code></td>
 <td align="left">Commissioning fails if NIC gets different PCI address</td>
 <td align="center">Medium</td>
 </tr>
@@ -875,97 +865,97 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923246">#1923246</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923246">#1923246</a><code>↗</code></td>
 <td align="left">Unable to compose LXD VM with multiple NICs</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1918963">#1918963</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1918963">#1918963</a><code>↗</code></td>
 <td align="left">Controllers page out of sync with nodes</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923685">#1923685</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923685">#1923685</a><code>↗</code></td>
 <td align="left">Unable to deploy LXD VM host on S390X</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923687">#1923687</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923687">#1923687</a><code>↗</code></td>
 <td align="left">LXD VM host refresh failure is ignored</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1774529">#1774529</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1774529">#1774529</a><code>↗</code></td>
 <td align="left">Cannot delete some instances of model &lsquo;Domain&rsquo; because they are referenced through a protected foreign key</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1914762">#1914762</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1914762">#1914762</a><code>↗</code></td>
 <td align="left">test network configuration broken with openvswitch bridge</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1919001">#1919001</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1919001">#1919001</a><code>↗</code></td>
 <td align="left">Unable to network boot VM on IBM Z DPM Partition</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1917963">#1917963</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1917963">#1917963</a><code>↗</code></td>
 <td align="left">Add chassis lowers the case of added machines</td>
 <td align="center">Low</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915087">#1915087</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915087">#1915087</a><code>↗</code></td>
 <td align="left">2.9 UI is broken, seems to loop between user intro and machines pages endlessly</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923842">#1923842</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923842">#1923842</a><code>↗</code></td>
 <td align="left">Can&rsquo;t use action menu on machine details page</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1917669">#1917667</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1917669">#1917667</a><code>↗</code></td>
 <td align="left">Commissioning/testing scripts no longer show ETA or progress</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1917669">#1917669</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1917669">#1917669</a><code>↗</code></td>
 <td align="left">No way to view previous commissioning or testing script results</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1917670">#1917670</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1917670">#1917670</a><code>↗</code></td>
 <td align="left">Storage and interface tests not assoicated with a device</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1917671">#1917671</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1917671">#1917671</a><code>↗</code></td>
 <td align="left">Commissioning/testing scripts not updated after starting commissioning or testing</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1917794">#1917794</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1917794">#1917794</a><code>↗</code></td>
 <td align="left">Unable to view full history of events in UI</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1918964">#1918964</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1918964">#1918964</a><code>↗</code></td>
 <td align="left">UI shows action unavailable after performing action</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1918966">#1918966</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1918966">#1918966</a><code>↗</code></td>
 <td align="left">Tabs aren&rsquo;t always underscorred</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1918971">#1918971</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1918971">#1918971</a><code>↗</code></td>
 <td align="left">UI does not autofill size on storage tab</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923524">#1923524</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923524">#1923524</a><code>↗</code></td>
 <td align="left">Unable to delete LXD composed machine on KVM page</td>
 <td align="center">Undecided</td>
 </tr>
@@ -984,42 +974,42 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1922569">#1922569</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1922569">#1922569</a><code>↗</code></td>
 <td align="left">Create KVM fails in MAAS 3.0 Beta with a project error</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923251">#1923251</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923251">#1923251</a><code>↗</code></td>
 <td align="left">Creating an LXD VM host now requires a project name</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1809939">#1809939</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1809939">#1809939</a><code>↗</code></td>
 <td align="left">dhcp snippet create fail when dhcp subnet is relayed</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1913460">#1913460</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1913460">#1913460</a><code>↗</code></td>
 <td align="left">Add option to pick whether to keep or decompose machines in a VM host</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1922787">#1922787</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1922787">#1922787</a><code>↗</code></td>
 <td align="left">make &ldquo;LXD&rdquo; the default VM host in MAAS UI (rather than virsh)</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1922876">#1922876</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1922876">#1922876</a><code>↗</code></td>
 <td align="left">Deploy KVM hosts with LXD by default</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1922972">#1922972</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1922972">#1922972</a><code>↗</code></td>
 <td align="left">MAAS 3.0 Beta2 UI says &ldquo;machine cannot be deployed&rdquo; while successfully deploying machine</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1923719">#1923719</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1923719">#1923719</a><code>↗</code></td>
 <td align="left">MAAS 3.0 : snap refresh maas from 3.0.0~beta2-9826-g.13cc184d5</td>
 <td align="center">Undecided</td>
 </tr>
@@ -1038,12 +1028,12 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1922107">#1922107</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1922107">#1922107</a><code>↗</code></td>
 <td align="left">Hugepages/pinning available for virsh and lack validation</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1922433">#1922433</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1922433">#1922433</a><code>↗</code></td>
 <td align="left">Machine resources path set incorrectly in rackd when using snap</td>
 <td align="center">High</td>
 </tr>
@@ -1062,197 +1052,197 @@ $ maas $PROFILE node read $SYSTEM_ID
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/maas/+bug/1896199">#1896199</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/maas/+bug/1896199">#1896199</a><code>↗</code></td>
 <td align="left">API docs link is not offline</td>
 <td align="center">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1904245">#1904245</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1904245">#1904245</a><code>↗</code></td>
 <td align="left">MAAS Snap fails to build on PPC64 on Launchpad</td>
 <td align="center">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1912727">#1912727</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1912727">#1912727</a><code>↗</code></td>
 <td align="left">KVM Page Fails to load with error &ldquo;An unexpected error has occurred, please try refreshing your browser window.&rdquo;</td>
 <td align="center">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915869">#1915869</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915869">#1915869</a><code>↗</code></td>
 <td align="left">maas snap cli renders SyntaxWarning in the stderr</td>
 <td align="center">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1916093">#1916093</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1916093">#1916093</a><code>↗</code></td>
 <td align="left">Unable to add more than 3 Promox VMs</td>
 <td align="center">Critical</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1883824">#1883824</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1883824">#1883824</a><code>↗</code></td>
 <td align="left">Support LXD projects in power control</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1884276">#1884276</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1884276">#1884276</a><code>↗</code></td>
 <td align="left">Terrible user experience adding existing LXD host</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1902425">#1902425</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1902425">#1902425</a><code>↗</code></td>
 <td align="left">Failed to allocate the required AUTO IP addresses after 2 retries</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1908087">#1908087</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1908087">#1908087</a><code>↗</code></td>
 <td align="left">Reverse DNS for non-maas RFC1918 zones fails inside maas</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1908356">#1908356</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1908356">#1908356</a><code>↗</code></td>
 <td align="left">Owner data websocket methods are not working</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1908434">#1908434</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1908434">#1908434</a><code>↗</code></td>
 <td align="left">Can&rsquo;t delete LXD VM in offline state</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1913323">#1913323</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1913323">#1913323</a><code>↗</code></td>
 <td align="left">/MAAS/docs/ leads to 404 page</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1914588">#1914588</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1914588">#1914588</a><code>↗</code></td>
 <td align="left">Enabling debug from snap traceback</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915021">#1915021</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915021">#1915021</a><code>↗</code></td>
 <td align="left">Mapping subnet doesn&rsquo;t work from the MAAS snap</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915022">#1915022</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915022">#1915022</a><code>↗</code></td>
 <td align="left">The MAAS snap doesn&rsquo;t include nmap</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915715">#1915715</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915715">#1915715</a><code>↗</code></td>
 <td align="left">LXD VM additional disks all show 10Gb size</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915970">#1915970</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915970">#1915970</a><code>↗</code></td>
 <td align="left">Facebook Wedge BMC detection fails on non-x86 architectures</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1918997">#1918997</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1918997">#1918997</a><code>↗</code></td>
 <td align="left">MAAS does not set snap proxy</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1919000">#1919000</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1919000">#1919000</a><code>↗</code></td>
 <td align="left">Unable to connect MAAS to an LXD VM host</td>
 <td align="center">High</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1887797">#1887797</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1887797">#1887797</a><code>↗</code></td>
 <td align="left">Impossible to delete zombie LXD VM</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1894116">#1894116</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1894116">#1894116</a><code>↗</code></td>
 <td align="left">Machines can&rsquo;t be deployed after deselecting all archs in the &ldquo;Ubuntu extra architectures&rdquo; package repo</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1897946">#1897946</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1897946">#1897946</a><code>↗</code></td>
 <td align="left">hi1620-based ARM Servers are shown as &ldquo;Unknown model&rdquo;</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1906212">#1906212</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1906212">#1906212</a><code>↗</code></td>
 <td align="left">timeout in testing scripts ignores the days if set to greater than 24 hours</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1911825">#1911825</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1911825">#1911825</a><code>↗</code></td>
 <td align="left">Unable to use FQDN as power_address</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1914165">#1914165</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1914165">#1914165</a><code>↗</code></td>
 <td align="left">Proxmox does not allow custom port</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1917652">#1917652</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1917652">#1917652</a><code>↗</code></td>
 <td align="left">30-maas-01-bmc-config failing on commissioning Cisco UCSC-C220-M4L</td>
 <td align="center">Medium</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1335175">#1335175</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1335175">#1335175</a><code>↗</code></td>
 <td align="left">maas does not combine kernel_opts when nodes have multiple tags with kernel options</td>
 <td align="center">Low</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915359">#1915359</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915359">#1915359</a><code>↗</code></td>
 <td align="left">make sampledata can&rsquo;t find machine-resources</td>
 <td align="center">Low</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1916844">#1916844</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1916844">#1916844</a><code>↗</code></td>
 <td align="left">Removing a machine that is a vm host tells you to remove the &ldquo;pod&rdquo;</td>
 <td align="center">Low</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1920019">#1920019</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1920019">#1920019</a><code>↗</code></td>
 <td align="left">maas_remote_syslog_compress is unnecessarily chatty</td>
 <td align="center">Low</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1887558">#1887558</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1887558">#1887558</a><code>↗</code></td>
 <td align="left">Multipath JBOD storage devices are not shown via /dev/mapper but each path as a single device.</td>
 <td align="center">Wishlist</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1901944">#1901944</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1901944">#1901944</a><code>↗</code></td>
 <td align="left">tags field in machine edit page overtakes other fields</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1909985">#1909985</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1909985">#1909985</a><code>↗</code></td>
 <td align="left">Add commission timestamp to machine websocket api</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1913464">#1913464</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1913464">#1913464</a><code>↗</code></td>
 <td align="left">Drop RSD pods UI</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1914590">#1914590</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1914590">#1914590</a><code>↗</code></td>
 <td align="left">Support composing LXD VMs with multiple disks in the UI</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1915970">#1915970</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1915970">#1915970</a><code>↗</code></td>
 <td align="left">Facebook Wedge BMC detection fails on non-x86 architectures</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1916073">#1916073</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1916073">#1916073</a><code>↗</code></td>
 <td align="left">MAAS should install qemu-efi-aarch64 on arm64 KVM pods</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1916317">#1916317</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1916317">#1916317</a><code>↗</code></td>
 <td align="left">UI is using API to request scripts with full content</td>
 <td align="center">Undecided</td>
 </tr>
 <tr>
-<td align="left"><a href="https://bugs.launchpad.net/bugs/1919381">#1919381</a></td>
+<td align="left"><a href="https://bugs.launchpad.net/bugs/1919381">#1919381</a><code>↗</code></td>
 <td align="left">typo &ldquo;veryiying&rdquo; in info message in smartctl-validate</td>
 <td align="center">Undecided</td>
 </tr>

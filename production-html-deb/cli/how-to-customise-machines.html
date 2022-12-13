@@ -121,11 +121,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -205,7 +200,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -293,6 +288,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -304,7 +304,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -335,6 +335,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -349,14 +366,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -400,6 +417,18 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to customise machines</h1><!-- "How to customise machines" -->
 <p>MAAS provides the capability to customise machines.  This article will help you learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--how-to-customise-machine-storage">How to customise machine storage</a></li>
+<li><a href="#heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</a></li>
+<li><a href="#heading--cloud-init">How to pre-seed with cloud-init</a></li>
+<li><a href="#heading--how-to-choose-ubuntu-kernels">How to choose Ubuntu kernels</a></li>
+<li><a href="#heading--how-to-set-global-kernel-boot-options">How to set global kernel boot options</a></li>
+<li><a href="#heading--create-tags-with-built-in-kernel-options">How to create tags with built-in kernel options</a></li>
+<li><a href="#heading--how-to-use-resource-pools">How to use resource pools</a></li>
+<li><a href="#heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</a></li>
+<li><a href="#heading--how-to-configure-hardware-sync-interval">How to configure hardware sync interval</a></li>
+<li><a href="#heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</a></li>
+</ul>
 <p><a href="#heading--how-to-customise-machine-storage"><h2 id="heading--how-to-customise-machine-storage">How to customise machine storage</h2></a></p>
 <p>This section will show you:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -1163,7 +1192,7 @@ Machine-readable output follows:
 <pre><code class="language-bash">maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 </code></pre>
 <p><a href="#heading--how-to-pre-seed-with-curtin"><h2 id="heading--how-to-pre-seed-with-curtin">How to pre-seed with curtin</h2></a></p>
-<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
+<p>You can customise the Curtin installation by either editing the existing <code>curtin_userdata</code> template or by adding a custom file as described above.  For a flowchart, showing where Curtin and pre-seeding fits into the deployment picture, see <a href="how-to-acquire-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p>Curtin provides hooks to execute custom code before and after installation takes place. These hooks are named <code>early</code> and <code>late</code> respectively, and they can both be overridden to execute the Curtin configuration in the ephemeral environment. Additionally, the <code>late</code> hook can be used to execute a configuration for a machine being installed, a state known as in-target.</p>
 <p>Curtin commands look like this:</p>
 <pre><code>foo: ["command", "--command-arg", "command-arg-value"]
@@ -1185,7 +1214,7 @@ Machine-readable output follows:
   custom: [&quot;curtin&quot;, &quot;in-target&quot;, &quot;--&quot;, &quot;sh&quot;, &quot;-c&quot;, &quot;/bin/echo -en 'Installed ' &gt; /tmp/maas_system_id&quot;]
 </code></pre>
 <p><a href="#heading--cloud-init"><h2 id="heading--cloud-init">How to pre-seed with cloud-init</h2></a></p>
-<p>For a flowchart, showing where cloud-init fits into the deployment picture, see <a href="about-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
+<p>For a flowchart, showing where cloud-init fits into the deployment picture, see <a href="how-to-acquire-images.html#heading--how-images-deploy">How images get deployed</a>.</p>
 <p>Using cloud-init to customise a machine after deployment is relatively easy. After you&rsquo;re logged in, use the following command to deploy a machine with a custom script you&rsquo;ve written:</p>
 <pre><code>maas $PROFILE machine deploy $SYSTEM_ID user_data=&lt;base-64-encoded-script&gt;
 </code></pre>
@@ -1323,6 +1352,18 @@ The <code>name</code> and <code>description</code> fields are optional.</p>
 <p><a href="#heading--add-a-machine-to-a-resource-pool"><h3 id="heading--add-a-machine-to-a-resource-pool">How to add a machine to a resource pool</h3></a></p>
 <pre><code class="language-bash">maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 </code></pre>
+<p><a href="#heading--how-to-enable-hardware-sync-on-a-machine"><h2 id="heading--how-to-enable-hardware-sync-on-a-machine">How to enable hardware sync on a machine</h2></a></p>
+<p><strong>NOTE:</strong> 
+MAAS hardware sync may leak the MAAS admin API token.  You may need to rotate all admin tokens and re-deploy all machines that have hardware sync enabled.  To find out whether this is an issue, and how to fix it, see the <a href="how-to-troubleshoot-maas.html#heading--Manually-swapping-the-MAAS-admin-API-token">troubleshooting instructions</a> for this problem.</p>
+<p>To enable Hardware sync on a machine, deploy the machine from the command line, adding <code>enable_hw_sync=true</code>:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine deploy $SYSTEM_ID osystem=$OSYSTEM distro_series=$VERSION enable_hw_sync=true
+</code></pre>
+<p>Once you&rsquo;ve enabled hardware sync, any changes you make to the physical device, or to the VM through the VM host, will show up in the appropriate page for the deployed machine as soon as the sync interval has passed.</p>
+<p><a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a></p>
+<p>Hardware sync updates the machine’s blockdevice, interface and device sets on a periodic basis. These can be viewed with the CLI command:</p>
+<pre><code class="language-nohighlight">maas $PROFILE machine read $SYSTEM_ID
+</code></pre>
+<p>The timestamps of the last time data was synced and the estimated next time the machine will be synced can be seen in the <code>last_sync</code> and <code>next_sync</code> fields respectively.</p>
     </div>
   </body>
 </html>

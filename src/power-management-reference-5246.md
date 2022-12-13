@@ -1,5 +1,5 @@
 <!-- "Power management reference" -->
-To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller) card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
+To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller)`↗` card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
 [tabs]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages"]
@@ -23,7 +23,7 @@ MAAS has already supported Redfish for some time.  MAAS 3.2 adds the capability 
 
 <a href="#heading--about-redfish"><h3 id="heading--about-redfish">About Redfish</h3></a>
 
-Redfish is an [alternative to the IPMI protocol](https://www.dmtf.org/sites/default/files/Redfish_Tech_Note-November_2018.pdf) for connecting with machine BMCs.  It provides additional features above and beyond those provided by IPMI; eventually, Redfish should supplant IPMI as the default BMC interface.
+Redfish is an [alternative to the IPMI protocol](https://www.dmtf.org/sites/default/files/Redfish_Tech_Note-November_2018.pdf)`↗` for connecting with machine BMCs.  It provides additional features above and beyond those provided by IPMI; eventually, Redfish should supplant IPMI as the default BMC interface.
 
 <a href="#heading--about-redfish-with-maas"><h3 id="heading--about-redfish-with-maas">About the MAAS implementation of Redfish</h3></a>
 
@@ -69,7 +69,7 @@ If the machine has been enlisted by MAAS, you can also check the output of the `
 
 In addition, this article provides a [complete catalogue of power parameters, by type](#heading--power-catalogue).
 
-You may also like to try **[maaspower](https://gilesknap.github.io/maaspower/main/index.html)** which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.
+You may also like to try **[maaspower](https://gilesknap.github.io/maaspower/main/index.html)**`↗` which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.
 
 [tabs]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
@@ -362,7 +362,7 @@ maas admin machines read | jq -r '(["HOSTNAME","SIS'S"] | (., map(length*"-"))),
 (.[] | [.hostname, .system_id]) | @tsv' | column -t
 ```
 
-Next, use the [MAAS CLI](/t/how-to-use-the-maas-cli/5236) command `maas machines...` to (re)set the machine's power type, like this:
+Next, use the [MAAS CLI](/t/try-out-the-maas-cli/5236) command `maas machines...` to (re)set the machine's power type, like this:
 
     maas $PROFILE machine update $SYSTEM_ID power_type="$POWER_TYPE"
 

@@ -34,7 +34,7 @@ This article explains:
 
 This article also provides a [storage layouts reference](#heading--storage-layouts-reference).
 
-Most of the day-to-day work of managing machines is covered here. Utilising machines to do work -- for example, commissioning, testing, and deploying them -- is discussed in [How to deploy machines](/t/how-to-deploy-machines/5112).
+Most of the day-to-day work of managing machines is covered here. Utilising machines to do work -- for example, commissioning, testing, and deploying them -- is discussed in [How to deploy machines](/t/how-to-put-machines-to-work/5112).
 
 <a href="#heading--how-to-create-delete-and-configure-machines"><h2 id="heading--how-to-create-delete-and-configure-machines">How to create, delete, and configure machines</h2></a>
 
@@ -139,7 +139,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 
 - `$POWER_ID`: This is generally the UUID of the machine being added.
 
-- `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types) in the API reference for details on the available power types and the relevant parameters for each type.
+- `$POWER_ADDRESS/$POWER_PASSWORD`: In the case of a KVM, these are the only parameters that need to be entered.  See [Power types](https://maas.io/docs/api#power-types)`↗` in the API reference for details on the available power types and the relevant parameters for each type.
 [/tab]
 [/tabs]
 
@@ -336,7 +336,7 @@ To find network info for a specific machine, open that machine's "Network" tab i
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c5316db130ae05a9cdabcd49ffaa69f0bb405d1d.png"></a> 
 
-Options on this tab are described in the introduction to [Networking](/t/about-networking/5084) article in this documentation set.
+Options on this tab are described in the introduction to [Networking](/t/how-to-set-up-networks/6174) article in this documentation set.
 
 <a href="#heading--how-to-find-machine-storage-info"><h3 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h3></a>
 
@@ -344,7 +344,7 @@ To view/edit machine storage info, click on the "Storage" tab in the machine sum
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> 
 
-See the section about [storage](/t/about-machines/5080#heading--about-storage) for more information.
+See the section about [storage](/t/how-to-deploy-physical-machines/6193#heading--about-storage) for more information.
 
 <a href="#heading--commissioning-log"><h3 id="heading--commissioning-log">How to find commissioning logs</h3></a>
 
@@ -360,7 +360,7 @@ This will bring up a detailed log view for that row:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/41a385cdf948dada8bb8d8f94a3137a2b64d46e0.png"></a>
 
-These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [logging](/t/maas-logging-reference/5240) for more details on how to read and interpret these logs.  
+These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process. See the article on [logging](/t/how-to-work-with-log-files/5240) for more details on how to read and interpret these logs.  
 
 <a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware & test logs</h3></a>
 
@@ -376,7 +376,7 @@ By choosing "Installation output" on the "Logs" tab, you can see the "raw" log o
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a> 
 
-Help interpreting these logs can be found under the [logging](/t/maas-logging-reference/5240) section of this documentation.
+Help interpreting these logs can be found under the [logging](/t/how-to-work-with-log-files/5240) section of this documentation.
 
 <a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine's event logs</h3></a>
 
@@ -384,7 +384,7 @@ To view the Event log for a machine, choose the "Event" tab under "Logs."  This 
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a> 
 
-There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [logging](/t/maas-logging-reference/5240) section of this documentation.
+There is a dropdown on the upper right which allows you to choose how many events per page you wish to view. Detailed discussion of this event log can be found under the [logging](/t/how-to-work-with-log-files/5240) section of this documentation.
 
 <a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a>
 

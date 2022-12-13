@@ -33,7 +33,7 @@ You can download your HW configuration information in the XML format by going to
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/3/387b8b6a7ded18e523c818500d79f0d657868b87.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/387b8b6a7ded18e523c818500d79f0d657868b87.png"></a>
 
-You can [learn more about these attributes](https://ezix.org/project/wiki/HardwareLiSter) if desired.  Note that:
+You can [learn more about these attributes](https://ezix.org/project/wiki/HardwareLiSter)`↗` if desired.  Note that:
 
 * Size and capacity can have various meanings depending on the device
 * The size of a node is always equal to its capacity
@@ -137,7 +137,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="sysrq_always_enabled dyndbg='file drivers/usb/* +p' 
 
 <a href="#heading--tag-definition-reference"><h2 id="heading--tag-definition-reference">Tag definition reference examples</h2></a>
 
-Here are some examples of tag definitions -- [more examples are available](https://github.com/canonical/mxt).
+Here are some examples of tag definitions -- [more examples are available](https://github.com/canonical/mxt)`↗`.
 
 Commonly used Xpath functions usually include:
 

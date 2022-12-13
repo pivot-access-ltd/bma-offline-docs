@@ -124,11 +124,6 @@
 	    Report a bug
 	  </a>
 	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshooting
-	  </a>
-	</li>
       </ul>
       <strong>
 	<a href="how-to-set-up-networks.html">
@@ -208,7 +203,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-cusdomise-machines.html">
+	  <a href="how-to-customise-machines.html">
 	    Customise machines
 	  </a>
 	</li>
@@ -296,6 +291,11 @@
 	    Work with audit event logs
 	  </a>
 	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
       </ul>
       <strong>
 	How to work securely
@@ -307,7 +307,7 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="how-to-enable-maas-native-tls-encryption.html">
+	  <a href="how-to-enable-maas-native-tls.html">
 	    Enable MAAS native TLS
 	  </a>
 	</li>
@@ -338,6 +338,23 @@
 	</li>
       </ul>
       <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
 	API reference
       </strong>
       <ul>
@@ -352,14 +369,14 @@
 	  </a>
 	</li>
 	<li>
-	  <a href="api.html">
+	  <a href="../../api/docs">
 	    API documentation
 	  </a>
 	</li>
       </ul>
       <strong>
-	<a href=".html">
-	  Technical reference
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
 	</a>
       </strong>
       <ul>
@@ -445,7 +462,7 @@
 </tbody>
 </table>
 
-<p>Consider setting your <a href="https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-logs">firewall </a> on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed <code>ufw</code>, you could execute:</p>
+<p>Consider setting your <a href="https://help.ubuntu.com/lts/serverguide/firewall.html#firewall-logs">firewall </a><code>↗</code> on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed <code>ufw</code>, you could execute:</p>
 <pre><code>sudo ufw enable
 sudo ufw default deny incoming
 </code></pre>
@@ -459,11 +476,11 @@ sudo ufw allow 5250:5270/udp
 </code></pre>
 <p>Recognise that your particular configuration and version may vary, so consult the appropriate firewall manual pages for your specific MAAS host system.</p>
 <p><a href="#heading--tls"><h2 id="heading--tls">How to configure a TLS-terminating load balancer</h2></a></p>
-<p>One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using <a href="https://www.haproxy.com">HAProxy </a>.  This section explains how to set one up.</p>
+<p>One of the best steps you can take to improve both security and availability of your MAAS installation is to install TLS-terminating load balancer.  For MAAS, we recommend using <a href="https://www.haproxy.com">HAProxy </a><code>↗</code>.  This section explains how to set one up.</p>
 <p><details><summary>What is a TLS-terminated load balancer?</summary></p>
-<p>In the context of MAAS, a <a href="https://www.nginx.com/resources/glossary/load-balancing/">load balancer </a> distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other <a href="how-to-enable-high-availability.html">HA configurations</a> that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.</p>
+<p>In the context of MAAS, a <a href="https://www.nginx.com/resources/glossary/load-balancing/">load balancer </a><code>↗</code> distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other <a href="how-to-enable-high-availability.html">HA configurations</a> that can be enabled for MAAS: one for BMC access (for powering on machines)<code>↗</code>, and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.</p>
 <p>A TLS-terminated load balancer is a load balancer that carries encryption and decryption as far down the pipe as possible, in this case, all the way to the load balancer itself. Note that, even though the &ldquo;SSL&rdquo; keyword may be used to enable operation, the term SSL is considered obsolete.  Hence we choose to use the term &ldquo;TLS&rdquo; instead, referring to <strong>Transport Layer Security</strong>.</p>
-<p>TLS is meant to provide privacy and data integrity between two or more applications.  Privacy is provided by <a href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">symmetric cryptography </a>, based on a shared secret and uniquely-generated keys negotiated at the start of a session (during the <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_handshake">TLS handshake </a>).  Identity of each app can be authenticated, though this feature can be optional.  Authenticity of messages is ensured by using <a href="https://en.wikipedia.org/wiki/Message_authentication_code">message authentication codes </a> to detect tampering.</p>
+<p>TLS is meant to provide privacy and data integrity between two or more applications.  Privacy is provided by <a href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">symmetric cryptography </a><code>↗</code>, based on a shared secret and uniquely-generated keys negotiated at the start of a session (during the <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_handshake">TLS handshake </a><code>↗</code>).  Identity of each app can be authenticated, though this feature can be optional.  Authenticity of messages is ensured by using <a href="https://en.wikipedia.org/wiki/Message_authentication_code">message authentication codes </a><code>↗</code> to detect tampering.</p>
 <p></details></p>
 <p><a href="#heading--pem-file"><h3 id="heading--pem-file">PEM file</h3></a></p>
 <p>As a first step, you&rsquo;ll need an SSL certificate (<code>mysite.com.crt</code>) with a key pair (<code>mysite.com.key</code>), combined into a PEM file:</p>
@@ -509,8 +526,8 @@ option http-server-close
 <p>Finally, restart the (already-running) load balancer so that these changes can take effect and the HAProxy will begin to forward requests:</p>
 <pre><code>sudo systemctl restart haproxy
 </code></pre>
-<p>Note that you can also <a href="https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04">enable HAProxy logging </a> if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  </p>
-<p>If desired, you can <a href="how-to-enable-high-availability.html#heading--load-balancing-with-haproxy-optional">bypass the use of SSL</a> in your HAProxy.  Alternatively, you can <a href="how-to-enable-tls-encryption.html">set up TLS encryption on your MAAS web UI</a> without implementing HAProxy.</p>
+<p>Note that you can also <a href="https://www.digitalocean.com/community/tutorials/how-to-implement-ssl-termination-with-haproxy-on-ubuntu-14-04">enable HAProxy logging </a><code>↗</code> if desired.  This logging is an optional feature of the HAProxy tool and is thus left to your discretion.  </p>
+<p>If desired, you can <a href="how-to-enable-high-availability.html#heading--load-balancing-with-haproxy-optional">bypass the use of SSL</a> in your HAProxy.  Alternatively, you can <a href="how-to-enable-maas-native-tls.html">set up TLS encryption on your MAAS web UI</a> without implementing HAProxy.</p>
 <p><a href="#heading--using-logs-for-security"><h2 id="heading--using-logs-for-security">How to use logs to identify security issues</h2></a></p>
 <p>There are four categories of log files that you can use to help identify security issues:</p>
 <ol>
@@ -521,14 +538,14 @@ option http-server-close
 </ol>
 <p>This section will offer some advice, as well as links to more detailed information on these categories.</p>
 <p><a href="#heading--firewall-logs-subsection"><h3 id="heading--firewall-logs-subsection">Firewall logs</h3></a></p>
-<p>The Ubuntu firewall, <a href="https://wiki.ubuntu.com/UncomplicatedFirewall">UFW </a>, is a front-end for <a href="https://help.ubuntu.com/community/IptablesHowTo">iptables </a>, so the UFW log output is very similar to what you&rsquo;ll encounter in iptables itself.  If you want to secure your MAAS installation, it&rsquo;s very important to periodically review your UFW logs, found in <code>/var/log/ufw*</code>.</p>
+<p>The Ubuntu firewall, <a href="https://wiki.ubuntu.com/UncomplicatedFirewall">UFW</a><code>↗</code>, is a front-end for <a href="https://help.ubuntu.com/community/IptablesHowTo">iptables </a><code>↗</code>, so the UFW log output is very similar to what you&rsquo;ll encounter in iptables itself.  If you want to secure your MAAS installation, it&rsquo;s very important to periodically review your UFW logs, found in <code>/var/log/ufw*</code>.</p>
 <p>Learning to recognise issues in the UFW/iptables log is an art form, so we&rsquo;re not going to give an extended tutorial here.  Still, there are some key indicators that might help you spot security issues.</p>
 <p>You might look for something probing a port that&rsquo;s not supporting an application service.  Attackers use port scanners to look for openings.  You might see entries like these:</p>
 <pre><code>blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6002
 blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6003
 blocked incoming tcp connection request from 96.39.208.43:8240 to 128.17.92.85:6004
 </code></pre>
-<p>You can also compare attempts on unusual port numbers against <a href="http://www.relevanttechnologies.com/resources_4.asp">well-known hacker tools </a>.  For instance, repeated attempts against port 12361 might mean that someone is attempting to attack with the Whack-a-mole exploit.</p>
+<p>You can also compare attempts on unusual port numbers against <a href="http://www.relevanttechnologies.com/resources_4.asp">well-known hacker tools </a><code>↗</code>.  For instance, repeated attempts against port 12361 might mean that someone is attempting to attack with the Whack-a-mole exploit.</p>
 <p>Also suspicious are repeated, unsuccessful access attempts, against the same port or service, from the same domain, IP address, or subnet. These attempts may be spread out in time (<code>grep</code> is your friend, here).  For example, a group of login attempts that look like this may indicate that an attacker is trying to disguise port scans by switching IP addresses within a block of addresses available to them:</p>
 <pre><code>blocked incoming tcp connection request from 96.39.208.43:49343 to 64.242.119.18:31337
 blocked incoming tcp connection request from 96.39.208.62:49343 to 64.242.119.18:31337
@@ -544,7 +561,7 @@ blocked incoming tcp connection request from 96.39.208.208:49343 to 64.242.119.1
 </code></pre>
 <p>This message will usually be repeated a number of times, since Trojans are fairly persistent.</p>
 <p>Look for source-routed packets, that is, packets with a source address internal to your network, but which originate from outside your network, indicating that someone is trying to spoof one of your internal addresses.</p>
-<p>Review the IP addresses that are being rejected and dropped.  Try to identify them with a <code>ping -a &lt;IP address&gt;</code>.  Spoofed addresses won&rsquo;t have an owner (and you can block them).  Real addresses have a <a href="http://www.internic.net/whois.html">whois </a> entry, so it&rsquo;s possible you can contact the ISP to report and resolve this issue.</p>
+<p>Review the IP addresses that are being rejected and dropped.  Try to identify them with a <code>ping -a &lt;IP address&gt;</code>.  Spoofed addresses won&rsquo;t have an owner (and you can block them).  Real addresses have a <a href="https://lookup.icann.org/en">whois</a><code>↗</code> entry, so it&rsquo;s possible you can contact the ISP to report and resolve this issue.</p>
 <p>There are many other firewall log analysis techniques, and a number of good open-source and commercial log analysis programs.  If you decide to analyse directly, though, you&rsquo;re basically looking for blocked connection issues, connections to (potentially) open ports you&rsquo;re not using, and suspicious-looking outbound connections.</p>
 <p><a href="#heading--web-server-logs-subsection"><h3 id="heading--web-server-logs-subsection">Web server logs</h3></a></p>
 <p>Detecting malicious activity directed toward your Web server is best done with a log analysis tool.  If you want to review the raw logs directly, you can look for them in two places:</p>
@@ -611,9 +628,9 @@ Jun 06 13:45:35 router sshd[2487]: Failed password for root from 234.19.184.6 po
 Jun 06 13:45:48 router sshd[2487]: Failed password for root from 234.19.184.6 port 35444 ssh2
 </code></pre>
 <p>From here, you can either use <code>whois</code> to locate the attacker and work with the ISP to block them, or simply use your UFW firewall to block them directly.</p>
-<p>As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the <a href="https://manpages.ubuntu.com/manpages/journalctl.1.html">Ubuntu journalctl manpage</a> or <a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">another, similar source </a>.  </p>
+<p>As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the <a href="https://manpages.ubuntu.com/manpages/journalctl.1.html">Ubuntu journalctl manpage</a><code>↗</code> or <a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">another, similar source </a><code>↗</code>.  </p>
 <p><a href="#heading--postgres-security"><h2 id="heading--postgres-security">How to implement PostgreSQL security</h2></a></p>
-<p>PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider <a href="https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019">full disk encryption </a>.  Also recommended is <a href="https://www.postgresql.org/docs/current/ssl-tcp.html">TLS encryption between MAAS and PostgreSQL </a>.</p>
+<p>PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider <a href="https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019">full disk encryption </a><code>↗</code>.  Also recommended is <a href="https://www.postgresql.org/docs/current/ssl-tcp.html">TLS encryption between MAAS and PostgreSQL </a><code>↗</code>.</p>
 <p><a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">About other things you can do to harden MAAS</h2></a></p>
 <p>In addition to the items mentioned above, you should be aware of a few other points about hardening MAAS.</p>
 <p><a href="#heading--maas-and-root-users"><h3 id="heading--maas-and-root-users">Good passwords</h2></a></p>

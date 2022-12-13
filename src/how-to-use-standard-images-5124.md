@@ -11,7 +11,7 @@ This article will help you learn:
 - [How to use other image mirrors to download images](#heading--image-mirrors)
 - [How to import and provision non-Ubuntu images](#heading--other-images)
 
-Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-create-custom-images/5104#heading--how-to-build-maas-images).
+Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/how-to-build-custom-images/5104#heading--how-to-build-maas-images).
 
 <a href="#heading--maas-image-streams"><h2 id="heading--maas-image-streams">How to use MAAS image streams</h2></a>
 
@@ -29,11 +29,11 @@ This subsection will help you learn:
 
 The candidate stream contains images and bootloaders which have not been explicitly tested with MAAS. Canonical's automated build process dumps all images and bootloaders here before they are tested with MAAS. This stream is useful when testing a bug fix before an image or bootloader has been promoted to stable. Think of the candidate stream as a preview: it should never be used in a production environment; and users are encouraged to provide feedback on any issues they find with this stream.
 
-This stream is available [here](http://images.maas.io/ephemeral-v3/candidate).
+This stream is available [here](http://images.maas.io/ephemeral-v3/candidate)`↗`.
 
 <a href="#heading--stable-stream"><h3 id="heading--stable-stream">About the stable stream</h3></a>
 
-The stable stream contains images and bootloaders which have been tested with the latest version of MAAS. This is the default stream which should be used in production environments.  This stream is available [here](http://images.maas.io/ephemeral-v3/stable).
+The stable stream contains images and bootloaders which have been tested with the latest version of MAAS. This is the default stream which should be used in production environments.  This stream is available [here](http://images.maas.io/ephemeral-v3/stable)`↗`.
 
 <a href="#heading--daily-stream"><h3 id="heading--daily-stream">About the retired daily stream</h3></a>
 
@@ -63,7 +63,7 @@ The 'Images' page shows what images and architectures have been selected and dow
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a>
 
-You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/about-images/5076#boot-image-sources)) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/how-to-acquire-images/6192#boot-image-sources)) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
 Click the 'Save selection' button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:
 
@@ -88,11 +88,11 @@ It is also possible to import and provision images other than Ubuntu. Images sup
 <a href="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a>
 [/tab]
 [tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/about-images/5076#boot-image-sources)) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/how-to-acquire-images/6192#boot-image-sources)) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
 This article will help you learn:
 
-- [How to get started with the MAAS CLI](/t/how-to-use-the-maas-cli/5236)
+- [How to get started with the MAAS CLI](/t/try-out-the-maas-cli/5236)
 - [How to list boot sources](#heading--list-boot-sources)
 - [How to select images](#heading--select-image)
 - [How to list image selections](#heading--list-image-selections)

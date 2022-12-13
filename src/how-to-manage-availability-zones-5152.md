@@ -1,5 +1,5 @@
 <!-- "How to manage availability zones" -->
-An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/about-networking/5084#heading--about-availability-zones) for more details.
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/how-to-set-up-networks/6174#heading--about-availability-zones) for more details.
 
 A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machine to them. This article will help you learn:
 
@@ -11,7 +11,7 @@ A newly installed MAAS comes with a default zone which initially contains all no
 - [How to allocate a machine in a particular zone](#heading--allocate-a-node-in-a-zone)
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
 
 To see a list of availability zones, choose "AZs" from the top menu:
@@ -50,7 +50,7 @@ After selecting a zone hit the 'Set zone...' button to apply the change.
 
 You can also edit a machine's 'Configuration' page to change its zone.
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
 
