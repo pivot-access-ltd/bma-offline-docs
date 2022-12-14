@@ -2,32 +2,60 @@
 Built on a foundation of networking knowledge, MAAS introduces a number of new terms, and adds some nuances to common terms.  Some of these terms may be common networking terms you never looked up; others represent more complex concepts that may be unique to MAAS.  This article presents and explains some of these important terms.
 
 <details><summary>Show me an alphabetical list of terms</summary>
+
+
 - [Availability zones](/t/maas-glossary/5416#heading--zones)
+
 - [cloud-init](/t/maas-glossary/5416#heading--cloud-init)
+
 - [Controller](/t/maas-glossary/5416#heading--controllers)
+
 - [Device](/t/maas-glossary/5416#heading--devices)
+
 - [DHCP](/t/maas-glossary/5416#heading--dhcp)
+
 - [DHCP relay](/t/maas-glossary/5416#heading--dhcp-relay)
+
 - [Edge clouds](/t/maas-glossary/5416#heading--edge-clouds)
+
 - [Fabrics](/t/maas-glossary/5416#heading--fabrics)
+
 - [Images](/t/maas-glossary/5416#heading--images)
+
 - [Interfaces](/t/maas-glossary/5416#heading--interfaces)
+
 - [isolcpus](/t/maas-glossary/5416#heading--isolcpus)
+
 - [Machine](/t/maas-glossary/5416#heading--machines)
+
 - [Machine actions](/t/maas-glossary/5416#heading--machine-actions)
+
 - [Machine statuses](/t/maas-glossary/5416#heading--machine-statuses)
+
 - [Network infrastructure](/t/maas-glossary/5416#heading--network-infrastructure)
+
 - [Network interface](/t/maas-glossary/5416#heading--network-interface)
+
 - [Network topology](/t/maas-glossary/5416#heading--network-topology)
+
 - [NUMA](/t/maas-glossary/5416#heading--numa)
+
 - [Nodes](/t/maas-glossary/5416#heading--nodes)
+
 - [Package repositories](/t/maas-glossary/5416#heading--package-repositories)
+
 - [Regions](/t/maas-glossary/5416#heading--regions)
+
 - [Series](/t/maas-glossary/5416#heading--series)
+
 - [Spaces](/t/maas-glossary/5416#heading--spaces)
+
 - [SR-IOV](/t/maas-glossary/5416#heading--sr-iov)
+
 - [Tags](/t/maas-glossary/5416#heading--tags)
+
 - [Ubuntu package repositories](/t/maas-glossary/5416#heading--ubuntu-package-repositories)
+
 - [VM hosts](/t/maas-glossary/5416#heading--vm-hosts)
 </details>
 
