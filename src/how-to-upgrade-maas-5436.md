@@ -3,7 +3,7 @@
 [tab version="v3.3 Snap"]
 This section will be filled in on the final release of MAAS 3.3.  In the meantime, please check the [release notes](/t/what-is-new-with-maas/5292) for details on how to upgrade from MAAS 3.2.
 [/tab]
-[tab version="v3.2 Packages"] 
+[tab version="v3.3 Packages"] 
 This section will be filled in on the final release of MAAS 3.3.  In the meantime, please check the [release notes](/t/what-is-new-with-maas/5292) for details on how to upgrade from MAAS 3.2.
 [/tab]
 [tab version="v3.2 Snap"] 
