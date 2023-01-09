@@ -137,7 +137,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [MAAS technical reference](/t/-/6203)
 
-- [Commissioning scripts](/t/-/5375)
+- [Commissioning scripts](/t/-/6605)
 - [Hardware test scripts](/t/-/5392)
 - [Audit event logs](/t/-/5256)
 - [MAAS performance](/t/-/6178)
@@ -232,7 +232,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |https://discourse.maas.io/t/-/5116|/docs/how-to-enable-maas-native-tls|
 |https://discourse.maas.io/t/-/5448|/docs/how-to-contact-us|
 |https://discourse.maas.io/t/-/5256|/docs/audit-event-log-reference|
-|https://discourse.maas.io/t/-/5375|/docs/commissioning-scripts-reference|
+|https://discourse.maas.io/t/-/6605|/docs/commissioning-scripts-tech-reference|
 |https://discourse.maas.io/t/-/817/|/docs/intel-rack-scale-design-rsd-introduction|
 |https://discourse.maas.io/t/-/2298|/docs/snap/2.7/cli/api-authentication|
 |https://discourse.maas.io/t/-/2299|/docs/snap/2.7/ui/api-authentication|
@@ -902,7 +902,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |--------|--------|
 |/docs/about-rbac|/docs/how-to-protect-your-secrets|
 |/docs/maas-terraform-provider|/docs/maas-terraform-provider-reference|
-|/docs/commissioning-script-reference|/docs/commissioning-scripts-reference|
+|/docs/commissioning-script-reference|/docs/commissioning-scripts-tech-reference|
 |/docs/technical-reference|/docs/maas-technical-reference|
 |/docs/how-to-set-up-maas-metrics|/docs/how-to-observe-a-live-maas|
 |/docs/how-to-back-up-maas|/docs/how-to-keep-maas-backed-up|
