@@ -829,7 +829,7 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 - [1890262](https://bugs.launchpad.net/bugs/1890262)`↗`: UI: Error message with a custom image URL doesn't clear
 - [1893226](https://bugs.launchpad.net/bugs/1893226)`↗`: Machine-specific minimal commissioning kernel resets to MAAS wide default
 - [1893670](https://bugs.launchpad.net/bugs/1893670)`↗`: UI: display bios_boot_mode in the web UI
-- [1898131](https://bugs.launchpad.net/bugs/1898131)`↗`: IP address gets hidden, instead of subnet when window is resized
+- 1898131: IP address gets hidden, instead of subnet when window is resized
 - [1905636](https://bugs.launchpad.net/bugs/1905636)`↗`: UI: CentOS 7 is the default over CentOS 8
 - [1909348](https://bugs.launchpad.net/bugs/1909348)`↗`: MAAS 2.9.0 DNS zone remove @ labels impossible
 - [1913800](https://bugs.launchpad.net/bugs/1913800)`↗`: PCI and USB information missing from controllers page
@@ -938,7 +938,7 @@ More bug-fixes are planned for later 3.3 releases.
 - [1988229](https://bugs.launchpad.net/bugs/1988229)`↗`: dhcp snippet create fails when dhcp subnet is relayed regression
 - [1990383](https://bugs.launchpad.net/bugs/1990383)`↗`: Link subnet on new machine
 - [1992330](https://bugs.launchpad.net/bugs/1992330)`↗`: Use the rack controller IP as DNS when relaying DHCP
-- [1993032](https://bugs.launchpad.net/bugs/1993032)`↗`: maas_hardware_sync creds are readable to local users on deployed OS and can give a super user access to MAAS itself
+- 1993032: maas_hardware_sync creds are readable to local users on deployed OS and can give a super user access to MAAS itself
 - [1993152](https://bugs.launchpad.net/bugs/1993152)`↗`: Updating a VM host through API unset tags
 - [1994899](https://bugs.launchpad.net/bugs/1994899)`↗`: MAAS cannot mark "broken" VMs as fixed without recommissioning
 - [1995397](https://bugs.launchpad.net/bugs/1995397)`↗`: Sentry blocked by CORS
