@@ -29,8 +29,8 @@ For example, comparing MAAS 3.2 to MAAS 3.1, machine listings load, on average, 
 
 Here's a short history of our performance efforts to date:
 
-- This [video show-and-tell](https://dicourse.maas.io/t/maas-show-and-tell-is-maas-fast-yet/6105)`↗` documents recent efforts to improve MAAS peformance, with quantitative results.
-- Here's some [work done by the UI team](https://dicourse.maas.io/t/maas-ui-improving-the-performance-of-maas-ui/5820)`↗` to improve the performance of the UI.
+- This [video show-and-tell](https://discourse.maas.io/t/maas-show-and-tell-is-maas-fast-yet/6105)`↗` documents recent efforts to improve MAAS peformance, with quantitative results.
+- Here's some [work done by the UI team](https://discourse.maas.io/t/maas-ui-improving-the-performance-of-maas-ui/5820)`↗` to improve the performance of the UI.
 
 Note that this list only captures the bigger, sustained efforts, although there is a constant focus on weeding out slowdowns when we come across them.
 
