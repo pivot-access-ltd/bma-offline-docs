@@ -31,9 +31,6 @@ For installation and initial steps, see these external links:
 - [Python libmaas on github](https://github.com/maas/python-libmaas)`↗`
 - [Python libmass in the MAAS github](http://maas.github.io/python-libmaas/index.html)`↗`
 
-For examples, see these external links:
-
-- [Python libmaas client guide](https://maas.github.io/python-libmaas/client/index.html)`↗`
-- [Python libmass client node guide](https://maas.github.io/python-libmaas/client/nodes/index.html)`↗`
+For examples, see the [Python libmaas client guide](https://maas.github.io/python-libmaas/client/index.html)`↗`.
 
 For pypi information, see [this external link](https://pypi.python.org/pypi/python-libmaas)`↗`.
