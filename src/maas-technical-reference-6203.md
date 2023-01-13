@@ -11,4 +11,3 @@ The following technical topics may be useful as you operate and administer MAAS:
 - [Power management](/t/-/5246): To manage a machine, MAAS must be able to power cycle it, usually through the machine’s BMC card. Until you configure the power type, a newly-added machine can’t be enlisted and used by MAAS. Often, choosing the right power driver is half the battle; this article can help.
 - [Storage layouts](/t/-/5973): There are several possible MAAS storage layouts, including flat, LVM, bcache, VMFS6, and the generic "blank" layout.  This article provides details and technical specifications on these layouts.
 - [MAAS Terraform provider](/t/-/6327): This article provides a pure reference on the MAAS Terraform provider, in terms of data sources and resources available through that provider, along with HCL examples culled from the source.
-
