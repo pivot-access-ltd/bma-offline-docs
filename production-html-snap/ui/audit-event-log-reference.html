@@ -598,47 +598,25 @@
  NODE_HARDWARE_SYNC_USB_DEVICE   | Node USB Device hardware sync state change
 </code></pre>
 <p><a href="#heading--table-of-audit-events"><h3 id="heading--table-of-audit-events">Table of audit events</h3></a></p>
-<p>The following abridged listing gives a sense of the specific events associated with each of these event types:</p>
-<pre><code class="language-nohighlight">              name               | action  |                         description                          
----------------------------------+---------+--------------------------------------------------------------
- AUTHORISATION                   |         | Logged in admin.
- NODE                            |         | Started commissioning a machine.
- NODE                            |         | Started releasing a machine.
- NODE                            |         | Acquired a machine.
- NODE                            |         | Aborted commissioning on a machine.
- NODE                            |         | Started deploying a machine.
- NODE                            |         | Aborted deployment of a machine. 
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | added   | Added a block device to a machine.
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | removed | Removed a block device from a machine.
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | updated | Updated a block device on a machine.
- NODE_HARDWARE_SYNC_CPU          | added   | Added a CPU to a machine.
- NODE_HARDWARE_SYNC_CPU          | removed | Removed a CPU from a machine.
- NODE_HARDWARE_SYNC_INTERFACE    | added   | Added an interface to a machine.
- NODE_HARDWARE_SYNC_INTERFACE    | removed | Removed an interface from a machine.
- NODE_HARDWARE_SYNC_INTERFACE    | updated | Updated an interface on a machine.  
- NODE_HARDWARE_SYNC_MEMORY       | added   | Added memory to a machine.
- NODE_HARDWARE_SYNC_MEMORY       | removed | Removed memory from a machine.
- NODE_HARDWARE_SYNC_MEMORY       | updated | Updated memory on a machine.
- NODE_HARDWARE_SYNC_PCI_DEVICE   | updated | Updated a PCI device on a machine.
- NODE_HARDWARE_SYNC_PCI_DEVICE   | added   | Added a PCI device to a machine.
- NODE_HARDWARE_SYNC_PCI_DEVICE   | removed | Removed a PCI device from a machine.
- NODE_HARDWARE_SYNC_USB_DEVICE   | added   | Added a USB device to a machine.
- NODE_HARDWARE_SYNC_USB_DEVICE   | removed | Removed a USB device from a machine.
- NODE_HARDWARE_SYNC_USB_DEVICE   | updated | Updated a USB device on a machine.
- SETTINGS                        |         | Updated MAAS settings.
+<p>Here is a table of all audit events currently defined in the MAAS codebase:</p>
+<pre><code class="language-nohighlight">              name               |                 description                  
+---------------------------------+----------------------------------------------
+AUTHORISATION | Authorisation |
+IMAGES | Images |
+NETWORKING | Networking |
+NODE | Node |
+NODE_HARDWARE_SYNC_BLOCK_DEVICE | Node Block Device hardware sync state change |
+NODE_HARDWARE_SYNC_BMC | Node BMC hardware sync state change |
+NODE_HARDWARE_SYNC_CPU | Node CPU hardware sync state change |
+NODE_HARDWARE_SYNC_INTERFACE | Node Interface hardware sync state change |
+NODE_HARDWARE_SYNC_MEMORY | Node Memory hardware sync state change |
+NODE_HARDWARE_SYNC_PCI_DEVICE | Node PCI Device hardware sync state change |
+NODE_HARDWARE_SYNC_USB_DEVICE | Node USB Device hardware sync state chage |
+POD | Pod |
+SETTINGS | Settings |
+TAG | Tag |
+ZONES | Zones |
 </code></pre>
-<p>You will notice that these audit event logs are essentially state changes:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><strong>AUTHORISATION</strong>: Authorisation-type events, such as logging on or off the MAAS instance.</li>
-<li><strong>SETTINGS</strong>: Any changes to MAAS settings.</li>
-<li><strong>NODE</strong>: Node state changes, e.g., &ldquo;Deployed&rdquo; to &ldquo;Released&rdquo;.</li>
-<li><strong>NODE_HARDWARE_SYNC_MEMORY</strong>: Node memory hardware sync state changes.</li>
-<li><strong>NODE_HARDWARE_SYNC_INTERFACE</strong>: Node interface hardware sync state changes.</li>
-<li><strong>NODE_HARDWARE_SYNC_BLOCK_DEVICE</strong>: Node block device hardware sync state changes.</li>
-<li><strong>NODE_HARDWARE_SYNC_PCI_DEVICE</strong>: Node PCI device hardware sync state changes.</li>
-<li><strong>NODE_HARDWARE_SYNC_CPU</strong>: Node CPU hardware sync state changes.</li>
-<li><strong>NODE_HARDWARE_SYNC_USB_DEVICE</strong>: Node USB Device hardware sync state changes.</li>
-</ul>
 <p>For information on how to use these audit events to answer specific questions, see <a href="how-to-work-with-audit-event-logs.html">How to work with audit event logs</a>.</p>
     </div>
   </body>
