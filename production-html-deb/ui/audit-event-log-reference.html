@@ -585,38 +585,124 @@
 <li><strong>description</strong>: a long text description of what took place. This field is almost always populated; this is the primary information used for auditing MAAS events.</li>
 <li><strong>type</strong>: this is the type of event that occurred, as shown in the following table.</li>
 </ul>
-<pre><code class="language-nohighlight">              name               |                 description                  
----------------------------------+----------------------------------------------
- AUTHORISATION                   | Authorisation
- SETTINGS                        | Settings
- NODE                            | Node
- NODE_HARDWARE_SYNC_MEMORY       | Node Memory hardware sync state change
- NODE_HARDWARE_SYNC_INTERFACE    | Node Interface hardware sync state change
- NODE_HARDWARE_SYNC_BLOCK_DEVICE | Node Block Device hardware sync state change
- NODE_HARDWARE_SYNC_PCI_DEVICE   | Node PCI Device hardware sync state change
- NODE_HARDWARE_SYNC_CPU          | Node CPU hardware sync state change
- NODE_HARDWARE_SYNC_USB_DEVICE   | Node USB Device hardware sync state change
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUTHORISATION</td>
+<td>Authorisation</td>
+</tr>
+<tr>
+<td>SETTINGS</td>
+<td>Settings</td>
+</tr>
+<tr>
+<td>NODE</td>
+<td>Node</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_MEMORY</td>
+<td>Node Memory hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_INTERFACE</td>
+<td>Node Interface hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_BLOCK_DEVICE</td>
+<td>Node Block Device hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_PCI_DEVICE</td>
+<td>Node PCI Device hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_CPU</td>
+<td>Node CPU hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_USB_DEVICE</td>
+<td>Node USB Device hardware sync state change</td>
+</tr>
+</tbody>
+</table>
 <p><a href="#heading--table-of-audit-events"><h3 id="heading--table-of-audit-events">Table of audit events</h3></a></p>
 <p>Here is a table of all audit events currently defined in the MAAS codebase:</p>
-<pre><code class="language-nohighlight">              name               |                 description                  
----------------------------------+----------------------------------------------
-AUTHORISATION | Authorisation |
-IMAGES | Images |
-NETWORKING | Networking |
-NODE | Node |
-NODE_HARDWARE_SYNC_BLOCK_DEVICE | Node Block Device hardware sync state change |
-NODE_HARDWARE_SYNC_BMC | Node BMC hardware sync state change |
-NODE_HARDWARE_SYNC_CPU | Node CPU hardware sync state change |
-NODE_HARDWARE_SYNC_INTERFACE | Node Interface hardware sync state change |
-NODE_HARDWARE_SYNC_MEMORY | Node Memory hardware sync state change |
-NODE_HARDWARE_SYNC_PCI_DEVICE | Node PCI Device hardware sync state change |
-NODE_HARDWARE_SYNC_USB_DEVICE | Node USB Device hardware sync state chage |
-POD | Pod |
-SETTINGS | Settings |
-TAG | Tag |
-ZONES | Zones |
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUTHORISATION</td>
+<td>Authorisation</td>
+</tr>
+<tr>
+<td>IMAGES</td>
+<td>Images</td>
+</tr>
+<tr>
+<td>NETWORKING</td>
+<td>Networking</td>
+</tr>
+<tr>
+<td>NODE</td>
+<td>Node</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_BLOCK_DEVICE</td>
+<td>Node Block Device hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_BMC</td>
+<td>Node BMC hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_CPU</td>
+<td>Node CPU hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_INTERFACE</td>
+<td>Node Interface hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_MEMORY</td>
+<td>Node Memory hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_PCI_DEVICE</td>
+<td>Node PCI Device hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_USB_DEVICE</td>
+<td>Node USB Device hardware sync state chage</td>
+</tr>
+<tr>
+<td>POD</td>
+<td>Pod</td>
+</tr>
+<tr>
+<td>SETTINGS</td>
+<td>Settings</td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>Tag</td>
+</tr>
+<tr>
+<td>ZONES</td>
+<td>Zones</td>
+</tr>
+</tbody>
+</table>
 <p>For information on how to use these audit events to answer specific questions, see <a href="how-to-work-with-audit-event-logs.html">How to work with audit event logs</a>.</p>
     </div>
   </body>
