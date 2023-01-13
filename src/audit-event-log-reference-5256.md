@@ -173,22 +173,6 @@ These MAAS audit events consist of the following information:
 - **description**: a long text description of what took place. This field is almost always populated; this is the primary information used for auditing MAAS events.
 - **type**: this is the type of event that occurred, as shown in the following table.
 
-|               name               |                 description |
-|---------------------------------|----------------------------------------------|
-|  AUTHORISATION                   | Authorisation|
-|  SETTINGS                        | Settings|
-|  NODE                            | Node|
-|  NODE_HARDWARE_SYNC_MEMORY       | Node Memory hardware sync state change|
-|  NODE_HARDWARE_SYNC_INTERFACE    | Node Interface hardware sync state change|
-|  NODE_HARDWARE_SYNC_BLOCK_DEVICE | Node Block Device hardware sync state change|
-|  NODE_HARDWARE_SYNC_PCI_DEVICE   | Node PCI Device hardware sync state change|
-|  NODE_HARDWARE_SYNC_CPU          | Node CPU hardware sync state change|
-|  NODE_HARDWARE_SYNC_USB_DEVICE   | Node USB Device hardware sync state change|
-
-<a href="#heading--table-of-audit-events"><h3 id="heading--table-of-audit-events">Table of audit events</h3></a>
-
-Here is a table of all audit events currently defined in the MAAS codebase:
-
 |               name               |                 description                |
 |---------------------------------|----------------------------------------------|
 | AUTHORISATION | Authorisation |
