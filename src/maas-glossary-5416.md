@@ -3,135 +3,136 @@ Built on a foundation of networking knowledge, MAAS introduces a number of new t
 
 <details><summary>Show me an alphabetical list of terms</summary>
 
-- [Abort](heading--abort)
 
-- [Allocated](heading--allocated)
+- [Abort](#heading--abort)
 
-- [Allocate](heading--allocate)
+- [Allocated](#heading--allocated)
 
-- [Bond](heading--bond)
+- [Allocate](#heading--allocate)
 
-- [Broken](heading--broken)
+- [Bond](#heading--bond)
 
-- [Cloud-init](heading--cloud-init)
+- [Broken](#heading--broken)
 
-- [Commission](heading--commission)
+- [Cloud-init](#heading--cloud-init)
 
-- [Commissioning](heading--commissioning)
+- [Commission](#heading--commission)
 
-- [Controllers](heading--controllers)
+- [Commissioning](#heading--commissioning)
 
-- [Delete](heading--delete)
+- [Controllers](#heading--controllers)
 
-- [Deployed](heading--deployed)
+- [Delete](#heading--delete)
 
-- [Deploy](heading--deploy)
+- [Deployed](#heading--deployed)
 
-- [Deploying](heading--deploying)
+- [Deploy](#heading--deploy)
 
-- [Devices](heading--devices)
+- [Deploying](#heading--deploying)
 
-- [DHCP](heading--dhcp)
+- [Devices](#heading--devices)
 
-- [DHCP relay](heading--dhcp-relay)
+- [DHCP](#heading--dhcp)
 
-- [Edge clouds](heading--edge-clouds)
+- [DHCP relay](#heading--dhcp-relay)
 
-- [Entering rescue mode](heading--entering-rescue-mode)
+- [Edge clouds](#heading--edge-clouds)
 
-- [Exiting rescue mode](heading--exiting-rescue-mode)
+- [Entering rescue mode](#heading--entering-rescue-mode)
 
-- [Exit rescue mode](heading--exit-rescue-mode)
+- [Exiting rescue mode](#heading--exiting-rescue-mode)
 
-- [Fabrics](heading--fabrics)
+- [Exit rescue mode](#heading--exit-rescue-mode)
 
-- [Failed Commissioning](heading--failed-commissioning)
+- [Fabrics](#heading--fabrics)
 
-- [Failed Deployment](heading--failed-deployment)
+- [Failed Commissioning](#heading--failed-commissioning)
 
-- [Hugepages](heading--hugepages)
+- [Failed Deployment](#heading--failed-deployment)
 
-- [Images](heading--images)
+- [Hugepages](#heading--hugepages)
 
-- [Interfaces](heading--interfaces)
+- [Images](#heading--images)
 
-- [IP ranges](heading--ip-ranges)
+- [Interfaces](#heading--interfaces)
 
-- [Isolating CPUs](heading--isolcpus)
+- [IP ranges](#heading--ip-ranges)
 
-- [Locked](heading--locked)
+- [Isolating CPUs](#heading--isolcpus)
 
-- [Lock](heading--lock)
+- [Locked](#heading--locked)
 
-- [Machine actions](heading--machine-actions)
+- [Lock](#heading--lock)
 
-- [Machines](heading--machines)
+- [Machine actions](#heading--machine-actions)
 
-- [Machine statuses](heading--machine-statuses)
+- [Machines](#heading--machines)
 
-- [Mark broken](heading--mark-broken)
+- [Machine statuses](#heading--machine-statuses)
 
-- [Mark fixed](heading--mark-fixed)
+- [Mark broken](#heading--mark-broken)
 
-- [Network infrastructure](heading--network-infrastructure)
+- [Mark fixed](#heading--mark-fixed)
 
-- [Network interface](heading--network-interface)
+- [Network infrastructure](#heading--network-infrastructure)
 
-- [Brief network tutorial](heading--network-tutorial)
+- [Network interface](#heading--network-interface)
 
-- [New](heading--new)
+- [Brief network tutorial](#heading--network-tutorial)
 
-- [Nodes](heading--nodes)
+- [New](#heading--new)
 
-- [NUMA/vNUMA](heading--numa)
+- [Nodes](#heading--nodes)
 
-- [Override failed](heading--override-failed)
+- [NUMA/vNUMA](#heading--numa)
 
-- [Package repositories](heading--package-repositories)
+- [Override failed](#heading--override-failed)
 
-- [Personal Package Archives (PPA)](heading--personal-package-archives-ppa)
+- [Package repositories](#heading--package-repositories)
 
-- [Physical](heading--physical)
+- [Personal Package Archives (PPA)](#heading--personal-package-archives-ppa)
 
-- [Power off](heading--power-off)
+- [Physical](#heading--physical)
 
-- [Power on](heading--power-on)
+- [Power off](#heading--power-off)
 
-- [Ready](heading--ready)
+- [Power on](#heading--power-on)
 
-- [Regions](heading--regions)
+- [Ready](#heading--ready)
 
-- [Release](heading--release)
+- [Regions](#heading--regions)
 
-- [Rescue mode](heading--rescue-mode)
+- [Release](#heading--release)
 
-- [Rescue mode](heading--rescue-mode)
+- [Rescue mode](#heading--rescue-mode)
 
-- [Series](heading--series)
+- [Rescue mode](#heading--rescue-mode)
 
-- [Set Zone](heading--set-zone)
+- [Series](#heading--series)
 
-- [Spaces](heading--spaces)
+- [Set Zone](#heading--set-zone)
 
-- [SR-IOV](heading--sr-iov)
+- [Spaces](#heading--spaces)
 
-- [Subnets](heading--subnets)
+- [SR-IOV](#heading--sr-iov)
 
-- [Tags](heading--tags)
+- [Subnets](#heading--subnets)
 
-- [Test hardware](heading--test-hardware)
+- [Tags](#heading--tags)
 
-- [Ubuntu package repositories](heading--ubuntu-package-repositories)
+- [Test hardware](#heading--test-hardware)
 
-- [Unknown](heading--unknown)
+- [Ubuntu package repositories](#heading--ubuntu-package-repositories)
 
-- [Unlock](heading--unlock)
+- [Unknown](#heading--unknown)
 
-- [VLAN](heading--vlan)
+- [Unlock](#heading--unlock)
 
-- [VM hosts](heading--vm-hosts)
+- [VLAN](#heading--vlan)
 
-- [Zones](heading--zones)
+- [VM hosts](#heading--vm-hosts)
+
+- [Zones](#heading--zones)
 
 </details>
 
@@ -180,6 +181,7 @@ These four steps combine (at least) four general datasources to bring an instanc
 - User data - data provided by end users or cloud administrators to initialise the instance.  This completely optional data can be anything from shell scripts to highly-structured cloud-config data that trigger cloud-init's built-ins.
 
 - Vendor data - data provided by cloud platform vendors; this is identical (in principle) to user data, but derived from a different source.  In practice, vendor data usually handle things that users wouldn't normally specify, such as mirror setup, NTP service management, etc.
+
 <a href="#heading--commission"><h2 id="heading--commission">Commission</h2></a>
 
 This action commissions a node, changing a node's status from 'New' to 'Commissioning' to 'Ready'.
@@ -620,3 +622,4 @@ Some prime examples of zone usage include fault-tolerance, service performance, 
 A newly installed MAAS comes with a default zone which contains all nodes unless you create a new zone. You can therefore safely ignore the entire concept if you're not interested in leveraging zones.
 
 You cannot remove the 'default' zone or change its name.
+
