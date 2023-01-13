@@ -47,3 +47,16 @@ response = perform_API_request(
      "http://server:5240/MAAS/api/2.0", "/nodes/?op=list", "<key>", "<secret>",
      "consumer_key>")
 ```
+
+<a href="#heading--curl"><h2 id="heading--curl">How to perform authenticated requests using cURL</h2></a>
+
+    curl --header "Authorization: OAuth oauth_version=1.0, oauth_signature_method=PLAINTEXT, oauth_consumer_key=$API_KEY[1], oauth_token=$API_KEY[2], oauth_signature=&$API_KEY[3], oauth_nonce=$(uuidgen), oauth_timestamp=$(date +%s)" \
+    $MAAS_URL/MAAS/api/2.0/users/
+
+
+<a href="#heading--httpie"><h2 id="heading--httpie">How to perform authenticated requests using HTTPie and fish</h2></a>
+
+    set API_KEY (string split : $API_KEY)
+
+    http $MAAS_URL/api/2.0/users/ \
+    Authorization:"OAuth oauth_version=1.0, oauth_signature_method=PLAINTEXT, oauth_consumer_key=$API_KEY[1], oauth_token=$API_KEY[2], oauth_signature=&$API_KEY[3], oauth_nonce=$(uuidgen), oauth_timestamp=$(date +%s)"
