@@ -32,9 +32,13 @@ In general, the various states and transitions can be summarised in a diagram:
 
 The light green boxes -- and the light blue box ("RELEASING") -- represent the normal progression of a machine from newly-enlisted to deployed (in use) and back.  This normal progression could be considered the standard MAAS life-cycle:
 
-- Machines are enlisted by MAAS, and assigned a status of "NEW",  when (1) they are enabled to network boot, and (2) they are on a subnet accessible to MAAS.  New machines can be used by MAAS, or deleted if they are not intended for MAAS use.  A common practice is to simply define a desired subnet in MAAS, allow connected devices to be enlisted, and then delete the machines that MAAS shouldn't control.  These excluded machines might include switches, routers, printers, or unrelated servers that happen to be on the same network, among others.
+- Machines are enlisted by MAAS, and assigned a status of "NEW",  when (1) they are enabled to network boot, and (2) they are on a subnet accessible to MAAS.  New machines can be used by MAAS, or deleted from MAAS (if they are not intended for MAAS use) or just ignored (e.g., don't commission them).  A common practice is to simply define a desired subnet in MAAS, allow connected devices to be enlisted, and then delete -- from MAAS -- the machines that MAAS shouldn't control.  These excluded machines might include switches, routers, printers, or unrelated servers that happen to be on the same network, among others.
 
-- Once you've pared the list to machines that you want MAAS to control, you can choose to commission them.  Commissioning PXE boots the machine and loads an ephemeral version of the Ubuntu operating system into the machine's RAM.  MAAS then uses that OS to scan the machine to determine its hardware configuration: CPUs, RAM, storage layouts, PCI and USB devices, and so forth.  Having done this, MAAS then places that machine in the "READY" state, meaning that MAAS will be able to deploy it, based on this hardware information.
+- Once you've pared the list to machines that you want MAAS to control, you can choose to commission them.  Commissioning PXE boots the machine and loads an ephemeral version of the Ubuntu operating system into the machine's RAM.  MAAS then uses that OS to scan the machine to determine its hardware configuration: CPUs, RAM, storage layouts, PCI and USB devices, and so forth.  
+
+- MAAS next tests the machine to make sure it's working properly.  Machines that don't pass these basic tests are moved to a failed state.  
+
+- Having tested it, MAAS then places that machine in the "READY" state, meaning that MAAS will be able to deploy it, based on this hardware information.
 
 - Before you deploy a machine, you should allocate it.  This step essentially involves taking ownership of the machine, so that no other users can deploy it.
 
@@ -62,29 +66,27 @@ Now that we have a solid overview of the life-cycle, let's break down some of th
 
 <a href="#heading--about-machine-states"><h3 id="heading--about-machine-states">About machine states</h3></a>
 
-Machines can be discovered or added, commissioned by MAAS, allocated, deployed, released, marked broken, tested, put into rescue mode, and deleted.  In addition, pools, zones, and tags can be set for machines.
+Machines can have any of the following states:
 
-All of these states and actions represent the possible life-cycle of a machine.  This life-cycle isn't strict or linear -- it depends on how you use a machine -- but it's useful to give a general overview of how machines tend to change states.  In the discussion that follows, states and actions are shown in **bold** type.
+- **NEW**: Machines start as servers in your environment, attached to a network or subnet that MAAS can reach and manager.  If those machines are configured to netboot, MAAS can discover them and present them for possible commissioning.  Those discovered machines are shown in the **NEW** state.
 
-1. Machines start as servers in your environment, attached to a network or subnet MAAS can manage.
+- **COMMISSIONING**: You can select any machine that is marked **NEW** and command MAAS to commission it.  If you add machine manually, it is automatically commissioned.  Commissioning can be customised, if y ou wish.  If a machine fails to properly commission, either because of a commissioning error, or because the commissioning process timed out, that machine enters a **FAILED** state.
 
-2. If machines are configured to netboot, MAAS can **discover** them and present them to you for possible commissioning, changing their state to **New**.
+- **TESTING**: The final step of commissioning is (by default) testing the machine.  These basic tests assure that the discovered hardware works as expected.  Testing can be customised, if you wish.  If a machine fails one of its tests, it is marked as **FAILED**.
 
-3. When you select a machine that is marked **New**, you can choose to **commission** it.  If you add a machine manually, it is automatically **commissioned**.
+- Machines that have successfully commissioned can be **allocated** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
 
-4. Machines that have successfully commissioned can be **allocated** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
+- Resolving problems with machines usually involve **testing** the machine.
 
-5. Resolving problems with machines usually involve **testing** the machine.
+- Once you've deployed a machine, and you're done with it, you can **release** it.
 
-6. Once you've deployed a machine, and you're done with it, you can **release** it.
+- You can place a machine in **rescue mode**, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you're done, you can **exit rescue mode***.
 
-7. You can place a machine in **rescue mode**, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you're done, you can **exit rescue mode***.
+- Any time a machine is on, you have the option to select it and **power off** that machine.
 
-8. Any time a machine is on, you have the option to select it and **power off** that machine.
+- You can **abort** any operation that's in progress.
 
-9. You can **abort** any operation that's in progress.
-
-10. You also have the option to set tags, availability zone, or resource pool at various stages along the way.
+- You also have the option to set tags, availability zone, or resource pool at various stages along the way.
 
 Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following tables.
 
