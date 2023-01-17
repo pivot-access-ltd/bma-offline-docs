@@ -5,7 +5,7 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-We are happy to announce that MAAS 3.3 RC2 has been released, with [one additional bug fixes](#heading--MAAS-3-3-RC1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+We are happy to announce that MAAS 3.3 RC1 has been released, with [one additional bug fix](#heading--MAAS-3-3-RC1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
