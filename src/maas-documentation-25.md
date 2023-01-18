@@ -139,6 +139,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [Commissioning scripts](/t/-/6605)
 - [Hardware test scripts](/t/-/5392)
+- [Event logs](/t/-/5252)
 - [Audit event logs](/t/-/5256)
 - [MAAS performance](/t/-/6178)
 - [Power management](/t/-/5246)
