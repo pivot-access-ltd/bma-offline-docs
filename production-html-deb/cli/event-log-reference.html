@@ -427,7 +427,14 @@
   Sun, 04 Oct. 2020 23:09:53    Commissioning
 </code></pre>
 <p><a href="#heading--Table-of-event-logs"><h2 id="heading--Table-of-event-logs">Table of event logs</h2></a></p>
-<p>MAAS events </p>
+<p>Non-AUDIT MAAS events can be divided into four categories:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>INFO: informational only; no failure or potential failure state detected.</li>
+<li>WARNING: warnings; a potential failure state was detected, or a failure may occur in the future if this condition is not corrected.</li>
+<li>ERROR: errors; a failure state was observed.  The intended operation likely did not complete successfully.</li>
+<li>DEBUG: debugging messages; internal informational messages, used to help characterize failure states.</li>
+</ul>
+<p>These four categories are summarized below.  Both the internal (code) representation and the corresponding external message are shown, as MAAS sometimes throws exceptions which use the internal representation.</p>
 <p><a href="#heading--INFO-events"><h3 id="heading--INFO-events">INFO events</h3></a></p>
 <table>
 <thead>

@@ -37,7 +37,14 @@ maas admin events query | jq -r '(["HOSTNAME","TIMESTAMP","TYPE","DESCRIPTION"] 
 
 <a href="#heading--Table-of-event-logs"><h2 id="heading--Table-of-event-logs">Table of event logs</h2></a>
 
-MAAS events 
+Non-AUDIT MAAS events can be divided into four categories:
+
+* INFO: informational only; no failure or potential failure state detected.
+* WARNING: warnings; a potential failure state was detected, or a failure may occur in the future if this condition is not corrected.
+* ERROR: errors; a failure state was observed.  The intended operation likely did not complete successfully.
+* DEBUG: debugging messages; internal informational messages, used to help characterize failure states.
+
+These four categories are summarized below.  Both the internal (code) representation and the corresponding external message are shown, as MAAS sometimes throws exceptions which use the internal representation.
 
 <a href="#heading--INFO-events"><h3 id="heading--INFO-events">INFO events</h3></a>
 
