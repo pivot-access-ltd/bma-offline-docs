@@ -429,9 +429,356 @@
   Sun, 04 Oct. 2020 23:09:54    Powering on
   Sun, 04 Oct. 2020 23:09:53    Commissioning
 </code></pre>
-<p>To view the Events log (for a particular machine), select a machine from the machine list and choose the &ldquo;Events&rdquo; tab at the top of the screen:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png"></a></p>
-<p>You can also see a more detailed view by selecting &ldquo;View full history&rdquo; in near the upper right of the log output.</p>
+<p><a href="#heading--Table-of-event-logs"><h2 id="heading--Table-of-event-logs">Table of event logs</h2></a></p>
+<p>MAAS events </p>
+<p><a href="#heading--INFO-events"><h3 id="heading--INFO-events">INFO events</h3></a></p>
+<table>
+<thead>
+<tr>
+<th align="left">Internal representation</th>
+<th align="left">External message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ABORTED_COMMISSIONING</td>
+<td align="left">Aborted commissioning</td>
+</tr>
+<tr>
+<td align="left">ABORTED_DEPLOYMENT</td>
+<td align="left">Aborted deployment</td>
+</tr>
+<tr>
+<td align="left">ABORTED_DISK_ERASING</td>
+<td align="left">Aborted disk erasing</td>
+</tr>
+<tr>
+<td align="left">ABORTED_TESTING</td>
+<td align="left">Aborted testing</td>
+</tr>
+<tr>
+<td align="left">COMMISSIONING</td>
+<td align="left">Commissioning</td>
+</tr>
+<tr>
+<td align="left">CONFIGURING_OS</td>
+<td align="left">Configuring OS</td>
+</tr>
+<tr>
+<td align="left">CONFIGURING_STORAGE</td>
+<td align="left">Configuring storage</td>
+</tr>
+<tr>
+<td align="left">ENTERING_RESCUE_MODE</td>
+<td align="left">Entering rescue mode</td>
+</tr>
+<tr>
+<td align="left">EXITED_RESCUE_MODE</td>
+<td align="left">Exited rescue mode</td>
+</tr>
+<tr>
+<td align="left">FAILED_COMMISSIONING</td>
+<td align="left">Failed commissioning</td>
+</tr>
+<tr>
+<td align="left">FAILED_EXITING_RESCUE_MODE</td>
+<td align="left">Failed exiting rescue mode</td>
+</tr>
+<tr>
+<td align="left">FAILED_TESTING</td>
+<td align="left">Failed testing</td>
+</tr>
+<tr>
+<td align="left">GATHERING_INFO</td>
+<td align="left">Gathering information</td>
+</tr>
+<tr>
+<td align="left">INSTALLING_OS</td>
+<td align="left">Installing OS</td>
+</tr>
+<tr>
+<td align="left">LOADING_EPHEMERAL</td>
+<td align="left">Loading ephemeral</td>
+</tr>
+<tr>
+<td align="left">NODE_POWER_CYCLE_STARTING</td>
+<td align="left">Power cycling</td>
+</tr>
+<tr>
+<td align="left">NODE_POWER_OFF_STARTING</td>
+<td align="left">Powering off</td>
+</tr>
+<tr>
+<td align="left">NODE_POWER_ON_STARTING</td>
+<td align="left">Powering on</td>
+</tr>
+<tr>
+<td align="left">PERFORMING_PXE_BOOT</td>
+<td align="left">Performing PXE boot</td>
+</tr>
+<tr>
+<td align="left">RESCUE_MODE</td>
+<td align="left">Rescue mode</td>
+</tr>
+<tr>
+<td align="left">RUNNING_TEST</td>
+<td align="left">Running test</td>
+</tr>
+<tr>
+<td align="left">SCRIPT_DID_NOT_COMPLETE</td>
+<td align="left">Script</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--WARNING-events"><h3 id="heading--WARNING-events">WARNING events</h3></a></p>
+<table>
+<thead>
+<tr>
+<th align="left">Internal representation</th>
+<th align="left">External message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NODE_POWER_QUERY_FAILED</td>
+<td align="left">Failed to query node&rsquo;s BMC</td>
+</tr>
+<tr>
+<td align="left">RACK_IMPORT_WARNING</td>
+<td align="left">Rack import warning</td>
+</tr>
+<tr>
+<td align="left">REGION_IMPORT_WARNING</td>
+<td align="left">Region import warning</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--ERROR-events"><h3 id="heading--ERROR-events">ERROR events</h3></a></p>
+<table>
+<thead>
+<tr>
+<th align="left">Internal representation</th>
+<th align="left">External message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NODE_COMMISSIONING_EVENT_FAILED</td>
+<td align="left">Node commissioning failure</td>
+</tr>
+<tr>
+<td align="left">NODE_ENTERING_RESCUE_MODE_EVENT_FAILED</td>
+<td align="left">Node entering rescue mode failure</td>
+</tr>
+<tr>
+<td align="left">NODE_EXITING_RESCUE_MODE_EVENT_FAILED</td>
+<td align="left">Node exiting rescue mode failure</td>
+</tr>
+<tr>
+<td align="left">NODE_INSTALL_EVENT_FAILED</td>
+<td align="left">Node installation failure</td>
+</tr>
+<tr>
+<td align="left">NODE_POST_INSTALL_EVENT_FAILED</td>
+<td align="left">Node post-installation failure</td>
+</tr>
+<tr>
+<td align="left">NODE_POWER_CYCLE_FAILED</td>
+<td align="left">Failed to power cycle node</td>
+</tr>
+<tr>
+<td align="left">NODE_POWER_OFF_FAILED</td>
+<td align="left">Failed to power off node</td>
+</tr>
+<tr>
+<td align="left">NODE_POWER_ON_FAILED</td>
+<td align="left">Failed to power on node</td>
+</tr>
+<tr>
+<td align="left">RACK_IMPORT_ERROR</td>
+<td align="left">Rack import error</td>
+</tr>
+<tr>
+<td align="left">REGION_IMPORT_ERROR</td>
+<td align="left">Region import error</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_MARK_BROKEN_SYSTEM</td>
+<td align="left">Marking node broken</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_MARK_FAILED_SYSTEM</td>
+<td align="left">Marking node failed</td>
+</tr>
+<tr>
+<td align="left">SCRIPT_RESULT_ERROR</td>
+<td align="left">Script result lookup or storage error</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#heading--DEBUG-events"><h3 id="heading--DEBUG-events">DEBUG events</h3></a></p>
+<table>
+<thead>
+<tr>
+<th align="left">Internal representation</th>
+<th align="left">External message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NODE_CHANGED_STATUS</td>
+<td align="left">Node changed status</td>
+</tr>
+<tr>
+<td align="left">NODE_COMMISSIONING_EVENT</td>
+<td align="left">Node commissioning</td>
+</tr>
+<tr>
+<td align="left">NODE_ENTERING_RESCUE_MODE_EVENT</td>
+<td align="left">Node entering rescue mode</td>
+</tr>
+<tr>
+<td align="left">NODE_EXITING_RESCUE_MODE_EVENT</td>
+<td align="left">Node exiting rescue mode</td>
+</tr>
+<tr>
+<td align="left">NODE_HTTP_REQUEST</td>
+<td align="left">HTTP Request</td>
+</tr>
+<tr>
+<td align="left">NODE_INSTALLATION_FINISHED</td>
+<td align="left">Installation complete</td>
+</tr>
+<tr>
+<td align="left">NODE_INSTALL_EVENT</td>
+<td align="left">Node installation</td>
+</tr>
+<tr>
+<td align="left">NODE_POWERED_OFF</td>
+<td align="left">Node powered off</td>
+</tr>
+<tr>
+<td align="left">NODE_POWERED_ON</td>
+<td align="left">Node powered on</td>
+</tr>
+<tr>
+<td align="left">NODE_PXE_REQUEST</td>
+<td align="left">PXE Request</td>
+</tr>
+<tr>
+<td align="left">NODE_STATUS_EVENT</td>
+<td align="left">Node status event</td>
+</tr>
+<tr>
+<td align="left">NODE_TFTP_REQUEST</td>
+<td align="left">TFTP Request</td>
+</tr>
+<tr>
+<td align="left">RACK_IMPORT_INFO</td>
+<td align="left">Rack import info</td>
+</tr>
+<tr>
+<td align="left">REGION_IMPORT_INFO</td>
+<td align="left">Region import info</td>
+</tr>
+<tr>
+<td align="left">REQUEST_CONTROLLER_REFRESH</td>
+<td align="left">Starting refresh of controller hardware and networking information</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_ABORT_COMMISSIONING</td>
+<td align="left">User aborting node commissioning</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_ABORT_DEPLOYMENT</td>
+<td align="left">User aborting deployment</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_ABORT_ERASE_DISK</td>
+<td align="left">User aborting disk erase</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_ABORT_TESTING</td>
+<td align="left">User aborting node testing</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_ACQUIRE</td>
+<td align="left">User acquiring node</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_ERASE_DISK</td>
+<td align="left">User erasing disk</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_LOCK</td>
+<td align="left">User locking node</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_MARK_BROKEN</td>
+<td align="left">User marking node broken</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_MARK_FAILED</td>
+<td align="left">User marking node failed</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_MARK_FIXED</td>
+<td align="left">User marking node fixed</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_MARK_FIXED_SYSTEM</td>
+<td align="left">Marking node fixed</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_OVERRIDE_FAILED_TESTING</td>
+<td align="left">User overrode &lsquo;Failed testing&rsquo; status</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_RELEASE</td>
+<td align="left">User releasing node</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_START</td>
+<td align="left">User powering up node</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_START_COMMISSIONING</td>
+<td align="left">User starting node commissioning</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_START_DEPLOYMENT</td>
+<td align="left">User starting deployment</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_START_RESCUE_MODE</td>
+<td align="left">User starting rescue mode</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_START_TESTING</td>
+<td align="left">User starting node testing</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_STOP</td>
+<td align="left">User powering down node</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_STOP_RESCUE_MODE</td>
+<td align="left">User stopping rescue mode</td>
+</tr>
+<tr>
+<td align="left">REQUEST_NODE_UNLOCK</td>
+<td align="left">User unlocking node</td>
+</tr>
+<tr>
+<td align="left">REQUEST_RACK_CONTROLLER_ADD_CHASSIS</td>
+<td align="left">Querying chassis and enlisting all machines</td>
+</tr>
+<tr>
+<td align="left">SCRIPT_RESULT_CHANGED_STATUS</td>
+<td align="left">Script result</td>
+</tr>
+</tbody>
+</table>
     </div>
   </body>
 </html>
