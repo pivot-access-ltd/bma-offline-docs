@@ -1214,7 +1214,7 @@ This script is just used to get the IP address, which can then be associated wit
        valid_lft forever preferred_lft forever
 ```
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" version="UI,CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" version="UI,CLI"]
 The commissioning script `40-maas-01-network-interfaces` is no longer used in MAAS versions 3.0 and higher.
 [/tab]
 [/tabs]
