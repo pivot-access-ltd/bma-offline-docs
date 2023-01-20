@@ -51,3 +51,4 @@ And it appears like this in the UI events log:
 |**Thu, 29 Sep. 2022 20:04:07**	|**Node changed status - From 'Commissioning' to 'Testing'** |
 
 You can see that all three outputs are sources of truth, but the messages are somewhat different, include different information, and contain different levels of detail.
+
