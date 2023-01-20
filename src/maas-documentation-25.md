@@ -105,7 +105,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Use network tags](/t/-/5228)
 - [Find machines](/t/-/5192)
 
-### How to diagnose issues
+### [How to diagnose issues](/t/-/6510)
 
 - [Work with log files](/t/-/5240)
 - [Work with audit event logs](/t/-/5987)
@@ -152,6 +152,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6510|/docs/how-to-diagnose issues|
 |https://discourse.maas.io/t/-/6501|/docs/how-to-enable-vault|
 |https://discourse.maas.io/t/-/6502|/docs/how-to-unseal-vault|
 |https://discourse.maas.io/t/-/6503|/docs/how-to-protect-your-secrets|
