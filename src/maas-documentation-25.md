@@ -111,23 +111,14 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Work with audit event logs](/t/-/5987)
 - [Troubleshoot MAAS](/t/-/5333)
 
-### How to work securely
+### [How to protect your secrets](/t/-/6503)
 
 - [Improve MAAS security](/t/-/5196)
 - [Enable MAAS native TLS](/t/-/5116)
 - [Set up an air-gapped MAAS](/t/-/5212)
 - [Manage user accounts](/t/-/5184)
-
-### [How to protect your secrets](/t/-/6503)
-
 - [Enable Vault](/t/-/6501)
 - [Unseal Vault](/t/-/6502)
-
-
-### How to operate reliably
-
-- [Keep MAAS backed up](/t/-/5096)
-- [Observe a live MAAS](/t/-/5204)
 
 ### API reference
 
@@ -137,6 +128,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [MAAS technical reference](/t/-/6203)
 
+- [Keep MAAS backed up](/t/-/5096)
+- [Observe a live MAAS](/t/-/5204)
 - [Commissioning scripts](/t/-/6605)
 - [Hardware test scripts](/t/-/5392)
 - [Event logs](/t/-/5252)
