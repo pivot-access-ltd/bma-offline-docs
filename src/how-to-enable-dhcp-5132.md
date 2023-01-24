@@ -4,6 +4,8 @@ Management of DHCP and IP ranges is a key element of configuring and managing MA
 - [How to manage MAAS DHCP](#heading--how-to-manage-maas-dhcp)
 - [How to manage IP ranges](#heading--how-to-manage-ip-ranges)
 
+If you need it, you can find a [refresher on DHCP](/t/how-to-set-up-networks/6174#heading--Its-always-DHCP) as part of this documentation set.
+
 <a href="#heading--how-to-manage-maas-dhcp"><h2 id="heading--how-to-manage-maas-dhcp">How to manage MAAS DHCP</h2></a>
 
 MAAS enlists and commissions machines through the use of its DHCP server running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller's page, accessible by selecting 'Controllers' from the top menu in the web UI.
