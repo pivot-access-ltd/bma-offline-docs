@@ -847,7 +847,7 @@ The rest of the cards on the Machine summary are either self-explanatory, or the
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a>
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognise these devices and make them visible to you when a machine is commissioned.
 
 For example, the machine details presents USB and PCI devices like this:
@@ -948,6 +948,10 @@ Annotations are descriptive, searchable phrases that apply only to machines.  Th
 <a href="#heading--about-storage"><h3 id="heading--about-storage">About storage</h3></a>
 
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
+
+[note]
+MAAS doesn’t currently support deploying with ZFS for devices other than the root one.  For this reason, ZFS is disrecommended.
+[/note]
 
 A machine's storage is dependant upon the underlying system's disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine's final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.
 
@@ -1119,6 +1123,10 @@ In this section, you'll learn:
 <a href="#heading--about-customising-machine-storage"><h3 id="heading--about-customising-machine-storage">About customising machine storage</h3></a>
 
 You have significant latitude when choosing the final storage configuration of a deployed machine. MAAS supports traditional disk partitioning, as well as more complex options such as LVM, RAID, and bcache. MAAS also supports UEFI as a boot mechanism.  This article explains boot mechanisms and layouts, and offers some advice on how to configure layouts and manage storage.
+
+[note]
+MAAS doesn’t currently support deploying with ZFS for devices other than the root one.  For this reason, ZFS is disrecommended.
+[/note]
 
 A machine's storage is dependant upon the underlying system's disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine's final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.
 
