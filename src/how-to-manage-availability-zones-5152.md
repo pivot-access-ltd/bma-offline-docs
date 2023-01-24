@@ -10,6 +10,8 @@ A newly installed MAAS comes with a default zone which initially contains all no
 - [How to assign a machine to an availability zone](#heading--assign-a-node-to-a-zone)
 - [How to allocate a machine in a particular zone](#heading--allocate-a-node-in-a-zone)
 
+You can find more theory about availability zones [elsewhere in this documentation set](/t/how-to-set-up-networks/6174#heading--about-availability-zones).
+
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
