@@ -12,6 +12,8 @@ Canonical provides two SimpleStreams for MAAS images: candidate and stable. Both
 - [How to change the stream with the CLI](#heading--changing-stream-with-cli)
 - [How to set up a local image mirror](#heading--set-up-local-mirror)
 
+There is also some [background info on images](/t/how-to-acquire-images/6192) available if you need it.
+
 <a href="#heading--candidate-stream"><h2 id="heading--candidate-stream">About the candidate stream</h2></a>
 
 The candidate stream contains images and bootloaders which have not been explicitly tested with MAAS. Canonical's automated build process dumps all images and bootloaders here before they are tested with MAAS. This stream is useful when testing a bug fix before an image or bootloader has been promoted to stable. Think of the candidate stream as a preview: it should never be used in a production environment; and users are encouraged to provide feedback on any issues they find with this stream.
