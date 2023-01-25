@@ -1,6 +1,23 @@
 <!-- "How to spin up MAAS with Ansible" -->
 
-A user should probably have a solid grasp of the standard terminology in relation to Ansible:
+[Ansible playbooks](https://github.com/maas/MAAS-ansible-playbook) are now available for MAAS. These extended YAML files automate various routine aspects of MAAS setup and configuration.  Automate the drudgery of installing and configuring MAAS with Ansible.  
+
+With MAAS 3.3, playbooks are available to install and configure MAAS, including regions and racks.  There is also a set of groups that will automate setting up specific sections of MAAS. For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.  
+
+Here you can learn:
+
+- [About Ansible](#heading--About-Ansible)
+- [How to a MAAS Ansible playbook](#heading--Running-a-MAAS-Ansible-playbook)
+- [How to install a region controller with Ansible](#heading--MAAS-region-controller)
+- [How to install a rack controller with Ansible](#heading--MAAS-rack-controller)
+- [How to set up the PostgreSQL primary role with Ansible](#heading--PostgreSQL-primary-role)
+- [How to set up the PostgreSQL secondary role with Ansible](#heading--PostgreSQL-secondary-role)
+
+After installing Ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.
+
+<a href="#heading--About-Ansible"><h2 id="heading--About-Ansible">About Ansible</h2></a>
+
+A user should probably have a solid grasp of the Ansible standard terminology:
 
 - Playbooks / plays
 - Hosts and groups
