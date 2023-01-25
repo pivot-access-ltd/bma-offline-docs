@@ -958,7 +958,7 @@ More bug-fixes are planned for later 3.3 releases.
 
 <a href="#heading--MAAS-3-3-RC3-bug-list"><h3 id="heading--MAAS-3-3-RC3-bug-list">MAAS 3.3 RC3 bug list</h3></a>
 
-- [1990172](https://bugs.launchpad.net/maas/+bug/1990172))`↗`: "20-maas-03-machine-resources" commissioning script improperly reports a Pass when the test fails 
+- [1990172](https://bugs.launchpad.net/maas/+bug/1990172)`↗`: "20-maas-03-machine-resources" commissioning script improperly reports a Pass when the test fails 
 
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 
