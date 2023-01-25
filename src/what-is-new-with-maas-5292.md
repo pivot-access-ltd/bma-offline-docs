@@ -5,7 +5,7 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-We are happy to announce that MAAS 3.3 RC1 has been released, with [one additional bug fix](#heading--MAAS-3-3-RC1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+We are happy to announce that MAAS 3.3 RC3 has been released, with [one additional bug fix](#heading--MAAS-3-3-RC3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
@@ -955,6 +955,10 @@ More bug-fixes are planned for later 3.3 releases.
 <a href="#heading--MAAS-3-3-RC1-bug-list"><h3 id="heading--MAAS-3-3-RC1-bug-list">MAAS 3.3 RC1 bug list</h3></a>
 
 - [1997975](https://bugs.launchpad.net/maas/+bug/1997975)`↗`: Update grafana_agent/agent.yaml.example
+
+<a href="#heading--MAAS-3-3-RC3-bug-list"><h3 id="heading--MAAS-3-3-RC3-bug-list">MAAS 3.3 RC3 bug list</h3></a>
+
+- [1990172](https://bugs.launchpad.net/maas/+bug/1990172))`↗`: "20-maas-03-machine-resources" commissioning script improperly reports a Pass when the test fails 
 
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 
