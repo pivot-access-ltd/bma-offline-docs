@@ -440,10 +440,10 @@
 <li><a href="#heading--about-allocation-and-deployment">About allocation and deployment</a></li>
 </ul>
 <p><a href="#heading--Introduction-to-the-machine-life-cycle"><h3 id="heading--Introduction-to-the-machine-life-cycle">Introduction to the machine life-cycle</h3></a></p>
-<p>Everything that happens to a machine under MAAS control conforms to a specific life-cycle.  All MAAS machines are in a named state, or in transition between states.  Most of these transitions are user-controlled.  Only the &ldquo;failure&rdquo; state is reached under the direction of MAAS, when a user&rsquo;s request for certain state changes can&rsquo;t be successfully completed.  </p>
+<p>Everything that happens to a machine under MAAS control conforms to a specific life-cycle.  All MAAS machines are in a named state, or in transition between states.  Most of these transitions are user-controlled.  Only the &ldquo;failure&rdquo; state is reached under the direction of MAAS, when a user&rsquo;s request for certain state changes can&rsquo;t be successfully completed.</p>
 <p>In general, the various states and transitions can be summarised in a diagram:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/1/117137e9340ef58bf73111fb8d8cbf1b7efdce9f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/117137e9340ef58bf73111fb8d8cbf1b7efdce9f.jpeg"></a></p>
-<p>The light green boxes &ndash; and the light blue box (&ldquo;RELEASING&rdquo;) &ndash; represent the normal progression of a machine from newly-enlisted to deployed (in use) and back.  This normal progression could be considered the standard MAAS life-cycle:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg"></a></p>
+<p>The central state flow at the bottom of the diagram is the &ldquo;standard&rdquo; life-cycle.  If all goes well, you won&rsquo;t have to deviate much from this flow:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Machines are enlisted by MAAS, and assigned a status of &ldquo;NEW&rdquo;,  when (1) they are enabled to network boot, and (2) they are on a subnet accessible to MAAS.  New machines can be used by MAAS, or deleted from MAAS (if they are not intended for MAAS use) or just ignored (e.g., don&rsquo;t commission them).  A common practice is to simply define a desired subnet in MAAS, allow connected devices to be enlisted, and then delete &ndash; from MAAS &ndash; the machines that MAAS shouldn&rsquo;t control.  These excluded machines might include switches, routers, printers, or unrelated servers that happen to be on the same network, among others.</p>
@@ -465,16 +465,16 @@
 </li>
 </ul>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a></p>
-<p>We&rsquo;ll come back to this process when we talk about deployment, a little later on.  Once deployed, there are a couple of state changes you can effect without releasing the machine:</p>
+<p>We&rsquo;ll come back to this process when we talk about deployment, a little later on.  Once deployed, there are a couple of minor state changes you can effect without releasing the machine:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>Once a machine is deployed, you can lock it, if desired, to provide a little extra insurance that it won&rsquo;t accidentally be changed by you &ndash; or anyone.</p>
 </li>
 <li>
-<p>Depending upon the machine&rsquo;s duty cycle, you can also power it on, power it off, or even power-cycle it (to effect a reboot, for example).  </p>
+<p>Depending upon the machine&rsquo;s duty cycle, you can also power it on, power it off, or even power-cycle it (to effect a reboot, for example).</p>
 </li>
 </ul>
-<p>There are also some exceptional states you can command:</p>
+<p>Note that these minor state changes are not shown in the diagram above.  There are also some exceptional states you can command:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p>For any machine that is ready, allocated, or deployed, you can cycle it through a battery of tests at any time.  Be aware, of course, that testing causes the machine to be unavailable for normal use for the duration of the text cycle.</p>
@@ -522,7 +522,7 @@
 <p>You also have the option to set tags, availability zone, or resource pool at various stages along the way.</p>
 </li>
 </ul>
-<p>Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it&rsquo;s not very useful to make a state diagram or flowchart.  Instead, consider the following tables.</p>
+<p>Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it may be easier for you to use the following state table:</p>
 <p>When a machine is in the state listed in a column, it is possible to take the row actions marked with an &ldquo;X.&rdquo;</p>
 <p>For a better understanding of these states and actions, see <a href="maas-glossary.html#heading--node-statuses">Node statuses</a> and <a href="maas-glossary.html#heading--machine-actions">Machine actions</a>.</p>
 <p><a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a></p>

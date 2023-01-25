@@ -24,13 +24,13 @@ One of the most important things to understand about machines is their life-cycl
 
 <a href="#heading--Introduction-to-the-machine-life-cycle"><h3 id="heading--Introduction-to-the-machine-life-cycle">Introduction to the machine life-cycle</h3></a>
 
-Everything that happens to a machine under MAAS control conforms to a specific life-cycle.  All MAAS machines are in a named state, or in transition between states.  Most of these transitions are user-controlled.  Only the "failure" state is reached under the direction of MAAS, when a user's request for certain state changes can't be successfully completed.  
+Everything that happens to a machine under MAAS control conforms to a specific life-cycle.  All MAAS machines are in a named state, or in transition between states.  Most of these transitions are user-controlled.  Only the "failure" state is reached under the direction of MAAS, when a user's request for certain state changes can't be successfully completed.
 
 In general, the various states and transitions can be summarised in a diagram:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/117137e9340ef58bf73111fb8d8cbf1b7efdce9f.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/117137e9340ef58bf73111fb8d8cbf1b7efdce9f.jpeg"></a>
+<a href="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg"></a>
 
-The light green boxes -- and the light blue box ("RELEASING") -- represent the normal progression of a machine from newly-enlisted to deployed (in use) and back.  This normal progression could be considered the standard MAAS life-cycle:
+The central state flow at the bottom of the diagram is the "standard" life-cycle.  If all goes well, you won't have to deviate much from this flow:
 
 - Machines are enlisted by MAAS, and assigned a status of "NEW",  when (1) they are enabled to network boot, and (2) they are on a subnet accessible to MAAS.  New machines can be used by MAAS, or deleted from MAAS (if they are not intended for MAAS use) or just ignored (e.g., don't commission them).  A common practice is to simply define a desired subnet in MAAS, allow connected devices to be enlisted, and then delete -- from MAAS -- the machines that MAAS shouldn't control.  These excluded machines might include switches, routers, printers, or unrelated servers that happen to be on the same network, among others.
 
@@ -46,13 +46,13 @@ The light green boxes -- and the light blue box ("RELEASING") -- represent the n
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a>
 
-We'll come back to this process when we talk about deployment, a little later on.  Once deployed, there are a couple of state changes you can effect without releasing the machine:
+We'll come back to this process when we talk about deployment, a little later on.  Once deployed, there are a couple of minor state changes you can effect without releasing the machine:
 
 - Once a machine is deployed, you can lock it, if desired, to provide a little extra insurance that it won't accidentally be changed by you -- or anyone.
 
-- Depending upon the machine's duty cycle, you can also power it on, power it off, or even power-cycle it (to effect a reboot, for example).  
+- Depending upon the machine's duty cycle, you can also power it on, power it off, or even power-cycle it (to effect a reboot, for example).
 
-There are also some exceptional states you can command:
+Note that these minor state changes are not shown in the diagram above.  There are also some exceptional states you can command:
 
 - For any machine that is ready, allocated, or deployed, you can cycle it through a battery of tests at any time.  Be aware, of course, that testing causes the machine to be unavailable for normal use for the duration of the text cycle.
 
@@ -88,7 +88,7 @@ Machines can have any of the following states:
 
 - You also have the option to set tags, availability zone, or resource pool at various stages along the way.
 
-Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it's not very useful to make a state diagram or flowchart.  Instead, consider the following tables.
+Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it may be easier for you to use the following state table:
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
