@@ -8,7 +8,7 @@ This article will help you learn:
 - [How to manage proxies](#heading--how-to-manage-proxies)
 - [How to set up Network Time Protocol (NTP)](#heading--how-to-set-up-ntp)
 
-If you find you need some background information on MAAS networks, or even networking in general, you can consult the of [How MAAS networks](/t/how-to-set-up-networks/6174#heading--How-MAAS-networks) before diving in here.
+If you find you need some background information on MAAS networks, or even networking in general, you can find out [How MAAS networks](/t/how-to-set-up-networks/6174#heading--How-MAAS-networks) before diving in here.
 
 <a href="#heading--how-to-manage-MAAS-network-elements"><h2 id="heading--how-to-manage-MAAS-network-elements">How to manage MAAS network elements</h2></a>
 
