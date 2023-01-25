@@ -415,14 +415,14 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-  <h1>What is new with MAAS 3.3</h1><!-- "What is new with MAAS 3.3" -->
+  <h1>What is new with MAAS</h1><!-- "What is new with MAAS" -->
 
 <p>Here you will find release notes for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
 <li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
 </ul>
-<p>We are happy to announce that MAAS 3.3 RC2 has been released, with <a href="#heading--MAAS-3-3-RC1-bug-list">one additional bug fixes</a>.  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
+<p>We are happy to announce that MAAS 3.3 RC3 has been released, with <a href="#heading--MAAS-3-3-RC3-bug-list">one additional bug fix</a>.  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
 <p><a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a></p>
 <p>New features created for MAAS 3.3 include:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -617,7 +617,7 @@ Description:    Ubuntu xx.yy
 Release:    xx.yy
 Codename:   $RELEASE_NAME
 </code></pre>
-<p>The minimum “xx.yy” required for MAAS 3.3 is “22.04,” code-named “jammy”.</p>
+<p>The minimum “xx.yy” required for MAAS 3.2 is “22.04,” code-named “jammy”.</p>
 <p>If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:</p>
 <p>Upgrade the release:</p>
 <pre><code class="language-nohighlight">sudo do-release-upgrade --allow-third-party
@@ -1522,7 +1522,7 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 <li><a href="https://bugs.launchpad.net/bugs/1890262">1890262</a><code>↗</code>: UI: Error message with a custom image URL doesn&rsquo;t clear</li>
 <li><a href="https://bugs.launchpad.net/bugs/1893226">1893226</a><code>↗</code>: Machine-specific minimal commissioning kernel resets to MAAS wide default</li>
 <li><a href="https://bugs.launchpad.net/bugs/1893670">1893670</a><code>↗</code>: UI: display bios_boot_mode in the web UI</li>
-<li><a href="https://bugs.launchpad.net/bugs/1898131">1898131</a><code>↗</code>: IP address gets hidden, instead of subnet when window is resized</li>
+<li>1898131: IP address gets hidden, instead of subnet when window is resized</li>
 <li><a href="https://bugs.launchpad.net/bugs/1905636">1905636</a><code>↗</code>: UI: CentOS 7 is the default over CentOS 8</li>
 <li><a href="https://bugs.launchpad.net/bugs/1909348">1909348</a><code>↗</code>: MAAS 2.9.0 DNS zone remove @ labels impossible</li>
 <li><a href="https://bugs.launchpad.net/bugs/1913800">1913800</a><code>↗</code>: PCI and USB information missing from controllers page</li>
@@ -1630,7 +1630,7 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 <li><a href="https://bugs.launchpad.net/bugs/1988229">1988229</a><code>↗</code>: dhcp snippet create fails when dhcp subnet is relayed regression</li>
 <li><a href="https://bugs.launchpad.net/bugs/1990383">1990383</a><code>↗</code>: Link subnet on new machine</li>
 <li><a href="https://bugs.launchpad.net/bugs/1992330">1992330</a><code>↗</code>: Use the rack controller IP as DNS when relaying DHCP</li>
-<li><a href="https://bugs.launchpad.net/bugs/1993032">1993032</a><code>↗</code>: maas_hardware_sync creds are readable to local users on deployed OS and can give a super user access to MAAS itself</li>
+<li>1993032: maas_hardware_sync creds are readable to local users on deployed OS and can give a super user access to MAAS itself</li>
 <li><a href="https://bugs.launchpad.net/bugs/1993152">1993152</a><code>↗</code>: Updating a VM host through API unset tags</li>
 <li><a href="https://bugs.launchpad.net/bugs/1994899">1994899</a><code>↗</code>: MAAS cannot mark &ldquo;broken&rdquo; VMs as fixed without recommissioning</li>
 <li><a href="https://bugs.launchpad.net/bugs/1995397">1995397</a><code>↗</code>: Sentry blocked by CORS</li>
@@ -1647,6 +1647,10 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 <p><a href="#heading--MAAS-3-3-RC1-bug-list"><h3 id="heading--MAAS-3-3-RC1-bug-list">MAAS 3.3 RC1 bug list</h3></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://bugs.launchpad.net/maas/+bug/1997975">1997975</a><code>↗</code>: Update grafana_agent/agent.yaml.example</li>
+</ul>
+<p><a href="#heading--MAAS-3-3-RC3-bug-list"><h3 id="heading--MAAS-3-3-RC3-bug-list">MAAS 3.3 RC3 bug list</h3></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990172">1990172</a><code>↗</code>: &ldquo;20-maas-03-machine-resources&rdquo; commissioning script improperly reports a Pass when the test fails </li>
 </ul>
 <p><a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a></p>
 <p>Here are release notes for other relatively recent MAAS versions:</p>
