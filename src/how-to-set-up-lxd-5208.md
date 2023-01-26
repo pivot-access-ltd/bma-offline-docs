@@ -2,7 +2,7 @@
 LXD and MAAS are separate products, and it's useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we've taken advantage of LXD projects.
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 - [How to make LXD available for hosting](#heading--lxd-setup)
 - [About LXD projects and MAAS](#heading--projects-explanation)
 - [An LXD project tutorial](#heading--projects-tutorial)
@@ -15,7 +15,7 @@ LXD and MAAS are separate products, and it's useful to allow them to interact as
 
 <a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">How to make LXD available for VM hosting</h2></a>
 
-Assuming that you want to use LXD VM hosts, you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.
+Assuming that you want to use LXD [VM hosts](/t/how-to-deploy-virtual-machines/6500#heading--about-vm-hosts), you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.
 
 <a href="#heading--reinstalling-lxd"><h3 id="heading--reinstalling-lxd">How to remove older versions of LXD</h3></a>
 
@@ -271,7 +271,7 @@ Once that's done, the LXD host is now ready to be added to MAAS as an LXD VM hos
 When composing a virtual machine with LXD, MAAS uses either the 'maas' LXD profile, or (if that doesn't exist) the 'default' LXD profile. The profile is used to determine which bridge to use. Users may also add additional LXD options to the profile which are not yet supported in MAAS.
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 <a href="#heading--projects-explanation"><h2 id="heading--projects-explanation">About LXD projects and MAAS</h2></a>
 
 It may be beneficial to understand how LXD projects fit into the overall MAAS ecosystem.  LXD projects are not intended to be MAAS projects; they are only intended to limit which LXD containers and VMs are available to MAAS. This section will tell you:
