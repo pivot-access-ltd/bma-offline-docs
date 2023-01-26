@@ -471,8 +471,6 @@ Once a machine has been commissioned, the next logical step is to deploy it. Dep
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a>
 
-We'll come back to this process when we talk about deployment, a little later on. 
-
 Before deploying a machine, MAAS must allocate it (status 'Allocated'). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
 
 The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a "cloud" resource, then [Juju](https://jaas.ai/)`↗` is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.
