@@ -32,23 +32,21 @@ In general, the various states and transitions can be summarised in a diagram:
 
 The central state flow at the bottom of the diagram is the "standard" life-cycle.  If all goes well, you won't have to deviate much from this flow:
 
-- Machines are enlisted by MAAS, and assigned a status of "NEW",  when (1) they are enabled to network boot, and (2) they are on a subnet accessible to MAAS.  New machines can be used by MAAS, or deleted from MAAS (if they are not intended for MAAS use) or just ignored (e.g., don't commission them).  A common practice is to simply define a desired subnet in MAAS, allow connected devices to be enlisted, and then delete -- from MAAS -- the machines that MAAS shouldn't control.  These excluded machines might include switches, routers, printers, or unrelated servers that happen to be on the same network, among others.
+- Machines start as servers in your environment, attached to a network or subnet that MAAS can reach and manage.  If those machines are configured to netboot, MAAS can discover them and enlist them, assigning a status of "NEW". By definition, NEW machines are: (2) enabled to network boot, and (2) on a subnet accessible to MAAS. 
 
-- Once you've pared the list to machines that you want MAAS to control, you can choose to commission them.  Commissioning PXE boots the machine and loads an ephemeral version of the Ubuntu operating system into the machine's RAM.  MAAS then uses that OS to scan the machine to determine its hardware configuration: CPUs, RAM, storage layouts, PCI and USB devices, and so forth.  
+- Once you've pared the list to machines that you want MAAS to control, you can choose to commission them.  You can select any machine that is marked "NEW" and tell MAAS to commission it, or, if you add machine manually, MAAS will automatically commission it.  Commissioning PXE boots the machine and loads an ephemeral version of the Ubuntu operating system into the machine's RAM.  MAAS then uses that OS to scan the machine to determine its hardware configuration: CPUs, RAM, storage layouts, PCI and USB devices, and so forth.  Commissioning can be customised -- more on that in a later section.  If a machine fails to properly commission, either because of a commissioning error, or because the commissioning process timed out, that machine enters a "FAILED" state.
+  
+- MAAS next tests the machine to make sure it's working properly. These basic tests just assure that the discovered hardware works as expected.  Testing can also be customised, if you wish.  Machines that don't pass these tests are moved to a "FAILED" state.
 
-- MAAS next tests the machine to make sure it's working properly.  Machines that don't pass these basic tests are moved to a failed state.  
-
-- Having tested it, MAAS then places that machine in the "READY" state, meaning that MAAS will be able to deploy it, based on this hardware information.
+- Having tested it, MAAS then places that machine in the "READY" state, meaning that MAAS should be able to deploy it, based on the gathered hardware information.
 
 - Before you deploy a machine, you should allocate it.  This step essentially involves taking ownership of the machine, so that no other users can deploy it.
 
-- Having allocated a machine, you can deploy it.  When deploying, MAAS again loads an ephemeral Ubuntu OS onto the machine, uses `curtin` to configure the hardware in the way you've specified, and then loads and boots the OS image you've requested.  Deployment also runs some `cloud-init` steps to finish machine configuration, before leaving it up and ready for use.  A detailed picture of deployment looks something like this:
+- Having allocated a machine, you can deploy it.  When deploying, MAAS again loads an ephemeral Ubuntu OS onto the machine, uses `curtin` to configure the hardware in the way you've specified, and then loads and boots the OS image you've requested.  Deployment also runs some `cloud-init` steps to finish machine configuration, before leaving it up and ready for use.  
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a>
+Once deployed, there are a couple of minor state changes you can effect without releasing the machine:
 
-We'll come back to this process when we talk about deployment, a little later on.  Once deployed, there are a couple of minor state changes you can effect without releasing the machine:
-
-- Once a machine is deployed, you can lock it, if desired, to provide a little extra insurance that it won't accidentally be changed by you -- or anyone.
+- You can lock a machine, if desired, to provide a little extra insurance that it won't accidentally be changed by you -- or anyone.
 
 - Depending upon the machine's duty cycle, you can also power it on, power it off, or even power-cycle it (to effect a reboot, for example).
 
@@ -63,213 +61,6 @@ Note that these minor state changes are not shown in the diagram above.  There a
 There is one more state that a machine can get into: "failed".  This state is entered when commissioning, allocation, or deployment are not successful.  Getting out of a failed state means figuring out what went wrong, correcting it, and retrying the failed operation.  For example, when a machine fails, you can try and commission it again, hopefully after you've found the bug in your custom commissioning script that's causing it to fail (for instance).
 
 Now that we have a solid overview of the life-cycle, let's break down some of these states and transitions in greater detail.
-
-<a href="#heading--about-machine-states"><h3 id="heading--about-machine-states">About machine states</h3></a>
-
-Machines can have any of the following states:
-
-- **NEW**: Machines start as servers in your environment, attached to a network or subnet that MAAS can reach and manager.  If those machines are configured to netboot, MAAS can discover them and present them for possible commissioning.  Those discovered machines are shown in the **NEW** state.
-
-- **COMMISSIONING**: You can select any machine that is marked **NEW** and command MAAS to commission it.  If you add machine manually, it is automatically commissioned.  Commissioning can be customised, if y ou wish.  If a machine fails to properly commission, either because of a commissioning error, or because the commissioning process timed out, that machine enters a **FAILED** state.
-
-- **TESTING**: The final step of commissioning is (by default) testing the machine.  These basic tests assure that the discovered hardware works as expected.  Testing can be customised, if you wish.  If a machine fails one of its tests, it is marked as **FAILED**.
-
-- Machines that have successfully commissioned can be **allocated** and **deployed**.  Machines that don't successfully commission can be **marked broken** (and later recovered when the issues are resolved).
-
-- Resolving problems with machines usually involve **testing** the machine.
-
-- Once you've deployed a machine, and you're done with it, you can **release** it.
-
-- You can place a machine in **rescue mode**, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you're done, you can **exit rescue mode***.
-
-- Any time a machine is on, you have the option to select it and **power off** that machine.
-
-- You can **abort** any operation that's in progress.
-
-- You also have the option to set tags, availability zone, or resource pool at various stages along the way.
-
-Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it may be easier for you to use the following state table:
-
-[tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
-| Action/State | New | Ready | Allocated | Deployed | Locked | Rescue | Broken | Enlist deployed |
-|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|:---------------:|	
-| Commission   | X   | X     |          |          |        |        |   X    |  X (w/scripts)  |
-| Allocate      |     | X     |          |          |        |        |        |                 |
-| Deploy       |     | X     |   X      |          |        |        |        |                 |
-| Release      |     |       |   X      |    X     |        |        |        |  X (no return)  |
-| Power on     |     |       |          |    X     |        |        |   X    |                 |
-| Power off    |     |       |          |          |        |        |        |                 |
-| Test         | X   | X     |   X      |    X     |        |        |   X    |                 |
-| Rescue mode  | X   | X     |   X      |    X     |        |        |   X    |                 |
-| Exit rescue  |     |       |          |          |        |   X    |        |                 |
-| Mark broken  |     |       |   X      |    X     |        |        |        |  X (no return)  |
-| Mark fixed   |     |       |          |          |        |        |   X    |                 |
-| Lock         |     |       |          |    X     |        |        |        |  X              |
-| Unlock       |     |       |          |          |   X    |        |        |  X              |
-| Tag          | X   | X     |   X      |    X     |        |   X    |   X    |  X              |
-| Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |  X              |
-| Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |  X              |
-| Delete       | X   | X     |   X      |    X     |        |   X    |   X    |  X*             |
-
-*Machine is removed from the view of MAAS, but remains deployed with original workload.
-[/tab]
-[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
-| Action/State | New | Ready | Allocated | Deployed | Locked | Rescue | Broken |
-|:-------------|:---:|:-----:|:--------:|:--------:|:------:|:------:|:------:|	
-| Commission   | X   | X     |          |          |        |        |   X    |
-| Allocated     |     | X     |          |          |        |        |        |
-| Deploy       |     | X     |   X      |          |        |        |        |
-| Release      |     |       |   X      |    X     |        |        |        |
-| Power on     |     |       |          |    X     |        |        |   X    |
-| Power off    |     |       |          |          |        |        |        |
-| Test         | X   | X     |   X      |    X     |        |        |   X    |
-| Rescue mode  | X   | X     |   X      |    X     |        |        |   X    |
-| Exit rescue  |     |       |          |          |        |   X    |        |
-| Mark broken  |     |       |   X      |    X     |        |        |        |
-| Mark fixed   |     |       |          |          |        |        |   X    |
-| Lock         |     |       |          |    X     |        |        |        |
-| Unlock       |     |       |          |          |   X    |        |        |
-| Tag          | X   | X     |   X      |    X     |        |   X    |   X    |
-| Set zone     | X   | X     |   X      |    X     |        |   X    |   X    |
-| Set...pool   | X   | X     |   X      |    X     |        |   X    |   X    |
-| Delete       | X   | X     |   X      |    X     |        |   X    |   X    |
-[/tab]
-[/tabs]
-
-When a machine is in the state listed in a column, it is possible to take the row actions marked with an "X."
-
-[tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
-You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
-
-In the case of already-deployed machines enlisted by MAAS, some of the possible actions may appear to be available, but either don't work or ultimately appear to fail, without affecting the actual status of the deployed machine.
-[/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="CLI"]
-You can change machine state, via the CLI, with the `machine` command, which offers the following options:
-
-```nohighlight
-$ maas admin machine -h
-usage: maas admin machine [-h] COMMAND ...
-
-Manage an individual machine.
-
-optional arguments:
- -h, --help            show this help message and exit
-
-drill down:
- COMMAND
-   details             Get system details
-   power-parameters    Get power parameters
-   set-workload-annotations
-			Set key=value data
-   set-owner-data      Deprecated, use set-workload-annotations.
-   query-power-state   Get the power state of a node
-   power-on            Turn on a node
-   power-off           Power off a node
-   test                Begin testing process for a node
-   override-failed-testing
-			Ignore failed tests
-   abort               Abort a node operation
-   deploy              Deploy a machine
-   release             Release a machine
-   commission          Commission a machine
-   set-storage-layout  Change storage layout
-   mount-special       Mount a special-purpose filesystem
-   unmount-special     Unmount a special-purpose filesystem
-   clear-default-gateways
-			Clear set default gateways
-   get-curtin-config   Get curtin configuration
-   restore-networking-configuration
-			Restore networking options
-   restore-storage-configuration
-			Restore storage configuration
-   restore-default-configuration
-			Restore default configuration
-   mark-broken         Mark a machine as Broken
-   mark-fixed          Mark a machine as Fixed
-   rescue-mode         Enter rescue mode
-   exit-rescue-mode    Exit rescue mode
-   lock                Lock a machine
-   unlock              Unlock a machine
-   read                Read a node
-   update              Update a machine
-   delete              Delete a machine
-
-A machine is identified by its system_id.
-```
-
-In the case of already-deployed machines enlisted by MAAS, some of the possible actions may fail with unusual results, such as this exchange when attempting to turn off an already-deployed machine enlisted by MAAS:
-
-```nohighlight
-$ maas admin machine power-off t8b7cw
-Success.
-Machine-readable output follows:
-null
-```
-
-Note that the immediate return is `Success`, but the machine-readable output is `null`.  After executing this command on an already-deployed machine, you should find that the deployed machine was not affected by the `power-off` command, since the `power-type` was set to `manual`.  This is an expected behaviour.
-[/tab]
-[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-You access these actions from the "Take action" menu in the upper right corner of the machine listing.  Note that some actions, such as "Mark broken" or "Lock," may be hidden when they are not available.
-[/tab]
-[tab version="v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-You can change machine state, via the CLI, with the `machine` command, which offers the following options:
-
-```nohighlight
-$ maas admin machine -h
-usage: maas admin machine [-h] COMMAND ...
-
-Manage an individual machine.
-
-optional arguments:
- -h, --help            show this help message and exit
-
-drill down:
- COMMAND
-   details             Get system details
-   power-parameters    Get power parameters
-   set-workload-annotations
-			Set key=value data
-   set-owner-data      Deprecated, use set-workload-annotations.
-   query-power-state   Get the power state of a node
-   power-on            Turn on a node
-   power-off           Power off a node
-   test                Begin testing process for a node
-   override-failed-testing
-			Ignore failed tests
-   abort               Abort a node operation
-   deploy              Deploy a machine
-   release             Release a machine
-   commission          Commission a machine
-   set-storage-layout  Change storage layout
-   mount-special       Mount a special-purpose filesystem
-   unmount-special     Unmount a special-purpose filesystem
-   clear-default-gateways
-			Clear set default gateways
-   get-curtin-config   Get curtin configuration
-   restore-networking-configuration
-			Restore networking options
-   restore-storage-configuration
-			Restore storage configuration
-   restore-default-configuration
-			Restore default configuration
-   mark-broken         Mark a machine as Broken
-   mark-fixed          Mark a machine as Fixed
-   rescue-mode         Enter rescue mode
-   exit-rescue-mode    Exit rescue mode
-   lock                Lock a machine
-   unlock              Unlock a machine
-   read                Read a node
-   update              Update a machine
-   delete              Delete a machine
-
-A machine is identified by its system_id.
-```
-[/tab]
-[/tabs]
-
-For a better understanding of these states and actions, see [Node statuses](/t/maas-glossary/5416#heading--node-statuses) and [Machine actions](/t/maas-glossary/5416#heading--machine-actions).
 
 <a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a>
 
@@ -675,6 +466,12 @@ Once commissioned, you can configure the machine's network interface(s). Specifi
 <a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a>
 
 Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to [install an operating system on it](/t/how-to-acquire-images/6192#heading--how-images-deploy), along with any other application loads you wish to run on that machine.
+
+ A detailed picture of deployment looks something like this:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a>
+
+We'll come back to this process when we talk about deployment, a little later on. 
 
 Before deploying a machine, MAAS must allocate it (status 'Allocated'). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.
 

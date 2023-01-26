@@ -446,29 +446,28 @@
 <p>The central state flow at the bottom of the diagram is the &ldquo;standard&rdquo; life-cycle.  If all goes well, you won&rsquo;t have to deviate much from this flow:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
-<p>Machines are enlisted by MAAS, and assigned a status of &ldquo;NEW&rdquo;,  when (1) they are enabled to network boot, and (2) they are on a subnet accessible to MAAS.  New machines can be used by MAAS, or deleted from MAAS (if they are not intended for MAAS use) or just ignored (e.g., don&rsquo;t commission them).  A common practice is to simply define a desired subnet in MAAS, allow connected devices to be enlisted, and then delete &ndash; from MAAS &ndash; the machines that MAAS shouldn&rsquo;t control.  These excluded machines might include switches, routers, printers, or unrelated servers that happen to be on the same network, among others.</p>
+<p>Machines start as servers in your environment, attached to a network or subnet that MAAS can reach and manage.  If those machines are configured to netboot, MAAS can discover them and enlist them, assigning a status of &ldquo;NEW&rdquo;. By definition, NEW machines are: (2) enabled to network boot, and (2) on a subnet accessible to MAAS. </p>
 </li>
 <li>
-<p>Once you&rsquo;ve pared the list to machines that you want MAAS to control, you can choose to commission them.  Commissioning PXE boots the machine and loads an ephemeral version of the Ubuntu operating system into the machine&rsquo;s RAM.  MAAS then uses that OS to scan the machine to determine its hardware configuration: CPUs, RAM, storage layouts, PCI and USB devices, and so forth.  </p>
+<p>Once you&rsquo;ve pared the list to machines that you want MAAS to control, you can choose to commission them.  You can select any machine that is marked &ldquo;NEW&rdquo; and tell MAAS to commission it, or, if you add machine manually, MAAS will automatically commission it.  Commissioning PXE boots the machine and loads an ephemeral version of the Ubuntu operating system into the machine&rsquo;s RAM.  MAAS then uses that OS to scan the machine to determine its hardware configuration: CPUs, RAM, storage layouts, PCI and USB devices, and so forth.  Commissioning can be customised &ndash; more on that in a later section.  If a machine fails to properly commission, either because of a commissioning error, or because the commissioning process timed out, that machine enters a &ldquo;FAILED&rdquo; state.</p>
 </li>
 <li>
-<p>MAAS next tests the machine to make sure it&rsquo;s working properly.  Machines that don&rsquo;t pass these basic tests are moved to a failed state.  </p>
+<p>MAAS next tests the machine to make sure it&rsquo;s working properly. These basic tests just assure that the discovered hardware works as expected.  Testing can also be customised, if you wish.  Machines that don&rsquo;t pass these tests are moved to a &ldquo;FAILED&rdquo; state.</p>
 </li>
 <li>
-<p>Having tested it, MAAS then places that machine in the &ldquo;READY&rdquo; state, meaning that MAAS will be able to deploy it, based on this hardware information.</p>
+<p>Having tested it, MAAS then places that machine in the &ldquo;READY&rdquo; state, meaning that MAAS should be able to deploy it, based on the gathered hardware information.</p>
 </li>
 <li>
 <p>Before you deploy a machine, you should allocate it.  This step essentially involves taking ownership of the machine, so that no other users can deploy it.</p>
 </li>
 <li>
-<p>Having allocated a machine, you can deploy it.  When deploying, MAAS again loads an ephemeral Ubuntu OS onto the machine, uses <code>curtin</code> to configure the hardware in the way you&rsquo;ve specified, and then loads and boots the OS image you&rsquo;ve requested.  Deployment also runs some <code>cloud-init</code> steps to finish machine configuration, before leaving it up and ready for use.  A detailed picture of deployment looks something like this:</p>
+<p>Having allocated a machine, you can deploy it.  When deploying, MAAS again loads an ephemeral Ubuntu OS onto the machine, uses <code>curtin</code> to configure the hardware in the way you&rsquo;ve specified, and then loads and boots the OS image you&rsquo;ve requested.  Deployment also runs some <code>cloud-init</code> steps to finish machine configuration, before leaving it up and ready for use.  </p>
 </li>
 </ul>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a></p>
-<p>We&rsquo;ll come back to this process when we talk about deployment, a little later on.  Once deployed, there are a couple of minor state changes you can effect without releasing the machine:</p>
+<p>Once deployed, there are a couple of minor state changes you can effect without releasing the machine:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
-<p>Once a machine is deployed, you can lock it, if desired, to provide a little extra insurance that it won&rsquo;t accidentally be changed by you &ndash; or anyone.</p>
+<p>You can lock a machine, if desired, to provide a little extra insurance that it won&rsquo;t accidentally be changed by you &ndash; or anyone.</p>
 </li>
 <li>
 <p>Depending upon the machine&rsquo;s duty cycle, you can also power it on, power it off, or even power-cycle it (to effect a reboot, for example).</p>
@@ -488,43 +487,6 @@
 </ul>
 <p>There is one more state that a machine can get into: &ldquo;failed&rdquo;.  This state is entered when commissioning, allocation, or deployment are not successful.  Getting out of a failed state means figuring out what went wrong, correcting it, and retrying the failed operation.  For example, when a machine fails, you can try and commission it again, hopefully after you&rsquo;ve found the bug in your custom commissioning script that&rsquo;s causing it to fail (for instance).</p>
 <p>Now that we have a solid overview of the life-cycle, let&rsquo;s break down some of these states and transitions in greater detail.</p>
-<p><a href="#heading--about-machine-states"><h3 id="heading--about-machine-states">About machine states</h3></a></p>
-<p>Machines can have any of the following states:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><strong>NEW</strong>: Machines start as servers in your environment, attached to a network or subnet that MAAS can reach and manager.  If those machines are configured to netboot, MAAS can discover them and present them for possible commissioning.  Those discovered machines are shown in the <strong>NEW</strong> state.</p>
-</li>
-<li>
-<p><strong>COMMISSIONING</strong>: You can select any machine that is marked <strong>NEW</strong> and command MAAS to commission it.  If you add machine manually, it is automatically commissioned.  Commissioning can be customised, if y ou wish.  If a machine fails to properly commission, either because of a commissioning error, or because the commissioning process timed out, that machine enters a <strong>FAILED</strong> state.</p>
-</li>
-<li>
-<p><strong>TESTING</strong>: The final step of commissioning is (by default) testing the machine.  These basic tests assure that the discovered hardware works as expected.  Testing can be customised, if you wish.  If a machine fails one of its tests, it is marked as <strong>FAILED</strong>.</p>
-</li>
-<li>
-<p>Machines that have successfully commissioned can be <strong>allocated</strong> and <strong>deployed</strong>.  Machines that don&rsquo;t successfully commission can be <strong>marked broken</strong> (and later recovered when the issues are resolved).</p>
-</li>
-<li>
-<p>Resolving problems with machines usually involve <strong>testing</strong> the machine.</p>
-</li>
-<li>
-<p>Once you&rsquo;ve deployed a machine, and you&rsquo;re done with it, you can <strong>release</strong> it.</p>
-</li>
-<li>
-<p>You can place a machine in <strong>rescue mode</strong>, which allows you to SSH to a machine to make configuration changes or do other maintenance. Once you&rsquo;re done, you can <strong>exit rescue mode</strong>*.</p>
-</li>
-<li>
-<p>Any time a machine is on, you have the option to select it and <strong>power off</strong> that machine.</p>
-</li>
-<li>
-<p>You can <strong>abort</strong> any operation that&rsquo;s in progress.</p>
-</li>
-<li>
-<p>You also have the option to set tags, availability zone, or resource pool at various stages along the way.</p>
-</li>
-</ul>
-<p>Since these actions are not necessarily sequential, and the available actions change as the machine state changes, it may be easier for you to use the following state table:</p>
-<p>When a machine is in the state listed in a column, it is possible to take the row actions marked with an &ldquo;X.&rdquo;</p>
-<p>For a better understanding of these states and actions, see <a href="maas-glossary.html#heading--node-statuses">Node statuses</a> and <a href="maas-glossary.html#heading--machine-actions">Machine actions</a>.</p>
 <p><a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a></p>
 <p>MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine &ndash; as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.</p>
 <p>Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes &ndash; that is, devices and machines &ndash; that reside on those subnets. MAAS finds a machine that&rsquo;s configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.</p>
@@ -771,6 +733,9 @@ The majority of testing scripts only work with machines that are backed by physi
 <p>Once commissioned, you can configure the machine&rsquo;s network interface(s). Specifically, when a machine&rsquo;s status is either &ldquo;Ready&rdquo; or &ldquo;Broken&rdquo;, interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces.</p>
 <p><a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a></p>
 <p>Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to <a href="how-to-acquire-images.html#heading--how-images-deploy">install an operating system on it</a>, along with any other application loads you wish to run on that machine.</p>
+<p>A detailed picture of deployment looks something like this:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a></p>
+<p>We&rsquo;ll come back to this process when we talk about deployment, a little later on. </p>
 <p>Before deploying a machine, MAAS must allocate it (status &lsquo;Allocated&rsquo;). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.</p>
 <p>The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a &ldquo;cloud&rdquo; resource, then <a href="https://jaas.ai/">Juju</a><code>↗</code> is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.</p>
 <p>Machines deployed with MAAS will also be ready to accept connections via SSH, to the &lsquo;ubuntu&rsquo; user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH keys</a>.</p>
