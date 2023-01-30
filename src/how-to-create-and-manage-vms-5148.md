@@ -6,6 +6,8 @@ If you have already created a VM host, you will want to create and delete virtua
 - [How to add a VM](#heading--add-vm-from-ui)
 - [How to delete a VM](#heading--delete-a-machine)
 
+There is also some [background material on VM hosting](/t/how-to-deploy-virtual-machines/6500#heading--MAAS-VM-hosting) available, if you need it.
+
 <a href="#heading--add-vm-from-ui"><h2 id="heading--add-vm-from-ui">How to add a VM</h2></a>
 
 While on VM host's details view, select 'Compose' from the 'Take action' drop-down menu to compose a machine.
@@ -36,6 +38,8 @@ To delete a VM, delete it as you would any other MAAS machine. Select the desire
 - [How to specify interfaces while adding a VM](#heading--interfaces)
 - [How to find a VM host ID](#heading--find-vm-host-ids)
 - [How to delete a VM](#heading--delete-a-vm)
+
+There is also some [background material on VM hosting](/t/how-to-deploy-virtual-machines/6500#heading--MAAS-VM-hosting) available, if you need it.
 
 <a href="#heading--adding-a-vm-from-the-cli"><h2 id="heading--adding-a-vm-from-the-cli">How to add a VM</h2></a>
 
