@@ -1,5 +1,5 @@
 <!-- "How to tag machines" -->
-Tags for different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed articles for each tag type.  That said, many of the common operations regarding tags are performed in the same way.  This article will present some general, explanatory information, and then look at tag management steps that are the same (or very similar) across all types of MAAS tags.
+[Tags](/t/how-to-label-and-find-machines/6200#heading--about-tags) for different objects have similar purposes, but they aren't necessarily administered in the same way -- so we've included detailed articles for each tag type.  That said, many of the common operations regarding tags are performed in the same way.  This article will present some general, explanatory information, and then look at tag management steps that are the same (or very similar) across all types of MAAS tags.
 
 <a href="#heading--name-tags"><h2 id="heading--name-tags">How to name tags</h2></a>
 
