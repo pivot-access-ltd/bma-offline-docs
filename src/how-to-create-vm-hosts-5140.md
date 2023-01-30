@@ -60,6 +60,8 @@ To enable VM host networking features, MAAS must match the VM host IP address of
 It's essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
 [/note]
 
+If you need some background on VM hosting, we have a [refresher](/t/how-to-deploy-virtual-machines/6500#heading--MAAS-VM-hosting) available.
+
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--maas-bridge-web-ui"><h2 id="heading--maas-bridge-web-ui">How to set up a VM host bridge with the web UI</h2></a>
@@ -347,11 +349,11 @@ If you want to add a LXD (or [libvirt](https://ubuntu.com/server/docs/virtualiza
 
 Suppose that you're creating a new LXD KVM, beginning from the top tab in MAAS:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank">![](upload://5Rn9eea7n648iKo1sjohP7r5ARY.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/b/b7048c83a7d6e4dbca69a060a7b4bf8bc07e1953_2_690x165.png"></a>
 
 Select "Add KVM", which brings you to the definition screen:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank">![](upload://2uPyI3yDteiWizFUhOM95C5B1Hg.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/8/806d3577b11ed415574fd06de5f643f26ffb7928_2_690x257.png"></a>
 
 From here, you'll continue by choosing your authentication method.
 
@@ -359,7 +361,7 @@ From here, you'll continue by choosing your authentication method.
 
 If you choose "Generate new certificate", as shown above, you'll come to a screen like this one:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank">![](upload://vc5IuTP53xKYzCDYkkPhLxcZFUE.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/0/08a32d9221a73f0d6f84580ab9ebeeaaf84aeb65_2_690x325.png"></a>
 
 You can still choose to use the LXD trust password (entered when you ran `lxd init` during LXD installation).  You can also, though, choose to use the certificate MAAS has just generated for you.  To do that, select the entire contents of the text box, copy it, and paste it into a terminal window -- then hit "Enter":
 
@@ -399,7 +401,7 @@ $
 
 The certificate will be created for you.  When you click the "Check authentication" button, you will be brought to this screen:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank">![](upload://5J5yTzf8p1wHMmyaB8Af6rRBTPC.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/a/ad3f6fd06fdef3ce5be467816b2fc3667550f397_2_690x204.png"></a>
 
 from which you can continue with normal LXD KVM setup.
 
@@ -407,7 +409,7 @@ from which you can continue with normal LXD KVM setup.
 
 Suppose that, after identifying your LXD KVM, you choose "Provide certificate and private key".  When you do so, the screen will extend to allow you to upload these items:
 
-<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank">![](upload://rQ83izglHaGONtR03yUSYuDY9Sc.png)</a>
+<a href="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/f/fa0bf04654e495ff1233defba4fc8768c06dd25f_2_690x443.png"></a>
 
 Paste or upload your certificate and private key, then click "Next" to validate your authentication criteria, before continuing through the normal LXD KVM creation process.  If your certificate and/or key aren't usable for some reason, MAAS will return an error (in this case, the private key was entered as gibberish, to produce an error output):
 
