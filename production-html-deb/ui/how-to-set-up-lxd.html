@@ -420,6 +420,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>How to set up LXD</h1><!-- "How to set up LXD" -->
 <p>LXD and MAAS are separate products, and it&rsquo;s useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we&rsquo;ve taken advantage of LXD projects.</p>
+<p>There is a <a href="how-to-deploy-virtual-machines.html#heading--MAAS-VM-hosting">refresher on VM hosting</a> available, if you need it.</p>
 <p><a href="#heading--lxd-setup"><h2 id="heading--lxd-setup">How to make LXD available for VM hosting</h2></a></p>
 <p>Assuming that you want to use LXD <a href="how-to-deploy-virtual-machines.html#heading--about-vm-hosts">VM hosts</a>, you need to install the correct version of LXD. Prior to the release of Ubuntu 20.04 LXD was installed using Debian packages. The Debian packaged version of LXD is too old to use with MAAS. If this is the case, you’ll need to remove the LXD Debian packages and install the Snap version.  Note that you cannot install both Debian and snap versions, as this creates a conflict.</p>
 <p><a href="#heading--reinstalling-lxd"><h3 id="heading--reinstalling-lxd">How to remove older versions of LXD</h3></a></p>
