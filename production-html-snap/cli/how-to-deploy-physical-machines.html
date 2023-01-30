@@ -738,19 +738,23 @@ The majority of testing scripts only work with machines that are backed by physi
 <p><strong>NOTE:</strong> 
 Juju adds SSH keys to machines under its control.</p>
 <p>MAAS also supports machine customisation with a process called &ldquo;preseeding.&rdquo; For more information about customising machines, see <a href="how-to-customise-machines.html">How to customise machines</a>.</p>
-<p>To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process:</p>
+<p>To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process, outlined in the above diagram:</p>
 <ol>
-<li>DHCP server is contacted</li>
-<li>kernel and initrd are received over TFTP</li>
-<li>machine boots</li>
-<li>initrd mounts a Squashfs image ephemerally over HTTP</li>
-<li>cloud-init triggers deployment process</li>
-<li>curtin installation script runs</li>
-<li>Squashfs image (same as above) is placed on disk</li>
+<li>MAAS boots the machine via the machine&rsquo;s BMC, using whatever power driver is necessary to properly communicate with the machine.</li>
+<li>The booted machine sends a DHCP Discover request.</li>
+<li>The MAAS-managed DHCP server (ideally) responds with an IP address and the location of a MAAS-managed HTTP or TFTP boot server.</li>
+<li>The machine uses the HTTP/TFTP location to request a usable Network Boot Program (NBP).</li>
+<li>The machine recieves the NBP and boots.</li>
+<li>The machine firmware requests a bootable image.</li>
+<li>MAAS sends an ephemeral OS image, including an initrd; this ephemeral (RAM-only) image is necessary for <code>curtin</code> to carry out any hardware-prep instructions (such as disk paritioning) before the deployed OS is booted.</li>
+<li>The initrd mounts a SquashFS image, also ephemerally, over HTTP.</li>
+<li>The machine boots the emphemeral image.</li>
+<li>The ephemeral image runs <code>curtin</code>, with passed pre-seed information, to configure the machine&rsquo;s hardware.</li>
+<li>The desired deployment (target) image is retrieved by <code>curtin</code>, which installs and boots that deployment image.  Note that the curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see <a href="how-to-customise-machines.html">How to customise machines</a>.</li>
+<li>The target image runs its embedded <code>cloud-init</code> script set, including any customisations and pre-seeds.</li>
 </ol>
-<p><strong>NOTE:</strong> 
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see <a href="how-to-customise-machines.html">How to customise machines</a>.</p>
-<p>Before deploying, you should take two key actions:</p>
+<p>Once this is done, the target image is up and running on the machine, and the machine can be considered successfully deployed.</p>
+<p>Also note that, before deploying, you should take two key actions:</p>
 <ol>
 <li>
 <p>Review and possibly set the <a href="how-to-customise-machines.html#heading--about-ubuntu-kernels">Ubuntu kernels</a> and the <a href="how-to-customise-machines.html#heading--about-kernel-boot-options">Kernel boot options</a> that will get used by deployed machines.</p>

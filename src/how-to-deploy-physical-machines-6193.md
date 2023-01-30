@@ -130,7 +130,7 @@ Creating a machine profile is a repetitive task. Based on the responses to our s
 
 MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.
 
-### About copying machine configurations
+<a href="#heading--About-copying-machine-configurations"><h4 id="heading--About-copying-machine-configurations">About copying machine configurations</h4></a>
 
 As a MAAS user -- API or UI -- you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:
 
@@ -143,7 +143,7 @@ As a MAAS user -- API or UI -- you may want to copy the configuration of a given
 - see the cloned machines when cloning is successful, or
 - get clear failure information, if cloning fails. 
 
-### About choosing configuration items to copy
+<a href="#heading--About-choosing-configuration-items-to-copy"><h4 id="heading--About-choosing-configuration-items-to-copy">About choosing configuration items to copy</h4></a>
 
 As a MAAS user, you will likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature should allow the user to:
 
@@ -151,7 +151,7 @@ As a MAAS user, you will likely want to select whether storage, network, or both
 - clone only the storage configuration.
 - clone both configurations.
 
-### About cloning restrictions
+<a href="#heading--About-cloning-restrictions"><h4 id="heading--About-cloning-restrictions">About cloning restrictions</h4></a>
 
 In order for cloning to succeed, a few restrictions must be met:
 
@@ -163,7 +163,6 @@ In order for cloning to succeed, a few restrictions must be met:
 Cloning machines is available starting with MAAS version 3.1.
 [/tab]
 [/tabs]
-
 
 <a href="#heading--enlisting-deployed-machines"><h4 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h4></a>
 
@@ -483,21 +482,24 @@ Juju adds SSH keys to machines under its control.
 
 MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [How to customise machines](/t/how-to-customise-machines/5108).
 
-To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process:
+To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process, outlined in the above diagram:
 
-1.  DHCP server is contacted
-2.  kernel and initrd are received over TFTP
-3.  machine boots
-4.  initrd mounts a Squashfs image ephemerally over HTTP
-5.  cloud-init triggers deployment process
-6.  curtin installation script runs
-7.  Squashfs image (same as above) is placed on disk
+1. MAAS boots the machine via the machine's BMC, using whatever power driver is necessary to properly communicate with the machine.
+2. The booted machine sends a DHCP Discover request.
+3. The MAAS-managed DHCP server (ideally) responds with an IP address and the location of a MAAS-managed HTTP or TFTP boot server.
+4. The machine uses the HTTP/TFTP location to request a usable Network Boot Program (NBP).
+5. The machine recieves the NBP and boots.
+6. The machine firmware requests a bootable image.
+7. MAAS sends an ephemeral OS image, including an initrd; this ephemeral (RAM-only) image is necessary for ```curtin``` to carry out any hardware-prep instructions (such as disk paritioning) before the deployed OS is booted.
+8. The initrd mounts a SquashFS image, also ephemerally, over HTTP.
+9. The machine boots the emphemeral image.
+10. The ephemeral image runs ```curtin```, with passed pre-seed information, to configure the machine's hardware.
+11. The desired deployment (target) image is retrieved by ```curtin```, which installs and boots that deployment image.  Note that the curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [How to customise machines](/t/how-to-customise-machines/5108).
+12. The target image runs its embedded ```cloud-init``` script set, including any customisations and pre-seeds.
 
-[note]
-The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [How to customise machines](/t/how-to-customise-machines/5108).
-[/note]
+Once this is done, the target image is up and running on the machine, and the machine can be considered successfully deployed.
 
-Before deploying, you should take two key actions:
+Also note that, before deploying, you should take two key actions:
 
 1. Review and possibly set the [Ubuntu kernels](/t/how-to-customise-machines/5108#heading--about-ubuntu-kernels) and the [Kernel boot options](/t/how-to-customise-machines/5108#heading--about-kernel-boot-options) that will get used by deployed machines.
 
