@@ -8,7 +8,7 @@ If you need it, you can find a [refresher on DHCP](/t/how-to-set-up-networks/617
 
 <a href="#heading--how-to-manage-maas-dhcp"><h2 id="heading--how-to-manage-maas-dhcp">How to manage MAAS DHCP</h2></a>
 
-MAAS enlists and commissions machines through the use of its DHCP server running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller's page, accessible by selecting 'Controllers' from the top menu in the web UI.
+MAAS enlists and commissions machines through the use of its [load-balancing DHCP server](/t/how-to-enable-high-availability/5120#heading--dhcp-ha) running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller's page, accessible by selecting 'Controllers' from the top menu in the web UI.
 
 In addition, the machine subnet is usually on the untagged VLAN. If not, you will need to route DHCP packets between the subnet and the MAAS-provided DHCP subnet. It is also possible to forward DHCP traffic from one VLAN to another using an external DHCP relay service.
 
