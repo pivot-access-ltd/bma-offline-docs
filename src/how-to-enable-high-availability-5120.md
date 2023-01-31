@@ -23,6 +23,30 @@ You can also enable HA for BMC control (node power cycling) just by adding a sec
 
 You can enable highly-availalbe DHCP services by using MAAS-managed DHCP, and adding rack controllers.  This DHCP HA affects the way MAAS manages nodes, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers, so there's a bit of performance boost for large networks.
 
+MAAS DHCP automatically creates failover peers, using mostly standard parameters:
+
+```nohighlight
+failover peer "failover-partner" {
+     primary;
+     address dhcp-primary.example.com;
+     peer address dhcp-secondary.example.com;
+     max-response-delay 60;
+     max-unacked-updates 10;
+     mclt 3600;
+     split 255;
+     load balance max seconds 3;
+}
+failover peer "failover-partner" {
+     secondary;
+     address dhcp-secondary.example.com;
+     peer address dhcp-primary.example.com;
+     max-response-delay 60;
+     max-unacked-updates 10;
+     load balance max seconds 3;
+}
+```
+Note that the only difference from a standard 50/50 split (`split 128`) is that the primary DHCP server answers any requests that it can (`split 255`), within the maximum response delay of 60 seconds and an unacknowledged update count of 10.  In this sense, highly-available MAAS DHCP fails over only when absolutely necessary.
+
 If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/how-to-enable-dhcp/5132#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP to get optimum results.
 
 [tabs]

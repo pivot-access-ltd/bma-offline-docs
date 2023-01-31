@@ -416,44 +416,44 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to enable high availability</h1><!-- "How to enable high availability" -->
-<p>This article describes how to provide high availability (HA) for MAAS at both region and rack levels.  In the context of MAAS, there are several types of HA:</p>
+<p>High availability is built into MAAS: region and rack controllers balance the load and execute failover as part of normal operations. This article will help you understand how to take advantage of these built-in features.</p>
+<p><a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">How to put MAAS in HA mode</h2></a></p>
+<p>You only need to <a href="how-to-adjust-your-controllers.html#heading--install-a-rack-controller">install multiple rack controllers</a> to achieve real high availability.  Once that&rsquo;s done, you automatically gain highly-available BMC control and highly-available DHCP.  MAAS is constantly trying to answer three questions:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li>BMC (node power cycling)</li>
-<li>DHCP</li>
-<li>PostgreSQL</li>
-<li>API services</li>
+<li>How many racks is each region managing?</li>
+<li>How many connections does a given rack controller have?</li>
+<li>How many regions &ndash; and region &ldquo;worker processes&rdquo; are running right now?</li>
 </ul>
-<h4>This article will help you learn:</h4>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--rack-controller-ha">How to make rack controllers highly available</a></li>
-<li><a href="#heading--bmc-ha">How to enable highly-available BMC</a></li>
-<li><a href="#heading--dhcp-ha">How to enable highly-available DHCP services</a></li>
-<li><a href="#heading--region-controller-ha">How to make region controllers highly available</a></li>
-<li><a href="#heading--postgresql-ha">How to enable highly-available PostgreSQL</a></li>
-<li><a href="#heading--secondary-api-servers">How to enable highly-available API services</a></li>
-<li><a href="#heading--load-balancing-with-haproxy-optional">How to enable load balancing for API services</a></li>
-<li><a href="#heading--move-rack-controller">How to move a rack controller from one MAAS instance to another</a></li>
-<li><a href="#heading--dangers-moving-rack-controller">How to avoid the potential pitfalls of moving a rack controller</a></li>
-</ul>
-<p><a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">How to make rack controllers highly available</h2></a></p>
-<p>You need to <a href="how-to-adjust-your-controllers.html#heading--install-a-rack-controller">install multiple rack controllers</a> to achieve real high availability.  Once that&rsquo;s done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.</p>
+<p>With just one rack, most of the logic can&rsquo;t function.  On the other hand, when you have multiple racks (and especially multiple regions), MAAS will continuously balance the load.</p>
+<p>Every time a rack controller connects to a region controller to do something, MAAS checks whether racks and regions are balanced.  If the ratio for one rack-region connection is above a moderate threshold, compared to other connections, MAAS will re-balance.  This activity includes balancing not only discrete region controllers, but also re-distributing connections so that no single worker process has an uneven share of the load.</p>
+<p>Rebalancing is also done at various other opportune times.  For example, if a network change happens (like toggling DHCP or changing a VLAN), MAAS will also re-balance the load.  And MAAS can maintain primary and secondary rack designations, so that faster, more nuanced load-balancing can occur.</p>
 <p><a href="#heading--bmc-ha"><h3 id="heading--bmc-ha">How to enable highly-available BMC</h3></a></p>
-<p>HA for BMC control (node power cycling) is provided out-of-the-box, once a second rack controller is present. MAAS will automatically identify which rack controller is responsible for a BMC and set up communication accordingly.</p>
+<p>You can also enable HA for BMC control (node power cycling) just by adding a second rack controller. MAAS will automatically identify which rack controller is responsible for a BMC, continuously balancing the connections.</p>
 <p><a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">How to enable highly-available DHCP services</h3></a></p>
-<p>DHCP HA affects the way MAAS manages node, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers. MAAS-managed DHCP is a requirement for DHCP HA.</p>
-<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-enable-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP.</p>
-<p>To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:</p>
-<pre><code>vid=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.vid')
-fabric_name=$(maas maas subnets read | jq -r '.[] | select(.cidr == &quot;10.0.0.0/24&quot;) | .vlan.fabric')
-query=&quot;.[] | select(.name == \&quot;$fabric_name\&quot;) | .id&quot;
-fabric_id=$(maas maas fabrics read | jq &quot;$query&quot;)
-maas maas ipranges create type=reserved start_ip=10.0.0.3 end_ip=10.0.0.49
-maas maas ipranges create type=dynamic start_ip=10.0.0.50 end_ip=10.0.0.99
-maas maas vlan update ${fabric_id} ${vid} primary_rack=$(hostname) dhcp_on=true
+<p>You can enable highly-availalbe DHCP services by using MAAS-managed DHCP, and adding rack controllers.  This DHCP HA affects the way MAAS manages nodes, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers, so there&rsquo;s a bit of performance boost for large networks.</p>
+<p>MAAS DHCP automatically creates failover peers, using mostly standard parameters:</p>
+<pre><code class="language-nohighlight">failover peer &quot;failover-partner&quot; {
+     primary;
+     address dhcp-primary.example.com;
+     peer address dhcp-secondary.example.com;
+     max-response-delay 60;
+     max-unacked-updates 10;
+     mclt 3600;
+     split 255;
+     load balance max seconds 3;
+}
+failover peer &quot;failover-partner&quot; {
+     secondary;
+     address dhcp-secondary.example.com;
+     peer address dhcp-primary.example.com;
+     max-response-delay 60;
+     max-unacked-updates 10;
+     load balance max seconds 3;
+}
 </code></pre>
-<p>Be sure to substitute the sample values for those of your own environment.</p>
+<p>Note that the only difference from a standard 50/50 split (<code>split 128</code>) is that the primary DHCP server answers any requests that it can (<code>split 255</code>), within the maximum response delay of 60 seconds and an unacknowledged update count of 10.  In this sense, highly-available MAAS DHCP fails over only when absolutely necessary.</p>
+<p>If you are enabling DHCP for the first time after adding a second rack controller, please read <a href="how-to-enable-dhcp.html#heading--enabling-dhcp">Enabling DHCP</a>.  On the other hand, if you have already enabled DHCP on your initial rack controller, you&rsquo;ll need to reconfigure DHCP to get optimum results.</p>
 <p><a href="#heading--multiple-region-endpoints"><h3 id="heading--multiple-region-endpoints">How to configure multiple region endpoints</h3></a></p>
-<p>MAAS will automatically discover and track all reachable region controllers in a single cluster of rack controllers  It will also attempt to automatically connect to them if the one in use becomes inaccessible.  Administrators can alternatively specify multiple region-controller endpoints for a single rack controller by adding entries to <code>/var/snap/maas/current/rackd.conf</code>.  For example:</p>
 <pre><code>.
 .
 .
@@ -477,19 +477,6 @@ maas_url:
 <p>MAAS stores all state information in the PostgreSQL database. It is therefore recommended to run it in HA mode. Configuring HA for PostgreSQL is external to MAAS. You will, therefore, need to study the <a href="https://www.postgresql.org/docs/9.5/static/high-availability.html">PostgreSQL documentation</a><code>↗</code> and implement the variant of HA that makes you feel most comfortable.</p>
 <p>Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the <code>max_connections</code> in <code>postgresql.conf</code>. More than two region controllers require that <code>max_connections</code> be adjusted to add 40 more connections per added region controller.</p>
 <p><a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">How to enable highly-available API services</h3></a></p>
-<p>Setting up high-availability using snaps is relatively easy:</p>
-<ol>
-<li>Set up PostgreSQL for high-availability as <a href="#heading--postgresql-ha">explained above</a>. PostgreSQL should run outside of the snap.</li>
-<li><a href="how-to-install-maas.html#heading--install-from-snap">Install</a> the MAAS snap on each machine you intend to use as a rack or region controller. You&rsquo;ll need the MAAS shared secret, located here, <code>/var/snap/maas/common/maas/secret</code>, on the first region controller you set up.</li>
-<li><a href="how-to-install-maas.html#heading--initialisation">Initialise the snap</a> as a <code>rack</code> or <code>region</code> controller.</li>
-</ol>
-<p>Note that if you intend to use a machine as a region controller, you&rsquo;ll need to tell MAAS how to access your PostgreSQL database host with the following arguments:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><code>--database-host DATABASE_HOST</code></li>
-<li><code>--database-name DATABASE_NAME</code></li>
-<li><code>--database-user DATABASE_USER</code></li>
-<li><code>--database-pass DATABASE_PASS</code></li>
-</ul>
 <p><a href="#heading--load-balancing-with-haproxy-optional"><h3 id="heading--load-balancing-with-haproxy-optional">How to enable load balancing for API services</h3></a></p>
 <p>You can add load balancing with <a href="http://www.haproxy.org/">HAProxy</a><code>↗</code> load-balancing software to support multiple API servers. In this setup, HAProxy provides access to the MAAS web UI and API.</p>
 <p><strong>NOTE:</strong> 
@@ -521,18 +508,7 @@ backend maas
 <p>The configuration of region controller HA is now complete.</p>
 <p><strong>The API server(s) must be now be referenced (e.g. web UI, MAAS CLI) using port 80 (as opposed to port 5240).</strong></p>
 <p><a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">Move a rack controller from one MAAS instance to another</h2></a></p>
-<p>In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:</p>
-<pre><code>maas $PROFILE rack-controller delete $SYSTEM_ID
-</code></pre>
-<p>where <code>$PROFILE</code> is your admin profile name, and <code>$SYSTEM_ID</code> can be found by examining the output of the command:</p>
-<pre><code>maas $PROFILE rack-controllers read
-</code></pre>
-<p>There is no confirmation step, so make sure you have the right rack controller before proceeding.</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
-<p>For this exercise, we&rsquo;re assuming you are using the already installed rack controller code that was previously running on the &ldquo;from&rdquo; MAAS instance.  All that&rsquo;s necessary is that you register a new rack controller with the &ldquo;to&rdquo; MAAS instance, like this:</p>
-<pre><code>sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-</code></pre>
-<p>where the secret is found in <code>/var/snap/maas/common/maas/secret</code>.</p>
 <p><a href="#heading--move-rack-controller"><h3 id="heading--dangers-moving-rack-controller">How to avoid the potential pitfalls of moving a rack controller</h3></a></p>
 <p>There are dangers associate with moving a rack controller &ndash; dangers that may generate errors, get you into a non-working state, or cause you significant data loss.  These dangers are precipitated by one caveat and two potential mistakes:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
