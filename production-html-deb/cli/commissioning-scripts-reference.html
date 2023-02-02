@@ -418,7 +418,7 @@
   <h1>Commissioning scripts reference</h1><!-- "Commissioning scripts reference" -->
 <p>This document provides technical details about commissioning scripts.  For the corresponding details about test scripts, see <a href="hardware-test-scripts-reference.html">Hardware test scripts reference</a>.</p>
 <p><a href="#heading--metadata-field-reference"><h2 id="heading--metadata-field-reference">Metadata field reference</h2></a></p>
-<p>Metadata fields tell MAAS when to use the script, how it should run, and what information it&rsquo;s gathering. A script can employ some combination of the following seventeen fields:</p>
+<p>Metadata fields tell MAAS when to use the script, how it should run, and what information it&rsquo;s gathering. A script can employ some combination of the following fields:</p>
 <table>
 <thead>
 <tr>
@@ -574,15 +574,15 @@
 </tbody>
 </table>
 <p><a href="#heading--parameter-reference"><h2 id="heading--parameter-reference">Parameter reference</h2></a></p>
-<p>Scripts can accept exactly three types of parameters, and only three types:</p>
+<p>Scripts can accept the following types of parameters:</p>
 <ol>
-<li>storage.</li>
-<li>interface.</li>
-<li>URL.</li>
+<li>storage</li>
+<li>interface</li>
+<li>URL</li>
 </ol>
 <p>The values of these parameters are strictly checked against existing disks (storage), working interfaces (interface), and valid URLs (URL)  No other types of information can be passed as parameters; they are not configured to pass user-specified data.</p>
 <p>Parameters are automatically switched by MAAS to match the device being tested, to allow one test to be run against multiple devices at the same time while keeping separate logs.  For this reason, you may only specify parameters within the embedded YAML of the script, and they must take the form of a dictionary of dictionaries.</p>
-<p>The key of the dictionary must be a string, and it&rsquo;s this string that&rsquo;s used by the UI and API when users are setting parameter values during commissioning or testing.  The value is a dictionary with the following five fields:</p>
+<p>The key of the dictionary must be a string, and it&rsquo;s this string that&rsquo;s used by the UI and API when users are setting parameter values during commissioning or testing.  The value is a dictionary with the following fields:</p>
 <table>
 <thead>
 <tr>
@@ -701,7 +701,7 @@ echo &quot;Model: $1&quot;
 echo &quot;Serial: $2&quot;
 </code></pre>
 <p><a href="#heading--environment-variable-reference"><h2 id="heading--environment-variable-reference">Environment variable reference</h2></a></p>
-<p>The following seven environment variables are available when a script runs within the MAAS environment:</p>
+<p>The following environment variables are available when a script runs within the MAAS environment:</p>
 <ol>
 <li><code>OUTPUT_STDOUT_PATH</code>: The path to the log of STDOUT from the script.</li>
 <li><code>OUTPUT_STDERR_PATH</code>: The path to the log of STDERR from the script.</li>

@@ -3,7 +3,7 @@ This document provides technical details about commissioning scripts.  For the c
 
 <a href="#heading--metadata-field-reference"><h2 id="heading--metadata-field-reference">Metadata field reference</h2></a>
 
-Metadata fields tell MAAS when to use the script, how it should run, and what information it's gathering. A script can employ some combination of the following seventeen fields:
+Metadata fields tell MAAS when to use the script, how it should run, and what information it's gathering. A script can employ some combination of the following fields:
 
 | Field | Description |
 |:------|:------------|
@@ -46,17 +46,17 @@ Metadata fields tell MAAS when to use the script, how it should run, and what in
 
 <a href="#heading--parameter-reference"><h2 id="heading--parameter-reference">Parameter reference</h2></a>
 
-Scripts can accept exactly three types of parameters, and only three types:
+Scripts can accept the following types of parameters:
 
-1. storage.
-2. interface.
-3. URL.
+1. storage
+2. interface
+3. URL
 
 The values of these parameters are strictly checked against existing disks (storage), working interfaces (interface), and valid URLs (URL)  No other types of information can be passed as parameters; they are not configured to pass user-specified data.
 
 Parameters are automatically switched by MAAS to match the device being tested, to allow one test to be run against multiple devices at the same time while keeping separate logs.  For this reason, you may only specify parameters within the embedded YAML of the script, and they must take the form of a dictionary of dictionaries.
 
-The key of the dictionary must be a string, and it's this string that's used by the UI and API when users are setting parameter values during commissioning or testing.  The value is a dictionary with the following five fields:
+The key of the dictionary must be a string, and it's this string that's used by the UI and API when users are setting parameter values during commissioning or testing.  The value is a dictionary with the following fields:
 
 | Field | Description |
 |:------|:------------|
@@ -122,7 +122,7 @@ echo "Serial: $2"
 
 <a href="#heading--environment-variable-reference"><h2 id="heading--environment-variable-reference">Environment variable reference</h2></a>
 
-The following seven environment variables are available when a script runs within the MAAS environment:
+The following environment variables are available when a script runs within the MAAS environment:
 
 1.   `OUTPUT_STDOUT_PATH`: The path to the log of STDOUT from the script.
 2.   `OUTPUT_STDERR_PATH`: The path to the log of STDERR from the script.
