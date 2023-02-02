@@ -12,16 +12,9 @@ The events log tracks state changes and the execution of basic configuration ste
   Sun, 04 Oct. 2020 23:09:53 	Commissioning
 ```
 
-[tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To view the Events log (for a particular machine), select a machine from the machine list and choose the "Events" tab at the top of the screen:
+To view the Events log in the UI -- for a particular machine -- select a machine from the machine list and choose the "Events" tab at the top of the screen. You can also see a more detailed view by selecting "View full history" in near the upper right of the log output.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/45ad4b968f85ef38e875e6df03d9f832fc7d4743.png"></a>
-
-You can also see a more detailed view by selecting "View full history" in near the upper right of the log output.
-[/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-To view the raw Events log, enter the following command:
+To view the raw Events log in the CLI, enter the following command:
 
 ```
 maas $PROFILE events query
@@ -32,8 +25,7 @@ You can tabulate the results, sorted by machine, with the following command:
 ```
 maas admin events query | jq -r '(["HOSTNAME","TIMESTAMP","TYPE","DESCRIPTION"] | (., map(length*"-"))),
 (.events[] | [.hostname, .created, .type, .description // "-"]) | @tsv' | column -t -s $'\t'
-[/tab]
-[/tabs]
+```
 
 <a href="#heading--Table-of-event-logs"><h2 id="heading--Table-of-event-logs">Table of event logs</h2></a>
 

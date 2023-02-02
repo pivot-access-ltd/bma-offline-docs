@@ -429,6 +429,14 @@
   Sun, 04 Oct. 2020 23:09:54    Powering on
   Sun, 04 Oct. 2020 23:09:53    Commissioning
 </code></pre>
+<p>To view the Events log in the UI &ndash; for a particular machine &ndash; select a machine from the machine list and choose the &ldquo;Events&rdquo; tab at the top of the screen. You can also see a more detailed view by selecting &ldquo;View full history&rdquo; in near the upper right of the log output.</p>
+<p>To view the raw Events log in the CLI, enter the following command:</p>
+<pre><code>maas $PROFILE events query
+</code></pre>
+<p>You can tabulate the results, sorted by machine, with the following command:</p>
+<pre><code>maas admin events query | jq -r '([&quot;HOSTNAME&quot;,&quot;TIMESTAMP&quot;,&quot;TYPE&quot;,&quot;DESCRIPTION&quot;] | (., map(length*&quot;-&quot;))),
+(.events[] | [.hostname, .created, .type, .description // &quot;-&quot;]) | @tsv' | column -t -s $'\t'
+</code></pre>
 <p><a href="#heading--Table-of-event-logs"><h2 id="heading--Table-of-event-logs">Table of event logs</h2></a></p>
 <p>Non-AUDIT MAAS events can be divided into four categories:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
