@@ -54,8 +54,6 @@ Under *Configuration* > *General* > *Kernel parameters*, you can set global boot
 
 *Settings* > *Users* MAAS gives you the ability to manage your users in a tabular format:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png"></a>
-
 - *Add user button*: This button can be used to add a new user.
 
 - *Sortable columns*: some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
@@ -91,8 +89,6 @@ If you are using VMWare images, *Settings* > *Images* > *VMware* offers several 
 <a href="#heading--License-keys"><h2 id="heading--License-keys">License keys</h2></a>
 
 *Settings* > *License keys* gives you the ability to manage your product licenses in a tabular format:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png"></a>
 
 - *Add license key button*: This button can be used to add a new license key.
 
@@ -152,8 +148,6 @@ Under the section *Settings* > *Scripts*, MAAS provides a great deal of flexibil
 
 *Settings* > *Scripts* > *Commissioning scripts* gives you the ability to manage machine commissioning scripts in a tabular format:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png"></a>
-
 - *Upload script button*: This button can be used to upload a new commissioning script.
 
 - *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
@@ -167,8 +161,6 @@ Note that if the table becomes longer than one screen will accommodate, paging b
 <a href="#heading--Testing-scripts"><h3 id="heading--Testing-scripts">Testing scripts</h3></a>
 
 Similar to *Commissioning scripts*, the choices *Settings* > *Scripts* > *Testing scripts* give you the ability to manage your machines testing scripts in a tabular format:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png"></a>
 
 - *Upload script button*: This button can be used to upload a new test script.
 
@@ -184,8 +176,6 @@ Note that if the table becomes longer than one screen will accommodate, paging b
 
 *Settings* > *DHCP snippets* lets you manage your DHCP snippets in a table:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png"></a>
-
 - *Add snippet button*: This button can be used to add a new DHCP snippet.
 
 - *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
@@ -199,8 +189,6 @@ Note that if the table becomes longer than one screen will accommodate, paging b
 <a href="#heading--Package-repos"><h2 id="heading--Package-repos">Package repos</h2></a>
 
 You can manage your MAAS repositories with the *Settings* > *Package repos* option.  Referenced repos are listed in a table:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png"></a>
 
 - *Add PPA button*: This button can be used to add a new PPA to the search path.
 
@@ -267,8 +255,6 @@ Under *Configuration* > *General* > *Kernel parameters*, you can set global boot
 
 *Settings* > *Users* MAAS gives you the ability to manage your users in a tabular format:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d8fd3cfd3c24e8ee4a58b743078155cea05e27e2.png"></a>
-
 - *Add user button*: This button can be used to add a new user.
 
 - *Sortable columns*: some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
@@ -304,8 +290,6 @@ If you are using VMWare images, *Settings* > *Images* > *VMware* offers several 
 <a href="#heading--License-keys"><h2 id="heading--License-keys">License keys</h2></a>
 
 *Settings* > *License keys* gives you the ability to manage your product licenses in a tabular format:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6935fddce5b33a7952f7bc6eb9c6248b2d2ec733.png"></a>
 
 - *Add license key button*: This button can be used to add a new license key.
 
@@ -365,8 +349,6 @@ Under the section *Settings* > *Scripts*, MAAS provides a great deal of flexibil
 
 *Settings* > *Scripts* > *Commissioning scripts* gives you the ability to manage machine commissioning scripts in a tabular format:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/500f13e4fc1a2d1b19b10dea42dfa8d54bd86065.png"></a>
-
 - *Upload script button*: This button can be used to upload a new commissioning script.
 
 - *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
@@ -380,8 +362,6 @@ Note that if the table becomes longer than one screen will accommodate, paging b
 <a href="#heading--Testing-scripts"><h3 id="heading--Testing-scripts">Testing scripts</h3></a>
 
 Similar to *Commissioning scripts*, the choices *Settings* > *Scripts* > *Testing scripts* give you the ability to manage your machines testing scripts in a tabular format:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/42587a5d69826413e57851eb5e476e5dd2fe5d69.png"></a>
 
 - *Upload script button*: This button can be used to upload a new test script.
 
@@ -397,8 +377,6 @@ Note that if the table becomes longer than one screen will accommodate, paging b
 
 *Settings* > *DHCP snippets* lets you manage your DHCP snippets in a table:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/5ced76625f4324169eff2b83d2c860afd470e42f.png"></a>
-
 - *Add snippet button*: This button can be used to add a new DHCP snippet.
 
 - *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
@@ -412,8 +390,6 @@ Note that if the table becomes longer than one screen will accommodate, paging b
 <a href="#heading--Package-repos"><h2 id="heading--Package-repos">Package repos</h2></a>
 
 You can manage your MAAS repositories with the *Settings* > *Package repos* option.  Referenced repos are listed in a table:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/46d19603bd763243f1b35f0de301cb55b3ae5182.png"></a>
 
 - *Add PPA button*: This button can be used to add a new PPA to the search path.
 
