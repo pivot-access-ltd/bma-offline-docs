@@ -84,15 +84,9 @@ To disable (or re-enable) subnet management, use the following procedure:
 
 4. Click 'Save summary'.
 
-The following screenshot illustrates this process.
-
-<a href="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e5d80c8c-installconfig-network-subnet-management__2.6-management-toggle.png"></a>
-
 <a href="#heading--how-to-access-ui-main-networking-view"><h3 id="heading--how-to-access-ui-main-networking-view">How to access the main networking view</h3></a>
 
-To access the main networking view visit the 'Subnets' page:
-
-<a href="https://assets.ubuntu.com/v1/657bb332-installconfig-networking__2.4_subnets.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/657bb332-installconfig-networking__2.4_subnets.png"></a>
+To access the main networking view visit the 'Subnets' page.
 
 This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
 [/tab]
@@ -178,11 +172,7 @@ Clicking a subnet (here `192.168.100.0/24`) will display its detail screen, whic
 
 <a href="#heading--ui-how-to-view-the-subnet-summary"><h3 id="heading--ui-how-to-view-the-subnet-summary">How to view the subnet summary</h3></a>
 
-The **Subnet summary** section is the largest and most complex of the subnet configuration screens:
-
-<a href="https://assets.ubuntu.com/v1/17617b35-installconfig-networking__2.4_subnets-summary.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/17617b35-installconfig-networking__2.4_subnets-summary.png"></a>
-
-This screen presents the following configurable options:
+The **Subnet summary** section is the largest and most complex of the subnet configuration screens.  It presents the following configurable options:
 
 - **Name**: Subnet names can be any valid text string. By default, they are named with the CIDR of the subnet itself.
 
@@ -210,11 +200,13 @@ This screen presents the following configurable options:
 
 <a href="#heading--ui-how-to-view-utilisation"><h3 id="heading--ui-how-to-view-utilisation">How to view utilisation</h3></a>
 
-This section of the subnet page presents metrics regarding address usage by this subnet.
+This section of the subnet page presents metrics regarding address usage by this subnet.  
 
-<a href="https://assets.ubuntu.com/v1/3d3e4b61-installconfig-networking__2.4_subnets-utilisation.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/3d3e4b61-installconfig-networking__2.4_subnets-utilisation.png"></a>
+- 'Subnet addresses' shows the total number of addresses associated with the subnet. 
 
-'Subnet addresses' shows the total number of addresses associated with the subnet, here 254. 'Availability' shows how many of those addresses are unused, and therefore "available", here 189, which corresponds to a percentage of roughly 74% of the total. Finally, 'Used' shows the percentage that is used, here roughly 26%.
+- 'Availability' shows how many of those addresses are unused, and therefore "available".
+
+- 'Used' shows the percentage that is used.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
@@ -274,7 +266,6 @@ To create a static route:
 
 Routes can be edited and removed using the icons to the right of each entry.
 
-<a href="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/49f5e240-installconfig-networking__2.4_subnets-routes.png"></a>
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a static route between two subnets, use the following command:
@@ -290,18 +281,12 @@ gateway_ip=$GATEWAY_IP
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-view-reserved-ranges"><h3 id="heading--how-to-view-reserved-ranges">How to view reserved ranges</h3></a>
 
-The reserved ranges section of the subnet screen looks like this:
-
-<a href="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/5f9f50f9-installconfig-networking__2.4_subnets-reserved.png"></a>
-
-More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-enable-dhcp/5132#heading--how-to-manage-ip-ranges).
+The reserved ranges section of the subnet screen looks contains information on defined IP ranges.  More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-enable-dhcp/5132#heading--how-to-manage-ip-ranges).
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a>
 
-This section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
-
-<a href="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/b9e69b0b-installconfig-networking__2.4_subnets-used.png"></a>
+The "Used IP addresses" section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
 [/tab]
 [/tabs]
 
@@ -321,17 +306,9 @@ To configure a bridge with the MAAS UI:
 
 2. Switch to the "Network" tab. 
 
-3. Select the network where you want to create the bridge and click "Create bridge:"
+3. Select the network where you want to create the bridge and click "Create bridge".
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/29624d737106c5bad777aee9d2c8cad9c3de7151.jpeg"></a> 
-
-4. Configure the bridge on a subnet MAAS controls (you may use any IP mode for the bridge):
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dd8567ff1cd76606c5ce1751e606fcfab2bc7ce2.jpeg"></a> 
-
-When you're done, it should look something like this:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/e392d638f0acecb9d54c81bbca4ee17cbcd05445.jpeg"></a> 
+4. Configure the bridge on a subnet MAAS controls (you may use any IP mode for the bridge).
 
 Then you can deploy machines using this bridge.
 
@@ -424,15 +401,10 @@ This section will explain the following procedures related to machine interfaces
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/438475b8906736b45fc809cd105a56be5052397d.png"></a>
+1. From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu.
 
-The following window will appear:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/70b21d256df52399ac7ab09c3051f4bf011da55e.png"></a>
-
-Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu.
+Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu:
 
 -   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/how-to-connect-maas-networks/5164#heading--how-to-toggle-subnet-management)).
 
@@ -481,19 +453,14 @@ See [Concepts and terms](/t/maas-glossary/5416#heading--ip-ranges) for the defin
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-A bond is created by selecting more than one interface and clicking the now-active "Create bond" button:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7dd772c961c9f6f871f657b0397646446a4e23e7.png"></a>
+1. A bond is created by selecting more than one interface and clicking the now-active "Create bond" button.  After clicking this button, the bond configuration pane will appear.
 
-After clicking the "Create bond" button, the bond configuration pane will appear.
+2. From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.
 
-From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.
+3. The interfaces aggregated into the bond interface are listed below the "Tags" field. Use the "Primary" column to select the interface to act as the primary device.
 
-The interfaces aggregated into the bond interface are listed below the "Tags" field. Use the "Primary" column to select the interface to act as the primary device.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/699a55f98f3e1a81da75d1595e40bb74c99aff8e.png"></a>
-
-You can select from the following bonding modes on the "Bond mode" drop-down menu:
+4. You can select from the following bonding modes on the "Bond mode" drop-down menu:
 
 -   **balance-rr**: Transmit packets in sequential order from the first available follower through to the last. This mode provides load balancing and fault tolerance.
 
@@ -956,17 +923,18 @@ You must install the proxy on the same host as the region controller (via the 'm
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-In the web UI, visit the 'Settings' page and select the 'Network services' tab. The 'Proxy' section is at the top. You can apply your changes by pressing the 'Save' button.
 
-<a href="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/55800a33-installconfig-network-proxy__2.4_configure-proxy.png"></a>
+1. In the web UI, visit the 'Settings' page and select the 'Network services' tab. 
 
-To enable the internal proxy, ensure that the checkbox adjacent to 'MAAS Built-in' is selected. This internal proxy is the default configuration.
+2. Modify the 'Proxy' section at the top, as desired:
 
-To enable an external proxy, activate the 'External' checkbox and use the new field that is displayed to define the proxy's URL (and port if necessary).
+- To enable the internal proxy, ensure that the checkbox adjacent to 'MAAS Built-in' is selected. This internal proxy is the default configuration.
 
-An upstream cache peer can be defined by enabling the 'Peer' checkbox and entering the external proxy URL into the field. With this enabled, machines will be configured to use the MAAS built-in proxy to download cached APT packages.
+- To enable an external proxy, activate the 'External' checkbox and use the new field that is displayed to define the proxy's URL (and port if necessary).
 
-To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
+- An upstream cache peer can be defined by enabling the 'Peer' checkbox and entering the external proxy URL into the field. With this enabled, machines will be configured to use the MAAS built-in proxy to download cached APT packages.
+
+- To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Enabling and disabling proxying, in general, is done via a Boolean option ('true' or 'false'). The following command will disable proxying completely:
@@ -1019,11 +987,9 @@ External sites, such as an existing NTP infrastructure, can be used directly as 
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 You can specify an external site by choosing the NTP server(s) and selecting the 'External Only' option. The region controller always uses an external site.
 
-On the 'Settings' page, select the 'Network services' tab and scroll down to the 'NTP' section:
+1. On the 'Settings' page, select the 'Network services' tab and scroll down to the 'NTP' section.
 
-<a href="https://assets.ubuntu.com/v1/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/69180b4a-installconfig-network-ntp__2.6-configure-ntp.png"></a>
-
-Enter the address of the desired NTP server. Apply any changes by pressing the 'Save' button.
+2. Enter the address of the desired NTP server.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can specify an external NTP server with two successive commands:
