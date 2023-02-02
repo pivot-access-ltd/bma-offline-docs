@@ -486,12 +486,12 @@
 <strong>NOTE</strong> that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.</p>
 <p><a href="#heading--fresh-install-3-3-snap"><h3 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h3></a></p>
 <p>To install MAAS 3.3 from a snap, simply enter the following:</p>
-<pre><code>$ sudo snap install --channel=3.3/candidate maas
+<pre><code>$ sudo snap install --channel=3.3 maas
 </code></pre>
 <p>After entering your password, the snap will download and install from the 3.3 channel.</p>
 <p><a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h3 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h3></a></p>
 <p>Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
-<pre><code>$ sudo snap refresh --channel=3.3/candidate maas
+<pre><code>$ sudo snap refresh --channel=3.3 maas
 </code></pre>
 <p>After entering your password, the snap will refresh from the 3.3 candidate channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
 <p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
@@ -593,8 +593,8 @@ sudo apt install -y postgresql
 <p><strong>NOTE:</strong>  You should use <code>localhost</code> for <code>$HOSTNAME</code> if you&rsquo;re running PostgreSQL on the same box as MAAS. </p>
 <p>Don&rsquo;t worry; if you leave out any of the database parameters, you&rsquo;ll be prompted for those details.</p>
 <p><a href="#heading--fresh-install-3-3-packages"><h3 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h3></a></p>
-<p>The recommended way to set up an initial MAAS environment is to put everything on one machine:</p>
-<pre><code class="language-bash">sudo apt-add-repository ppa:maas/3.3-next
+<p>MAAS 3.3 from packages runs on 22.04 LTS only.  The recommended way to set up an initial MAAS environment is to put everything on one machine:</p>
+<pre><code class="language-bash">sudo apt-add-repository ppa:maas/3.3
 sudo apt update
 sudo apt-get -y install maas
 </code></pre>
@@ -611,7 +611,7 @@ sudo maas-rack register
 </code></pre>
 <p>These two steps will lead you through two similar <code>apt</code> install sequences.</p>
 <p><a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h3 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h3></a></p>
-<p>If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS or higher, by executing the following command:</p>
+<p>If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:</p>
 <pre><code class="language-nohighlight">lsb_release -a
 </code></pre>
 <p>The response should look something like this:</p>
@@ -620,7 +620,7 @@ Description:    Ubuntu xx.yy
 Release:    xx.yy
 Codename:   $RELEASE_NAME
 </code></pre>
-<p>The minimum “xx.yy” required for MAAS 3.2 is “22.04,” code-named “jammy”.</p>
+<p>The required “xx.yy” required for MAAS 3.3 is “22.04,” code-named “jammy”.</p>
 <p>If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:</p>
 <p>Upgrade the release:</p>
 <pre><code class="language-nohighlight">sudo do-release-upgrade --allow-third-party
@@ -639,7 +639,7 @@ Codename:   focal
 <p>If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the following procedures should work, note that they are untested. Use at your own risk. Start by making a verifiable backup; see step 1, below.</p>
 <p>Back up your MAAS server completely; the tools and media are left entirely to your discretion. Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.</p>
 <p>Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:</p>
-<pre><code class="language-nohighlight">sudo apt-add-repository ppa:maas/3.3-next
+<pre><code class="language-nohighlight">sudo apt-add-repository ppa:maas/3.3
 </code></pre>
 <p>Run the release upgrade like this, answering any questions with the given default values:</p>
 <pre><code class="language-nohighlight">sudo do-release-upgrade --allow-third-party

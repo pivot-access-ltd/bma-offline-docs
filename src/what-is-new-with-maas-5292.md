@@ -60,7 +60,7 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 
 To install MAAS 3.3 from a snap, simply enter the following:
 
-    $ sudo snap install --channel=3.3/candidate maas
+    $ sudo snap install --channel=3.3 maas
 
 After entering your password, the snap will download and install from the 3.3 channel.
 
@@ -68,7 +68,7 @@ After entering your password, the snap will download and install from the 3.3 ch
 
 Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.3/candidate maas
+    $ sudo snap refresh --channel=3.3 maas
 
 After entering your password, the snap will refresh from the 3.3 candidate channel.  You will **not** need to re-initialise MAAS.
 
@@ -182,10 +182,10 @@ Don't worry; if you leave out any of the database parameters, you'll be prompted
 
 <a href="#heading--fresh-install-3-3-packages"><h3 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h3></a>
 
-The recommended way to set up an initial MAAS environment is to put everything on one machine:
+MAAS 3.3 from packages runs on 22.04 LTS only.  The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
 ``` bash
-sudo apt-add-repository ppa:maas/3.3-next
+sudo apt-add-repository ppa:maas/3.3
 sudo apt update
 sudo apt-get -y install maas
 ```
@@ -211,7 +211,7 @@ These two steps will lead you through two similar <code>apt</code> install seque
 
 <a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h3 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h3></a>
 
-If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS or higher, by executing the following command:
+If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
 
 ```nohighlight
 lsb_release -a
@@ -225,7 +225,7 @@ Release:	xx.yy
 Codename:	$RELEASE_NAME
 ```
 
-The minimum “xx.yy” required for MAAS 3.2 is “22.04,” code-named “jammy”.
+The required “xx.yy” required for MAAS 3.3 is “22.04,” code-named “jammy”.
 
 If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:
 
@@ -261,7 +261,7 @@ Back up your MAAS server completely; the tools and media are left entirely to yo
 Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```nohighlight
-sudo apt-add-repository ppa:maas/3.3-next
+sudo apt-add-repository ppa:maas/3.3
 ```
 
 Run the release upgrade like this, answering any questions with the given default values:
