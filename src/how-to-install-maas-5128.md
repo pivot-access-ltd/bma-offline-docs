@@ -11,7 +11,7 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 [/note]
 
 [tabs]
-[tab version="v3.3 Beta 1 Snap"]
+[tab version="v3.3 Snap"]
 [note]
 **ALSO NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
 [/note]
@@ -20,7 +20,7 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 
 To install MAAS 3.2 from a snap, simply enter the following:
 
-    $ sudo snap install --channel=3.3/beta maas
+    $ sudo snap install --channel=3.3 maas
 
 After entering your password, the snap will download and install from the 3.3 channel.
 
@@ -28,9 +28,9 @@ After entering your password, the snap will download and install from the 3.3 ch
 
 Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.3/beta maas
+    $ sudo snap refresh --channel=3.3 maas
 
-After entering your password, the snap will refresh from the 3.3 Beta channel.  You will **not** need to re-initialise MAAS.
+After entering your password, the snap will refresh from the 3.3 channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 
@@ -140,7 +140,7 @@ To set up PostgreSQL, even if it's running on a different machine, you can use t
 
 Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
 [/tab]
-[tab version="v3.3 Beta 1 Packages"]
+[tab version="v3.3 Packages"]
 [note]
 **ALSO NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
 [/note]
@@ -176,7 +176,7 @@ These two steps will lead you through two similar <code>apt</code> install seque
 
 <a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h2 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h2></a>
 
-If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS or higher, by executing the following command:
+If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
 
 ```nohighlight
 lsb_release -a
@@ -190,7 +190,7 @@ Release:	xx.yy
 Codename:	$RELEASE_NAME
 ```
 
-The minimum “xx.yy” required for MAAS 3.2 is “22.04,” code-named “jammy”.
+The required “xx.yy” for MAAS 3.2 is “22.04,” code-named “jammy”.
 
 If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:
 
@@ -223,10 +223,10 @@ If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the f
 
 Back up your MAAS server completely; the tools and media are left entirely to your discretion. Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
 
-Add the MAAS 3.3 Beta 1 PPA to your repository list with the following command, ignoring any apparent error messages:
+Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```nohighlight
-sudo apt-add-repository ppa:maas/3.3-next
+sudo apt-add-repository ppa:maas/3.3
 ```
 
 Run the release upgrade like this, answering any questions with the given default values:
@@ -1364,7 +1364,7 @@ The `init` command can takes optional arguments. To list them, as well as read a
 <a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a>
 
 [tabs]
-[tab version="v3.3 Beta 1 Snap, v3.3 Beta 1 Packages,v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Once you've successfully installed MAAS (regardless of method), you can now login here:
 
 ```
@@ -1428,7 +1428,7 @@ Before moving forward with MAAS, you'll want to enable DHCP.  You can do this ve
 
 The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This network discovery process allows you to easily add or map devices already connected to your network -- devices that you may not necessarily want to manage with MAAS.
 [/tab]
-[tab version="v3.3 Beta 1 Snap,v3.3 Beta 1 Packages,v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process.  First, generate the API-key for the user you're going to employing:
 
 ```
