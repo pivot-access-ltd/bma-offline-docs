@@ -10,25 +10,24 @@ There is also some [background material on VM hosting](/t/how-to-deploy-virtual-
 
 <a href="#heading--add-vm-from-ui"><h2 id="heading--add-vm-from-ui">How to add a VM</h2></a>
 
-While on VM host's details view, select 'Compose' from the 'Take action' drop-down menu to compose a machine.
+1. While on VM host's details view, select 'Compose' from the 'Take action' drop-down menu to compose a machine.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/937726bb839eefb28e9297e8f97bd48556c1014c.jpeg"></a> 
-
-You can choose which storage pool to use from a drop-down list. 
+2. You can choose which storage pool to use from a drop-down list. 
 
 **Note** that when adding more than one disk, the boot disk will be the last disk in the list.
 
-Click the 'Compose machine' button when you're finished. MAAS will present the VM host detail view. In a few moments, your new machine will be auto-commissioned. The 'Machines' page will reflect this as well.
+3. Click the 'Compose machine' button when you're finished. MAAS will present the VM host detail view. 
 
-MAAS will deduct the new machine's resources from the VM host's resources:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3b621ab0e7b4f6a86963d2b7c50b677b815956ab.jpeg"></a> 
+In a few moments, your new machine will be auto-commissioned. The 'Machines' page will reflect this as well. MAAS will deduct the new machine's resources from the VM host's resources.
 
 <a href="#heading--delete-a-machine"><h2 id="heading--delete-a-machine">How to delete a VM</h2></a>
 
-To delete a VM, delete it as you would any other MAAS machine. Select the desired machine from the list of machines and select 'Delete' from the 'Take Action' menu.
+To delete a VM, delete it as you would any other MAAS machine:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/34d3f5fcd8a86bfa827bab5383209ea9ca117f50.jpeg"></a> 
+1. Select the desired machine from the list of machines. 
+
+2. Select 'Delete' from the 'Take Action' menu.
+
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to add a VM](#heading--adding-a-vm-from-the-cli)
