@@ -1,6 +1,6 @@
 <!-- "What is new with MAAS" -->
 
-Here you will find release notes for:
+Here you will find the release notes for:
 
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
