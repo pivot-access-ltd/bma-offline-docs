@@ -543,9 +543,35 @@ Supported bonding modes include:
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-<a href="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/83ef3d6f40d5b558396d96717dd2822fc1ce8b68.png"></a>
 
-Press the "Save" button when you're done.
+1. Select *Machines*.
+
+2. Select a machine.
+
+3. Select *Network*.
+
+4. Select an interface by choosing its checkbox.
+
+5. Select *Create bridge*.
+
+6. Optionally enter a unique *Bridge name*.
+
+7. Choose a *Bridge type*.
+
+8. Enter a valid *MAC address*.
+
+9. Choose a *Fabric*.
+
+10. Choose a *VLAN*.
+
+11. Optionally choose a *Subnet*.
+
+12. Optionally enter *Tags*.
+
+13. Optionally turn on *STP*.
+
+14. Register your new bridge by selecting *Save interface*.
+
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Please use the UI interface to create a bridge interface.  Select the "UI" dropdown above to see how.
