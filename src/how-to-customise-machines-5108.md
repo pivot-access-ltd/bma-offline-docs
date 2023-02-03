@@ -72,8 +72,6 @@ Note that layouts can be set globally and on a per-machine basis.  For additiona
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
@@ -130,17 +128,9 @@ Only an administrator can modify storage at the block device level (providing th
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
-A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
+1. Click on *Settings --> Storage*.
 
-<a href="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/4e90c4c7-installconfig-storage-erasure__defaults.png"></a>
-
-If option 'Erase machines' disks prior to releasing' is chosen then users will be compelled to use disk erasure. That option will be pre-filled in the machine's view and the user will be unable to remove the option.
-
-With the above defaults, the machine's view will look like this when the Release action is chosen:
-
-<a href="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/66e1dcc2-installconfig-storage-erasure__defaults-node.png"></a>
-
-Where 'secure erase' and 'quick erase' can then be configured by the user.
+2. Set or clear *Erase machines' disks prior to releasing*.  If you set this option, users will be compelled to use disk erasure: that option will be pre-filled in the machine's view and the user will be unable to remove the option.
 
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
@@ -168,9 +158,6 @@ maas admin machines read | jq -r '(["HOSTNAME","SYSID","POWER","STATUS",
 .boot_interface.vlan.name, .boot_interface.vlan.fabric,
 .boot_interface.links[0].subnet.name]) | @tsv' | column -t
 ```
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a496ac76977909f3403160ca96a1bb7224e785f5.jpeg">
-</a>
 
 The basic form of the release command, when erasing disks on releasing, is:
 
@@ -1076,15 +1063,21 @@ For a flowchart, showing where cloud-init fits into the deployment picture, see 
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-It's easy to customise cloud-init via the web UI.  When you've selected a machine and choose 'Take action >> Deploy,' you'll be presented with the following screen:
+To customise cloud-init via the web UI:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/4cb95189de94d0f478ac899c05fbdbe038607f14.jpeg"></a>
+1. Select a machine. 
 
-Select a viable release (in this case, "Ubuntu 18.04...") and check the box labelled "Cloud-init user-data...":
+2. Choose *Take action >> Deploy*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"><img src="https://discourse.maas.io/uploads/default/original/1X/12d98a2c14671c02ef61a5e87c1eda19956b0afb.jpeg"></a>
+3. Select a viable release.
 
-Paste the desired script directly into the box, and select "Start deployment for machine."  For example, to import an SSH key immediately after your machine deployment, you could paste this script:
+4. Check the box labelled *Cloud-init user-data...*.
+
+5. Paste the desired script directly into the box.
+
+6. Select *Start deployment for machine*.  
+
+For example, to import an SSH key immediately after your machine deployment, you could paste this script:
 
 ``` bash
 #!/bin/bash
@@ -1158,21 +1151,39 @@ This section will show you:
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines visit the 'General' tab of the 'Settings' page and select a kernel in the 'Default Minimum Kernel Version' field of the *Commissioning* section. Don't forget to click 'Save'.
+To set the default minimum enlistment and commissioning kernel (based on Ubuntu release: GA kernel) for all machines:
 
-<a href="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e0c7f298-nodes-kernels__2.6-default-minimum-kernel.png"></a>
+1. Select *Settings >> General*.
+
+2. Select a kernel in the *Default Minimum Kernel Version* field of the *Commissioning* section
 
 <a href="#heading--set-a-minimum-deploy-kernel-for-a-machine"><h3 id="heading--set-a-minimum-deploy-kernel-for-a-machine">How to set a minimum deployment kernel for a machine</h3></a>
 
-To set the minimum deploy kernel on a machine basis, click on a machine from the 'Machines' page of the web UI and switch to its 'Configuration' page. Click 'Edit' in the 'Machine configuration' section, select a kernel in the 'Minimum Kernel' field followed by 'Save changes'.
+To set the minimum deploy kernel on a machine basis: 
 
-<a href="https://assets.ubuntu.com/v1/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/e1016632-nodes-kernels__2.6-machine-minimum-kernel.png"></a>
+1. Select *Machines*. 
+
+2. Click on a machine.
+
+3. Select *Configuration*.
+
+4. Select *Edit* in the *Machine configuration* section. 
+
+5. Select a kernel in the *Minimum Kernel* field.
 
 <a href="#heading--set-a-specific-kernel-during-machine-deployment"><h3 id="heading--set-a-specific-kernel-during-machine-deployment">How to set a specific kernel during machine deployment</h3></a>
 
-To set a specific kernel during deployment, select a machine from the 'Machines' page and choose 'Deploy' under 'Take action'. Then choose a kernel from the (third) kernel field. Hit 'Deploy machine' to initiate the deployment.
+To set a specific kernel during deployment:
 
-<a href="https://assets.ubuntu.com/v1/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/0d25737f-nodes-kernels__2.6-machine-during-deploy-kernel.png"></a>
+1. Select *Machines*.
+
+2. Click on a machine.
+
+3. Choose *Take action >> Deploy*.
+
+4. Choose a kernel from the third kernel field. 
+
+5. Click *Deploy machine* to initiate the deployment.
 
 MAAS verifies that the specified kernel is available for the given Ubuntu release (series) before deploying the machine.
 [/tab]
