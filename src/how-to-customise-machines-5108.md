@@ -1249,11 +1249,19 @@ The command option `hwe_kernel` appears to apply to only HWE kernels but this is
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To set kernel boot options globally, as an admin, open the 'Settings' page and on the 'General' tab scroll down to the 'Global Kernel Parameters' section:
+To set kernel boot options globally:
 
-<a href="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/8b793b6d-nodes-kernel-options__2.2_global.png"></a>
+1. Make sure that you are logged in as an administrator.
 
-Type in the desired (space separated) options and click 'Save'. The contents of the field will be used as-is. Do not use extra characters.
+2. Go to *Settings >> General*.
+
+3. Scroll down to the *Global Kernel Parameters* section:
+
+4. Type in the desired (space separated) options. 
+
+5. Be sure to click *Save*. 
+
+The contents of the field will be used as-is. Do not use extra characters.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can set kernel boot options and apply them to all machines with the CLI command:
@@ -1332,41 +1340,72 @@ This section will explain:
 
 <a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a>
 
-Use the Add pool button to add a new resource pool.
+To add a resource pool:
 
-After giving your new pool a name and description, click the Add pool button:
+1. From the machine list, click the top tab *<n> Resource pool*.
 
-<a href="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/2f010325-nodes-resource-pools__2.5_add-pool.png"></a>
+2. Select *Add pool*.
+
+3. Give your new pool a name.
+
+4. Optionally, give your new pool a description.
+
+5. Select *Save pool* to register the changes.
 
 <a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a>
 
-To delete a resource pool, click the trashcan icon next to the pool.
+To delete a resource pool:
 
-<a href="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/630ed938-nodes-resource-pools__2.5_delete-pool.png"></a>
+1. From the machine list, click the top tab *<n> Resource pool*.
+
+2. Select the trash can icon to the far right of the pool row.
+
+3. Select *Delete*.
+
+The pool will be deleted; there is no confirmation dialogue.
 
 [note]
-If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.
+When you delete a resource pool, no machines will be deleted: All machines that belong to that resource pool will return to the default pool.
 [/note]
 
 <a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a>
 
-To add a machine to a resource pool, on the Machines page, select the machine you want to add to the resource pool. Next, select the Configuration tab. Now select the resource pool and click the Save changes button.
+To add a machine to a resource pool:
 
-<a href="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/648e7a8e-nodes-resource-pools__2.5_add-machine.png"></a>
+1. Select *Machines*.
+
+2. Select the machine you want to add to the resource pool. 
+
+3. Select *Configuration*. 
+
+4. Select *Edit* in the *Machine configuration* block.
+
+5. Select the desired resource pool from the *Resource pool* dropdown.
+
+6. Register your changes by clicking *Save changes*.
+
 
 <a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a>
 
-To remove a machine from a resource pool, follow the same procedure you would use to add a machine, but select "default" as the new resource pool. This action will return the machine to the default resource pool.
+To remove a machine from a resource pool, follow the procedure for [adding a machine to a resource pool](#heading--add-a-node-to-a-resource-pool), but select "default" as the new resource pool. This action will return the machine to the default resource pool.
 
 <a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a>
 
-You can add a VM host to a resource pool when you create a new VM host, or you can edit a VM host's configuration:
+You can add a VM host to a resource pool when you [create a new VM host](/t/how-to-create-vm-hosts/5140#heading--adding-a-vm-host) or you can edit a VM host's configuration:
 
-<a href="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/84a89952-nodes-resource-pools__2.5_pod_to_pool.png"></a>
+1. Select *KVM* from the top tab bar.
+
+2. Select the KVM you want to add to a resource pool.
+
+3. Select *KVM host settings*.
+
+4. Select the desired pool in the *Resource pool* dropdown.
+
+5. Register your changes with *Save changes*.
 
 <a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a>
 
-To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
+To remove a VM host from a resource pool, follow the same procedure you would use to [add a VM host to a resource pool](#heading--add-a-vm-host-to-a-resource-pool), selecting "default" as the new resource pool. This action will return the machine to the default resource pool.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to create a resource pool](#heading--creating-a-resource-pool)
@@ -1433,31 +1472,33 @@ maas $PROFILE machine update $SYSTEM_ID pool=$POOL_NAME
 MAAS hardware sync may leak the MAAS admin API token.  You may need to rotate all admin tokens and re-deploy all machines that have hardware sync enabled.  To find out whether this is an issue, and how to fix it, see the [troubleshooting instructions](/t/how-to-troubleshoot-maas/5333#heading--Manually-swapping-the-MAAS-admin-API-token) for this problem.
 [/note]
 
-To enable Hardware sync on a machine, select a machine from the machine list and choose deploy from the "Take action" dropdown menu:
+To enable Hardware sync on a machine:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f1ba7cedf91f4cfec9e55300ff7f651473343d99.png"></a>
+1. Select *Machines*.
 
-Set the parameters as indicated below, and choose "Start deployment for machine":
+2. Select a machine.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ef2c94f6f87aa8979b79f1140aac654ebcdc8a79.png"></a>
+3. Select *Take action >> Deploy**.
+
+4. Check *Periodically synch hardware*.
+
+5. Select *Start deployment for machine*.
 
 Once you've enabled hardware sync, any changes you make to the physical device, or to the VM through the VM host, will show up in the appropriate page for the deployed machine as soon as the sync interval has passed.
 
 <a href="#heading--how-to-view-updates-from-hardware-sync"><h2 id="heading--how-to-view-updates-from-hardware-sync">How to view updates from hardware sync</h2></a>
 
-Hardware sync updates the machine’s blockdevice, interface and device sets on a periodic basis. These can be viewed in machine details:
+To view updates from hardware sync:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/de259546ce6810ea6dd8aae52d096051ec31b784.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/de259546ce6810ea6dd8aae52d096051ec31b784.png"></a>
+1. Select *Machines*.
 
-Updated BMC configuration and tags can also be viewed on the machine itself.  The timestamps of the last time data was synced and the estimated next time the machine will be synced can be seen in the `last_sync` and `next_sync` fields respectively.
+2. Select the machine in question.
+
+Any changes to the machine's hardware configuration will be updated on the next sync.  The status bar at the bottom will show times for *Last synced* and *Next sync*. Updated BMC configuration and tags can also be viewed on the machine itself.
 
 <a href="#heading--how-to-configure-hardware-sync-interval"><h2 id="heading--how-to-configure-hardware-sync-interval">How to configure hardware sync interval</h2></a>
 
-The hardware sync interval is configured globally in MAAS settings:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/45cba7386928c38a3f4ae36da4ea80bf4b0c4949.png"></a>
-
-This value is then applied to the machine at time of deployment. You cannot modify a deployed machine’s sync interval.  You can view a machine’s specific sync interval via the `sync_interval` field on a given machine.
+The hardware sync interval is configured globally in [MAAS deployment settings](/t/how-to-change-maas-settings/6347#heading--Deployment).
 
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
