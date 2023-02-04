@@ -2,7 +2,7 @@
 This article will help you learn:
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to create and assign machine tags to machines](#heading--create-and-assign-machine-tags-to-machines)
 - [How to remove and delete machine tags from machines](#heading--remove-and-delete-machine-tags-from-machines)
 - [How to list machine tags for multiple machines](#heading--list-machine-tags-for-multiple-machines)
@@ -11,41 +11,31 @@ This article will help you learn:
 
 <a href="#heading--create-and-assign-machine-tags-to-machines"><h2 id="heading--create-and-assign-machine-tags-to-machines">How to create and assign machine tags to machines</h2></a>
 
-If you want to create a new tag, and simultaneously assign it to a machine, use the following steps:
+If you want to create a new tag, and simultaneously assign it to one or more machines, use the following steps:
 
-- Go to the machine list and select the machine you're interested in modifying, by checking the box next to the machine name:
+1. Select *Machines*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/86ee8529206fcfa297865198a55b976e1002b6bf.png"></a>
+2. Select the checkbox next to the machine(s) you want to tag.
 
-- Select the "Take action" drop-down menu and select "Tag":
+3. Select *Take action >> Tag*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f77f19b7aef9f880c12a4d710b91cc3abdc03154.png"></a>
+4. Create and/or assign the desired tag, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
 
-- Create and/or assign the desired tag, as described in the [general tagging procedure](#heading--create-and-assign-tags) above.
-
-- Don't forget to hit the "Tag machine" button when you're done, to apply your changes to the machine.
-
-<a href="#heading--tag-multiple-machines"><h3 id="heading--tag-multiple-machines">How to tag multiple machines at once</h3></a>
-
-In the first step of the above procedure, you can select more than one machine:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0c04973e76012c780035a4ea11a588f341148445.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0c04973e76012c780035a4ea11a588f341148445.png"></a>
-
-Any tags you add in the "Tags" box will be applied to all selected machines, as noted by the change in the "Tag machine" button:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a503261eb7faa17478b09aa70f48f838b4b0fb87.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a503261eb7faa17478b09aa70f48f838b4b0fb87.png"></a>
-
-Other than the scope of the transaction (e.g., tagging three machines, in this case), everything else about this operation conforms to the [general tag assignment procedure](#heading--create-and-assign-tags).
+5. Select *Tag machine* to register your changes.
 
 <a href="#heading--remove-and-delete-machine-tags-from-machines"><h2 id="heading--remove-and-delete-machine-tags-from-machines">How to remove and delete machine tags from machines</h2></a>
 
 To remove machine tags from a machine:
 
-- View a machine's currently assigned tags: stay on the 'Machines' page and click on the machine in question. MAAS will display currently-assigned tags in the *Tags* pane of the 'Machine summary'.
+1. Select *Machines*.
 
-- Select the 'Configuration' tab and then the 'Edit' button alongside 'Machine configuration' to edit tags:
+2. Select the machine in question by clicking on its name.
 
-- Follow the [general tag removal procedure](#heading--delete-and-remove-tags).
+3. Check the *Tags* pane under *Machine summary* to confirm the tags applied to the machine.
+
+4. Select *Configuration >> Edit*.
+
+5. Follow the [general tag removal procedure](#heading--delete-and-remove-tags).
 
 <a href="#heading--list-machine-tags-for-multiple-machines"><h2 id="heading--list-machine-tags-for-multiple-machines">How to list machine tags for multiple machines</h2></a>
 
@@ -75,22 +65,18 @@ To view the tags assigned to a specific machine, use the following procedure:
 
 To view the machine tags assigned to a VM host, here's the procedure you'll follow:
 
-- Click on the KVM tab at the top of the screen.  This will bring you to a list of active KVMs for your system:
+1. Select *KVM*. 
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/5/559f0ed9250524792fda93457bc1876304915599.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/559f0ed9250524792fda93457bc1876304915599.png"></a>
+2. Select a VM host by clicking on its name.
 
-- On the detail screen that comes up, choose the "Settings" tab at the top:
+3. Select *KVM host settings*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8c8454d576b4b49dd99c3f6c6bb2735252591010.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8c8454d576b4b49dd99c3f6c6bb2735252591010.png"></a>
-
-- In the settings tab, you'll see a box labelled "Tags."  You can use this box to view, assign, edit, or remove tags for the KVM:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e7953d2c5d153b82eac3cb1a3ba105ec194eb077.png"></a>
+4. You can view, edit, add, or delete tags in the *Tags* box.
 
 Note that you can only see the tags for a VM host in the same place that you change it.  For a more comprehensive list of VM host tags, use the MAAS CLI.
 
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to assign machine tags to a machine](#heading--assign-machine-tags-to-a-machine)
 - [How to remove machine tags from a machine](#heading--remove-machine-tags-from-a-machine)
 - [How to list machine tags for all machines](#heading--list-machine-tags-for-all-machines)
