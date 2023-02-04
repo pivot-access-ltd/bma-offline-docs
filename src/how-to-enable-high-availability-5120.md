@@ -51,7 +51,7 @@ If you are enabling DHCP for the first time after adding a second rack controlle
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To reconfigure DHCP for multiple rack controllers:
+To reconfigure DHCP after adding a new rack controller:
 
 1. Select *Subnets*.
 
