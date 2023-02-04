@@ -41,13 +41,17 @@ Previously there was only one MAAS stream available, daily. This stream has been
 
 <a href="#heading--changing-the-stream"><h3 id="heading--changing-the-stream">How to change the stream with the UI</h3></a>
 
-To switch to the candidate stream simply select "custom" on the images page, set the URL to `http://images.maas.io/ephemeral-v3/candidate`, and click "Connect"
+To switch to the candidate stream: 
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg"></a>
+1. Select *Images*.
 
-MAAS uses the stable stream by default. To switch back to it simply select `maas.io` on the images page
+2. Select *Custom*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg"></a>
+3. Set the *URL* to `http://images.maas.io/ephemeral-v3/candidate`.
+
+4. Select *Connect*.
+
+MAAS uses the stable stream by default. To switch back to it, simply repeat the above procedure, but set the *URL* to `maas.io`.
 
 <a href="#heading--changing-stream-with-cli"><h3 id="heading--changing-stream-with-cli">How to change the stream with the CLI</h3></a>
 
@@ -59,33 +63,33 @@ maas $PROFILE boot-source update $BOOT_SOURCE_ID url=$STREAM_URL
 ```
 <a href="#heading--import-maasio-image-ui"><h2 id="heading--import-maasio-image-ui">How to import standard images from maas.io</h2></a>
 
-The 'Images' page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). Below, we have selected two additional releases:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/d208922f1126ec92f6ef06cfaa5e16dbbfc613d0.png"></a>
+The *Images* page shows what images and architectures have been selected and downloaded. By default, MAAS will automatically grab the most recent Ubuntu LTS releases (and amd64 architecture). 
 
 You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/how-to-acquire-images/6192#boot-image-sources)) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
 
-Click the 'Save selection' button to initiate the import. MAAS will present existing images along with the newly-selected ones. The latter will have their status updated as the import is processed:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f7daa92c97f1ada61c2172044d43856ed3e14b5f.png"></a>
-
-To remove an image, un-select it and click 'Save selection'.
+To remove an image, simply un-select it and click *Save selection*.
 
 <a href="#heading--image-mirrors"><h2 id="heading--image-mirrors">How to use other image mirrors to download images</h2></a>
 
-You can also host Ubuntu images on a mirror. Configure this mirror by selecting 'Custom' beneath 'Choose source'. Enter the mirror URL and click 'Connect'.
+You can also host Ubuntu images on a mirror. To use these mirrors:
 
-Advanced options, such as using a GPG key or keyring to validate the mirror path (snap installation location: /snap/maas/current/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg), are revealed by clicking 'Show advanced options':
+1. Select *Images*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbe44a827e70e318a6139c3e335019a6a27c4374.png"></a>
+2. Select *Change source*.
+
+3. Select *Custom*.
+
+4. Enter the mirror *URL*. 
+
+5. Select *Connect* to bring the mirror online.
+
+Advanced options, such as using a GPG key or keyring to validate the mirror path (snap installation location: /snap/maas/current/usr/share/keyrings/ubuntu-cloudimage-keyring.gpg), are revealed by Selecting *Show advanced options*.
 
 Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/how-to-mirror-images-locally/5927) for instructions.
 
 <a href="#heading--other-images"><h2 id="heading--other-images">How to import and provision non-Ubuntu images</h2></a>
 
-It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear beneath the 'Other Images' section. Currently, images for CentOS 6.6, CentOS 7.0, and CentOS 8.0 are available. These images can be imported and used just like the Ubuntu images above.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/198aa78b2dd3a650f1b3909ae2c9269e159ca1dc.png"></a>
+It is also possible to import and provision images other than Ubuntu. Images supported and provided by MAAS will appear in *Images >> Other Images*. These images can be imported and used just like the Ubuntu images above.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can tell MAAS to sync images hourly, at the region level.  See [Boot image sources](/t/how-to-acquire-images/6192#boot-image-sources)) for more details. We highly recommended syncing images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
