@@ -118,38 +118,24 @@ $ ​​sudo maas config-tls enable new-server-key.pem new-server.pem --port 544
 
 If you’re using the snap, the certificate and key must be placed in a directory that’s readable by the CLI, such as `/var/snap/maas/common` (e.g., if you're using the snap version).
 
-<a href="#heading--ui-changes"><h2 id="heading--ui-changes">UI Changes</h2></a>
+<a href="#heading--ui-changes"><h2 id="heading--ui-changes">How to check whether TLS is enabled</h2></a>
 
 There is a new "Security" subsection under "Configuration" that will indicate the status of TLS in the specific server (enabled or disabled).
 
-<a href="#heading--tls-enabled"><h3 id="heading--tls-enabled">TLS enabled</h3></a>
-
-When TLS is enabled, the following certificate information is displayed:
+When TLS is enabled, the following certificate information is displayed in *Settings >> Configuration >> Security** 
 
 - CN 
 - Expiration date
 - Fingerprint
 - Certificate
 
-It is also possible to download certificate and configure notification reminder settings. Once the notification reminder is enabled, MAAS administrators will be notified about certificate expiration.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/34053a14fbf38b96f8a70886e8fac3d120323a29.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/34053a14fbf38b96f8a70886e8fac3d120323a29.jpeg"></a>
-
-<a href="#heading--tls-disabled"><h3 id="heading--tls-disabled">TLS disabled</h3></a>
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f27c091d2335ecbb1db65193891e8d24b7e94715.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f27c091d2335ecbb1db65193891e8d24b7e94715.png"></a>
-
-We recommend that you enable TLS for secure communication.
+If TLS is disabled, this section will instead show a warning.  We recommend that you enable TLS for secure communication.
 
 <a href="#heading--notifications"><h3 id="heading--notifications">Notifications</h3></a>
 
-When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expiration notification. This notification is dismissible, but once it is dismissed, it won't appear again.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/ea8d6c4a84adb581d4eb664b1d6d917bea9ed783.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ea8d6c4a84adb581d4eb664b1d6d917bea9ed783.png"></a>
+When the specified number of days remain until certificate expiration (as defined in the notification reminder), all administrators will see the certificate expiration notification. This notification enumerates the number of days until certificate expiration.  It is dismissible, but once dismissed, it won't appear again.
 
 A certificate expiration check runs every twelve hours.  When the certificate has expired, the notification will change to “certificate has expired”.
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/6/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6dd9ff4905bd256f53557d1828192bc5459ea7b6.jpeg"></a>
 
 <a href="#heading--how-to-auto-renew-certificates"><h3 id="heading--how-to-auto-renew-certificates">How to auto-renew certificates</h3></a>
 
