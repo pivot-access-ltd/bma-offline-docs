@@ -492,7 +492,6 @@ virsh net-define maas.xml
 <pre><code class="language-nohighlight">virsh -c qemu+ssh://$USER@$VM_HOST_IP/system list --all
 </code></pre>
 <p>Here, <code>$USER</code> is a user on your VM host who is a member of the <code>libvirtd</code> Unix group on the VM host, and <code>$VM_HOST_IP</code> is the IP of your VM host.  <strong>Note</strong> that insufficient permissions for <code>$USER</code> may cause the <code>virsh</code> command to fail with an error such as <code>failed to connect to the hypervisor</code>. Check the <code>$USER</code> group membership to make sure <code>$USER</code> is a member of the <code>libvirtd</code> group.</p>
-<p><a href="#heading--adding-a-vm-host"><h2 id="heading--adding-a-vm-host">How to add a VM host</h2></a></p>
 <p><strong>NOTE:</strong> 
 MAAS will automatically discover and store the resources your VM host contains. Any existing machines will also appear on the &lsquo;Machines&rsquo; page, and MAAS will automatically attempt to commission them.</p>
 <p><a href="#heading--configuration"><h2 id="heading--configuration">How to configure a VM host</h2></a></p>
