@@ -76,7 +76,7 @@ To assign a machine to a zone:
 
 5. Select *Set zone for machine* to register your changes.
 
-You can also change the zone for a machine under *Machines >> <machine-name> >> Configuration >> Edit*.
+You can also change the zone for a machine under *Machines >> "machine-name" >> Configuration >> Edit*.
 
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
