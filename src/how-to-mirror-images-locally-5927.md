@@ -30,13 +30,17 @@ Previously there was only one MAAS stream available, daily. This stream has been
 
 <a href="#heading--changing-the-stream"><h2 id="heading--changing-the-stream">How to change the stream with the UI</h2></a>
 
-To switch to the candidate stream simply select "custom" on the images page, set the URL to `http://images.maas.io/ephemeral-v3/candidate`, and click "Connect"
+To switch to the candidate stream:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0588c8d2e5792edad3f53e90e38e9990a6d86d9a.jpeg"></a>
+1. Select *Images*.
 
-MAAS uses the stable stream by default. To switch back to it simply select `maas.io` on the images page
+2. Select *Custom*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5e20342f04e30f96ac0e29a5bd3117aa71dacd40.jpeg"></a>
+3. Set the *URL* to `http://images.maas.io/ephemeral-v3/candidate`.
+
+4. Select *Connect*.
+
+MAAS uses the stable stream by default. To switch back to the stable stream, simply repeat the above procedure, but set the *URL* to `maas.io`.
 
 <a href="#heading--changing-stream-with-cli"><h2 id="heading--changing-stream-with-cli">How to change the stream with the CLI</h2></a>
 
