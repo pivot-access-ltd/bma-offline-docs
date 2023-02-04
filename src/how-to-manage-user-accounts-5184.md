@@ -11,9 +11,7 @@ Additionally, in order for a user to log into a MAAS-deployed machine that user 
 
 [tabs]
 [tab version="v3.3 Snap,V3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-You can manage user accounts from the 'Users' tab of the 'Settings' page.
-
-<a href="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/76402e4b-manage-user-accounts__2.4_current-users.png"></a>
+You can manage user accounts from *Settings >> Users*.
 
 [note]
 A currently logged in user cannot delete themselves from the web UI.
@@ -47,11 +45,15 @@ Note that you do not need line continuations within the `jq` command because it'
 
 [tabs]
 [tab version="v3.3 Snap,V3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-Clicking the 'Add user' button will result in a form to be displayed:
+To add a user:
 
-<a href="https://assets.ubuntu.com/v1/1c59c2c5-manage-user-accounts__2.4_add-user.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/1c59c2c5-manage-user-accounts__2.4_add-user.png"></a>
+1. Go to *Settings >> User*.
 
-Fill in the fields and hit 'Add user' when done.
+2. Select *Add user*.
+
+3. Fill in the fields in the displayed form.
+
+4. Click *Add user* to register your changes.
 
 <a href="#heading--user-preferences"><h2 id="heading--user-preferences">How to change a user's preferences</h2></a>
 
@@ -85,11 +87,19 @@ The user normally imports their initial SSH key on the first login to the web UI
 
 [tabs]
 [tab version="v3.3 Snap,V3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To add a locally-generated public key, select 'Upload' from the 'Source' menu and paste the complete contents of your key file, usually called `id_rsa.pub`, into the 'Public key' field. Click 'Import' to add the key to MAAS.
+To add a locally-generated public key to a user:
 
-Public keys residing on either [Launchpad](https://help.launchpad.net/YourAccount)`↗` or [GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/)`↗` can also be added. Select either from the 'Source' menu and specify the user ID associated with the key(s). Press the 'Import' button to add any keys MAAS discovers to the current user's MAAS account.
+1. Select *Settings >> Users*.
 
-<a href="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/fc95765e-manage-user-accounts__2.4_add-user-ssh-key.png"></a>
+2. Select the pencil icon to the right of the user that needs the additional key.
+
+3. Select *Import SSH key*.
+
+4. Select *Upload* from the *Source* dropdown and paste the complete contents of the key file, usually called `id_rsa.pub`.
+
+5. Alternatively, you can select *Launcpad* or *GitHub*, if you want to load a SSH key from there.  You will need to enter the user ID associated with the key.
+
+6. Select *Import SSH key* to register your changes.
 
 <a href="#heading--api-key"><h3 id="heading--api-key">How to add an API key for a user</h3></a>
 
@@ -104,9 +114,21 @@ We recommend that you use the web UI to set or change a user's API key.  To see 
 
 [tabs]
 [tab version="v3.3 Snap,V3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-The current user can change their password at the bottom of the page by entering the old password and entering the new password twice. Click 'Save password' to finish.
+The current user can change their password with the following procedure:
 
-<a href="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/289ef578-manage-user-accounts__2.4_change-user-password.png"></a>
+1. Select *Settings >> Users*.
+
+2. Select the pencil icon to the far right of the username.  A *Details* screen should appear.
+
+3. Select *Change password...* at the bottom of the screen. The screen will extend.
+
+4. Enter the *Current password*.
+
+5. Enter the *New password*.
+
+6. Enter the *New password (again)*.  Note that both new password entries must match.
+
+7. Select *Save* to register the changes.
 
 [note]
 An administrator can change any user's password from within the 'Users' tab of the 'Settings' page.
