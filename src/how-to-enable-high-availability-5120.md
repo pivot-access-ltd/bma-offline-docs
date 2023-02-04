@@ -51,9 +51,17 @@ If you are enabling DHCP for the first time after adding a second rack controlle
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-Access the appropriate VLAN (via the 'Subnets' page) and choose action 'Reconfigure DHCP'. There, you will see the second rack controller in the 'Secondary controller' field. All you should have to do is press the 'Reconfigure DHCP' button:
+To reconfigure DHCP for multiple rack controllers:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/c2fe0e3d5a663ac7dda0ed33b7591c4a6dfaff20.jpeg"></a>
+1. Select *Subnets*.
+
+2. Select the appropriate VLAN.
+
+3. Choose *Reconfigure DHCP*.
+
+4. Confirm that you can see the second rack controller under *Secondary controller*.
+
+5. Select *Reconfigure DHCP*.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To reconfigure DHCP after adding a new rack controller, use the following sequence of commands:
