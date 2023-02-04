@@ -120,9 +120,7 @@ If you’re using the snap, the certificate and key must be placed in a director
 
 <a href="#heading--ui-changes"><h2 id="heading--ui-changes">How to check whether TLS is enabled</h2></a>
 
-There is a new "Security" subsection under "Configuration" that will indicate the status of TLS in the specific server (enabled or disabled).
-
-When TLS is enabled, the following certificate information is displayed in *Settings >> Configuration >> Security** 
+When TLS is enabled, the following certificate information is displayed in the MAAS UI under *Settings >> Configuration >> Security*: 
 
 - CN 
 - Expiration date
