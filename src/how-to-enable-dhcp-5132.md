@@ -49,16 +49,24 @@ MAAS-managed DHCP needs a reserved dynamic IP range to enlist and commission mac
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To enable MAAS-managed DHCP, under the 'Subnets' page select the desired VLAN and then:
+To enable MAAS-managed DHCP:
 
-1.  Under the 'Take action' button select 'Provide DHCP'. A new window will appear.
-2.  Select the primary rack controller. For DHCP HA, select both the primary and the secondary.
-3.  Create a reserved, dynamic IP range. Fill in the fields 'Dynamic range start IP' and 'Dynamic range end IP'.
-4.  Apply your changes with the 'Provide DHCP' button.
+1. Select *Subnets*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/6727ac9a78a11e0ec602a5cb646a5776eff67677.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6727ac9a78a11e0ec602a5cb646a5776eff67677.png"></a>
+2. Select the desired VLAN.
 
-Now, addresses in this range will get assigned to machines that are being either enlisted or commissioned.  In addition, if you are deploying a machine that has an interface connected to the untagged VLAN, and it has an IP assignment mode set to 'DHCP,' then it will also get an address in this range.
+3. Select *Configure DHCP*.  You will see a new screen.
+
+4. The options *MAAS provides DHCP* and *Provide DHCP from a rack controller* will be pre-selected.
+
+5. If you accept these options, you may need to choose a *Rack controller*.
+
+6. If you choose *Relay to another VLAN*, you will need to choose the target VLAN.
+
+7. Under *Reserved dynamic range*, you may have to select a subnet from the dropdown.
+
+8. You will need to select *Configure DHCP* for your changes to be registered with MAAS.
+
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To enable DHCP on a VLAN on a certain fabric:
@@ -179,11 +187,33 @@ Modifications made directly to `dhcpd.conf.template` or `dhcpd6.conf.template` a
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To manage snippets, as an admin, open the 'Settings' page and click on the 'DHCP snippets' tab.
+To manage snippets:
 
-For example, to create a new snippet press 'Add custom snippet'. In the resulting window, choose a name and type for it and enter its associated DHCP configuration. Click 'Save snippet' to apply the change, and make sure to activate the checkbox in the 'Enabled' column of the snippets list.
+1. Make sure you are logged in as an administrator.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a3247c726ed9e3e5d7a99becd89920e81aaa86f7.png"></a>
+2. Select *Settings >> DHCP snippets*.
+
+To search DHCP snippets, enter the text to match in *Search DHCP snippets*.  MAAS will progressively update the list of snippets as you type your search terms.
+
+To add a snippet:
+
+1. Select *Add snippet*.
+
+2. Enter the *Snippet name*.
+
+3. Optionally, check *Enabled* to enable the snippet now.  Note that MAAS will not apply the snippet unless it is enabled.
+
+4. Optionally, enter a *Description* for the snippet.
+
+5. Optionally, choose a *Type* for the snippet from the dropdown (defaults to *Global*).  This parameter sets the scope of the snippet.  Note that if you choose a type other than global, you may need to choose the specific scope.  For example, if you choose the *Subnet* type, you must identify the specific subnet to which this snippet applies.
+
+6. Enter the *DHCP snippet*.  This is not validated on entry.
+
+7. Select *Save snippet* to register your changes with MAAS
+
+To edit a snippet, select the pencil icon to the right of the snippet row and edit the fields as desired.
+
+To delete a snippet, select the trash can icon to the right of the snippet.  You will be asked to confirm; be aware that once confirmed, this action cannot be undone.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 When you create a snippet, MAAS enables it by default.
@@ -341,27 +371,26 @@ This section gives specific instructions about creating and managing IP ranges; 
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To create a range with the web UI, choose the "Subnets" option across the top:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/2bc3b241b917325dac57a42771a0f9cfeb411bde.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/2bc3b241b917325dac57a42771a0f9cfeb411bde.jpeg"></a>
+To create an IP range:
 
-In the "SUBNET" column, choose the subnet for which you want to create an IP range(s):
+1. Select *Subnets*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/051bf1e56a31c7e7dcb196b12ddf55435b3f0571.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/051bf1e56a31c7e7dcb196b12ddf55435b3f0571.jpeg"></a>
+2. In the *SUBNET* column, choose the subnet for which you want to create an IP range.
 
-Scroll down to "Reserved ranges" on the subnet screen and click on the "Reserve range" drop-down:
+3. Scroll down to *Reserved ranges*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a76e24de7c65d3553f853bc2b6a96671d756651b.jpeg"></a>
+4. Select *Reserve range* and choose either *Reserve range* or *Reserve dynamic range*. Note that if you choose a dynamic range, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. 
 
-Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. 
+5. A window will appear, allowing you to enter a *Start IP address* and *End IP address*
 
-When you choose either of those two options, a window will appear allowing you to enter start and end addresses for the range as well as a comment.
+6. If you didn't select a dynamic range, you may optionally enter a *Purpose* for the range.
 
-Below is an example window when creating a 'reserved range' (the windows are identical):
+6. Select *Reserve* to register your choices with MAAS.
 
-<a href="https://assets.ubuntu.com/v1/be85b7d6-installconfig-network-ipranges__2.4_add-reserved-iprange.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/be85b7d6-installconfig-network-ipranges__2.4_add-reserved-iprange.png"></a>
+To edit an IP range, click on the pencil icon to the right of a range and make changes as desired.  Be sure to *Save* your changes.
 
-Click the 'Reserve' button when done.
+To delete an IP range, click on the trash can icon to the right of a range.  You will be asked to confirm by selecting *Delete*; there is no undo.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 See [Concepts and terms](/t/maas-glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
