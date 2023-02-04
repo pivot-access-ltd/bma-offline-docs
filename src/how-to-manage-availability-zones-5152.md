@@ -16,41 +16,68 @@ You can find more theory about availability zones [elsewhere in this documentati
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
 
-To see a list of availability zones, choose "AZs" from the top menu:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/5ac446f2bda76276069fe5a1c302ff2acbf425a2.jpeg"></a>
+To see a list of availability zones, select *AZs* from the top tab bar.
 
 <a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">How to add an availability zone</h2></a>
 
-To create a zone, navigate to the 'AZs' page of the web UI and use the 'Add AZ' button. Enter a name for the zone and click 'Add AZ'.
+To create a zone:
 
-<a href="https://assets.ubuntu.com/v1/f4032f39-manage-zones__2.4_add-zone.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/f4032f39-manage-zones__2.4_add-zone.png"></a>
+1. Select *AZs*.
+
+2. Select *Add AZ*.
+
+3. Enter a *Name* for the zone.
+
+4. Optionally enter a *Description* for the zone.
+
+5. Select *Add AZ* to register your changes.
 
 <a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">How to edit an existing availability zone</h2></a>
 
-To edit a zone, on the 'AZs' page, select a zone and use the 'Edit' button:
+To edit a zone:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/cf5c2b91e0c3e97ec3f5a813c8a2ed85e9139e19.jpeg"></a>
+1. Select *AZs*.
 
-This selection allows you to change the name and description for the added (or edited) zone:
+2. Select an AZ by clicking on its name.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/11fb5b6c13609a7ef976aa301e02f43422080066.jpeg"></a>
+3. Select *Edit* on the far right.
+
+4. Update the *Name* for the zone, if desired.
+
+5. Optionally update the *Description* for the zone, if desired.
+
+6. Select *Update AZ* to register your changes.
 
 <a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">How to delete an existing availability zone</h2></a>
 
-To delete a zone, on the 'AZs' page, select a zone and use the 'Delete AZ' button. Doing so will also move any potential machine associations to the default zone.
+To delete a zone:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/afb0576940f2e20266dc907911f837378958a64a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/afb0576940f2e20266dc907911f837378958a64a.jpeg"></a>
+1. Select *AZs*.
+
+2. Select an AZ by clicking on its name.
+
+3. Select *Delete AZ* in the top right corner.
+
+4. Update the *Name* for the zone, if desired.
+
+5. Confirm by selecting the red *Delete AZ* button which appears.  Once you make this selection, the AZ will be deleted and no undo is possible.
 
 <a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">How to assign a machine to an availability zone</h2></a>
 
-To assign a machine to a zone, from the 'Machines' page, select a machine (or multiple machines) and choose 'Set zone' using the 'Take action' button:
+To assign a machine to a zone:
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/97db7cbfd8059d2c67566a065e08c56a20b58071.jpeg"></a>
+1. Select *Machines*.
 
-After selecting a zone hit the 'Set zone...' button to apply the change.
+2. Select one or more machines by clicking their checkboxes.
 
-You can also edit a machine's 'Configuration' page to change its zone.
+3. Select *Take action >> Set zone**.
+
+4. In the popup dialogue, choose the *Zone* from the dropdown.
+
+5. Select *Set zone for machine* to register your changes.
+
+You can also change the zone for a machine under *Machines >> <machine-name> >> Configuration >> Edit*.
+
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
