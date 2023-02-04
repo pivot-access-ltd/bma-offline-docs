@@ -148,4 +148,3 @@ See [How to search MAAS](/t/how-to-find-machines/5192) for more details on how t
 | **devices**:(=)                      | Devices                          | Dyn |     | Man |
 | **interfaces**:(=)                   | Interfaces                       | Dyn |     | Man |
 | **parent**:(=)                       | Parent node                      | Dyn | Grp | Man |
-
