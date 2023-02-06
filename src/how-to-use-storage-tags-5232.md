@@ -2,7 +2,7 @@
 This article explains:
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to create and assign block device tags](#heading--create-and-assign-block-device-tags)
 - [How to remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
 - [How to list block device and partition tags](#heading--list-block-device-and-partition-tags)
@@ -11,100 +11,88 @@ This article explains:
 
 <a href="#heading--create-and-assign-block-device-tags"><h2 id="heading--create-and-assign-block-device-tags">How to create and assign block device tags</h2></a>
 
-In order to create and assign tags to a block device, the device has to be in an "available" state, with no active partitions. To create and assign tags to block devices:
+Remember: In order to create and assign tags to a block device, the device has to be in an "available" state, with no active partitions. 
 
-- Go to the machine list:
+To create and assign tags to block devices:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
+1. Select *Machines*.
 
-- Select that machine that has the block-device you want to tag:
+2. Select the machine that has the block device you want to tag.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
+3. Select *Storage*.
 
-- Click on the "Storage" tab and focus on the block labelled "Available disks and partitions:"
+4. Scroll to *Available disks and partitions*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
+5. Select the *Edit...* option at the right end of the row for the block device you want to tag (the wording may vary).
 
-- Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
+6. Add *Tags* as desired.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a>
-
-- Add tags as desired.
-
-- Be sure to click on the "Save" button when you're done.
+7. Register your changes by selecting *Save*.
 
 <a href="#heading--remove-and-delete-block-device-tags"><h2 id="heading--remove-and-delete-block-device-tags">How to remove and delete block device tags</h2></a>
 
-In order to remove tags from a block device, the device has to be in an "available" state, with no active partitions. To remove and delete tags from a block devices:
+Remember: In order to create and assign tags to a block device, the device has to be in an "available" state, with no active partitions. 
 
-- Go to the machine list:
+To create and assign tags to block devices:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
+1. Select *Machines*.
 
-- Select that machine that has the block-device with the tag you want to remove:
+2. Select the machine that has the block device you want to tag.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
+3. Select *Storage*.
 
-- Click on the "Storage" tab and focus on the block labelled "Available disks and partitions:"
+4. Scroll to *Available disks and partitions*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/0b78891d0933af01489304c778c6168f2c6776f9.png"></a>
+5. Select the *Edit...* option at the right end of the row for the block device you want to tag (the wording may vary).
 
-- Click the drop-down arrow at the right end of the row containing the block device you want to tag. Choose the "Edit..." option (the wording may vary, e.g, "Edit physical..."). This will take you to an editing screen for that block device:
+6. Remove *Tags* by selecting the *X* on the tag name.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/2912877532c3ea0b744ff3c88c7ef2046598bebc.png"></a>
+7. Register your changes by selecting *Save*.
 
-- Delete tags by clicking the "X" next to them.
-
-- Be sure to click on the "Save" button when you're done.
 
 <a href="#heading--list-block-device-and-partition-tags"><h2 id="heading--list-block-device-and-partition-tags">How to list block device and partition tags</h2></a>
 
 To see block device and partition tags in the UI, you can list all storage links by using the filter tool on the machine list.  Here's how:
 
-- Go to the machine list:
+1. Select *Machines*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
+2. Select *Filters >> Storage tags* from the dropdown.
 
-- Select the "Filters" drop-down and open the section titled "Storage tags:"
+3. Select the tags you wish to filter against.  The screen will immediately narrow to match your selections.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c03216c0c2b6097f73b8161922b602aac4fdc3d6.png"></a>
-
-Here you will see a list of all block device and partition tags currently assigned to machines in this MAAS.  If you wish to filter the machine list by a given tag, just make sure that it's checked (and other storage tags unchecked) in the filter list.
+4. Uncheck tags to return to the previous view.
 
 <a href="#heading--view-block-device-tags"><h2 id="heading--view-block-device-tags">How to view block device tags</h2></a>
 
 To view all tags associated with block devices on a given machine:
 
-- Go to the machine list:
+1. Select *Machines*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
+2. Select the machine you want to examine.
 
-- Select that machine that has the block device that interests you:
+3. Select *Storage*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
+4. Scroll down to *Available disks and paritions*.
 
-- Click on the "Storage" tab and check the page for tags:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
+You can view the various storage tags in this table.
 
 <a href="#heading--view-partition-tags"><h2 id="heading--view-partition-tags">How to view partition tags</h2></a>
 
 To view all tags associated with partitions on a given machine:
 
-- Go to the machine list:
+To view all tags associated with block devices on a given machine:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/c/c4069963ad134416ba8fe9e436317f48b8fa2f46.png"></a>
+1. Select *Machines*.
 
-- Select that machine that has the block device that interests you:
+2. Select the machine you want to examine.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9dc953000f245311b4e3f4751adb1d2973d0fe38.png"></a>
+3. Select *Storage*.
 
-- Click on the "Storage" tab and check the page for tags:
+4. Scroll down to *Available disks and paritions*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/feb789078b8f5f2f6f23acc056f8c037381d2cfc.png"></a>
-
+You can view the various storage tags in this table.
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 - [How to discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
 - [How to assign tags to a block device](#heading--assign-tags-to-a-block-device)
