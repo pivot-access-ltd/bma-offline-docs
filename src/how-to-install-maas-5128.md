@@ -391,11 +391,7 @@ sudo apt update
 sudo apt-get -y install maas
 ```
 
-Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
-
-Choosing "Y" proceeds with a standard <code>apt</code> package install.
+This command prints list of dependent packages to be installed, with a summary "continue" prompt; choose "Y" to preceed.
 
 <a href="#heading--Distributed-environment-2"><h4 id="heading--Distributed-environment-2">Distributed environment</h4></a>
 
@@ -671,11 +667,7 @@ sudo apt update
 sudo apt-get -y install maas
 ```
 
-Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
-
-Choosing "Y" proceeds with a standard <code>apt</code> package install.
+This command prints a list of dependent packages to be installed, with a summary "continue" prompt; choose "Y" to proceed.
 
 <a href="#heading--Distributed-environment-3"><h4 id="heading--Distributed-environment-3">Distributed environment</h4></a>
 
@@ -949,11 +941,7 @@ sudo apt update
 sudo apt-get -y install maas
 ```
 
-Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
-
-Choosing "Y" proceeds with a standard <code>apt</code> package install.
+This command prints a list of dependent packages to be installed, with a summary "continue" prompt; choose "Y" to proceed.
 
 <a href="#heading--Distributed-environment-4"><h4 id="heading--Distributed-environment-4">Distributed environment</h4></a>
 
@@ -1225,11 +1213,7 @@ The recommended way to set up an initial MAAS environment is to put everything o
 sudo apt-get -y install maas
 ```
 
-Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0eb9d0ed0711d3a6c548d44cf2ed48f49000a4b5.jpeg"></a>
-
-Choosing "Y" proceeds with a standard <code>apt</code> package install.
+This command prints a list of dependent packages to be installed, with a summary "continue" prompt; choose "Y" to proceed.
 
 <a href="#heading--Distributed-environment-6"><h4 id="heading--Distributed-environment-6">Distributed environment</h4></a>
 
