@@ -26,13 +26,9 @@ You can match exactly by using the equals sign ("=") with a filter fragment, or 
 
 To begin searching, enter your search text. As you type, MAAS will update search results in real time. You can search across virtually every parameter, including domain, name, tag, power type, IP, status, zone, and so on.
 
-<a href="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/ccb90c91-manage-search__2.5_searchbar.png"></a>
-
 <a href="#heading--filtered-searches"><h2 id="heading--filtered-searches">How to do filtered searches</h2></a>
 
 Filter your searches to major categories by selecting one from the Filters drop-down menu next to the search bar.
-
-<a href="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/6ac5b4ec-manage-search__2.5_filters.png"></a>
 
 For example, to find all "New" machines containing the name or tag 'quail', select Status/New from the drop-down Filters menu, and then type the word 'quail' next to it:
 
