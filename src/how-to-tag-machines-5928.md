@@ -17,21 +17,21 @@ In general, names that do not conform to these rules cannot be created.
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
 Automatic tags are tags with a definition. The definition allows you to auto-apply tags to machines that match with an [XPath expression](#heading--xpath-expressions) you created. Setting up an automatic tag will help you recognise special hardware characteristics and settings. For instance, we can configure the gpu passthrough by creating an XPath expression that recognises a prospective GPU, as shown in the example below.  
 
-In our REST API, a tag has 4 attributes namely, name, definition, kernel options, and comment. The example below shows you how to fill in the definition attribute to create an automatic tag.  In this case, we are tagging all machines that have Intel VT-d enabled and have a Tesla v100 PCIe 16GB GPU:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/b40bc145f3129b257ba49bda53442f1b63c7b229.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a>
-
-When this tag is created, our REST API will try to match all machines with this definition and automatically apply the `gpgpu-tesla-v-100` tag to those machines. Every time a new machine is discovered in your MAAS, if new machines match this definition, they will be automatically tagged as well.
+In the MAAS REST API, a tag has 4 attributes namely, name, definition, kernel options, and a comment. When this tag is created, the MAAS REST API will try to match all machines with this definition and automatically apply the tag to those machines. Every time a new machine is discovered in your MAAS, if new machines match this definition, they will be automatically tagged as well.
 
 <a href="#heading--xpath-expressions"><h2 id="heading--xpath-expressions">About XPath expressions</h2></a>
 
 MAAS automatic tags accept XPath expressions in the definition attribute of the tag. XPath expressions are evaluated against `lshw`'s XML output; they are used to locate elements or attributes of the XML document for use in configuring automatic tags. You can use the lshw output in the hardware configuration details of a machine in MAAS and use that to create an XPath expression. 
 
-<a href="#heading--xpath-hardware-config-info"><h3 id="heading--xpath-hardware-config-info">Hardware configuration information</h3></a>
+<a href="#heading--xpath-hardware-config-info"><h3 id="heading--xpath-hardware-config-info">How to download hardware configuration information</h3></a>
 
-You can download your HW configuration information in the XML format by going to the machine details page of any allocated or deployed machines.  Choose Logs >> Installation output >> Download >> Machine output (XML) to capture these details:
+To download hardware configuration information in XML format:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/387b8b6a7ded18e523c818500d79f0d657868b87.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/387b8b6a7ded18e523c818500d79f0d657868b87.png"></a>
+1. Select *Machines*.
+
+2. Select a machine which is allocated or deployed.
+
+3. Select *Logs >> Installation output >> Download >> Machine output (XML)*.
 
 You can [learn more about these attributes](https://ezix.org/project/wiki/HardwareLiSter)`↗` if desired.  Note that:
 
@@ -39,11 +39,7 @@ You can [learn more about these attributes](https://ezix.org/project/wiki/Hardwa
 * The size of a node is always equal to its capacity
 * Serial refers to the device’s serial number, but is used to report the MAC address for network devices, GUID for disk partition.
 
-<a href="#heading--device-classes"><h3 id="heading--device-classes">Device classes</h3></a>
-
-You can also find device classes from the same sources:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/7368ba42d0d34571447dbb6830b363abace580bb.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7368ba42d0d34571447dbb6830b363abace580bb.png"></a>
+You can also find device classes from the same sources. 
 
 <a href="#heading--node-capabilities"><h3 id="heading--node-capabilities">Capabilities</h3></a>
 
@@ -61,17 +57,23 @@ If there are multiple tags associated with a machine, the kernel options will be
 
 <a href="#heading--how-to-create-automatic-tags"><h2 id="heading--how-to-create-automatic-tags">How to create automatic tags</h1></a>
 
-You can create an automatic tag by going to the `Tag` tab and click `Create new tag`. A tag is considered automatic when the definition field is filled with an XPath expression. The current version of our UI will only validate if your XPath expression is valid or not, but it will not show you which machines it will apply to before you create the tag.
+To create automatic tags:
 
-Here is a thumbnail sketch of how automatic tags work:
+1. Select *Machines*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/fb003af31284581af931868daff1d735b6a52336.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/fb003af31284581af931868daff1d735b6a52336.png"></a>
+2. Select *Tags*.
 
-When you choose to create a new tag, you are presented with a screen similar to this one:
+3. Select *Create new tag*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/e56224d790144ba30199f37370437d63aed09cd3.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e56224d790144ba30199f37370437d63aed09cd3.png"></a>
+4. Enter the *Tag name*.
 
-While creating the tag, you also have an option to add kernel options to an automatic tag. Bear in mind that if a machine has multiple tags, it will be tagged alphabetically and the kernel option from the last tag will be applied to that machine. 
+5. Optionally enter a *Comment*.
+
+6. Optionally enter *Kernel options*.
+
+7. Enter an XPath-based *Definition*.  A tag is considered automatic when the definition field is filled with an XPath expression. The current version of our UI will only validate if your XPath expression is valid or not, but it will not show you which machines it will apply to before you create the tag.
+
+8. Select *Save* to register your changes.
 
 Once an automatic tag is created the screen will initially show that 0 machines are tagged. That is because MAAS is running a background task to auto-apply the tag to matching machines. It can take some time to see that the number of machines tagged is populating. 
 
@@ -81,51 +83,59 @@ Kernel options will be applied at boot time. So by default kernel options will n
 
 <a href="#heading--how-to-update-automatic-tags"><h2 id="heading--how-to-update-automatic-tags">How to update the definition of a tag</h2></a>
 
-To update the definition for the automatic tag, go to the ‘Tag’ tab and click the edit icon:
+1. Select *Machines*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/011d3179b7128fc1bee33a7368ca18267fe92c76.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/011d3179b7128fc1bee33a7368ca18267fe92c76.png"></a>
+2. Select *Tags*.
 
-This will open up the form and allow you to make changes in edit mode:
+3. Select the pencil icon on the right end of the tag's row.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/1/1f4a8159dc08a0b013df323fbf88dcf80b932e3e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/1f4a8159dc08a0b013df323fbf88dcf80b932e3e.png"></a>
+4. Edit the *Definition*.
 
-If the new definition is not a valid XPath expression, MAAS will generate an error:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/f/f8dff191b24ac07338c9c6e33d8a03e7e5001c46.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f8dff191b24ac07338c9c6e33d8a03e7e5001c46.png"></a>
+5. Select *Save* to register your changes.
 
 Keep in mind that when a new definition is updated, MAAS will re-tag all the machines that match with the new definition. This can take some time, since it is a background process. 
 
-<a href="#heading--update-tag-kernel-options"><h2 id="heading--update-tag-kernel-options">How to update the kernel option on a Tag</h2></a>
+<a href="#heading--update-tag-kernel-options"><h2 id="heading--update-tag-kernel-options">How to update the kernel options on a tag</h2></a>
 
-Kernel options can exist for both manual and automatic tags. However, they will be applied during boot time (commissioning and deploying).  To update the kernel options, go to the ‘Tag’ tab and click the edit icon. Update the text area in the kernel option in this form:
+To update the kernel options on a tag:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/24ba6c81862981fdb7739cf61f2936b5204378e7.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/24ba6c81862981fdb7739cf61f2936b5204378e7.png"></a>
+1. Select *Machines*.
+
+2. Select *Tags*.
+
+3. Select the pencil icon on the right end of the tag's row.
+
+4. Edit the *Kernel options*.
+
+5. Select *Save* to register your changes.
+
+Kernel options can exist for both manual and automatic tags. However, they will be applied during boot time (commissioning and deploying).
 
 [note]
 If the tagged machines are deployed, the updated kernel option won’t apply until the machines are redeployed. We suggest that you release those machines prior to the update, then redeploy those machines when the kernel options of the tag are updated.
 [/note]
 
-<a href="#heading--unassign-tags-from-machines"><h2 id="heading--unassign-ags-from-machines">How to unassign tags from machines</h2></a>
+<a href="#heading--unassign-tags-from-machines"><h2 id="heading--unassign-tags-from-machines">How to unassign tags from machines</h2></a>
 
-There are two ways to unassign tags. In the machine listing page, select all machines that you would like to unassign the tag then click ‘Tag’. A tag form is open. In the first field, ‘Tags’, click the x icon on the chip component to unassign the tags:
+To unassign tags from machines:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/721d2f6c087ffaa9022f9a15e18783f309a4a3d0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/721d2f6c087ffaa9022f9a15e18783f309a4a3d0.png"></a>
+1. Select *Machines*.
 
-Click "Remove" to unassign a tag:
+2. Select the checkbox(es) next to the machine(s) you wish to untag.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/9d0cd6b1a09f67237d48fb634c22b5f407c1ec4a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/9d0cd6b1a09f67237d48fb634c22b5f407c1ec4a.png"></a>
+3. Select *Take action >> Tag*.  A table of tags appears at the top of the screen.
 
-The numbers prescribed in the chip indicate the number of selected machines associated with that tag. You may click on the chip to view its information. After unassigning, click save to confirm the changes. 
+4. For each tag you wish to unassign, select *Remove*.  The text will change to *Discard* with an *X* to the right.
+
+5. If you want to undo a choice before saving, click the *X* to right of *Discard* to undo the proposed change.
+
+6. When you're satisfied with your new tag configuration, select *Save* to finalize and register your choice(s).
 
 [note]
 Automatic tags cannot be unassigned manually. You can either update or delete automatic tags.
 [/note]
 
-You can also unassign tags individually by going to the configuration tab on the machine details page; click the "X" icon to unassign the tag:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/8/8b4cb6617d2287eca7617c962578f90722ac2332.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/8/8b4cb6617d2287eca7617c962578f90722ac2332.png"></a>
-
-You may reassign the tag by typing or clicking on the text field to see existing tags. Note that the tag will be assigned to all selected machines. 
+You can also unassign tags individually by going to *Machines >> {machine-name} >> Configuration >> Tags >> Edit*. The *Tags* table functions exactly the same as what's described above.
 
 <a href="#heading--see-all-tagged-nodes"><h2 id="heading--see-all-tagged-nodes">How to see all tagged nodes</h2></a>
 
@@ -245,23 +255,29 @@ Tag management UI is available starting in MAAS v3.2.
 
 In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
 
-To remove a tag only from specific machines, go to the machine list and select the machines from which you want to remove that tag.  Choose the "Take action" button and select the "Tag" option:
+To create and assign a tag to specific machines:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/db90b855d4fb5eccc968d9a2375d3b187b619150.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/db90b855d4fb5eccc968d9a2375d3b187b619150.png"></a>
+1. Select *Machines*.
 
-On the screen that follows, enter the name of the new tag in the tag name box, without spaces:
+2. Select the checkbox next to the machines you wish to tag.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/a/a7538882ca97278fbf927e11ccdc43b7e796c882.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a7538882ca97278fbf927e11ccdc43b7e796c882.png"></a>
+3. Select *Take action >> Tag*.  A *Tag* dialogue will pop up at the top of the screen.
 
-A modal dialog pops up, giving you the opportunity to enter a name, comments, and kernel options for the new tag:
+4. In the box labeled *Search existing or add new tags*, enter the name for your proposed tag (e.g., *{tag-name}*).
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3a064e0677857fb6476b6bf60382eb3a34a602de.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3a064e0677857fb6476b6bf60382eb3a34a602de.png"></a>
+5. Select *Create tag {tag-name}*, under the *Search...* box.  A modal dialogue box pops up; *{tag-name}* will automatically populate the *Tag name* field.
 
-Select "Create and add to tag changes"; you will be returned to the previous screen, with a special row labeled "To be added":
+6. Optionally enter a *Comment*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/e/ec92304c819bdc697b5b42fc6245326c76d19300.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/ec92304c819bdc697b5b42fc6245326c76d19300.png"></a>
+7. Optionally enter some *Kernal options*.
 
-If the tag to be added looks correct, select "Save" to save and implement your changes.
+8. Select *Create and add to tag changes*.  You will be returned to the previous screen; note that your changes have not yet been registered with MAAS.
+
+9. If you wish to abaondon this new tag without assigning it, select *Discard X* to the right of the new tag name.  It will disappear from the list.
+
+10. If you're happy with the new tag(s), select *Save* to apply your changes to the selected machines.  You'll be returned to *Machines*.
+
+You can confirm your changes by hovering over the *Tags* list in the *Machines* screen.
 
 <a href="#heading--delete-and-remove-tags"><h2 id="heading--delete-and-remove-tags">How to delete and remove tags</h2></a>
 
@@ -269,31 +285,33 @@ You have two choices when it comes to eliminating tags from machines in your MAA
 
 <a href="#heading--delete-from-all-machines"><h3 id="heading--delete-from-all-machines">Deleting tags from all machines at once</h3></a>
 
-To delete tags from all machines at the same time, go to the "Tags" tab in the machine list and click the trash can icon next to the tag you'd like to delete:
+To delete tags from all machines:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/b/bdb87e9731694b7b68b135fd77114fab19823012.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/bdb87e9731694b7b68b135fd77114fab19823012.png"></a>
+1. Select *Machines*.
 
-A confirmation screen will pop up, warning you that you are about to remove the tag from all machines.  To confirm your choice, select the "Delete" button, or cancel if you change your mind:
+2. Select *Tags*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/2/200020d67b7324fc55482604d4dae0eee16d0b42.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/200020d67b7324fc55482604d4dae0eee16d0b42.png"></a>
+3. Select the trash can icon to the right of the tag you'd like to delete.  A warning dialogue will pop up at the top of the screen.
 
-The tag will be deleted from the system altogether, and removed from every machine to which it was assigned.
+4. Select *Delete*.
+
+The tag will be unassigned from all machines and deleted.  There is no undo.
 
 <a href="#heading--remove-from-some-machines"><h3 id="heading--remove-from-some-machines">Removing a tag from specific machines</h3></a>
 
-To remove a tag only from specific machines, go to the machine list and select the machines from which you want to remove that tag.  Choose the "Take action" button and select the "Tag" option:
+To remove a tag only from specific machines:
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/d/db90b855d4fb5eccc968d9a2375d3b187b619150.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/db90b855d4fb5eccc968d9a2375d3b187b619150.png"></a>
+1. Select *Machines*.
 
-[note]
-You may not remove automatic tags using this screen.
-[/note]
+2. Select the checkbox next to each machine from which you want the tag removed.
 
-Click the trash can icon ("Remove") next to the tags you with to remove from these particular machines:
+3. Select *Take action >> Tag*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/9/988417aa224e34e627135cd0374a50eba34b0eab.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/988417aa224e34e627135cd0374a50eba34b0eab.png"></a>
+4. For each tag you wish to unassign, select *Remove*.  The text will change to *Discard* with an *X* to the right.
 
-The tag will be removed from the selected machines.
+5. If you want to undo a choice before saving, click the *X* to right of *Discard* to undo the proposed change.
+
+6. When you're satisfied with your new tag configuration, select *Save* to finalize and register your choice(s).
 
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
@@ -303,35 +321,29 @@ In the MAAS UI, creating and assigning tags is a combined operation; that is, yo
 
 The process for creating and assigning tags in the UI is generally the same for all tag types:
 
-1. Place the cursor in the "Tags" box, wherever it is located on the screen, and type the name of the new tag:
+1. Place the cursor in the *Tags* box.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a>
+2. Type the name of the new tag.
 
-2. Hit the return key to add the new tag:
+3. Press the return key to add the new tag.  The auto complete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3d151d772aae0f8688d0a40e71cfb3c97bc6e8fc.png"></a>
-
-The auto complete list will re-appear after you've entered the tag, in case you'd like to enter another tag.
-
-3. When you're done, click on the appropriate completion button to complete the operation.
+4. When you're done, select the appropriate completion button to register your changes.
 
 The tag you just entered will now be added to the tag auto complete list, in alphabetical order, for re-use with other machines.
 
 <a href="#heading--delete-and-remove-tags"><h2 id="heading--delete-and-remove-tags">How to delete and remove tags</h2></a>
 
-With the MAAS UI, you remove tags, rather than explicitly deleting them.  Tags are "deleted" when you have removed them from all machines.   
+With the MAAS UI, you remove tags, rather than explicitly deleting them.  Tags are "deleted" when you have removed them from all machines.
 
 To remove (unassign) a tag:
 
-1. Find the "Tags" box, wherever it is located on the screen:
+1. Find the *Tags* box.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/7/7be5f2bebbba9a09f70a7dea092d091ef45228e2.png"></a>
+2. Click the *X* next to the tag you wish to remove.
 
-2. Click the "X" next to the tag you wish to remove.
+3. When you're done, select the appropriate completion button to register your changes.
 
-3. When you're done, click on the appropriate completion button to complete the operation.
-
->Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
+Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How to create a tag</h2></a>
