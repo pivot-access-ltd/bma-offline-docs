@@ -306,7 +306,9 @@ To create and assign a controller tag:
 
 5. Select the *Tags* field.
 
-6. Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
+6. Enter a new tag(s) to assign it to the controller.
+
+7. Select *Save changes* to register your new tag(s).
 
 <a href="#heading--remove-and-delete-controller-tags"><h2 id="heading--remove-and-delete-controller-tags">How to remove and delete controller tags</h2></a>
 
@@ -322,7 +324,9 @@ To remove (and possibly delete) a controller tag:
 
 5. Select the *Tags* field.
 
-6. Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
+6. Select the *X* on the tag name to delete it.
+
+7. Select *Save changes* to register your changes.
 
 <a href="#heading--view-controller-tags"><h2 id="heading--view-controller-tags">How to view controller tags</h2></a>
 
@@ -331,5 +335,7 @@ To remove (and possibly delete) a controller tag:
 2. Select the controller you wish to tag.
 
 3. At the bottom left of the top card, view the *Tags >* associated with this controller.
+
+4. Select *Cancel* to dismiss this screen.
 [/tab]
 [/tabs]
