@@ -2,7 +2,7 @@
 This article will show you:
 
 [tabs]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 - [How to discover the ID of your region controller(s)](#heading--discover-the-id-of-your-region-controllers)
 - [How to assign tags to a region controller](#heading--assign-tags-to-a-region-controller)
@@ -287,66 +287,49 @@ hostname                     sysid   tags
 bill-Lenovo-Yoga-C740-15IML  86xya8  virtual  lxd-vm-host
 ```
 [/tab]
-[tab version="v3.2 Snap,v3.3 Snap,v3.2 Packages,v3.3 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to create and assign controller tags ](#heading--create-and-assign-controller-tags-)
 - [How to remove and delete controller tags](#heading--remove-and-delete-controller-tags)
 - [How to view controller tags](#heading--view-controller-tags)
 
 <a href="#heading--create-and-assign-controller-tags-"><h2 id="heading--create-and-assign-controller-tags-">How to create and assign controller tags </h2></a>
 
-To create and assign a controller tag, you can use the following procedure:
+To create and assign a controller tag:
 
-- Click on the "Controllers" tab to open the controllers page:
+1. Select *Controllers*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
+2. Select the controller you wish to tag.
 
-- Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
+3. At the bottom left of the top card, select *Tags >*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
+4. Select *Controller configuration >> Edit*.
 
-- Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
+5. Select the *Tags* field.
 
-- Click on the "Edit" button for "Controller configuration."
-You'll be presented with an editing screen similar to this one:
- 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
-
-- Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
+6. Follow the [general procedure](#heading--create-and-assign-tags) to assign a tag to the controller.
 
 <a href="#heading--remove-and-delete-controller-tags"><h2 id="heading--remove-and-delete-controller-tags">How to remove and delete controller tags</h2></a>
 
-To remove (and possibly delete) a controller tag, you can use the following procedure:
+To remove (and possibly delete) a controller tag:
 
-- Click on the "Controllers" tab to open the controllers page:
+1. Select *Controllers*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
+2. Select the controller you wish to tag.
 
-- Click on the hyperlinked name of the controller to which you want to assign tags.  You will see a screen with several cards, like this one:
+3. At the bottom left of the top card, select *Tags >*.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
+4. Select *Controller configuration >> Edit*.
 
-- Find the "Tags" card and click on "Edit."  You will be brought to that controller's "Configuration" tab.
+5. Select the *Tags* field.
 
-- Click on the "Edit" button for "Controller configuration."
-You'll be presented with an editing screen similar to this one:
- 
-<a href="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/37401271d0ab3aa130127a251222e5eaf557b20c.png"></a>
-
-- Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
+6. Follow the [general procedure](#heading--delete-and-remove-tags) to remove a tag from the controller.
 
 <a href="#heading--view-controller-tags"><h2 id="heading--view-controller-tags">How to view controller tags</h2></a>
 
-To view a list of tags assigned to a particular controller, you can use the following procedure:
+1. Select *Controllers*.
 
-- Click on the "Controllers" tab to open the controllers page:
+2. Select the controller you wish to tag.
 
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-- Click on the hyperlinked name of the controller of interest..  You will see a screen with several cards, like this one:
-
-<a href="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/0/00c569161f52ed83349e8ec9e63b65fa8215f89f.png"></a>
-
-- Find the "Tags" card; this card will list all the tags assigned to this controller.
-
+3. At the bottom left of the top card, view the *Tags >* associated with this controller.
 [/tab]
 [/tabs]
