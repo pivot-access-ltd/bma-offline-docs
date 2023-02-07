@@ -77,6 +77,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Mirror images locally](/t/-/5927)
 - [Build custom images](/t/-/5104)
 - [Employ VMWare images](/t/-/5144)
+- [Deploy a RT kernel](/t/-/6658)
 
 ### [How to tune controllers](/t/-/6498)
 
@@ -145,7 +146,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
-|https://discourse.maas.io/t/-/6510|/docs/how-to-diagnose issues|
+|https://discourse.maas.io/t/-/6658|/docs/how-to-deploy-an-rt-kernel-via-cloud-init|
+|https://discourse.maas.io/t/-/6510|/docs/how-to-diagnose-issues|
 |https://discourse.maas.io/t/-/6501|/docs/how-to-enable-vault|
 |https://discourse.maas.io/t/-/6502|/docs/how-to-unseal-vault|
 |https://discourse.maas.io/t/-/6503|/docs/how-to-protect-your-secrets|
