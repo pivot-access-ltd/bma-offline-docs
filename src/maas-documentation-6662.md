@@ -50,81 +50,81 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [/details]
 
 [details=Navigation items]
-| Level | Path                            | Navlink                                       |
-|-------|---------------------------------|-----------------------------------------------|
-| 0     | /                               | [MAAS documentation](/t/-/4315)               |
-| 0     |                                 |                                               |
-| 0     |                                 | [Tutorials](/t/-/6140)                        |
-| 1     |                                 | [MAAS bootstrap tutorial](/t/-/5092)          |
-| 1     |                                 | [Try out the MAAS CLI](/t/-/5236)             |
-| 1     |                                 | [Custom image tutorial](/t/-/6102)            |
-| 1     |                                 | [Using jq with the MAAS CLI](/t/-/6027)       |
-| 0     |                                 | [How-to guides](/t/-/6202)                    |
-| 1     |                                 | [How to get started with MAAS](/t/-/6202)     |
-| 2     |                                 | [Spin up MAAS with Ansible](/t/-/6367)        |
-| 2     |                                 | [Install MAAS](/t/-/5128)                     |
-| 2     |                                 | [Upgrade MAAS](/t/how-to-upgrade-maas/5436)   |
-| 2     |                                 | [Change MAAS settings](/t/-/6347)             |
-| 2     |                                 | [Ask for help](/t/-/5428)                     |
-| 2     |                                 | [Request a feature](/t/-/4447)                |
-| 2     |                                 | [Report a bug](/t/-/4446)                     |
-| 1     |                                 | [How to set up networks](/t/-/6174)           |
-| 2     |                                 | [Connect MAAS networks](/t/-/5164)            |
-| 2     |                                 | [Enable DHCP](/t/-/5132)                      |
-| 2     |                                 | [Manage zones (AZs)](/t/-/5152)               |
-| 1     |                                 | [How to acquire images](/t/-/6192)            |
-| 2     |                                 | [Use standard images](/t/-/5124)              |
-| 2     |                                 | [Mirror images locally](/t/-/5927)            |
-| 2     |                                 | [Build custom images](/t/-/5104)              |
-| 2     |                                 | [Employ VMWare images](/t/-/5144)             |
-| 2     |                                 | [Deploy a RT kernel](/t/-/6658)               |
-| 1     |                                 | [How to tune controllers](/t/-/6498)          |
-| 2     |                                 | [Adjust your controllers](/t/-/5172)          |
-| 2     |                                 | [Enable HA](/t/-/5120)                        |
-| 1     |                                 | [How to deploy physical machines](/t/-/6193)  |
-| 2     |                                 | [Make machines available](/t/-/5160)          |
-| 2     |                                 | [Customise machines](/t/-/5108)               |
-| 2     |                                 | [Put machines to work](/t/-/5112)             |
-| 1     |                                 | [How to deploy virtual machines](/t/-/6500)   |
-| 2     |                                 | [Set up LXD](/t/-/5208)                       |
-| 2     |                                 | [Create VM hosts](/t/-/5140)                  |
-| 2     |                                 | [Create and manage VMs](/t/-/5148)            |
-| 1     |                                 | [How to label and find machines](/t/-/6200)   |
-| 2     |                                 | [Tag machines](/t/-/5928)                     |
-| 2     |                                 | [Annotate machines](/t/-/5929)                |
-| 2     |                                 | [Use machine tags](/t/-/5224)                 |
-| 2     |                                 | [Use controller tags](/t/-/5216)              |
-| 2     |                                 | [Use storage tags](/t/-/5232)                 |
-| 2     |                                 | [Use network tags](/t/-/5228)                 |
-| 2     |                                 | [Find machines](/t/-/5192)                    |
-| 1     |                                 | [How to diagnose issues](/t/-/6510)           |
-| 2     |                                 | [Work with log files](/t/-/5240)              |
-| 2     |                                 | [Work with audit event logs](/t/-/5987)       |
-| 2     |                                 | [Troubleshoot MAAS](/t/-/5333)                |
-| 1     |                                 | [How to protect your secrets](/t/-/6503)      |
-| 2     |                                 | [Improve MAAS security](/t/-/5196)            |
-| 2     |                                 | [Enable MAAS native TLS](/t/-/5116)           |
-| 2     |                                 | [Set up an air-gapped MAAS](/t/-/5212)        |
-| 2     |                                 | [Manage user accounts](/t/-/5184)             |
-| 2     |                                 | [Enable Vault](/t/-/6501)                     |
-| 2     |                                 | [Unseal Vault](/t/-/6502)                     |
-| 0     |                                 | [Reference](/t/-/6502)                        |
-| 1     |                                 | [API reference](/t/-/6502)                    |
-| 2     |                                 | [API authentication](/t/-/5060)               |
-| 2     |                                 | [Python API client](/t/-/5404)                |
-| 2     |                                 | [API documentation](https://maas.io/docs/api) |
-| 1     |                                 | [Operational reference](/t/-/5404)            |
-| 2     |                                 | [Keep MAAS backed up](/t/-/5096)              |
-| 2     |                                 | [Observe a live MAAS](/t/-/5204)              |
-| 2     |                                 | [MAAS performance](/t/-/6178)                 |
-| 2     |                                 | [MAAS Terraform provider](/t/-/6327)          |
-| 1     |                                 | [MAAS technical reference](/t/-/6203)         |
-| 2     |                                 | [Commissioning scripts](/t/-/6605)            |
-| 2     | hardware-test-scripts-reference | [Hardware test scripts](/t/-/5392)            |
-| 2     | event-log-reference             | [Event logs](/t/-/5252)                       |
-| 2     | audit-event-log-reference       | [Audit event logs](/t/-/5256)                 |
-| 2     | power-management-reference      | [Power management](/t/-/5246)                 |
-| 2     | storage-layouts-reference       | [Storage layouts](/t/-/5973)                  |
+| Level | Path                                      | Navlink                                       |
+|-------|-------------------------------------------|-----------------------------------------------|
+| 0     | /                                         | [MAAS documentation](/t/-/6662)               |
+| 0     |                                           |                                               |
+| 0     | basic-tutorials                           | [Tutorials](/t/-/6140)                        |
+| 1     | maas-bootstrap-tutorial                   | [MAAS bootstrap tutorial](/t/-/5092)          |
+| 1     | try-out-the-maas-cli                      | [Try out the MAAS CLI](/t/-/5236)             |
+| 1     | custom-image-tutorial                     | [Custom image tutorial](/t/-/6102)            |
+| 1     | using-jq-with-the-maas-cli                | [Using jq with the MAAS CLI](/t/-/6027)       |
+| 0     |                                           | [How-to guides](/t/-/6202)                    |
+| 1     | how-to-get-started-with-maas              | [How to get started with MAAS](/t/-/6202)     |
+| 2     | how-to-spin-up-maas-with-ansible          | [Spin up MAAS with Ansible](/t/-/6367)        |
+| 2     | how-to-install-maas                       | [Install MAAS](/t/-/5128)                     |
+| 2     | how-to-upgrade-maas                       | [Upgrade MAAS](/t/how-to-upgrade-maas/5436)   |
+| 2     | how-to-change-maas-settings               | [Change MAAS settings](/t/-/6347)             |
+| 2     | how-to-ask-for-help                       | [Ask for help](/t/-/5428)                     |
+| 2     | how-to-request-a-feature                  | [Request a feature](/t/-/4447)                |
+| 2     | how-to-report-a-bug                       | [Report a bug](/t/-/4446)                     |
+| 1     | how-to-set-up-networks                    | [How to set up networks](/t/-/6174)           |
+| 2     | how-to-connect-maas-networks              | [Connect MAAS networks](/t/-/5164)            |
+| 2     | how-to-enable-dhcp                        | [Enable DHCP](/t/-/5132)                      |
+| 2     | how-to-manage-availability-zones          | [Manage zones (AZs)](/t/-/5152)               |
+| 1     | how-to-acquire-images                     | [How to acquire images](/t/-/6192)            |
+| 2     | how-use-standard-images                   | [Use standard images](/t/-/5124)              |
+| 2     | how-to-mirror-images-locally              | [Mirror images locally](/t/-/5927)            |
+| 2     | how-to-build-custom-images                | [Build custom images](/t/-/5104)              |
+| 2     | how-to-employ-vmware-images               | [Employ VMWare images](/t/-/5144)             |
+| 2     | how-to-deploy-an-rt-kernel-via-cloud-init | [Deploy a RT kernel](/t/-/6658)               |
+| 1     | how-to-tune-controllers                   | [How to tune controllers](/t/-/6498)          |
+| 2     | how-to-adjust-your-controllers            | [Adjust your controllers](/t/-/5172)          |
+| 2     | how-to-enable-high-availability           | [Enable HA](/t/-/5120)                        |
+| 1     | how-to-deploy-physical-machines           | [How to deploy physical machines](/t/-/6193)  |
+| 2     | how-to-make-machines-available            | [Make machines available](/t/-/5160)          |
+| 2     | how-to-customise-machines                 | [Customise machines](/t/-/5108)               |
+| 2     | how-to-put-machines-to-work               | [Put machines to work](/t/-/5112)             |
+| 1     | how-to-deploy-virtual-machines            | [How to deploy virtual machines](/t/-/6500)   |
+| 2     | how-to-set-up-lxd                         | [Set up LXD](/t/-/5208)                       |
+| 2     | how-to-create-vm-hosts                    | [Create VM hosts](/t/-/5140)                  |
+| 2     | how-to-create-and-manage-vms              | [Create and manage VMs](/t/-/5148)            |
+| 1     | how-to-label-and-find-machines            | [How to label and find machines](/t/-/6200)   |
+| 2     | how-to-tag-machines                       | [Tag machines](/t/-/5928)                     |
+| 2     | how-to-annotate-machines                  | [Annotate machines](/t/-/5929)                |
+| 2     | how-to-use-machine-tags                   | [Use machine tags](/t/-/5224)                 |
+| 2     | how-to-use-controller-tags                | [Use controller tags](/t/-/5216)              |
+| 2     | how-to-use-storage-tags                   | [Use storage tags](/t/-/5232)                 |
+| 2     | how-to-use-network-tags                   | [Use network tags](/t/-/5228)                 |
+| 2     | how-to-find-machines                      | [Find machines](/t/-/5192)                    |
+| 1     | how-to-diagnose-issues`                   | [How to diagnose issues](/t/-/6510)           |
+| 2     | how-to-work-with-log-files                | [Work with log files](/t/-/5240)              |
+| 2     | how-to-work-with-audit-event-logs         | [Work with audit event logs](/t/-/5987)       |
+| 2     | how-to-troubleshoot-maas                  | [Troubleshoot MAAS](/t/-/5333)                |
+| 1     | how-to-protect-your-secrets               | [How to protect your secrets](/t/-/6503)      |
+| 2     | how-to-improve-maas-security              | [Improve MAAS security](/t/-/5196)            |
+| 2     | how-to-enable-maas-native-tls             | [Enable MAAS native TLS](/t/-/5116)           |
+| 2     | how-to-set-up-an-air-gapped-maas          | [Set up an air-gapped MAAS](/t/-/5212)        |
+| 2     | how-to-manage-user-accounts               | [Manage user accounts](/t/-/5184)             |
+| 2     | how-to-enable-vault                       | [Enable Vault](/t/-/6501)                     |
+| 2     | how-to-unseal-vault                       | [Unseal Vault](/t/-/6502)                     |
+| 0     |                                           | [Reference](/t/-/6502)                        |
+| 1     |                                           | [API reference](/t/-/6502)                    |
+| 2     | api-authentication-reference              | [API authentication](/t/-/5060)               |
+| 2     | python-api-client-reference               | [Python API client](/t/-/5404)                |
+| 2     |                                           | [API documentation](https://maas.io/docs/api) |
+| 1     |                                           | [Operational reference](/t/-/5404)            |
+| 2     | how-to-keep-maas-backed-up                | [Keep MAAS backed up](/t/-/5096)              |
+| 2     | how-to-observe-a-live-maas                | [Observe a live MAAS](/t/-/5204)              |
+| 2     | maas-performance                          | [MAAS performance](/t/-/6178)                 |
+| 2     | maas-terraform-provider-reference         | [MAAS Terraform provider](/t/-/6327)          |
+| 1     | maas-technical-reference                  | [MAAS technical reference](/t/-/6203)         |
+| 2     | commissioning-scripts-tech-reference      | [Commissioning scripts](/t/-/6605)            |
+| 2     | hardware-test-scripts-reference           | [Hardware test scripts](/t/-/5392)            |
+| 2     | event-log-reference                       | [Event logs](/t/-/5252)                       |
+| 2     | audit-event-log-reference                 | [Audit event logs](/t/-/5256)                 |
+| 2     | power-management-reference                | [Power management](/t/-/5246)                 |
+| 2     | storage-layouts-reference                 | [Storage layouts](/t/-/5973)                  |
 [/details]
 
 ## Redirects
