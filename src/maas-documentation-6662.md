@@ -59,7 +59,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 1     | try-out-the-maas-cli                      | [Try out the MAAS CLI](/t/-/5236)             |
 | 1     | custom-image-tutorial                     | [Custom image tutorial](/t/-/6102)            |
 | 1     | using-jq-with-the-maas-cli                | [Using jq with the MAAS CLI](/t/-/6027)       |
-| 0     |                                           | [How-to guides](/t/-/6202)                    |
+| 0     | how-to-guides                             | [How-to guides](/t/-/6663)                    |
 | 1     | how-to-get-started-with-maas              | [How to get started with MAAS](/t/-/6202)     |
 | 2     | how-to-spin-up-maas-with-ansible          | [Spin up MAAS with Ansible](/t/-/6367)        |
 | 2     | how-to-install-maas                       | [Install MAAS](/t/-/5128)                     |
@@ -108,12 +108,12 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | how-to-manage-user-accounts               | [Manage user accounts](/t/-/5184)             |
 | 2     | how-to-enable-vault                       | [Enable Vault](/t/-/6501)                     |
 | 2     | how-to-unseal-vault                       | [Unseal Vault](/t/-/6502)                     |
-| 0     |                                           | [Reference](/t/-/6502)                        |
-| 1     |                                           | [API reference](/t/-/6502)                    |
+| 0     | reference                                 | [Reference](/t/-/6664)                        |
+| 1     | api-reference                             | [API reference](/t/-/6665)                    |
 | 2     | api-authentication-reference              | [API authentication](/t/-/5060)               |
 | 2     | python-api-client-reference               | [Python API client](/t/-/5404)                |
 | 2     |                                           | [API documentation](https://maas.io/docs/api) |
-| 1     |                                           | [Operational reference](/t/-/5404)            |
+| 1     | operational-reference                     | [Operational reference](/t/-/6666)            |
 | 2     | how-to-keep-maas-backed-up                | [Keep MAAS backed up](/t/-/5096)              |
 | 2     | how-to-observe-a-live-maas                | [Observe a live MAAS](/t/-/5204)              |
 | 2     | maas-performance                          | [MAAS performance](/t/-/6178)                 |
@@ -125,6 +125,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | audit-event-log-reference                 | [Audit event logs](/t/-/5256)                 |
 | 2     | power-management-reference                | [Power management](/t/-/5246)                 |
 | 2     | storage-layouts-reference                 | [Storage layouts](/t/-/5973)                  |
+| 0     | explanations                              | [Explanations](t/-/6667)                                              |
 [/details]
 
 ## Redirects
