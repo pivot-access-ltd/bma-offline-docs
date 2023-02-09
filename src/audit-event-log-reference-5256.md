@@ -3,7 +3,7 @@ Audit events are a subset of the MAAS event logs.  This article will provide ref
 
 <a href="#heading--about-maas-audit-events"><h2 id="heading--about-maas-audit-events">About MAAS audit events</h2></a>
 
-MAAS audit events can be viewed via the CLI with a command similar to the following:
+MAAS audit events can be viewed using the CLI with a command similar to the following:
 
 ```nohighlight
 maas $PROFILE events query level=AUDIT
