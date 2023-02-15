@@ -544,8 +544,6 @@ Supported bonding modes include:
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
-To create a bridge interface:
-
 1. Select *Machines*.
 
 2. Select a machine.
