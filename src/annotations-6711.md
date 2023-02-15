@@ -1,7 +1,3 @@
-various and sundry documentation tools
+<!-- "About annotations" -->
+Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
 
-v1.0 Beta 1: basic doctools needed to implement the RAD form of documentation for MAAS discourse doc, circa summer 2020
-
-v1.0 Beta 2: second cut at RAD tools, circa summer 2021
-
-v2.0: tools for updated RAD version, circa summer 2022
