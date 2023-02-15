@@ -419,8 +419,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>About events and event logs</h1><!-- "About events and event logs" -->
-
-<p>Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.</p>
+<p>Event logs display a list of timestamped status updates for events and actions performed on the machine.  Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.</p>
 <p>Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI <code>events query</code> command.  These three sources provide analogous (but somewhat different information). For example, consider the following log listing, obtained by doing a <code>grep "fun-zebra" *.log | grep "transition from"</code> in the MAAS log directory:</p>
 <pre><code class="language-nohighlight">maas.log:2022-09-29T15:04:07.795515-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from COMMISSIONING to TESTING
 maas.log:2022-09-29T15:04:17.288763-05:00 neuromancer maas.node: [info] fun-zebra: Status transition from TESTING to READY

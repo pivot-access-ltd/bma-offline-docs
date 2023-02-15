@@ -1,6 +1,5 @@
 <!-- "About events and event logs" -->
-
-Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
+Event logs display a list of timestamped status updates for events and actions performed on the machine.  Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
 
 Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI `events query` command.  These three sources provide analogous (but somewhat different information). For example, consider the following log listing, obtained by doing a `grep "fun-zebra" *.log | grep "transition from"` in the MAAS log directory:
 
