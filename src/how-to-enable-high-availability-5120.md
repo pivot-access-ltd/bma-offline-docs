@@ -13,7 +13,7 @@ With just one rack, most of the logic can't function.  On the other hand, when y
 
 Every time a rack controller connects to a region controller to do something, MAAS checks whether racks and regions are balanced.  If the ratio for one rack-region connection is above a moderate threshold, compared to other connections, MAAS will re-balance.  This activity includes balancing not only discrete region controllers, but also re-distributing connections so that no single worker process has an uneven share of the load.
 
-Rebalancing is also done at various other opportune times.  For example, if a network change happens (like toggling DHCP or changing a VLAN), MAAS will also re-balance the load.  And MAAS can maintain primary and secondary rack designations, so that faster, more nuanced load-balancing can occur.
+Re-balancing is also done at various other opportune times.  For example, if a network change happens (like toggling DHCP or changing a VLAN), MAAS will also re-balance the load.  And MAAS can maintain primary and secondary rack designations, so that faster, more nuanced load-balancing can occur.
 
 <a href="#heading--bmc-ha"><h3 id="heading--bmc-ha">How to enable highly-available BMC</h3></a>
 
@@ -21,7 +21,7 @@ You can also enable HA for BMC control (node power cycling) just by adding a sec
 
 <a href="#heading--dhcp-ha"><h3 id="heading--dhcp-ha">How to enable highly-available DHCP services</h3></a>
 
-You can enable highly-availalbe DHCP services by using MAAS-managed DHCP, and adding rack controllers.  This DHCP HA affects the way MAAS manages nodes, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers, so there's a bit of performance boost for large networks.
+You can enable highly-available DHCP services by using MAAS-managed DHCP, and adding rack controllers.  This DHCP HA affects the way MAAS manages nodes, including enlistment, commissioning and deployment. It enables primary and secondary DHCP instances to serve the same VLAN. This VLAN replicates all lease information is between rack controllers, so there's a bit of performance boost for large networks.
 
 MAAS DHCP automatically creates failover peers, using mostly standard parameters:
 
