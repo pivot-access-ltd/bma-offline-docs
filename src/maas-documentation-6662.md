@@ -159,7 +159,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | virtual-machines                          | [Virtual machines](/t/-/6704)                 |
 | 3     | vm-hosting                                | [VM hosting](/t/-/6705)                       |
 | 3     | about-lxd                                 | [About LXD](/t/-/6706)                        |
-| 3     | virtual-machines-and-maas                 | [Virtual machines and MAAS](/t/-/6707)        |
 | 3     | vms-and-numa-sr-iov                       | [VMs and NUMA/SR-IOV](/t/-/6708)              |
 | 2     | labelling-and-finding-machines            | [Labelling and finding machines](/t/-/6709)   |
 | 3     | about-tags                                | [About tags](/t/-/6710)                       |
