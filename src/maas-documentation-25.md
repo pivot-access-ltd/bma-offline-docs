@@ -44,10 +44,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [Home](/t/maas-documentation/25)
 
-- [Release notes](/t/-/5292)
-- [Installation requirements](/t/-/6233)
-- [Glossary](/t/-/5416)
-
 ### [Basic tutorials](/t/-/6140) 
 
 - [MAAS bootstrap tutorial](/t/-/5092)
@@ -60,7 +56,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Spin up MAAS with Ansible](/t/-/6367)
 - [Install MAAS](/t/-/5128)
 - [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
-- [Change MAAS settings](/t/-/6347)
 - [Ask for help](/t/-/5428)
 - [Request a feature](/t/-/4447)
 - [Report a bug](/t/-/4446)
@@ -120,6 +115,14 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Manage user accounts](/t/-/5184)
 - [Enable Vault](/t/-/6501)
 - [Unseal Vault](/t/-/6502)
+
+### General reference
+
+- [Release notes](/t/-/5292)
+- [Installation requirements](/t/-/6233)
+- [Settings](/t/-/6347)
+- [Glossary](/t/-/5416)
+- [Code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
 
 ### API reference
 
