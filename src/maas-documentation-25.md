@@ -142,6 +142,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### Explanation
 
+- [About MAAS](/t/-/6678)
 - [About networking](/t/-/6174)
 
 ## URLs
