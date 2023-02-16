@@ -65,7 +65,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Request a feature](/t/-/4447)
 - [Report a bug](/t/-/4446)
 
-### [How to set up networks](/t/-/6174)
+### [How to manage networking](/t/-/6742)
 
 - [Connect MAAS networks](/t/-/5164)
 - [Enable DHCP](/t/-/5132)
@@ -140,12 +140,16 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Storage layouts](/t/-/5973)
 - [MAAS Terraform provider](/t/-/6327)
 
+### Explanation
+
+- [About networking](/t/-/6174)
 
 ## URLs
 
 [details=Mapping table]
 | TOPIC | PATH |
 | -- | -- |
+|https://discourse.maas.io/t/-/6742|/docs/how-to-manage-networking|
 |https://discourse.maas.io/t/-/6658|/docs/how-to-deploy-an-rt-kernel-via-cloud-init|
 |https://discourse.maas.io/t/-/6510|/docs/how-to-diagnose-issues|
 |https://discourse.maas.io/t/-/6501|/docs/how-to-enable-vault|
