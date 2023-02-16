@@ -146,7 +146,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 1     | reference                        | [Reference](/t/-/4917)                             |
 | 2     | ref-general                      | [General](/t/-/4917)                               |
 | 3     | ref-release-notes                | [Release notes](/t/-/4917)                         |
-| 3     | ref-install-rqmts                | [Installation requirements              |
+| 3     | ref-install-rqmts                | [Installation requirements](/t/-/4917)             |
 | 3     | ref-settings                     | [Settings](/t/-/4917)                              |
 | 3     | ref-glossary                     | [Glossary](/t/-/4917)                              |
 | 3     | ref-code-of-conduct              | [Code of conduct](/t/-/4917)                       |
