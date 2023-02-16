@@ -61,201 +61,201 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | using-jq-with-the-maas-cli       | [Using jq with the MAAS CLI](/t/-/6027) |
 | 0     |                                  |                                         |
 | 1     | how-to-guides                    | [How-to](/t/-/4917)                     |
-| 2     | how-to-get-started-with-maas     | [Start](/t/-/4917)                      |
+| 2     | how-to-get-started-with-maas     | [Start](/t/-/6202)                      |
 | 3     | how-to-install-maas              | [Install](/t/-/4917)                    |
 | 3     | how-to-upgrade-maas              | [Upgrade](/t/-/4917)                    |
 | 3     | how-to-spin-up-maas-with-ansible | [Playbooks](/t/-/4917)                  |
 | 2     | how-to-set-up-networks           | [Networks](/t/-/4917)                   |
 | 3     | how-to-connect-maas-networks     | [Connections](/t/-/4917)                |
 | 3     | how-to-manage-interfaces         | [Interfaces](/t/-/4917)                 |
-| 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                             |
-| 3     | how-to-manage-subnets            | [Subnets](/t/-/4917)                               |
-| 3     | how-to-manage-dns                | [DNS](/t/-/4917)                                   |
-| 3     | how-to-enable-dhcp               | [DHCP](/t/-/4917)                                  |
-| 3     | how-to-manage-ip-addresses       | [Addressing](/t/-/4917)                            |
-| 3     | how-to-manage-proxies            | [Proxies](/t/-/4917)                               |
-| 3     | how-to-manage-ntp                | [NTP](/t/-/4917)                                   |
-| 3     | how-to-use-availability-zones    | [Zones](/t/-/4917)                                 |
-| 2     | how-to-use-images                | [Images](/t/-/4917)                                |
-| 3     | how-to-use-standard-images       | [Standard](/t/-/4917)                              |
-| 3     | how-to-customise-images          | [Custom](/t/-/4917)                                |
-| 3     | how-to-use-a-local-mirror        | [Mirroring](/t/-/4917)                             |
-| 3     | how-to-use-vmware-images         | [VMWare](/t/-/4917)                                |
-| 3     | how-to-deploy-a-rt-kernel        | [RT kernel](/t/-/4917)                             |
-| 2     | how-to-manage-controllers        | [Controllers](/t/-/4917)                           |
-| 3     | how-to-manage-rack-controllers   | [Rack](/t/-/4917)                                  |
-| 3     | how-to-manage-region-controllers | [Region](/t/-/4917)                                |
-| 3     | how-to-enable-high-availability  | [High availability](/t/-/4917)                     |
-| 2     | how-to-manage-machines           | [Machines](/t/-/4917)                              |
-| 3     | how-to-introduce-machines        | [CRUD](/t/-/4917)                                  |
-| 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                             |
-| 3     | how-to-choose-power-drivers      | [Drivers](/t/-/4917)                               |
-| 3     | how-to-commission-a-machine      | [Commissioning](/t/-/4917)                         |
-| 3     | how-to-test-a-machine            | [Testing](/t/-/4917)                               |
-| 3     | how-to-allocate-a-machine        | [Allocation](/t/-/4917)                            |
-| 3     | how-to-set-up-machine-storage    | [Storage](/t/-/4917)                               |
-| 3     | how-to-use-curtin                | [Curtin](/t/-/4917)                                |
-| 3     | how-to-use-cloud-init            | [Cloud-init](/t/-/4917)                            |
-| 3     | how-to-set-kernel-options        | [Kernel options](/t/-/4917)                        |
-| 3     | how-to-deploy-a-machine          | [Deployment](/t/-/4917)                            |
-| 3     | how-to-clone-a-machine           | [Cloning](/t/-/4917)                               |
-| 3     | how-to-examine-machines          | [Examination](/t/-/4917)                           |
-| 3     | how-to-use-resource-pools        | [Resource pools](/t/-/4917)                        |
-| 3     | how-to-enable-hardware-sync      | [Hardware sync](/t/-/4917)                         |
-| 2     | how-to-manage-virtual-machines   | [Virtual machines](/t/-/4917)                      |
-| 3     | how-to-use-lxd                   | [LXD](/t/-/4917)                                   |
-| 3     | how-to-manage-vm-host            | [VM hosting](/t/-/4917)                            |
-| 3     | how-to-instantiate-vms           | [VM CRUD](/t/-/4917)                               |
-| 2     | how-to-use-logging               | [Logging](/t/-/4917)                               |
-| 3     | how-to-use-commissioning-logs    | [Commissioning](/t/-/4917)                         |
-| 3     | how-to-use-testing-logs          | [Testing](/t/-/4917)                               |
-| 3     | how-to-use-maas-events           | [Events](/t/-/4917)                                |
-| 3     | how-to-audit-maas                | [Audit events](/t/-/4917)                          |
-| 3     | how-to-use-syslog                | [Syslog](/t/-/4917)                                |
-| 3     | how-to-access-logs               | [Accessing logs](/t/-/4917)                        |
-| 2     | how-to-label-machines            | [Labels](/t/-/4917)                                |
-| 3     | how-to-use-tags                  | [Tags](/t/-/4917)                                  |
-| 3     | how-to-use-annotations           | [Annotations](/t/-/4917)                           |
-| 2     | how-to-find-machines             | [Search](/t/-/4917)                                |
-| 3     | how-to-filter-the-machine-list   | [Filters](/t/-/4917)                               |
-| 3     | how-to-create-custom-filters     | [Custom](/t/-/4917)                                |
-| 3     | how-to-find-exact-matches        | [Exact match](/t/-/4917)                           |
-| 3     | how-to-find-partial-matches      | [Partial match](/t/-/4917)                         |
-| 3     | how-to-combine-search-terms      | [Chaining](/t/-/4917)                              |
-| 2     | how-to-secure-maas               | [Security](/t/-/4917)                              |
-| 3     | how-to-maintain-security-hygiene | [Hygiene](/t/-/4917)                               |
-| 3     | how-to-manage-user-accounts      | [Accounts](/t/-/4917)                              |
-| 3     | how-to-enable-tls                | [TLS](/t/-/4917)                                   |
-| 3     | how-to-use-vault                 | [Vault](/t/-/4917)                                 |
-| 3     | how-to-air-gap-maas              | [Air-gap](/t/-/4917)                               |
-| 2     | how-to-operate-maas              | [Operations](/t/-/4917)                            |
-| 3     | how-to-back-up-maas              | [Backups](/t/-/4917)                               |
-| 3     | how-to-monitor-maas              | [Monitoring](/t/-/4917)                            |
-| 3     | how-to-gauge-maas-performance    | [Performance](/t/-/4917)                           |
-| 3     | how-to-terraform-with-maas       | [Terraforming](/t/-/4917)                          |
-| 3     | how-to-troubleshoot-maas         | [Troubleshooting](/t/-/4917)                       |
-| 2     | how-to-get-help                  | [Get help](/t/-/4917)                              |
-| 3     | how-to-use-our-discourse-forum   | [Forum](/t/-/4917)                                 |
-| 3     | how-to-get-support               | [Support](/t/-/4917)                               |
-| 3     | how-to-request-new-features      | [Feature requests](/t/-/4917)                      |
-| 3     | how-to-review-and-report-bugs    | [Bugs](/t/-/4917)                                  |
-| 2     | how-to-contribute-to-maas        | [Contribute](/t/-/4917)                            |
-| 3     | how-to-contribute-code           | [Code](/t/-/4917)                                  |
-| 3     | how-to-update-the-documentation  | [Documentation](/t/-/4917)                         |
+| 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                  |
+| 3     | how-to-manage-subnets            | [Subnets](/t/-/4917)                    |
+| 3     | how-to-manage-dns                | [DNS](/t/-/4917)                        |
+| 3     | how-to-enable-dhcp               | [DHCP](/t/-/4917)                       |
+| 3     | how-to-manage-ip-addresses       | [Addressing](/t/-/4917)                 |
+| 3     | how-to-manage-proxies            | [Proxies](/t/-/4917)                    |
+| 3     | how-to-manage-ntp                | [NTP](/t/-/4917)                        |
+| 3     | how-to-use-availability-zones    | [Zones](/t/-/4917)                      |
+| 2     | how-to-use-images                | [Images](/t/-/4917)                     |
+| 3     | how-to-use-standard-images       | [Standard](/t/-/4917)                   |
+| 3     | how-to-customise-images          | [Custom](/t/-/4917)                     |
+| 3     | how-to-use-a-local-mirror        | [Mirroring](/t/-/4917)                  |
+| 3     | how-to-use-vmware-images         | [VMWare](/t/-/4917)                     |
+| 3     | how-to-deploy-a-rt-kernel        | [RT kernel](/t/-/4917)                  |
+| 2     | how-to-manage-controllers        | [Controllers](/t/-/4917)                |
+| 3     | how-to-manage-rack-controllers   | [Rack](/t/-/4917)                       |
+| 3     | how-to-manage-region-controllers | [Region](/t/-/4917)                     |
+| 3     | how-to-enable-high-availability  | [High availability](/t/-/4917)          |
+| 2     | how-to-manage-machines           | [Machines](/t/-/4917)                   |
+| 3     | how-to-introduce-machines        | [CRUD](/t/-/4917)                       |
+| 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                  |
+| 3     | how-to-choose-power-drivers      | [Drivers](/t/-/4917)                    |
+| 3     | how-to-commission-a-machine      | [Commissioning](/t/-/4917)              |
+| 3     | how-to-test-a-machine            | [Testing](/t/-/4917)                    |
+| 3     | how-to-allocate-a-machine        | [Allocation](/t/-/4917)                 |
+| 3     | how-to-set-up-machine-storage    | [Storage](/t/-/4917)                    |
+| 3     | how-to-use-curtin                | [Curtin](/t/-/4917)                     |
+| 3     | how-to-use-cloud-init            | [Cloud-init](/t/-/4917)                 |
+| 3     | how-to-set-kernel-options        | [Kernel options](/t/-/4917)             |
+| 3     | how-to-deploy-a-machine          | [Deployment](/t/-/4917)                 |
+| 3     | how-to-clone-a-machine           | [Cloning](/t/-/4917)                    |
+| 3     | how-to-examine-machines          | [Examination](/t/-/4917)                |
+| 3     | how-to-use-resource-pools        | [Resource pools](/t/-/4917)             |
+| 3     | how-to-enable-hardware-sync      | [Hardware sync](/t/-/4917)              |
+| 2     | how-to-manage-virtual-machines   | [Virtual machines](/t/-/4917)           |
+| 3     | how-to-use-lxd                   | [LXD](/t/-/4917)                        |
+| 3     | how-to-manage-vm-host            | [VM hosting](/t/-/4917)                 |
+| 3     | how-to-instantiate-vms           | [VM CRUD](/t/-/4917)                    |
+| 2     | how-to-use-logging               | [Logging](/t/-/4917)                    |
+| 3     | how-to-use-commissioning-logs    | [Commissioning](/t/-/4917)              |
+| 3     | how-to-use-testing-logs          | [Testing](/t/-/4917)                    |
+| 3     | how-to-use-maas-events           | [Events](/t/-/4917)                     |
+| 3     | how-to-audit-maas                | [Audit events](/t/-/4917)               |
+| 3     | how-to-use-syslog                | [Syslog](/t/-/4917)                     |
+| 3     | how-to-access-logs               | [Accessing logs](/t/-/4917)             |
+| 2     | how-to-label-machines            | [Labels](/t/-/4917)                     |
+| 3     | how-to-use-tags                  | [Tags](/t/-/4917)                       |
+| 3     | how-to-use-annotations           | [Annotations](/t/-/4917)                |
+| 2     | how-to-find-machines             | [Search](/t/-/4917)                     |
+| 3     | how-to-filter-the-machine-list   | [Filters](/t/-/4917)                    |
+| 3     | how-to-create-custom-filters     | [Custom](/t/-/4917)                     |
+| 3     | how-to-find-exact-matches        | [Exact match](/t/-/4917)                |
+| 3     | how-to-find-partial-matches      | [Partial match](/t/-/4917)              |
+| 3     | how-to-combine-search-terms      | [Chaining](/t/-/4917)                   |
+| 2     | how-to-secure-maas               | [Security](/t/-/4917)                   |
+| 3     | how-to-maintain-security-hygiene | [Hygiene](/t/-/4917)                    |
+| 3     | how-to-manage-user-accounts      | [Accounts](/t/-/4917)                   |
+| 3     | how-to-enable-tls                | [TLS](/t/-/4917)                        |
+| 3     | how-to-use-vault                 | [Vault](/t/-/4917)                      |
+| 3     | how-to-air-gap-maas              | [Air-gap](/t/-/4917)                    |
+| 2     | how-to-operate-maas              | [Operations](/t/-/4917)                 |
+| 3     | how-to-back-up-maas              | [Backups](/t/-/4917)                    |
+| 3     | how-to-monitor-maas              | [Monitoring](/t/-/4917)                 |
+| 3     | how-to-gauge-maas-performance    | [Performance](/t/-/4917)                |
+| 3     | how-to-terraform-with-maas       | [Terraforming](/t/-/4917)               |
+| 3     | how-to-troubleshoot-maas         | [Troubleshooting](/t/-/4917)            |
+| 2     | how-to-get-help                  | [Get help](/t/-/4917)                   |
+| 3     | how-to-use-our-discourse-forum   | [Forum](/t/-/4917)                      |
+| 3     | how-to-get-support               | [Support](/t/-/4917)                    |
+| 3     | how-to-request-new-features      | [Feature requests](/t/-/4917)           |
+| 3     | how-to-review-and-report-bugs    | [Bugs](/t/-/4917)                       |
+| 2     | how-to-contribute-to-maas        | [Contribute](/t/-/4917)                 |
+| 3     | how-to-contribute-code           | [Code](/t/-/4917)                       |
+| 3     | how-to-update-the-documentation  | [Documentation](/t/-/4917)              |
 | 0     |                                  |                                         |
-| 1     | reference                        | [Reference](/t/-/4917)                             |
-| 2     | ref-general                      | [General](/t/-/4917)                               |
-| 3     | ref-release-notes                | [Release notes](/t/-/4917)                         |
-| 3     | ref-install-rqmts                | [Installation requirements](/t/-/4917)             |
-| 3     | ref-settings                     | [Settings](/t/-/4917)                              |
-| 3     | ref-glossary                     | [Glossary](/t/-/4917)                              |
-| 3     | ref-code-of-conduct              | [Code of conduct](/t/-/4917)                       |
-| 2     | ref-scripts                      | [Scripts](/t/-/4917)                               |
-| 3     | ref-commissioning                | [Commissioning](/t/-/4917)                         |
-| 3     | ref-testing                      | [Testing](/t/-/4917)                               |
-| 3     | ref-cloud-init                   | [cloud-init](/t/-/4917)                            |
-| 3     | ref-curtin                       | [curtin](/t/-/4917)                                |
-| 2     | ref-logs                         | [Logs](/t/-/4917)                                  |
-| 3     | ref-event-logs                   | [Events](/t/-/4917)                                |
-| 3     | ref-audit-event-logs             | [Audit events](/t/-/4917)                          |
-| 3     | ref-controller-logs              | [Controller](/t/-/4917)                            |
-| 3     | ref-maas-logs                    | [MAAS](/t/-/4917)                                  |
-| 3     | ref-system-logs                  | [System](/t/-/4917)                                |
-| 2     | ref-drivers                      | [Drivers](/t/-/4917)                               |
-| 3     | ref-apc                          | [APC](/t/-/4917)                                   |
-| 3     | ref-bmc                          | [BMC](/t/-/4917)                                   |
-| 3     | ref-christmann                   | [Christmann RECS](/t/-/4917)                       |
-| 3     | ref-cisco-rcs                    | [Cisco RCS](/t/-/4917)                             |
-| 3     | ref-digital-loggers              | [Digital Loggers](/t/-/4917)                       |
-| 3     | ref-facebook-wedge               | [Facebook Wedge](/t/-/4917)                        |
-| 3     | ref-hp-moonshot                  | [HP Moonshot](/t/-/4917)                           |
-| 3     | ref-ibm-hmc                      | [IBM HMC](/t/-/4917)                               |
-| 3     | ref-ibm-z                        | [IBM Z](/t/-/4917)                                 |
-| 3     | ref-intel-amt                    | [Intel AMT](/t/-/4917)                             |
-| 3     | ref-ipmi                         | [IPMI](/t/-/4917)                                  |
-| 3     | ref-lxd                          | [LXD](/t/-/4917)                                   |
-| 3     | ref-microsoft-ocs                | [Microsoft OCS](/t/-/4917)                         |
-| 3     | ref-openstack-nova               | [OpenStack Nova](/t/-/4917)                        |
-| 3     | ref-proxmox                      | [Proxmox](/t/-/4917)                               |
-| 3     | ref-redfish                      | [Redfish](/t/-/4917)                               |
-| 3     | ref-seamicro-15000               | [SeaMicro 15000](/t/-/4917)                        |
-| 3     | ref-virsh-libvirt                | [virsh-libvirt](/t/-/4917)                         |
-| 3     | ref-vmware                       | [VMWare](/t/-/4917)                                |
-| 2     | ref-storage                      | [Storage](/t/-/4917)                               |
-| 3     | ref-flat                         | [Flat](/t/-/4917)                                  |
-| 3     | ref-lvm                          | [LVM](/t/-/4917)                                   |
-| 3     | ref-bcache                       | [bcache](/t/-/4917)                                |
-| 3     | ref-vmfs6                        | [VMFS6](/t/-/4917)                                 |
-| 3     | ref-blank                        | [Blank](/t/-/4917)                                 |
-| 2     | ref-api                          | [API](/t/-/4917)                                   |
-| 3     | ref-api-doc                      | [Documentation](/t/-/4917)                         |
-| 3     | ref-api-client                   | [Client](/t/-/4917)                                |
-| 3     | ref-api-authentication           | [Authentication](/t/-/4917)                        |
+| 1     | reference                        | [Reference](/t/-/4917)                  |
+| 2     | ref-general                      | [General](/t/-/4917)                    |
+| 3     | ref-release-notes                | [Release notes](/t/-/4917)              |
+| 3     | ref-install-rqmts                | [Installation requirements              |
+| 3     | ref-settings                     | [Settings](/t/-/4917)                   |
+| 3     | ref-glossary                     | [Glossary](/t/-/4917)                   |
+| 3     | ref-code-of-conduct              | [Code of conduct](/t/-/4917)            |
+| 2     | ref-scripts                      | [Scripts](/t/-/4917)                    |
+| 3     | ref-commissioning                | [Commissioning](/t/-/4917)              |
+| 3     | ref-testing                      | [Testing](/t/-/4917)                    |
+| 3     | ref-cloud-init                   | [cloud-init](/t/-/4917)                 |
+| 3     | ref-curtin                       | [curtin](/t/-/4917)                     |
+| 2     | ref-logs                         | [Logs](/t/-/4917)                       |
+| 3     | ref-event-logs                   | [Events](/t/-/4917)                     |
+| 3     | ref-audit-event-logs             | [Audit events](/t/-/4917)               |
+| 3     | ref-controller-logs              | [Controller](/t/-/4917)                 |
+| 3     | ref-maas-logs                    | [MAAS](/t/-/4917)                       |
+| 3     | ref-system-logs                  | [System](/t/-/4917)                     |
+| 2     | ref-drivers                      | [Drivers](/t/-/4917)                    |
+| 3     | ref-apc                          | [APC](/t/-/4917)                        |
+| 3     | ref-bmc                          | [BMC](/t/-/4917)                        |
+| 3     | ref-christmann                   | [Christmann RECS](/t/-/4917)            |
+| 3     | ref-cisco-rcs                    | [Cisco RCS](/t/-/4917)                  |
+| 3     | ref-digital-loggers              | [Digital Loggers](/t/-/4917)            |
+| 3     | ref-facebook-wedge               | [Facebook Wedge](/t/-/4917)             |
+| 3     | ref-hp-moonshot                  | [HP Moonshot](/t/-/4917)                |
+| 3     | ref-ibm-hmc                      | [IBM HMC](/t/-/4917)                    |
+| 3     | ref-ibm-z                        | [IBM Z](/t/-/4917)                      |
+| 3     | ref-intel-amt                    | [Intel AMT](/t/-/4917)                  |
+| 3     | ref-ipmi                         | [IPMI](/t/-/4917)                       |
+| 3     | ref-lxd                          | [LXD](/t/-/4917)                        |
+| 3     | ref-microsoft-ocs                | [Microsoft OCS](/t/-/4917)              |
+| 3     | ref-openstack-nova               | [OpenStack Nova](/t/-/4917)             |
+| 3     | ref-proxmox                      | [Proxmox](/t/-/4917)                    |
+| 3     | ref-redfish                      | [Redfish](/t/-/4917)                    |
+| 3     | ref-seamicro-15000               | [SeaMicro 15000](/t/-/4917)             |
+| 3     | ref-virsh-libvirt                | [virsh-libvirt](/t/-/4917)              |
+| 3     | ref-vmware                       | [VMWare](/t/-/4917)                     |
+| 2     | ref-storage                      | [Storage](/t/-/4917)                    |
+| 3     | ref-flat                         | [Flat](/t/-/4917)                       |
+| 3     | ref-lvm                          | [LVM](/t/-/4917)                        |
+| 3     | ref-bcache                       | [bcache](/t/-/4917)                     |
+| 3     | ref-vmfs6                        | [VMFS6](/t/-/4917)                      |
+| 3     | ref-blank                        | [Blank](/t/-/4917)                      |
+| 2     | ref-api                          | [API](/t/-/4917)                        |
+| 3     | ref-api-doc                      | [Documentation](/t/-/4917)              |
+| 3     | ref-api-client                   | [Client](/t/-/4917)                     |
+| 3     | ref-api-authentication           | [Authentication](/t/-/4917)             |
 | 0     |                                  |                                         |
-| 1     | about-explanations               | [Explanation](/t/-/4917)                           |
-| 2     | about-maas                       | [MAAS](/t/-/4917)                                  |
-| 3     | about-what-is-maas               | [What is MAAS?](/t/-/4917)                         |
-| 3     | about-what-maas-offers           | [What does it offer?](/t/-/4917)                   |
-| 3     | about-how-maas-works             | [How does it work?](/t/-/4917)                     |
-| 2     | about-networks                   | [Networks](/t/-/4917)                              |
-| 3     | about-pxe-booting                | [PXE](/t/-/4917)                                   |
-| 3     | about-power-drivers              | [Drivers](/t/-/4917)                               |
-| 3     | about-discovery                  | [Discovery](/t/-/4917)                             |
-| 3     | about-subnets                    | [Subnets](/t/-/4917)                               |
-| 3     | about-vlans                      | [VLANs](/t/-/4917)                                 |
-| 3     | about-proxies                    | [Proxies](/t/-/4917)                               |
-| 3     | about-rpc                        | [RPC](/t/-/4917)                                   |
-| 3     | about-availability-zones         | [Zones](/t/-/4917)                                 |
-| 2     | about-images                     | [Images](/t/-/4917)                                |
-| 3     | about-image-anatomy              | [Anatomy](/t/-/4917)                               |
-| 3     | about-image-deployment           | [Deployment](/t/-/4917)                            |
-| 3     | about-boot-sources               | [Boot sources](/t/-/4917)                          |
-| 3     | about-cloud-init                 | [cloud-init](/t/-/4917)                            |
-| 3     | about-kernel-options             | [Kernel options](/t/-/4917)                        |
-| 2     | about-controllers                | [Controllers](/t/-/4917)                           |
-| 3     | about-rack-controllers           | [Rack](/t/-/4917)                                  |
-| 3     | about-region-controllers         | [Region](/t/-/4917)                                |
-| 3     | about-rack-region-communication  | [Communication](/t/-/4917)                         |
-| 3     | about-controller-ha              | [High availability](/t/-/4917)                     |
-| 2     | about-machines                   | [Machines](/t/-/4917)                              |
-| 3     | about-the-machine-lifecycle      | [Lifecycle](/t/-/4917)                             |
-| 3     | about-machine-related-events     | [Events](/t/-/4917)                                |
-| 3     | about-machine-storage            | [Storage](/t/-/4917)                               |
-| 2     | about-virtual-machines           | [Virtual machines](/t/-/4917)                      |
-| 3     | about-vm-hosts                   | [VM hosts](/t/-/4917)                              |
-| 3     | about-numa                       | [NUMA](/t/-/4917)                                  |
-| 3     | about-overcommit                 | [Overcommit](/t/-/4917)                            |
-| 3     | about-lxd                        | [LXD](/t/-/4917)                                   |
-| 2     | about-logging                    | [Logging](/t/-/4917)                               |
-| 3     | about-commissioning-logs         | [Commissioning](/t/-/4917)                         |
-| 3     | about-testing-logs               | [Testing](/t/-/4917)                               |
-| 3     | about-event-logs                 | [Events](/t/-/4917)                                |
-| 3     | about-audit-events               | [Audit events](/t/-/4917)                          |
-| 3     | about-syslog                     | [syslog](/t/-/4917)                                |
-| 3     | about-region-logs                | [Region](/t/-/4917)                                |
-| 3     | about-rack-logs                  | [Rack](/t/-/4917)                                  |
-| 3     | about-maas-logs                  | [MAAS](/t/-/4917)                                  |
-| 3     | about-other-logs                 | [Others](/t/-/4917)                                |
-| 2     | about-labels                     | [Labels](/t/-/4917)                                |
-| 3     | about-tags                       | [Tags](/t/-/4917)                                  |
-| 3     | about-annotations                | [Annotations](/t/-/4917)                           |
-| 2     | about-maas-security              | [Security](/t/-/4917)                              |
-| 3     | about-security-best-practices    | [Best practices](/t/-/4917)                        |
-| 3     | about-air-gapped-maas            | [Air-gaps](/t/-/4917)                              |
-| 2     | about-maas-operations            | [Operations](/t/-/4917)                            |
-| 3     | about-backups                    | [Backups](/t/-/4917)                               |
-| 3     | about-monitoring                 | [Monitoring](/t/-/4917)                            |
-| 3     | about-performance                | [Performance](/t/-/4917)                           |
-| 3     | about-terraforming               | [Terraforming](/t/-/4917)                          |
-| 2     | about-primers                    | [Primers](/t/-/4917)                               |
-| 3     | about-tcp-ip                     | [TCP/IP](/t/-/4917)                                |
-| 3     | about-dhcp                       | [DHCP](/t/-/4917)                                  |
-| 3     | about-pxe-booting                | [PXE booting](/t/-/4917)                           |
-| 3     | about-tls                        | [TLS](/t/-/4917)                                   |
-| 3     | about-cloud-networks             | [Cloud networks](/t/-/4917)                        |
-| 3     | about-hashicorp-terraform        | [Hashicorp Terraform](/t/-/4917)                   |
-| 3     | about-ansible                    | [Ansible](/t/-/4917)                               |
-| 3     | about-hashicorp-vault            | [Vault](/t/-/4917)                                 |
+| 1     | about-explanations               | [Explanation](/t/-/4917)                |
+| 2     | about-maas                       | [MAAS](/t/-/4917)                       |
+| 3     | about-what-is-maas               | [What is MAAS?](/t/-/4917)              |
+| 3     | about-what-maas-offers           | [What does it offer?](/t/-/4917)        |
+| 3     | about-how-maas-works             | [How does it work?](/t/-/4917)          |
+| 2     | about-networks                   | [Networks](/t/-/4917)                   |
+| 3     | about-pxe-booting                | [PXE](/t/-/4917)                        |
+| 3     | about-power-drivers              | [Drivers](/t/-/4917)                    |
+| 3     | about-discovery                  | [Discovery](/t/-/4917)                  |
+| 3     | about-subnets                    | [Subnets](/t/-/4917)                    |
+| 3     | about-vlans                      | [VLANs](/t/-/4917)                      |
+| 3     | about-proxies                    | [Proxies](/t/-/4917)                    |
+| 3     | about-rpc                        | [RPC](/t/-/4917)                        |
+| 3     | about-availability-zones         | [Zones](/t/-/4917)                      |
+| 2     | about-images                     | [Images](/t/-/4917)                     |
+| 3     | about-image-anatomy              | [Anatomy](/t/-/4917)                    |
+| 3     | about-image-deployment           | [Deployment](/t/-/4917)                 |
+| 3     | about-boot-sources               | [Boot sources](/t/-/4917)               |
+| 3     | about-cloud-init                 | [cloud-init](/t/-/4917)                 |
+| 3     | about-kernel-options             | [Kernel options](/t/-/4917)             |
+| 2     | about-controllers                | [Controllers](/t/-/4917)                |
+| 3     | about-rack-controllers           | [Rack](/t/-/4917)                       |
+| 3     | about-region-controllers         | [Region](/t/-/4917)                     |
+| 3     | about-rack-region-communication  | [Communication](/t/-/4917)              |
+| 3     | about-controller-ha              | [High availability](/t/-/4917)          |
+| 2     | about-machines                   | [Machines](/t/-/4917)                   |
+| 3     | about-the-machine-lifecycle      | [Lifecycle](/t/-/4917)                  |
+| 3     | about-machine-related-events     | [Events](/t/-/4917)                     |
+| 3     | about-machine-storage            | [Storage](/t/-/4917)                    |
+| 2     | about-virtual-machines           | [Virtual machines](/t/-/4917)           |
+| 3     | about-vm-hosts                   | [VM hosts](/t/-/4917)                   |
+| 3     | about-numa                       | [NUMA](/t/-/4917)                       |
+| 3     | about-overcommit                 | [Overcommit](/t/-/4917)                 |
+| 3     | about-lxd                        | [LXD](/t/-/4917)                        |
+| 2     | about-logging                    | [Logging](/t/-/4917)                    |
+| 3     | about-commissioning-logs         | [Commissioning](/t/-/4917)              |
+| 3     | about-testing-logs               | [Testing](/t/-/4917)                    |
+| 3     | about-event-logs                 | [Events](/t/-/4917)                     |
+| 3     | about-audit-events               | [Audit events](/t/-/4917)               |
+| 3     | about-syslog                     | [syslog](/t/-/4917)                     |
+| 3     | about-region-logs                | [Region](/t/-/4917)                     |
+| 3     | about-rack-logs                  | [Rack](/t/-/4917)                       |
+| 3     | about-maas-logs                  | [MAAS](/t/-/4917)                       |
+| 3     | about-other-logs                 | [Others](/t/-/4917)                     |
+| 2     | about-labels                     | [Labels](/t/-/4917)                     |
+| 3     | about-tags                       | [Tags](/t/-/4917)                       |
+| 3     | about-annotations                | [Annotations](/t/-/4917)                |
+| 2     | about-maas-security              | [Security](/t/-/4917)                   |
+| 3     | about-security-best-practices    | [Best practices](/t/-/4917)             |
+| 3     | about-air-gapped-maas            | [Air-gaps](/t/-/4917)                   |
+| 2     | about-maas-operations            | [Operations](/t/-/4917)                 |
+| 3     | about-backups                    | [Backups](/t/-/4917)                    |
+| 3     | about-monitoring                 | [Monitoring](/t/-/4917)                 |
+| 3     | about-performance                | [Performance](/t/-/4917)                |
+| 3     | about-terraforming               | [Terraforming](/t/-/4917)               |
+| 2     | about-primers                    | [Primers](/t/-/4917)                    |
+| 3     | about-tcp-ip                     | [TCP/IP](/t/-/4917)                     |
+| 3     | about-dhcp                       | [DHCP](/t/-/4917)                       |
+| 3     | about-pxe-booting                | [PXE booting](/t/-/4917)                |
+| 3     | about-tls                        | [TLS](/t/-/4917)                        |
+| 3     | about-cloud-networks             | [Cloud networks](/t/-/4917)             |
+| 3     | about-hashicorp-terraform        | [Hashicorp Terraform](/t/-/4917)        |
+| 3     | about-ansible                    | [Ansible](/t/-/4917)                    |
+| 3     | about-hashicorp-vault            | [Vault](/t/-/4917)                      |
 |       |                                  |                                         |
 [/details]
 
