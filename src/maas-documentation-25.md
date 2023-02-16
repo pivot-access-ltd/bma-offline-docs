@@ -56,9 +56,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Spin up MAAS with Ansible](/t/-/6367)
 - [Install MAAS](/t/-/5128)
 - [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
-- [Ask for help](/t/-/5428)
-- [Request a feature](/t/-/4447)
-- [Report a bug](/t/-/4446)
 
 ### [How to manage networking](/t/-/6742)
 
@@ -115,6 +112,13 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Manage user accounts](/t/-/5184)
 - [Enable Vault](/t/-/6501)
 - [Unseal Vault](/t/-/6502)
+
+### [How to get help](/t/-/5428)
+
+- [Forum](https://discourse.maas.io)`↗`
+- [Support](https://maas.io/docs/how-to-contact-us)`↗`
+- [Request features](/t/-/4447)
+- [Bugs](/t/-/4446)
 
 ### General reference
 
