@@ -151,6 +151,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [About MAAS](/t/-/6678)
 - [About networking](/t/-/6174)
+- [About images](/t/-/6685)
 
 ## URLs
 
@@ -421,7 +422,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |https://discourse.maas.io/t/-/2701|/docs/deb/2.7/ui/images|
 |https://discourse.maas.io/t/-/2702|/docs/deb/2.8/cli/images|
 |https://discourse.maas.io/t/-/2703|/docs/deb/2.8/ui/images|
-|https://discourse.maas.io/t/-/5076|/docs/about-images|
+|https://discourse.maas.io/t/-/6685|/docs/about-images|
 |https://discourse.maas.io/t/-/839/|/docs/documentation-index|
 |https://discourse.maas.io/t/-/3318|/docs/snap/2.7/cli/installation|
 |https://discourse.maas.io/t/-/3319|/docs/snap/2.7/ui/installation|
