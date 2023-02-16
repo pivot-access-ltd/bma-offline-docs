@@ -54,42 +54,38 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |-------|-------------------------------------------|-----------------------------------------------|
 | 0     | /                                         | [MAAS documentation](/t/-/6662)               |
 | 0     |                                           |                                               |
-| 1     | basic-tutorials                           | [Tutorials](/t/-/6140)                        |
+| 1     | tutorials                                 | [Tutorials](/t/-/6140)                        |
 | 2     | maas-bootstrap-tutorial                   | [MAAS bootstrap tutorial](/t/-/5092)          |
 | 2     | try-out-the-maas-cli                      | [Try out the MAAS CLI](/t/-/5236)             |
 | 2     | custom-image-tutorial                     | [Custom image tutorial](/t/-/6102)            |
 | 2     | using-jq-with-the-maas-cli                | [Using jq with the MAAS CLI](/t/-/6027)       |
 | 0     |                                           |                                               |
-| 1     | how-to-guides                             | [How-to guides](/t/-/6663)                    |
-| 2     | how-to-get-started-with-maas              | [How to get started with MAAS](/t/-/6202)     |
-| 3     | how-to-spin-up-maas-with-ansible          | [Spin up MAAS with Ansible](/t/-/6367)        |
-| 3     | how-to-install-maas                       | [Install MAAS](/t/-/5128)                     |
-| 3     | how-to-upgrade-maas                       | [Upgrade MAAS](/t/how-to-upgrade-maas/5436)   |
-| 3     | how-to-change-maas-settings               | [Change MAAS settings](/t/-/6347)             |
-| 3     | how-to-ask-for-help                       | [Ask for help](/t/-/5428)                     |
-| 3     | how-to-request-a-feature                  | [Request a feature](/t/-/4447)                |
-| 3     | how-to-report-a-bug                       | [Report a bug](/t/-/4446)                     |
-| 2     | how-to-set-up-networks                    | [How to set up networks](/t/-/6174)           |
+| 1     | how-to-guides                             | [How-to](/t/-/6663)                           |
+| 2     | how-to-get-started-with-maas              | [Start](/t/-/6202)                            |
+| 3     | how-to-install-maas                       | [Install](/t/-/5128)                          |
+| 3     | how-to-upgrade-maas                       | [Upgrade](/t/how-to-upgrade-maas/5436)        |
+| 3     | how-to-spin-up-maas-with-ansible          | [Playbooks](/t/-/6367)                        |
+| 2     | how-to-set-up-networks                    | [Networks](/t/-/6174)           |
 | 3     | how-to-connect-maas-networks              | [Connect MAAS networks](/t/-/5164)            |
 | 3     | how-to-enable-dhcp                        | [Enable DHCP](/t/-/5132)                      |
 | 3     | how-to-manage-availability-zones          | [Manage zones (AZs)](/t/-/5152)               |
-| 2     | how-to-acquire-images                     | [How to acquire images](/t/-/6192)            |
-| 3     | how-use-standard-images                   | [Use standard images](/t/-/5124)              |
-| 3     | how-to-mirror-images-locally              | [Mirror images locally](/t/-/5927)            |
-| 3     | how-to-build-custom-images                | [Build custom images](/t/-/5104)              |
-| 3     | how-to-employ-vmware-images               | [Employ VMWare images](/t/-/5144)             |
-| 3     | how-to-deploy-an-rt-kernel-via-cloud-init | [Deploy a RT kernel](/t/-/6658)               |
-| 2     | how-to-tune-controllers                   | [How to tune controllers](/t/-/6498)          |
-| 3     | how-to-adjust-your-controllers            | [Adjust your controllers](/t/-/5172)          |
-| 3     | how-to-enable-high-availability           | [Enable HA](/t/-/5120)                        |
-| 2     | how-to-deploy-physical-machines           | [How to deploy physical machines](/t/-/6193)  |
-| 3     | how-to-make-machines-available            | [Make machines available](/t/-/5160)          |
-| 3     | how-to-customise-machines                 | [Customise machines](/t/-/5108)               |
-| 3     | how-to-put-machines-to-work               | [Put machines to work](/t/-/5112)             |
-| 2     | how-to-deploy-virtual-machines            | [How to deploy virtual machines](/t/-/6500)   |
-| 3     | how-to-set-up-lxd                         | [Set up LXD](/t/-/5208)                       |
-| 3     | how-to-create-vm-hosts                    | [Create VM hosts](/t/-/5140)                  |
-| 3     | how-to-create-and-manage-vms              | [Create and manage VMs](/t/-/5148)            |
+| 2     | how-to-acquire-images                     | [Images](/t/-/6192)            |
+| 3     | how-use-standard-images                   | [Bundled](/t/-/5124)              |
+| 3     | how-to-mirror-images-locally              | [Mirrors](/t/-/5927)            |
+| 3     | how-to-build-custom-images                | [Custom](/t/-/5104)              |
+| 3     | how-to-employ-vmware-images               | [VMWare](/t/-/5144)             |
+| 3     | how-to-deploy-an-rt-kernel-via-cloud-init | [RT kernel](/t/-/6658)               |
+| 2     | how-to-tune-controllers                   | [Controllers](/t/-/6498)          |
+| 3     | how-to-adjust-your-controllers            | [Adjustment](/t/-/5172)          |
+| 3     | how-to-enable-high-availability           | [High availability](/t/-/5120)                        |
+| 2     | how-to-deploy-physical-machines           | [Machines](/t/-/6193)  |
+| 3     | how-to-make-machines-available            | [Enlist](/t/-/5160)          |
+| 3     | how-to-customise-machines                 | [Customise](/t/-/5108)               |
+| 3     | how-to-put-machines-to-work               | [Deploy](/t/-/5112)             |
+| 2     | how-to-deploy-virtual-machines            | [Virtual machines](/t/-/6500)   |
+| 3     | how-to-set-up-lxd                         | [LXD](/t/-/5208)                       |
+| 3     | how-to-create-vm-hosts                    | [VM hosts](/t/-/5140)                  |
+| 3     | how-to-create-and-manage-vms              | [Manage](/t/-/5148)            |
 | 2     | how-to-label-and-find-machines            | [How to label and find machines](/t/-/6200)   |
 | 3     | how-to-tag-machines                       | [Tag machines](/t/-/5928)                     |
 | 3     | how-to-annotate-machines                  | [Annotate machines](/t/-/5929)                |
@@ -109,12 +105,18 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-manage-user-accounts               | [Manage user accounts](/t/-/5184)             |
 | 3     | how-to-enable-vault                       | [Enable Vault](/t/-/6501)                     |
 | 3     | how-to-unseal-vault                       | [Unseal Vault](/t/-/6502)                     |
+| 2     | how-to-get-help                           | [Get help](/t/-/5428)                         |
+| 3     | how-to-use-discourse                      | [Forum](/t/-/5248)                            |
+| 3     | how-to-get-support                        | [Support](/t/-/5428)                     |
+| 3     | how-to-request-a-feature                  | [Feature requests](/t/-/4447)                |
+| 3     | how-to-report-a-bug                       | [Bugs](/t/-/4446)                     |
 | 0     |                                           |                                               |
 | 1     | reference                                 | [Reference](/t/-/6664)                        |
 | 2     | api-reference                             | [API reference](/t/-/6665)                    |
 | 3     | api-authentication-reference              | [API authentication](/t/-/5060)               |
 | 3     | python-api-client-reference               | [Python API client](/t/-/5404)                |
 | 3     |                                           | [API documentation](https://maas.io/docs/api) |
+| 3     | how-to-change-maas-settings               | [Change MAAS settings](/t/-/6347)             |
 | 2     | operational-reference                     | [Operational reference](/t/-/6666)            |
 | 3     | how-to-keep-maas-backed-up                | [Keep MAAS backed up](/t/-/5096)              |
 | 3     | how-to-observe-a-live-maas                | [Observe a live MAAS](/t/-/5204)              |
@@ -128,61 +130,60 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | power-management-reference                | [Power management](/t/-/5246)                 |
 | 3     | storage-layouts-reference                 | [Storage layouts](/t/-/5973)                  |
 | 0     |                                           |                                               |
-| 1     | explanation                              | [Explanation](t/-/6667)                      |
-| 2     | basic-theory                       | [Basic theory](/t/-/6677)               |
+| 1     | explanations                              | [Explanations](t/-/6667)                      |
+| 2     | basic-explanations                        | [Basic explanations](/t/-/6677)               |
 | 3     | about-maas                                | [About MAAS](/t/-/6678)                       |
-| 3     | how-maas-works                            | [How MAAS works](/t/-/6679)                   |
-| 2     | about-networks                            | [About networks](/t/-/6680)                   |
-| 3     | maas-networking                           | [MAAS networking](/t/-/6681)                  |
-| 3     | dhcp-and-maas                             | [DHCP and MAAS](/t/-/6682)                    |
-| 3     | tcp-ip-primer                             | [TCP/IP primer](/t/-/6683)                    |
-| 3     | cloud-networking-primer                   | [Cloud networking primer](/t/-/6684)          |
-| 2     | about-images                              | [About images](/t/-/6685)                     |
-| 3     | maas-images-and-streams                   | [MAAS images and streams](/t/-/6686)          |
-| 3     | local-mirrors                             | [Local mirrors](/t/-/6687)                    |
-| 3     | image-deployment                          | [Image deployment](/t/-/6688)                 |
-| 3     | custom-images                             | [Custom images](/t/-/6689)                    |
-| 2     | about-controllers                         | [About controllers](/t/-/6690)                |
-| 3     | region-controller                         | [Region controllers](/t/-/6691)               |
-| 3     | rack-controller                           | [Rack controllers](/t/-/6692)                 |
-| 3     | region-rack-communication                 | [Region-Rack communication](/t/-/6693)        |
-| 3     | high-availability                         | [High availability](/t/-/6694)                |
-| 2     | physical-machines                         | [Physical machines](/t/-/6695)                |
-| 3     | the-machine-lifecycle                     | [The machine lifecycle](/t/-/6696)            |
-| 3     | power-drivers                             | [Power drivers](/t/-/6697)                    |
-| 3     | commissioning-scripts                     | [Commissioning scripts](/t/-/6698)            |
-| 3     | testing-scripts                           | [Testing scripts](/t/-/6699)                  |
-| 3     | events-and-event-logs                     | [Events and event logs](/t/-/6700)            |
+| 3     | about-how-maas-works                      | [How MAAS works](/t/-/6679)                   |
+| 2     | about-networks                            | [Networks](/t/-/6680)                         |
+| 3     | about-maas-networking                     | [MAAS networking](/t/-/6681)                  |
+| 3     | about-dhcp-and-maas                       | [DHCP and MAAS](/t/-/6682)                    |
+| 3     | about-tcp-ip                              | [TCP/IP primer](/t/-/6683)                    |
+| 3     | about-cloud-networking                    | [Cloud networking primer](/t/-/6684)          |
+| 2     | about-images                              | [Images](/t/-/6685)                           |
+| 3     | about-maas-images-and-streams             | [MAAS images and streams](/t/-/6686)          |
+| 3     | about-local-mirrors                       | [Local mirrors](/t/-/6687)                    |
+| 3     | about-image-deployment                    | [Image deployment](/t/-/6688)                 |
+| 3     | about-custom-images                       | [Custom images](/t/-/6689)                    |
+| 2     | about-controllers                         | [Controllers](/t/-/6690)                      |
+| 3     | about-region-controllers                  | [Region controllers](/t/-/6691)               |
+| 3     | about-rack-controllers                    | [Rack controllers](/t/-/6692)                 |
+| 3     | about-region-rack-communication           | [Region-Rack communication](/t/-/6693)        |
+| 3     | about-high-availability                   | [High availability](/t/-/6694)                |
+| 2     | about-physical-machines                   | [Physical machines](/t/-/6695)                |
+| 3     | about-the-machine-lifecycle               | [The machine lifecycle](/t/-/6696)            |
+| 3     | about-power-drivers                       | [Power drivers](/t/-/6697)                    |
+| 3     | about-commissioning-scripts               | [Commissioning scripts](/t/-/6698)            |
+| 3     | about-testing-scripts                     | [Testing scripts](/t/-/6699)                  |
+| 3     | about-events-and-event-logs               | [Events and event logs](/t/-/6700)            |
 | 3     | the-machine-list                          | [The machine list](/t/-/6701)                 |
-| 3     | machine-storage-information               | [Machine storage information](/t/-/6702)      |
-| 3     | disk-erasure                              | [Disk erasure](/t/-/6703)                     |
-| 2     | virtual-machines                          | [Virtual machines](/t/-/6704)                 |
-| 3     | vm-hosting                                | [VM hosting](/t/-/6705)                       |
-| 3     | about-lxd                                 | [About LXD](/t/-/6706)                        |
-| 3     | virtual-machines-and-maas                 | [Virtual machines and MAAS](/t/-/6707)        |
-| 3     | vms-and-numa-sr-iov                       | [VMs and NUMA/SR-IOV](/t/-/6708)              |
-| 2     | labelling-and-finding-machines            | [Labelling and finding machines](/t/-/6709)   |
+| 3     | about-machine-storage-information         | [Machine storage information](/t/-/6702)      |
+| 3     | about-disk-erasure                        | [Disk erasure](/t/-/6703)                     |
+| 2     | about-virtual-machines                    | [Virtual machines](/t/-/6704)                 |
+| 3     | about-vm-hosting                          | [VM hosting](/t/-/6705)                       |
+| 3     | about-lxd                                 | [LXD](/t/-/6706)                              |
+| 3     | about-vms-and-numa-sr-iov                 | [VMs and NUMA/SR-IOV](/t/-/6708)              |
+| 2     | about-labelling-and-finding-machines      | [Labelling and finding machines](/t/-/6709)   |
 | 3     | about-tags                                | [About tags](/t/-/6710)                       |
-| 3     | annotations                               | [Annotations](/t/-/6711)                      |
-| 3     | search-and-filter                         | [Search and filter](/t/-/6712)                |
-| 2     | maas-logging                              | [MAAS logging](/t/-/6713)                     |
-| 3     | region-log                                | [Region log](/t/-/6714)                       |
-| 3     | rack-log                                  | [Rack log](/t/-/6715)                         |
-| 3     | maas-log                                  | [MAAS log](/t/-/6716)                         |
-| 3     | named-log                                 | [The named log](/t/-/6717)                    |
-| 3     | other-logs-of-interest                    | [Other logs of interest](/t/-/6718)           |
-| 2     | maas-security                             | [MAAS security](/t/-/6719)                    |
+| 3     | about-annotations                         | [Annotations](/t/-/6711)                      |
+| 3     | about-search-and-filter                   | [Search and filter](/t/-/6712)                |
+| 2     | about-maas-logging                        | [MAAS logging](/t/-/6713)                     |
+| 3     | about-the-region-log                      | [Region log](/t/-/6714)                       |
+| 3     | about-the-rack-log                        | [Rack log](/t/-/6715)                         |
+| 3     | about-the-maas-log                        | [MAAS log](/t/-/6716)                         |
+| 3     | about-the-named-log                       | [The named log](/t/-/6717)                    |
+| 3     | about-other-logs-of-interest              | [Other logs of interest](/t/-/6718)           |
+| 2     | about-maas-security                       | [MAAS security](/t/-/6719)                    |
 | 3     | about-tls-and-maas                        | [About TLS and MAAS](/t/-/6720)               |
-| 3     | air-gapped-maas                           | [Air-gapped MAAS](/t/-/6721)                  |
-| 3     | user-accounts                             | [User accounts](/t/-/6722)                    |
+| 3     | about-air-gapped-maas                     | [Air-gapped MAAS](/t/-/6721)                  |
+| 3     | about-user-accounts                       | [User accounts](/t/-/6722)                    |
 | 3     | about-vault-and-maas                      | [About Vault and MAAS](/t/-/6723)             |
-| 3     | rbac-and-candid                           | [RBAC and Candid](/t/-/6724)                  |
-| 2     | maas-operations                           | [MAAS operations](/t/-/6725)                  |
-| 3     | monitoring-maas                           | [Monitoring MAAS](/t/-/6726)                  |
-| 3     | measuring-performance                     | [Measuring performance](/t/-/6727)            |
-| 3     | keeping-reliable-backups                  | [Keeping reliable backups](/t/-/6728)         |
-| 3     | maas-and-terraforming                     | [MAAS and Terraforming](/t/-/6729)            |
-| 3     | ansible-kit                               | [Ansible kit](/t/-/6730)                      |
+| 3     | about-rbac-and-candid                     | [RBAC and Candid](/t/-/6724)                  |
+| 2     | about-maas-operations                     | [MAAS operations](/t/-/6725)                  |
+| 3     | about-monitoring-maas                     | [Monitoring MAAS](/t/-/6726)                  |
+| 3     | about-measuring-performance               | [Measuring performance](/t/-/6727)            |
+| 3     | about-keeping-reliable-backups            | [Keeping reliable backups](/t/-/6728)         |
+| 3     | about-maas-and-terraforming               | [MAAS and Terraforming](/t/-/6729)            |
+| 3     | about-maas-and-ansible                    | [MAAS and Ansible](/t/-/6730)                 |
 [/details]
 
 ## Redirects
