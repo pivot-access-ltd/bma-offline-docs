@@ -64,28 +64,21 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | how-to-install-maas              | [Install](/t/-/6202)                    |
 | 3     | how-to-do-a-fresh-install        | [Do a fresh install](/t/-/5128)         |
 | 3     | how-to-upgrade-maas              | [Upgrade MAAS](/t/-/5346)               |
-| 3     | how-to-spin-up-maas-with-ansible | [Use playbooks to install](/t/-/6367)   |
+| 3     | how-to-spin-up-maas-with-ansible | [Use playbooks](/t/-/6367)              |
 | 2     | how-to-set-up-networks           | [Networks](/t/-/6174)                   |
-| 3     | how-to-connect-maas-networks     | [Connect MAAS networks](/t/-/5164)      |
-| 3     | how-to-manage-interfaces         | [Interfaces](/t/-/4917)                 |
-| 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                  |
-| 3     | how-to-manage-subnets            | [Subnets](/t/-/4917)                    |
-| 3     | how-to-manage-dns                | [DNS](/t/-/4917)                        |
-| 3     | how-to-enable-dhcp               | [DHCP](/t/-/4917)                       |
-| 3     | how-to-manage-ip-addresses       | [Addressing](/t/-/4917)                 |
-| 3     | how-to-manage-proxies            | [Proxies](/t/-/4917)                    |
-| 3     | how-to-manage-ntp                | [NTP](/t/-/4917)                        |
-| 3     | how-to-use-availability-zones    | [Zones](/t/-/4917)                      |
+| 3     | how-to-connect-maas-networks     | [Connect to MAAS](/t/-/5164)            |
+| 3     | how-to-enable-dhcp               | [Enable DHCP](/t/-/4917)                |
+| 3     | how-to-use-availability-zones    | [Use zones](/t/-/4917)                  |
 | 2     | how-to-use-images                | [Images](/t/-/4917)                     |
-| 3     | how-to-use-standard-images       | [Standard](/t/-/4917)                   |
-| 3     | how-to-customise-images          | [Custom](/t/-/4917)                     |
-| 3     | how-to-use-a-local-mirror        | [Mirroring](/t/-/4917)                  |
-| 3     | how-to-use-vmware-images         | [VMWare](/t/-/4917)                     |
-| 3     | how-to-deploy-a-rt-kernel        | [RT kernel](/t/-/4917)                  |
+| 3     | how-to-use-standard-images       | [Sync images](/t/-/4917)                |
+| 3     | how-to-customise-images          | [Build images](/t/-/4917)               |
+| 3     | how-to-use-a-local-mirror        | [Mirror images](/t/-/4917)              |
+| 3     | how-to-use-vmware-images         | [Use VMWare images](/t/-/4917)          |
+| 3     | how-to-deploy-a-rt-kernel        | [Use an RT kernel](/t/-/4917)           |
 | 2     | how-to-manage-controllers        | [Controllers](/t/-/4917)                |
-| 3     | how-to-manage-rack-controllers   | [Rack](/t/-/4917)                       |
-| 3     | how-to-manage-region-controllers | [Region](/t/-/4917)                     |
-| 3     | how-to-enable-high-availability  | [High availability](/t/-/4917)          |
+| 3     | how-to-manage-rack-controllers   | [Configure racks](/t/-/4917)            |
+| 3     | how-to-manage-region-controllers | [Configure egions](/t/-/4917)           |
+| 3     | how-to-enable-high-availability  | [Enable HA](/t/-/4917)                  |
 | 2     | how-to-manage-machines           | [Machines](/t/-/4917)                   |
 | 3     | how-to-introduce-machines        | [CRUD](/t/-/4917)                       |
 | 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                  |
