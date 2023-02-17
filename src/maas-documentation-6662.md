@@ -105,39 +105,39 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-audit-maas                | [Audit MAAS](/t/-/4917)                 |
 | 3     | how-to-use-syslog                | [Look deeper](/t/-/4917)                |
 | 2     | how-to-label-machines            | [Labels](/t/-/4917)                     |
-| 3     | how-to-use-tags                  | [Tag machines](/t/-/4917)           |
+| 3     | how-to-use-tags                  | [Tag machines](/t/-/4917)               |
 | 3     | how-to-use-annotations           | [Leave public notes](/t/-/4917)         |
 | 2     | how-to-find-machines             | [Search](/t/-/4917)                     |
-| 3     | how-to-filter-the-machine-list   | [Filters](/t/-/4917)                    |
-| 3     | how-to-create-custom-filters     | [Custom](/t/-/4917)                     |
-| 3     | how-to-find-exact-matches        | [Exact match](/t/-/4917)                |
-| 3     | how-to-find-partial-matches      | [Partial match](/t/-/4917)              |
-| 3     | how-to-combine-search-terms      | [Chaining](/t/-/4917)                   |
+| 3     | how-to-filter-the-machine-list   | [Use built-ins](/t/-/4917)              |
+| 3     | how-to-create-custom-filters     | [Create new filters](/t/-/4917)         |
+| 3     | how-to-find-exact-matches        | [Match exactly](/t/-/4917)              |
+| 3     | how-to-find-partial-matches      | [Match substrings](/t/-/4917)           |
+| 3     | how-to-combine-search-terms      | [Chain search terms](/t/-/4917)         |
 | 2     | how-to-secure-maas               | [Security](/t/-/4917)                   |
-| 3     | how-to-maintain-security-hygiene | [Hygiene](/t/-/4917)                    |
-| 3     | how-to-manage-user-accounts      | [Accounts](/t/-/4917)                   |
-| 3     | how-to-enable-tls                | [TLS](/t/-/4917)                        |
-| 3     | how-to-use-vault                 | [Vault](/t/-/4917)                      |
-| 3     | how-to-air-gap-maas              | [Air-gap](/t/-/4917)                    |
+| 3     | how-to-maintain-security-hygiene | [Use best practices](/t/-/4917)         |
+| 3     | how-to-manage-user-accounts      | [Manage users](/t/-/4917)               |
+| 3     | how-to-enable-tls                | [Enable TLS](/t/-/4917)                 |
+| 3     | how-to-use-vault                 | [Use Vault](/t/-/4917)                  |
+| 3     | how-to-air-gap-maas              | [Set up an air-gap](/t/-/4917)          |
 | 2     | how-to-operate-maas              | [Operations](/t/-/4917)                 |
-| 3     | how-to-back-up-maas              | [Backups](/t/-/4917)                    |
-| 3     | how-to-monitor-maas              | [Monitoring](/t/-/4917)                 |
-| 3     | how-to-gauge-maas-performance    | [Performance](/t/-/4917)                |
-| 3     | how-to-terraform-with-maas       | [Terraforming](/t/-/4917)               |
-| 3     | how-to-troubleshoot-maas         | [Troubleshooting](/t/-/4917)            |
+| 3     | how-to-back-up-maas              | [Keep good backups](/t/-/4917)          |
+| 3     | how-to-monitor-maas              | [Monitor MAAS](/t/-/4917)               |
+| 3     | how-to-gauge-maas-performance    | [Gauge performance](/t/-/4917)          |
+| 3     | how-to-terraform-with-maas       | [Terraform](/t/-/4917)                  |
+| 3     | how-to-troubleshoot-maas         | [Troubleshoot MAAS](/t/-/4917)          |
 | 2     | how-to-get-help                  | [Get help](/t/-/4917)                   |
-| 3     | how-to-use-our-discourse-forum   | [Forum](/t/-/4917)                      |
-| 3     | how-to-get-support               | [Support](/t/-/4917)                    |
-| 3     | how-to-request-new-features      | [Feature requests](/t/-/4917)           |
-| 3     | how-to-review-and-report-bugs    | [Bugs](/t/-/4917)                       |
+| 3     | how-to-use-our-discourse-forum   | [Join our forum](/t/-/4917)             |
+| 3     | how-to-get-support               | [Purchase support](/t/-/4917)           |
+| 3     | how-to-request-new-features      | [Request features](/t/-/4917)           |
+| 3     | how-to-review-and-report-bugs    | [Report bugs](/t/-/4917)                |
 | 2     | how-to-contribute-to-maas        | [Contribute](/t/-/4917)                 |
-| 3     | how-to-contribute-code           | [Code](/t/-/4917)                       |
-| 3     | how-to-update-the-documentation  | [Documentation](/t/-/4917)              |
+| 3     | how-to-contribute-code           | [Contribute code](/t/-/4917)            |
+| 3     | how-to-update-the-documentation  | [Update the docs](/t/-/4917)            |
 | 0     |                                  |                                         |
 | 1     | reference                        | [Reference](/t/-/4917)                  |
 | 2     | ref-general                      | [General](/t/-/4917)                    |
 | 3     | ref-release-notes                | [Release notes](/t/-/4917)              |
-| 3     | ref-install-rqmts                | [Installation requirements              |
+| 3     | ref-install-rqmts                | [Installation rqmts](/t/-/4917)         |
 | 3     | ref-settings                     | [Settings](/t/-/4917)                   |
 | 3     | ref-glossary                     | [Glossary](/t/-/4917)                   |
 | 3     | ref-code-of-conduct              | [Code of conduct](/t/-/4917)            |
@@ -185,9 +185,9 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 0     |                                  |                                         |
 | 1     | about-explanations               | [Explanation](/t/-/4917)                |
 | 2     | about-maas                       | [MAAS](/t/-/4917)                       |
-| 3     | about-what-is-maas               | [What is MAAS?](/t/-/4917)              |
-| 3     | about-what-maas-offers           | [What does it offer?](/t/-/4917)        |
-| 3     | about-how-maas-works             | [How does it work?](/t/-/4917)          |
+| 3     | about-maas                       | [About MAAS](/t/-/4917)                 |
+| 3     | about-what-maas-offers           | [What MAAS offers](/t/-/4917)        |
+| 3     | about-how-maas-works             | [How MAAS works](/t/-/4917)          |
 | 2     | about-networks                   | [Networks](/t/-/4917)                   |
 | 3     | about-pxe-booting                | [PXE](/t/-/4917)                        |
 | 3     | about-power-drivers              | [Drivers](/t/-/4917)                    |
