@@ -61,12 +61,12 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | using-jq-with-the-maas-cli       | [Using jq with the MAAS CLI](/t/-/6027) |
 | 0     |                                  |                                         |
 | 1     | how-to-guides                    | [How-to](/t/-/4917)                     |
-| 2     | how-to-get-started-with-maas     | [Start](/t/-/6202)                      |
-| 3     | how-to-install-maas              | [Install](/t/-/4917)                    |
-| 3     | how-to-upgrade-maas              | [Upgrade](/t/-/4917)                    |
-| 3     | how-to-spin-up-maas-with-ansible | [Playbooks](/t/-/4917)                  |
-| 2     | how-to-set-up-networks           | [Networks](/t/-/4917)                   |
-| 3     | how-to-connect-maas-networks     | [Connections](/t/-/4917)                |
+| 2     | how-to-install-maas              | [Install](/t/-/6202)                    |
+| 3     | how-to-do-a-fresh-install        | [Do a fresh install](/t/-/5128)         |
+| 3     | how-to-upgrade-maas              | [Upgrade MAAS](/t/-/5346)               |
+| 3     | how-to-spin-up-maas-with-ansible | [Use playbooks to install](/t/-/6367)   |
+| 2     | how-to-set-up-networks           | [Networks](/t/-/6174)                   |
+| 3     | how-to-connect-maas-networks     | [Connect MAAS networks](/t/-/5164)      |
 | 3     | how-to-manage-interfaces         | [Interfaces](/t/-/4917)                 |
 | 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                  |
 | 3     | how-to-manage-subnets            | [Subnets](/t/-/4917)                    |
