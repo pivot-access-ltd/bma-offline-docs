@@ -77,38 +77,36 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-deploy-a-rt-kernel        | [Use an RT kernel](/t/-/4917)           |
 | 2     | how-to-manage-controllers        | [Controllers](/t/-/4917)                |
 | 3     | how-to-manage-rack-controllers   | [Configure racks](/t/-/4917)            |
-| 3     | how-to-manage-region-controllers | [Configure egions](/t/-/4917)           |
+| 3     | how-to-manage-region-controllers | [Configure regions](/t/-/4917)          |
 | 3     | how-to-enable-high-availability  | [Enable HA](/t/-/4917)                  |
 | 2     | how-to-manage-machines           | [Machines](/t/-/4917)                   |
-| 3     | how-to-introduce-machines        | [CRUD](/t/-/4917)                       |
-| 3     | how-to-discover-machines         | [Discovery](/t/-/4917)                  |
-| 3     | how-to-choose-power-drivers      | [Drivers](/t/-/4917)                    |
-| 3     | how-to-commission-a-machine      | [Commissioning](/t/-/4917)              |
-| 3     | how-to-test-a-machine            | [Testing](/t/-/4917)                    |
-| 3     | how-to-allocate-a-machine        | [Allocation](/t/-/4917)                 |
-| 3     | how-to-set-up-machine-storage    | [Storage](/t/-/4917)                    |
-| 3     | how-to-use-curtin                | [Curtin](/t/-/4917)                     |
-| 3     | how-to-use-cloud-init            | [Cloud-init](/t/-/4917)                 |
-| 3     | how-to-set-kernel-options        | [Kernel options](/t/-/4917)             |
-| 3     | how-to-deploy-a-machine          | [Deployment](/t/-/4917)                 |
-| 3     | how-to-clone-a-machine           | [Cloning](/t/-/4917)                    |
-| 3     | how-to-examine-machines          | [Examination](/t/-/4917)                |
-| 3     | how-to-use-resource-pools        | [Resource pools](/t/-/4917)             |
-| 3     | how-to-enable-hardware-sync      | [Hardware sync](/t/-/4917)              |
+| 3     | how-to-introduce-machines        | [Manage](/t/-/4917)                     |
+| 3     | how-to-discover-machines         | [Discover](/t/-/4917)                   |
+| 3     | how-to-choose-power-drivers      | [Choose drivers](/t/-/4917)             |
+| 3     | how-to-commission-a-machine      | [Commission](/t/-/4917)                 |
+| 3     | how-to-test-a-machine            | [Test](/t/-/4917)                       |
+| 3     | how-to-allocate-a-machine        | [Allocate](/t/-/4917)                   |
+| 3     | how-to-use-curtin                | [Compose hardware](/t/-/4917)           |
+| 3     | how-to-use-cloud-init            | [Compose software](/t/-/4917)           |
+| 3     | how-to-set-kernel-options        | [Set kernel opts](/t/-/4917)            |
+| 3     | how-to-deploy-a-machine          | [Deploy](/t/-/4917)                     |
+| 3     | how-to-clone-a-machine           | [Clone](/t/-/4917)                      |
+| 3     | how-to-examine-machines          | [Examine](/t/-/4917)                    |
+| 3     | how-to-use-resource-pools        | [Pool resources](/t/-/4917)             |
+| 3     | how-to-enable-hardware-sync      | [Sync RT changes](/t/-/4917)            |
 | 2     | how-to-manage-virtual-machines   | [Virtual machines](/t/-/4917)           |
-| 3     | how-to-use-lxd                   | [LXD](/t/-/4917)                        |
-| 3     | how-to-manage-vm-host            | [VM hosting](/t/-/4917)                 |
-| 3     | how-to-instantiate-vms           | [VM CRUD](/t/-/4917)                    |
+| 3     | how-to-use-lxd                   | [Use LXD](/t/-/4917)                    |
+| 3     | how-to-manage-vm-host            | [Manage VM hosts](/t/-/4917)            |
+| 3     | how-to-instantiate-vms           | [Manage VMs](/t/-/4917)                 |
 | 2     | how-to-use-logging               | [Logging](/t/-/4917)                    |
-| 3     | how-to-use-commissioning-logs    | [Commissioning](/t/-/4917)              |
-| 3     | how-to-use-testing-logs          | [Testing](/t/-/4917)                    |
-| 3     | how-to-use-maas-events           | [Events](/t/-/4917)                     |
-| 3     | how-to-audit-maas                | [Audit events](/t/-/4917)               |
-| 3     | how-to-use-syslog                | [Syslog](/t/-/4917)                     |
-| 3     | how-to-access-logs               | [Accessing logs](/t/-/4917)             |
+| 3     | how-to-use-commissioning-logs    | [Watch lifecycles](/t/-/4917)           |
+| 3     | how-to-use-testing-logs          | [Read test logs](/t/-/4917)             |
+| 3     | how-to-use-maas-events           | [Trace events](/t/-/4917)               |
+| 3     | how-to-audit-maas                | [Audit MAAS](/t/-/4917)                 |
+| 3     | how-to-use-syslog                | [Look deeper](/t/-/4917)                |
 | 2     | how-to-label-machines            | [Labels](/t/-/4917)                     |
-| 3     | how-to-use-tags                  | [Tags](/t/-/4917)                       |
-| 3     | how-to-use-annotations           | [Annotations](/t/-/4917)                |
+| 3     | how-to-use-tags                  | [Tag machines](/t/-/4917)           |
+| 3     | how-to-use-annotations           | [Leave public notes](/t/-/4917)         |
 | 2     | how-to-find-machines             | [Search](/t/-/4917)                     |
 | 3     | how-to-filter-the-machine-list   | [Filters](/t/-/4917)                    |
 | 3     | how-to-create-custom-filters     | [Custom](/t/-/4917)                     |
