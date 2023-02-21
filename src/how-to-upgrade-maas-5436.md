@@ -1,10 +1,93 @@
 <!-- "How to upgrade MAAS" -->
 [tabs]
 [tab version="v3.3 Snap"]
-This section will be filled in on the final release of MAAS 3.3.  In the meantime, please check the [release notes](/t/what-is-new-with-maas/5292) for details on how to upgrade from MAAS 3.2.
+To upgrade from a earlier snap version to the 3.3 snap, in a `region+rack` configuration, use this command:
+
+    $ sudo snap refresh --channel=3.3 maas
+
+After entering your password, the snap will refresh from the 3.3 candidate channel.  You will **not** need to re-initialise MAAS.
+
+If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v3.3 Packages"] 
-This section will be filled in on the final release of MAAS 3.3.  In the meantime, please check the [release notes](/t/what-is-new-with-maas/5292) for details on how to upgrade from MAAS 3.2.
+If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
+
+```nohighlight
+lsb_release -a
+```
+The response should look something like this:
+
+```nohighlight
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
+
+The required “xx.yy” required for MAAS 3.3 is “22.04,” code-named “jammy”.
+
+If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:
+
+Upgrade the release:
+
+```nohighlight
+sudo do-release-upgrade --allow-third-party
+```
+
+Accept the defaults for any questions asked by the upgrade script.
+
+Reboot the machine when requested.
+
+Check whether the upgrade was successful:
+
+```nohighlight
+lsb_release -a
+```
+
+A successful upgrade should respond with output similar to the following:
+
+```nohighlight
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the following procedures should work, note that they are untested. Use at your own risk. Start by making a verifiable backup; see step 1, below.
+
+Back up your MAAS server completely; the tools and media are left entirely to your discretion. Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+```nohighlight
+sudo apt-add-repository ppa:maas/3.3
+```
+
+Run the release upgrade like this, answering any questions with the given default values:
+
+```nohighlight
+sudo do-release-upgrade --allow-third-party
+```
+
+Check whether your upgrade has been successful by entering:
+
+```nohighlight
+lsb_release -a
+```
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+```nohighlight
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
+```
+
+Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you’re running the 3.3 release.
+
+If this didn’t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.3.
 [/tab]
 [tab version="v3.2 Snap"] 
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-2"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-2">How to upgrade a snap to MAAS 3.2</h2></a>
