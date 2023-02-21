@@ -1,53 +1,20 @@
 <!-- "How-to guides" -->
+The how-to guides in this section give directions on how to achieve your goals when configuring, managing or using MAAS.
 
-MAAS has a lot of moving parts.  These how-to guides are arranged (approximately) in sequential order for most MAAS users:
+|                                             |                                                                                   |
+|:--------------------------------------------|:----------------------------------------------------------------------------------|
+| [How to install MAAS](/t/-/6202)            | Instructions for installing and upgrading MAAS, including Ansible playbooks       |
+| [How to set up networks](/t/-/6174)         | Instructions for connecting MAAS to your machines and setting up network services |
+| [How to use images](/t/-/4917)              | Instructions for choosing, downloading, customising, and refreshing OS images     |
+| [How to manage controllers](/t/-/4917)      | Instructions for adding controllers and creating high-availability configurations |
+| [How to manage machines](/t/-/4917)         | Instructions for managing machines and walking them through their lifecycle       |
+| [How to manage virtual machines](/t/-/4917) | Instructions for managing, hosting, and connecting virtual machines               |
+| [How to use logging](/t/-/4917)             | Instructions for using logs to manage, audit, and debug machines                  |
+| [How to label machines](/t/-/4917)          | Instructions for labelling machines for yourself and others                       |
+| [How to find machines](/t/-/4917)           | Instructions for using filters to focus the machine list                          |
+| [How to secure MAAS](/t/-/4917)             | Instructions for creating and maintaining a secure MAAS instance                  |
+| [How to operate MAAS](/t/-/4917)            | Instructions for the general operation of MAAS                                    |
+| [How to get help](/t/-/4917)                | Instructions for getting help, support, and technical advice about MAAS           |
+| [How to contribute to MAAS](/t/-/4917)      | Instructions for helping to build out the MAAS product                            |
 
-## How to get MAAS running
-
-- [Installation](/t/-/5128)
-- [Troubleshooting](/t/-/5333)
-
-## How to configure networking
-
-- [Manage networks](/t/-/5164)
-- [Manage IP addresses](/t/-/5132)
-- [Enable TLS](/t/-/5116)
-- [Manage zones (AZs)](/t/-/5152)
-
-## How to choose images
-
-- [Import images](/t/-/5124)
-- [Create custom images](/t/-/5104)
-- [Mirror images locally](/t/-/5927)
-- [Manage VMWare images](/t/-/5144)
-
-## How to deploy MAAS
-
-- [Manage controllers](/t/-/5172)
-- [Manage machines](/t/-/5160)
-- [Deploy machines](/t/-/5112)
-- [Customise machines](/t/-/5108)
-- [Manage VM hosts](/t/-/5140)
-- [Manage VMs](/t/-/5148)
-- [Use LXD](/t/-/5208)
-
-## How to use tags
-
-- [Work with tags](/t/-/5928)
-- [Work with annotations](/t/-/5929)
-- [Use machine tags](/t/-/5224)
-- [Use controller tags](/t/-/5216)
-- [Use storage tags](/t/-/5232)
-- [Use network tags](/t/-/5228)
-
-## How to operate MAAS
-
-- [Enable HA](/t/-/5120)
-- [Set up MAAS metrics](/t/-/5204)
-- [Work with audit event logs](/t/-/5987)
-- [Use air-gapped MAAS](/t/-/5212)
-- [Back up MAAS](/t/-/5096)
-- [Secure MAAS](/t/-/5196)
-- [Manage users](/t/-/5184)
-- [Search MAAS](/t/-/5192)
-- [Upgrade older versions](/t/how-to-upgrade-maas/5436)
+Make sure to also check out the [Tutorials](/t/-/6140) for step-by-step instructions that help you get familiar with MAAS, as well as the [Reference](/t/-/6143) and [Explanation](/t/-/6141) sections for other helpful information.
