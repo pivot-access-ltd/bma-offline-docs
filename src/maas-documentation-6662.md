@@ -59,7 +59,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | custom-image-tutorial            | [Custom image tutorial](/t/-/6102)      |
 | 2     | using-jq-with-the-maas-cli       | [Using jq with the MAAS CLI](/t/-/6027) |
 | 0     |                                  |                                         |
-| 1     | how-to-guides                    | [How-to](/t/-/4917)                     |
+| 1     | how-to-guides                    | [How-to](/t/-/6142)                     |
 | 2     | how-to-install-maas              | [Install](/t/-/6202)                    |
 | 3     | how-to-do-a-fresh-install        | [Do a fresh install](/t/-/5128)         |
 | 3     | how-to-upgrade-maas              | [Upgrade MAAS](/t/-/5346)               |
@@ -133,7 +133,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-contribute-code           | [Contribute code](/t/-/4917)            |
 | 3     | how-to-update-the-documentation  | [Update the docs](/t/-/4917)            |
 | 0     |                                  |                                         |
-| 1     | reference                        | [Reference](/t/-/4917)                  |
+| 1     | reference                        | [Reference](/t/-/6143)                  |
 | 2     | ref-general                      | [General](/t/-/4917)                    |
 | 3     | ref-release-notes                | [Release notes](/t/-/4917)              |
 | 3     | ref-install-rqmts                | [Installation rqmts](/t/-/4917)         |
@@ -182,7 +182,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | ref-api-client                   | [Client](/t/-/4917)                     |
 | 3     | ref-api-authentication           | [Authentication](/t/-/4917)             |
 | 0     |                                  |                                         |
-| 1     | about-explanations               | [Explanation](/t/-/4917)                |
+| 1     | about-explanations               | [Explanation](/t/-/6141)                |
 | 2     | about-maas                       | [MAAS](/t/-/4917)                       |
 | 3     | about-maas                       | [About MAAS](/t/-/4917)                 |
 | 3     | about-what-maas-offers           | [What MAAS offers](/t/-/4917)        |
