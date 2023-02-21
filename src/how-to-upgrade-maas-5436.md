@@ -10,7 +10,9 @@ After entering your password, the snap will refresh from the 3.3 candidate chann
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v3.3 Packages"] 
-If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
+## Upgrade from MAAS 2.9 or higher
+
+If you are running MAAS 2.9 or higher, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
 
 ```nohighlight
 lsb_release -a
@@ -52,6 +54,7 @@ Description:	Ubuntu 20.04(.nn) LTS
 Release:	20.04
 Codename:	focal
 ```
+## Upgrade from MAAS 2.8 or lower
 
 If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the following procedures should work, note that they are untested. Use at your own risk. Start by making a verifiable backup; see step 1, below.
 
