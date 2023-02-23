@@ -1,0 +1,391 @@
+* table of topic numbers
+| Title                                     | Topic number |
+|-------------------------------------------+--------------|
+| About air-gapped MAAS                     |         6721 |
+| About annotations                         |         6711 |
+| About cloud networking                    |         6684 |
+| About commissioning scripts               |         6698 |
+| About controllers                         |         6690 |
+| About custom images                       |         6689 |
+| About DHCP and MAAS                       |         6682 |
+| About disk erasure                        |         6703 |
+| About events and event logs               |         6700 |
+| About explanations                        |         6667 |
+| About high availability                   |         6694 |
+| About how MAAS works                      |         6679 |
+| About image deployment                    |         6688 |
+| About images                              |         6685 |
+| About keeping reliable backups            |         6728 |
+| About labelling and finding machines      |         6709 |
+| About local mirrors                       |         6687 |
+| About LXD                                 |         6706 |
+| About MAAS                                |         6678 |
+| About MAAS and Ansible                    |         6730 |
+| About MAAS and Terraforming               |         6729 |
+| About MAAS images and streams             |         6686 |
+| About MAAS logging                        |         6713 |
+| About MAAS networking                     |         6681 |
+| About MAAS networks                       |         5084 |
+| About MAAS operations                     |         6725 |
+| About MAAS security                       |         6719 |
+| About machine storage information         |         6702 |
+| About measuring performance               |         6727 |
+| About monitoring MAAS                     |         6726 |
+| About networks                            |         6680 |
+| About other logs of interest              |         6718 |
+| About physical machines                   |         6695 |
+| About power drivers                       |         6697 |
+| About rack controllers                    |         6692 |
+| About RBAC and Candid                     |         6724 |
+| About region controllers                  |         6691 |
+| About region rack communication           |         6693 |
+| About search and filter                   |         6712 |
+| About tags                                |         6710 |
+| About TCP/IP                              |         6683 |
+| About testing scripts                     |         6699 |
+| About the MAAS log                        |         6716 |
+| About the machine lifecycle               |         6696 |
+| About the machine list                    |         6701 |
+| About the named log                       |         6717 |
+| About the rack log                        |         6715 |
+| About the region log                      |         6714 |
+| About TLS and MAAS                        |         6720 |
+| About user accounts                       |         6722 |
+| About Vault and MAAS                      |         6723 |
+| About virtual machines                    |         6704 |
+| About VM hosting                          |         6705 |
+| About VMs and NUMA/SR IOV                 |         6708 |
+| How MAAS networks                         |         5084 |
+| How to adjust your controllers            |         5172 |
+| How to annotate machines                  |         5929 |
+| How to build custom images                |         5104 |
+| How to change MAAS settings               |         6347 |
+| How to connect MAAS networks              |         5164 |
+| How to create and manage VMs              |         5148 |
+| How to create VM hosts                    |         5140 |
+| How to customise machines                 |         5108 |
+| How to deploy an RT kernel via cloud init |         6658 |
+| How to deploy physical machines           |         6193 |
+| How to deploy virtual machines            |         6500 |
+| How to employ VMWare images               |         5144 |
+| How to enable DHCP                        |         5132 |
+| How to enable high availability           |         5120 |
+| How to enable MAAS native TLS             |         5116 |
+| How to enable Vault                       |         6501 |
+| How to find machines                      |         5192 |
+| How to get help                           |         5428 |
+| How to get started with MAAS              |         6202 |
+| How to guides                             |         6663 |
+| How to improve MAAS security              |         5196 |
+| How to install and use RBAC with MAAS     |         6145 |
+| How to install MAAS                       |         5128 |
+| How to keep MAAS backed up                |         5096 |
+| How to label and find machines            |         6200 |
+| How to landing page                       |         6142 |
+| How to make machines available            |         5160 |
+| How to manage availability zones          |         5152 |
+| How to manage images                      |         6192 |
+| How to manage networking                  |         6742 |
+| How to manage user accounts               |         5184 |
+| How to mirror images locally              |         5927 |
+| How to observe a live MAAS                |         5204 |
+| How to protect your secrets               |         6503 |
+| How to put machines to work               |         5112 |
+| How to report a bug                       |         4446 |
+| How to request features                   |         4447 |
+| How to set up an air-gapped MAAS          |         5212 |
+| How to set up LXD                         |         5208 |
+| How to set up networks                    |         6174 |
+| How to spin up MAAS with Ansible          |         6367 |
+| How to tag machines                       |         5928 |
+| How to troubleshoot MAAS                  |         5333 |
+| How to tune controllers                   |         6498 |
+| How to unseal Vault                       |         6502 |
+| How to upgrade MAAS                       |         5436 |
+| How to use controller tags                |         5216 |
+| How to use machine tags                   |         5224 |
+| How to use network tags                   |         5228 |
+| How to use standard images                |         5124 |
+| How to use storage tags                   |         5232 |
+| How to work with audit event logs         |         5987 |
+| How to work with log files                |         5240 |
+| MAAS controllers                          |         5072 |
+| MAAS documentation                        |           25 |
+| MAAS documentation                        |         6662 |
+| MAAS performance                          |         6178 |
+| Reference                                 |         6140 |
+| API authentication reference              |         5060 |
+| Audit event logs reference                |         5256 |
+| Commissioning log reference               |         5248 |
+| Commissioning scripts reference           |         5375 |
+| Contact us                                |         5448 |
+| Documentation handbook                    |         4186 |
+| Event log reference                       |         5252 |
+| API reference                             |         6665 |
+| Glossary reference                        |         5416 |
+| Installation requirements                 |         6233 |
+| MAAS operations reference                 |         6666 |
+| MAAS technical data reference             |         6203 |
+| MAAS Terraform provider reference         |         6327 |
+| Power management reference                |         5246 |
+| Python API client reference               |         5404 |
+| Storage layouts reference                 |         5973 |
+| Test log reference                        |         5314 |
+| Test scripts reference                    |         5392 |
+| Troubleshooting reference                 |         6510 |
+| Bootstrapping MAAS                        |         5092 |
+| Custom images                             |         6102 |
+| Try out the MAAS CLI                      |         5236 |
+| Using jq with the MAAS CLI                |         6027 |
+| Tutorials                                 |         6140 |
+| Understanding MAAS audit events           |         6372 |
+| Understanding MAAS events                 |         6373 |
+| What is new with MAAS 2.7                 |         5993 |
+| What is new with MAAS 2.8                 |         5994 |
+| What is new with MAAS 2.9                 |         5961 |
+| What is new with MAAS 3.0                 |         5963 |
+| What is new with MAAS 3.1                 |         5964 |
+| What is new with MAAS 3.2                 |         5962 |
+| What is new with MAAS 3.3                 |         6346 |
+| What is new with MAAS                     |         5292 |
+
+* navigation
+** L0 / (6662) MAAS documentation
+*** L1 (6140) Tutorials
+**** L2 (5092) Bootstrapping MAAS
+**** L2 (5236) Try out the MAAS CLI
+**** L2 (6102) Try custom images
+**** L2 (6027) Use jq with the MAAS CLI
+*** L1 (6663) How-to guides
+**** L2 (6767) How to install MAAS
+***** L3 (5128) How to install MAAS --> How to do a fresh install of MAAS
+***** L3 (5436) How to upgrade MAAS
+***** L3 (6367) How to spin up MAAS with Ansible
+**** L2 (6174) How to set up networks
+***** L3 (5164) How to connect MAAS networks
+***** L3 (5132) How to enable DHCP
+***** L3 (5152) How to manage availability zones --> How to use availability zones
+**** L2 (6192) How to manage images --> How to use images
+***** L3 (5124) How to use standard images
+***** L3 (5104) How to build custom images --> How to customise images
+***** L3 (5927) How to mirror images locally
+***** L3 (5144) How to employ VMWare images
+***** L3 (6658) How to deploy an RT kernel via cloud init --> - "via cloud init"
+**** L2 (6498) How to tune controllers --> How to manage controllers
+***** L3 (6768) How to manage rack controllers
+***** L3 (6769) How to manage region controllers
+***** L3 (5120) How to enable high availability
+**** L2 (6770) How to manage machines
+***** L3 (6771) How to enlist machines
+***** L3 (6772) How to discover machines
+***** L3 (6773) How to choose power drivers
+***** L3 (6774) How to commission a machine
+***** L3 (6776) How to test a machine
+***** L3 (6777) How to allocate a machine
+***** L3 (6778) How to use curtin
+***** L3 (6779) How to use cloud-init
+***** L3 (6780) How to set kernel options
+***** L3 (6781) How to deploy a machine
+***** L3 (6782) How to clone a machine
+***** L3 (6783) How to examine machines
+***** L3 (6784) How to use resource pools
+***** L3 (6785) How to enlist running machines
+**** L2 (6500) How to deploy virtual machines --> How to use virtual machines
+***** L3 (5208) How to set up LXD --> How to use LXD
+***** L3 (5140) How to create VM hosts --> How to manage VM hosts
+***** L3 (5148) How to create and manage VMs --> How to manage VMs
+**** L2 (6786) How to use logging
+***** L3 (6787) How to use commissioning logs
+***** L3 (6788) How to use testing logs
+***** L3 (6789) How to trace MAAS events
+***** L3 (6790) How to audit MAAS
+***** L3 (6791) How to use syslog
+**** L2 (6792) How to label machines
+***** L3 (5928) How to tag machines --> How to use tags
+***** L3 (5929) How to annotate machines --> How to use annotations
+**** L2 (5192) How to find machines
+***** L3 (6793) How to filter the machine list
+***** L3 (6794) How to create custom filters
+***** L3 (6795) How to find exact matches
+***** L3 (6796) How to find partial matches
+***** L3 (6797) How to combine search terms
+**** L2 (6798) How to secure MAAS
+***** L3 (5196) How to improve MAAS security --> How to maintain security hygiene
+***** L3 (5184) How to manage user accounts
+***** L3 (5116) How to enable MAAS native TLS
+***** L3 (6501) How to enable Vault --> How to use Vault
+***** ^^ (6502) How to unseal Vault >> How to use Vault
+***** L3 (5212) How to set up an air-gapped MAAS --> How to air-gap MAAS
+**** L2 (6799) How to operate MAAS
+***** L3 (5096) How to keep MAAS backed up --> How to back up MAAS
+***** L3 (5204) How to observe a live MAAS --> How to monitor MAAS
+***** L3 (6178) MAAS performance --> How to gauge MAAS performance
+***** L3 (6800) How to Terraform with MAAS
+***** L3 (5333) How to troubleshoot MAAS
+**** L2 (6801) How to get help
+***** L3 (6802) How to use our Discourse forum
+***** L3 (6803) How to get support
+***** L3 (4447) How to request features --> How to request new features
+***** L3 (4446) How to report a bug --> How to review and report bugs
+**** L2 (6804) How to contribute to MAAS
+***** L3 (6805) How to contribute code
+***** L3 (4186) Documentation handbook --> How to update the documentation
+*** L1 (6140) Reference
+**** L2 (6806) General reference 
+***** L3 (5292) What is new with MAAS --> Release notes
+***** L3 (6233) Installation requirements
+***** L3 (6347) How to change MAAS settings --> MAAS settings
+***** L3 (5416) Glossary --> Glossary
+***** L3 (6807) Code of conduct
+**** L2 (6808) Scripts reference
+***** L3 (5375) Commissioning scripts reference
+***** L3 (5392) Test scripts reference --> Testing scripts reference
+***** L3 (6809) Cloud-init scripts reference
+***** L3 (6810) Curtin reference
+**** L2 (6811) Logs reference
+***** L3 (5252) Event log reference --> Event log reference
+***** L3 (5256) Audit event logs reference --> Audit event log reference
+***** L3 (5248) Commissioning log reference
+***** L3 (5314) Test log reference --> Testing log reference
+***** L3 (6812) Controller log reference
+***** L3 (6813) MAAS log reference
+***** L3 (6814) System log reference
+**** L2 (5246) Power management reference --> Power drivers reference
+***** L3 (6815) APC power driver reference
+***** L3 (6816) BMC power driver reference
+***** L3 (6817) Christmann power driver reference
+***** L3 (6818) Cisco RCS power driver reference
+***** L3 (6819) Digital Loggers power driver reference
+***** L3 (6820) Facebook Wedge power driver reference
+***** L3 (6821) HP Moonshot power driver reference
+***** L3 (6822) IBM HMC power driver reference
+***** L3 (6823) IBM Z power driver reference
+***** L3 (6824) Intel AMT power driver reference
+***** L3 (6825) IPMI power driver reference
+***** L3 (6826) LXD power driver reference
+***** L3 (6827) Microsoft OCS power driver reference
+***** L3 (6828) OpenStack Nova power driver reference
+***** L3 (6829) Proxmox power driver reference
+***** L3 (6830) Redfish power driver reference
+***** L3 (6831) SeaMicro 15000 power driver reference
+***** L3 (6832) Virsh libvirt power driver reference
+***** L3 (6833) VMWare power driver reference
+**** L2 (5973) Storage layouts reference
+***** L3 (6834) Flat storage layout reference
+***** L3 (6835) LVM storage layout reference
+***** L3 (6836) Bcache storage layout reference
+***** L3 (6837) VMFS6 storage layout reference
+***** L3 (6838) Blank storage layout reference
+**** L2 (6665) API reference
+***** L3 (6839) MAAS API documentation
+***** L3 (5404) Python API client reference
+***** L3 (5060) API authentication reference
+*** L1 (6141) Explanation
+**** L2 (6678) About MAAS
+***** L3 (6840) What MAAS offers
+***** L3 (6679) About how MAAS works --> How MAAS works
+**** L2 (6841) Primers
+***** L3 (6683) About TCP/IP
+***** L3 (6682) About DHCP
+***** L3 (6684) About cloud networking
+**** L2 (6680) About networks --> About MAAS networks
+***** L3 (6842) About PXE booting
+***** L3 (6843) About power drivers
+***** L3 (6844) About discovery
+***** L3 (6845) About subnets
+***** L3 (6846) About VLANs
+***** L3 (6847) About proxies
+***** L3 (6848) About RPC
+***** L3 (6849) About availability zones
+**** L2 (6685) About images
+***** L3 (6686) About MAAS images and streams
+***** L3 (6688) About image deployment
+***** L3 (6850) About boot sources
+***** L3 (6687) About local mirrors
+***** L3 (6851) About cloud-init
+***** L3 (6852) About kernel options
+***** L3 (6689) About custom images
+**** L2 (6690) About controllers
+***** L3 (6692) About rack controllers
+***** L3 (6691) About region controllers
+***** L3 (6693) About region-rack communication
+***** L3 (6694) About high availability --> About controller high availability
+**** L2 (6695) About physical machines --> About machines
+***** L3 (6696) About the machine lifecycle
+***** L3 (6701) About the machine list
+***** L3 (6698) About commissioning scripts
+***** L3 (6699) About testing scripts
+***** L3 (6853) About machine-related events
+***** L3 (6702) About machine storage information --> About machine storage
+***** L3 (6703) About disk erasure
+**** L2 (6704) About virtual machines
+***** L3 (6705) About VM hosting
+***** L3 (6708) About VMs and NUMA/SR IOV --> About NUMA
+***** L3 (6854) About overcommit
+***** L3 (6706) About LXD
+**** L2 (6713) About MAAS logging
+***** L3 (6855) About commissioning logs
+***** L3 (6856) About testing logs
+***** L3 (6700) About events and event logs --> About event logs
+***** L3 (6857) About audit logs
+***** L3 (6858) About system logs
+***** L3 (6714) About the region log --> About region logs
+***** L3 (6715) About the rack log --> About rack logs
+***** L3 (6716) About the MAAS log --> About MAAS logs
+***** L3 (6718) About other logs of interest
+**** L2 (6709) About labelling and finding machines --> About labels
+***** L3 (6710) About tags
+***** L3 (6711) About annotations
+**** L2 (6719) About MAAS security
+***** L3 (6859) About MAAS security best practices
+***** L3 (6722) About user accounts
+***** L3 (6724) About RBAC and Candid
+***** L3 (6720) About TLS and MAAS
+***** L3 (6723) About Vault and MAAS
+***** L3 (6721) About air-gapped MAAS
+**** L2 (6725) About MAAS operations
+***** L3 (6728) About keeping reliable backups --> About backups
+***** L3 (6726) About monitoring MAAS
+***** L3 (6727) About MAAS performance
+***** L3 (6730) About MAAS and Ansible
+***** L3 (6729) About MAAS and Terraforming
+** --- doc library remnants ---
+*** (6667) About explanations
+*** (6681) About MAAS networking
+*** (5084) About MAAS networks
+*** (6697) About power drivers
+*** (6203) MAAS technical data reference
+*** (6327) MAAS Terraform provider reference
+*** (6510) Troubleshooting reference
+*** (6666) MAAS operations reference
+*** (5448) Contact us
+*** (5084) How MAAS networks
+*** (5172) How to adjust your controllers
+*** (5108) How to customise machines
+*** (6193) How to deploy physical machines
+*** (5428) How to get help
+*** (6202) How to get started with MAAS
+*** (6145) How to install and use RBAC with MAAS
+*** (6200) How to label and find machines
+*** (6142) How to landing page
+*** (5160) How to make machines available
+*** (6742) How to manage networking
+*** (6503) How to protect your secrets
+*** (5112) How to put machines to work
+*** (5216) How to use controller tags
+*** (5224) How to use machine tags
+*** (5228) How to use network tags
+*** (5232) How to use storage tags
+*** (5987) How to work with audit event logs
+*** (5240) How to work with log files
+*** (5072) MAAS controllers
+*** (25) MAAS documentation
+*** (6372) Understanding MAAS audit events
+*** (6373) Understanding MAAS events
+*** (5993) What is new with MAAS 2.7
+*** (5994) What is new with MAAS 2.8
+*** (5961) What is new with MAAS 2.9
+*** (5963) What is new with MAAS 3.0
+*** (5964) What is new with MAAS 3.1
+*** (5962) What is new with MAAS 3.2
+*** (6346) What is new with MAAS 3.3
