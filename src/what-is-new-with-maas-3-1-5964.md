@@ -416,7 +416,7 @@ Downloading and syncing images is a known delay element in MAAS.  While images a
 
 There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1.
 
-<a href="#heading--MAAS-3-1-1-bug-list"><h3 id="heading--MAAS-3-1-1-bug-list">MAAS 3.3.1 bug list</h3></a>
+<a href="#heading--MAAS-3-1-1-bug-list"><h3 id="heading--MAAS-3-1-1-bug-list">MAAS 3.1.1 bug list</h3></a>
 
 - [1938296](https://bugs.launchpad.net/maas/+bug/1938296)`↗`: MAAS 3.0 incorrectly calculates the amount of free space on drive
 - [1982866](https://bugs.launchpad.net/maas/+bug/1982866)`↗`: MAAS Breaks historical custom images
