@@ -41,8 +41,6 @@ Several forward-looking improvements are included as well:
 
 - Shifting the MAAS API documentation toward [OpenAPI standards](https://www.openapis.org/)`↗`
 
-- Shifting the MAAS documentation toward the [Diátaxis](https://diataxis.fr/)`↗` style of documentation
-
 These will be documented later in blog posts.
 
 
