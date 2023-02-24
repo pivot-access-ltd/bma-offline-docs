@@ -417,7 +417,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>What is new with MAAS 3.1</h1><!-- "What is new with MAAS 3.1" -->
 
-<p>We are happy to announce that MAAS 3.1 is now available. This release provides new features and critical bug fixes.</p>
+<p>We are happy to announce that MAAS 3.1.1 is now available. This release provides <a href="#heading--MAAS-3-1-1-bug-list">four additional bug fixes</a>.</p>
 <p><a href="#heading--cumulative-summary"><h3 id="heading--cumulative-summary">Cumulative summary of MAAS 3.1 features and fixes</h3></a></p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
@@ -697,6 +697,13 @@ $
 <p>Downloading and syncing images is a known delay element in MAAS.  While images aren&rsquo;t small, and do take some time to download, we decided to try to speed up the process as much as possible.  After the region has downloaded new images, the rack controllers are now much quicker at syncing the new images.</p>
 <h4>How to take advantage of this new feature</h4>
 <p>There is nothing required of our users to experience this improved sync performance, other than upgrading to 3.1.</p>
+<p><a href="#heading--MAAS-3-1-1-bug-list"><h3 id="heading--MAAS-3-1-1-bug-list">MAAS 3.3.1 bug list</h3></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/maas/+bug/1938296">1938296</a><code>↗</code>: MAAS 3.0 incorrectly calculates the amount of free space on drive</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1982866">1982866</a><code>↗</code>: MAAS Breaks historical custom images</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1988759">1988759</a><code>↗</code>: Provisioning LXD vmhost fails</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1993289">1993289</a><code>↗</code>: Pod storage pool path can&rsquo;t be blank</li>
+</ul>
 <p><a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a></p>
 <p>MAAS 3.1 bug fixes can be found in the following milestones:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
