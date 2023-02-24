@@ -422,6 +422,7 @@ There is nothing required of our users to experience this improved sync performa
 - [1982866](https://bugs.launchpad.net/maas/+bug/1982866)`↗`: MAAS Breaks historical custom images
 - [1988759](https://bugs.launchpad.net/maas/+bug/1988759)`↗`: Provisioning LXD vmhost fails
 - [1993289](https://bugs.launchpad.net/maas/+bug/1993289)`↗`: Pod storage pool path can't be blank
+- [1961808](https://bugs.launchpad.net/maas/+bug/1961808)`↗`: Regression - unable to select proper subnet when adding interface alias
 
 <a href="#heading--maas-3-1-cumulative-bug-fixes"><h3 id="heading--maas-3-1-cumulative-bug-fixes">MAAS 3.1 cumulative bug fixes</h3></a>
 
