@@ -4,9 +4,13 @@
 
 Here you will find release notes for all releases under the 3.2 version.
 
+<a href="#heading--MAAS-3-2-7-release-notes"><h2 id="heading--MAAS-3-2-7-release-notes">MAAS 3.2.7 release notes</h2></a>
+
+We are happy to announce that MAAS 3.2.7 has been released.  This point releease of MAAS 3.2 provides a number of [high-profile bug fixes](#heading--MAAS-3-2-7-bug-fixes).
+
 <a href="#heading--3-2-6-maas-release-notes"><h2 id="heading--3-2-6-maas-release-notes">MAAS 3.2.6 release notes</h2></a>
 
-We are happy to announced that MAAS 3.2.6 has been released. This point release of MAAS 3.2 provides a fix for a critical bug that prevented MAAS from enlisting machines on subnets with active DNS:
+We are happy to announce that MAAS 3.2.6 has been released. This point release of MAAS 3.2 provides a fix for a critical bug that prevented MAAS from enlisting machines on subnets with active DNS:
 
 - #1989970 [Can't enlist machines on subnets with DNS set](https://bugs.launchpad.net/bugs/1989970)`↗`
 
@@ -129,6 +133,24 @@ sudo apt upgrade maas
 ```
 
 At this point, proceed with a normal installation.
+
+<a href="#heading--MAAS-3-2-7-bug-fixes"><h2 id="heading--MAAS-3-2-7-bug-fixes">MAAS 3.2.7 bug fixes</h2></a>
+
+The following bugs have been fixed in MAAS 3.2.7:
+
+ - [1989974](https://bugs.launchpad.net/maas/+bug/1989974): rackd fails on CIS-hardened machine with "Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)"
+ - [1938296](https://bugs.launchpad.net/maas/+bug/1938296): MAAS 3.0 incorrectly calculates the amount of free space on drive		High	Alberto Donato 	Fix Released
+ - [1982866](https://bugs.launchpad.net/maas/+bug/1982866):	MAAS Breaks historical custom images		High	Christian Grabowski 	Fix Released
+ - [1988759](https://bugs.launchpad.net/maas/+bug/1988759):	Provisioning LXD vmhost fails		High	Alberto Donato 	Fix Released
+ - [1990014](https://bugs.launchpad.net/maas/+bug/1990014):	regiond.conf "debug_http: true" causes image downloads from regiond to fail with 500 error code		High	Anton Troyanov 	Fix Released
+ - [1992185](https://bugs.launchpad.net/maas/+bug/1992185):	unable to deploy a machine with vmhost if a bond interface was created		High	Alberto Donato 	Fix Released
+ - [1993152](https://bugs.launchpad.net/maas/+bug/1993152):	Updating a VM host through API unset tags		High	Alberto Donato 	Fix Released
+ - [1993289](https://bugs.launchpad.net/maas/+bug/1993289):	Pod storage pool path can't be blank		High	Alberto Donato 	Fix Released
+ - [1992330](https://bugs.launchpad.net/maas/+bug/1992330):	Use the rack controller IP as DNS when relaying DHCP		Medium	Björn Tillenius 	Fix Released
+ - [1993618](https://bugs.launchpad.net/maas/+bug/1993618):	Web UI redirection policy can invalidate HAProxy and/or TLS setup		Medium	Anton Troyanov 	Fix Released
+ - [1994945](https://bugs.launchpad.net/maas/+bug/1994945):	Failure to create ephemeral VM when no architectures are found on the VM host		Medium	Igor Brovtsin 	Fix Released
+ - [1996419](https://bugs.launchpad.net/maas/+bug/1996419):	renaming a DNS record to a previous name fails with error: list.remove(x): x not in list		Medium	 	Fix Released
+ - [1996997](https://bugs.launchpad.net/maas/+bug/1996997):	LXD resources fails on a Raspberry Pi with no Ethernet
 
 <a href="#heading--bugs-fixed-in-maas-3-2"><h2 id="heading--bugs-fixed-in-maas-3-2">Bugs fixed in MAAS 3.2</h2></a>
 
