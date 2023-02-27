@@ -159,7 +159,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                                                  | PATH                                                          |
 |--------------------------------------------------------|---------------------------------------------------------------|
-| https://discourse.maas.io//t/-/6690                    | /docs/about-controllers                                       |
+| https://discourse.maas.io/t/-/6690                     | /docs/about-controllers                                       |
 | https://discourse.maas.io/t/-/6742                     | /docs/how-to-manage-networking                                |
 | https://discourse.maas.io/t/-/6658                     | /docs/how-to-deploy-an-rt-kernel-via-cloud-init               |
 | https://discourse.maas.io/t/-/6510                     | /docs/how-to-diagnose-issues                                  |
