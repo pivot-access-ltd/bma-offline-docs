@@ -326,7 +326,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/2725                     | /docs/deb/2.7/ui/controllers                                  |
 | https://discourse.maas.io/t/-/2726                     | /docs/deb/2.8/cli/controllers                                 |
 | https://discourse.maas.io/t/-/2727                     | /docs/deb/2.8/ui/controllers                                  |
-| https://discourse.maas.io/t/-/5072                     | /docs/about-controllers                                       |
 | https://discourse.maas.io/t/-/2563                     | /docs/snap/2.7/ui/creating-a-custom-ubuntu-image              |
 | https://discourse.maas.io/t/-/2564                     | /docs/snap/2.8/cli/creating-a-custom-ubuntu-image             |
 | https://discourse.maas.io/t/-/2565                     | /docs/snap/2.8/ui/creating-a-custom-ubuntu-image              |
