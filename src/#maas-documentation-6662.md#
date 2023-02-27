@@ -53,11 +53,11 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 |-------|----------------------------------------|-----------------------------------------------------|
 | 0     | /                                      | [MAAS Documentation](/t/-/6662)                     |
 | 0     |                                        |                                                     |
-| 1     | Tutorials                              | [Tutorials](/t/-/6140)                              |
-| 2     | Bootstrap MAAS                         | [Bootstrap MAAS](/t/-/5092)                         |
-| 2     | Try out the MAAS CLI                   | [Try out the MAAS CLI](/t/-/5236)                   |
-| 2     | Try custom images                      | [Try custom images](/t/-/6102)                      |
-| 2     | Use jq with the MAAS CLI               | [Use jq with the MAAS CLI](/t/-/6027)               |
+| 1     | tutorials                              | [Tutorials](/t/-/6140)                              |
+| 2     | bootstrap-maas                         | [Bootstrap MAAS](/t/-/5092)                         |
+| 2     | try-out-the-maas-cli                   | [Try out the MAAS CLI](/t/-/5236)                   |
+| 2     | create-custom-images                      | [Try custom images](/t/-/6102)                      |
+| 2     |                | [Use jq with the MAAS CLI](/t/-/6027)               |
 | 0     |                                        |                                                     |
 | 1     | How-to guides                          | [How-to guides](/t/-/6663)                          |
 | 2     | How to install MAAS                    | [How to install MAAS](/t/-/6767)                    |

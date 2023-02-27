@@ -1,4 +1,4 @@
-<!-- "MAAS bootstrap tutorial" -->
+<!-- "Bootstrap MAAS" -->
 An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  For this example, we'll use the latest MAAS snap from the UI.
 
 <a href="#heading--Installation"><h2 id="heading--Installation">Installation</h2></a>
