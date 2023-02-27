@@ -1,4 +1,4 @@
-<!-- "Basic tutorials" -->
+<!-- "Tutorials" -->
 
 Here are some to tutorials to help you build confidence using MAAS:
 
