@@ -163,7 +163,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | christmann-power-driver-reference      | [Christmann power driver reference](/t/-/6817)      |
 | 3     | cisco-rcs-power-driver-reference       | [Cisco RCS power driver reference](/t/-/6818)       |
 | 3     | digital-loggers-power-driver-reference | [Digital Loggers power driver reference](/t/-/6819) |
-| 3     | facebook-wedge-power-driver-reference- | [Facebook Wedge power driver reference](/t/-/6820)  |
+| 3     | facebook-wedge-power-driver-reference  | [Facebook Wedge power driver reference](/t/-/6820)  |
 | 3     | hp-moonshot-power-driver-reference     | [HP Moonshot power driver reference](/t/-/6821)     |
 | 3     | ibm-hmc-power-driver-reference         | [IBM HMC power driver reference](/t/-/6822)         |
 | 3     | ibm-z-power-driver-reference           | [IBM Z power driver reference](/t/-/6823)           |
@@ -171,10 +171,10 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | ipmi-power-driver-reference            | [IPMI power driver reference](/t/-/6825)            |
 | 3     | lxd-power-driver-reference             | [LXD power driver reference](/t/-/6826)             |
 | 3     | microsoft-ocs-power-driver-reference   | [Microsoft OCS power driver reference](/t/-/6827)   |
-| 3     | openstack-nova-power-driver-reference- | [OpenStack Nova power driver reference](/t/-/6828)  |
+| 3     | openstack-nova-power-driver-reference  | [OpenStack Nova power driver reference](/t/-/6828)  |
 | 3     | proxmox-power-driver-reference         | [Proxmox power driver reference](/t/-/6829)         |
 | 3     | redfish-power-driver-reference         | [Redfish power driver reference](/t/-/6830)         |
-| 3     | seamicro-15000-power-driver-reference- | [SeaMicro 15000 power driver reference](/t/-/6831)  |
+| 3     | seamicro-15000-power-driver-reference  | [SeaMicro 15000 power driver reference](/t/-/6831)  |
 | 3     | virsh-libvirt-power-driver-reference   | [Virsh libvirt power driver reference](/t/-/6832)   |
 | 3     | vmware-power-driver-reference          | [VMWare power driver reference](/t/-/6833)          |
 | 2     | storage-layouts-reference              | [Storage layouts reference](/t/-/5973)              |
