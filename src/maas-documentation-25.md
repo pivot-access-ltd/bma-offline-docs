@@ -46,10 +46,10 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [Tutorials](/t/-/6140) 
 
-- [MAAS bootstrap tutorial](/t/-/5092)
+- [Bootstrapping MAAS](/t/-/5092)
 - [Try out the MAAS CLI](/t/-/5236)
-- [Custom image tutorial](/t/-/6102)
-- [Using jq with the MAAS CLI](/t/-/6027)
+- [Create a custom image](/t/-/6102)
+- [Get fancy CLI output](/t/-/6027)
 
 ### [How to get started with MAAS](/t/-/6202)
 
@@ -57,13 +57,13 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Install MAAS](/t/-/5128)
 - [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
 
-### [How to manage networking](/t/-/6742)
+### [How to set up networks](/t/-/6742)
 
 - [Connect MAAS networks](/t/-/5164)
 - [Enable DHCP](/t/-/5132)
 - [Manage zones (AZs)](/t/-/5152)
 
-### [How to acquire images](/t/-/6192)
+### [How to use images](/t/-/6192)
 
 - [Use standard images](/t/-/5124)
 - [Mirror images locally](/t/-/5927)
@@ -71,18 +71,18 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Employ VMWare images](/t/-/5144)
 - [Deploy a RT kernel](/t/-/6658)
 
-### [How to tune controllers](/t/-/6498)
+### [How to manage controllers](/t/-/6498)
 
 - [Adjust your controllers](/t/-/5172)
 - [Enable HA](/t/-/5120)
 
-### [How to deploy physical machines](/t/-/6193)
+### [How to manage machines](/t/-/6193)
 
 - [Make machines available](/t/-/5160)
 - [Customise machines](/t/-/5108)
 - [Put machines to work](/t/-/5112)
 
-### [How to deploy virtual machines](/t/-/6500)
+### [How to use virtual machines](/t/-/6500)
 
 - [Set up LXD](/t/-/5208)
 - [Create VM hosts](/t/-/5140)
