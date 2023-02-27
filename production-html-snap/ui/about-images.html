@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/about-images.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="../../api/docs">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>#heading--About-images</h1><p><a href="#heading--About-images"><h2 id="heading--About-images">About images</h2></a></p>
+<p>MAAS provides supported images for stable Ubuntu releases, and for CentOS 7 and CentOS 8.0 releases.  Other images can be <a href="how-to-build-custom-images.html">customised</a> for use with MAAS.</p>
+<p>This article will help you learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--maas-image-anatomy">What is a MAAS image?</a></li>
+<li><a href="#heading--how-images-deploy">How images get deployed onto a machine</a></li>
+<li><a href="#heading--boot-sources">About boot sources and why they matter</a></li>
+</ul>
+<p><a href="#heading--what-is-a-maas-image"><h3 id="heading--what-is-a-maas-image">What is a MAAS image?</h3></a></p>
+<p>MAAS images are more than just the operating system kernel.  In fact, a usable MAAS image consists of at least four things:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>a <a href="https://images.maas.io/ephemeral-v3/stable/bootloaders/">bootloader</a><code>↗</code>, which boots the computer to the point that an operating system can be loaded.  MAAS currently uses one of three types of bootloaders: open firmware, PXE, and UEFI.</li>
+<li>a bootable kernel.</li>
+<li>an initial ramdisk.</li>
+<li>a squashfs filesystem.</li>
+</ul>
+<p>If you were to look at the <code>squashfs.manifest</code>, you&rsquo;d see something like this:</p>
+<pre><code class="language-nohighlight">adduser 3.118ubuntu5
+apparmor    3.0.4-2ubuntu2.1
+apport  2.20.11-0ubuntu82.1
+apport-symptoms 0.24
+apt 2.4.5
+apt-utils   2.4.5
+base-files  12ubuntu4.1
+base-passwd 3.5.52build1
+bash    5.1-6ubuntu1
+bash-completion 1:2.11-5ubuntu1
+bc  1.07.1-3build1
+bcache-tools    1.0.8-4ubuntu3
+bind9-dnsutils  1:9.18.1-1ubuntu1.1
+bind9-host  1:9.18.1-1ubuntu1.1
+bind9-libs:amd64    1:9.18.1-1ubuntu1.1
+binutils    2.38-3ubuntu1
+binutils-common:amd64   2.38-3ubuntu1
+binutils-x86-64-linux-gnu   2.38-3ubuntu1
+bolt    0.9.2-1
+bsdextrautils   2.37.2-4ubuntu3
+bsdutils    1:2.37.2-4ubuntu3
+btrfs-progs 5.16.2-1
+busybox-initramfs   1:1.30.1-7ubuntu3
+busybox-static  1:1.30.1-7ubuntu3
+byobu   5.133-1
+ca-certificates 20211016
+cloud-guest-utils   0.32-22-g45fe84a5-0ubuntu1
+cloud-init  22.2-0ubuntu1~22.04.3
+cloud-initramfs-copymods    0.47ubuntu1
+cloud-initramfs-dyn-netconf 0.47ubuntu1
+command-not-found   22.04.0
+console-setup   1.205ubuntu3
+console-setup-linux 1.205ubuntu3
+coreutils   8.32-4.1ubuntu1
+cpio    2.13+dfsg-7
+cron    3.0pl1-137ubuntu3
+</code></pre>
+<p>This snippet gives you a basic idea of the kinds of things that have to be loaded onto a drive in order for the system to function independently.</p>
+    </div>
+  </body>
+</html>
