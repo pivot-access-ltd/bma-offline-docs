@@ -46,7 +46,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [Tutorials](/t/-/6140) 
 
-- [Bootstrapping MAAS](/t/-/5092)
+- [Bootstrap MAAS](/t/-/5092)
 - [Try out the MAAS CLI](/t/-/5236)
 - [Create a custom image](/t/-/6102)
 - [Get fancy CLI output](/t/-/6027)
