@@ -153,6 +153,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About networking](/t/-/6174)
 - [About images](/t/-/6685)
 - [About controllers](/t/-/6690)
+- [About machines](/t/-/6695)
 
 ## URLs
 
@@ -879,7 +880,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5148                     | /docs/how-to-create-and-manage-vms                            |
 | https://discourse.maas.io/t/-/5132                     | /docs/how-to-enable-dhcp                                      |
 | https://discourse.maas.io/t/-/6678                     | /docs/about-maas                                              |
-| https://discourse.maas.io/t/-/5080                     | /docs/about-machines                                          |
+| https://discourse.maas.io/t/-/6695                     | /docs/about-machines                                          |
 | https://discourse.maas.io/t/-/5060                     | /docs/api-authentication-reference                            |
 | https://discourse.maas.io/t/-/5096                     | /docs/how-to-keep-maas-backed-up                              |
 | https://discourse.maas.io/t/-/5248                     | /docs/commissioning-log-reference                             |
