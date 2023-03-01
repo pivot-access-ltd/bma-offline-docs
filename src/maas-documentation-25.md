@@ -869,7 +869,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5232                     | /docs/how-to-use-storage-tags                                 |
 | https://discourse.maas.io/t/-/5252                     | /docs/event-log-reference                                     |
 | https://discourse.maas.io/t/-/5228                     | /docs/how-to-use-network-tags                                 |
-| https://discourse.maas.io/t/-/5084                     | /docs/about-networking                                        |
 | https://discourse.maas.io/t/-/5104                     | /docs/how-to-build-custom-images                              |
 | https://discourse.maas.io/t/-/5152                     | /docs/how-to-manage-availability-zones                        |
 | https://discourse.maas.io/t/-/5928                     | /docs/how-to-tag-machines                                     |
