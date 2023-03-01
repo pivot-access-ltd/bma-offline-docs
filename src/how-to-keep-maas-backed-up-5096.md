@@ -1,277 +1,181 @@
 <!-- "How to keep MAAS backed up" -->
-<a href="#heading--about-maas-backup"><h2 id="heading--about-maas-backup">About MAAS backup</h2></a>
-
 MAAS currently does not provide specific tools to back up and restore a working MAAS configuration. MAAS servers are part of your data centre, just like other Linux-based servers, so your current backup and disaster recovery solution should be sufficient to back up your MAAS environment.  Even so, you should know which files and actions are critical -- to ensure that you get a clean backup, and further ensure that you can restore it cleanly.
 
-This article will tell you:
-
-- [How to choose configuration files for backup](#heading--configuration-files)
-- [How to prepare PostgreSQL data for backup](#heading--postgresql-export)
-- [How to stop specific services before backing up](#heading--stop-critical-services)
-- [How to archive files to make the backup more efficient](#heading--archive-configuration-files)
-- [How to restore the system when needed](#heading--restore-files)
-- [How to restore the database to normal operation](#heading--recreatingupdating-the-db)
-
-<a href="#heading--configuration-files"><h2 id="heading--configuration-files">How to choose configuration files for backup</h2></a>
-
-The following three MAAS components need to be backed-up and restored, on each region and rack controller, to recreate a working environment:
-
 [tabs]
-[tab version="v3.2 Snap"]
-- The PostgreSQL database
-- The configuration files in `/snap/maas/current/etc/maas`
-- The configuration files in `/var/snap/maas/common/maas/`
+[tab version="v3.3 Snap,v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+To back up your MAAS snap instance and restore it elsewhere, follow these steps:
 
-`/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[tab version="v3.2 Packages"]
-- The PostgreSQL database
-- The configuration files in `/etc/maas`
-- The configuration files in `/var/lib/maas`
-
-`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[tab version="v3.1 Snap"]
-- The PostgreSQL database
-- The configuration files in `/snap/maas/current/etc/maas`
-- The configuration files in `/var/snap/maas/common/maas/`
-
-`/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[tab version="v3.1 Packages"]
-- The PostgreSQL database
-- The configuration files in `/etc/maas`
-- The configuration files in `/var/lib/maas`
-
-`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[tab version="v3.0 Snap"]
-- The PostgreSQL database
-- The configuration files in `/snap/maas/current/etc/maas`
-- The configuration files in `/var/snap/maas/common/maas/`
-
-`/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[tab version="v3.0 Packages"]
-- The PostgreSQL database
-- The configuration files in `/etc/maas`
-- The configuration files in `/var/lib/maas`
-
-`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[tab version="v2.9 Snap"]
-1.  The PostgreSQL database
-2.  The configuration files in `/snap/maas/current/etc/maas`
-3.  The configuration files in `/var/snap/maas/common/maas/`
-
-`/var/snap/maas/common/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[tab version="v2.9 Packages"]
-- The PostgreSQL database
-- The configuration files in `/etc/maas`
-- The configuration files in `/var/lib/maas`
-
-`/var/lib/maas/boot-resources` can safely be excluded as this contains images easily re-downloaded within MAAS.
-[/tab]
-[/tabs]
-
-Other configuration files, such as those used by your network configuration (`/etc/network/interfaces`, for example) will need to be backed-up and restored according to your specific deployment requirements.
-
-<a href="#heading--postgresql-export"><h2 id="heading--postgresql-export">How to prepare PostgreSQL data for backup</h2></a>
-
-Prior to stopping services (as described in the next section), export your PostgreSQL database with a database dump.  This process is described in the following procedure, which involves some assumptions: 
-
-- you have installed region and rack controllers on the same machine. 
-- you have installed MAAS on Ubuntu 18.04 LTS (Bionic).
-- you are restoring software an identical hardware and network configuration.
-
-To backup your PostgreSQL database to a file called `dump.sql` in your home directories, enter the following:
+1. Backup your PostgreSQL database to a file called `dump.sql` in your home directory:
 
 ``` bash
 sudo -u postgres pg_dumpall -c > ~/dump.sql
 ```
 
-If you run the above `pg_dumpall` process in the background, you can ensure this has completed and that there are no other established sessions with the following command:
+2. Ensure this has completed and that there are no other established sessions with the following command:
 
 ``` bash
 sudo -u postgres psql -c  "SELECT * FROM pg_stat_activity"
 ```
+Running sessions, such as pg_dumpall, will appear in the `application_name` column of the output alongside `psql` running the above `pg_stat_activity` query.
 
-Running sessions, such as pg_dumpall, will appear in the `application_name` column of the output alongside `psql` running the above `pg_stat_activity` query. Excepting psql, if `application_name` is empty, you can safely stop the database service.
+3. Stop the PostgreSQL service:
 
-<a href="#heading--stop-critical-services"><h2 id="heading--stop-critical-services">How to stop specific services before backing up</h2></a>
-
-After you have dumped your PostgreSQL database, and verified that the dump has finished, you should stop the following services with the `sudo systemctl stop <service>` command:
-
-- postgresql.service
-- maas-dhcpd.service
-- maas-rackd.service
-- maas-regiond.service
-
-Stopping these services will avoid conflicting updates during the remaining backup steps.
-
-<a href="#heading--archive-configuration-files"><h2 id="heading--archive-configuration-files">How to archive files to make the backup more efficient</h2></a>
-
-Archive the database and the required configuration files with a command similar to the following:
-
-[tabs]
-[tab version="v3.2 Snap"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
+```bash
+sudo systemctl stop postgresql.service
 ```
-[/tab]
-[tab version="v3.2 Packages"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
-```
-[/tab]
-[tab version="v3.1 Snap"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
-```
-[/tab]
-[tab version="v3.1 Packages"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
-```
-[/tab]
-[tab version="v3.0 Snap"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
-```
-[/tab]
-[tab version="v3.0 Packages"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
-```
-[/tab]
-[tab version="v2.9 Snap"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/snap/maas/common/maas/boot-resources /snap/maas/current/etc/maas /var/snap/maas/common/maas ~/dump.sql
-```
-[/tab]
-[tab version="v2.9 Packages"]
-``` bash
-sudo tar cvpzf ~/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
-```
-[/tab]
-[/tabs]
+4. Take a snapshot of the snap service (you don't have to stop it to do this):
 
-Make sure you move the resulting `backup.tgz` to some external storage you can access when restoring the system.  Also, make sure to restart the services you stopped prior to completing the backup.
+```bash
+sudo snap save maas
+```
 
-We've now backed up all the components necessary to recreate a MAAS deployment. Next, we'll discuss how to restore this configuration.
+Note the snapshot id (number) that this command returns.
+
+5. Verify that the snapshot is valid:
+
+```bash
+sudo snap check-snapshot <snapshot-id>
+```
+
+6. Export the snapshot to some external media:
+
+```bash
+sudo snap export-snapshot <snapshot-id> <external-media-path/snapshot-filename>
+```
+
+7. If reinstalling MAAS on the same system, use the following command to completely remove the old MAAS instance from your system:
+
+```bash
+sudo snap remove --purge maas
+```
+
+8. Restore the PostgreSQL dump with the following command:
+
+```bash
+sudo -u postgres psql -f dump.sql postgres
+```
+8. Restart the PostgreSQL service:
+
+```bash
+sudo systemctl start postgresql.service
+```
+
+10. Install the MAAS snap (same version) on your target machine, using the standard installation instructions for the version you're (re)installing.
+
+11. Import the snapshot onto your target machine:
+
+```bash
+sudo snap import-snapshot <external-media-path/snapshot-filename>
+```
+
+The import function should give you the same snapshot ID.  If an existing snapshot has the same number (shouldn't happen here), that snapshot is overwritten.
+
+12. Restore the snapshot:
+
+```bash
+sudo snap restore <snapshot-id>
+```
+
+13. Reset the database triggers with the following command:
+
+```bash
+sudo maas-region dbupgrade
+```
+[note]
+You only need to run this command on one of the Region Controllers in a multi-region MAAS cluster.
+[/note]
+
+At this point, you should be up and running with a restored MAAS backup.
+[/tab]
+[tab version="v3.3 Packages,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+To back up your MAAS snap instance and restore it elsewhere, follow these steps:
+
+1. Backup your PostgreSQL database to a file called `dump.sql` in your home directory:
+
+``` bash
+sudo -u postgres pg_dumpall -c > ~/dump.sql
+```
+
+2. Ensure this has completed and that there are no other established sessions with the following command:
+
+``` bash
+sudo -u postgres psql -c  "SELECT * FROM pg_stat_activity"
+```
+Running sessions, such as pg_dumpall, will appear in the `application_name` column of the output alongside `psql` running the above `pg_stat_activity` query.
+
+3. Stop MAAS-related services:
+
+```bash
+sudo systemctl stop postgresql.service
+sudo systemctl stop maas-dhcpd.service
+sudo systemctl stop maas-rackd.service
+sudo systemctl stop maas-regiond.service
+```
+
+4. Archive the DB backup and the needed MAAS configuration files to an external drive with the following command:
+
+``` bash
+sudo tar cvpzf <some-external-path>/backup.tgz --exclude=/var/lib/maas/boot-resources /etc/maas /var/lib/maas ~/dump.sql
+```
+
+If you're not replacing the existing MAAS, make sure to restart the services you stopped prior to completing the backup.
 
 <a href="#heading--restore-files"><h2 id="heading--restore-files">How to restore the system when needed</h2></a>
 
-Start with a freshly-updated installation of Ubuntu on identical hardware. Reinstall MAAS via the standard procedure (`sudo apt install maas`), then stop the following services (PostgreSQL needs to keep running):
+To restore the MAAS backup to a new machine:
 
-- maas-dhcpd.service
-- maas-rackd.service
-- maas-regiond.service
+1. Start with a freshly-updated installation of Ubuntu on identical hardware.
 
-Copy the backup file to the new machine and untar its contents (`sudo tar xvzpf backup.tgz`).
+2. Reinstall MAAS via the standard installation procedure.
 
-To restore the state of the database, enter the following from the backup directory:
+3. Stop the following services (note that PostgreSQL needs to keep running):
+
+```bash
+sudo systemctl stop maas-dhcpd.service
+sudo systemctl stop maas-rackd.service
+sudo systemctl stop maas-regiond.service
+```
+
+4. Copy the backup file to the new machine and untar its contents:
+
+```bash
+sudo tar xvzpf backup.tgz
+```
+
+5. Restore the database with the following command:
 
 ``` bash
 sudo -u postgres psql -f dump.sql postgres
 ```
 
-Next, copy across the old configuration files to their new locations, taking care to move the originals aside just in case:
+6. Copy across the old configuration files to their new locations, taking care to move the originals aside just in case:
 
-[tabs]
-[tab version="v3.2 Snap"]
-``` bash
-sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
-sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
-sudo cp -prf /snap/maas/current/etc/maas /snap/maas/current/etc/
-sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
-```
-
-If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[tab version="v3.2 Packages"]
-``` bash
+```bash
 sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
 sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
 ```
-
-If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[tab version="v3.1 Snap"]
-``` bash
-sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
-sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
-sudo cp -prf /snap/maas/current/etc/maas /snap/maas/current/etc/
-sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
-```
-
-If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[tab version="v3.1 Packages"]
-``` bash
-sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
-sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
-```
-
-If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[tab version="v3.0 Snap"]
-``` bash
-sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
-sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
-sudo cp -prf /snap/maas/current/etc/maas /snap/maas/current/etc/
-sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
-```
-
-If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[tab version="v3.0 Packages"]
-``` bash
-sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
-sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
-```
-
-If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[tab version="v2.9 Snap"]
-``` bash
-sudo mv /snap/maas/current/etc/maas /snap/maas/current/etc/_maas
-sudo mv /var/snap/maas/common/maas /var/snap/maas/common/_maas
-sudo cp -prf /snap/maas/current/etc/maas /snap/maas/current/etc/
-sudo cp -prf /var/snap/maas/common/maas /var/snap/maas/common/
-```
-
-If your restore process regenerated the `/var/snap/maas/common/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[tab version="v2.9 Packages"]
-``` bash
-sudo sh -c "mv /etc/maas /etc/_maas; mv /var/lib/maas /var/lib/_maas"
-sudo sh -c "cp -prf etc/maas /etc/; cp -prf var/lib/maas /var/lib/"
-```
-
-If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
-[/tab]
-[/tabs]
-
-[note]
 Take care to preserve the correct permissions when restoring files and directories.
-[/note]
 
-<a href="#heading--recreatingupdating-the-db"><h2 id="heading--recreatingupdating-the-db">How to restore the database to normal operation</h2></a>
+7. If your restore process regenerated the `/var/lib/maas/secret` file, make sure update this secret on any additional rack controllers.
 
-When you restore a backup, you'll have to "upgrade" the DB schema to re-create DB triggers or ensure that the schema matches the currently-running version.
-
-MAAS relies on various DB triggers for multiple operations. As such, it is always required to re-create those after restoring from a backup. Similarly, newer versions of MAAS may have new or missing migrations, and merely restoring a backup may not be enough to restore normal operation.
-
-As such, it is required to re-create the DB triggers (or upgrade the DB and run new/missing migrations) with the following command:
+8. Reset the database triggers:
 
 ``` bash
 sudo maas-region dbupgrade
 ```
 
 [note]
-Please note to run this command on one of the Region Controllers (if this is a multi-region MAAS cluster).
+You only need to run this command on one of the Region Controllers in a multi-region MAAS cluster.
 [/note]
 
-Now either restart your system(s) or the stopped services. You'll find your MAAS deployment fully restored.
+9. Restart the stopped services:
+
+```bash
+sudo systemctl start maas-dhcpd.service
+sudo systemctl start maas-rackd.service
+sudo systemctl start maas-regiond.service
+```
+
+At this point, you should be up and running with a restored MAAS backup.
+[/tab]
+[/tabs]
