@@ -902,7 +902,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5962                     | /docs/what-is-new-with-maas-3-2                               |
 | https://discourse.maas.io/t/-/5993                     | /docs/what-is-new-with-maas-2-7                               |
 | https://discourse.maas.io/t/-/5994                     | /docs/what-is-new-with-maas-2-8                               |
-| https://discourse.maas.io/t/-/6140                     | /docs/basic-tutorials                                         |
+| https://discourse.maas.io/t/-/6140                     | /docs/tutorials                                               |
 | https://discourse.maas.io/t/-/5092                     | /docs/maas-bootstrap-tutorial                                 |
 [/details]
 
@@ -911,6 +911,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                                           | LOCATION                                      |
 |----------------------------------------------------------------|-----------------------------------------------|
+| /docs/basic-tutorials                                          | /docs/tutorials                               |
 | /docs/how-to-set-up-networks                                   | /docs/about-networking                        |
 | /docs/about-rbac                                               | /docs/how-to-protect-your-secrets             |
 | /docs/maas-terraform-provider                                  | /docs/maas-terraform-provider-reference       |
@@ -949,7 +950,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | /docs/create-a-custom-image                                    | /docs/custom-image-tutorial                   |
 | /docs/how-to-use-the-maas-cli                                  | /docs/try-out-the-maas-cli                    |
 | /docs/maas-bootstrap-tutorial                                  | /docs/get-started-with-maas                   |
-| /docs/tutorials                                                | /docs/basic-tutorials                         |
 | /docs/maas-concepts-and-terms-reference                        | /docs/maas-glossary                           |
 | /docs/installation-requirements                                | /docs/maas-installation-requirements          |
 | /docs/whats-new-in-maas                                        | /docs/what-is-new-with-maas                   |
