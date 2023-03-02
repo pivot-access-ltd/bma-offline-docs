@@ -85,12 +85,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-use-lxd                         | [How to use LXD](/t/-/5208)                         |
 | 3     | how-to-manage-vm-hosts                 | [How to manage VM hosts](/t/-/5140)                 |
 | 3     | how-to-manage-vms                      | [How to manage VMs](/t/-/5148)                      |
-| 2     | how-to-use-logging                     | [How to use logging](/t/-/6786)                     |
-| 3     | how-to-use-commissioning-logs          | [How to use commissioning logs](/t/-/6787)          |
-| 3     | how-to-use-testing-logs                | [How to use testing logs](/t/-/6788)                |
-| 3     | how-to-trace-maas-events               | [How to trace MAAS events](/t/-/6789)               |
-| 3     | how-to-audit-maas                      | [How to audit MAAS](/t/-/6790)                      |
-| 3     | how-to-use-syslog                      | [How to use syslog](/t/-/6791)                      |
 | 2     | how-to-label-devices                   | [How to label devices](/t/-/6200)                   |
 | 3     | how-to-tag-machines                    | [How to tag machines](/t/-/5928)                    |
 | 3     | how-to-annotate-machines               | [How to annotate machines](/t/-/5929)               |
@@ -105,21 +99,21 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-enable-maas-native-tls          | [How to enable MAAS native TLS](/t/-/5116)          |
 | 3     | how-to-enable-vault                    | [How to enable Vault](/t/-/6501)                    |
 | 3     | how-to-unseal-vault                    | [How to unseal Vault](/t/-/6502)                    |
-| 3     | how-to-set-up-an-air-gapped-maas       | [How to set up an air-gapped MAAS](/t/-/5212)                    |
+| 3     | how-to-set-up-an-air-gapped-maas       | [How to set up an air-gapped MAAS](/t/-/5212)       |
 | 2     | how-to-operate-maas                    | [How to operate MAAS](/t/-/6799)                    |
 | 3     | how-to-back-up-maas                    | [How to back up MAAS](/t/-/5096)                    |
 | 3     | how-to-monitor-maas                    | [How to monitor MAAS](/t/-/5204)                    |
 | 3     | how-to-gauge-maas-performance          | [How to gauge MAAS performance](/t/-/6178)          |
-| 3     | how-to-terraform-with-maas             | [How to Terraform with MAAS](/t/-/6800)             |
+| 3     | how-to-audit-maas                      | [How to audit MAAS](/t/-/5987)                      |
+| 3     | how-to-terraform-with-maas             | [How to Terraform with MAAS](/t/-/6327)             |
 | 3     | how-to-troubleshoot-maas               | [How to troubleshoot MAAS](/t/-/5333)               |
-| 2     | how-to-get-help                        | [How to get help](/t/-/6801)                        |
+| 2     | how-to-give-and-receive-help           | [How to give and receive help](/t/-/5248)           |
 | 3     | how-to-use-our-discourse-forum         | [How to use our Discourse forum](/t/-/6802)         |
 | 3     | how-to-get-support                     | [How to get support](/t/-/6803)                     |
 | 3     | how-to-request-new-features            | [How to request new features](/t/-/4447)            |
 | 3     | how-to-review-and-report-bugs          | [How to review and report bugs](/t/-/4446)          |
-| 2     | how-to-contribute-to-maas              | [How to contribute to MAAS](/t/-/6804)              |
 | 3     | how-to-contribute-code                 | [How to contribute code](/t/-/6805)                 |
-| 3     | how-to-update-the-documentation        | [How to update the documentation](/t/-/4186)        |
+| 3     | how-to-help-improve-the-doc            | [How to help improve the doc](/t/-/4186)            |
 | 0     |                                        |                                                     |
 | 1     | reference                              | [Reference](/t/-/6140)                              |
 | 2     | general-reference                      | [General reference ](/t/-/6806)                     |

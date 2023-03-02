@@ -98,12 +98,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Use network tags](/t/-/5228)
 - [Find machines](/t/-/5192)
 
-### [How to diagnose issues](/t/-/6510)
-
-- [Work with log files](/t/-/5240)
-- [Work with audit event logs](/t/-/5987)
-- [Troubleshoot MAAS](/t/-/5333)
-
 ### [How to secure MAAS](/t/-/6503)
 
 - [Improve MAAS security](/t/-/5196)
@@ -113,12 +107,23 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Unseal Vault](/t/-/6502)
 - [Set up an air-gapped MAAS](/t/-/5212)
 
-### [How to get help](/t/-/5428)
+### How to operate MAAS
 
-- [Forum](https://discourse.maas.io)`↗`
-- [Support](https://maas.io/docs/how-to-contact-us)`↗`
-- [Request features](/t/-/4447)
-- [Bugs](/t/-/4446)
+- [Back up MAAS](/t/-/5096)
+- [Monitor MAAS](/t/-/5204)
+- [Gauge MAAS performance](/t/-/6178)
+- [Audit MAAS](/t/-/5987)
+- [Terraform with MAAS](/t/-/6327)
+- [Troubleshoot MAAS](/t/-/5333)
+
+### [How to give and receive help](/t/-/5428)
+
+- [Use our discourse forum](https://discourse.maas.io)`↗`
+- [Get support](https://maas.io/docs/how-to-contact-us)`↗`
+- [Request new features](/t/-/4447)
+- [Review and report bugs](/t/-/4446)
+- [Contribute code](https://launchpad.net/maas)`↗`
+- [Improve the doc](/t/-/4186)
 
 ### General reference
 
@@ -136,16 +141,12 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [MAAS technical reference](/t/-/6203)
 
-- [Keep MAAS backed up](/t/-/5096)
-- [Observe a live MAAS](/t/-/5204)
 - [Commissioning scripts](/t/-/6605)
 - [Hardware test scripts](/t/-/5392)
 - [Event logs](/t/-/5252)
 - [Audit event logs](/t/-/5256)
-- [MAAS performance](/t/-/6178)
 - [Power management](/t/-/5246)
 - [Storage layouts](/t/-/5973)
-- [MAAS Terraform provider](/t/-/6327)
 
 ### Explanation
 
@@ -154,6 +155,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About images](/t/-/6685)
 - [About controllers](/t/-/6690)
 - [About machines](/t/-/6695)
+- [About MAAS events](/t/-/6510)
+- [About MAAS logging](/t/-/5240)
 
 ## URLs
 
@@ -795,15 +798,14 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/4331 | /docs/deb/2.7/ui/using-image-streams                          |
 | https://discourse.maas.io/t/-/4332 | /docs/deb/2.8/cli/using-image-streams                         |
 | https://discourse.maas.io/t/-/4333 | /docs/deb/2.8/ui/using-image-streams                          |
-| https://discourse.maas.io/t/-/4446 | /docs/how-to-report-a-bug                                     |
-| https://discourse.maas.io/t/-/4447 | /docs/how-to-request-a-feature                                |
-| https://discourse.maas.io/t/-/4447 | /docs/request-a-feature                                       |
+| https://discourse.maas.io/t/-/4446 | /docs/how-to-review-and-report-bugs                           |
+| https://discourse.maas.io/t/-/4447 | /docs/how-to-request-new-features                             |
 | https://discourse.maas.io/t/-/4460 | /docs/maas-projects                                           |
 | https://discourse.maas.io/t/-/4478 | /docs/maas-project-tutorial                                   |
 | https://discourse.maas.io/t/-/5060 | /docs/api-authentication-reference                            |
 | https://discourse.maas.io/t/-/5068 | /docs/about-vm-hosting                                        |
 | https://discourse.maas.io/t/-/5092 | /docs/bootstrap-maas                                          |
-| https://discourse.maas.io/t/-/5096 | /docs/how-to-keep-maas-backed-up                              |
+| https://discourse.maas.io/t/-/5096 | /docs/how-to-back-up-maas                                     |
 | https://discourse.maas.io/t/-/5104 | /docs/how-to-build-custom-images                              |
 | https://discourse.maas.io/t/-/5108 | /docs/how-to-customise-machines                               |
 | https://discourse.maas.io/t/-/5112 | /docs/how-to-put-machines-to-work                             |
@@ -822,7 +824,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5184 | /docs/how-to-manage-user-accounts                             |
 | https://discourse.maas.io/t/-/5192 | /docs/how-to-find-machines                                    |
 | https://discourse.maas.io/t/-/5196 | /docs/how-to-improve-maas-security                            |
-| https://discourse.maas.io/t/-/5204 | /docs/how-to-observe-a-live-maas                              |
+| https://discourse.maas.io/t/-/5204 | /docs/how-to-monitor-maas                                     |
 | https://discourse.maas.io/t/-/5208 | /docs/how-to-set-up-lxd                                       |
 | https://discourse.maas.io/t/-/5212 | /docs/how-to-set-up-an-air-gapped-maas                        |
 | https://discourse.maas.io/t/-/5216 | /docs/how-to-use-controller-tags                              |
@@ -830,7 +832,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5228 | /docs/how-to-use-network-tags                                 |
 | https://discourse.maas.io/t/-/5232 | /docs/how-to-use-storage-tags                                 |
 | https://discourse.maas.io/t/-/5236 | /docs/try-out-the-maas-cli                                    |
-| https://discourse.maas.io/t/-/5240 | /docs/how-to-work-with-log-files                              |
+| https://discourse.maas.io/t/-/5240 | /docs/about-maas-logging                                      |
 | https://discourse.maas.io/t/-/5246 | /docs/power-management-reference                              |
 | https://discourse.maas.io/t/-/5248 | /docs/commissioning-log-reference                             |
 | https://discourse.maas.io/t/-/5252 | /docs/event-log-reference                                     |
@@ -846,7 +848,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5392 | /docs/hardware-test-scripts-reference                         |
 | https://discourse.maas.io/t/-/5404 | /docs/python-api-client-reference                             |
 | https://discourse.maas.io/t/-/5416 | /docs/maas-glossary                                           |
-| https://discourse.maas.io/t/-/5428 | /docs/how-to-ask-for-help                                     |
+| https://discourse.maas.io/t/-/5428 | /docs/how-to-give-and-receive-help                            |
 | https://discourse.maas.io/t/-/5436 | /docs/how-to-upgrade-maas                                     |
 | https://discourse.maas.io/t/-/5448 | /docs/how-to-contact-us                                       |
 | https://discourse.maas.io/t/-/5706 | /docs/how-to-upgrade-older-maas-installs                      |
@@ -862,7 +864,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5964 | /docs/what-is-new-with-maas-3-1                               |
 | https://discourse.maas.io/t/-/5973 | /docs/storage-layouts-reference                               |
 | https://discourse.maas.io/t/-/5976 | /docs/about-customising-machines                              |
-| https://discourse.maas.io/t/-/5987 | /docs/how-to-work-with-audit-event-logs                       |
+| https://discourse.maas.io/t/-/5987 | /docs/how-to-audit-maas                                       |
 | https://discourse.maas.io/t/-/5993 | /docs/what-is-new-with-maas-2-7                               |
 | https://discourse.maas.io/t/-/5994 | /docs/what-is-new-with-maas-2-8                               |
 | https://discourse.maas.io/t/-/6027 | /docs/get-fancy-cli-output                                    |
@@ -873,7 +875,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6141 | /docs/explanation                                             |
 | https://discourse.maas.io/t/-/6142 | /docs/how-to-guides                                           |
 | https://discourse.maas.io/t/-/6143 | /docs/general-reference                                       |
-| https://discourse.maas.io/t/-/6178 | /docs/maas-performance                                        |
+| https://discourse.maas.io/t/-/6178 | /docs/how-to-gauge-maas-performance                           |
 | https://discourse.maas.io/t/-/6192 | /docs/how-to-use-images                                       |
 | https://discourse.maas.io/t/-/6193 | /docs/how-to-manage-machines                                  |
 | https://discourse.maas.io/t/-/6200 | /docs/how-to-label-devices                                    |
@@ -881,7 +883,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6202 | /docs/how-to-get-started-with-maas                            |
 | https://discourse.maas.io/t/-/6203 | /docs/maas-technical-reference                                |
 | https://discourse.maas.io/t/-/6233 | /docs/maas-installation-requirements                          |
-| https://discourse.maas.io/t/-/6327 | /docs/maas-terraform-provider-reference                       |
+| https://discourse.maas.io/t/-/6327 | /docs/how-to-terraform-with-maas                              |
 | https://discourse.maas.io/t/-/6346 | /docs/what-is-new-with-maas-3-3                               |
 | https://discourse.maas.io/t/-/6347 | /docs/how-to-change-maas-settings                             |
 | https://discourse.maas.io/t/-/6367 | /docs/how-to-spin-up-maas-with-ansible                        |
@@ -892,7 +894,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6501 | /docs/how-to-enable-vault                                     |
 | https://discourse.maas.io/t/-/6502 | /docs/how-to-unseal-vault                                     |
 | https://discourse.maas.io/t/-/6503 | /docs/how-to-secure-maas                                      |
-| https://discourse.maas.io/t/-/6510 | /docs/how-to-diagnose-issues                                  |
+| https://discourse.maas.io/t/-/6510 | /docs/about-maas-events                                       |
 | https://discourse.maas.io/t/-/6605 | /docs/commissioning-scripts-tech-reference                    |
 | https://discourse.maas.io/t/-/6658 | /docs/how-to-deploy-a-rt-kernel-via-cloud-init                |
 | https://discourse.maas.io/t/-/6678 | /docs/about-maas                                              |
@@ -909,6 +911,17 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
+| /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
+| /docs/request-a-feature                            | /docs/how-to-request-new-features             |
+| /docs/how-to-request-a-feature                     | /docs/how-to-request-new-features             |
+| /docs/maas-terraform-provider-reference            | /docs/how-to-terraform-with-maas              |
+| /docs/how-to-work-with-log-files                   | /docs/about-maas-logging                      |
+| /docs/how-to-work-with-audit-event-logs            | /docs/how-to-audit-maas                       |
+| /docs/how-to-diagnose-issues                       | /docs/how-to-troubleshoot-maas                |
+| /docs/maas-performance                             | /docs/how-to-gauge-maas-performance           |
+| /docs/how-to-observe-a-live-maas                   | /docs/how-to-monitor-maas                     |
+| /docs/how-to-keep-maas-backed-up                   | /docs/how-to-back-up-maas                     |
 | /docs/how-to-protect-your-secrets                  | /docs/how-to-secure-maas                      |
 | /docs/how-to-label-and-find-machines               | /docs/how-to-label-devices                    |
 | /docs/how-to-create-and-manage-vms                 | /docs/how-to-manage-virtual-machines          |
