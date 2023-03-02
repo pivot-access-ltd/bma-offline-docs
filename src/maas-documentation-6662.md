@@ -75,23 +75,12 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-employ-vmware-images            | [How to employ VMWare images](/t/-/5144)            |
 | 3     | how-to-deploy-a-rt-kernel              | [How to deploy a RT kernel](/t/-/6658)              |
 | 2     | how-to-manage-controllers              | [How to manage controllers](/t/-/6498)              |
-| 3     | how-to-configure-controllers       | [How to configure controllers](/t/-/5172)       |
+| 3     | how-to-configure-controllers           | [How to configure controllers](/t/-/5172)           |
 | 3     | how-to-enable-high-availability        | [How to enable high availability](/t/-/5120)        |
 | 2     | how-to-manage-machines                 | [How to manage machines](/t/-/6193)                 |
-| 3     | how-to-enlist-machines                 | [How to enlist machines](/t/-/6771)                 |
-| 3     | how-to-discover-machines               | [How to discover machines](/t/-/6772)               |
-| 3     | how-to-choose-power-drivers            | [How to choose power drivers](/t/-/6773)            |
-| 3     | how-to-commission-a-machine            | [How to commission a machine](/t/-/6774)            |
-| 3     | how-to-test-a-machine                  | [How to test a machine](/t/-/6776)                  |
-| 3     | how-to-allocate-a-machine              | [How to allocate a machine](/t/-/6777)              |
-| 3     | how-to-use-curtin                      | [How to use curtin](/t/-/6778)                      |
-| 3     | how-to-use-cloud-init                  | [How to use cloud-init](/t/-/6779)                  |
-| 3     | how-to-set-kernel-options              | [How to set kernel options](/t/-/6780)              |
-| 3     | how-to-deploy-a-machine                | [How to deploy a machine](/t/-/6781)                |
-| 3     | how-to-clone-a-machine                 | [How to clone a machine](/t/-/6782)                 |
-| 3     | how-to-examine-machines                | [How to examine machines](/t/-/6783)                |
-| 3     | how-to-use-resource-pools              | [How to use resource pools](/t/-/6784)              |
-| 3     | how-to-enlist-running-machines         | [How to enlist running machines](/t/-/6785)         |
+| 3     | how-to-make-machines-available         | [How to make machines available](/t/-/5160)         |
+| 3     | how-to-customise-machines              | [How to customise machines](/t/-/5108)              |
+| 3     | how-to-put-machines-to-work            | [How to put machines to work](/t/-/6773)            |
 | 2     | how-to-use-virtual-machines            | [How to use virtual machines](/t/-/6500)            |
 | 3     | how-to-use-lxd                         | [How to use LXD](/t/-/5208)                         |
 | 3     | how-to-manage-vm-hosts                 | [How to manage VM hosts](/t/-/5140)                 |
@@ -102,25 +91,21 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-trace-maas-events               | [How to trace MAAS events](/t/-/6789)               |
 | 3     | how-to-audit-maas                      | [How to audit MAAS](/t/-/6790)                      |
 | 3     | how-to-use-syslog                      | [How to use syslog](/t/-/6791)                      |
-| 2     | how-to-label-hardware                  | [How to label hardware](/t/-/6792)                  |
+| 2     | how-to-label-devices                   | [How to label devices](/t/-/6200)                   |
 | 3     | how-to-tag-machines                    | [How to tag machines](/t/-/5928)                    |
 | 3     | how-to-annotate-machines               | [How to annotate machines](/t/-/5929)               |
 | 3     | how-to-use-controller-tags             | [How to use controller tags](/t/-/5216)             |
 | 3     | how-to-use-machine-tags                | [How to use machine tags](/t/-/5224)                |
 | 3     | how-to-use-network-tags                | [How to use network tags](/t/-/5228)                |
 | 3     | how-to-use-storage-tags                | [How to use storage tags](/t/-/5232)                |
-| 2     | how-to-find-machines                   | [How to find machines](/t/-/5192)                   |
-| 3     | how-to-filter-the-machine-list         | [How to filter the machine list](/t/-/6793)         |
-| 3     | how-to-create-custom-filters           | [How to create custom filters](/t/-/6794)           |
-| 3     | how-to-find-exact-matches              | [How to find exact matches](/t/-/6795)              |
-| 3     | how-to-find-partial-matches            | [How to find partial matches](/t/-/6796)            |
-| 3     | how-to-combine-search-terms            | [How to combine search terms](/t/-/6797)            |
-| 2     | how-to-secure-maas                     | [How to secure MAAS](/t/-/6798)                     |
+| 3     | how-to-find-machines                   | [How to find machines](/t/-/5192)                   |
+| 2     | how-to-secure-maas                     | [How to secure MAAS](/t/-/6503)                     |
 | 3     | how-to-improve-maas-security           | [How to improve MAAS security](/t/-/5196)           |
 | 3     | how-to-manage-user-accounts            | [How to manage user accounts](/t/-/5184)            |
 | 3     | how-to-enable-maas-native-tls          | [How to enable MAAS native TLS](/t/-/5116)          |
-| 3     | how-to-use-vault                       | [How to use Vault](/t/-/6501)                       |
-| 3     | how-to-air-gap-maas                    | [How to air-gap MAAS](/t/-/5212)                    |
+| 3     | how-to-enable-vault                    | [How to enable Vault](/t/-/6501)                    |
+| 3     | how-to-unseal-vault                    | [How to unseal Vault](/t/-/6502)                    |
+| 3     | how-to-set-up-an-air-gapped-maas       | [How to set up an air-gapped MAAS](/t/-/5212)                    |
 | 2     | how-to-operate-maas                    | [How to operate MAAS](/t/-/6799)                    |
 | 3     | how-to-back-up-maas                    | [How to back up MAAS](/t/-/5096)                    |
 | 3     | how-to-monitor-maas                    | [How to monitor MAAS](/t/-/5204)                    |
