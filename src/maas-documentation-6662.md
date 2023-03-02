@@ -73,10 +73,9 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-customise-images                | [How to customise images](/t/-/5104)                |
 | 3     | how-to-mirror-images-locally           | [How to mirror images locally](/t/-/5927)           |
 | 3     | how-to-employ-vmware-images            | [How to employ VMWare images](/t/-/5144)            |
-| 3     | how-to-deploy-an-rt-kernel             | [How to deploy an RT kernel](/t/-/6658)             |
-| 2     | how-to-manage-controllers         | [How to manage controllers](/t/-/6498)         |
-| 3     | how-to-manage-rack-controllers         | [How to manage rack controllers](/t/-/6768)         |
-| 3     | how-to-manage-region-controllers       | [How to manage region controllers](/t/-/6769)       |
+| 3     | how-to-deploy-a-rt-kernel              | [How to deploy a RT kernel](/t/-/6658)              |
+| 2     | how-to-manage-controllers              | [How to manage controllers](/t/-/6498)              |
+| 3     | how-to-configure-controllers       | [How to configure controllers](/t/-/5172)       |
 | 3     | how-to-enable-high-availability        | [How to enable high availability](/t/-/5120)        |
 | 2     | how-to-manage-machines                 | [How to manage machines](/t/-/6193)                 |
 | 3     | how-to-enlist-machines                 | [How to enlist machines](/t/-/6771)                 |

@@ -53,9 +53,9 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [How to get started with MAAS](/t/-/6202)
 
-- [Spin up MAAS with Ansible](/t/-/6367)
-- [Install MAAS](/t/-/5128)
+- [Do a fresh install of MAAS](/t/-/5128)
 - [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
+- [Spin up MAAS with Ansible](/t/-/6367)
 
 ### [How to set up networks](/t/-/6742)
 
@@ -73,7 +73,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [How to manage controllers](/t/-/6498)
 
-- [Adjust your controllers](/t/-/5172) 
+- [Configure controllers](/t/-/5172) 
 - [Enable HA](/t/-/5120)
 
 ### [How to manage machines](/t/-/6193)
@@ -810,7 +810,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5116   | /docs/how-to-enable-maas-native-tls                           |
 | https://discourse.maas.io/t/-/5120   | /docs/how-to-enable-high-availability                         |
 | https://discourse.maas.io/t/-/5124   | /docs/how-use-standard-images                                 |
-| https://discourse.maas.io/t/-/5128   | /docs/how-to-install-maas                                     |
+| https://discourse.maas.io/t/-/5128   | /docs/how-to-do-a-fresh-install-of-maas                       |
 | https://discourse.maas.io/t/-/5132   | /docs/how-to-enable-dhcp                                      |
 | https://discourse.maas.io/t/-/5140   | /docs/how-to-create-vm-hosts                                  |
 | https://discourse.maas.io/t/-/5144   | /docs/how-to-employ-vmware-images                             |
@@ -818,7 +818,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5152   | /docs/how-to-manage-availability-zones                        |
 | https://discourse.maas.io/t/-/5160   | /docs/how-to-make-machines-available                          |
 | https://discourse.maas.io/t/-/5164   | /docs/how-to-connect-maas-networks                            |
-| https://discourse.maas.io/t/-/5172   | /docs/how-to-adjust-your-controllers                          |
+| https://discourse.maas.io/t/-/5172   | /docs/how-to-configure-controllers                            |
 | https://discourse.maas.io/t/-/5184   | /docs/how-to-manage-user-accounts                             |
 | https://discourse.maas.io/t/-/5192   | /docs/how-to-find-machines                                    |
 | https://discourse.maas.io/t/-/5196   | /docs/how-to-improve-maas-security                            |
@@ -909,6 +909,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/how-to-adjust-your-controllers               | /docs/how-to-configure-controllers            |
+| /docs/how-to-install-maas                          | /docs/how-to-do-a-fresh-install-of-maas       |
 | /docs/how-to-deploy-virtual-machines               | /docs/how-to-use-virtual-machines             |
 | /docs/about-rbac                                   | /docs/how-to-protect-your-secrets             |
 | /docs/about-tags                                   | /docs/how-to-label-and-find-machines          |
