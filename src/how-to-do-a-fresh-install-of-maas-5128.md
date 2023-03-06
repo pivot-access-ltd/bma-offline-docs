@@ -6,10 +6,6 @@ MAAS is relatively easy to install and configure.  Let's give it a try.
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 [/note]
 
-[note]
-**IMPORTANT**: If you're having trouble accessing your MAAS, double-check your URL.  It should be of the form `http://nn.nn.nn.nn:5240/MAAS`, where `nn.nn...` is the IP address.  Note that this is `http` and not `https`.  **ALSO** check whether the IP of your MAAS host may have changed, e.g., due to the MAAS host using a DHCP lease.  If the MAAS host's IP changes for any reason, you will need to re-initialise MAAS to pick up the new IP address.
-[/note]
-
 [tabs]
 [tab version="v3.3 Snap"]
 [note]
