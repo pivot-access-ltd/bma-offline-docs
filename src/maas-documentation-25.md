@@ -852,9 +852,9 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5236 | /docs/try-out-the-maas-cli                                    |
 | https://discourse.maas.io/t/-/5240 | /docs/about-maas-logging                                      |
 | https://discourse.maas.io/t/-/5246 | /docs/power-drivers-reference                                 |
-| https://discourse.maas.io/t/-/5248 | /docs/commissioning-log-reference                             |
-| ttps://discourse.maas.io/t/-/5252  | /docs/event-log-reference                                     |
-| https://discourse.maas.io/t/-/5256 | /docs/audit-event-log-reference                               |
+| https://discourse.maas.io/t/-/5248 | /docs/commissionings-log-reference                            |
+| https://discourse.maas.io/t/-/5252 | /docs/event-logs-reference                                    |
+| https://discourse.maas.io/t/-/5256 | /docs/audit-event-logs-reference                              |
 | https://discourse.maas.io/t/-/5292 | /docs/what-is-new-with-maas                                   |
 | https://discourse.maas.io/t/-/5307 | /docs/snap/3.1/cli/postgresql-ha-hot-standby                  |
 | https://discourse.maas.io/t/-/5308 | /docs/snap/3.1/ui/postgresql-ha-hot-standby                   |
