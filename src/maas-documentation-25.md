@@ -67,7 +67,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [Use standard images](/t/-/5124)
 - [Mirror images locally](/t/-/5927)
-- [Build custom images](/t/-/5104)
+- [Customise images](/t/-/5104)
 - [Employ VMWare images](/t/-/5144)
 - [Deploy a RT kernel](/t/-/6658)
 
@@ -824,7 +824,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5068 | /docs/about-vm-hosting                                        |
 | https://discourse.maas.io/t/-/5092 | /docs/bootstrap-maas                                          |
 | https://discourse.maas.io/t/-/5096 | /docs/how-to-back-up-maas                                     |
-| https://discourse.maas.io/t/-/5104 | /docs/how-to-build-custom-images                              |
+| https://discourse.maas.io/t/-/5104 | /docs/how-to-customise-images                                 |
 | https://discourse.maas.io/t/-/5108 | /docs/how-to-customise-machines                               |
 | https://discourse.maas.io/t/-/5112 | /docs/how-to-put-machines-to-work                             |
 | https://discourse.maas.io/t/-/5116 | /docs/how-to-enable-maas-native-tls                           |
@@ -929,6 +929,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/how-to-build-custom-images                   | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
 | /docs/how-to-change-maas-settings                  | /docs/maas-settings-reference                 |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
@@ -964,11 +965,11 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | /docs/deploy-nodes                                 | /docs/how-to-put-machines-to-work             |
 | /docs/how-to-acquire-images                        | /docs/how-to-use-images                       |
 | /docs/how-to-back-up-maas                          | /docs/how-to-keep-maas-backed-up              |
-| /docs/how-to-build-maas-images                     | /docs/how-to-build-custom-images              |
+| /docs/how-to-build-maas-images                     | /docs/how-to-customise-images                 |
 | /docs/how-to-choose-images                         | /docs/how-to-acquire-images                   |
 | /docs/how-to-configure-networking                  | /docs/how-to-set-up-networks                  |
-| /docs/how-to-create-a-custom-ubuntu-image          | /docs/how-to-build-custom-images              |
-| /docs/how-to-create-custom-images                  | /docs/how-to-build-custom-images              |
+| /docs/how-to-create-a-custom-ubuntu-image          | /docs/how-to-customise-images                 |
+| /docs/how-to-create-custom-images                  | /docs/how-to-customise-images|
 | /docs/how-to-deploy-maas                           | /docs/how-to-deploy-physical-machines         |
 | /docs/how-to-deploy-machines                       | /docs/how-to-put-machines-to-work             |
 | /docs/how-to-deploy-physical-machines              | /docs/how-to-manage-machines                  |
