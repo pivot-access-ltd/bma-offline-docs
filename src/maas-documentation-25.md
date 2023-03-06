@@ -152,8 +152,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [Event logs](/t/-/5252)
 - [Audit event logs](/t/-/5256)
+- [Commissioning logs](/t/-/5248)
 <!--
-- [commissioning logs]()
 - [testing logs]()
 - [controller logs]()
 - [maas logs]()
