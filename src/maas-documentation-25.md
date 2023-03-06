@@ -61,7 +61,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [Connect MAAS networks](/t/-/5164)
 - [Enable DHCP](/t/-/5132)
-- [Manage zones (AZs)](/t/-/5152)
+- [Use availability zones](/t/-/5152)
 
 ### [How to use images](/t/-/6192)
 
@@ -129,7 +129,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [Release notes](/t/-/5292)
 - [Installation requirements](/t/-/6233)
-- [Settings](/t/-/6347)
+- [MAAS settings](/t/-/6347)
 - [Glossary](/t/-/5416)
 - [Code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
 
@@ -139,13 +139,31 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Python API client](/t/-/5404)
 - [API documentation](https://maas.io/docs/api)`↗`
 
-### [MAAS technical reference](/t/-/6203)
+### Scripts reference
 
 - [Commissioning scripts](/t/-/6605)
 - [Hardware test scripts](/t/-/5392)
+<!--
+- [cloud-init scripts]()
+- [curtin reference]()
+-->
+
+### Log reference
+
 - [Event logs](/t/-/5252)
 - [Audit event logs](/t/-/5256)
-- [Power management](/t/-/5246)
+<!--
+- [commissioning logs]()
+- [testing logs]()
+- [controller logs]()
+- [maas logs]()
+- [network logs]()
+- [system logs]()
+-->
+
+### Machine parameters reference
+
+- [Power drivers](/t/-/5246)
 - [Storage layouts](/t/-/5973)
 
 ### Explanation
@@ -833,9 +851,9 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5232 | /docs/how-to-use-storage-tags                                 |
 | https://discourse.maas.io/t/-/5236 | /docs/try-out-the-maas-cli                                    |
 | https://discourse.maas.io/t/-/5240 | /docs/about-maas-logging                                      |
-| https://discourse.maas.io/t/-/5246 | /docs/power-management-reference                              |
+| https://discourse.maas.io/t/-/5246 | /docs/power-drivers-reference                                 |
 | https://discourse.maas.io/t/-/5248 | /docs/commissioning-log-reference                             |
-| https://discourse.maas.io/t/-/5252 | /docs/event-log-reference                                     |
+| ttps://discourse.maas.io/t/-/5252  | /docs/event-log-reference                                     |
 | https://discourse.maas.io/t/-/5256 | /docs/audit-event-log-reference                               |
 | https://discourse.maas.io/t/-/5292 | /docs/what-is-new-with-maas                                   |
 | https://discourse.maas.io/t/-/5307 | /docs/snap/3.1/cli/postgresql-ha-hot-standby                  |
@@ -885,8 +903,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6233 | /docs/maas-installation-requirements                          |
 | https://discourse.maas.io/t/-/6327 | /docs/how-to-terraform-with-maas                              |
 | https://discourse.maas.io/t/-/6346 | /docs/what-is-new-with-maas-3-3                               |
-| https://discourse.maas.io/t/-/6347 | /docs/how-to-change-maas-settings                             |
 | https://discourse.maas.io/t/-/6367 | /docs/how-to-spin-up-maas-with-ansible                        |
+| https://discourse.maas.io/t/-/6347 | /docs/maas-settings-reference                                 |
 | https://discourse.maas.io/t/-/6372 | /docs/understanding-maas-audit-events                         |
 | https://discourse.maas.io/t/-/6373 | /docs/understanding-maas-events                               |
 | https://discourse.maas.io/t/-/6498 | /docs/how-to-manage-controllers                               |
@@ -911,6 +929,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/power-management-reference                   | /docs/power-drivers-reference                 |
+| /docs/how-to-change-maas-settings                  | /docs/maas-settings-reference                 |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
 | /docs/request-a-feature                            | /docs/how-to-request-new-features             |
