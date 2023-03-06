@@ -153,8 +153,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Event logs](/t/-/5252)
 - [Audit event logs](/t/-/5256)
 - [Commissioning logs](/t/-/5248)
+- [Testing logs](/t/-/5314)
 <!--
-- [testing logs]()
 - [controller logs]()
 - [maas logs]()
 - [network logs]()
@@ -860,7 +860,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5308 | /docs/snap/3.1/ui/postgresql-ha-hot-standby                   |
 | https://discourse.maas.io/t/-/5309 | /docs/deb/3.1/ui/postgresql-ha-hot-standby                    |
 | https://discourse.maas.io/t/-/5310 | /docs/deb/3.1/cli/postgresql-ha-hot-standby                   |
-| https://discourse.maas.io/t/-/5314 | /docs/test-log-reference                                      |
+| https://discourse.maas.io/t/-/5314 | /docs/testing-logs-reference                                  |
 | https://discourse.maas.io/t/-/5329 | /docs/tips-and-tricks                                         |
 | https://discourse.maas.io/t/-/5333 | /docs/how-to-troubleshoot-maas                                |
 | https://discourse.maas.io/t/-/5392 | /docs/hardware-test-scripts-reference                         |
@@ -929,6 +929,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/test-log-reference                           | /docs/testing-logs-reference                  |
 | /docs/how-to-build-custom-images                   | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
 | /docs/how-to-change-maas-settings                  | /docs/maas-settings-reference                 |
@@ -969,7 +970,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | /docs/how-to-choose-images                         | /docs/how-to-acquire-images                   |
 | /docs/how-to-configure-networking                  | /docs/how-to-set-up-networks                  |
 | /docs/how-to-create-a-custom-ubuntu-image          | /docs/how-to-customise-images                 |
-| /docs/how-to-create-custom-images                  | /docs/how-to-customise-images|
+| /docs/how-to-create-custom-images                  | /docs/how-to-customise-images                 |
 | /docs/how-to-deploy-maas                           | /docs/how-to-deploy-physical-machines         |
 | /docs/how-to-deploy-machines                       | /docs/how-to-put-machines-to-work             |
 | /docs/how-to-deploy-physical-machines              | /docs/how-to-manage-machines                  |
