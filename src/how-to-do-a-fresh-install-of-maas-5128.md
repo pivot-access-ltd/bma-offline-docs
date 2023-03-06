@@ -2,14 +2,10 @@
 
 MAAS is relatively easy to install and configure.  Let's give it a try.
 
-[note]
-MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
-[/note]
-
 [tabs]
 [tab version="v3.3 Snap"]
 [note]
-**ALSO NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
 [/note]
 
 <a href="#heading--fresh-install-3-3-snap"><h2 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h2></a>
@@ -20,7 +16,9 @@ To install MAAS 3.3 from a snap:
 
 2. Enter the following command:
 
-    sudo snap install --channel=3.3 maas
+```nohighlight
+sudo snap install --channel=3.3 maas
+```
 
 3. Enter your account password.
 
@@ -28,123 +26,73 @@ At this point, the snap will download and install from the 3.3 channel.
 
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h2></a>
 
-Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a `region+rack` configuration, use this command:
+To upgrade from a earlier snap version to the 3.3 snap (using a `region+rack` configuration):
 
-    $ sudo snap refresh --channel=3.3 maas
+1. Enter the following command:
 
-After entering your password, the snap will refresh from the 3.3 channel.  You will **not** need to re-initialise MAAS.
+```nohighlight
+sudo snap refresh --channel=3.3 maas
+```
+
+2. Enter your account password.
+
+The snap will refresh from the 3.3 channel.  You will not need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 
 <a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS 3.3 snap for a test or POC environment</h2></a>
 
-You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called `maas-test-db`, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.
-
-Once MAAS is installed, you can use the `--help` flag with `maas init` to get relevant instructions:
+To initialise the MAAS 3.3 snap in a test/POC configuration, simply use the `--help` flag with `maas init` and follow the instructions.
  
-    $ sudo maas init --help
-    usage: maas init [-h] {region+rack,region,rack} . . .
-
-    Initialise MAAS in the specified run mode.
-
-    optional arguments:
-      -h, --help            show this help message and exit
-
-    run modes:
-      {region+rack,region,rack}
-        region+rack         Both region and rack controllers
-        region              Region controller only
-        rack                Rack controller only
-
-    When installing region or rack+region modes, MAAS needs a
-    PostgreSQL database to connect to.
-
-    If you want to set up PostgreSQL for a non-production deployment on
-    this machine, and configure it for use with MAAS, you can install
-    the maas-test-db snap before running 'maas init':
-        sudo snap install maas-test-db
-        sudo maas init region+rack --database-uri maas-test-db:///
-
-We'll quickly walk through these instructions to confirm your understanding.  First, install the `maas-test-db` snap:
- 
-    sudo snap install maas-test-db
-
-Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it's done, you can double check with a built-in PostgreSQL shell:
-
-    $ sudo maas-test-db.psql
-    psql (12.4)
-    Type "help" for help.
-
-    postgres=# \l
-
-This will produce a list of databases, one of which will be `maasdb`, owned by `maas`.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the `maas init` command:
-
-    sudo maas init region+rack --database-uri maas-test-db:///
-
-After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:
- 
-    MAAS URL [default=http://10.45.222.159:5240/MAAS]:
-
-When you've entered a suitable URL, or accepted the default, the following prompt will appear:
- 
-    MAAS has been set up.
-
-    If you want to configure external authentication or use
-    MAAS with Canonical RBAC, please run
-
-      sudo maas configauth
-
-    To create admins when not using external authentication, run
-
-      sudo maas createadmin
-
-Let's assume you just want a local testing user named `admin`:
-
-    $ sudo maas createadmin
-    Username: admin
-    Password: ******
-    Again: ******
-    Email: admin@example.com
-    Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
-
-At this point, MAAS is basically set up and running.  You can confirm this with `sudo maas status`.  If you need an API key, you can obtain this with `sudo maas apikey --username yourusername`.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your `admin` username and password.
-
 <a href="#heading--init-maas-production"><h2 id="heading--init-maas-production">Initialise MAAS for a production configuration</h2></a>
 
-To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.
+To install MAAS in a production configuration:
 
-<a href="#heading--pg-setup"><h4 id="heading--pg-setup">Setting up PostgreSQL from scratch</h4></a>
+1. Install PostgreSQL on any machine where you want to keep the database with the following commands:
 
-To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
+```nohighlight
+sudo apt update -y
+sudo apt install -y postgresql
+```
 
-1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+2. Create desired values for the following variables (replace them in the commands below):
 
-        sudo apt update -y
-        sudo apt install -y postgresql
+```nohighlight
+$MAAS_DBUSER = ___________
+$MAAS_DBPASS = ___________
+$MAAS_DBNAME = ___________
+$HOSTNAME = _________
+```
 
-2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
+Note that for most situations, you can use `localhost` for `$HOSTNAME`.
 
-        sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+2. Create a suitable PostgreSQL user:
 
-3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database (typically known as `maas`). Again, if you're executing this step in a LXD container as root, you can ignore the minor error that results.
+```nohighlight
+sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+```
 
-        sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+3. Create the MAAS database:
 
-4. Edit `/etc/postgresql/14/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than `0/0`.
+```nohighlight
+sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+```
 
-        host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+4. Edit `/etc/postgresql/14/main/pg_hba.conf` and add a line for the newly created database:
 
-5. You can then initialise MAAS via the following command:
+```nohighlight
+host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+```
 
-        sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+5. Initialise MAAS via the following command:
 
-[note] You should use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.[/note]
-
-Don't worry; if you leave out any of the database parameters, you'll be prompted for those details.
+```nohighlight
+sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+```
 [/tab]
 [tab version="v3.3 Packages"]
 [note]
-**ALSO NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
 [/note]
 
 <a href="#heading--fresh-install-3-3-packages"><h2 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h2></a>
@@ -153,17 +101,23 @@ To install MAAS 3.3 from packages:
 
 1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
 
-2. Add the MAAS 3.3 PPA to your `apt` repository paths.
+2. Add the MAAS 3.3 PPA to your `apt` repository paths:
 
-    sudo apt-add-repository ppa:maas/3.3-next
+```nohighlight
+sudo apt-add-repository ppa:maas/3.3-next
+```
 
 3. Update your `apt` repository lists:
 
-    sudo apt update
+```nohighlight
+sudo apt update
+```
 	
 4. Install MAAS with the following command:
 
-    sudo apt-get -y install maas
+```nohighlight
+sudo apt-get -y install maas
+```
 
 5. Choose "Y" if asked about whether to continue with the install.
 
@@ -175,23 +129,33 @@ To run MAAS region and rack controllers on separate machines:
 
 2. Add the MAAS 3.3 PPA to your `apt` repository paths on both region and rack target hosts:
 
-    sudo apt-add-repository ppa:maas/3.3-next
+```nohighlight
+sudo apt-add-repository ppa:maas/3.3-next
+```
 
 3. Update your `apt` repository lists on both region and rack hosts:
 
-    sudo apt update
+```nohighlight
+sudo apt update
+```
 	
 4. Install the MAAS region controller on the target region host:
 
-    sudo apt install maas-region-controller
+```nohighlight
+sudo apt install maas-region-controller
+```
 
 5. Install the MAAS rack controller on the target rack host:
 
-    sudo apt install maas-rack-controller
+```nohighlight
+sudo apt install maas-rack-controller
+```
 	
 6. Register the rack controller with the region controller by running the following command on the rack host:
 
-    sudo maas-rack register
+```nohighlight
+sudo maas-rack register
+```
 
 These two steps will lead you through two similar <code>apt</code> install sequences.
 
@@ -201,14 +165,18 @@ If you are running MAAS 3.2 through MAAS 2.9, you can upgrade directly to MAAS 3
 
 1. Check whether the target system is running Ubuntu 22.04 LTS:
 
-    lsb_release -a
+```nohighlight
+lsb_release -a
+```
 
 The response should look something like this:
 
-    Distributor ID:	Ubuntu
-    Description:	Ubuntu xx.yy
-    Release:	xx.yy
-    Codename:	$RELEASE_NAME
+```nohighlight
+Distributor ID:	Ubuntu
+Description:	Ubuntu xx.yy
+Release:	xx.yy
+Codename:	$RELEASE_NAME
+```
 
 The required “xx.yy” for MAAS 3.3 is “22.04,” code-named “Jammy”.
 

@@ -5,6 +5,19 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
+<a href="#heading--MAAS-3-3-1-has-been-released"><h2 id="heading--MAAS-3-3-1-has-been-released">MAAS 3.3.1 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:
+
+- [2008275](https://bugs.launchpad.net/maas/+bug/1990172/2008275) Intel AMT support is broken in MAAS 3.3.0
+- [2009137](https://bugs.launchpad.net/maas/+bug/1990172/2009137) MAAS OpenApi Schema missing parameters
+- [1773150](https://bugs.launchpad.net/maas/+bug/1990172/1773150) smartctl verify fails due to Unicode in Disk Vendor Name
+- [1993618](https://bugs.launchpad.net/maas/+bug/1990172/1993618) Web UI redirection policy can invalidate HAProxy and/or TLS setup
+- [1996997](https://bugs.launchpad.net/maas/+bug/1990172/1996997) LXD resources fails on a Raspberry Pi with no Ethernet
+- [2009140](https://bugs.launchpad.net/maas/+bug/1990172/2009140) MAAS OpenApi Schema cutoff variable names
+
+<a href="#heading--MAAS-3-3-has-been-released"><h2 id="heading--MAAS-3-3-has-been-released">MAAS 3.3 has been released</h2></a>
+
 We are happy to announce that MAAS 3.3 has been released, with [one additional bug fix](#heading--MAAS-3-3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
