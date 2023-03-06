@@ -70,8 +70,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-use-availability-zones          | [How to use availability zones](/t/-/5152)          |
 | 2     | how-to-use-images                      | [How to use images](/t/-/6192)                      |
 | 3     | how-to-use-standard-images             | [How to use standard images](/t/-/5124)             |
-| 3     | how-to-customise-images                | [How to customise images](/t/-/5104)                |
 | 3     | how-to-mirror-images-locally           | [How to mirror images locally](/t/-/5927)           |
+| 3     | how-to-customise-images                | [How to customise images](/t/-/5104)                |
 | 3     | how-to-employ-vmware-images            | [How to employ VMWare images](/t/-/5144)            |
 | 3     | how-to-deploy-a-rt-kernel              | [How to deploy a RT kernel](/t/-/6658)              |
 | 2     | how-to-manage-controllers              | [How to manage controllers](/t/-/6498)              |
@@ -82,7 +82,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-customise-machines              | [How to customise machines](/t/-/5108)              |
 | 3     | how-to-put-machines-to-work            | [How to put machines to work](/t/-/6773)            |
 | 2     | how-to-use-virtual-machines            | [How to use virtual machines](/t/-/6500)            |
-| 3     | how-to-use-lxd                         | [How to use LXD](/t/-/5208)                         |
+| 3     | how-to-set-up-lxd                      | [How to set up LXD](/t/-/5208)                      |
 | 3     | how-to-manage-vm-hosts                 | [How to manage VM hosts](/t/-/5140)                 |
 | 3     | how-to-manage-vms                      | [How to manage VMs](/t/-/5148)                      |
 | 2     | how-to-label-devices                   | [How to label devices](/t/-/6200)                   |
@@ -119,7 +119,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | general-reference                      | [General reference ](/t/-/6806)                     |
 | 3     | release-notes                          | [Release notes](/t/-/5292)                          |
 | 3     | installation-requirements              | [Installation requirements](/t/-/6233)              |
-| 3     | maas-configuration-reference           | [MAAS configuration reference](/t/-/6347)           |
+| 3     | maas-settings                          | [MAAS settings](/t/-/6347)                          |
 | 3     | maas-glossary                          | [MAAS Glossary](/t/-/5416)                          |
 | 3     | code-of-conduct                        | [Code of conduct](/t/-/6807)                        |
 | 2     | scripts-reference                      | [Scripts reference](/t/-/6808)                      |
