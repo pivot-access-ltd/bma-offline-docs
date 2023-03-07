@@ -7,7 +7,7 @@ With MAAS 3.3, playbooks are available to install and configure MAAS, including 
 Here you can learn:
 
 - [About Ansible](#heading--About-Ansible)
-- [How to a MAAS Ansible playbook](#heading--Running-a-MAAS-Ansible-playbook)
+- [How to run a MAAS Ansible playbook](#heading--Running-a-MAAS-Ansible-playbook)
 - [How to install a region controller with Ansible](#heading--MAAS-region-controller)
 - [How to install a rack controller with Ansible](#heading--MAAS-rack-controller)
 - [How to set up the PostgreSQL primary role with Ansible](#heading--PostgreSQL-primary-role)
