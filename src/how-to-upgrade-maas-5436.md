@@ -22,7 +22,7 @@ The snap will refresh from the 3.3 channel.  You will not need to re-initialise 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v3.3 Packages"] 
-<a href="#heading--How-to-upgrade-from-3-2-through-MAAS-2-9-to-MAAS-3-3"><h2 id="heading--How-to-upgrade-from-3-2-through-MAAS-2-9-to-MAAS-3-3">How to upgrade from MAAS 3.2 through MAAS 2.9 to MAAS 3.3</h2></a>
+<a href="#heading--How-to-upgrade-from-3-2-through-MAAS-2-9-to-MAAS-3-3"><h2 id="heading--How-to-upgrade-from-3-2-through-MAAS-2-9-to-MAAS-3-3">How to upgrade MAAS 2.9++ to MAAS 3.3</h2></a>
 
 If you are running MAAS 3.2 through MAAS 2.9, you can upgrade directly to MAAS 3.3 with the following procedure:
 
@@ -68,7 +68,7 @@ Release:	22.04
 Codename:	jammy
 ```
 
-<a href="#heading--How-to-upgrade-from-2-8-or-lower-to-MAAS-3-3"><h2 id="heading--How-to-upgrade-from-2-8-or-lower-to-MAAS-3-3">How to upgrade from MAAS 2.8 or lower to MAAS 3.3</h2></a>
+<a href="#heading--How-to-upgrade-from-2-8-or-lower-to-MAAS-3-3"><h2 id="heading--How-to-upgrade-from-2-8-or-lower-to-MAAS-3-3">How to upgrade MAAS 2.8-- to MAAS 3.3</h2></a>
 
 If you’re upgrading from MAAS version 2.8 or lower to version 3.3, try the fooling procedure.  While the this procedure should work, note that they it's untested. Use at your own risk. 
 
@@ -107,7 +107,7 @@ Codename:	jammy
 If this didn’t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.3.
 [/tab]
 [tab version="v3.2 Snap"] 
-<a href="#heading--upgrade-from-earlier-version-to-snap-3-2"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-2">How to upgrade from an earlier snap version to MAAS 3.2</h2></a>
+<a href="#heading--upgrade-from-earlier-version-to-snap-3-2"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-2">How to upgrade a snap to MAAS 3.2</h2></a>
 
 To upgrade from a earlier snap version to the 3.2 snap (using a `region+rack` configuration):
 
@@ -124,7 +124,7 @@ The snap will refresh from the 3.2 channel; you will not need to re-initialise M
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v3.2 Packages"] 
-<a href="#heading--upgrade-to-3-2"><h2 id="heading--upgrade-to-3-2">How to ugprade to MAAS 3.2 from MAAS 2.9 or higher</h2></a>
+<a href="#heading--upgrade-to-3-2"><h2 id="heading--upgrade-to-3-2">How to ugprade MAAS 2.9++ to MAAS 3.2</h2></a>
 
 To upgrade from MAAS 2.9 - 3.1 to MAAS 3.2, follow these steps:
 
@@ -147,7 +147,7 @@ sudo apt upgrade maas
 
 5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.2.
 
-<a href="#heading--upgrade-from-2-8-to-3-2"><h2 id="heading--upgrade-from-2-8-to-3-2">How to upgrade from 2.8 or lower to MAAS 3.2</h2></a>
+<a href="#heading--upgrade-from-2-8-to-3-2"><h2 id="heading--upgrade-from-2-8-to-3-2">How to upgrade MAAS 2.8-- to MAAS 3.2</h2></a>
 
 If you are running MAAS 2.8 or lower, you can't upgrade directly to MAAS 3.2: 
 
@@ -194,7 +194,7 @@ Codename:	focal
 ```
 [/tab]
 [tab version="v3.1 Snap"] 
-<a href="#heading--upgrade-from-earlier-version-to-snap-3-1"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-1">How to upgrade from an earlier snap version to MAAS 3.1</h2></a>
+<a href="#heading--upgrade-from-earlier-version-to-snap-3-1"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-1">How to upgrade a snap to MAAS 3.1</h2></a>
 
 To upgrade from a earlier snap version to the 3.1 snap (using a `region+rack` configuration):
 
@@ -210,7 +210,7 @@ The snap will refresh from the 3.1 channel.  You will not need to re-initialise 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v3.1 Packages"] 
-<a href="#heading--upgrade-from-3-0-to-3-1"><h2 id="heading--upgrade-from-3-0-to-3-1">How to ugprade from MAAS 2.9 or 3.0 to MAAS 3.1</h2></a>
+<a href="#heading--upgrade-from-3-0-to-3-1"><h2 id="heading--upgrade-from-3-0-to-3-1">How to ugprade MAAS 2.9++ to MAAS 3.1</h2></a>
 
 You can upgrade from MAAS 2.9 or MAAS 3.0 to MAAS 3.1:
 
@@ -233,7 +233,7 @@ sudo apt upgrade maas
 
 5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.1.
 
-<a href="#heading--upgrade-from-2-8-to-3-1"><h2 id="heading--upgrade-from-2-8-to-3-1">How to upgrade from 2.8 or lower to MAAS 3.1</h2></a>
+<a href="#heading--upgrade-from-2-8-to-3-1"><h2 id="heading--upgrade-from-2-8-to-3-1">How to upgrade MAAS 2.8-- to MAAS 3.1</h2></a>
 
 If you are running MAAS 2.8 or lower, you can also upgrade directly to MAAS 3.1, but it requires some extra steps.  You must first make sure that the target system is running Ubuntu 20.04 LTS or higher, by executing the following command:
 
@@ -280,7 +280,7 @@ Codename:	focal
 ```
 [/tab]
 [tab version="v3.0 Snap"] 
-<a href="#heading--upgrade-from-earlier-version-to-snap-3-0"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-0">How to upgrade from an earlier snap version to MAAS 3.0</h2></a>
+<a href="#heading--upgrade-from-earlier-version-to-snap-3-0"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-0">How to upgrade a snap to MAAS 3.0</h2></a>
 
 To upgrade from a earlier snap version to the 3.0 snap (using a `region+rack` configuration), do the following:
 
@@ -297,7 +297,7 @@ The snap will refresh from the 3.0 channel.  You will not need to re-initialise 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v3.0 Packages"] 
-<a href="#heading--upgrade-from-2-9-to-3-0"><h2 id="heading--upgrade-from-2-9-to-3-0">How to ugprade from MAAS 2.9 to MAAS 3.0</h2></a>
+<a href="#heading--upgrade-from-2-9-to-3-0"><h2 id="heading--upgrade-from-2-9-to-3-0">How to ugprade MAAS 2.9 to MAAS 3.0</h2></a>
 
 To upgrade a working MAAS 2.9 instance to MAAS 3.0, follow these steps:
 
@@ -320,7 +320,7 @@ sudo apt upgrade maas
 
 5. If this didn't work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.0.
 
-<a href="#heading--upgrade-from-2-8-to-3-0"><h2 id="heading--upgrade-from-2-8-to-3-0">How to upgrade from 2.8 or lower to MAAS 3.0</h2></a>
+<a href="#heading--upgrade-from-2-8-to-3-0"><h2 id="heading--upgrade-from-2-8-to-3-0">How to upgrade MAAS 2.8-- to MAAS 3.0</h2></a>
 
 If you are running MAAS 2.8, you can upgrade directly to MAAS 3.0 with the following procedure:
 
@@ -369,7 +369,7 @@ Codename:	focal
 ```
 [/tab]
 [tab version="v2.9 Snap"] 
-<a href="#heading--upgrade-from-earlier-version-to-snap-2-9"><h2 id="heading--upgrade-from-earlier-version-to-snap-2-9">How to upgrade from an earlier snap version to MAAS 2.9</h2></a>
+<a href="#heading--upgrade-from-earlier-version-to-snap-2-9"><h2 id="heading--upgrade-from-earlier-version-to-snap-2-9">How to upgrade a snap to MAAS 2.9</h2></a>
 
 To upgrade from an earlier snap version to the 2.9 snap (using a `region+rack` configuration), do the following:
 
@@ -386,7 +386,7 @@ The snap will refresh from the 3.0 channel.  You will not need to re-initialise 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 [/tab]
 [tab version="v2.9 Packages"] 
-<a href="#heading--upgrade-from-2-8-to-2-9"><h2 id="heading--upgrade-from-2-8-to-2-9">How to upgrade from MAAS 2.8 or lower to MAAS 2.9</h2></a>
+<a href="#heading--upgrade-from-2-8-to-2-9"><h2 id="heading--upgrade-from-2-8-to-2-9">How to upgrade MAAS 2.8-- to MAAS 2.9</h2></a>
 
 MAAS 2.8 is the last supported version for Ubuntu 18.04 LTS.  Newer versions of MAAS will not be back-portable, and consequently, to upgrade to MAAS 2.9 and all future versions, you will also need to upgrade the base operating system to Ubuntu 20.04.  
 
