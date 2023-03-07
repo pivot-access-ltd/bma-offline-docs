@@ -7,9 +7,6 @@ MAAS is relatively easy to install and configure.  Let's give it a try.
 [note]
 PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
 [/note]
-
-<a href="#heading--fresh-install-3-3-snap"><h2 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h2></a>
-
 To install MAAS 3.3 from a snap:
 
 1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
@@ -23,12 +20,199 @@ sudo snap install --channel=3.3 maas
 3. Enter your account password.
 
 At this point, the snap will download and install from the 3.3 channel.
+[/tab]
+[tab version="v3.3 Packages"]
+[note]
+PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+[/note]
+To install MAAS 3.3 from packages:
 
-<a href="#heading--init-maas-poc-3-3"><h2 id="heading--init-maas-poc-3-3">How to initialise MAAS 3.3 snap for a test or POC environment</h2></a>
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
 
-To initialise the MAAS 3.3 snap in a test/POC configuration, simply use the `--help` flag with `maas init` and follow the instructions.
+2. Add the MAAS 3.3 PPA to your `apt` repository paths:
+
+```nohighlight
+sudo apt-add-repository ppa:maas/3.3-next
+```
+
+3. Update your `apt` repository lists:
+
+```nohighlight
+sudo apt update
+```
+	
+4. Install MAAS with the following command:
+
+```nohighlight
+sudo apt-get -y install maas
+```
+
+5. Choose "Y" if asked about whether to continue with the install.
+
+[/tab]
+[tab version="v3.2 Snap"]
+To install MAAS 3.2 from a snap:
+
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+2. Enter the following command:
+
+```nohighlight
+sudo snap install --channel=3.2 maas
+```
+
+3. Enter your account password.
+
+At this point, the snap will download and install from the 3.2 channel.
+
+[/tab]
+[tab version="v3.2 Packages"]
+To install MAAS 3.2 from packages:
+
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+2. Add the MAAS 3.2 PPA to your `apt` repository paths:
+
+```nohighlight
+sudo apt-add-repository ppa:maas/3.2
+```
+
+3. Update your `apt` repository lists:
+
+```nohighlight
+sudo apt update
+```
+	
+4. Install MAAS with the following command:
+
+```nohighlight
+sudo apt-get -y install maas
+```
+
+5. Choose "Y" if asked about whether to continue with the install.
+[/tab]
+[tab version="v3.1 Snap"]
+To install MAAS 3.1 from a snap:
+
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+2. Install the 3.2 snap:
+
+```nohighlight
+sudo snap install --channel=3.1 maas
+```
+
+3. Enter your account password. 
+
+The snap will download and install from the 3.1 channel.
+[/tab]
+[tab version="v3.1 Packages"]
+To install MAAS 3.1 from packages:
+
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+2. Add the MAAS 3.1 PPA to your `apt` repository paths:
+
+```nohighlight
+sudo apt-add-repository ppa:maas/3.1
+```
+
+3. Update your `apt` repository lists:
+
+```nohighlight
+sudo apt update
+```
+	
+4. Install MAAS with the following command:
+
+```nohighlight
+sudo apt-get -y install maas
+```
+5. Choose "Y" if asked about whether to continue with the install.
+[/tab]
+[tab version="v3.0 Snap"]
+To install MAAS 3.0 from a snap:
+
+1. Enter the following command:
+
+```nohighlight
+sudo snap install --channel=3.0 maas
+```
+
+2. Enter your user password.
+
+The snap will download and install from the 3.0 channel.
+[/tab]
+[tab version="v3.0 Packages"]
+To install MAAS 3.0 from packages:
+
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+2. Add the MAAS 3.0 PPA to your `apt` repository paths:
+
+```nohighlight
+sudo apt-add-repository ppa:maas/3.0
+```
+
+3. Update your `apt` repository lists:
+
+```nohighlight
+sudo apt update
+```
+	
+4. Install MAAS with the following command:
+
+```nohighlight
+sudo apt-get -y install maas
+```
+5. Choose "Y" if asked about whether to continue with the install.
+[/tab]
+[tab version="v2.9 Snap"]
+To install MAAS 2.9 from a snap:
+
+1. Enter the following command:
+
+```nohighlight
+sudo snap install --channel=2.9 maas
+```
+
+2. Enter your user password.
+
+The snap will download and install from the 2.9 stable channel.
+[/tab]
+[tab version="v2.9 Packages"]
+To install MAAS 2.9 from packages:
+
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+2. Add the MAAS 2.9 PPA to your `apt` repository paths:
+
+```nohighlight
+sudo apt-add-repository ppa:maas/2.9
+```
+
+3. Update your `apt` repository lists:
+
+```nohighlight
+sudo apt update
+```
+	
+4. Install MAAS with the following command:
+
+```nohighlight
+sudo apt-get -y install maas
+```
+5. Choose "Y" if asked about whether to continue with the install.
+[/tab]
+[/tabs]
+
+[tabs]
+[tab version="v3.3 Snap,v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
+<a href="#heading--init-maas-poc"><h3 id="heading--init-maas-poc">How to initialise MAAS for a test or POC</h3></a>
+
+To initialise the MAAS snap in a test/POC configuration, simply use the `--help` flag with `maas init` and follow the instructions.
  
-<a href="#heading--init-maas-production-3-3"><h2 id="heading--init-maas-production-3-3">Initialise MAAS for a production configuration</h2></a>
+<a href="#heading--init-maas-production-3-3"><h3 id="heading--init-maas-production-3-3">How to initialise MAAS for production</h3></a>
 
 To install MAAS in a production configuration:
 
@@ -74,38 +258,8 @@ host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
 sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
 ```
 [/tab]
-[tab version="v3.3 Packages"]
-[note]
-PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
-[/note]
-
-<a href="#heading--fresh-install-3-3-packages"><h2 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h2></a>
-
-To install MAAS 3.3 from packages:
-
-1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
-
-2. Add the MAAS 3.3 PPA to your `apt` repository paths:
-
-```nohighlight
-sudo apt-add-repository ppa:maas/3.3-next
-```
-
-3. Update your `apt` repository lists:
-
-```nohighlight
-sudo apt update
-```
-	
-4. Install MAAS with the following command:
-
-```nohighlight
-sudo apt-get -y install maas
-```
-
-5. Choose "Y" if asked about whether to continue with the install.
-
-<a href="#heading--Distributed-environment-3-3"><h4 id="heading--Distributed-environment-3-3">Distributed environment</h4></a>
+[tab version="v3.3 Packages,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
+<a href="#heading--Distributed-environment"><h3 id="heading--Distributed-environment">How to create a distributed environment</h3></a>
 
 To run MAAS region and rack controllers on separate machines:
 
@@ -142,97 +296,10 @@ sudo maas-rack register
 ```
 
 These two steps will lead you through two similar <code>apt</code> install sequences.
-[/tab]
-[tab version="v3.2 Snap"]
-<a href="#heading--fresh-install-3-2-snap"><h2 id="heading--fresh-install-3-2-snap">How to do a fresh snap install of MAAS 3.2</h2></a>
 
-To install MAAS 3.2 from a snap:
+<a href="#heading--create-a-maas-user"><h3 id="heading--create-a-maas-user">How to create a MAAS admin user</h3></a>
 
-1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
-
-2. Enter the following command:
-
-```nohighlight
-sudo snap install --channel=3.2 maas
-```
-
-3. Enter your account password.
-
-At this point, the snap will download and install from the 3.2 channel.
-
-<a href="#heading--init-maas-poc-3-2"><h2 id="heading--init-maas-poc-3-2">How to initialise MAAS 3.2 snap for a test or POC environment</h2></a>
-
-To initialise MAAS as a compact version for testing, use the `--help` flag with `maas init` to get relevant instructions.
- 
-<a href="#heading--init-maas-production-3-2"><h2 id="heading--init-maas-production-3-2">Initialise MAAS for a production configuration</h2></a>
-
-In the following, make sure to substitute your own values for `$MAAS_DBUSER`, `$MAAS_DBPASS`, `$MAAS_DBNAME`, `$HOSTNAME`, etc.
-
-To install MAAS in a production configuration:
-
-1. Make sure PostgreSQL is installed on your target database server (can be any machine you wish):
-
-```nohighlight
-sudo apt update -y
-sudo apt install -y postgresql
-```
-
-2. Create a suitable MAAS PostgreSQL user:
-
-```nohighlight
-sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
-```
-
-3. Create the MAAS database:
-
-```nohighlight
-sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
-```
-
-4. Edit `/etc/postgresql/12/main/pg_hba.conf` and add the following line for the newly created database, replacing the variables with actual names:
-
-```nohighlight
-host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
-```
-
-5. Initialise MAAS:
-
-```nohighlight
-sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
-```
-
-You can use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.
-[/tab]
-[tab version="v3.2 Packages"]
-<a href="#heading--fresh-install-3-2-packages"><h2 id="heading--fresh-install-3-2-packages">How to do a fresh install of MAAS 3.2 from packages</h2></a>
-
-To install MAAS 3.2 from packages:
-
-1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
-
-2. Add the MAAS 3.2 PPA to your `apt` repository paths:
-
-```nohighlight
-sudo apt-add-repository ppa:maas/3.2
-```
-
-3. Update your `apt` repository lists:
-
-```nohighlight
-sudo apt update
-```
-	
-4. Install MAAS with the following command:
-
-```nohighlight
-sudo apt-get -y install maas
-```
-
-5. Choose "Y" if asked about whether to continue with the install.
-
-<a href="#heading--create-a-maas-user-3-2"><h2 id="heading--create-a-maas-user-3-2">How to create a MAAS 3.2 user</h2></a>
-
-To create a MAAS 3.2 user:
+To create a MAAS administrative user:
 
 1. Create a MAAS administrator user to access the web UI:
 
@@ -240,359 +307,6 @@ To create a MAAS 3.2 user:
 sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
 ```
 Subtitute `$PROFILE` is the administrative MAAS username you wish to create.  `$EMAIL_ADDRESS` is an email address you may type in at random (currently, MAAS does not use this email address). The `createadmin` option will cause MAAS to ask for an SSH key.
-
-2. To use an SSH key associated with your launchpad accounts, enter `lp:$USERNAME` (substitute your LP username for `$USERNAME`). 
-
-3. Alternatively, to use an SSH key associated with your github account, enter `gh:$USERNAME` (substitute your github username for `$USERNAME`)
-[/tab]
-[tab version="v3.1 Snap"]
-<a href="#heading--fresh-install-3-1-snap"><h2 id="heading--fresh-install-3-1-snap">How to do a fresh snap install of MAAS 3.1</h2></a>
-
-To install MAAS 3.1 from a snap:
-
-1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
-
-2. Install the 3.2 snap:
-
-```nohighlight
-sudo snap install --channel=3.1 maas
-```
-
-3. Enter your account password. 
-
-The snap will download and install from the 3.1 channel.
-
-<a href="#heading--init-maas-poc-3-1"><h2 id="heading--init-maas-poc-3-1">How to initialise MAAS 3.1 snap for a test or POC environment</h2></a>
-
-You can initialise MAAS as a compact version for testing.  To achieve this, just use the `--help` flag with `maas init` to get relevant instructions.
-
-<a href="#heading--init-maas-production-3-1"><h2 id="heading--init-maas-production-3-1">Initialise MAAS for a production configuration</h2></a>
-
-To install MAAS in a production configuration:
-
-1. Install PostgreSQL on the machine where you want to keep the database:
-
-```nohighlight
-sudo apt update -y
-sudo apt install -y postgresql
-```
-
-2. Make sure you have a suitable PostgreSQL user; in the command that follows, substitute `$MAAS_DBUSER` for your desired database username, and `$MAAS_DBPASS` for the intended password for that username. 
-
-```nohighlight
-sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
-```
-
-3. Create the MAAS database, substituing `$MAAS_DBNAME` for your desired MAAS database name.
-
-```nohighlight
-sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
-```
-
-4. Edit `/etc/postgresql/10/main/pg_hba.conf` to add a line for the newly created database, again subtituting the variables with your desired values, as used above.
-
-```nohighlight
-host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
-```
-
-5. You can then initialise MAAS:
-
-```nohighlight
-sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
-```
-
-You can substitute `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same host as MAAS.
-[/tab]
-[tab version="v3.1 Packages"]
-<a href="#heading--fresh-install-3-1-packages"><h2 id="heading--fresh-install-3-1-packages">How to do a fresh install of MAAS 3.1 from packages</h2></a>
-
-To install MAAS 3.1 from packages:
-
-1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
-
-2. Add the MAAS 3.1 PPA to your `apt` repository paths:
-
-```nohighlight
-sudo apt-add-repository ppa:maas/3.1
-```
-
-3. Update your `apt` repository lists:
-
-```nohighlight
-sudo apt update
-```
-	
-4. Install MAAS with the following command:
-
-```nohighlight
-sudo apt-get -y install maas
-```
-5. Choose "Y" if asked about whether to continue with the install.
-
-<a href="#heading--Distributed-environment-3-1"><h4 id="heading--Distributed-environment-3-1">Distributed environment</h4></a>
-
-For a more distributed environment, do the following:
-
-1. On the machine designated as your region controller, execute this command:
-
-
-``` bash
-sudo apt install maas-region-controller
-```
-
-2. On the machine designated as your rack controller, execute these two commands:
-
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register
-```
-
-These two steps will lead you through two similar <code>apt</code> install sequences.
-
-<a href="#heading--create-a-maas-user-3-1"><h2 id="heading--create-a-maas-user-3-1">How to create a MAAS 3.1 user</h2></a>
-
-To create a MAAS 3.1 user, execute the following steps:
-
-1. Create a MAAS administrator user to access the web UI:
-
-
-``` nohighlight
-sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
-```
-
-`$PROFILE` is the administrative MAAS username you wish to create.  `$EMAIL_ADDRESS` is an email address you may type in at random (currently, MAAS does not use this email address).  The `createadmin` option will ask for an SSH key.
-
-2. To use an SSH key associated with your launchpad accounts, enter `lp:$USERNAME` (substitute your LP username for `$USERNAME`). 
-
-3. Alternatively, to use an SSH key associated with your github account, enter `gh:$USERNAME` (substitute your github username for `$USERNAME`)
-[/tab]
-[tab version="v3.0 Snap"]
-<a href="#heading--fresh-install-3-0-snap"><h2 id="heading--fresh-install-3-0-snap">How to do a fresh snap install of MAAS 3.0</h2></a>
-
-To install MAAS 3.0 from a snap:
-
-1. Enter the following command:
-
-```nohighlight
-sudo snap install --channel=3.0/stable maas
-```
-
-2. Enter your user password.
-
-The snap will download and install from the 3.0 stable channel.
-
-<a href="#heading--init-maas-poc-3-0"><h2 id="heading--init-maas-poc-3-0">How to initialise MAAS 3.0 snap for a test or POC environment</h2></a>
-
-To initialise MAAS as a compact version for testing, once MAAS is installed, use the `--help` flag with `maas init` to get relevant instructions.
-
-<a href="#heading--init-maas-production-3-0"><h2 id="heading--init-maas-production-3-0">Initialise MAAS for a production configuration</h2></a>
-
-To install MAAS in a production configuration:
-
-1. You will need to install PostgreSQL on the machine where you want to keep the database.
-
-```nohighlight
-sudo apt update -y
-sudo apt install -y postgresql
-```
-
-2. Make sure you have a suitable PostgreSQL user, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.
-
-```nohighlight
-sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
-```
-
-3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database:
-
-```nohighlight
-sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
-```
-
-4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual names
-
-```nohighlight
-host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
-```
-
-5. Initialise MAAS via the following command:
-
-```nohighlight
-sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
-```
-
-Use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.
-[/tab]
-[tab version="v3.0 Packages"]
-<a href="#heading--fresh-install-3-0-packages"><h2 id="heading--fresh-install-3-0-packages">How to do a fresh install of MAAS 3.0 from packages</h2></a>
-
-To install MAAS 3.0 from packages:
-
-1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
-
-2. Add the MAAS 3.0 PPA to your `apt` repository paths:
-
-```nohighlight
-sudo apt-add-repository ppa:maas/3.0
-```
-
-3. Update your `apt` repository lists:
-
-```nohighlight
-sudo apt update
-```
-	
-4. Install MAAS with the following command:
-
-```nohighlight
-sudo apt-get -y install maas
-```
-5. Choose "Y" if asked about whether to continue with the install.
-
-<a href="#heading--Distributed-environment-3-0"><h4 id="heading--Distributed-environment-3-0">Distributed environment</h4></a>
-
-For a more distributed environment, you can place the region controller on one machine:
-
-``` bash
-sudo apt install maas-region-controller
-```
-
-and the rack controller on another:
-
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register
-```
-
-These two steps will lead you through two similar <code>apt</code> install sequences.
-
-<a href="#heading--create-a-maas-user-3-0"><h2 id="heading--create-a-maas-user-3-0">How to create a MAAS 3.0 user</h2></a>
-
-To create a MAAS 3.0 user, execute the following steps:
-
-1. Create a MAAS administrator user to access the web UI:
-
-
-``` nohighlight
-sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
-```
-
-`$PROFILE` is the administrative MAAS username you wish to create.  `$EMAIL_ADDRESS` is an email address you may type in at random (currently, MAAS does not use this email address).  The `createadmin` option will ask for an SSH key.
-
-2. To use an SSH key associated with your launchpad accounts, enter `lp:$USERNAME` (substitute your LP username for `$USERNAME`). 
-
-3. Alternatively, to use an SSH key associated with your github account, enter `gh:$USERNAME` (substitute your github username for `$USERNAME`)
-[/tab]
-[tab version="v2.9 Snap"]
-<a href="#heading--fresh-install-2-9-snap"><h2 id="heading--fresh-install-2-9-snap">How to do a fresh snap install of MAAS 2.9</h2></a>
-
-To install MAAS 2.9 from a snap:
-
-1. Enter the following command:
-
-```nohighlight
-sudo snap install --channel=2.9 maas
-```
-
-2. Enter your user password.
-
-The snap will download and install from the 2.9 stable channel.
-
-<a href="#heading--init-maas-poc-2-9"><h2 id="heading--init-maas-poc-2-9">How to initialise MAAS 2.9 snap for a test or POC environment</h2></a>
-
-To initialise MAAS as a compact version for testing, once MAAS is installed, use the `--help` flag with `maas init` to get relevant instructions.
-
-<a href="#heading--init-maas-production-2-9"><h2 id="heading--init-maas-production-2-9">Initialise MAAS for a production configuration</h2></a>
-
-To install MAAS in a production configuration:
-
-1. You will need to install PostgreSQL on the machine where you want to keep the database.
-
-```nohighlight
-sudo apt update -y
-sudo apt install -y postgresql
-```
-
-2. Make sure you have a suitable PostgreSQL user, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.
-
-```nohighlight
-sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
-```
-
-3. Create the MAAS database with the following command, where `$MAAS_DBNAME` is your desired name for the MAAS database:
-
-```nohighlight
-sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
-```
-
-4. Edit `/etc/postgresql/10/main/pg_hba.conf` and add a line for the newly created database, replacing the variables with actual names
-
-```nohighlight
-host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
-```
-
-5. Initialise MAAS via the following command:
-
-```nohighlight
-sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
-```
-
-Use `localhost` for `$HOSTNAME` if you're running PostgreSQL on the same box as MAAS.
-[/tab]
-[tab version="v2.9 Packages"]
-<a href="#heading--fresh-install-2-9-packages"><h2 id="heading--fresh-install-2-9-packages">How to do a fresh install of MAAS 2.9 from packages</h2></a>
-
-To install MAAS 2.9 from packages:
-
-1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
-
-2. Add the MAAS 2.9 PPA to your `apt` repository paths:
-
-```nohighlight
-sudo apt-add-repository ppa:maas/2.9
-```
-
-3. Update your `apt` repository lists:
-
-```nohighlight
-sudo apt update
-```
-	
-4. Install MAAS with the following command:
-
-```nohighlight
-sudo apt-get -y install maas
-```
-5. Choose "Y" if asked about whether to continue with the install.
-
-<a href="#heading--Distributed-environment-2-9"><h4 id="heading--Distributed-environment-2-9">Distributed environment</h4></a>
-
-For a more distributed environment, you can place the region controller on one machine:
-
-``` bash
-sudo apt install maas-region-controller
-```
-
-and the rack controller on another:
-
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register
-```
-
-These two steps will lead you through two similar <code>apt</code> install sequences.
-
-<a href="#heading--create-a-maas-user-2-9"><h2 id="heading--create-a-maas-user-2-9">How to create a MAAS 2.9 user</h2></a>
-
-To create a MAAS 3.0 user, execute the following steps:
-
-1. Create a MAAS administrator user to access the web UI:
-
-
-``` nohighlight
-sudo maas createadmin --username=$PROFILE --email=$EMAIL_ADDRESS
-```
-
-`$PROFILE` is the administrative MAAS username you wish to create.  `$EMAIL_ADDRESS` is an email address you may type in at random (currently, MAAS does not use this email address).  The `createadmin` option will ask for an SSH key.
 
 2. To use an SSH key associated with your launchpad accounts, enter `lp:$USERNAME` (substitute your LP username for `$USERNAME`). 
 
