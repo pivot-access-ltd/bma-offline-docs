@@ -133,13 +133,16 @@ sudo apt-get -y install maas
 [tab version="v3.0 Snap"]
 To install MAAS 3.0 from a snap:
 
-1. Enter the following command:
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+
+2. Enter the following command:
 
 ```nohighlight
 sudo snap install --channel=3.0 maas
 ```
 
-2. Enter your user password.
+3. Enter your user password.
 
 The snap will download and install from the 3.0 channel.
 [/tab]
@@ -170,13 +173,15 @@ sudo apt-get -y install maas
 [tab version="v2.9 Snap"]
 To install MAAS 2.9 from a snap:
 
-1. Enter the following command:
+1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
+
+2. Enter the following command:
 
 ```nohighlight
 sudo snap install --channel=2.9 maas
 ```
 
-2. Enter your user password.
+3. Enter your user password.
 
 The snap will download and install from the 2.9 stable channel.
 [/tab]
@@ -208,11 +213,11 @@ sudo apt-get -y install maas
 
 [tabs]
 [tab version="v3.3 Snap,v3.2 Snap,v3.1 Snap,v3.0 Snap,v2.9 Snap"]
-<a href="#heading--init-maas-poc"><h3 id="heading--init-maas-poc">How to initialise MAAS for a test or POC</h3></a>
+<a href="#heading--init-maas-poc"><h2 id="heading--init-maas-poc">How to initialise MAAS for a test or POC</h2></a>
 
 To initialise the MAAS snap in a test/POC configuration, simply use the `--help` flag with `maas init` and follow the instructions.
  
-<a href="#heading--init-maas-production-3-3"><h3 id="heading--init-maas-production-3-3">How to initialise MAAS for production</h3></a>
+<a href="#heading--init-maas-production-3-3"><h2 id="heading--init-maas-production-3-3">How to initialise MAAS for production</h2></a>
 
 To install MAAS in a production configuration:
 
@@ -259,7 +264,7 @@ sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@
 ```
 [/tab]
 [tab version="v3.3 Packages,v3.2 Packages,v3.1 Packages,v3.0 Packages,v2.9 Packages"]
-<a href="#heading--Distributed-environment"><h3 id="heading--Distributed-environment">How to create a distributed environment</h3></a>
+<a href="#heading--Distributed-environment"><h2 id="heading--Distributed-environment">How to create a distributed environment</h2></a>
 
 To run MAAS region and rack controllers on separate machines:
 
@@ -297,7 +302,7 @@ sudo maas-rack register
 
 These two steps will lead you through two similar <code>apt</code> install sequences.
 
-<a href="#heading--create-a-maas-user"><h3 id="heading--create-a-maas-user">How to create a MAAS admin user</h3></a>
+<a href="#heading--create-a-maas-user"><h2 id="heading--create-a-maas-user">How to create a MAAS admin user</h2></a>
 
 To create a MAAS administrative user:
 
@@ -340,7 +345,7 @@ tgt                              RUNNING   pid 8040, uptime 0:09:15
 ```
 Your mileage may vary.
 
-<a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">How to re-initialise MAAS</h3></a>
+<a href="#heading--reinitialising-maas"><h2 id="heading--reinitialising-maas">How to re-initialise MAAS</h2></a>
 
 To switch a machine from from `rack` to `region`:
  
@@ -372,7 +377,7 @@ where `$API_HOST` is the hostname or IP address of the region API server, which 
 
 Log in at the prompts, with the login information you created when initialising MAAS.
 
-<a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a>
+<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
 
 After a fresh MAAS installation, the web UI presents a couple of welcome screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys:
 
@@ -418,7 +423,7 @@ With this complete, youâ€™ll see that MAAS has been successfully set up. Click â
 Note that you may have to wait a few moments for your selected images to sync locally.
 [/note]
 
-<a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable DHCP</h3></a>
+<a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">How to enable DHCP</h2></a>
 
 Before moving forward with MAAS, you'll want to enable DHCP.  You can do this very easily from the web UI by selecting "Subnets" from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, "Enable DHCP."
 [/tab]
@@ -447,7 +452,7 @@ Substitute `$MAAS_URL` with the URL that was returned to you when you initialise
 maas admin --help
 ```
 
-<a href="#heading--configuration"><h3 id="heading--configuration">Configuration</h3></a>
+<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
 
 Configuring MAAS consists of four broad steps:
 
