@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/about-ansible.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="../../api/docs">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>About Ansible</h1><!-- "About Ansible" -->
+
+<p><a href="https://github.com/maas/MAAS-ansible-playbook">Ansible playbooks</a> are now available for MAAS. These extended YAML files automate various routine aspects of MAAS setup and configuration.  Automate the drudgery of installing and configuring MAAS with Ansible.  </p>
+<p>With MAAS 3.3, playbooks are available to install and configure MAAS, including regions and racks.  There is also a set of groups that will automate setting up specific sections of MAAS. For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.</p>
+<p>After installing Ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
+<p><a href="#heading--About-Ansible"><h2 id="heading--About-Ansible">About Ansible basics</h2></a></p>
+<p>A user should probably have a solid grasp of the Ansible standard terminology:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Playbooks / plays</li>
+<li>Hosts and groups</li>
+<li>Inventory</li>
+</ul>
+<p><a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a><code>↗</code> is a sophisticated IT automation tool that allows users to set up <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a><code>↗</code>, which automate complex, repetitive (or error-prone)<code>↗</code> setup activities.  While we won&rsquo;t provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules">Modules</a><code>↗</code></strong> are binaries (or even pieces of code)<code>↗</code> that Ansible can run on a managed node.  These modules can be grouped into named collections.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks">Tasks</a><code>↗</code></strong> are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as &ldquo;partition and format /sda&rdquo;.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays">Plays</a><code>↗</code></strong> are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., &ldquo;install the OS&rdquo; ==&gt; &ldquo;partition and format /sda&rdquo;, &ldquo;install binary x.7.iso&rdquo;, etc.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">Playbooks</a><code>↗</code></strong> are YAML files that run plays in a specific order; for example, &ldquo;install the OS&rdquo;, &ldquo;install MAAS&rdquo;, &ldquo;create a region controller&rdquo;, &ldquo;sync images&rdquo;, etc.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3">Inventory</a><code>↗</code></strong> is a source(s)<code>↗</code> of managed nodes; also called a &ldquo;hostfile&rdquo;.</li>
+</ul>
+<p>These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms &ldquo;<a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">hosts and groups</a><code>↗</code>&rdquo;, since these are applied somewhat differently than we use them in MAAS.</p>
+<p>Playbooks are available to automate the setup for:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><a href="#heading--MAAS-region-controller">MAAS region controllers</a>: install and configure a MAAS region on a targeted host; running the playbook on hosts with a MAAS region will upgrade it.</p>
+</li>
+<li>
+<p><a href="#heading--MAAS-rack-controller">MAAS rack controllers</a>: install and configure a MAAS rack.</p>
+</li>
+<li>
+<p><a href="#heading--MAAS-de-installation">MAAS de-installation</a>: remove MAAS from a targeted host.</p>
+</li>
+<li>
+<p><a href="#heading--MAAS-high-availability">MAAS high availability</a>: install and configure the HA proxy.</p>
+</li>
+<li>
+<p><a href="#heading--PostgreSQL-primary-role">PostgreSQL primary role</a>: setup the postgres primary role.</p>
+</li>
+<li>
+<p><a href="#heading--PostgreSQL-secondary-role">PostgreSQL secondary role</a>: setup the postgres secondary role.</p>
+</li>
+<li>
+<p><a href="#heading--Firewall-rules">Firewall rules</a>: setup firewall rules.</p>
+</li>
+</ul>
+<p>MAAS Playbooks will eventually be available through Ansible Galaxy.</p>
+<p>There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.  These groups include:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</a></li>
+<li>?? (there must be more, huh?)</li>
+</ul>
+<p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
+<p><a href="#heading--Running-a-MAAS-Ansible-playbook"><h2 id="heading--Running-a-MAAS-Ansible-playbook">Running a MAAS Ansible playbook</h2></a></p>
+<p>In general terms, you can run any of the MAAS Ansible playbookss with a command of this form:</p>
+<pre><code class="language-nohighlight">ansible-playbook -i hosts \
+--extra_vars \
+&quot;maas_version=$MAAS_VERSION 
+maas_postgres_password=$MAAS_PG_PASSWORD 
+maas_postgres_replication_password=$MAAS_PG_REP_PASSWORD 
+maas_installation_type=&lt;deb|snap&gt; 
+maas_url=$MAAS_URL&quot; \
+./site.yaml
+</code></pre>
+<p>A command of this form will run all of the plays below (i.e., the entire playbook).  If you want to run the tasks for one particular role (or roles), you can use the form  <code>--tags &lt;target role(s)&gt;</code> to limit which parts of the MAAS Ansible playbook run.  Consult the Ansible documentation for more details on additional options and command structure.</p>
+    </div>
+  </body>
+</html>
