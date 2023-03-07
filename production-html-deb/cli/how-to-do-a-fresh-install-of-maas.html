@@ -419,11 +419,11 @@
 
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
 <p><a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a></p>
-<p>You can check the status of running services with:</p>
-<pre><code>sudo maas status
+<p>To check the status of running services, enter:</p>
+<pre><code class="language-nohighlight">sudo maas status
 </code></pre>
-<p>Typically, the output looks something like this:</p>
-<pre><code>bind9                            RUNNING   pid 7999, uptime 0:09:17
+<p>Typical output looks like this:</p>
+<pre><code class="language-nohighlight">bind9                            RUNNING   pid 7999, uptime 0:09:17
 dhcpd                            STOPPED   Not started
 dhcpd6                           STOPPED   Not started
 ntp                              RUNNING   pid 8598, uptime 0:05:42
@@ -436,43 +436,16 @@ regiond:regiond-2                RUNNING   pid 8005, uptime 0:09:17
 regiond:regiond-3                RUNNING   pid 8015, uptime 0:09:17
 tgt                              RUNNING   pid 8040, uptime 0:09:15
 </code></pre>
+<p>Your mileage may vary.</p>
 <p><a href="#heading--reinitialising-maas"><h3 id="heading--reinitialising-maas">How to re-initialise MAAS</h3></a></p>
-<p>It is also possible to re-initialise MAAS to switch modes.  For example, to switch from <code>rack</code> to <code>region</code>:</p>
-<pre><code>sudo maas init region
+<p>To switch a machine from from <code>rack</code> to <code>region</code>:</p>
+<pre><code class="language-nohighlight">sudo maas init region
 </code></pre>
 <p><a href="#heading--additional-init-options"><h2 id="heading--additional-init-options">How to list additional MAAS initialisation options</h2></a></p>
 <p>The <code>init</code> command can takes optional arguments. To list them, as well as read a brief description of each, you can enter:</p>
-<pre><code>sudo maas init --help
+<pre><code class="language-nohighlight">sudo maas init --help
 </code></pre>
 <p><a href="#heading--configure-maas"><h2 id="heading--configure-maas">How to configure MAAS</h2></a></p>
-<!--
-<a href="#heading--maas-init-modes"><h3 id="heading--maas-init-modes">MAAS initialisation modes reference</h3></a>
-
-MAAS supports the following modes, which dictate what services will run on the local system:
-
-| Mode          | Region | Rack | Database | Description                           |
-|:--------------|:------:|:----:|:--------:|:--------------------------------------|
-| `region`      | X      |      |          | Region API server only                |
-| `rack`        |        | X    |          | Rack controller only                  |
-| `region+rack` | X      | X    |          | Region API server and rack controller |
-| `none`        |        |      |          | Reinitialises MAAS and stops services |
-
-<a href="#heading--ssh-keys"><h3 id="heading--ssh-keys">About SSH keys</h3></a>
-
-MAAS uses your Launchpad or Github SSH keys to access machines that have been deployed.  Normally, you enter this key during the initialisation of MAAS.  If you don't have a key associated with either of these services, you will have an opportunity to paste your public key into the MAAS SSH key list, after you've started MAAS for the first time as part of the welcome screens.
-
-<a href="#heading--maas-url"><h3 id="heading--maas-url">About the MAAS URL</h3></a>
-
-All run modes (except `none`) prompt for a MAAS URL, interpreted differently depending on the mode:
-
--   `region`: Used to create a new region controller.
--   `rack`: Used to locate the region controller.
-
-<a href="#heading--shared-secret"><h3 id="heading--shared-secret">About the shared secret</h3></a>
-
-The 'rack' and 'region+rack' modes will additionally ask for a shared secret that will allow the new rack controller to register with the region controller.
-
--->
     </div>
   </body>
 </html>
