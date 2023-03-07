@@ -175,12 +175,14 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About machines](/t/-/6695)
 - [About MAAS events](/t/-/6510)
 - [About MAAS logging](/t/-/5240)
+- [About Ansible](/t/-/6888)
 
 ## URLs
 
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6888 | /docs/about-ansible                                           |
 | https://discourse.maas.io/t/-/744  | /docs/building-the-docs                                       |
 | https://discourse.maas.io/t/-/745  | /docs/language-details-contributing-to-maas-docs              |
 | https://discourse.maas.io/t/-/746  | /docs/working-with-git-and-github                             |
