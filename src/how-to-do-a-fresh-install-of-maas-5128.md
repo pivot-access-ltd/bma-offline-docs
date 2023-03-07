@@ -239,25 +239,25 @@ $HOSTNAME = _________
 
 Note that for most situations, you can use `localhost` for `$HOSTNAME`.
 
-2. Create a suitable PostgreSQL user:
+3. Create a suitable PostgreSQL user:
 
 ```nohighlight
 sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
 ```
 
-3. Create the MAAS database:
+4. Create the MAAS database:
 
 ```nohighlight
 sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
 ```
 
-4. Edit `/etc/postgresql/14/main/pg_hba.conf` and add a line for the newly created database:
+5. Edit `/etc/postgresql/14/main/pg_hba.conf` and add a line for the newly created database:
 
 ```nohighlight
 host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
 ```
 
-5. Initialise MAAS via the following command:
+6. Initialise MAAS via the following command:
 
 ```nohighlight
 sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
@@ -365,148 +365,122 @@ sudo maas init --help
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-Once you've successfully installed MAAS, you can access it at this address:
+To configure MAAS for first-time use:
+
+1. Access MAAS at this address, where `$API_HOST` is the hostname or IP address of the region API server, which was set during installation:
 
 ```
 http://${API_HOST}:5240/MAAS
 ```
+2. Log in at the prompts, with the login information you created when initialising MAAS.
 
-where `$API_HOST` is the hostname or IP address of the region API server, which was set during installation.  You will see a screen like this:</p>
+3. On the first welcome screen, set the DNS forwarder to a suitable value, e.g., `8.8.8.8`. This could be your own internal DNS server, if you have one.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/efd8e3f150dfec28114c452c12e24e320848e075.jpeg"></a> 
+4. Select an Ubuntu image to import; you may be required to select at least one LTS version.
 
-Log in at the prompts, with the login information you created when initialising MAAS.
+5. Click *Continue*; a screen labelled, “SSH keys for admin:” appears.
 
-<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
+6. In the *Source* drop-down, select “Launchpad,” “Github,” or “Upload.”  
 
-After a fresh MAAS installation, the web UI presents a couple of welcome screens.  From these screens, you can set many system-wide options, including connectivity, image downloads, and authentication keys:
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/337aa15e178b14b0ba9a0646953268bf7adac0bb.jpeg"></a>  
-
-Your main concerns for this experiment are the DNS forwarder, the Ubuntu image import section, and the SSH public key, though you might want to set the region name to something memorable, since this text will appear at the bottom of every MAAS screen in this install domain. Set the DNS forwarder to something obvious, e.g., `8.8.8.8`, Google’s DNS server.  Set this to your own internal DNS server if you know the IP address.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/f9751eb857dcd0c124783edeb1aaf87b8b538127.jpeg"></a>  
-
-Select an Ubuntu image to import, noting that you may be required to select at least one LTS version, depending upon the version of MAAS that snap installed.  In this example, we've already chosen an image, and downloading is partially complete.
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/6445cde5ffc1e237a1e6d85d280f451bc0b2ab92.jpeg"></a>  
-
-When you click on “Continue,” the screen will shift to a screen labelled, “SSH keys for admin:”  
-
-<a href="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/dbdcdce7c8f3b7181f894bdfe987758e0c8635fc.jpeg"></a> 
-
-In the source drop-down, select “Launchpad,” “Github,” or “Upload.”  If you choose one of the first two, you will need to enter your username for that service.  For example, if you want to upload your SSH public key from Launchpad, you would enter:
+7. If you want to upload your SSH public key from Launchpad, you would enter the following, where `<username>` is your Launchpad username:
 
 ```nohighlight
 lp:<username>
 ```
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/0e4cbf7c8fae3f21664a4d5fe8d0f90785dd6859.jpeg"></a> 
-
-Likewise, if you want to upload your github public SSH key, you would enter:
+8. If you want to upload your github public SSH key, you would enter the following, where `<username>` is your GitHub username:
 
 ```nohighlight
 gh:<username>
 ```
 
-If you want to use your existing public key from your home directory, you can select “Upload”and then copy your entire public key from <code>.ssh/id_rsa.pub</code> (or wherever you may have stored the key):
+9. If you want to use your existing public key from your home directory, select *Upload*.
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/a94f1f68db07dd9be9e8eaed50f22828c7bb51e0.jpeg"></a> 
+10. Copy your entire public key from `.ssh/id_rsa.pub` (or wherever you may have stored the key).
 
-and paste it into the block labelled “Public key.”  Finally, press the “Import” button to import this key:
+11. Paste the public key into the block labelled “Public key.”  
 
-<a href="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/ab62bf22308343988016189fbbb851c44caf2e33.jpeg"></a> 
+12. Press the “Import” button to import this key.
 
-With this complete, you’ll see that MAAS has been successfully set up. Click ‘Go to the Dashboard’ to proceed.
+13. You should see a message that MAAS has been successfully set up. Click *Go to the Dashboard* to proceed.
 
-[note]
-Note that you may have to wait a few moments for your selected images to sync locally.
-[/note]
+14. Select *Subnets* from the top menu.
 
-<a href="#heading--enabling-dhcp"><h2 id="heading--enabling-dhcp">How to enable DHCP</h2></a>
+15. Choose the VLAN on which you want to enable DHCP.
 
-Before moving forward with MAAS, you'll want to enable DHCP.  You can do this very easily from the web UI by selecting "Subnets" from the top menu, choosing the VLAN on which you want to enable DHCP, and select the button marked, "Enable DHCP."
+16. Select *Enable DHCP*.
+
+You should now be able to add, commission, and deploy machines.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Once you've successfully installed MAAS (regardless of method), you can login to the MAAS CLI via the following process:
 
-1. Generate the API-key for the login you're going to use:
+1. Generate the API-key for the login you're going to use, replacing `$PROFILE` with whatever username you set during the `createadmin` part of the install process.
 
 ```
 sudo maas apikey --username=$PROFILE > api-key-file
 ```
 
-Replace `$PROFILE` with whatever username you set during the `createadmin` part of the install process.  
 
-2. Login with the following command:
+2. Login with the following command, substituting `$MAAS_URL` with the URL that was returned to you when you initialised MAAS, for example, `192.168.43.251:5240/MAAS`.  :
 
 ```
 maas login $PROFILE $MAAS_URL < api-key-file
 ```
 
-Substitute `$MAAS_URL` with the URL that was returned to you when you initialised MAAS, for example, `192.168.43.251:5240/MAAS`.  
-
-3. Decide what's next with the CLI help:
-
-```
-maas admin --help
-```
-
-<a href="#heading--configuration"><h2 id="heading--configuration">Configuration</h2></a>
-
-Configuring MAAS consists of four broad steps:
-
-1. Set upstream DNS (8.8.8.8 is always a reliable value):
+3. Set upstream DNS (8.8.8.8 is always a reliable value):
 
 ```
 maas $PROFILE maas set-config name=upstream_dns value="8.8.8.8"
 ```
 
-2. Add a public SSH key to a MAAS user account:
+4. Add a public SSH key to a MAAS user account:
 
 ```
 maas $PROFILE sshkeys create "key=$SSH_KEY"
 ```
 
-3. See what images you may have already downloaded:
+5. See what images you may have already downloaded:
 
 ```
 maas $PROFILE boot-resources read | jq -r '.[] | "\(.name)\t\(.architecture)"'
 ```
 
-4. Selecting it for download (e.g., "trusty" in this example):
+6. Selecting it for download (e.g., "trusty" in this example):
 
 ```
 maas $PROFILE boot-source-selections create 1 os="ubuntu" release="trusty" arches="amd64" subarches="*"  labels="*"
 ```
 
-5. Import your selected images:
+7. Import your selected images:
 
 ```
 maas admin boot-resources import
 ```
 
-6. Identify a valid fabric ID for DHCP (returns `"fabric_id": $FABRIC_ID,`):
+8. Identify a valid fabric ID for DHCP (returns `"fabric_id": $FABRIC_ID,`):
 
 ```
 maas $PROFILE subnet read $SUBNET_CIDR | grep fabric_id
 ```
-7. Find the name of the primary rack controller:
+8. Find the name of the primary rack controller:
 
 ```
 maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 ```
 
-8. reate an IP range for DHCP (in this case, a dynamic range):
+9. reate an IP range for DHCP (in this case, a dynamic range):
 
 ```
 maas $PROFILE ipranges create type=dynamic start_ip=$START_IP end_ip=$END_IP
 ```
 
-7. Use this collected information to turn on DHCP:
+10. Use this collected information to turn on DHCP:
 
 ```
 maas $PROFILE vlan update $FABRIC_ID untagged dhcp_on=True primary_rack=$RACK_CONTR_HOSTNAME
 ```
+
+You should now be able to add, commission, and deploy machines.
 [/tab]
 [/tabs]
