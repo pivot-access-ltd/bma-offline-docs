@@ -423,7 +423,7 @@
 <p><a href="https://github.com/maas/MAAS-ansible-playbook">Ansible playbooks</a> are now available for MAAS. These extended YAML files automate various routine aspects of MAAS setup and configuration.  Automate the drudgery of installing and configuring MAAS with Ansible.  </p>
 <p>With MAAS 3.3, playbooks are available to install and configure MAAS, including regions and racks.  There is also a set of groups that will automate setting up specific sections of MAAS. For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.</p>
 <p>After installing Ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
-<p><a href="#heading--About-Ansible"><h2 id="heading--About-Ansible">About Ansible basics</h2></a></p>
+<p><a href="#heading--Ansible-basics"><h2 id="heading--Ansible-basics">Ansible basics</h2></a></p>
 <p>A user should probably have a solid grasp of the Ansible standard terminology:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Playbooks / plays</li>
@@ -439,6 +439,7 @@
 <li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3">Inventory</a><code>↗</code></strong> is a source(s)<code>↗</code> of managed nodes; also called a &ldquo;hostfile&rdquo;.</li>
 </ul>
 <p>These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms &ldquo;<a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">hosts and groups</a><code>↗</code>&rdquo;, since these are applied somewhat differently than we use them in MAAS.</p>
+<p><a href="#heading--MAAS-Ansible-playbooks"><h2 id="heading--MAAS-Ansible-playbooks">MAAS Ansible playbooks</h2></a></p>
 <p>Playbooks are available to automate the setup for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>

@@ -6,7 +6,7 @@ With MAAS 3.3, playbooks are available to install and configure MAAS, including 
 
 After installing Ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.
 
-<a href="#heading--About-Ansible"><h2 id="heading--About-Ansible">About Ansible basics</h2></a>
+<a href="#heading--Ansible-basics"><h2 id="heading--Ansible-basics">Ansible basics</h2></a>
 
 A user should probably have a solid grasp of the Ansible standard terminology:
 
@@ -23,6 +23,8 @@ A user should probably have a solid grasp of the Ansible standard terminology:
 - **[Inventory](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3)`↗`** is a source(s)`↗` of managed nodes; also called a "hostfile".
 
 These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms "[hosts and groups](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html)`↗`", since these are applied somewhat differently than we use them in MAAS.
+
+<a href="#heading--MAAS-Ansible-playbooks"><h2 id="heading--MAAS-Ansible-playbooks">MAAS Ansible playbooks</h2></a>
 
 Playbooks are available to automate the setup for:
 
