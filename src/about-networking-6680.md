@@ -62,55 +62,6 @@ A [proxy server](https://en.wikipedia.org/wiki/Proxy_server)`↗` ("proxy servic
 
 MAAS provides an [internal proxy](/t/how-to-connect-maas-networks/5164#heading--internal-proxy-maas-proxy), which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an [external proxy](/t/how-to-connect-maas-networks/5164#heading--configure-proxy) if desired.
 
-<a href="#heading--internal-proxy-maas-proxy"><h3 id="heading--internal-proxy-maas-proxy">About the MAAS internal proxy</h3></a>
-
-MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.
-
-By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.
-
-[tabs]
-[tab version="v3.3 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.3 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v3.2 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.2 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v3.1 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.1 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v3.0 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.0 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v2.9 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v2.9 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[/tabs]
-
 <a href="#heading--about-rpc"><h3 id="heading--about-rpc">RPC</h3></a>
 
 A [Remote Procedure Call](https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call)`↗`, or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, [RPC is used for communication between the region and rack controllers](/t/how-to-tune-controllers/6498#heading--rackregion)`↗`, specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine's DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. 
