@@ -159,7 +159,7 @@ Clicking a subnet (here `192.168.100.0/24`) will display its detail screen.  See
 
 <a href="#heading--ui-how-to-view-subnet-utilisation"><h3 id="heading--ui-how-to-view-subnet-utilisation">How to view subnet utilisation</h3></a>
 
-This section of the subnet page presents metrics regarding address usage by this subnet.  See [About networking](/t/about-networking/6680/#heading--subnet-utilitisation) for details about the parameters shown there.
+This section of the subnet page presents metrics regarding address usage by this subnet.  See [About networking](/t/about-networking/6680/#heading--subnet-utilisation) for details about the parameters shown there.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
@@ -349,50 +349,42 @@ To edit a machine interface:
 3. Press *Save* to apply the changes.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-If you want to edit the IP assignment mode of a network interface, the existing subnet link first needs to be removed.
+To edit the IP assignment mode of a network interface, perform the following steps:
 
-Begin by finding the interface ID as well as the interface's subnet link ID with the command:
+1. Find the interface ID and subnet link ID with the command:
 
 ``` bash
 maas $PROFILE node read $SYSTEM_ID
 ```
 
-Once that's done, proceed to unlink and link:
+2. Unlink the old interface:
 
 ``` bash
 maas $PROFILE interface unlink-subnet $SYSTEM_ID $INTERFACE_ID id=$SUBNET_LINK_ID
+```
+
+3. Link the new interface:
+
+```bash
 maas $PROFILE interface link-subnet $SYSTEM_ID $INTERFACE_ID mode=$IP_MODE subnet=$SUBNET_CIDR [$OPTIONS]
-```
-
-For instance, to have interface `58`, with subnet link `146`, on machine `exqn37` use DHCP on subnet `192.168.1.0/24`:
-
-``` bash
-maas $PROFILE interface unlink-subnet exqn37 58 id=146
-maas $PROFILE interface link-subnet exqn37 58 mode=dhcp subnet=192.168.1.0/24
-```
-
-If instead of DHCP, you desire a static address, then the second command would look like this:
-
-``` bash
-maas $PROFILE interface link-subnet exqn37 58 mode=static subnet=192.168.1.0/24 ip_address=192.168.1.113
 ```
 [/tab]
 [/tabs]
 
-See [Concepts and terms](/t/maas-glossary/5416#heading--ip-ranges) for the definitions of reserved range types.
+See [the glossary](/t/maas-glossary/5416#heading--ip-ranges) for the definitions of reserved range types.
 
 <a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">How to create a bond interface</h3></a>
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
-1. A bond is created by selecting more than one interface and clicking the now-active "Create bond" button.  After clicking this button, the bond configuration pane will appear.
+1. Select more than one interface. 
 
-2. From the bond configuration pane, you can rename the bond, select a bond mode (see below), assign a MAC address to the aggregate device and attach one or more tags.
+2. Select *Create bond*; the bond configuration pane will appear.
 
-3. The interfaces aggregated into the bond interface are listed below the "Tags" field. Use the "Primary" column to select the interface to act as the primary device.
+3. Rename the bond, if desired. 
 
-4. You can select from the following bonding modes on the "Bond mode" drop-down menu:
+4. Select a bond mode:
 
 -   **balance-rr**: Transmit packets in sequential order from the first available follower through to the last. This mode provides load balancing and fault tolerance.
 
@@ -408,14 +400,20 @@ See [Concepts and terms](/t/maas-glossary/5416#heading--ip-ranges) for the defin
 
 -   **balance-alb**: Adaptive load balancing, includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic. This mode does not require any special switch support.  ARP negotiation achieves load balancing in this case.
 
-Press the "Save" button when you're done.
+5. Assign a MAC address to the aggregate device.
+
+6. Attach one or more tags, if desired.
+
+7. The interfaces aggregated into the bond interface are listed below the "Tags" field; use the "Primary" column to select the interface to act as the primary device.
+
+8. Select *Save* to register your changes.
 
 [note]
 The MAC address defaults to the MAC address of the primary interface.
 [/note]
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-A bond can be created with the following command:
+To create a bond, execute the following command:
 
 ```
 maas $PROFILE interfaces create-bond $SYSTEM_ID name=$BOND_NAME \
@@ -423,20 +421,13 @@ parents=$IFACE1_ID mac_address=$MAC_ADDR \
 parents=$IFACE2_ID bond_mode=$BOND_MODE \
 bond_updelay=$BOND_UP bond_downdelay=$BOND_DOWN mtu=$MTU
 ```
+Note that: 
 
-Use the `parents` parameters to define which interfaces form the aggregate interface.
+- The `parents` parameters define which interfaces form the aggregate interface.
 
-The `bond_updelay` and `bond_downdelay` parameters specify the number of milliseconds to wait before either enabling or disabling a follower after a failure has been detected.
+- The `bond_updelay` and `bond_downdelay` parameters specify the number of milliseconds to wait before either enabling or disabling a follower after a failure has been detected.
 
-The following is an example of `create-bond` in action:
-
-```
-maas admin interfaces create-bond 4efwb4 name=bond0 parents=4 \
-mac_address=52:52:00:00:00:00 parents=15 bond_mode=802.3ad \
-bond_updelay=200 bond_downdelay=200 mtu=9000
-```
-
-There are a wide range of bond parameters you can choose when creating a bond:
+- There are a wide range of bond parameters you can choose when creating a bond:
 
 | Parameter | Type and description |
 |:----------|:---------------------|
@@ -455,7 +446,7 @@ There are a wide range of bond parameters you can choose when creating a bond:
 | `autoconf`| Optional Boolean.  Perform stateless autoconfiguration. (IPv6 only) |
 | `bond_mode`| Optional string.  The operating mode of the bond.  (Default: active-backup). |
 
-Supported bonding modes include:
+- Supported bonding modes include:
 
 | Mode | Behaviour |
 |:-----|:---------|
@@ -517,7 +508,7 @@ Please use the UI interface to create a bridge interface.  Select the "UI" dropd
 An interface can only be deleted via the MAAS CLI.  Choose the "CLI" dropdown above to see how.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-A bridge interface is created with the following syntax:
+To create a bridge interface:
 
 ```
 maas $PROFILE interfaces create-bridge $SYSTEM_ID name=$BRIDGE_NAME \
@@ -829,55 +820,6 @@ Configuring a proxy with MAAS consists of enabling/disabling one of the above th
 
 - [About the MAAS internal proxy](#heading--internal-proxy-maas-proxy)
 - [How to create an external proxy](#heading--configure-proxy)
-
-<a href="#heading--internal-proxy-maas-proxy"><h3 id="heading--internal-proxy-maas-proxy">About the MAAS internal proxy</h3></a>
-
-MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.
-
-By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.
-
-[tabs]
-[tab version="v3.3 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.3 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v3.2 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.2 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v3.1 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.1 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v3.0 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v3.0 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[tab version="v2.9 Snap"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/snap/maas/current/proxy`, can be inspected, it is not to be hand-edited. The proxy is automatically installed with the MAAS snap.
-[/tab]
-[tab version="v2.9 Packages"]
-MAAS manages its proxy. So although the active configuration, located in file `/var/lib/maas/maas-proxy.conf`, can be inspected, it is not to be hand-edited.
-
-You must install the proxy on the same host as the region controller (via the 'maas-proxy' package).
-[/tab]
-[/tabs]
 
 <a href="#heading--configure-proxy"><h3 id="heading--configure-proxy">How to create an external proxy</h3></a>
 

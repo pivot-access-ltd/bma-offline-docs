@@ -493,7 +493,7 @@
 <li><a href="#heading--delete-a-vlan-interface">How to delete a VLAN interface</a></li>
 </ul>
 <p><a href="#heading--how-to-edit-interfaces"><h3 id="heading--how-to-edit-interfaces">How to edit machine interfaces</h3></a></p>
-<p>See <a href="maas-glossary.html#heading--ip-ranges">Concepts and terms</a> for the definitions of reserved range types.</p>
+<p>See <a href="maas-glossary.html#heading--ip-ranges">the glossary</a> for the definitions of reserved range types.</p>
 <p><a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">How to create a bond interface</h3></a></p>
 <p><a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">How to create a bridge interface</h3></a></p>
 <p><a href="#heading--delete-an-interface"><h3 id="heading--delete-an-interface">How to delete an interface</h3></a></p>
@@ -525,9 +525,6 @@ Machine-readable output follows:
 <li><a href="#heading--internal-proxy-maas-proxy">About the MAAS internal proxy</a></li>
 <li><a href="#heading--configure-proxy">How to create an external proxy</a></li>
 </ul>
-<p><a href="#heading--internal-proxy-maas-proxy"><h3 id="heading--internal-proxy-maas-proxy">About the MAAS internal proxy</h3></a></p>
-<p>MAAS provides an internal proxy server. Although it is set up to work well with APT/package requests, it is effectively an HTTP caching proxy server. If you configure the MAAS region controller as the default gateway for the machines it manages then the proxy will work transparently (on TCP port 3128). Otherwise, machines will need to access it on TCP port 8000.</p>
-<p>By default, the proxy is available to all hosts residing in any subnet detected by MAAS, not just MAAS-managed machines. It is therefore recommended to disable access to those subnets that represent untrusted networks.</p>
 <p><a href="#heading--configure-proxy"><h3 id="heading--configure-proxy">How to create an external proxy</h3></a></p>
 <p><strong>NOTE</strong> that the proxy service will still be running.</p>
 <p><a href="#heading--how-to-set-up-ntp"><h2 id="heading--how-to-set-up-ntp">How to set up Network Time Protocol (NTP)</h2></a></p>
