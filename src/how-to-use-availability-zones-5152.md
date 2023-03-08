@@ -1,7 +1,7 @@
 <!-- "How to manage availability zones" -->
 An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/how-to-set-up-networks/6174#heading--about-availability-zones) for more details.
 
-A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machine to them. This article will help you learn:
+A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machines to them. This article will help you learn:
 
 - [How to list availability zones](#heading--list-zones)
 - [How to add an availability zone](#heading--add-a-zone)
@@ -135,7 +135,7 @@ maas $PROFILE zone delete $ZONE_NAME
 To assign a machine to a zone, first retrieve the machine's system ID like this:
 
 ```
-maas PROFILE machines read | jq '.[] | .hostname, .system_id'
+maas $PROFILE machines read | jq '.[] | .hostname, .system_id'
 ```
 
 Then enter the following command, using the system ID you just retrieved:
