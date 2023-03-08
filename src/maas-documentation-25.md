@@ -837,7 +837,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/5140 | /docs/how-to-manage-vm-hosts                                  |
 | https://discourse.maas.io/t/-/5144 | /docs/how-to-employ-vmware-images                             |
 | https://discourse.maas.io/t/-/5148 | /docs/how-to-manage-virtual-machines                          |
-| https://discourse.maas.io/t/-/5152 | /docs/how-to-manage-availability-zones                        |
+| https://discourse.maas.io/t/-/5152 | /docs/how-to-use-availability-zones                        |
 | https://discourse.maas.io/t/-/5160 | /docs/how-to-make-machines-available                          |
 | https://discourse.maas.io/t/-/5164 | /docs/how-to-connect-maas-networks                            |
 | https://discourse.maas.io/t/-/5172 | /docs/how-to-configure-controllers                            |
@@ -931,6 +931,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/how-to-manage-availability-zones             | /docs/how-to-use-availability-zones           |
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
 | /docs/how-to-build-custom-images                   | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
