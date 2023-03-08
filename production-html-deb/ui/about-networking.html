@@ -476,6 +476,74 @@
 - 168.0.0/16
 2001:db8:4d41:4153::/64
 </code></pre>
+<p><a href="#heading--the-subnet-summary"><h3 id="heading--the-subnet-summary">About the subnet summary</h3></a></p>
+<p>The <strong>Subnet summary</strong> section is the largest and most complex of the subnet configuration screens.  It presents the following configurable options:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>Name</strong>: Subnet names can be any valid text string. By default, they are named with the CIDR of the subnet itself.</p>
+</li>
+<li>
+<p><strong>CIDR</strong>: This is the address parameter for the subnet.  In keeping with standard CIDR notation, the number of bits of the prefix are indicated after the slash.</p>
+</li>
+<li>
+<p><strong>Gateway IP</strong>: This is the address of the default gateway for your subnet, which is the IP address that transfers packets to other subnets or networks. Typically, this is simply the first IP address in a block of addresses (the <code>.1</code> address).</p>
+</li>
+<li>
+<p><strong>DNS</strong>: This is the address of a DNS (domain name server, or simply &ldquo;name server&rdquo;) for your subnet.  It&rsquo;s optional, but can be configured if desired.</p>
+</li>
+<li>
+<p><strong>Description</strong>: This field represents free form text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.</p>
+</li>
+<li>
+<p><strong>Managed allocation</strong> refers to the ability of MAAS to completely <a href="#heading--about-managed-subnets">manage a subnet</a>.</p>
+</li>
+<li>
+<p><strong>Active mapping</strong> instructs MAAS to scan the subnet every 3 hours to discover hosts that have not been discovered passively.</p>
+</li>
+<li>
+<p><strong>Proxy access</strong> instructs MAAS to allow clients from this subnet to access the MAAS proxy.</p>
+</li>
+<li>
+<p><strong>Allow DNS resolution</strong> allows subnet clients to use MAAS for DNS resolution.</p>
+</li>
+<li>
+<p><strong>Fabric</strong>: This field allows you to set the subnets fabric.</p>
+</li>
+<li>
+<p><strong>VLAN</strong>: This field allows you to set the subnets VLAN.</p>
+</li>
+<li>
+<p><strong>Space</strong> is presented for clarity, though spaces are managed at the VLAN level.</p>
+</li>
+</ul>
+<p><a href="#heading--subnet-utilisation"><h3 id="heading--subnet-utilisation">Subnet utilisation</h3></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>&lsquo;Subnet addresses&rsquo; shows the total number of addresses associated with the subnet. </p>
+</li>
+<li>
+<p>&lsquo;Availability&rsquo; shows how many of those addresses are unused, and therefore &ldquo;available&rdquo;.</p>
+</li>
+<li>
+<p>&lsquo;Used&rsquo; shows the percentage that is used.</p>
+</li>
+</ul>
+<p><a href="#heading--IP-modes"><h3 id="heading--IP-modes">IP modes</h3></a></p>
+<p>Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the &ldquo;IP mode&rdquo; drop-down menu:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>Auto assign</strong>: MAAS will assign a random static address (<code>iface eth0 inet static</code>). The pool of available addresses depends on whether the subnet is managed or unmanaged (see <a href="how-to-connect-maas-networks.html#heading--how-to-toggle-subnet-management">Subnet management</a>).</p>
+</li>
+<li>
+<p><strong>Static assign</strong>: The administrator will specify a static address using a secondary field.</p>
+</li>
+<li>
+<p><strong>DHCP</strong>: The machine leases a dynamic IP address, via either MAAS-managed DHCP or an external DHCP server.</p>
+</li>
+<li>
+<p><strong>Unconfigured</strong>: The interface is not configured.</p>
+</li>
+</ul>
 <p><a href="#heading--vlans"><h3 id="heading--vlans">VLANs</h3></a></p>
 <p><a href="https://en.wikipedia.org/wiki/Virtual_LAN#firstHeading">VLANs</a> (Virtual LANs)<code>↗</code> are a common way to create logically separate networks using the same physical infrastructure.</p>
 <p>Managed switches can assign VLANs to each port in either a &ldquo;tagged&rdquo; or an &ldquo;untagged&rdquo; manner. A VLAN is said to be &ldquo;untagged&rdquo; on a particular port when it is the default VLAN for that port and requires no special configuration to access it.</p>

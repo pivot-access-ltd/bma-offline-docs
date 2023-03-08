@@ -46,6 +46,8 @@ This section will show you:
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+To enable network discovery:
+
 1. Click on "Canonical MAAS" at the top left of the screen.
 
 2. Click on "Configuration".
@@ -146,23 +148,6 @@ jq -r '(["FABRIC", "VLAN", "DHCP", "SUBNET"]
 | @tsv' \
 | column -t
 ```
-
-which produces output something like this:
-
-```nohighlight
-FABRIC        VLAN      DHCP       SUBNET
-------        ----      ---------  ------
-Patient-Care  untagged  true       192.168.123.0/24
-fabric-0      untagged  false      0.0.0.0/0
-fabric-0      untagged  false      10.0.0.0/24
-fabric-1      untagged  false      10.70.132.0/24
-fabric-1      untagged  false      fd42:8b52:7114:9ef8::/64
-fabric-3      untagged  true       192.168.43.0/24
-fabric-3      untagged  true       2600:100d:b125:d5e9::/64
-fabric-3      untagged  true       2600:100d:b120:3933::/64
-fabric-3      untagged  true       2600:100d:b109:dee0::/64
-fabric-3      untagged  true       2600:100d:b104:94c0::/64
-```
 [/tab]
 [/tabs]
 
@@ -170,63 +155,21 @@ fabric-3      untagged  true       2600:100d:b104:94c0::/64
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-display-the-subnet-window"><h3 id="heading--ui-how-to-display-the-subnet-window">How to display the subnet window</h3></a>
 
-Clicking a subnet (here `192.168.100.0/24`) will display its detail screen, which contains several sections, described below.
+Clicking a subnet (here `192.168.100.0/24`) will display its detail screen.  See [About networking](/t/about-networking/6680#heading--the-subnet-summary) for details about the parameters shown there.
 
-<a href="#heading--ui-how-to-view-the-subnet-summary"><h3 id="heading--ui-how-to-view-the-subnet-summary">How to view the subnet summary</h3></a>
+<a href="#heading--ui-how-to-view-subnet-utilisation"><h3 id="heading--ui-how-to-view-subnet-utilisation">How to view subnet utilisation</h3></a>
 
-The **Subnet summary** section is the largest and most complex of the subnet configuration screens.  It presents the following configurable options:
-
-- **Name**: Subnet names can be any valid text string. By default, they are named with the CIDR of the subnet itself.
-
-- **CIDR**: This is the address parameter for the subnet.  In keeping with standard CIDR notation, the number of bits of the prefix are indicated after the slash.
-
-- **Gateway IP**: This is the address of the default gateway for your subnet, which is the IP address that transfers packets to other subnets or networks. Typically, this is simply the first IP address in a block of addresses (the `.1` address).
-
-- **DNS**: This is the address of a DNS (domain name server, or simply "name server") for your subnet.  It's optional, but can be configured if desired.
-
-- **Description**: This field represents free form text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.
-
-- **Managed allocation** refers to the ability of MAAS to completely [manage a subnet](#heading--about-managed-subnets).
-
-- **Active mapping** instructs MAAS to scan the subnet every 3 hours to discover hosts that have not been discovered passively.
-
-- **Proxy access** instructs MAAS to allow clients from this subnet to access the MAAS proxy.
-
-- **Allow DNS resolution** allows subnet clients to use MAAS for DNS resolution.
-
-- **Fabric**: This field allows you to set the subnets fabric.
-
-- **VLAN**: This field allows you to set the subnets VLAN.
-
-- **Space** is presented for clarity, though spaces are managed at the VLAN level.
-
-<a href="#heading--ui-how-to-view-utilisation"><h3 id="heading--ui-how-to-view-utilisation">How to view utilisation</h3></a>
-
-This section of the subnet page presents metrics regarding address usage by this subnet.  
-
-- 'Subnet addresses' shows the total number of addresses associated with the subnet. 
-
-- 'Availability' shows how many of those addresses are unused, and therefore "available".
-
-- 'Used' shows the percentage that is used.
+This section of the subnet page presents metrics regarding address usage by this subnet.  See [About networking](/t/about-networking/6680/#heading--subnet-utilitisation) for details about the parameters shown there.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
 
-You can view the details of an individual subnet with the command:
+To view the details of an individual subnet with the command:
 
 ```nohighlight
 maas $PROFILE subnet read $SUBNET_ID \
 | jq -r '(["NAME","CIDR","GATEWAY","DNS","DISCOVERY","FABRIC","VLAN"]
 | (., map(length*"-"))), ([.name,.cidr,.gateway_ip // "-", .allow_dns,.active_discovery,.vlan.name,.vlan.fabric]) | @tsv' | column -t
-```
-
-This command retrieves output similar to this:
-
-```nohighlight
-NAME              CIDR              GATEWAY  DNS   DISCOVERY  FABRIC    VLAN
-----              ----              -------  ---   ---------  ------    ----
-192.168.123.0/24  192.168.123.0/24  -        true  false      untagged  default
 ```
 
 If you don't know the subnet ID, you can look it up like this:
@@ -283,7 +226,7 @@ gateway_ip=$GATEWAY_IP
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-view-reserved-ranges"><h3 id="heading--how-to-view-reserved-ranges">How to view reserved ranges</h3></a>
 
-The reserved ranges section of the subnet screen looks contains information on defined IP ranges.  More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-enable-dhcp/5132#heading--how-to-manage-ip-ranges).
+The reserved ranges section of the subnet screen contains information on defined IP ranges.  More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-enable-dhcp/5132#heading--how-to-manage-ip-ranges).
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a>
@@ -293,12 +236,6 @@ The "Used IP addresses" section displays hosts (including controllers) associate
 [/tabs]
 
 <a href="#heading--how-to-set-up-a-bridge-with-maas"><h3 id="heading--how-to-set-up-a-bridge-with-maas">How to set up a bridge with MAAS</h3></a>
-
-At various times in your MAAS network, you may need to set up a bridge to connect between your machines and MAAS, as shown in this section.
-
-[note]
-It's essential to enforce usage of IP addresses to avoid domain name conflicts, should different controllers resolve the same domain name with different IP addresses. You should also avoid using 127.0.0.1 when running multiple controllers, as it would confuse MAAS.
-[/note]
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
@@ -340,7 +277,7 @@ You can use the MAAS CLI/API to configure a bridge via the following procedure:
 
 <a href="#heading--how-to-set-up-a-bridge-with-netplan"><h3 id="heading--how-to-set-up-a-bridge-with-netplan">How to set up a bridge with netplan</h3></a>
 
-You can also use netplan to configure a bridge:
+To use netplan to configure a bridge:
 
 1. Open your netplan configuration file.  This should be in `/etc/netplan`.  It could be called `50-cloud-init.yaml`, `netplan.yaml`, or something else.  
 
@@ -403,20 +340,13 @@ This section will explain the following procedures related to machine interfaces
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+To edit a machine interface:
 
-1. From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select "Edit Physical" from the resulting menu.
+1. From a machine's "Interfaces" page, click the menu icon for the interface to be edited and select *Edit Physical* from the resulting menu.
 
-Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu:
+2. Select an *IP mode* from the drop-down menu.  More information about IP modes is found in [About networks](/t/about-networks/6880##heading--IP-modes).
 
--   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/how-to-connect-maas-networks/5164#heading--how-to-toggle-subnet-management)).
-
--   **Static assign**: The administrator will specify a static address using a secondary field.
-
--   **DHCP**: The machine leases a dynamic IP address, via either MAAS-managed DHCP or an external DHCP server.
-
--   **Unconfigured**: The interface is not configured.
-
-Press the "Save" button to apply the changes.
+3. Press *Save* to apply the changes.
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 If you want to edit the IP assignment mode of a network interface, the existing subnet link first needs to be removed.

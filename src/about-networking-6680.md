@@ -89,6 +89,53 @@ A [subnet](https://en.wikipedia.org/wiki/Subnetwork#firstHeading)`↗` is a "lay
 - 168.0.0/16
 2001:db8:4d41:4153::/64
 ```
+<a href="#heading--the-subnet-summary"><h3 id="heading--the-subnet-summary">About the subnet summary</h3></a>
+
+The **Subnet summary** section is the largest and most complex of the subnet configuration screens.  It presents the following configurable options:
+
+- **Name**: Subnet names can be any valid text string. By default, they are named with the CIDR of the subnet itself.
+
+- **CIDR**: This is the address parameter for the subnet.  In keeping with standard CIDR notation, the number of bits of the prefix are indicated after the slash.
+
+- **Gateway IP**: This is the address of the default gateway for your subnet, which is the IP address that transfers packets to other subnets or networks. Typically, this is simply the first IP address in a block of addresses (the `.1` address).
+
+- **DNS**: This is the address of a DNS (domain name server, or simply "name server") for your subnet.  It's optional, but can be configured if desired.
+
+- **Description**: This field represents free form text that you can enter to describe your subnet, as needed to keep important notes attached to the definition of the subnet.
+
+- **Managed allocation** refers to the ability of MAAS to completely [manage a subnet](#heading--about-managed-subnets).
+
+- **Active mapping** instructs MAAS to scan the subnet every 3 hours to discover hosts that have not been discovered passively.
+
+- **Proxy access** instructs MAAS to allow clients from this subnet to access the MAAS proxy.
+
+- **Allow DNS resolution** allows subnet clients to use MAAS for DNS resolution.
+
+- **Fabric**: This field allows you to set the subnets fabric.
+
+- **VLAN**: This field allows you to set the subnets VLAN.
+
+- **Space** is presented for clarity, though spaces are managed at the VLAN level.
+
+<a href="#heading--subnet-utilisation"><h3 id="heading--subnet-utilisation">Subnet utilisation</h3></a>
+
+- 'Subnet addresses' shows the total number of addresses associated with the subnet. 
+
+- 'Availability' shows how many of those addresses are unused, and therefore "available".
+
+- 'Used' shows the percentage that is used.
+
+<a href="#heading--IP-modes"><h3 id="heading--IP-modes">IP modes</h3></a>
+
+Four modes determine how a subnet address is assigned when MAAS deploys the machine. You can select one of these modes by clicking on the "IP mode" drop-down menu:
+
+-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/how-to-connect-maas-networks/5164#heading--how-to-toggle-subnet-management)).
+
+-   **Static assign**: The administrator will specify a static address using a secondary field.
+
+-   **DHCP**: The machine leases a dynamic IP address, via either MAAS-managed DHCP or an external DHCP server.
+
+-   **Unconfigured**: The interface is not configured.
 
 <a href="#heading--vlans"><h3 id="heading--vlans">VLANs</h3></a>
 
