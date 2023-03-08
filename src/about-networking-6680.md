@@ -537,12 +537,17 @@ A DHCP relay is really just a specialised router.  Like all routers, it replaces
 The only substantial difference is that the DHCP relay knows the IP address of the DHCP server.  When a DHCPRequest reaches the relay from a requesting server, for example, the relay absorbs the broadcast packet and creates a routed unicast packet, bound directly for the DHCP server.  On the way back, the relay converts the DHCPOffer back to a broadcast packet.
 
 <a href="#heading--about-availability-zones"><h2 id="heading--about-availability-zones">Availability zones</h2></a>
+An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/how-to-set-up-networks/6174#heading--about-availability-zones) for more details.
 
-This subsection explains some characteristics and uses of availability zones.  Here you have the opportunity to learn:
+A newly installed MAAS comes with a default zone which initially contains all nodes. You cannot remove the 'default' zone or change its name, but you can create new zones and assign machine to them. 
+This subsection explains some characteristics and uses of availability zones.  
+
+Here you have the opportunity to learn:
 
 - [About fault tolerance](#heading--fault-tolerance)
 - [About service performance](#heading--service-performance)
 - [About power management](#heading--power-management)
+
 
 <a href="#heading--fault-tolerance"><h3 id="heading--fault-tolerance">About fault tolerance</h3></a>
 
