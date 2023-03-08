@@ -416,36 +416,29 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
   <h1>How to enable DHCP</h1><!-- "How to enable DHCP" -->
-<p>Management of DHCP and IP ranges is a key element of configuring and managing MAAS.  This article will help you learn:</p>
+<p>Management of DHCP and IP ranges is a key element of configuring and managing MAAS:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--how-to-manage-maas-dhcp">How to manage MAAS DHCP</a></li>
 <li><a href="#heading--how-to-manage-ip-ranges">How to manage IP ranges</a></li>
 </ul>
-<p>If you need it, you can find a <a href="how-to-set-up-networks.html#heading--Its-always-DHCP">refresher on DHCP</a> as part of this documentation set.</p>
-<p><a href="#heading--how-to-manage-maas-dhcp"><h2 id="heading--how-to-manage-maas-dhcp">How to manage MAAS DHCP</h2></a></p>
-<p>MAAS enlists and commissions machines through the use of its <a href="how-to-enable-high-availability.html#heading--dhcp-ha">load-balancing DHCP server</a> running on an untagged VLAN. Although this MAAS-managed DHCP can also be part of the deploy phase, an external DHCP server can optionally be used instead for this purpose. If MAAS detects an external DHCP server, it will display it on the rack controller&rsquo;s page, accessible by selecting &lsquo;Controllers&rsquo; from the top menu in the web UI.</p>
-<p>In addition, the machine subnet is usually on the untagged VLAN. If not, you will need to route DHCP packets between the subnet and the MAAS-provided DHCP subnet. It is also possible to forward DHCP traffic from one VLAN to another using an external DHCP relay service.</p>
-<p>This documentation presupposes that MAAS-managed DHCP is used to enlist and commission machines.  Using an external DHCP server for enlistment and commissioning may work, but note that this is not supported. MAAS cannot manage an external DHCP server, nor can it keep leases synchronised when you return a machine to the pool.</p>
+<p>If needed, you can review an <a href="how-to-set-up-networks.html#heading--Its-always-DHCP">explanation of MAAS  DHCP</a> before undertaking to manage or set MAAS DHCP parameters.</p>
 <p>This article will help you learn:</p>
 <p><a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable MAAS-managed DHCP</h3></a></p>
-<p>MAAS-managed DHCP needs a reserved dynamic IP range to enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI.</p>
-<p><a href="#heading--resolving-ip-conflicts"><h4 id="heading--resolving-ip-conflicts">How to resolve IP conflicts</h4></a></p>
-<p>In some cases, MAAS manages a subnet that is not empty, which could result in MAAS assigning a duplicate IP address.  MAAS is capable of detecting IPs in use on a subnet.  Be aware that there are two caveats:</p>
+<p><a href="#heading--extending-a-reserved-dynamic-ip-range"><h3 id="heading--extending-a-reserved-dynamic-ip-range">How to extend a reserved dynamic IP range</h3></a></p>
+<p>To extend a dynamic IP range:</p>
 <ol>
 <li>
-<p>If a previously-assigned NIC is in a quiescent state or turned off, MAAS may not detect it before duplicating an IP address.</p>
+<p>Go to <em>Subnets</em>.</p>
 </li>
 <li>
-<p>At least one rack controller must have access to the IP-assigned machine in order for this feature to work.</p>
+<p>Select the relevant subnet.</p>
+</li>
+<li>
+<p>Reserve a dynamic range. </p>
 </li>
 </ol>
-<p>MAAS also recognises when the subnet ARP cache is full, so that it can re-check the oldest IPs added to the cache to search for free IP addresses.</p>
-<p><a href="#heading--extending-a-reserved-dynamic-ip-range"><h3 id="heading--extending-a-reserved-dynamic-ip-range">How to extend a reserved dynamic IP range</h3></a></p>
-<p>If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see <a href="#heading--how-to-manage-ip-ranges">below</a>). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the &lsquo;Subnets&rsquo; page and reserve a dynamic range. DHCP will be enabled automatically.</p>
-<p><a href="#heading--external-dhcp-and-a-reserved-ip-range"><h3 id="heading--external-dhcp-and-a-reserved-ip-range">How to configure external DHCP</h3></a></p>
-<p>If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine&rsquo;s IP assignment mode to &lsquo;Auto assign&rsquo; in the context of an external DHCP server. See <a href="#heading--how-to-manage-ip-ranges">below</a> to create such a range. It should correspond to the lease range of the external server.</p>
+<p>DHCP will be enabled automatically.</p>
 <p><a href="#heading--dhcp-relay"><h3 id="heading--dhcp-relay">How to use a DHCP relay</h3></a></p>
-<p>You should not enable DHCP relays in MAAS without sufficient planning.  In particular, MAAS does not provide the actual relay. It must be set up as an external service by the administrator. What MAAS does provide is the DHCP configuration that MAAS-managed DHCP requires in order to satisfy any client requests relayed from another VLAN.</p>
 <p>To relay from one VLAN (source) to another VLAN (target):</p>
 <ol>
 <li>
@@ -456,20 +449,15 @@
 </li>
 </ol>
 <p><a href="#heading--dhcp-snippets"><h3 id="heading--dhcp-snippets">How to customise MAAS with DHCP snippets</h3></a></p>
-<p><strong>NOTE:</strong> 
-Modifications made directly to <code>dhcpd.conf.template</code> or <code>dhcpd6.conf.template</code> are not supported.</p>
+<p>For an explanation of DHCP snippets, see <a href="about-networks.html#heading--About-MAAS-DHCP-snippets">About networking</a>.</p>
 <p><a href="#heading--how-to-manage-ip-ranges"><h2 id="heading--how-to-manage-ip-ranges">How to manage IP ranges</h2></a></p>
-<p>In MAAS-managed networks, you can further manage your subnets with a reserved range of IP addresses.  You can reserve IP addresses by adding one or more reserved ranges to a subnet configuration. You can define two types of ranges: reserved ranges and reserved dynamic ranges.  </p>
-<p>A reserved range operates differently depending on whether the subnet is managed or unmanaged.  For a managed (subnet), MAAS will never assign IP addresses inside this range.  You can use this range for anything, such as infrastructure systems, network hardware, external DHCP, or an OpenStack namespace.  For an unmanaged (subnet), MAAS will only assign IP addresses inside this range &ndash; but MAAS can assign any IP within this range.</p>
-<p>A reserved dynamic range is used by MAAS for enlisting, commissioning and, if enabled, MAAS-managed DHCP on the machine&rsquo;s VLAN during commissioning and deployment. If created with the Web UI, an initial range is created as part of the DHCP enablement process. MAAS never uses IP addresses from this range for an unmanaged subnet.</p>
 <p>This section gives specific instructions about creating and managing IP ranges; it will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--create-a-range">How to create an IP range</a></li>
 <li><a href="#heading--edit-a-range">How to edit an existing IP range</a></li>
 <li><a href="#heading--delete-a-range">How to delete an existing IP range</a></li>
 </ul>
-<p><a href="#heading--create-a-range"><h3 id="heading--create-a-range">How to create an IP range</h3></a></p>
-<p><a href="#heading--edit-a-range"><h3 id="heading--edit-a-range">How to edit an existing IP range</h3></a></p>
+<p>For an explanation of MAAS IP ranges, see <a href="about-networks.html#heading--MAAS-IP-ranges">About networks</a>. Also, see the <a href="maas-glossary.html#heading--ip-ranges">glossary</a> for an explanation of the two kinds of reserved IP ranges MAAS uses.</p>
     </div>
   </body>
 </html>
