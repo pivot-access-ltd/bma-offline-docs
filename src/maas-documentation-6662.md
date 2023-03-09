@@ -14,7 +14,7 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 |                                                                                       |                                                                                             |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | [Tutorials](/t/6140)</br>  Hands-on introduction to MAAS features for new users       | [How-to guides](/t/6142) </br> Step-by-step guides covering key operations and common tasks |
-| [Reference](/t/6143) </br> Technical information - specifications, APIs, architecture | [Explanation](/t/6663) </br> Detailed theory on the inner workings of MAAS                  |
+| [Reference](/t/6143) </br> Technical information - specifications, APIs, architecture | [Explanation](/t/6141) </br> Detailed theory on the inner workings of MAAS                  |
 
 
 ## Project and community
@@ -117,7 +117,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-contribute-code            | [Contribute code](/t/-/6805)            |
 | 3     | how-to-help-improve-the-doc       | [Improve the doc](/t/-/4186)            |
 | 0     |                                   |                                         |
-| 1     | reference                         | [Reference](/t/-/6143)                  |
+| 1     | reference                         | [Reference](/t/-/6140)                  |
 | 2     | general-reference                 | [General reference ](/t/-/6806)         |
 | 3     | release-notes                     | [Release notes](/t/-/5292)              |
 | 3     | installation-requirements         | [Installation requirements](/t/-/6233)  |
