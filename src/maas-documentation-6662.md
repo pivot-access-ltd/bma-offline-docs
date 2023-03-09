@@ -109,7 +109,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-audit-maas                 | [Audit MAAS](/t/-/5987)                 |
 | 3     | how-to-terraform-with-maas        | [Terraform with MAAS](/t/-/6327)        |
 | 3     | how-to-troubleshoot-maas          | [Troubleshoot MAAS](/t/-/5333)          |
-| 2     | how-to-give-and-receive-help      | [Give and receive help](/t/-/5248)      |
+| 2     | how-to-give-and-receive-help      | [Give and receive help](/t/-/5428)     |
 | 3     | how-to-use-our-discourse-forum    | [Use our Discourse forum](/t/-/6802)    |
 | 3     | how-to-get-support                | [Get support](/t/-/6803)                |
 | 3     | how-to-request-new-features       | [Request new features](/t/-/4447)       |
