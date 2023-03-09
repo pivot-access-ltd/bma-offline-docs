@@ -66,7 +66,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 3     | how-to-do-a-fresh-install-of-maas | [Do a fresh install of MAAS](/t/-/5128) |
 | 3     | how-to-upgrade-maas               | [Upgrade MAAS](/t/-/5436)               |
 | 3     | how-to-spin-up-maas-with-ansible  | [Spin up MAAS with Ansible](/t/-/6367)  |
-| 2     | how-to-set-up-networks            | [Set up networks](/t/-/6174)            |
+| 2     | how-to-set-up-networks            | [Set up networks](/t/-/6742)            |
 | 3     | how-to-connect-maas-networks      | [Connect MAAS networks](/t/-/5164)      |
 | 3     | how-to-enable-dhcp                | [Enable DHCP](/t/-/5132)                |
 | 3     | how-to-use-availability-zones     | [Use availability zones](/t/-/5152)     |
