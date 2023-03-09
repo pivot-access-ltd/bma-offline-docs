@@ -2,6 +2,7 @@
 
 The how-to guides in this section give directions on how to achieve your goals when configuring, managing or using MAAS.
 
+|                              |                                                                         |
 |------------------------------|-------------------------------------------------------------------------|
 | How to get started with MAAS | Instructions for installing and configuring MAAS                        |
 | How to set up networks       | Instructions for creating and configuring MAAS networking               |
