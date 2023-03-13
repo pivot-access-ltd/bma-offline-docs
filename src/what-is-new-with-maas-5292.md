@@ -5,6 +5,19 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
+<a href="#heading--MAAS-3-3-1-has-been-released"><h2 id="heading--MAAS-3-3-1-has-been-released">MAAS 3.3.1 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:
+
+- [2008275](https://bugs.launchpad.net/maas/+bug/1990172/2008275) Intel AMT support is broken in MAAS 3.3.0
+- [2009137](https://bugs.launchpad.net/maas/+bug/1990172/2009137) MAAS OpenApi Schema missing parameters
+- [1773150](https://bugs.launchpad.net/maas/+bug/1990172/1773150) smartctl verify fails due to Unicode in Disk Vendor Name
+- [1993618](https://bugs.launchpad.net/maas/+bug/1990172/1993618) Web UI redirection policy can invalidate HAProxy and/or TLS setup
+- [1996997](https://bugs.launchpad.net/maas/+bug/1990172/1996997) LXD resources fails on a Raspberry Pi with no Ethernet
+- [2009140](https://bugs.launchpad.net/maas/+bug/1990172/2009140) MAAS OpenApi Schema cutoff variable names
+
+<a href="#heading--MAAS-3-3-has-been-released"><h2 id="heading--MAAS-3-3-has-been-released">MAAS 3.3 has been released</h2></a>
+
 We are happy to announce that MAAS 3.3 has been released, with [one additional bug fix](#heading--MAAS-3-3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
@@ -51,7 +64,7 @@ This release also includes well over one-hundred [bug fixes](#heading--MAAS-3.3-
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 
 [note]
-**NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+**NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.  Also note, though, that Postgres 14 does not run on Focal 20.04 LTS.
 [/note]
 
 <a href="#heading--fresh-install-3-3-snap"><h3 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h3></a>
@@ -153,9 +166,9 @@ To install MAAS in a production configuration, you need to setup PostgreSQL, as 
 
 To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
 
-1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 14) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
 
-        sudo apt update -y
+        sudo apt update
         sudo apt install -y postgresql
 
 2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.

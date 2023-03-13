@@ -425,6 +425,17 @@
 <li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
 <li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
 </ul>
+<p><a href="#heading--MAAS-3-3-1-has-been-released"><h2 id="heading--MAAS-3-3-1-has-been-released">MAAS 3.3.1 has been released</h2></a></p>
+<p>We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990172/2008275">2008275</a> Intel AMT support is broken in MAAS 3.3.0</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990172/2009137">2009137</a> MAAS OpenApi Schema missing parameters</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990172/1773150">1773150</a> smartctl verify fails due to Unicode in Disk Vendor Name</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990172/1993618">1993618</a> Web UI redirection policy can invalidate HAProxy and/or TLS setup</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990172/1996997">1996997</a> LXD resources fails on a Raspberry Pi with no Ethernet</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990172/2009140">2009140</a> MAAS OpenApi Schema cutoff variable names</li>
+</ul>
+<p><a href="#heading--MAAS-3-3-has-been-released"><h2 id="heading--MAAS-3-3-has-been-released">MAAS 3.3 has been released</h2></a></p>
 <p>We are happy to announce that MAAS 3.3 has been released, with <a href="#heading--MAAS-3-3-bug-list">one additional bug fix</a>.  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. </p>
 <p><a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a></p>
 <p>New features created for MAAS 3.3 include:</p>
@@ -474,16 +485,13 @@
 <li>
 <p>Shifting the MAAS API documentation toward <a href="https://www.openapis.org/">OpenAPI standards</a><code>↗</code></p>
 </li>
-<li>
-<p>Shifting the MAAS documentation toward the <a href="https://diataxis.fr/">Diátaxis</a><code>↗</code> style of documentation</p>
-</li>
 </ul>
 <p>These will be documented later in blog posts.</p>
 <p>This release also includes well over one-hundred <a href="#heading--MAAS-3.3-bug-list">bug fixes</a>.  Read on to catch up with what we&rsquo;ve done so far this cycle.</p>
 <p><a href="#heading--How-to-install-MAAS-3-3"><h2 id="heading--How-to-install-MAAS-3-3">How to install MAAS 3.3</h2></a></p>
 <p>MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-requirements.html">you can always double-check</a>.</p>
 <p><strong>NOTE:</strong> 
-<strong>NOTE</strong> that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.</p>
+<strong>NOTE</strong> that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.  Also note, though, that Postgres 14 does not run on Focal 20.04 LTS.</p>
 <p><a href="#heading--fresh-install-3-3-snap"><h3 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h3></a></p>
 <p>To install MAAS 3.3 from a snap, simply enter the following:</p>
 <pre><code>$ sudo snap install --channel=3.3 maas
@@ -564,8 +572,8 @@ Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
 <p>To set up PostgreSQL, even if it&rsquo;s running on a different machine, you can use the following procedure:</p>
 <ol>
 <li>
-<p>You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:</p>
-<pre><code>sudo apt update -y
+<p>You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 14) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:</p>
+<pre><code>sudo apt update
 sudo apt install -y postgresql
 </code></pre>
 </li>
