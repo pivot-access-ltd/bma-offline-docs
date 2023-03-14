@@ -900,7 +900,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6192 | /docs/how-to-use-images                                       |
 | https://discourse.maas.io/t/-/6193 | /docs/how-to-manage-machines                                  |
 | https://discourse.maas.io/t/-/6200 | /docs/how-to-label-devices                                    |
-| https://discourse.maas.io/t/-/6201 | /docs/how-to-operate-maas                                     |
 | https://discourse.maas.io/t/-/6202 | /docs/how-to-get-started-with-maas                            |
 | https://discourse.maas.io/t/-/6203 | /docs/maas-technical-reference                                |
 | https://discourse.maas.io/t/-/6233 | /docs/maas-installation-requirements                          |
