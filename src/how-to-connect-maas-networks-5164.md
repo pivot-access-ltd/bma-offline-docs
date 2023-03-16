@@ -45,6 +45,19 @@ This section will show you:
 <a href="#heading--how-to-enable-network-discovery"><h3 id="heading--how-to-enable-network-discovery">How to enable network discovery</h3></a>
 
 [tabs]
+<!--
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+To enable network discovery:
+
+1. Select *Networking > Network discovery* in the left navigation panel.
+
+2. Select the *Configuration* tab at the top of the *Network discovery* panel.
+
+3. In the *Network discovery* dropdown, select "Enabled".
+
+4. Select *Save* to register your changes.
+[/tab]
+-->
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To enable network discovery:
 
@@ -77,6 +90,21 @@ Network discovery can be disabled or re-enabled at any time with this CLI comman
 <a href="#heading--how-to-toggle-subnet-management"><h3 id="heading--how-to-toggle-subnet-management">How to toggle subnet management</h3></a>
 
 [tabs]
+<!--
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+To disable subnet management:
+
+1. Select *Subnets* from the left navigation panel.
+
+2. Select the subnet you wish to change by clicking on its address.
+
+3. Select *Edit* in the upper right of the *Subnet summary* panel.
+
+4. Uncheck *Managed allocation*.
+
+5. Select *Save* to register your changes.
+[/tab]
+-->
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To disable (or re-enable) subnet management, use the following procedure:
 
@@ -196,6 +224,25 @@ maas admin subnets read \
 <a href="#heading--how-to-manage-static-routes"><h3 id="heading--how-to-manage-static-routes">How to manage static routes between subnets</h3></a>
 
 [tabs]
+<!-- 
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+To create a static route:
+
+1. Select *Networking > Subnets* from the left navigation panel.
+
+2. Select the Subnet you want to change by clicking on its IP address.
+
+3. In the *Subnet summary* pane, scroll down to *Add static route* and select it.
+
+4. Enter a *Gateway IP* address.
+
+5. Select a *Destination* subnet from the dropdown.
+
+6. Enter a routing *Metric* value, if desired.
+
+7. Select *Save* to register your changes.
+[/tab]
+-->
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To create a static route:
 
