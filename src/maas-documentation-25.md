@@ -57,7 +57,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Upgrade MAAS](/t/how-to-upgrade-maas/5436)
 - [Spin up MAAS with Ansible](/t/-/6367)
 
-### [How to set up networks](/t/-/6174)
+### [How to set up networks](/t/-/6742)
 
 - [Connect MAAS networks](/t/-/5164)
 - [Enable DHCP](/t/-/5132)
@@ -182,7 +182,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
-| https://discourse.maas.io/t/-/6174 | /docs/how-to-set-up-networks                                  |
 | https://discourse.maas.io/t/-/6799 | /docs/how-to-operate-maas                                     |
 | https://discourse.maas.io/t/-/6888 | /docs/about-ansible                                           |
 | https://discourse.maas.io/t/-/744  | /docs/building-the-docs                                       |
