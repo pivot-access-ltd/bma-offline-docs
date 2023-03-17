@@ -182,6 +182,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6174 | /docs/how-to-set-up-networks                                  |
 | https://discourse.maas.io/t/-/6799 | /docs/how-to-operate-maas                                     |
 | https://discourse.maas.io/t/-/6888 | /docs/about-ansible                                           |
 | https://discourse.maas.io/t/-/744  | /docs/building-the-docs                                       |
