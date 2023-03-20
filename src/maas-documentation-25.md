@@ -102,8 +102,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Improve MAAS security](/t/-/5196)
 - [Manage user accounts](/t/-/5184)
 - [Enable MAAS native TLS](/t/-/5116)
-- [Enable Vault](/t/-/6501)
-- [Unseal Vault](/t/-/6502)
+- [Use HashiCorp Vault with MAAS](/t/-/6942)
 - [Set up an air-gapped MAAS](/t/-/5212)
 
 ### [How to operate MAAS](/t/-/6799)
@@ -178,13 +177,16 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About device labels](/t/-/6709)
 - [About MAAS events](/t/-/6510)
 - [About MAAS logging](/t/-/5240)
+- [About MAAS security](/t/-/6719)
 - [About Ansible](/t/-/6888)
 
 ## URLs
-
+/t/-/6942
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6742 | /docs/how-to-use-hashicorp-vault-with-maas                    |
+| https://discourse.maas.io/t/-/6719 | /docs/about-maas-security                                     |
 | https://discourse.maas.io/t/-/6941 | /docs/device-labelling-reference                              |
 | https://discourse.maas.io/t/-/6709 | /docs/about-device-labels                                     |
 | https://discourse.maas.io/t/-/6704 | /docs/about-virtual-machines                                  |
@@ -917,8 +919,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6373 | /docs/understanding-maas-events                               |
 | https://discourse.maas.io/t/-/6498 | /docs/how-to-manage-controllers                               |
 | https://discourse.maas.io/t/-/6500 | /docs/how-to-use-virtual-machines                             |
-| https://discourse.maas.io/t/-/6501 | /docs/how-to-enable-vault                                     |
-| https://discourse.maas.io/t/-/6502 | /docs/how-to-unseal-vault                                     |
 | https://discourse.maas.io/t/-/6503 | /docs/how-to-secure-maas                                      |
 | https://discourse.maas.io/t/-/6510 | /docs/about-maas-events                                       |
 | https://discourse.maas.io/t/-/6605 | /docs/commissioning-scripts-tech-reference                    |
@@ -937,6 +937,8 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/how-to-enable-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
+| /docs/how-to-unseal-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
 | /docs/how-to-manage-availability-zones             | /docs/how-to-use-availability-zones           |
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
 | /docs/how-to-build-custom-images                   | /docs/how-to-customise-images                 |
