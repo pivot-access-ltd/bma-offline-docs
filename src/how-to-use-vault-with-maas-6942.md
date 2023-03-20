@@ -1,5 +1,4 @@
-<!-- "How to enable Vault" -->
-
+<!-- "How to use HashiCorp Vault with MAAS" -->
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages"]
 For MAAS to be able to integrate with Vault, a few steps are required.  Specifically, you must get a role_id and wrapped_token via Vault CLI (follow the instructions from [Hashicorp Vault](https://learn.hashicorp.com/tutorials/vault/approle-best-practices?in=vault/auth-methods#approle-response-wrapping)`↗`).
@@ -98,6 +97,15 @@ If you've configured all region controllers with Vault, but haven't yet migrated
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/5/558b495841536f38600bbe67c4d4293a3e94bd0b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/558b495841536f38600bbe67c4d4293a3e94bd0b.png"></a>
 
+<a href="#heading--How-to-unseal-Vault"><h2 id="heading--How-to-unseal-Vault">How to unseal Vault</h2></a>
+
+There are two conditions that may cause Vault-protected secrets to become unavailable: when the Vault is sealed (using `vault operator seal` -- see the [Vault documentation](https://www.hashicorp.com/products/vault)`↗` and when the Vault is unreachable through misconfiguration or other failure.
+
+When the Vault is sealed, all queries involving secrets will fail with a user error mentioning that the Vault has been sealed.  Unsealing the Vault requires operator intervention, via the `vault operator unseal` command (again, see the [Vault documentation](https://www.hashicorp.com/products/vault)`↗`.  MAAS will indicate when this is needed.
+
+Vault may become unreachable due to a network failure, due to incorrect configuration of a region controller, or other unintentional situations.  When the Vault is unreachable, MAAS will inform the users that interactions with Vault will fail.
+
+MAAS will make every attempt to present a meaningful error if Vault is not functional.  This includes related authentication errors when attempting to login to MAAS.
 [/tab]
 [tab version="v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 [Hashicorp Vault](https://www.vaultproject.io/)`↗` is integrated with MAAS version 3.3.  To enable Vault for use with your MAAS, please upgrade to MAAS 3.3.
