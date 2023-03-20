@@ -428,7 +428,127 @@
 <li>Tag names <em>cannot</em> include spaces.</li>
 </ol>
 <p>In general, names that do not conform to these rules cannot be created.</p>
-<p><a href="#heading--automatic-tags"><h2 id="heading--automatic-tags">About automatic tags</h2></a></p>
+<p><a href="#heading--xpath-hardware-config-info"><h2 id="heading--xpath-hardware-config-info">How to download hardware configuration information</h2></a></p>
+<p>To download hardware configuration information in XML format:</p>
+<ol>
+<li>
+<p>Select <em>Machines</em>.</p>
+</li>
+<li>
+<p>Select a machine which is allocated or deployed.</p>
+</li>
+<li>
+<p>Select <em>Logs &gt;&gt; Installation output &gt;&gt; Download &gt;&gt; Machine output (XML)</em>.</p>
+</li>
+</ol>
+<p>You can <a href="https://ezix.org/project/wiki/HardwareLiSter">learn more about these attributes</a><code>↗</code> if desired.  Note that:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Size and capacity can have various meanings depending on the device</li>
+<li>The size of a node is always equal to its capacity</li>
+<li>Serial refers to the device’s serial number, but is used to report the MAC address for network devices, GUID for disk partition.</li>
+</ul>
+<p>You can also find device classes from the same sources. </p>
+<p><a href="#heading--how-to-create-automatic-tags"><h2 id="heading--how-to-create-automatic-tags">How to create automatic tags</h1></a></p>
+<p>To create automatic tags:</p>
+<ol>
+<li>
+<p>Select <em>Machines</em>.</p>
+</li>
+<li>
+<p>Select <em>Tags</em>.</p>
+</li>
+<li>
+<p>Select <em>Create new tag</em>.</p>
+</li>
+<li>
+<p>Enter the <em>Tag name</em>.</p>
+</li>
+<li>
+<p>Optionally enter a <em>Comment</em>.</p>
+</li>
+<li>
+<p>Optionally enter <em>Kernel options</em>.</p>
+</li>
+<li>
+<p>Enter an XPath-based <em>Definition</em>.  A tag is considered automatic when the definition field is filled with an XPath expression. The current version of our UI will only validate if your XPath expression is valid or not, but it will not show you which machines it will apply to before you create the tag.</p>
+</li>
+<li>
+<p>Select <em>Save</em> to register your changes.</p>
+</li>
+</ol>
+<p>Once an automatic tag is created the screen will initially show that 0 machines are tagged. That is because MAAS is running a background task to auto-apply the tag to matching machines. It can take some time to see that the number of machines tagged is populating. </p>
+<p><strong>NOTE:</strong> 
+Kernel options will be applied at boot time. So by default kernel options will not be applied to any machines until they are deployed. If machines are deployed before they are tagged, the kernel option will be applied when these machines are redeployed.</p>
+<p><a href="#heading--how-to-update-automatic-tags"><h2 id="heading--how-to-update-automatic-tags">How to update the definition of a tag</h2></a></p>
+<ol>
+<li>
+<p>Select <em>Machines</em>.</p>
+</li>
+<li>
+<p>Select <em>Tags</em>.</p>
+</li>
+<li>
+<p>Select the pencil icon on the right end of the tag&rsquo;s row.</p>
+</li>
+<li>
+<p>Edit the <em>Definition</em>.</p>
+</li>
+<li>
+<p>Select <em>Save</em> to register your changes.</p>
+</li>
+</ol>
+<p>Keep in mind that when a new definition is updated, MAAS will re-tag all the machines that match with the new definition. This can take some time, since it is a background process. </p>
+<p><a href="#heading--update-tag-kernel-options"><h2 id="heading--update-tag-kernel-options">How to update the kernel options on a tag</h2></a></p>
+<p>To update the kernel options on a tag:</p>
+<ol>
+<li>
+<p>Select <em>Machines</em>.</p>
+</li>
+<li>
+<p>Select <em>Tags</em>.</p>
+</li>
+<li>
+<p>Select the pencil icon on the right end of the tag&rsquo;s row.</p>
+</li>
+<li>
+<p>Edit the <em>Kernel options</em>.</p>
+</li>
+<li>
+<p>Select <em>Save</em> to register your changes.</p>
+</li>
+</ol>
+<p>Kernel options can exist for both manual and automatic tags. However, they will be applied during boot time (commissioning and deploying).</p>
+<p><strong>NOTE:</strong> 
+If the tagged machines are deployed, the updated kernel option won’t apply until the machines are redeployed. We suggest that you release those machines prior to the update, then redeploy those machines when the kernel options of the tag are updated.</p>
+<p><a href="#heading--unassign-tags-from-machines"><h2 id="heading--unassign-tags-from-machines">How to unassign tags from machines</h2></a></p>
+<p>To unassign tags from machines:</p>
+<ol>
+<li>
+<p>Select <em>Machines</em>.</p>
+</li>
+<li>
+<p>Select the checkbox(es) next to the machine(s) you wish to untag.</p>
+</li>
+<li>
+<p>Select <em>Take action &gt;&gt; Tag</em>.  A table of tags appears at the top of the screen.</p>
+</li>
+<li>
+<p>For each tag you wish to unassign, select <em>Remove</em>.  The text will change to <em>Discard</em> with an <em>X</em> to the right.</p>
+</li>
+<li>
+<p>If you want to undo a choice before saving, click the <em>X</em> to right of <em>Discard</em> to undo the proposed change.</p>
+</li>
+<li>
+<p>When you&rsquo;re satisfied with your new tag configuration, select <em>Save</em> to finalize and register your choice(s).</p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> 
+Automatic tags cannot be unassigned manually. You can either update or delete automatic tags.</p>
+<p>You can also unassign tags individually by going to <em>Machines &gt;&gt; {machine-name} &gt;&gt; Configuration &gt;&gt; Tags &gt;&gt; Edit</em>. The <em>Tags</em> table functions exactly the same as what&rsquo;s described above.</p>
+<p><a href="#heading--see-all-tagged-nodes"><h2 id="heading--see-all-tagged-nodes">How to see all tagged nodes</h2></a></p>
+<p>To see how many nodes (Machines, controllers, devices) are tagged, search for GRUB_CMDLINE_LINUX_DEFAULT in the &ldquo;Installation output&rdquo; tab of the machine details page. That log should stay around for the lifetime of the deployment of the machine.  The log gets overwritten when you redeploy the machine.  For example:</p>
+<pre><code class="language-nohighlight">GRUB_CMDLINE_LINUX_DEFAULT=&quot;sysrq_always_enabled dyndbg='file drivers/usb/* +p' console=tty1 console=ttyS0&quot;
+</code></pre>
     </div>
   </body>
 </html>
