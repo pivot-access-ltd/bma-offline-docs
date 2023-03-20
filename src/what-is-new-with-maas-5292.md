@@ -9,12 +9,15 @@ Here you will find release notes for:
 
 We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:
 
-- [2008275](https://bugs.launchpad.net/maas/+bug/1990172/2008275) Intel AMT support is broken in MAAS 3.3.0
-- [2009137](https://bugs.launchpad.net/maas/+bug/1990172/2009137) MAAS OpenApi Schema missing parameters
-- [1773150](https://bugs.launchpad.net/maas/+bug/1990172/1773150) smartctl verify fails due to Unicode in Disk Vendor Name
-- [1993618](https://bugs.launchpad.net/maas/+bug/1990172/1993618) Web UI redirection policy can invalidate HAProxy and/or TLS setup
-- [1996997](https://bugs.launchpad.net/maas/+bug/1990172/1996997) LXD resources fails on a Raspberry Pi with no Ethernet
-- [2009140](https://bugs.launchpad.net/maas/+bug/1990172/2009140) MAAS OpenApi Schema cutoff variable names
+- [1773150](https://bugs.launchpad.net/maas/+bug/1773150) smartctl verify fails due to Unicode in Disk Vendor Name
+- [1993618](https://bugs.launchpad.net/maas/+bug/1993618) Web UI redirection policy can invalidate HAProxy and/or TLS setup
+- [1996997](https://bugs.launchpad.net/maas/+bug/1996997) LXD resources fails on a Raspberry Pi with no Ethernet
+- [2003310](https://bugs.launchpad.net/maas/+bug/2003310) Refresh scripts are not re-run if they pass, but fail to report the results to the region
+- [2008275](https://bugs.launchpad.net/maas/+bug/2008275) Intel AMT support is broken in MAAS 3.3.0
+- [2009137](https://bugs.launchpad.net/maas/+bug/2009137) MAAS OpenApi Schema missing parameters
+- [2009140](https://bugs.launchpad.net/maas/+bug/2009140) MAAS OpenApi Schema cutoff variable names
+- [2009186](https://bugs.launchpad.net/maas/+bug/2009186) CLI results in connection timed out when behind haproxy and 5240 is blocked
+- [2009805](https://bugs.launchpad.net/maas/+bug/2009805) machine deploy install_kvm=True fails
 
 <a href="#heading--MAAS-3-3-has-been-released"><h2 id="heading--MAAS-3-3-has-been-released">MAAS 3.3 has been released</h2></a>
 
