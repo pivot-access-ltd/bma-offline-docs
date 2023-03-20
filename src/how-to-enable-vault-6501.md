@@ -52,7 +52,7 @@ $ vault write auth/approle/role/$ROLE_NAME \
 policies=$MAAS_POLICY token_ttl=5m
 ```
 
-Tthe TTL for tokens can be tweaked as desired.
+The TTL for tokens can be tweaked as desired.
 
 While it's technically possible to use the same approle for all controllers, it's suggested to use different ones for each.  This increases security and reduces exposure in case credentials are leaked from one controller.
 
