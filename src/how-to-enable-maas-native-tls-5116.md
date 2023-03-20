@@ -1,4 +1,21 @@
 <!-- "How to enable MAAS native TLS encryption" -->
+[tabs]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
+<a href="#heading--about-maas-native-tls"><h2 id="heading--about-maas-native-tls">About MAAS Native TLS</h2></a>
+
+MAAS version 3.2 has built-in TLS support for communicating with the UI and API over HTTPS. This eliminates the need to deploy a separate TLS-terminating reverse-proxy solution in front of MAAS to provide secure access to API and UI.
+
+TLS versions 1.2 and 1.3 are supported by MAAS. For TLSv1.2, the following ciphers are accepted:
+
+- AES256+EECDH
+- AES256+EDH
+
+You will need to obtain your own certificates via some provider, e.g., [small step](https://smallstep.com/docs/step-ca)`↗`.
+
+<a href="#heading--about-auto-renewal-for-certificates"><h3 id="heading--about-auto-renewal-for-certificates">About certificate auto-renewal</h3></a>
+
+At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level.  We [do provide some examples](#heading--how-to-auto-renew-certificates) of how to set this up, as long as you understand that these are just gratuitous helps, not supported configurations.
+
 <a href="#heading--how-to-use-maas-native-tls"><h2 id="heading--how-to-use-maas-native-tls">How to use MAAS native TLS</h2></a>
 
 TLS can be enabled/disabled with the new `maas config-tls` command:
@@ -38,7 +55,7 @@ optional arguments:
 the following arguments are required: key, cert
 ```
 
-By default, the port for HTTPS traffic will be 5443. It’s possible to specify a different one via the `–port` option.  If your certificate is not self-signed, you can pass a cacert.pem, so that the full chain will be included in the certificate served by MAAS.
+By default, the port for HTTPS traffic will be 5443. It’s possible to specify a different one via the `--port` option.  If your certificate is not self-signed, you can pass a cacert.pem, so that the full chain will be included in the certificate served by MAAS.
 
 If you have HA setup, please note that every MAAS instance will use the same certificate, so you need to create one certificate with multiple domain names or IP addresses; for example:
 
