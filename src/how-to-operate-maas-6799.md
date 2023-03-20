@@ -1,5 +1,9 @@
 This section provides some best practices for working with MAAS in your enterprise.
 
+## [How to find machines](/t/how-to-find-machines/5192)
+
+When you have a large number of MAAS machines, you can search this list with filtering and matching.
+
 ## [Back up MAAS instances](/t/how-to-back-up-maas/5096)
 
 You should regularly back up your MAAS instances and keep back-ups handy to restore when things go wrong.
