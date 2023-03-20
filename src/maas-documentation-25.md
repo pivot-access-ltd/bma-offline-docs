@@ -96,7 +96,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Use controller tags](/t/-/5216)
 - [Use storage tags](/t/-/5232)
 - [Use network tags](/t/-/5228)
-- [Find machines](/t/-/5192)
 
 ### [How to secure MAAS](/t/-/6503)
 
@@ -109,6 +108,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [How to operate MAAS](/t/-/6799)
 
+- [Find machines](/t/-/5192)
 - [Back up MAAS](/t/-/5096)
 - [Monitor MAAS](/t/-/5204)
 - [Gauge MAAS performance](/t/-/6178)
@@ -165,6 +165,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 - [Power drivers](/t/-/5246)
 - [Storage layouts](/t/-/5973)
+- [Device labelling](/t/-/6941)
 
 ### Explanation
 
@@ -174,6 +175,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About controllers](/t/-/6690)
 - [About machines](/t/-/6695)
 - [About virtual machines](/t/-/6704)
+- [About device labels](/t/-/6709)
 - [About MAAS events](/t/-/6510)
 - [About MAAS logging](/t/-/5240)
 - [About Ansible](/t/-/6888)
@@ -183,7 +185,9 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
-| https://discourse.maas.io/t/-/6704 | /docs/about-virtual-machines]                                 |
+| https://discourse.maas.io/t/-/6741 | /docs/device-labelling-reference                              |
+| https://discourse.maas.io/t/-/6709 | /docs/about-device-labels                                     |
+| https://discourse.maas.io/t/-/6704 | /docs/about-virtual-machines                                  |
 | https://discourse.maas.io/t/-/6799 | /docs/how-to-operate-maas                                     |
 | https://discourse.maas.io/t/-/6888 | /docs/about-ansible                                           |
 | https://discourse.maas.io/t/-/744  | /docs/building-the-docs                                       |
