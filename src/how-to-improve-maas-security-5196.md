@@ -7,7 +7,7 @@ As a MAAS administrator, you have the critical responsibility of hardening your 
 - [How to configure a TLS-terminating load balancer](#heading--tls)
 - [How to use logs to identify security issues](#heading--using-logs-for-security)
 - [How to implement PostgreSQL security](#heading--postgres-security)
-- [About other things you can do to harden MAAS](#heading--what-else-to-do)
+- [Other things you can do to harden MAAS](#heading--what-else-to-do)
 - [Whom to contact for MAAS security consulting](#heading--security-consulting)
 
 <a href="#heading--firewalls"><h2 id="heading--firewalls">How to set up a firewall for MAAS</h2></a>
@@ -285,9 +285,9 @@ As mentioned, this subject is far too complex for a detailed tutorial in this se
 
 PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider [full disk encryption ](https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019)`↗`.  Also recommended is [TLS encryption between MAAS and PostgreSQL ](https://www.postgresql.org/docs/current/ssl-tcp.html)`↗`.
 
-<a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">About other things you can do to harden MAAS</h2></a>
+<a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">Other things you can do to harden MAAS</h2></a>
 
-In addition to the items mentioned above, you should be aware of a few other points about hardening MAAS.
+In addition to the items mentioned above, you should be aware of a few other ways to harden MAAS.
 
 <a href="#heading--maas-and-root-users"><h3 id="heading--maas-and-root-users">Good passwords</h2></a>
 

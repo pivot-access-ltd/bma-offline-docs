@@ -426,7 +426,7 @@
 <li><a href="#heading--tls">How to configure a TLS-terminating load balancer</a></li>
 <li><a href="#heading--using-logs-for-security">How to use logs to identify security issues</a></li>
 <li><a href="#heading--postgres-security">How to implement PostgreSQL security</a></li>
-<li><a href="#heading--what-else-to-do">About other things you can do to harden MAAS</a></li>
+<li><a href="#heading--what-else-to-do">Other things you can do to harden MAAS</a></li>
 <li><a href="#heading--security-consulting">Whom to contact for MAAS security consulting</a></li>
 </ul>
 <p><a href="#heading--firewalls"><h2 id="heading--firewalls">How to set up a firewall for MAAS</h2></a></p>
@@ -631,8 +631,8 @@ Jun 06 13:45:48 router sshd[2487]: Failed password for root from 234.19.184.6 po
 <p>As mentioned, this subject is far too complex for a detailed tutorial in this section.  For more information, try the <a href="https://manpages.ubuntu.com/manpages/journalctl.1.html">Ubuntu journalctl manpage</a><code>↗</code> or <a href="https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs">another, similar source </a><code>↗</code>.  </p>
 <p><a href="#heading--postgres-security"><h2 id="heading--postgres-security">How to implement PostgreSQL security</h2></a></p>
 <p>PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider <a href="https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019">full disk encryption </a><code>↗</code>.  Also recommended is <a href="https://www.postgresql.org/docs/current/ssl-tcp.html">TLS encryption between MAAS and PostgreSQL </a><code>↗</code>.</p>
-<p><a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">About other things you can do to harden MAAS</h2></a></p>
-<p>In addition to the items mentioned above, you should be aware of a few other points about hardening MAAS.</p>
+<p><a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">Other things you can do to harden MAAS</h2></a></p>
+<p>In addition to the items mentioned above, you should be aware of a few other ways to harden MAAS.</p>
 <p><a href="#heading--maas-and-root-users"><h3 id="heading--maas-and-root-users">Good passwords</h2></a></p>
 <p>You should pick good passwords and store them securely (e.g. in a KeePassX password database). Perform user administration only via the web UI. Only share the <code>maas</code> and <code>root</code> user passwords with administrators.</p>
 <p><a href="#heading--conf-file-permissions"><h3 id="heading--conf-file-permissions">File permissions</h2></a></p>
