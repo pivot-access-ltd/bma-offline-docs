@@ -11,7 +11,7 @@ It also links to reference material for:
 - [Commissioning logs](/t/commissioning-log-reference/5248)
 - [Test logs](/t/test-log-reference/5314)
 - [Event logs](/t/event-log-reference/5252)
-- [Audit event logs](/t/audit-event-log-reference/5256)
+- [Audit event logs](/t/audit-event-logs-reference/5256)
 
 The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu -- or from the list of questions above.
 
