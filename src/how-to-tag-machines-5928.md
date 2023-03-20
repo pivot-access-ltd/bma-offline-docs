@@ -11,7 +11,19 @@ When working with tags, there are some universal rules you need to follow:
 
 In general, names that do not conform to these rules cannot be created.
 
-<a href="#heading--xpath-hardware-config-info"><h2 id="heading--xpath-hardware-config-info">How to download hardware configuration information</h2></a>
+<a href="#heading--automatic-tags"><h2 id="heading--automatic-tags">About automatic tags</h2></a>
+
+[tabs]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
+Automatic tags are tags with a definition. The definition allows you to auto-apply tags to machines that match with an [XPath expression](#heading--xpath-expressions) you created. Setting up an automatic tag will help you recognise special hardware characteristics and settings. For instance, we can configure the gpu passthrough by creating an XPath expression that recognises a prospective GPU, as shown in the example below.  
+
+In the MAAS REST API, a tag has 4 attributes namely, name, definition, kernel options, and a comment. When this tag is created, the MAAS REST API will try to match all machines with this definition and automatically apply the tag to those machines. Every time a new machine is discovered in your MAAS, if new machines match this definition, they will be automatically tagged as well.
+
+<a href="#heading--xpath-expressions"><h2 id="heading--xpath-expressions">About XPath expressions</h2></a>
+
+MAAS automatic tags accept XPath expressions in the definition attribute of the tag. XPath expressions are evaluated against `lshw`'s XML output; they are used to locate elements or attributes of the XML document for use in configuring automatic tags. You can use the lshw output in the hardware configuration details of a machine in MAAS and use that to create an XPath expression. 
+
+<a href="#heading--xpath-hardware-config-info"><h3 id="heading--xpath-hardware-config-info">How to download hardware configuration information</h3></a>
 
 To download hardware configuration information in XML format:
 
@@ -28,6 +40,20 @@ You can [learn more about these attributes](https://ezix.org/project/wiki/Hardwa
 * Serial refers to the device’s serial number, but is used to report the MAC address for network devices, GUID for disk partition.
 
 You can also find device classes from the same sources. 
+
+<a href="#heading--node-capabilities"><h3 id="heading--node-capabilities">Capabilities</h3></a>
+
+Capabilities are used to report features of a given node. The exact meaning of each feature depends on the type of node. It can be the presence of an arithmetical co-processor for a CPU, the ability to run at 1GB/s for a network interface, etc. In most cases, capabilities reported by lshw are auto-documented.
+
+To see the capabilities of a specific machine, you can download your HW configuration information, as described above.
+
+<a href="#heading--kernel-options"><h2 id="heading--kernel-options">About Kernel options</h2></a>
+
+You can add kernel options when creating both manual and automatic tags. Kernel options will be automatically applied at boot time or when the machine with that tag is commissioned or deployed. 
+
+When updating kernel options on a tag that matches Deployed machines, be aware that the new kernel option will be applied during boot time, so you will need to release and re-deploy them to pick up the change. Otherwise, these deployed machines will have the old kernel options.
+
+If there are multiple tags associated with a machine, the kernel options will be concatenated from all the tags combined, sorted alphabetically .
 
 <a href="#heading--how-to-create-automatic-tags"><h2 id="heading--how-to-create-automatic-tags">How to create automatic tags</h1></a>
 
@@ -119,7 +145,109 @@ To see how many nodes (Machines, controllers, devices) are tagged, search for GR
 GRUB_CMDLINE_LINUX_DEFAULT="sysrq_always_enabled dyndbg='file drivers/usb/* +p' console=tty1 console=ttyS0"
 ```
 
+<a href="#heading--tag-definition-reference"><h2 id="heading--tag-definition-reference">Tag definition reference examples</h2></a>
 
+Here are some examples of tag definitions -- [more examples are available](https://github.com/canonical/mxt)`↗`.
+
+Commonly used Xpath functions usually include:
+
+* contains
+* starts-with
+* ends-with
+
+### Example 1
+
+This definition will identify machines with proper CPU tags, cores, and RAM, and tag them as a hypervisor:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/d/d1c8e2674445045ee9c8c9f1d14f3fa413af9be8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d1c8e2674445045ee9c8c9f1d14f3fa413af9be8.png"></a>
+
+This example looks for at least 40 cores and 256 GB of RAM and has all the required CPU features for being a hypervisor for both Intel and AMD.
+
+[note]
+Don't forget to adjust cores and RAM (in bytes) to suit your particular needs and available resources.
+[/note]
+
+You can also define this tag with the CLI:
+
+```nohighlight
+maas ${MAAS_PROFILE} tags create name=hypervisor \
+definition='//node[@id="memory"]/size >= "274877906944" and \
+//node[@id="cpu"]/configuration/setting/id="cores" >= 40 and \
+//node[@id="cpu"]//capabilities/capability/@id = "vmx" or @id="svm" and \
+//node[@id="cpu"]//capabilities/capability/@id = "aes" and 
+//node[@id="cpu"]//capabilities/capability/@id = "flexpriority" and 
+//node[@id="cpu"]//capabilities/capability/@id = "tpr_shadow" and 
+//node[@id="cpu"]//capabilities/capability/@id = "ept" and 
+//node[@id="cpu"]//capabilities/capability/@id = "vpid" and 
+//node[@id="cpu"]//capabilities/capability/@id = "vnmi"'
+```
+
+### Example 2
+
+This will tag UEFI enabled KVM VMs running on AMD-based servers:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/a/adde5f51e396a3a2d2f70daad7787fe087723664.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/adde5f51e396a3a2d2f70daad7787fe087723664.png"></a>
+
+You can also do this with the CLI:
+
+```nohighlight
+maas ${MAAS_PROFILE} tags create \
+name=kvm-amd-uefi \
+definition='//node[@class="system"]/vendor = "QEMU" and //node[@id="firmware"]/capabilities/capability/@id = "virtualmachine" and //node[@id="firmware"]/capabilities/capability/@id = "uefi" and //node[@class="processor"]/vendor[starts-with(.,"Advanced Micro Devices")]' \
+kernel_opts='nomodeset console=tty0 console=ttyS0,115200n8 amd_iommu=on kvm-amd.nested=1 kvm-amd.enable_apicv=n kvm.ignore_msrs=1' \
+comment='Tag for automatically identifying AMD-based KVM vms (UEFI BIOS)'
+```
+
+### Example 3
+
+This will automatically tag servers that have NVME controllers:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/1/166cd775669610ba454b5f2883e7729b79770bd0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/166cd775669610ba454b5f2883e7729b79770bd0.png"></a>
+
+To accomplish the same thing in the CLI:
+
+```nohighlight
+maas ${MAAS_PROFILE} tags create name=NVME comment="xpath tag for automatically tagging servers that have NVME controllers" definition='//node[@id="storage" and @class="storage"]/description = "Non-Volatile memory controller"'
+```
+
+### Example 4
+
+This will tag servers with Mellanox ConnectX-5 NICs:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/3/34ed75cf40ded49ac5eb8d76467817b5618b11a9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/34ed75cf40ded49ac5eb8d76467817b5618b11a9.png"></a>
+
+And you can also do this in the CLI:
+
+```nohighlight
+maas ${MAAS_PROFILE} tags create \
+name=connectx-5 \
+definition='//node[@class="network"]/vendor[starts-with(.,"Mellanox")] and //node[@class="network"]/product[contains(.,"ConnectX-5")]' \
+comment='Tag for automatically identifying servers with Mellanox Technologies ConnectX-5 cards'
+```
+
+### Example 5
+
+This will enable GPU passthrough for Nvidia Quadro K series GPUs on AMD:
+
+<a href="https://discourse.maas.io/uploads/default/original/2X/3/3f258d7e98c0adc7b605b8d2846b76737d46a27e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3f258d7e98c0adc7b605b8d2846b76737d46a27e.png"></a>
+
+You can also duplicate this example in the CLI:
+
+```nohighlight
+maas ${MAAS_PROFILE} tags create \
+name=gpgpu-quadro-k-a \
+comment="Enable passthrough for Nvidia Quadro K series GPUs on AMD" \
+definition='//node[@id="cpu:0"]/capabilities/capability/@id = "svm" and //node[@id="display"]/vendor[contains(.,"NVIDIA")] and //node[@id="display"]/description[contains(.,"3D")] and //node[@id="display"]/product[contains(.,"Quadro K")]'
+```
+
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
+
+[note]
+Tag management UI is available starting in MAAS v3.2.
+[/note]
+[/tab]
+[/tabs]
 
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
