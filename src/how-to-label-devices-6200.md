@@ -1,7 +1,7 @@
 <!-- "How to label devices" -->
 MAAS offers a wide range of device labelling: tags that can carry information; static annotations which can identify and describe machines; and dynamic annotations which can describe current workloads for deployed machines.
 
-## [Tag machines](/t/-/5298)
+## [Tag machines](/t/-/5928)
 
 The most common tags are machine tags, which can not only help you sort machines, but also help to configure that machine, e.g., with kernel options, when being deployed.
 
