@@ -1,54 +1,26 @@
-<!-- "How to label and find machines" -->
+<!-- "How to label devices" -->
+MAAS offers a wide range of device labelling: tags that can carry information; static annotations which can identify and describe machines; and dynamic annotations which can describe current workloads for deployed machines.
 
-When you're working with a half-dozen machines, a lot of labelling isn't necessary.  As your constellation of machines grows, though, you reach a point where you can't keep a compact picture in your head.  This is where tags, annotations, and filtering come in.  
+## [Tag machines](/t/-/5298)
 
-Two of the more useful attributes of machines are tags and annotations.  These can be used not only to identify machines, but to customise them (e.g., kernel options) when they are commissioned and deployed. You can [tag machines](/t/how-to-tag-machines/5928), [annotate machines](/t/how-to-annotate-machines/5929), and use tags to mark [machines](/t/how-to-use-machine-tags/5224), [storage](/t/how-to-use-storage-tags/5232), [controllers](/t/how-to-use-controller-tags/5216), and [network interfaces](/t/how-to-use-network-tags/5228).  
+The most common tags are machine tags, which can not only help you sort machines, but also help to configure that machine, e.g., with kernel options, when being deployed.
 
-You can also use [filtering](/t/how-to-find-machines/5192) to find a given subset of machines.  There isn't a lot of theory, per se, on filtering, since it's just a utility function of the user interface.
+## [Annotate machines](/t/-/5929)
 
-The rest of this article contains a little background information on tags and annotations.
+You can also annotate machines.  Static annotations stick with a machine as long as it exists.  Dynamic annotations, on the other hand, last only as long as a specific deployment.
 
-<a href="#heading--about-tags"><h3 id="heading--about-tags">About tags</h3></a>
+## [Use machine tags](/t/-/5224)
 
-Tags are short, descriptive, searchable words that can be applied to various MAAS objects, including:
+There are quite a few nuances to machine tags.
 
-- machines (physical and virtual)
-- VM hosts
-- controllers (rack and region)
-- storage (virtual and physical; block devices or partitions)
-- network interfaces
-- devices
-- nodes (in the CLI only)
+## [Use controller tags](/t/-/5216)
 
-Tags serve to help you identify, group, and find objects easily, especially when you routinely deploy hundreds of machines.
+You can also tag controllers to help easily tell them apart.
 
+## [Use storage tags](/t/-/5232)
 
-<a href="#heading--about-annotations"><h3 id="heading--about-annotations">About annotations</h3></a>
+Storage tags help you mark and remember specialized storage configurations.
 
-Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: static (always present in any machine state), and dynamic (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
+## [Use network tags](/t/-/5228)
 
-
-<a href="#heading--about-tags-and-scripts"><h4 id="heading--about-tags-and-scripts">About tags and scripts</h4></a>
-
-As with general tag management, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
-
-``` bash
-maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
-maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
-```
-
-MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:
-
-``` bash
-maas $PROFILE machine commission \
-commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
-```
-
-You can also select which testing scripts to run by name or tag:
-
-``` bash
-maas $PROFILE machine commission \
-testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
-```
-
-Any testing scripts tagged with commissioning will also run during commissioning.
+Network tags let you remember how you set up specific network interfaces.
