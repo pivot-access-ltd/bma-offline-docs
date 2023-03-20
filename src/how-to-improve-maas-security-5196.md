@@ -285,9 +285,9 @@ As mentioned, this subject is far too complex for a detailed tutorial in this se
 
 PostgreSQL contains secrets, and should be encrypted for maximum protection.  You should consider [full disk encryption ](https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019)`↗`.  Also recommended is [TLS encryption between MAAS and PostgreSQL ](https://www.postgresql.org/docs/current/ssl-tcp.html)`↗`.
 
-<a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">Other things you can do to harden MAAS</h2></a>
+<a href="#heading--what-else-to-do"><h2 id="heading--what-else-to-do">About other things you can do to harden MAAS</h2></a>
 
-In addition to the items mentioned above, you should be aware of a few other ways to harden MAAS.
+In addition to the items mentioned above, you should be aware of a few other points about hardening MAAS.
 
 <a href="#heading--maas-and-root-users"><h3 id="heading--maas-and-root-users">Good passwords</h2></a>
 
