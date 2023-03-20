@@ -52,4 +52,3 @@ testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 ```
 
 Any testing scripts tagged with commissioning will also run during commissioning.
-
