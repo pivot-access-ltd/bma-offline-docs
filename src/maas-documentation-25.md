@@ -173,6 +173,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About images](/t/-/6685)
 - [About controllers](/t/-/6690)
 - [About machines](/t/-/6695)
+- [About virtual machines](/t/-/6704)
 - [About MAAS events](/t/-/6510)
 - [About MAAS logging](/t/-/5240)
 - [About Ansible](/t/-/6888)
@@ -182,6 +183,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6704 | /docs/about-virtual-machines]                                 |
 | https://discourse.maas.io/t/-/6799 | /docs/how-to-operate-maas                                     |
 | https://discourse.maas.io/t/-/6888 | /docs/about-ansible                                           |
 | https://discourse.maas.io/t/-/744  | /docs/building-the-docs                                       |
