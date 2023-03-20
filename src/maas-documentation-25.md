@@ -185,7 +185,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
-| https://discourse.maas.io/t/-/6741 | /docs/device-labelling-reference                              |
+| https://discourse.maas.io/t/-/6941 | /docs/device-labelling-reference                              |
 | https://discourse.maas.io/t/-/6709 | /docs/about-device-labels                                     |
 | https://discourse.maas.io/t/-/6704 | /docs/about-virtual-machines                                  |
 | https://discourse.maas.io/t/-/6799 | /docs/how-to-operate-maas                                     |
