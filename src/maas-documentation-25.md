@@ -102,7 +102,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Improve MAAS security](/t/-/5196)
 - [Manage user accounts](/t/-/5184)
 - [Enable MAAS native TLS](/t/-/5116)
-- [Use HashiCorp Vault with MAAS](/t/-/6942)
+- [Use Vault with MAAS](/t/-/6942)
 - [Set up an air-gapped MAAS](/t/-/5212)
 
 ### [How to operate MAAS](/t/-/6799)
@@ -181,11 +181,10 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About Ansible](/t/-/6888)
 
 ## URLs
-/t/-/6942
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
-| https://discourse.maas.io/t/-/6742 | /docs/how-to-use-hashicorp-vault-with-maas                    |
+| https://discourse.maas.io/t/-/6942 | /docs/how-to-use-hashicorp-vault-with-maas                    |
 | https://discourse.maas.io/t/-/6719 | /docs/about-maas-security                                     |
 | https://discourse.maas.io/t/-/6941 | /docs/device-labelling-reference                              |
 | https://discourse.maas.io/t/-/6709 | /docs/about-device-labels                                     |
