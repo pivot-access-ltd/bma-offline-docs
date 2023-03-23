@@ -110,7 +110,6 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Find machines](/t/-/5192)
 - [Back up MAAS](/t/-/5096)
 - [Monitor MAAS](/t/-/5204)
-- [Gauge MAAS performance](/t/-/6178)
 - [Audit MAAS](/t/-/5987)
 - [Terraform with MAAS](/t/-/6327)
 - [Troubleshoot MAAS](/t/-/5333)
@@ -178,6 +177,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About MAAS events](/t/-/6510)
 - [About MAAS logging](/t/-/5240)
 - [About MAAS security](/t/-/6719)
+- [About MAAS performance](/t/-/6178)
 - [About Ansible](/t/-/6888)
 
 ## URLs
@@ -903,7 +903,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6141 | /docs/explanation                                             |
 | https://discourse.maas.io/t/-/6142 | /docs/how-to-guides                                           |
 | https://discourse.maas.io/t/-/6143 | /docs/general-reference                                       |
-| https://discourse.maas.io/t/-/6178 | /docs/how-to-gauge-maas-performance                           |
+| https://discourse.maas.io/t/-/6178 | /docs/about-maas-performance                                  |
 | https://discourse.maas.io/t/-/6192 | /docs/how-to-use-images                                       |
 | https://discourse.maas.io/t/-/6193 | /docs/how-to-manage-machines                                  |
 | https://discourse.maas.io/t/-/6200 | /docs/how-to-label-devices                                    |
@@ -936,6 +936,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/how-to-gauge-maas-performance                | /docs/about-maas-performance                  |
 | /docs/how-to-enable-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
 | /docs/how-to-unseal-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
 | /docs/how-to-manage-availability-zones             | /docs/how-to-use-availability-zones           |
