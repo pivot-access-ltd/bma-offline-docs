@@ -186,6 +186,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6950 | /docs/general-reference                                       |
 | https://discourse.maas.io/t/-/6949 | /docs/how-to-contribute-doc                                   |
 | https://discourse.maas.io/t/-/6802 | /docs/how-to-use-our-discourse-forum                          |
 | https://discourse.maas.io/t/-/6942 | /docs/how-to-use-hashicorp-vault-with-maas                    |
@@ -906,7 +907,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6140 | /docs/tutorials                                               |
 | https://discourse.maas.io/t/-/6141 | /docs/explanation                                             |
 | https://discourse.maas.io/t/-/6142 | /docs/how-to-guides                                           |
-| https://discourse.maas.io/t/-/6143 | /docs/general-reference                                       |
+| https://discourse.maas.io/t/-/6143 | /docs/reference                                               |
 | https://discourse.maas.io/t/-/6178 | /docs/about-maas-performance                                  |
 | https://discourse.maas.io/t/-/6192 | /docs/how-to-use-images                                       |
 | https://discourse.maas.io/t/-/6193 | /docs/how-to-manage-machines                                  |
