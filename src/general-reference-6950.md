@@ -1,13 +1,31 @@
 <!-- "General reference" -->
 
-The reference material in this section provides technical descriptions of MAAS and related tools.
+This section provides general reference information about MAAS.
 
-|                    |                                                                           |
-|--------------------|---------------------------------------------------------------------------|
-| General reference  | Release notes, settings. glossary, and the like                           |
-| API reference      | Documentation on the MAAS API, its clients, and authentication mechanisms |
-| Scripts            | Information about scripts for commissioning, cloud-init, curtin, etc.     |
-| Logs               | Details on the many MAAS log files and what they contain                  |
-| Machine parameters | Everything you need to know about power drivers and storage layouts       |
+## [Release notes](/t/release-notes/5292)
 
-Make sure to also check out the [Tutorials](/t/tutorials/6140) for step-by-step instructions that help you get familiar with MAAS, the [How-to guides](/t/how-to-guides/6663) for instructions on how to achieve specific goals when using MAAS, and the [Explanation](/t/explanation/6141) section for background information.
+These are general release notes for the latest version of MAAS, with links to release notes for older versions.
+
+## [Installation requirements](/t/maas-installation-requirements/6233)
+
+MAAS has some minimal installation requirements that you'll want to follow.
+
+## [MAAS settings](/t/maas-settings-reference/6347)
+
+Many things about MAAS can be customised.
+
+## [MAAS source code](https://launchpad.net/maas)
+
+If you're interested in how MAAS works, the source code is available.
+
+## [Documentation style guide](/t/maas-documentation-style-guide/4186)
+
+Our documentation is crowd-sourced, but we don't want it to look like it was built by random passers-by.
+
+## [Glossary](/t/maas-glossary/5416)
+
+MAAS has a fair amount of special terminology that you'll want to know.
+
+## [Our code of conduct](https://ubuntu.com/community/code-of-conduct)
+
+Canonical has a code of conduct, which we adhere to on the MAAS project.
