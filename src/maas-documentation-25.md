@@ -119,7 +119,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Get support](https://maas.io/docs/how-to-contact-us)`↗`
 - [Request new features](/t/-/4447)
 - [Review and report bugs](/t/-/4446)
-- [How to contribute doc](/t/-/6949)
+- [Contribute documentation](/t/-/6949)
 
 ### General reference
 
