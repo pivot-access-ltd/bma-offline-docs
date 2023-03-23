@@ -5,7 +5,7 @@ There are times when interface and documentation aren't enough to figure somethi
 
 Interact with other users, Canonical support personnel, and the MAAS development team; you can bring us problems, solve problems, or even just catch up on things you didn't know.
 
-## [Get support](https://maas.io/docs/how-to-contact-us)↗
+## [Get support](https://maas.io/docs/how-to-contact-us)`↗`
 
 We offer paid support for those situations where it's warranted, that is, where it would take a significant amount of time for a Canonical employee to help you with your project, or where your needs are off the MAAS roadmap and require special engineering work.
 
