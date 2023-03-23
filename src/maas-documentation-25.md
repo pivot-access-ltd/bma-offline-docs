@@ -121,7 +121,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Review and report bugs](/t/-/4446)
 - [Contribute documentation](/t/-/6949)
 
-### General reference
+### [General reference](/t/-/6950)
 
 - [Release notes](/t/-/5292)
 - [Installation requirements](/t/-/6233)
