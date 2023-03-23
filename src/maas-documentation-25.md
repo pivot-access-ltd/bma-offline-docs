@@ -25,11 +25,11 @@ MAAS is a member of the Ubuntu family. It’s an open source project that warmly
 - [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
 - [Get support](https://maas.io/docs/how-to-contact-us)`↗`
 - [Learn about MAAS performance](https://maas.io/docs/maas-performance)`↗`
-- [Join our online chat](https://discourse.maas.io)`↗`
+- [Join our online chat](/t/how-to-use-our-discourse-forum/6802)
 - [Contribute code](https://launchpad.net/maas)`↗`
-- [Improve our doc](https://maas.io/docs/how-to-help-improve-the-doc)`↗`
-- [Request a feature](https://maas.io/docs/request-a-feature)`↗`
-- [Report a bug](https://maas.io/docs/report-a-bug)`↗`
+- [Improve our doc](/t/how-to-improve-our-documentaion/4186)
+- [Request a feature](/t/how-to-request-a-new-feature/4447)
+- [Report a bug](/t/how-to-report-a-bug/4446)
 
 ### Our roadmap
 
@@ -115,7 +115,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 
 ### [How to give and receive help](/t/-/5428)
 
-- [Use our discourse forum](https://discourse.maas.io)`↗`
+- [Use our discourse forum](/t/-/6802)
 - [Get support](https://maas.io/docs/how-to-contact-us)`↗`
 - [Request new features](/t/-/4447)
 - [Review and report bugs](/t/-/4446)
@@ -185,6 +185,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                           |
 |------------------------------------|----------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6802 | /docs/how-to-use-our-discourse-forum
 | https://discourse.maas.io/t/-/6942 | /docs/how-to-use-hashicorp-vault-with-maas                     |
 | https://discourse.maas.io/t/-/6719 | /docs/about-maas-security                                      |
 | https://discourse.maas.io/t/-/6941 | /docs/device-labelling-reference                               |
