@@ -1,7 +1,10 @@
-## Placeholder page
+<!-- "How to contribute code" -->
+## Soliciting contributions to this document
 
-This is a newly-created MAAS documentation page, which has yet to be loaded with information.  
+Please add steps, ideas, sentence fragments, or even complete paragraphs about this topic:
 
-Discourse requires at least 20 characters for every new page, so we've loaded this explanation to help you avoid getting confused.
+```nohighlight
+How should one go about adding code to MAAS?
+```
 
-Please ignore this page for now.
+There are the basics of PRs, etc., but I'd like opinions from some experts before creating an outline for this page.  Please add your thoughts.
