@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/how-to-use-the-maas-discourse-forum.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="../../api/docs">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+  <h1>How to use the MAAS Discourse forum</h1><!-- "How to use the MAAS Discourse forum" -->
+<p>Much of the interaction with the MAAS community takes place via <a href="https://discourse.maas.io/">our Discourse forum</a>.  This article will help you better navigate that forum.</p>
+<h2>Discourse categories</h2>
+<p>Our Discourse forum is divided into a number of public categories:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>The <a href="https://discourse.maas.io/c/discourse/3">discourse</a> category is a default category provided by the forum tool.  While it sometimes captures posts, it is largely unmonitored and may or may not get you a response within a reasonable timeframe.</p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/docs/5">docs</a> category is where our documentation lives.  If you want to edit or comment on documentation, this is the place to do that.</p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/news/7">news</a> category is generally confined release announcements and deprecation notices.</p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/users/8">users</a> category is where all the action takes place.  This is where you can post (or answer) questions.  This category is monitored by the MAAS developer on duty each week.  We try very hard to minimize the number of posts waiting on answers from us, aiming for that value to be less than 5% of total posts.</p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/integration/11">integration</a> category isn&rsquo;t routinely used much any more, so it&rsquo;s advisable to post these questions in &ldquo;Users&rdquo; instead.  We may get back to it someday, though.</p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/devel/13">development</a> category is intended to be for roadmap and architecture discussions, and is also where we publish our Show and Tell articles.</p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/tutorials/16">tutorials</a> category is a place to see various MAAS tutorials.  Some of these tutorials are available elsewhere (e.g., from the <a href="https://maas.io/docs">MAAS documentation</a>.  </p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/deprecations/17">deprecations</a> category is strictly for notices and discussions about deprecated features.</p>
+</li>
+<li>
+<p>The <a href="https://discourse.maas.io/c/maas-performance/26">performance</a> category is for notices and discussion about MAAS performance issues.</p>
+</li>
+</ul>
+<h2>User permissions and progression</h2>
+<p>As a first-time user, you may not immediately have permission to post or comment.  You may continue to review posts until you gain these permissions, or you may message one of the <a href="https://discourse.maas.io/about">admins</a> by clicking on their picture and then choosing &ldquo;Message&rdquo; if you feel you need elevated permissions.</p>
+<p>Also please do be sure to review our <a href="https://discourse.maas.io/faq">FAQ</a> and <a href="https://ubuntu.com/legal">Terms of Service</a>.</p>
+<h2>How to post and comment</h2>
+<p>It&rsquo;s easy to create new posts, and comment on existing posts.</p>
+<h3>How to create a new post</h3>
+<p>To create a new post:</p>
+<ol>
+<li>
+<p>Go to <a href="https://discourse.maas.io/">our Discourse forum</a></p>
+</li>
+<li>
+<p>Select a category from the <em>all categories</em> dropdown at the top.</p>
+</li>
+<li>
+<p>Select <em>+New topic</em> at the top right.</p>
+</li>
+<li>
+<p>Enter a title where it says, <em>Type title,&hellip;</em>.</p>
+</li>
+<li>
+<p>Tab down to <em>Type here.  Use markdown&hellip;</em>.</p>
+</li>
+<li>
+<p>Enter your post.  You will need to type at least 20 characters, which is not difficult for most posts.</p>
+</li>
+<li>
+<p>Select <em>Create topic</em> (or <em>Cancel</em> if you change your mind).</p>
+</li>
+</ol>
+<h3>How to comment on an existing post</h3>
+<p>To comment on an existing post:</p>
+<ol>
+<li>
+<p>Open the post by clicking on its title in the digest page.  You should be brought to the bottom of the post.</p>
+</li>
+<li>
+<p>Select <em>Reply</em>. </p>
+</li>
+<li>
+<p>Enter your comments where it says, <em>Type here&hellip;</em>.</p>
+</li>
+<li>
+<p>Select <em>Reply</em> (or <em>Cancel</em> if you changed your mind).</p>
+</li>
+</ol>
+    </div>
+  </body>
+</html>
