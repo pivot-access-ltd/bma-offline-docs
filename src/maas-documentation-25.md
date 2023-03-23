@@ -175,6 +175,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [About virtual machines](/t/-/6704)
 - [About device labels](/t/-/6709)
 - [About MAAS events](/t/-/6510)
+- [About audit events](/t/-/6372)
 - [About MAAS logging](/t/-/5240)
 - [About MAAS security](/t/-/6719)
 - [About MAAS performance](/t/-/6178)
@@ -914,7 +915,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6346 | /docs/what-is-new-with-maas-3-3                               |
 | https://discourse.maas.io/t/-/6367 | /docs/how-to-spin-up-maas-with-ansible                        |
 | https://discourse.maas.io/t/-/6347 | /docs/maas-settings-reference                                 |
-| https://discourse.maas.io/t/-/6372 | /docs/understanding-maas-audit-events                         |
+| https://discourse.maas.io/t/-/6372 | /docs/about-maas-audit-events                                 |
 | https://discourse.maas.io/t/-/6373 | /docs/understanding-maas-events                               |
 | https://discourse.maas.io/t/-/6498 | /docs/how-to-manage-controllers                               |
 | https://discourse.maas.io/t/-/6500 | /docs/how-to-use-virtual-machines                             |
@@ -936,6 +937,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/understanding-maas-audit-events              | /docs/about-maas-audit-events                 |
 | /docs/how-to-gauge-maas-performance                | /docs/about-maas-performance                  |
 | /docs/how-to-enable-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
 | /docs/how-to-unseal-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
