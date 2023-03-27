@@ -11,12 +11,10 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 
 ## In this documentation
 
-|                                                                                                      |                                                                                             |
-|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| [Tutorials](/t/6140)</br>  Get started - a hands-on introduction to MAAS for new users </br> | [How-to guides](/t/6142) </br> Step-by-step guides covering key operations and common tasks |
-| | The landing pages for these How-to guides offer explain the theory behind the related topics |
-| **The API Reference** </br> Detailed instructions for using the MAAS API                   | [Reference](/t/6143) </br> Technical information - specifications, APIs, architecture       |
-
+|                                                                                                        |                                                                                                           |
+|--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| [Tutorials](/t/tutorials/6140)</br>  Get started - a hands-on introduction to MAAS for new users </br> | [How-to guides](/t/how-to-guides/6142) </br> Step-by-step guides covering key operations and common tasks |
+| [Reference](/t/reference/6143) </br> Technical information - specifications, APIs, architecture        | [Explanation](/t/explanation/6141)</br> Detailed explanations of the various MAAS components              |
 
 ## Project and community
 
