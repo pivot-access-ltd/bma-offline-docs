@@ -1,4 +1,4 @@
-<!-- "Event log reference" -->
+<!-- "Event logs reference" -->
 The events log tracks state changes and the execution of basic configuration steps, serving as a timeline for your MAAS machines.  A simple view of the events log might look something like this:
 
 ```
