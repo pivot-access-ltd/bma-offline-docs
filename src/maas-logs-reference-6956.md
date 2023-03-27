@@ -1,13 +1,18 @@
-<!-- "General reference" -->
+<!-- "MAAS logs reference" -->
+MAAS offers an extensive logging capability across events, scripts, and normal operations.
 
-The reference material in this section provides technical descriptions of MAAS and related tools.
+## [Event logs](/t/-/5252)
 
-|                    |                                                                           |
-|--------------------|---------------------------------------------------------------------------|
-| General reference  | Release notes, settings. glossary, and the like                           |
-| API reference      | Documentation on the MAAS API, its clients, and authentication mechanisms |
-| Scripts            | Information about scripts for commissioning, cloud-init, curtin, etc.     |
-| Logs               | Details on the many MAAS log files and what they contain                  |
-| Machine parameters | Everything you need to know about power drivers and storage layouts       |
+MAAS event logs will help you diagnose a very large percentage of MAAS issues.
 
-Make sure to also check out the [Tutorials](/t/tutorials/6140) for step-by-step instructions that help you get familiar with MAAS, the [How-to guides](/t/how-to-guides/6663) for instructions on how to achieve specific goals when using MAAS, and the [Explanation](/t/explanation/6141) section for background information.
+## [Audit event logs](/t/-/5256)
+
+Audit event logs help you discover who changed something in the MAAS infrastructure.
+
+## [Commissioning logs](/t/-/5248)
+
+Commissioning logs provide a detailed listing of everything that happened while trying to commission a machine.
+
+## [Testing logs](/t/-/5314)
+
+Hardware testing logs help you find and diagnose hardware issues.
