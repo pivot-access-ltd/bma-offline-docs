@@ -165,7 +165,7 @@ You will need to obtain your own certificates via some provider, e.g., [small st
 
 At the moment we don’t support automatic certificate renewal, because it depends on the PKI used at the organisation level.  We [do provide some examples](#heading--how-to-auto-renew-certificates) of how to set this up, as long as you understand that these are just gratuitous helps, not supported configurations.
 [/tab]
-[tab version="v2.9 Snap,v2.9 Packages,v3.0 Snap,v3.0 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.0 Snap,v3.0 Packages,v3.1 Snap,v3.1 Packages,v2.9 Snap,v2.9 Packages"]
 To obtain MAAS native TLS, upgrade to MAAS v3.2 or higher.
 [/tab]
 [/tabs]
