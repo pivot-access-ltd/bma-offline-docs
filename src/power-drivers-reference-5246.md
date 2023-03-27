@@ -314,6 +314,9 @@ Some of the fields for this power type have fixed choices, indicated in the "Cho
 | VMware password | Password to access VM | Required |
 | VMware API port | VMware API port number | Optional |
 | VMware API protocol | VMware API protocol | Optional |
+| | If using the default TLS/SSL certificates, | |
+| | use `https+unverified` | |
+ 
 
 <a href="#heading--wedge"><h3 id="heading--wedge">Facebook's Wedge</h3></a>
 
@@ -358,7 +361,7 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
 
 ```
-maas admin machines read | jq -r '(["HOSTNAME","SIS'S"] | (., map(length*"-"))),
+maas admin machines read | jq -r '(["HOSTNAME","SID"] | (., map(length*"-"))),
 (.[] | [.hostname, .system_id]) | @tsv' | column -t
 ```
 
