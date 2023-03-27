@@ -160,7 +160,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [system logs]()
 -->
 
-### Machine parameters reference
+### [Machine parameters reference](/t/-/6957)
 
 - [Power drivers](/t/-/5246)
 - [Storage layouts](/t/-/5973)
@@ -186,6 +186,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6957 | /docs/machine-parameters-reference                            |
 | https://discourse.maas.io/t/-/6956 | /docs/maas-logs-reference                                     |
 | https://discourse.maas.io/t/-/5375 | /docs/maas-scripts-reference                                  |
 | https://discourse.maas.io/t/-/6665 | /docs/api-reference                                           |
