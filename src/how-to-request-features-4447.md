@@ -21,4 +21,3 @@ That said, there are some key points of information that will help us bring you 
 - They are accompanied by contact information, even if it's indirect or semi-anonymous, so that we can get back to you with questions.
 
 The better the case, the better the chances we'll consider picking up the feature in a future release.  As stated above, there are no guarantees, but we do listen and consider well-spoken arguments.
-
