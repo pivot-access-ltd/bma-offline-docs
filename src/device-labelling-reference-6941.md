@@ -1,4 +1,4 @@
-<!-- "Labelling reference" -->
+<!-- "Devcie labelling reference" -->
 <a href="#heading--tag-definition-reference"><h2 id="heading--tag-definition-reference">Tag definition reference examples</h2></a>
 
 Here are some examples of tag definitions -- [more examples are available](https://github.com/canonical/mxt)`↗`.
