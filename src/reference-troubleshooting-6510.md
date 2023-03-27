@@ -1,11 +1,5 @@
-<!-- "How to diagnose issues" -->
-MAAS offers a few tools for diagnosing issues with running MAAS instances.  Logs are key to most debugging efforts.  You can work with [log files](/t/how-to-work-with-log-files/5240), or, if you're auditing user behaviour, you can work with [audit event logs](/t/how-to-work-with-audit-event-logs/5987).  We also provide an ever-growing list of [troubleshooting steps](/t/how-to-troubleshoot-maas/5333), as we discover common issues.
-
-Logs are not always self-explanatory, so you may want to read up on the relevant technical details, provided below.
-
-<a href="#heading--About-MAAS-events"><h2 id="heading--About-MAAS-events">About MAAS events</h2></a>
-
-Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
+<!-- "About MAAS events" -->
+MAAS events are key to most debugging efforts.  Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
 
 Events can be seen in the MAAS logs, in the UI event log, and in output from the CLI `events query` command.  These three sources provide analogous (but somewhat different information). For example, consider the following log listing, obtained by doing a `grep "fun-zebra" *.log | grep "transition from"` in the MAAS log directory:
 
@@ -51,3 +45,4 @@ And it appears like this in the UI events log:
 |**Thu, 29 Sep. 2022 20:04:07**	|**Node changed status - From 'Commissioning' to 'Testing'** |
 
 You can see that all three outputs are sources of truth, but the messages are somewhat different, include different information, and contain different levels of detail.
+
