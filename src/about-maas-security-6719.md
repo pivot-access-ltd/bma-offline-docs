@@ -149,7 +149,6 @@ Here is a quick breakdown of how the four roles experience MAAS:
 MAAS makes no assumptions about how these roles might be used in the day-to-day operation of your MAAS instance.  The capabilities listed above form the complete set of what these roles can do.
 
 [tabs]
-[/tab]
 [tab version="v2.9 Snap,v2.9 Packages,v3.0 Snap,v3.0 Packages,v3.1 Snap,v3.1 Packages"]
 To obtain MAAS native TLS, upgrade to MAAS v3.2 or higher.
 [/tab]
