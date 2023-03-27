@@ -8,7 +8,7 @@ If you've got the idea, but you aren't sure how to frame it, the rest of this ar
 
 ## First, some reassurance
 
-We do deliver the most-requested features when we can.  In our last [feature poll](https://discourse.maas.io/t/-/4865), the feature that got the most votes -- [enlisting deployed machines](/t/-/5964#heading--enlist-deployed-machines) -- was actually delivered as part of MAAS version 3.1.  This doesn't mean we'll build every requested feature, or that we'll get to them as quickly as you might need them.  The point is that we listen and try to respond, so it's worth your time to let us know what you need.
+We do deliver the most-requested features when we can.  In our last [feature poll](https://discourse.maas.io/t/-/4865), the feature that got the most votes -- [enlisting deployed machines](/t/what-is-new-with-maas-3-1/5964#heading--enlist-deployed-machines) -- was actually delivered as part of MAAS version 3.1.  This doesn't mean we'll build every requested feature, or that we'll get to them as quickly as you might need them.  The point is that we listen and try to respond, so it's worth your time to let us know what you need.
 
 ## What will help us
 
@@ -21,3 +21,4 @@ That said, there are some key points of information that will help us bring you 
 - They are accompanied by contact information, even if it's indirect or semi-anonymous, so that we can get back to you with questions.
 
 The better the case, the better the chances we'll consider picking up the feature in a future release.  As stated above, there are no guarantees, but we do listen and consider well-spoken arguments.
+
