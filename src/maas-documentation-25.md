@@ -137,7 +137,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Python API client](/t/-/5404)
 - [API documentation](https://maas.io/docs/api)`↗`
 
-### Scripts reference
+### [Scripts reference](/t/-/5375)
 
 - [Commissioning scripts](/t/-/6605)
 - [Hardware test scripts](/t/-/5392)
@@ -186,6 +186,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/5375 | /docs/maas-scripts-reference                                  |
 | https://discourse.maas.io/t/-/6665 | /docs/api-reference                                           |
 | https://discourse.maas.io/t/-/6950 | /docs/general-reference                                       |
 | https://discourse.maas.io/t/-/6949 | /docs/how-to-contribute-doc                                   |
@@ -926,7 +927,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6500 | /docs/how-to-use-virtual-machines                             |
 | https://discourse.maas.io/t/-/6503 | /docs/how-to-secure-maas                                      |
 | https://discourse.maas.io/t/-/6510 | /docs/about-maas-events                                       |
-| https://discourse.maas.io/t/-/6605 | /docs/commissioning-scripts-tech-reference                    |
+| https://discourse.maas.io/t/-/6605 | /docs/commissioning-scripts-reference                    |
 | https://discourse.maas.io/t/-/6658 | /docs/how-to-deploy-a-rt-kernel-via-cloud-init                |
 | https://discourse.maas.io/t/-/6678 | /docs/about-maas                                              |
 | https://discourse.maas.io/t/-/6680 | /docs/about-networking                                        |
@@ -942,6 +943,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/commissioning-scripts-tech-reference         | /docs/commissioning-scripts-reference         |
 | /docs/how-to-terraform-with-maas                   | /docs/maas-terraform-reference                |
 | /docs/understanding-maas-audit-events              | /docs/about-maas-audit-events                 |
 | /docs/how-to-gauge-maas-performance                | /docs/about-maas-performance                  |
