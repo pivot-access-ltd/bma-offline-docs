@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/audit-event-logs-reference.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="basic-tutorials.html">
+	  Basic tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="maas-bootstrap-tutorial.html">
+	    MAAS bootstrap tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="custom-image-tutorial.html">
+	    Custom image tutorial
+	  </a>
+	</li>
+	<li>
+	  <a href="using-jq-with-the-maas-cli.html">
+	    Using jq with the MAAS CLI
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-install-maas.html">
+	    Install MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-change-maas-settings.html">
+	    Change MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-get-help.html">
+	    Ask for help
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-a-feature.html">
+	    Request a feature
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-report-a-bug.html">
+	    Report a bug
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-availability-zones.html">
+	    Manage zones (AZs)
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-acquire-images.html">
+	  How to acquire images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-build-custom-images.html">
+	    Build custom images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-tune-controllers.html">
+	  How to tune controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-adjust-your-controllers.html">
+	    Adjust your controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-physical-machines.html">
+	  How to deploy physical machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-deploy-virtual-machines.html">
+	  How to deploy virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-vm-hosts.html">
+	    Create VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-create-and-manage-vms.html">
+	    Create and manage VMs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-and-find-machines.html">
+	  How to label and find machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to diagnose issues
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-work-with-log-files.html">
+	    Work with log files
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-work-with-audit-event-logs.html">
+	    Work with audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to work securely
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	How to operate reliably
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-keep-maas-backed-up.html">
+	    Keep MAAS backed up
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-observe-a-live-maas.html">
+	    Observe a live MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-protect-your-secrets.html">
+	How to protect your secrets
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-enable-vault.html">
+	    Enable Vault
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-unseal-vault.html">
+	    Unseal Vault
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	API reference
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    API client
+	  </a>
+	</li>
+	<li>
+	  <a href="../../api/docs">
+	    API documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-technical-reference.html">
+	  MAAS technical reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-log-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-performance.html">
+	    MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="power-management-reference.html">
+	    Power management
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-provider-reference.html">
+	    Terraform provider
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Audit event logs reference</h1><!-- "Audit event logs reference" -->
+<p>Audit events are a subset of the MAAS event logs.  This article will provide reference material for those who want to review and report on events designated as MAAS audit events.</p>
+<p><a href="#heading--about-maas-audit-events"><h2 id="heading--about-maas-audit-events">About MAAS audit events</h2></a></p>
+<p>MAAS audit events can be viewed using the CLI with a command similar to the following:</p>
+<pre><code class="language-nohighlight">maas $PROFILE events query level=AUDIT
+</code></pre>
+<p>Such a command would produce JSON output like this:</p>
+<pre><code class="language-nohighlight">Machine-readable output follows:
+{
+    &quot;count&quot;: 14,
+    &quot;events&quot;: [
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: &quot;e86c7h&quot;,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 12729,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 25 Apr. 2022 21:51:23&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Started deploying 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: &quot;e86c7h&quot;,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 12725,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 25 Apr. 2022 21:51:18&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Acquired 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 12502,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 25 Apr. 2022 21:44:51&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Aborted 'commissioning' on 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 12497,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 25 Apr. 2022 21:41:52&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Started commissioning on 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 12493,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 25 Apr. 2022 21:41:18&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Started releasing 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 12486,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 25 Apr. 2022 21:40:42&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Acquired 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 12479,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Mon, 25 Apr. 2022 21:40:34&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Started releasing 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 134,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 21 Apr. 2022 19:36:48&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Started deploying 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;valued-moth&quot;,
+            &quot;id&quot;: 130,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 21 Apr. 2022 19:36:21&quot;,
+            &quot;type&quot;: &quot;Node&quot;,
+            &quot;description&quot;: &quot;Acquired 'valued-moth'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;unknown&quot;,
+            &quot;id&quot;: 18,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 21 Apr. 2022 19:21:46&quot;,
+            &quot;type&quot;: &quot;Settings&quot;,
+            &quot;description&quot;: &quot;Updated configuration setting 'completed_intro' to 'True'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;unknown&quot;,
+            &quot;id&quot;: 14,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 21 Apr. 2022 19:20:49&quot;,
+            &quot;type&quot;: &quot;Settings&quot;,
+            &quot;description&quot;: &quot;Updated configuration setting 'upstream_dns' to '8.8.8.8'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;unknown&quot;,
+            &quot;id&quot;: 13,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 21 Apr. 2022 19:20:49&quot;,
+            &quot;type&quot;: &quot;Settings&quot;,
+            &quot;description&quot;: &quot;Updated configuration setting 'maas_name' to 'neuromancer'.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;unknown&quot;,
+            &quot;id&quot;: 12,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 21 Apr. 2022 19:20:47&quot;,
+            &quot;type&quot;: &quot;Settings&quot;,
+            &quot;description&quot;: &quot;Updated configuration setting 'http_proxy' to ''.&quot;
+        },
+        {
+            &quot;username&quot;: &quot;admin&quot;,
+            &quot;node&quot;: null,
+            &quot;hostname&quot;: &quot;unknown&quot;,
+            &quot;id&quot;: 11,
+            &quot;level&quot;: &quot;AUDIT&quot;,
+            &quot;created&quot;: &quot;Thu, 21 Apr. 2022 19:20:24&quot;,
+            &quot;type&quot;: &quot;Authorisation&quot;,
+            &quot;description&quot;: &quot;Logged in admin.&quot;
+        }
+    ],
+    &quot;next_uri&quot;: &quot;/MAAS/api/2.0/events/?op=query&amp;level=AUDIT&amp;owner=admin&amp;after=12729&quot;,
+    &quot;prev_uri&quot;: &quot;/MAAS/api/2.0/events/?op=query&amp;level=AUDIT&amp;owner=admin&amp;before=11&quot;
+}
+</code></pre>
+<p>These MAAS audit events consist of the following information:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><strong>username</strong>: the name of the user whose actions triggered the event.  This field is frequently blank, since many recordable events are triggered by MAAS and not by a specific user.</li>
+<li><strong>node</strong>: this is the <code>$SYSTEM_ID</code> frequently used in the CLI to reference node.  This field is filled if a particular node participated in the event, even if the node did not trigger that event.  </li>
+<li><strong>hostname</strong>: this is the node which triggered the event.  Generally, this will be the name of the region controller, the name of a machine, or blank.  Blank entries are events triggered by MAAS itself, such as <code>Starting rack boot image import</code>, which are not triggered by node. </li>
+<li><strong>id</strong>: a unique ID number assigned to table records as a primary key.</li>
+<li><strong>level</strong>: the level of event, such as AUDIT, DEBUG, etc.</li>
+<li><strong>created</strong>: the timestamp when this event entry was created.</li>
+<li><strong>description</strong>: a long text description of what took place. This field is almost always populated; this is the primary information used for auditing MAAS events.</li>
+<li><strong>type</strong>: this is the type of event that occurred, as shown in the following table.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUTHORISATION</td>
+<td>Authorisation</td>
+</tr>
+<tr>
+<td>IMAGES</td>
+<td>Images</td>
+</tr>
+<tr>
+<td>NETWORKING</td>
+<td>Networking</td>
+</tr>
+<tr>
+<td>NODE</td>
+<td>Node</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_BLOCK_DEVICE</td>
+<td>Node Block Device hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_BMC</td>
+<td>Node BMC hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_CPU</td>
+<td>Node CPU hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_INTERFACE</td>
+<td>Node Interface hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_MEMORY</td>
+<td>Node Memory hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_PCI_DEVICE</td>
+<td>Node PCI Device hardware sync state change</td>
+</tr>
+<tr>
+<td>NODE_HARDWARE_SYNC_USB_DEVICE</td>
+<td>Node USB Device hardware sync state chage</td>
+</tr>
+<tr>
+<td>POD</td>
+<td>Pod</td>
+</tr>
+<tr>
+<td>SETTINGS</td>
+<td>Settings</td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>Tag</td>
+</tr>
+<tr>
+<td>ZONES</td>
+<td>Zones</td>
+</tr>
+</tbody>
+</table>
+<p>For information on how to use these audit events to answer specific questions, see <a href="how-to-work-with-audit-event-logs.html">How to work with audit event logs</a>.</p>
+    </div>
+  </body>
+</html>
