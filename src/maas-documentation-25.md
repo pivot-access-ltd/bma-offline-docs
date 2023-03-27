@@ -147,7 +147,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [curtin reference]()
 -->
 
-### Log reference
+### [Log reference](/t/-/6956)
 
 - [Event logs](/t/-/5252)
 - [Audit event logs](/t/-/5256)
@@ -186,6 +186,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6956 | /docs/maas-logs-reference                                     |
 | https://discourse.maas.io/t/-/5375 | /docs/maas-scripts-reference                                  |
 | https://discourse.maas.io/t/-/6665 | /docs/api-reference                                           |
 | https://discourse.maas.io/t/-/6950 | /docs/general-reference                                       |
@@ -927,7 +928,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | https://discourse.maas.io/t/-/6500 | /docs/how-to-use-virtual-machines                             |
 | https://discourse.maas.io/t/-/6503 | /docs/how-to-secure-maas                                      |
 | https://discourse.maas.io/t/-/6510 | /docs/about-maas-events                                       |
-| https://discourse.maas.io/t/-/6605 | /docs/commissioning-scripts-reference                    |
+| https://discourse.maas.io/t/-/6605 | /docs/commissioning-scripts-reference                         |
 | https://discourse.maas.io/t/-/6658 | /docs/how-to-deploy-a-rt-kernel-via-cloud-init                |
 | https://discourse.maas.io/t/-/6678 | /docs/about-maas                                              |
 | https://discourse.maas.io/t/-/6680 | /docs/about-networking                                        |
