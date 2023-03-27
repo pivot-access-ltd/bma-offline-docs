@@ -131,7 +131,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 - [Glossary](/t/-/5416)
 - [Code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
 
-### API reference
+### [API reference](/t/-/6665)
 
 - [API authentication](/t/-/5060)
 - [Python API client](/t/-/5404)
@@ -186,6 +186,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 | TOPIC                              | PATH                                                          |
 |------------------------------------|---------------------------------------------------------------|
+| https://discourse.maas.io/t/-/6665 | /docs/api-reference                                           |
 | https://discourse.maas.io/t/-/6950 | /docs/general-reference                                       |
 | https://discourse.maas.io/t/-/6949 | /docs/how-to-contribute-doc                                   |
 | https://discourse.maas.io/t/-/6802 | /docs/how-to-use-our-discourse-forum                          |
