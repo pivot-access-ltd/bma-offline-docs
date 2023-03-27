@@ -15,4 +15,4 @@ The how-to guides in this section give directions on how to achieve your goals w
 | [How to give and receive help](/t/how-to-give-and-receive-help/5428)     | Instructions for getting help, support, and technical advice about MAAS           |
 |                                                                          |                                                                                   |
 
-Make sure to also check out the [Tutorials](/t/-/6140) for step-by-step instructions that help you get familiar with MAAS, as well as the [Reference](/t/-/6143) and [Explanation](/t/-/6141) sections for other helpful information.
+Make sure to also check out the [Tutorials](/t/tutorials/6140) for step-by-step instructions that help you get familiar with MAAS, as well as the [Reference](/t/reference/6143) and [Explanation](/t/explanation/6141) sections for other helpful information.
