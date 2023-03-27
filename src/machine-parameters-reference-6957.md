@@ -1,13 +1,14 @@
-<!-- "General reference" -->
+<!-- "Machine parameters reference" -->
+This reference guide provides detailed parameters related to various machine operations.
 
-The reference material in this section provides technical descriptions of MAAS and related tools.
+## [Power drivers](/t/-/5246)
 
-|                    |                                                                           |
-|--------------------|---------------------------------------------------------------------------|
-| General reference  | Release notes, settings. glossary, and the like                           |
-| API reference      | Documentation on the MAAS API, its clients, and authentication mechanisms |
-| Scripts            | Information about scripts for commissioning, cloud-init, curtin, etc.     |
-| Logs               | Details on the many MAAS log files and what they contain                  |
-| Machine parameters | Everything you need to know about power drivers and storage layouts       |
+MAAS provides a wide range of power drivers, each with their own extensive parameter set.
 
-Make sure to also check out the [Tutorials](/t/tutorials/6140) for step-by-step instructions that help you get familiar with MAAS, the [How-to guides](/t/how-to-guides/6663) for instructions on how to achieve specific goals when using MAAS, and the [Explanation](/t/explanation/6141) section for background information.
+## [Storage layouts](/t/-/5973)
+
+MAAS supports a number of unique storage formats with their own specific parameter sets.
+
+## [Device labelling](/t/-/6941)
+
+MAAS parameterises device labelling in a useful way.
