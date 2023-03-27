@@ -5,7 +5,7 @@ MAAS provides a number of different scripting tools to control and drive its ope
 
 MAAS provides an extensive commissioning toolset, embodied in it flexible commissioning scripts mechanism.
 
-## [Hardware test scripts](/t/-/5932)
+## [Hardware test scripts](/t/-/5392)
 
 MAAS is capable of testing hardware thoroughly, in a customisable way.
 
