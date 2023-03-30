@@ -137,7 +137,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 | 2     | machine-parameters-reference      | [Machine parameters reference](/t/-/6957)                       |
 | 3     | power-drivers-reference           | [Power drivers](/t/-/5246)                                      |
 | 3     | storage-layouts-reference         | [Storage layouts](/t/-/5973)                                    |
-|       | device-labelling                  | [Device labelling](/t/-/6941)                                   |
+| 3     | device-labelling                  | [Device labelling](/t/-/6941)                                   |
 | 0     |                                   |                                                                 |
 | 1     | explanation                       | [Explanation](/t/-/6141)                                        |
 | 2     | about-maas                        | [About MAAS](/t/-/6678)                                         |
