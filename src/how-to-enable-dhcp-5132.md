@@ -13,7 +13,6 @@ This article will help you learn:
 - [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
 - [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
 - [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
-- [How to configure external DHCP](#heading--external-dhcp-and-a-reserved-ip-range)
 - [How to use a DHCP relay](#heading--dhcp-relay)
 - [How to customise MAAS with DHCP snippets](#heading--dhcp-snippets)
 [/tab]
@@ -21,7 +20,6 @@ This article will help you learn:
 - [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
 - [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
 - [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
-- [How to configure external DHCP](#heading--external-dhcp-and-a-reserved-ip-range)
 - [How to use a DHCP relay](#heading--dhcp-relay)
 - [How to customise MAAS with DHCP snippets](#heading--dhcp-snippets)
 - [How to list DHCP snippets](#heading--list-snippets)
