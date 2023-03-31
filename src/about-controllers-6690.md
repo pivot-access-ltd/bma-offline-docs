@@ -27,6 +27,10 @@ Region controllers are responsible for either a data centre or a single region. 
 - interfacing with a running Prometheus instance
 - authenticating users and managing any user-initiated settings changes
 - handling certificates for VM hosts
+- keeps DNS up to date (listens for DNS changes, marks DNS for updates, and restarts `bind9`)
+- keeps the MAAS proxy up to date (listens for changes to the proxy, marks it for updates, and restarts the proxy)
+- keeps RBAC updated with any changes
+- manages access to secrets when Vault is in use
 
 Region controllers perform many other functions, but these are the most conspicuous.
 

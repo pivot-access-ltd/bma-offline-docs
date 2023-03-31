@@ -439,6 +439,10 @@
 <li>interfacing with a running Prometheus instance</li>
 <li>authenticating users and managing any user-initiated settings changes</li>
 <li>handling certificates for VM hosts</li>
+<li>keeps DNS up to date (listens for DNS changes, marks DNS for updates, and restarts <code>bind9</code>)</li>
+<li>keeps the MAAS proxy up to date (listens for changes to the proxy, marks it for updates, and restarts the proxy)</li>
+<li>keeps RBAC updated with any changes</li>
+<li>manages access to secrets when Vault is in use</li>
 </ul>
 <p>Region controllers perform many other functions, but these are the most conspicuous.</p>
 <p><a href="#heading--rack-controllers"><h3 id="heading--rack-controllers">About rack controllers</h3></a></p>
