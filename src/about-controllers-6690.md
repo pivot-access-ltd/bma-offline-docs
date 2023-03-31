@@ -17,7 +17,18 @@ A region controller consists of the following components:
 - caching HTTP proxy
 - web UI
 
-Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.
+Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.  A region controller typically manages activities like the following:
+
+- initiates and offers RPC endpoints to rack controllers
+- intercepting and routing API requests
+- handling the OpenAPI interface
+- getting image indexes, downloads, and attributes, via simplestreams
+- handling Macaroon authentication
+- interfacing with a running Prometheus instance
+- authenticating users and managing any user-initiated settings changes
+- handling certificates for VM hosts
+
+Region controllers perform many other functions, but these are the most conspicuous.
 
 <a href="#heading--rack-controllers"><h3 id="heading--rack-controllers">About rack controllers</h3></a>
 

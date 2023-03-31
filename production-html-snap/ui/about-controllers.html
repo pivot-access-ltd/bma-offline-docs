@@ -432,7 +432,18 @@
 <li>caching HTTP proxy</li>
 <li>web UI</li>
 </ul>
-<p>Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.</p>
+<p>Region controllers are responsible for either a data centre or a single region. Multiple fabrics are used by MAAS to accommodate subdivisions within a single region, such as multiple floors in a data centre.  A region controller typically manages activities like the following:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>initiates and offers RPC endpoints to rack controllers</li>
+<li>intercepting and routing API requests</li>
+<li>handling the OpenAPI interface</li>
+<li>getting image indexes, downloads, and attributes, via simplestreams</li>
+<li>handling Macaroon authentication</li>
+<li>interfacing with a running Prometheus instance</li>
+<li>authenticating users and managing any user-initiated settings changes</li>
+<li>handling certificates for VM hosts</li>
+</ul>
+<p>Region controllers perform many other functions, but these are the most conspicuous.</p>
 <p><a href="#heading--rack-controllers"><h3 id="heading--rack-controllers">About rack controllers</h3></a></p>
 <p>A rack controller provides four services:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
