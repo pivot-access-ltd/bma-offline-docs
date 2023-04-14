@@ -167,7 +167,67 @@ Note that you will need multiple rack controllers to achieve specific [high avai
 
 Most likely, you would only “unregister” an extra, unnecessary rack controller.  In this case, you need to <em>delete</em> it from the region API server; there is no ‘unregister’ command.
 
+[tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="CLI"]
+To delete a controller:
+
+1. Select *Hardware > Controllers*.
+
+2. Select the checkbox(es) for the controller(s) you with to delete.
+
+3. Select *Take action > Delete*.
+
+4. Confirm by selecting *Delete controller*.
+
+There is no undo.
+[/tab]
+[tab version="v3.4 Snap,v3.4 Packages" view="CLI"]
+To delete a rack controller, execute the command:
+
+```
+maas $PROFILE rack-controller delete $SYSTEM_ID
+```
+
+where `$PROFILE` is your admin profile name, and `$SYSTEM_ID` can be found by examining the output of the command:
+
+```
+maas $PROFILE rack-controllers read
+```
+
+There is no confirmation step, so make sure you have the right rack controller before proceeding.
+[/tab]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
 To do so, navigate to the ‘Controllers’ page of the web UI. Enter the controller’s page by clicking on the machine you want to delete and select ‘Delete’ from the drop-down (and then ‘Delete controller’). MAAS will do the right thing if the controller is used for DHCP HA; that is, the DHCP HA needs to be disabled.
+[/tab]
+[tab version="v3.4 Snap,v3.4 Packages" view="CLI"]
+To delete a controller:
+
+1. Select *Hardware > Controllers*.
+
+2. Select the checkbox(es) for the controller(s) you with to delete.
+
+3. Select *Take action > Delete*.
+
+4. Confirm by selecting *Delete controller*.
+
+There is no undo.
+[/tab]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+To delete a rack controller, execute the command:
+
+```
+maas $PROFILE rack-controller delete $SYSTEM_ID
+```
+
+where `$PROFILE` is your admin profile name, and `$SYSTEM_ID` can be found by examining the output of the command:
+
+```
+maas $PROFILE rack-controllers read
+```
+
+There is no confirmation step, so make sure you have the right rack controller before proceeding.
+[/tab]
+[/tabs]
 
 Although similar, this is not the same as deletion. Here, you are deleting a machine that is a part of MAAS itself.
 
@@ -189,31 +249,12 @@ Take these warnings to heart.  It may seem like a faster approach to "bridge" yo
 
 <a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">How to move a rack controller from one MAAS instance to another</h2></a>
 
-[tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."
-[/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
-In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
-
-```
-maas $PROFILE rack-controller delete $SYSTEM_ID
-```
-
-where `$PROFILE` is your admin profile name, and `$SYSTEM_ID` can be found by examining the output of the command:
-
-```
-maas $PROFILE rack-controllers read
-```
-
-There is no confirmation step, so make sure you have the right rack controller before proceeding.
-[/tab]
-[/tabs]
+In effect, there is no such action as moving a rack controller. Instead, you [unregister](#heading--unregister-a-rack-controller) (delete) the rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance. 
 
 Next, you must register a new rack controller, which is always done from the command line.
 
 [tabs]
-[tab version="v3.3 Snap"]
+[tab version="v3.4Snap,v3.3 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
@@ -222,7 +263,7 @@ sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MA
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
-[tab version="v3.3 Packages"]
+[tab version="v3.4 Packages,v3.3 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
 ```
