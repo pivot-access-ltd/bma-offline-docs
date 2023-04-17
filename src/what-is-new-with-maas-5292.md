@@ -5,7 +5,23 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
-We are happy to announce that MAAS 3.3 RC2 has been released, with [one additional bug fixes](#heading--MAAS-3-3-RC1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+<a href="#heading--MAAS-3-3-1-has-been-released"><h2 id="heading--MAAS-3-3-1-has-been-released">MAAS 3.3.1 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:
+
+- [1773150](https://bugs.launchpad.net/maas/+bug/1773150) smartctl verify fails due to Unicode in Disk Vendor Name
+- [1993618](https://bugs.launchpad.net/maas/+bug/1993618) Web UI redirection policy can invalidate HAProxy and/or TLS setup
+- [1996997](https://bugs.launchpad.net/maas/+bug/1996997) LXD resources fails on a Raspberry Pi with no Ethernet
+- [2003310](https://bugs.launchpad.net/maas/+bug/2003310) Refresh scripts are not re-run if they pass, but fail to report the results to the region
+- [2008275](https://bugs.launchpad.net/maas/+bug/2008275) Intel AMT support is broken in MAAS 3.3.0
+- [2009137](https://bugs.launchpad.net/maas/+bug/2009137) MAAS OpenApi Schema missing parameters
+- [2009140](https://bugs.launchpad.net/maas/+bug/2009140) MAAS OpenApi Schema cutoff variable names
+- [2009186](https://bugs.launchpad.net/maas/+bug/2009186) CLI results in connection timed out when behind haproxy and 5240 is blocked
+- [2009805](https://bugs.launchpad.net/maas/+bug/2009805) machine deploy install_kvm=True fails
+
+<a href="#heading--MAAS-3-3-has-been-released"><h2 id="heading--MAAS-3-3-has-been-released">MAAS 3.3 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3 has been released, with [one additional bug fix](#heading--MAAS-3-3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
@@ -41,8 +57,6 @@ Several forward-looking improvements are included as well:
 
 - Shifting the MAAS API documentation toward [OpenAPI standards](https://www.openapis.org/)`↗`
 
-- Shifting the MAAS documentation toward the [Diátaxis](https://diataxis.fr/)`↗` style of documentation
-
 These will be documented later in blog posts.
 
 
@@ -53,14 +67,14 @@ This release also includes well over one-hundred [bug fixes](#heading--MAAS-3.3-
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 
 [note]
-**NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+**NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.  Also note, though, that Postgres 14 does not run on Focal 20.04 LTS.
 [/note]
 
 <a href="#heading--fresh-install-3-3-snap"><h3 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h3></a>
 
 To install MAAS 3.3 from a snap, simply enter the following:
 
-    $ sudo snap install --channel=3.3/candidate maas
+    $ sudo snap install --channel=3.3 maas
 
 After entering your password, the snap will download and install from the 3.3 channel.
 
@@ -68,7 +82,7 @@ After entering your password, the snap will download and install from the 3.3 ch
 
 Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.3 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=3.3/candidate maas
+    $ sudo snap refresh --channel=3.3 maas
 
 After entering your password, the snap will refresh from the 3.3 candidate channel.  You will **not** need to re-initialise MAAS.
 
@@ -155,9 +169,9 @@ To install MAAS in a production configuration, you need to setup PostgreSQL, as 
 
 To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
 
-1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 14) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
 
-        sudo apt update -y
+        sudo apt update
         sudo apt install -y postgresql
 
 2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.
@@ -182,10 +196,10 @@ Don't worry; if you leave out any of the database parameters, you'll be prompted
 
 <a href="#heading--fresh-install-3-3-packages"><h3 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h3></a>
 
-The recommended way to set up an initial MAAS environment is to put everything on one machine:
+MAAS 3.3 from packages runs on 22.04 LTS only.  The recommended way to set up an initial MAAS environment is to put everything on one machine:
 
 ``` bash
-sudo apt-add-repository ppa:maas/3.3-next
+sudo apt-add-repository ppa:maas/3.3
 sudo apt update
 sudo apt-get -y install maas
 ```
@@ -211,7 +225,7 @@ These two steps will lead you through two similar <code>apt</code> install seque
 
 <a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h3 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h3></a>
 
-If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS or higher, by executing the following command:
+If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
 
 ```nohighlight
 lsb_release -a
@@ -225,7 +239,7 @@ Release:	xx.yy
 Codename:	$RELEASE_NAME
 ```
 
-The minimum “xx.yy” required for MAAS 3.2 is “22.04,” code-named “jammy”.
+The required “xx.yy” required for MAAS 3.3 is “22.04,” code-named “jammy”.
 
 If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:
 
@@ -249,9 +263,9 @@ A successful upgrade should respond with output similar to the following:
 
 ```nohighlight
 Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04(.nn) LTS
-Release:	20.04
-Codename:	focal
+Description:	Ubuntu 22.04(.nn) LTS
+Release:	22.04
+Codename:	jammy
 ```
 
 If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the following procedures should work, note that they are untested. Use at your own risk. Start by making a verifiable backup; see step 1, below.
@@ -261,7 +275,7 @@ Back up your MAAS server completely; the tools and media are left entirely to yo
 Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:
 
 ```nohighlight
-sudo apt-add-repository ppa:maas/3.3-next
+sudo apt-add-repository ppa:maas/3.3
 ```
 
 Run the release upgrade like this, answering any questions with the given default values:
@@ -276,14 +290,14 @@ Check whether your upgrade has been successful by entering:
 lsb_release -a
 ```
 
-If the ugprade was successful, this command should yield output similar to the following:
+If the upgrade was successful, this command should yield output similar to the following:
 
 ```nohighlight
 No LSB modules are available.
 Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04(.nn) LTS
-Release:	20.04
-Codename:	focal
+Description:	Ubuntu 22.04(.nn) LTS
+Release:	22.04
+Codename:	jammy
 ```
 
 Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you’re running the 3.3 release.
@@ -829,7 +843,7 @@ So far in MAAS 3.3, we've fixed well over 100 bugs:
 - [1890262](https://bugs.launchpad.net/bugs/1890262)`↗`: UI: Error message with a custom image URL doesn't clear
 - [1893226](https://bugs.launchpad.net/bugs/1893226)`↗`: Machine-specific minimal commissioning kernel resets to MAAS wide default
 - [1893670](https://bugs.launchpad.net/bugs/1893670)`↗`: UI: display bios_boot_mode in the web UI
-- [1898131](https://bugs.launchpad.net/bugs/1898131)`↗`: IP address gets hidden, instead of subnet when window is resized
+- 1898131: IP address gets hidden, instead of subnet when window is resized
 - [1905636](https://bugs.launchpad.net/bugs/1905636)`↗`: UI: CentOS 7 is the default over CentOS 8
 - [1909348](https://bugs.launchpad.net/bugs/1909348)`↗`: MAAS 2.9.0 DNS zone remove @ labels impossible
 - [1913800](https://bugs.launchpad.net/bugs/1913800)`↗`: PCI and USB information missing from controllers page
@@ -938,7 +952,7 @@ More bug-fixes are planned for later 3.3 releases.
 - [1988229](https://bugs.launchpad.net/bugs/1988229)`↗`: dhcp snippet create fails when dhcp subnet is relayed regression
 - [1990383](https://bugs.launchpad.net/bugs/1990383)`↗`: Link subnet on new machine
 - [1992330](https://bugs.launchpad.net/bugs/1992330)`↗`: Use the rack controller IP as DNS when relaying DHCP
-- [1993032](https://bugs.launchpad.net/bugs/1993032)`↗`: maas_hardware_sync creds are readable to local users on deployed OS and can give a super user access to MAAS itself
+- 1993032: maas_hardware_sync creds are readable to local users on deployed OS and can give a super user access to MAAS itself
 - [1993152](https://bugs.launchpad.net/bugs/1993152)`↗`: Updating a VM host through API unset tags
 - [1994899](https://bugs.launchpad.net/bugs/1994899)`↗`: MAAS cannot mark "broken" VMs as fixed without recommissioning
 - [1995397](https://bugs.launchpad.net/bugs/1995397)`↗`: Sentry blocked by CORS
@@ -955,6 +969,14 @@ More bug-fixes are planned for later 3.3 releases.
 <a href="#heading--MAAS-3-3-RC1-bug-list"><h3 id="heading--MAAS-3-3-RC1-bug-list">MAAS 3.3 RC1 bug list</h3></a>
 
 - [1997975](https://bugs.launchpad.net/maas/+bug/1997975)`↗`: Update grafana_agent/agent.yaml.example
+
+<a href="#heading--MAAS-3-3-RC3-bug-list"><h3 id="heading--MAAS-3-3-RC3-bug-list">MAAS 3.3 RC3 bug list</h3></a>
+
+- [1990172](https://bugs.launchpad.net/maas/+bug/1990172)`↗`: "20-maas-03-machine-resources" commissioning script improperly reports a Pass when the test fails 
+
+<a href="#heading--MAAS-3-3-bug-list"><h3 id="heading--MAAS-3-3-bug-list">MAAS 3.3.0 bug list</h3></a>
+
+- [2003888](https://bugs.launchpad.net/maas/+bug/2003888)`↗`: Grouped machine list view: Inconsistent display when machine state changes
 
 <a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
 
