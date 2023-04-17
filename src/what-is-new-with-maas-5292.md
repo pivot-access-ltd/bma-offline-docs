@@ -5,6 +5,16 @@ Here you will find release notes for:
 - [The current version of MAAS](#heading--current-maas-release-notes)
 - [Other MAAS versions](#heading--other-maas-versions)
 
+<a href="#heading--MAAS-3-3-2-has-been-released"><h2 id="heading--MAAS-3-3-2-has-been-released">MAAS 3.3.2 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.2 has been release with the following bug fixes:
+
+- [1990867](https://bugs.launchpad.net/maas/+bug/1990867)	TestImportBootImages - test_update_last_image_sync_end_to_end_import_not_performed
+- [1990872](https://bugs.launchpad.net/maas/+bug/1990872)	Flaky test: TestClusterClient - test_registerRackWithRegion_end_to_end
+- [2011822](https://bugs.launchpad.net/maas/+bug/2011822)	Reverse DNS resolution fails for some machines
+- [2012139](https://bugs.launchpad.net/maas/+bug/2012139)	maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled
+- [1986590](https://bugs.launchpad.net/maas/+bug/1986590)	maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named 'provisioningserver'
+
 <a href="#heading--MAAS-3-3-1-has-been-released"><h2 id="heading--MAAS-3-3-1-has-been-released">MAAS 3.3.1 has been released</h2></a>
 
 We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:
@@ -263,9 +273,9 @@ A successful upgrade should respond with output similar to the following:
 
 ```nohighlight
 Distributor ID:	Ubuntu
-Description:	Ubuntu 22.04(.nn) LTS
-Release:	22.04
-Codename:	jammy
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
 ```
 
 If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the following procedures should work, note that they are untested. Use at your own risk. Start by making a verifiable backup; see step 1, below.
@@ -290,14 +300,14 @@ Check whether your upgrade has been successful by entering:
 lsb_release -a
 ```
 
-If the upgrade was successful, this command should yield output similar to the following:
+If the ugprade was successful, this command should yield output similar to the following:
 
 ```nohighlight
 No LSB modules are available.
 Distributor ID:	Ubuntu
-Description:	Ubuntu 22.04(.nn) LTS
-Release:	22.04
-Codename:	jammy
+Description:	Ubuntu 20.04(.nn) LTS
+Release:	20.04
+Codename:	focal
 ```
 
 Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you’re running the 3.3 release.
