@@ -98,9 +98,9 @@ MAAS 3.2 provides greatly [expanded tagging capability](/t/how-to-tag-machines/5
 
 MAAS 3.2 rounds out the feature set with a few more items:
 
-- [Support for observability (O11y) in MAAS](/t/how-to-set-up-maas-metrics/5204): MAAS now supports integration with FOSS Observability stacks.
+- [Support for observability (O11y) in MAAS](/t/how-to-monitor-maas/5204): MAAS now supports integration with FOSS Observability stacks.
 
-- [Ability for user to specify IPMI cipher suite](/t/power-management-reference/5246): You can explicitly select which cipher suite to use when interacting with a BMC.
+- [Ability for user to specify IPMI cipher suite](/t/power-drivers-reference/5246): You can explicitly select which cipher suite to use when interacting with a BMC.
 
 - Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We've eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.
 

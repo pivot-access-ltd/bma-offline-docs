@@ -422,8 +422,10 @@
 
 <p><a href="#heading--MAAS-3.2-release-notes"><h2 id="heading--MAAS-3.2-release-notes">MAAS 3.2 release notes</h2></a></p>
 <p>Here you will find release notes for all releases under the 3.2 version.</p>
+<p><a href="#heading--MAAS-3-2-7-release-notes"><h2 id="heading--MAAS-3-2-7-release-notes">MAAS 3.2.7 release notes</h2></a></p>
+<p>We are happy to announce that MAAS 3.2.7 has been released.  This point releease of MAAS 3.2 provides a number of <a href="#heading--MAAS-3-2-7-bug-fixes">high-profile bug fixes</a>.</p>
 <p><a href="#heading--3-2-6-maas-release-notes"><h2 id="heading--3-2-6-maas-release-notes">MAAS 3.2.6 release notes</h2></a></p>
-<p>We are happy to announced that MAAS 3.2.6 has been released. This point release of MAAS 3.2 provides a fix for a critical bug that prevented MAAS from enlisting machines on subnets with active DNS:</p>
+<p>We are happy to announce that MAAS 3.2.6 has been released. This point release of MAAS 3.2 provides a fix for a critical bug that prevented MAAS from enlisting machines on subnets with active DNS:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <h1>1989970 <a href="https://bugs.launchpad.net/bugs/1989970">Can&rsquo;t enlist machines on subnets with DNS set</a><code>↗</code></h1>
@@ -506,10 +508,10 @@
 <p>MAAS 3.2 rounds out the feature set with a few more items:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
-<p><a href="how-to-set-up-maas-metrics.html">Support for observability (O11y) in MAAS</a>: MAAS now supports integration with FOSS Observability stacks.</p>
+<p><a href="how-to-monitor-maas.html">Support for observability (O11y) in MAAS</a>: MAAS now supports integration with FOSS Observability stacks.</p>
 </li>
 <li>
-<p><a href="power-management-reference.html">Ability for user to specify IPMI cipher suite</a>: You can explicitly select which cipher suite to use when interacting with a BMC.</p>
+<p><a href="power-drivers-reference.html">Ability for user to specify IPMI cipher suite</a>: You can explicitly select which cipher suite to use when interacting with a BMC.</p>
 </li>
 <li>
 <p>Roll-out of our new tabbed Reader Adaptive Documentation (incremental across the release cycle): We&rsquo;ve eliminated the top menus; each page now contains information for all versions, selectable by dropdowns above the relevant sections.</p>
@@ -531,6 +533,23 @@ sudo apt install maas
 <pre><code>sudo apt upgrade maas
 </code></pre>
 <p>At this point, proceed with a normal installation.</p>
+<p><a href="#heading--MAAS-3-2-7-bug-fixes"><h2 id="heading--MAAS-3-2-7-bug-fixes">MAAS 3.2.7 bug fixes</h2></a></p>
+<p>The following bugs have been fixed in MAAS 3.2.7:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/maas/+bug/1989974">1989974</a>: rackd fails on CIS-hardened machine with &ldquo;Failed to update and/or record network interface configuration: Expecting value: line 1 column 1 (char 0)&rdquo;</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1938296">1938296</a>: MAAS 3.0 incorrectly calculates the amount of free space on drive       High    Alberto Donato  Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1982866">1982866</a>: MAAS Breaks historical custom images        High    Christian Grabowski     Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1988759">1988759</a>: Provisioning LXD vmhost fails       High    Alberto Donato  Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990014">1990014</a>: regiond.conf &ldquo;debug_http: true&rdquo; causes image downloads from regiond to fail with 500 error code     High    Anton Troyanov  Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1992185">1992185</a>: unable to deploy a machine with vmhost if a bond interface was created      High    Alberto Donato  Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1993152">1993152</a>: Updating a VM host through API unset tags       High    Alberto Donato  Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1993289">1993289</a>: Pod storage pool path can&rsquo;t be blank        High    Alberto Donato  Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1992330">1992330</a>: Use the rack controller IP as DNS when relaying DHCP        Medium  Björn Tillenius     Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1993618">1993618</a>: Web UI redirection policy can invalidate HAProxy and/or TLS setup       Medium  Anton Troyanov  Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1994945">1994945</a>: Failure to create ephemeral VM when no architectures are found on the VM host       Medium  Igor Brovtsin   Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1996419">1996419</a>: renaming a DNS record to a previous name fails with error: list.remove(x): x not in list        Medium      Fix Released</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1996997">1996997</a>: LXD resources fails on a Raspberry Pi with no Ethernet</li>
+</ul>
 <p><a href="#heading--bugs-fixed-in-maas-3-2"><h2 id="heading--bugs-fixed-in-maas-3-2">Bugs fixed in MAAS 3.2</h2></a></p>
 <p>Here is the breakdown of bugs fixed across the MAAS 3.2 release:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
