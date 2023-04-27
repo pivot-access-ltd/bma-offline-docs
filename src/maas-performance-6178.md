@@ -29,14 +29,14 @@ For example, comparing MAAS 3.2 to MAAS 3.1, machine listings load, on average, 
 
 Here's a short history of our performance efforts to date:
 
-- This [video show-and-tell](https://dicourse.maas.io/t/maas-show-and-tell-is-maas-fast-yet/6105)`↗` documents recent efforts to improve MAAS peformance, with quantitative results.
-- Here's some [work done by the UI team](https://dicourse.maas.io/t/maas-ui-improving-the-performance-of-maas-ui/5820)`↗` to improve the performance of the UI.
+- This [video show-and-tell](https://discourse.maas.io/t/maas-show-and-tell-is-maas-fast-yet/6105)`↗` documents recent efforts to improve MAAS peformance, with quantitative results.
+- Here's some [work done by the UI team](https://discourse.maas.io/t/maas-ui-improving-the-performance-of-maas-ui/5820)`↗` to improve the performance of the UI.
 
 Note that this list only captures the bigger, sustained efforts, although there is a constant focus on weeding out slowdowns when we come across them.
 
 <a href="#heading--collecting-your-own-metrics"><h2 id="heading--collecting-your-own-metrics">Collecting your own metrics</h2></a>
 
-It's possible to [collect your own MAAS metrics](/t/how-to-observe-a-live-maas/5204) -- and even share them with the MAAS engineering team.  We are keen to know everything we can about machine counts, network sizes, and MAAS performance in all areas.  Please use the [discourse performance forum](https://discourse.maas.io/c/maas-performance/26)`↗` to share your feedback and observations.
+It's possible to [collect your own MAAS metrics](/t/how-to-monitor-maas/5204) -- and even share them with the MAAS engineering team.  We are keen to know everything we can about machine counts, network sizes, and MAAS performance in all areas.  Please use the [discourse performance forum](https://discourse.maas.io/c/maas-performance/26)`↗` to share your feedback and observations.
 
 <a href="#headings--recent-developments"><h2 id="heading--recent-developments">Recent developments</h2></a>
 
