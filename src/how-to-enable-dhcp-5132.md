@@ -9,14 +9,14 @@ If needed, you can review an [explanation of MAAS  DHCP](/t/how-to-set-up-networ
 This article will help you learn:
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
 - [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
 - [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
 - [How to use a DHCP relay](#heading--dhcp-relay)
 - [How to customise MAAS with DHCP snippets](#heading--dhcp-snippets)
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to enable MAAS-managed DHCP](#heading--enabling-dhcp)
 - [How to resolve IP conflicts](#heading--resolving-ip-conflicts)
 - [How to extend a reserved dynamic IP range](#heading--extending-a-reserved-dynamic-ip-range)
@@ -36,7 +36,7 @@ This article will help you learn:
 <a href="#heading--enabling-dhcp"><h3 id="heading--enabling-dhcp">How to enable MAAS-managed DHCP</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To enable MAAS-managed DHCP:
 
 1. Select *Subnets*.
@@ -66,7 +66,7 @@ To enable MAAS-managed DHCP:
 8. You will need to select *Configure DHCP* for your changes to be registered with MAAS.
 
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To enable DHCP on a VLAN in a certain fabric, enter the following command:
 
 ``` nohighlight
@@ -115,7 +115,7 @@ To relay from one VLAN (source) to another VLAN (target):
 2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/maas-glossary/5246#heading--dhcp-relay) for software suggestions.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 3.  Configure MAAS-managed DHCP as normal.
 
 4. Navigate to the source VLAN page.
@@ -126,7 +126,7 @@ To relay from one VLAN (source) to another VLAN (target):
 
 6. Select *Relay DHCP* to finish.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 3. To relay DHCP traffic for a VLAN (source) through another VLAN (target):
 
 ``` nohighlight
@@ -146,7 +146,7 @@ maas $PROFILE vlan update 2 0 relay_van=5002
 For an explanation of DHCP snippets, see [About networking](/t/about-networks/6680#heading--About-MAAS-DHCP-snippets).
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
 <a href="#heading--How-to-manage-DHCP-snippets"><h4 id="heading--How-to-manage-DHCP-snippets">How to manage DHCP snippets</h4></a>
 
@@ -186,7 +186,7 @@ To edit a snippet, select the pencil icon to the right of the snippet row and ed
 
 To delete a snippet, select the trash can icon to the right of the snippet.  You will be asked to confirm; be aware that once confirmed, this action cannot be undone.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 <a href="#heading--How-to-create-a-global-DHCP-snippet"><h4 id="heading--How-to-create-a-global-DHCP-snippet">How to create a global DHCP snippet</h4></a>
 
@@ -334,7 +334,7 @@ This section gives specific instructions about creating and managing IP ranges; 
 For an explanation of MAAS IP ranges, see [About networks](/t/about-networks/6680#heading--MAAS-IP-ranges). Also, see the [glossary](/t/maas-glossary/5416#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
 <a href="#heading--create-a-range"><h3 id="heading--create-a-range">How to create an IP range</h3></a>
 
@@ -362,7 +362,7 @@ To edit an IP range, click on the pencil icon to the right of a range and make c
 
 To delete an IP range, click on the trash can icon to the right of a range.  You will be asked to confirm by selecting *Delete*; there is no undo.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 <a href="#heading--create-a-range"><h3 id="heading--create-a-range">How to create an IP range</h3></a>
 
@@ -400,7 +400,7 @@ maas $PROFILE ipaddresses release ip=$IP_STATIC_SINGLE
 [/tabs]
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
 <a href="#heading--edit-a-range"><h3 id="heading--edit-a-range">How to edit an existing IP range</h3></a>
 
@@ -420,7 +420,7 @@ maas $PROFILE ipaddresses release ip=$IP_STATIC_SINGLE
 
 3. Select *Save* to register your changes.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 <a href="#heading--edit-a-range"><h3 id="heading--edit-a-range">How to edit an existing IP range</h3></a>
 

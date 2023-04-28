@@ -1,15 +1,15 @@
-<!-- "Devcie labelling reference" -->
+<!-- "Device labelling reference" -->
 <a href="#heading--tag-definition-reference"><h2 id="heading--tag-definition-reference">Tag definition reference examples</h2></a>
 
 Here are some examples of tag definitions -- [more examples are available](https://github.com/canonical/mxt)`↗`.
 
 Commonly used Xpath functions usually include:
 
-* contains
-* starts-with
-* ends-with
+- contains
+- starts-with
+- ends-with
 
-### Example 1
+<a href="#heading--Example-1"><h3 id="heading--Example-1">Example 1</h3></a>
 
 This definition will identify machines with proper CPU tags, cores, and RAM, and tag them as a hypervisor:
 
@@ -36,7 +36,7 @@ definition='//node[@id="memory"]/size >= "274877906944" and \
 //node[@id="cpu"]//capabilities/capability/@id = "vnmi"'
 ```
 
-### Example 2
+<a href="#heading--Example-2"><h3 id="heading--Example-2">Example 2</h3></a>
 
 This will tag UEFI enabled KVM VMs running on AMD-based servers:
 
@@ -52,7 +52,7 @@ kernel_opts='nomodeset console=tty0 console=ttyS0,115200n8 amd_iommu=on kvm-amd.
 comment='Tag for automatically identifying AMD-based KVM vms (UEFI BIOS)'
 ```
 
-### Example 3
+<a href="#heading--Example-3"><h3 id="heading--Example-3">Example 3</h3></a>
 
 This will automatically tag servers that have NVME controllers:
 
@@ -64,7 +64,7 @@ To accomplish the same thing in the CLI:
 maas ${MAAS_PROFILE} tags create name=NVME comment="xpath tag for automatically tagging servers that have NVME controllers" definition='//node[@id="storage" and @class="storage"]/description = "Non-Volatile memory controller"'
 ```
 
-### Example 4
+<a href="#heading--Example-4"><h3 id="heading--Example-4">Example 4</h3></a>
 
 This will tag servers with Mellanox ConnectX-5 NICs:
 
@@ -79,7 +79,7 @@ definition='//node[@class="network"]/vendor[starts-with(.,"Mellanox")] and //nod
 comment='Tag for automatically identifying servers with Mellanox Technologies ConnectX-5 cards'
 ```
 
-### Example 5
+<a href="#heading--Example-5"><h3 id="heading--Example-5">Example 5</h3></a>
 
 This will enable GPU passthrough for Nvidia Quadro K series GPUs on AMD:
 

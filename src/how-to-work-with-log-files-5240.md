@@ -1,7 +1,7 @@
 <!-- "How to work with log files" -->
 MAAS has a robust logging capability, which presents several different views, including a number of node-specific log files and several syslogd-style text logs.  Each of these logs provides different information, or at the very least, different views of the same information.  MAAS gathers logging information about the various MAAS states and records both automated and user-driven actions.
 
-#### This document will help you learn:
+This document will help you learn:
 
 - [About the syslog logging path](#heading--path)
 - [How to use a remote syslog server](#heading--using-a-remote-syslog-server)
@@ -15,38 +15,19 @@ It also links to reference material for:
 
 The discussion of these logs and their contents can be very extensive, so each type of logging has its own documentation section, reachable from the left-hand menu -- or from the list of questions above.
 
-<a href="#heading--path"><h2 id="heading--path">About the syslog logging path</h2></a>
-
-[tabs]
-[tab version="v3.2 Snap"] 
-Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="v3.2 Packages"] 
-Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="v3.1 Snap"] 
-Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="v3.1 Packages"] 
-Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="v3.0 Snap"] 
-Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="v3.0 Packages"] 
-Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="v2.9 Snap"] 
-Syslog data is kept in `/var/snap/maas/common/log/rsyslog/<machine-name><yyyy-mm-dd>/messages`. Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[tab version="v2.9 Packages"] 
-Syslog data is kept in `/var/log/maas/rsyslog/<machine-name><yyyy-mm-dd>/messages`.  Every machine known to MAAS will have corresponding syslogs.
-[/tab]
-[/tabs]
 
 <a href="#heading--using-a-remote-syslog-server"><h2 id="heading--using-a-remote-syslog-server">How to use a remote syslog server</h2></a>
 
 [tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+To add a remote syslog server:
+
+1. Select *Settings* in the left navigation panel.
+
+2. Under *Network* in the *Settings* navigation panel, select *Syslog*.
+
+3. Under *Remote syslog server to forward machine logs*, enter the IP or URL for your syslog server.
+[/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"] 
 To add a remote syslog server, click the Settings tab and then click the Network services tab. Scroll down to the Syslog section, where you can add a syslog URL or IP:
 
@@ -54,7 +35,7 @@ To add a remote syslog server, click the Settings tab and then click the Network
 
 Click the Save button to save your changes.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To add or update a remote syslog server in your MAAS environment:
 
 ``` bash
@@ -81,7 +62,7 @@ Note that MAAS controllers' syslogs are not forwarded to the external syslog ser
 [/tab]
 [/tabs]
 
-<a href="#heading--Using-the-logs-directly"><h3 id="heading--Using-the-logs-directly">Using the logs directly</h3></a>
+<a href="#heading--Using-the-logs-directly"><h2 id="heading--Using-the-logs-directly">Using the logs directly</h2></a>
 
 By the way, if you're interested in reading the logs, and you're using snaps, you'll find what you need here:
 
@@ -123,7 +104,7 @@ Not all of this output is relevant, nor does it all trigger a recorded MAAS even
 
 In fact, probably the best way to review events is via the CLI sub-command, `events query`. This sub-command can help you filter and summarise events.  Let's take a look at how this tool works.
 
-<a href="#heading--Basic-queries"><h4 id="heading--Basic-queries">Basic queries</h4></a>
+<a href="#heading--Basic-queries"><h3 id="heading--Basic-queries">Basic queries</h3></a>
 
 MAAS events can be queried with the simple CLI command:
 
@@ -184,7 +165,7 @@ These listings can be very long and very hard to read.  You'll also notice that 
 
 Let's explore both of these things in turn.
 
-<a href="#heading--using-jq-with-events"><h4 id="heading--using-jq-with-events">Using jq with events</h4></a>
+<a href="#heading--using-jq-with-events"><h3 id="heading--using-jq-with-events">Using jq with events</h3></a>
 
 We offer a [more complete tutorial on jq](/t/using-jq-with-the-maas-cli/6027) in this documentation set, but for now, we can give you some invocations that will make events much easier to read.  Let's take our example command above and add some `jq` to it to make the output more readable:
 
@@ -225,7 +206,7 @@ unknown   pbpncx  ruling-bobcat  WARNING  Thu, 10 Mar. 2022 18:01:47  Failed to 
 
 You'll notice, in this listing, we have a mix of event types and responses.  In one case, the log even recorded a code exception.  You can probably see from this listing that events can be very helpful in tracking behaviours and resolving issues with your MAAS instance.  Even limited to 20 records, though, this output is still hard to parse, so let's explore ways to filter this table.
 
-<a href="#heading--filter-parameters"><h4 id="heading--filter-parameters">Filter parameters</h4></a>
+<a href="#heading--filter-parameters"><h3 id="heading--filter-parameters">Filter parameters</h3></a>
 
 The `events query` command accepts several different filters, all of them optional:
 
@@ -247,7 +228,7 @@ The `events query` command accepts several different filters, all of them option
 
 This list of filters gives us a few different ways to simplify the output.  Let's try some of these combinations on the sample data, above.
 
-<a href="#heading--hostname-filter"><h4 id="heading--hostname-filter">Hostname, system ID, and MAC address filters</h4></a>
+<a href="#heading--hostname-filter"><h3 id="heading--hostname-filter">Hostname, system ID, and MAC address filters</h3></a>
 
 We can limit the hostname to, say, "new-name" by entering the following:
 
@@ -293,7 +274,7 @@ maas $PROFILE events query limit=5 mac_address=52:54:00:32:8b:ea\
 
 In this particular case, all three would yield identical outputs.
 
-<a href="#heading--zone-filter"><h4 id="heading--zone-filter">Zone filter</h4></a>
+<a href="#heading--zone-filter"><h3 id="heading--zone-filter">Zone filter</h3></a>
 
 We can look up one of the zones (using the Web UI or other CLI commands), and formulate a filter like this:
 
@@ -317,7 +298,7 @@ unknown   mm3tc8  fair-marten  WARNING  Tue, 27 Sep. 2022 21:36:22  Failed to qu
 unknown   mm3tc8  fair-marten  WARNING  Tue, 27 Sep. 2022 21:31:22  Failed to query node's BMC  Failed to login to virsh console.
 ```
 
-<a href="#heading--level-filter"><h4 id="heading--level-filter">Level filter</h4></a>
+<a href="#heading--level-filter"><h3 id="heading--level-filter">Level filter</h3></a>
 
 We can choose to look at specific events that match a logging level.  For example, we can repeat this command with `level=AUDIT`:
 
@@ -351,7 +332,7 @@ In fact, there are several different levels associated with MAAS events:
 - DEBUG: information which would help debug MAAS behaviour; shows `DEBUG` and `INFO` events.  Typical `DEBUG` events involve routine image import activities, for example.
 - AUDIT: information which helps determine settings and user actions in MAAS; shows only `AUDIT` events.  They are [covered in more detail elsewhere](/t/understanding-maas-audit-events/6372).
 
-<a href="#heading--combining-filters"><h4 id="heading--combining-filters">Combining filters</h4></a>
+<a href="#heading--combining-filters"><h3 id="heading--combining-filters">Combining filters</h3></a>
 
 We can combine the `level` parameter with the `zone` parameter:
 
@@ -397,7 +378,7 @@ admin       8r6pw7  karura    AUDIT  Wed, 21 Sep. 2022 14:00:01  Node  Tagging '
 admin       8r6pw7  karura    AUDIT  Wed, 21 Sep. 2022 13:58:11  Node  Untagging 'karura'.
 ```
 
-<a href="#heading--limit-filter"><h4 id="heading--limit-filter">The limit filter</h4></a>
+<a href="#heading--limit-filter"><h3 id="heading--limit-filter">The limit filter</h3></a>
 
 You can use the `limit` filter to restrict the number of records listed, as we have been doing in many of the examples above.  We can expand the last example to `limit=7`, for instance:
 
@@ -423,7 +404,7 @@ admin       8r6pw7  karura    AUDIT  Wed, 21 Sep. 2022 13:57:48  Node  Tagging '
 admin       7h3cw7  polong    AUDIT  Tue, 13 Sep. 2022 14:14:24  Node  Powered on 'polong'.
 ```
 
-<a href="#heading--before-and-after-filters"><h4 id="heading--before-and-after-filters">The before and after filters</h4></a>
+<a href="#heading--before-and-after-filters"><h3 id="heading--before-and-after-filters">The before and after filters</h3></a>
 
 Let's suppose that we want to repeat the query in the last example, but we want to start from the beginning of the event log (whenever that might have been).  We could modify the above command to something like this:
 
@@ -707,7 +688,7 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 
 You can also use the [various event filters](/t/understanding-maas-events/6373#heading--filter-parameters) with `level=AUDIT` to further restrict your output.
 
-<a href="#heading--The-meaning-of-audit-events"><h4 id="heading--The-meaning-of-audit-events">The meaning of audit events</h4></a>
+<a href="#heading--The-meaning-of-audit-events"><h3 id="heading--The-meaning-of-audit-events">The meaning of audit events</h3></a>
 
 Let's walk through a sample of, say, eighteen audit events and see how to interpret and use them.  
 
@@ -778,7 +759,7 @@ The key for the table columns is as follows:
 - *SZ* - can set the zone for a machine.
 - *Del* - can delete the machine.
 
-<a href="#heading--Using-audit-events-to-find-out-what-happened"><h4 id="heading--Using-audit-events-to-find-out-what-happened">Using audit events to find out what happened</h4></a>
+<a href="#heading--Using-audit-events-to-find-out-what-happened"><h3 id="heading--Using-audit-events-to-find-out-what-happened">Using audit events to find out what happened</h3></a>
 
 Consider these example events that audit state changes:
 
@@ -830,7 +811,7 @@ This is a long (but varied) listing, so there are many questions you might be ab
 
 Audit events don't answer all questions, but they help you discover whom to ask.
 
-<a href="#heading--Auditing-with-finesse"><h4 id="heading--Auditing-with-finesse">Auditing with finesse</h4></a>
+<a href="#heading--Auditing-with-finesse"><h3 id="heading--Auditing-with-finesse">Auditing with finesse</h3></a>
 
 You can use the MAAS CLI, `jq`, and command line text tools to finesse your auditing.  First, you'll have to get a feel for how MAAS describes audit events:
 

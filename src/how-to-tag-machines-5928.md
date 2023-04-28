@@ -23,12 +23,55 @@ To download hardware configuration information in XML format:
 
 You can [learn more about these attributes](https://ezix.org/project/wiki/HardwareLiSter)`↗` if desired.  Note that:
 
-* Size and capacity can have various meanings depending on the device
-* The size of a node is always equal to its capacity
-* Serial refers to the device’s serial number, but is used to report the MAC address for network devices, GUID for disk partition.
+- Size and capacity can have various meanings depending on the device
+- The size of a node is always equal to its capacity
+- Serial refers to the device’s serial number, but is used to report the MAC address for network devices, GUID for disk partition.
 
 You can also find device classes from the same sources. 
 
+<a href="#heading--Automatic-tags"><h2 id="heading--Automatic-tags">Automatic tags</h2></a>
+
+MAAS 3.2 and above provide greatly expanded tagging capability. You can auto-apply tags to machines that match a custom XPath expression. Setting up an automatic tag lets you recognise special hardware characteristics and settings, e.g., the gpu passthrough.
+
+[tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+<a href="#heading--how-to-create-automatic-tags"><h2 id="heading--how-to-create-automatic-tags">How to create automatic tags</h1></a>
+
+To create automatic tags:
+
+1. Select *Organisation > Tags*.
+
+2. Select *Create new tag*.
+
+3. Enter the *Tag name*.
+
+4. Optionally enter a *Comment*.
+
+5. Optionally enter *Kernel options*.
+
+6. Enter an XPath-based *Definition*.  A tag is considered automatic when the definition field is filled with an XPath expression. The current version of our UI will only validate if your XPath expression is valid or not, but it will not show you which machines it will apply to before you create the tag.
+
+7. Select *Save* to register your changes.
+
+Once an automatic tag is created the screen will initially show that 0 machines are tagged. That is because MAAS is running a background task to auto-apply the tag to matching machines. It can take some time to see that the number of machines tagged is populating. 
+
+[note]
+Kernel options will be applied at boot time. So by default kernel options will not be applied to any machines until they are deployed. If machines are deployed before they are tagged, the kernel option will be applied when these machines are redeployed.
+[/note]
+
+<a href="#heading--how-to-update-automatic-tags"><h2 id="heading--how-to-update-automatic-tags">How to update the definition of a tag</h2></a>
+
+1. Select *Organisation > Tags*.
+
+2. Select the pencil icon on the right end of the tag's row.
+
+3. Edit the *Definition*.
+
+4. Select *Save* to register your changes.
+
+Keep in mind that when a new definition is updated, MAAS will re-tag all the machines that match with the new definition. This can take some time, since it is a background process. 
+[/tab]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
 <a href="#heading--how-to-create-automatic-tags"><h2 id="heading--how-to-create-automatic-tags">How to create automatic tags</h1></a>
 
 To create automatic tags:
@@ -68,6 +111,17 @@ Kernel options will be applied at boot time. So by default kernel options will n
 5. Select *Save* to register your changes.
 
 Keep in mind that when a new definition is updated, MAAS will re-tag all the machines that match with the new definition. This can take some time, since it is a background process. 
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+Automatic tags are only available in MAAS 3.2 and above.
+[/tab]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="CLI"]
+Automatic tags are only available via the MAAS UI.
+[/tab]
+[tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+Automatic tags are only available in MAAS 3.2 and above.
+[/tab]
+[/tabs]
 
 <a href="#heading--update-tag-kernel-options"><h2 id="heading--update-tag-kernel-options">How to update the kernel options on a tag</h2></a>
 
@@ -122,7 +176,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="sysrq_always_enabled dyndbg='file drivers/usb/* +p' 
 
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages" view="UI"]
 <a href="#heading--create-and-assign-tags"><h2 id="heading--create-and-assign-tags">How to create and assign tags</h2></a>
 
 In the MAAS UI, creating and assigning tags is a combined operation; that is, you create tags as you assign them, rather than creating them first.  Creating tags in the UI is a little different user experience: there is a self-loading completion menu that collects all tags of a similar type.  This completion menu helps you avoid misspelling tags when entering them more than once; otherwise, you might not be able to group and filter tags properly. It also makes tag entry more efficient.
@@ -217,7 +271,7 @@ To remove (unassign) a tag:
 
 Note that the tag you just removed will be deleted from  the tag auto complete list when it is no longer assigned to any  machines.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--create-a-tag"><h2 id="heading--create-a-tag">How to create a tag</h2></a>
 
 With the CLI, you can create a tag with the following command:

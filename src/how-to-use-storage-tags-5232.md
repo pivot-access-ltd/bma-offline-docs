@@ -2,7 +2,7 @@
 This article explains:
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to create and assign block device tags](#heading--create-and-assign-block-device-tags)
 - [How to remove and delete block device tags](#heading--remove-and-delete-block-device-tags)
 - [How to list block device and partition tags](#heading--list-block-device-and-partition-tags)
@@ -80,8 +80,6 @@ You can view the various storage tags in this table.
 
 To view all tags associated with partitions on a given machine:
 
-To view all tags associated with block devices on a given machine:
-
 1. Select *Machines*.
 
 2. Select the machine you want to examine.
@@ -92,7 +90,7 @@ To view all tags associated with block devices on a given machine:
 
 You can view the various storage tags in this table.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 - [How to discover the ID of your block device](#heading--discover-the-id-of-your-block-device) 
 - [How to assign tags to a block device](#heading--assign-tags-to-a-block-device)

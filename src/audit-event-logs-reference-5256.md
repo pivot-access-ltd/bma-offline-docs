@@ -191,4 +191,4 @@ These MAAS audit events consist of the following information:
 | TAG | Tag |
 | ZONES | Zones |
 
-For information on how to use these audit events to answer specific questions, see [How to work with audit event logs](/t/how-to-work-with-audit-event-logs/5987).
+For information on how to use these audit events to answer specific questions, see [How to work with audit event logs](/t/how-to-audit-maas/5987).

@@ -1,4 +1,4 @@
-<!-- "How to install MAAS" -->
+<!-- "How to do a fresh install of MAAS" -->
 
 MAAS is relatively easy to install and configure.  Let's give it a try.
 
@@ -242,13 +242,13 @@ Note that for most situations, you can use `localhost` for `$HOSTNAME`.
 3. Create a suitable PostgreSQL user:
 
 ```nohighlight
-sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+sudo -i -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
 ```
 
 4. Create the MAAS database:
 
 ```nohighlight
-sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+sudo -i -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
 ```
 
 5. Edit `/etc/postgresql/14/main/pg_hba.conf` and add a line for the newly created database:

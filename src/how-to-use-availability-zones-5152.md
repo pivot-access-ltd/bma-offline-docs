@@ -11,6 +11,74 @@ This article will help you learn:
 You can find more theory about availability zones [elsewhere in this documentation set](/t/about-networking/6680#heading--about-availability-zones).
 
 [tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+<a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
+
+To see a list of availability zones, select *AZs* from the top tab bar.
+
+<a href="#heading--add-a-zone"><h2 id="heading--add-a-zone">How to add an availability zone</h2></a>
+
+To create a zone:
+
+1. Select *AZs*.
+
+2. Select *Add AZ*.
+
+3. Enter a *Name* for the zone.
+
+4. Optionally enter a *Description* for the zone.
+
+5. Select *Add AZ* to register your changes.
+
+<a href="#heading--edit-a-zone"><h2 id="heading--edit-a-zone">How to edit an existing availability zone</h2></a>
+
+To edit a zone:
+
+1. Select *AZs*.
+
+2. Select an AZ by clicking on its name.
+
+3. Select *Edit* on the far right.
+
+4. Update the *Name* for the zone, if desired.
+
+5. Optionally update the *Description* for the zone, if desired.
+
+6. Select *Update AZ* to register your changes.
+
+<a href="#heading--delete-a-zone"><h2 id="heading--delete-a-zone">How to delete an existing availability zone</h2></a>
+
+To delete a zone:
+
+1. Select *AZs*.
+
+2. Select an AZ by clicking on its name.
+
+3. Select *Delete AZ* in the top right corner.
+
+4. Update the *Name* for the zone, if desired.
+
+5. Confirm by selecting the red *Delete AZ* button which appears.  Once you make this selection, the AZ will be deleted and no undo is possible.
+
+<a href="#heading--assign-a-node-to-a-zone"><h2 id="heading--assign-a-node-to-a-zone">How to assign a machine to an availability zone</h2></a>
+
+To assign a machine to a zone:
+
+1. Select *Machines*.
+
+2. Select one or more machines by clicking their checkboxes.
+
+3. Select *Categorise >> Set zone**.
+
+4. In the popup dialogue, choose the *Zone* from the dropdown.
+
+5. Select *Set zone for machine* to register your changes.
+
+
+<a href="#heading--allocate-a-node-in-a-zone"><h2 id="heading--allocate-a-node-in-a-zone">How to allocate a machine in a particular zone</h2></a>
+
+Allocating a machine in a particular zone can only be done via the MAAS CLI.
+[/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
 
@@ -80,7 +148,7 @@ You can also change the zone for a machine under *Machines >> "machine-name" >> 
 
 Allocating a machine in a particular zone can only be done via the MAAS CLI.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 <a href="#heading--list-zones"><h2 id="heading--list-zones">How to list availability zones</h2></a>
 

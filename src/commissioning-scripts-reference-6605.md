@@ -25,8 +25,8 @@ Metadata fields tell MAAS when to use the script, how it should run, and what in
 | | `disabled`: The script will run serially on its own. |
 | | `instance`: Runs in parallel only with other instances of the same script. |
 | | `any`: Runs in parallel alongside any other scripts with parallel set to any. |
-| `parameters`| What [parameters](#heading--parameters) the script accepts. |
-| `results`| What [results](#heading--results) the script will return. |
+| `parameters`| What parameters the script accepts. |
+| `results`| What results the script will return. |
 | `packages`| List of packages to be installed or extracted before running the script. Packages must be specified as a dictionary. For example, `packages: {apt: stress-ng}`, would ask `apt` to install stress-ng. Package sources can be any of the following: |
 | | `apt`: Use the Ubuntu apt repositories as configured by MAAS to install a package. |
 | | `snap`: Installs packages using [snap][snapcraft]. May also be a list of dictionaries. The dictionary must define the name of the  package to be installed, and optionally, the `channel`, `mode` and `revision`.|
@@ -161,7 +161,7 @@ else:
 fi
 ```
 
-<a href="#heading--commissioning-script-example-update-firmware"><h2 id="heading--commissioning-script-update-firmware">Commissioning script example: Update firmware</h2></a>
+<a href="#heading--commissioning-script-example-update-firmware"><h2 id="heading--commissioning-script-example-update-firmware">Commissioning script example: Update firmware</h2></a>
 
 Below is a sample script to update the mainboard firmware on an ASUS P8P67 Pro using a vendor-provided tool. The tool is automatically downloaded and extracted by MAAS. The script reboots the system to complete the update. The system will boot back into the MAAS ephemeral environment to finish commissioning and (optionally) testing.
 

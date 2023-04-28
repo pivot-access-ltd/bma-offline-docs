@@ -60,3 +60,4 @@ response = perform_API_request(
 
     http $MAAS_URL/api/2.0/users/ \
     Authorization:"OAuth oauth_version=1.0, oauth_signature_method=PLAINTEXT, oauth_consumer_key=$API_KEY[1], oauth_token=$API_KEY[2], oauth_signature=&$API_KEY[3], oauth_nonce=$(uuidgen), oauth_timestamp=$(date +%s)"
+	

@@ -2,7 +2,7 @@
 This article explains:
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to clone machines](#heading--how-to-clone-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
@@ -15,7 +15,7 @@ This article explains:
 - [How to use resource pools](#heading--how-to-use-resource-pools)
 - [How to use machine storage](#heading--how-to-use-machine-storage)
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="CLI"]
 - [How to create, delete, and configure machines](#heading--how-to-create-delete-and-configure-machines)
 - [How to clone machines](#heading--how-to-clone-machines)
 - [How to examine machines and machine details](#heading--how-to-examine-machines-and-machine-details)
@@ -41,7 +41,7 @@ Most of the day-to-day work of managing machines is covered here. Utilising mach
 This section shows you:
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 - [How to add a machine manually](#heading--how-to-add-a-machine-manually)
 - [How to add machines via a chassis](#heading--how-to-add-machines-via-a-chassis)
 - [How to manage attached USB and PCI devices](#heading--usb-pci-devices)
@@ -55,6 +55,43 @@ This section shows you:
 <a href="#heading--how-to-add-a-machine-manually"><h3 id="heading--how-to-add-a-machine-manually">How to add a machine manually</h3></a>
 
 [tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+To add a machine manually,
+
+1. Select *Machines*.
+
+2. Select *Add hardware > Machine.*
+
+3. Fill in the form and select *Save machine* to register your choice.
+
+4. Alternatively, you can select *Save and add another* to register your choice and repeat the form to add another machine.
+
+The fields on the "Add machine" screen include the following items:
+
+- **Machine name**: This field is used to identify the machine to the user.  It can be set to anything, though it is often set to the MAC address of the machine in question.  This field is optional, in that MAAS will assign a unique, nonsense name if you leave it blank.  You can change this nonsense name later, if desired.
+
+- **Domain**: This field sets the domain name of the domain managed by MAAS.  It can be set to anything; MAAS assigns the domain name "maas" by default.
+
+- **Architecture**: This field refers to the architecture of the machine being added.
+
+- **Minimum Kernel**: This field supplies a drop-down of possible kernels available for deployment on this machine.
+
+- **Zone**: This field allows you to set the availability zone, selected from AZs that you have already created (if any).
+
+- **Resource pool**: This field allows you to set the resource pool for this machine, selected from pools you have already created (if any).
+
+- **MAC Address**: You should fill in this field with the MAC address of the machine you are adding.  Note that the MAC address entered here must use a colon (":") separator, although some MAC addresses are written with dash ("-") separators.
+
+- **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management reference](/t/power-management-reference/5246) for details on the available power types and the relevant parameters for each type.
+
+<a href="#heading--how-to-add-machines-via-a-chassis"><h3 id="heading--how-to-add-machines-via-a-chassis">How to add machines via a chassis</h3></a>
+
+You can use the chassis feature to add multiple machines at once. To do this, instead of selecting *Machine* as above, choose *Chassis* from the drop-down menu.  The required fields will change based on the type of chassis you choose.
+
+[note]
+As with the manual method, the underlying machines will require netbooting.
+[/note]
+[/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 On the 'Machines' page of the web UI, click the 'Add hardware' button and then select 'Machine'.
 
@@ -93,7 +130,7 @@ As with the manual method, the underlying machines will require netbooting.
 [/note]
 
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a new machine at the command line, enter the following information:
 
 ```nohighlight
@@ -144,7 +181,7 @@ The variable fields in the `machines create` command (the `$...` items) are as f
 [/tabs]
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 <a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">How to manage attached USB and PCI devices</h3></a>
 
 To delete PCI/USB devices from the machine in any machine state, via the CLI only, using the following command:
@@ -167,6 +204,21 @@ MAAS version 2.9 does not recognise PCI and USB devices.  Please upgrade to MAAS
 [/tabs]
 
 [tabs]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+<a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a>
+
+1. Select *Machines*.
+
+2. Checkbox the machine you want to overwrite with a cloned copy of another machine.
+
+3. Select *Actions > Clone from*.
+
+4. *Select the source machine*.
+
+5. *Select what to clone*.
+
+6. Select *Clone to machine*.
+[/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 <a href="#heading--how-to-clone-machines"><h2 id="heading--how-to-clone-machines">How to clone machines</h2></a>
 
@@ -209,7 +261,7 @@ This section describes the various ways you can evaluate the health and status o
 - [How to find machine configuration info](#heading--machine-config)
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, enter a command similar to this one:
@@ -313,7 +365,116 @@ NETWORK: Vendor: Red Hat, Inc.
 .........Fabric: fabric-5 | MAAS DHCP: true | SR-IOV: 0
 ```
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+<a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
+
+To view the machine list, simply select *Machines*.
+
+<a href="#heading--how-to-view-machine-details"><h3 id="heading--how-to-view-machine-details">How to view machine details</h3></a>
+
+To open a detailed view of a machine's status and configuration:
+
+1. Select *Machines*.
+
+2. Click on a machine name.
+
+<a href="#heading--machine-interfaces"><h3 id="heading--machine-interfaces">How to find network info for a machine</h3></a>
+
+To find network info for a specific machine:
+
+1. Select *Machines*.
+
+2. Click on a machine name.
+
+3. Select *Network*.
+
+<a href="#heading--how-to-find-machine-storage-info"><h3 id="heading--how-to-find-machine-storage-info">How to find machine storage info</h3></a>
+
+To view/edit machine storage info:
+
+1. Select *Machines*.
+
+2. Click on a machine name.
+
+3. Select *Storage*.
+
+<a href="#heading--How-to-view-PCI-devices-for-a-given-machine"><h3 id="heading--How-to-view-PCI-devices-for-a-given-machine">How to view PCI devices for a given machine</h3></a>
+
+To view the list of PCI devices associated with a given machine:
+
+1. Select *Machines*.
+
+2. Click on a machine name.
+
+3. Select *PCI devices*
+
+<a href="#heading--How-to-view-USB-devices-for-a-given-machine"><h3 id="heading--How-to-view-USB-devices-for-a-given-machine">How to view USB devices for a given machine</h3></a>
+
+To view the list of USB devices associated with a given machine:
+
+1. Select *Machines*.
+
+2. Click on a machine name.
+
+3. Select *USB*.
+
+<a href="#heading--commissioning-log"><h3 id="heading--commissioning-log">How to find commissioning logs</h3></a>
+
+To view commissioning logs for a given machine:
+
+1. Select *Machines*.
+
+2. Click on a machine name.
+
+3. Select *Commissioning*.
+
+4. To examine an individual log, select *View details* at the end of the row for that log.
+
+5. To review the commissioning history, select *View previous tests* at the end of the row for that log.
+
+<a href="#heading--hardware-tests"><h3 id="heading--hardware-tests">How to find machine hardware & test logs</h3></a>
+
+To view commissioning logs for a given machine:
+
+1. Select *Machines*.
+
+2. Click on a machine name.
+
+3. Select *Test*.
+
+4. To examine an individual log, select *View details* at the end of the row for that log.
+
+5. To review the commissioning history, select *View previous tests* at the end of the row for that log.
+
+<a href="#heading--raw-log-output"><h3 id="heading--raw-log-output">How to find raw log output for a machine</h3></a>
+
+1. Select *Machines*.
+
+2. Click on the machine name.
+
+3. Select *Logs*.
+
+4. Select *Installation output*.
+
+<a href="#heading--event-logs"><h3 id="heading--event-logs">How to find a machine's event logs</h3></a>
+
+1. Select *Machines*.
+
+2. Click on the machine name.
+
+3. Select *Logs*.
+
+4. Using the *Download* dropdown, you can download logs in various formats.
+
+<a href="#heading--machine-config"><h3 id="heading--machine-config">How to find machine configuration info</h3></a>
+
+1. Select *Machines*.
+
+2. Click on the machine name.
+
+3. Select *Configuration*.
+[/tab]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-view-the-machine-list"><h3 id="heading--how-to-view-the-machine-list">How to view the machine list</h3></a>
 
 To view the machine list, select "Machines" on the top menu of the MAAS web UI:
@@ -408,6 +569,87 @@ More information on Power configuration will be found in the [Power management](
 This section will explain:
 
 [tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+- [How to add a resource pool](#heading--add-a-resource-pool)
+- [How to delete a resource pool](#heading--deleting-a-resource-pool)
+- [How to add a node to a resource pool](#heading--add-a-node-to-a-resource-pool)
+- [How to remove a node from a resource pool](#heading--removing-a-node-from-a-resource-pool)
+- [How to add a VM host to a resource pool](#heading--add-a-vm-host-to-a-resource-pool)
+- [How to remove a VM host from a resource pool](#heading--removing-a-vm-host-from-a-resource-pool)
+
+Administrators can manage resource pools on the Machines page in the web UI, under the Resource pools tab.   Also note that all MAAS installations have a resource pool named "default." MAAS automatically adds new machines to the default resource pool.
+
+<a href="#heading--add-a-resource-pool"><h3 id="heading--add-a-resource-pool">How to add a resource pool</h3></a>
+
+1. Select *Organisation > Pools > Add pool*.
+
+2. Enter a *Name* and -- optionally -- a *Description*.
+
+3. Select *Save pool* to register your changes.
+
+<a href="#heading--deleting-a-resource-pool"><h3 id="heading--deleting-a-resource-pool">How to delete a resource pool</h3></a>
+
+1. Select *Organisation > Pools*.
+
+2. Select the trashcan icon at the end of the pool's row.
+
+3. Select *Delete*.
+
+[note]
+If you delete a resource pool, all machines that belong to that resource pool will return to the default pool.
+[/note]
+
+<a href="#heading--add-a-node-to-a-resource-pool"><h3 id="heading--add-a-node-to-a-resource-pool">How to add a machine to a resource pool</h3></a>
+
+1. Select *Machines*.
+
+2. Select the machine(s) you wish to add to a resource pool.
+
+3. Select *Categorise > Set pool*.
+
+4. Choose *Select pool* and choose a pool from the *Resource pool* dropdown.
+
+5. Alternatively, choose *Create pool*, and create a new pool to assign.
+
+6. Select *Set pool...* to register your changes.
+
+<a href="#heading--removing-a-node-from-a-resource-pool"><h3 id="heading--removing-a-node-from-a-resource-pool">How to remove a machine from a resource pool</h3></a>
+
+1. Select *Machines*.
+
+2. Select the machine(s) you wish to add to a resource pool.
+
+3. Select *Categorise > Set pool*.
+
+4. Choose *Select pool* and choose "default" from the *Resource pool* dropdown.
+
+5. Select *Set pool...* to register your changes.
+
+<a href="#heading--add-a-vm-host-to-a-resource-pool"><h3 id="heading--add-a-vm-host-to-a-resource-pool">How to add a VM host to a resource pool</h3></a>
+
+1. Select *KVM > LXD*.
+
+2. Click on the VM host you wish to add to a resource pool.
+
+3. Select *KVM host settings*.
+
+4. Choose a *Resource pool*.
+
+5. Select *Save changes* to register your changes.
+
+<a href="#heading--removing-a-vm-host-from-a-resource-pool"><h3 id="heading--removing-a-vm-host-from-a-resource-pool">How to remove a VM host from a resource pool</h3></a>
+
+1. Select *KVM > LXD*.
+
+2. Click on the VM host you wish to add to a resource pool.
+
+3. Select *KVM host settings*.
+
+4. Choose the "default" *Resource pool*.
+
+5. Select *Save changes* to register your changes.
+
+[/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to add a resource pool](#heading--add-a-resource-pool)
 - [How to delete a resource pool](#heading--deleting-a-resource-pool)
@@ -457,7 +699,7 @@ You can add a VM host to a resource pool when you create a new VM host, or you c
 To remove a VM host from a resource pool, follow the same procedure you would use to add a VM host to a resource pool, except select "default" as the new resource pool. This action will return the machine to the default resource pool.
 
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to create a resource pool](#heading--creating-a-resource-pool)
 - [How to list available resource pools](#heading--list-available-resource-pools)
 - [How to list a single resource pool](#heading--list-a-single-resource-pool)
@@ -844,7 +1086,7 @@ driven-teal  tgaat6     farquar     foobar
 This section will explain:
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 - [How to set global storage layouts](#heading--how-to-set-global-storage-layouts)
 - [How to set per-machine storage layouts](#heading--how-to-set-per-machine-storage-layouts)
 - [How to specify conditional erasure types](#heading--how-to-specify-conditional-erasure-types)
@@ -870,12 +1112,12 @@ This section will explain:
 Layouts can be set globally and on a per-machine basis.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view=UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view=UI"]
 All machines will have a default layout applied when commissioned. An administrator can configure the default layout on the 'Settings' page, under the 'Storage' tab.
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/80de3bc701552cd00bec707830accf380c214b17.png"></a>
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 All machines will have a default layout applied when commissioned. To set the default storage layout for all machines:
 
 ```nohighlight
@@ -900,10 +1142,10 @@ The new default will only apply to newly-commissioned machines.
 <a href="#heading--how-to-set-per-machine-storage-layouts"><h3 id="heading--how-to-set-per-machine-storage-layouts">How to set per-machine storage layouts</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI: to see how, click the "CLI" option for your version and delivery method above.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 An administrator can set a storage layout for a machine with a status of ‘Ready’ like this:
 
 ```nohighlight
@@ -914,8 +1156,8 @@ For example, to set an LVM layout where the logical volume has a size of 5 GB:
 
 ```nohighlight
 maas $PROFILE machine set-storage-layout $SYSTEM_ID storage_layout=lvm lv_size=5368709120
+```
 
-```nohighlight
 You must specify all storage sizes in bytes.
 
 This action will remove the configuration that may exist on any block device.
@@ -927,7 +1169,7 @@ Only an administrator can modify storage at the block device level (providing th
 [/note]
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
 A default erasure configuration can be set on the 'Settings' page by selecting the 'Storage' tab.
@@ -943,7 +1185,7 @@ With the above defaults, the machine's view will look like this when the Release
 Where 'secure erase' and 'quick erase' can then be configured by the user.
 
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 
 <a href="#heading--how-to-erase-disks"><h3 id="heading--how-to-erase-disks">How to erase disks</h3></a>
 
@@ -1876,14 +2118,13 @@ maas $PROFILE vmfs-datastore delete $SYSTEM_ID $VMFS_ID
 <a href="#heading--how-to-define-custom-storage-layouts"><h2 id="heading--how-to-define-custom-storage-layouts">How to define custom storage layouts</h2></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages"]
 MAAS 3.1 allows you to define a custom storage layout for a machine, via a custom commissioning script.  You must upload a script which conforms to the following rules:
 
- * it must run after the `40-maas-01-machine-resources` script and before the `50-maas-01-commissioning` one, so it should have a name that starts with anything between `41-` and `49-`. This ensures the script can access the JSON file created by the former which provides info about the machine hardware and network resources. In addition, the custom script can directly inspect the machine it's running on to determine how to configure storage.
-* it can read machine hardware/network information from the JSON file at the path specified by `$MAAS_RESOURCES_FILE`
-* it must output a JSON file at the path specified by `$MAAS_STORAGE_CONFIG_FILE
-` with the desired storage layout
-* names of disks provided in the custom layout must match the ones detected by MAAS and provided in the resources file.
+- it must run after the `40-maas-01-machine-resources` script and before the `50-maas-01-commissioning` one, so it should have a name that starts with anything between `41-` and `49-`. This ensures the script can access the JSON file created by the former which provides info about the machine hardware and network resources. In addition, the custom script can directly inspect the machine it's running on to determine how to configure storage.
+- it can read machine hardware/network information from the JSON file at the path specified by `$MAAS_RESOURCES_FILE`
+- it must output a JSON file at the path specified by `$MAAS_STORAGE_CONFIG_FILE` with the desired storage layout
+- names of disks provided in the custom layout must match the ones detected by MAAS and provided in the resources file.
 
 ### Configuration format
 

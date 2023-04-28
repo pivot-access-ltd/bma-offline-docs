@@ -2,7 +2,7 @@
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller)`↗` card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
 <a href="#heading--about-ipmi-cipher-suites"><h2 id="heading--about-ipmi-cipher-suites">About IPMI cipher suites</h2></a>
 
 We require the user to explicitly set the cipher suite due to the fact that one BMC’s order is different from another, leading to erroneous discovery. You can explicitly select which cipher suite to use when interacting with a BMC. You do this by selecting the cipher suite in power configuration.  By default, the cipher suite is 3. This is the least secure suite. It is up to you to select a more secure suite if supported and desired.
@@ -51,10 +51,10 @@ If the machine has been enlisted by MAAS, you can also check the output of the `
 
 <a href="#heading--power-management-reference"><h2 id="heading--power-management-reference">Power management reference guide</h2></a>
 
-#### This article will help you learn:
+This article will help you learn:
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 - [How to configure a machine's power type](#heading--config-power-type)
 - [How to configure and use IBM Z with MAAS](#heading--configure-use-ibm-z)
 - [How to use the virsh power type](#heading--example-virsh-kvm-power-type)
@@ -72,7 +72,7 @@ In addition, this article provides a [complete catalogue of power parameters, by
 You may also like to try **[maaspower](https://gilesknap.github.io/maaspower/main/index.html)**`↗` which is a community project designed to be used with the MAAS webhook driver. It is a pluggable system that accepts MAAS webhooks and can translate them to other external systems. Note: it is not supported by Canonical.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">How to configure a machine's power type</h2></a>
 
 To configure a machine's power type, click on the machine from the 'Machines' page of the web UI, then select its 'Configuration' tab. Scroll down until you find the Power configuration. If the power type is undefined, the following will be displayed:
@@ -352,7 +352,7 @@ To that end, the "Required" column for this driver refers only to whether Webhoo
 | Power token | Power driver API token (used instead of user and password, if set) | Optional |
 | Verify SSL connections... | Boolean, whether or not to verify SSL connections with the system's root CA certificate | Required |
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--config-power-type"><h2 id="heading--config-power-type">How to configure a machine's power type</h2></a>
 
 To (re)configure a machine's power type, first find the machine's $SYSTEM_ID with the following recipe:
@@ -1036,7 +1036,7 @@ In the context of MAAS, the BMC is generally controlled by SNMP commands.  Any g
 `*` The 'Facebook's Wedge' OpenBMC power driver is considered experimental at this time.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages"]
 <a href="#heading--configure-use-ibm-z"><h2 id="heading--configure-use-ibm-z">How to configure and use IBM Z with MAAS</h2></a>
 
 The IBM Z or LinuxONE system can host MAAS controllers and is able to deploy predefined logical partitions (LPARs) KVM host(s), and virtual machines, if the mainframe is set up properly for MAAS.
@@ -1059,13 +1059,13 @@ MAAS will automatically configure option 1 for you, in case an LPAR is deployed 
 
 In order to achieve this configuration, there are a number of steps that must be executed; specifically, you must know how to:
 
-* [Evaluate IBM Z requirements](#heading--ibm-z-requirements)
-* [Login to the IBM Z](#heading--ibm-z-login)
-* [Set up a suitable partition for MAAS](#heading--set-up-ibm-z-partition)
-* [Set up networking for MAAS](#heading--set-up-ibm-z-networking)
-* [Set up storage for MAAS](#heading--set-up-ibm-z-storage)
-* [Set the partition boot parameters](#heading--set-the-boot-parameters)
-* [Set up your IBM Z virtual machines for enlistment](#heading--set-up-ibm-z-enlistment)
+- [Evaluate IBM Z requirements](#heading--ibm-z-requirements)
+- [Login to the IBM Z](#heading--ibm-z-login)
+- [Set up a suitable partition for MAAS](#heading--set-up-ibm-z-partition)
+- [Set up networking for MAAS](#heading--set-up-ibm-z-networking)
+- [Set up storage for MAAS](#heading--set-up-ibm-z-storage)
+- [Set the partition boot parameters](#heading--set-the-boot-parameters)
+- [Set up your IBM Z virtual machines for enlistment](#heading--set-up-ibm-z-enlistment)
 
 The MAAS controller does not necessarily need to run on an LPAR on the IBM Z system itself, but can also run on a different system outside. But since the MAAS controller requires a network connection to the hardware management console (HMC), it is recommended to keep it co-located and (for security reasons) as close as possible to the HMC and run it in a dedicated LPAR.
 
@@ -1079,18 +1079,18 @@ There are several constraints on the definition and setup of the 'machine' LPARs
 
 The system requirements to host MAAS and its virtual machines on the IBM Z platform are as follows:
 
-* IBM z14 GA2 (or newer) or IBM LinuxONE III (or newer)
-* HMC running in DPM mode (mandatory, traditional mode is not supported!)
-* HMC firmware level H39 - (HMC at H40 and SE at S55) 
-* HMCs Rest-API enabled 
-* python-zhmcclient (0.29 or later) running on the MAAS controller system, connected to the HMC
-* HMC user ID for the zhmcclient access to the HMC API (must have permissions for the “Manage Web Services API Logs” role and “Manage Web Services API Logs” role)
-* I/O auto-configuration enabled for the ‘machine’ LPARs
-* zFCP (SCSI) disk storage (only, no DASD support), recommended are two disks, one defined as type ‘boot,’ the second as type ‘data’
-* a dedicated storage group per ‘machine’ LPAR; these must include the dedicated zFCP storage for this particular managed LPAR only (‘boot’ and ‘data’ for LPAR n) - but no additional shared storage!
-* qeth network devices (Hipersockets or OSA, recommended); at least one qeth NIC, recommended two (or more)
-* Ubuntu Server 20.04 installed on a dedicated system (LPAR or PC), that acts as MAAS Controller
-* one or more LPARs as ‘machines’ (aka MAAS deployment targets)
+- IBM z14 GA2 (or newer) or IBM LinuxONE III (or newer)
+- HMC running in DPM mode (mandatory, traditional mode is not supported!)
+- HMC firmware level H39 - (HMC at H40 and SE at S55) 
+- HMCs Rest-API enabled 
+- python-zhmcclient (0.29 or later) running on the MAAS controller system, connected to the HMC
+- HMC user ID for the zhmcclient access to the HMC API (must have permissions for the “Manage Web Services API Logs” role and “Manage Web Services API Logs” role)
+- I/O auto-configuration enabled for the ‘machine’ LPARs
+- zFCP (SCSI) disk storage (only, no DASD support), recommended are two disks, one defined as type ‘boot,’ the second as type ‘data’
+- a dedicated storage group per ‘machine’ LPAR; these must include the dedicated zFCP storage for this particular managed LPAR only (‘boot’ and ‘data’ for LPAR n) - but no additional shared storage!
+- qeth network devices (Hipersockets or OSA, recommended); at least one qeth NIC, recommended two (or more)
+- Ubuntu Server 20.04 installed on a dedicated system (LPAR or PC), that acts as MAAS Controller
+- one or more LPARs as ‘machines’ (aka MAAS deployment targets)
 
 Be aware that these are minimum system requirements.
 

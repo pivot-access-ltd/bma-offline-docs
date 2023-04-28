@@ -88,7 +88,7 @@ Following on from MAAS 2.7, we are happy to announce that MAAS 2.8 is now availa
 
 MAAS 2.8 adds the beta capability to use LXD-based VM hosts and virtual machines (VMs), in addition to the [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt)-based`↗` VM hosts/VMs already available.  These new LXD VM hosts use the same underlying technology as libvirt (QEMU)`↗`. Unlike libvirt KVMs, though, LXD VMs can be managed without requiring SSH access to the VM host. LXD are remotely accessed via secure HTTP transport, which provides better security for LXD-based VMs. In addition, LXD has a better API, and is part of a much larger constellation of enterprise software, offering a wider range of future features and use cases.
 
-## UI performance improvements for the machine listing page
+<a href="#heading--UI-performance-improvements-for-the-machine-listing-page"><h2 id="heading--UI-performance-improvements-for-the-machine-listing-page">UI performance improvements for the machine listing page</h2></a>
 
 Within MAAS 2.8, we have made a number of performance improvements to everything related to the machine listing.  Some of the most visible changes involve the way that long lists are presented within categories (see the example below), but there are a number of other changes that make the list easier and more efficient to use.
 
@@ -96,7 +96,7 @@ Within MAAS 2.8, we have made a number of performance improvements to everything
 
 Among those other changes are persisting UI state for grouping, new grouping options, bookmark-able URLs with filter and search parameters, and many other performance improvements. If you're interested in more details, see this [blog post](https://ubuntu.com/blog/building-a-cross-framework-ui-with-single-spa-in-maas-2-8)`↗`.
 
-## Support for using an external/remote PostgreSQL MAAS database with the snap version of MAAS
+<a href="#heading--Support-for-using-an-external-remote-PostgreSQL-MAAS-database-with-the-snap-version-of-MAAS"><h2 id="heading--Support-for-using-an-external-remote-PostgreSQL-MAAS-database-with-the-snap-version-of-MAAS">Support for using an external/remote PostgreSQL MAAS database with the snap version of MAAS</h2></a>
 
 In order to make MAAS more scalable, we have separated the MAAS database from the MAAS snap, so that the DB can be situated separately.  MAAS 2.8 now allows the MAAS DB to be located outside the snap on localhost, or on a separate, external or remote server.  We complement this capability with extensive instructions for setting up and managing this configuration.  To support those who are testing MAAS, we've also provided a test DB configuration that embeds the database in a separate snap that can easily be connected to MAAS.
 

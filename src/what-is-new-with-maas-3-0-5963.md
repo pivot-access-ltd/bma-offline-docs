@@ -1,7 +1,7 @@
 <!-- "What is new with MAAS 3.0" -->
 We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-bug-fixes).
 
-#### Cumulative summary of new features in MAAS 3.0
+<a href="#heading--Cumulative-summary-of-new-features-in-MAAS-3.0"><h2 id="heading--Cumulative-summary-of-new-features-in-MAAS-3.0">Cumulative summary of new features in MAAS 3.0</h2></a>
 
 - [PCI and USB devices are now modelled in MAAS](#heading--pci-usb-devices)
 - [IBM Z DPM partition support](#heading--ibm-z-dpm)
@@ -57,7 +57,7 @@ The logs and events tabs have combined and now live under "Logs". In addition to
 
 <a href="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/optimized/2X/4/497fd5d03ece0308648db33cf144f4cfefc6e5ed_2_690x465.png"></a>
 
-#### Downloading logs
+<a href="#heading--Downloading-logs"><h4 id="heading--Downloading-logs">Downloading logs</h4></a>
 
 A helpful new feature is the ability to download the machine and installation output, and if a machine has failed deployment you can now download a full tar of the curtain logs.
 
@@ -73,7 +73,7 @@ To allow different boot methods to be in different states on separate physical n
 maas $PROFILE subnet update $SUBNET disabled_boot_architectures="0x00 uefi_amd64_tftp 00:10"
 ```
 
-#### GRUB
+<a href="#heading--GRUB"><h4 id="heading--GRUB">GRUB</h4></a>
 
 - UEFI AMD64 HTTP(00:10) has been re-enabled.
 - UEFI ARM64 HTTP(00:13) has been enabled.

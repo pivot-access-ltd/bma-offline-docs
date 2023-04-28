@@ -24,15 +24,19 @@ You can match exactly by using the equals sign ("=") with a filter fragment, or 
 
 <a href="#heading--simple-searches"><h2 id="heading--simple-searches">How to do simple searches</h2></a>
 
-To begin searching, enter your search text. As you type, MAAS will update search results in real time. You can search across virtually every parameter, including domain, name, tag, power type, IP, status, zone, and so on.
+1. Select *Machines*.
+
+2. Enter text in the *Search* box. As you type, MAAS will update search results in real time. You can search across virtually every parameter, including domain, name, tag, power type, IP, status, zone, and so on.
 
 <a href="#heading--filtered-searches"><h2 id="heading--filtered-searches">How to do filtered searches</h2></a>
 
-Filter your searches to major categories by selecting one from the Filters drop-down menu next to the search bar.
+1. Select *Machines*.
 
-For example, to find all "New" machines containing the name or tag 'quail', select Status/New from the drop-down Filters menu, and then type the word 'quail' next to it:
+2. Select the *Filters* dropdown.
 
-<a href="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/7b5d8e86-manage-search__2.5_filtered-search.png"></a>
+3. Choose a parameter group.  The group will lock open.
+
+4. Choose one or more parameter values to search against.  MAAS will update the search results in real time.
 
 <a href="#heading--manual-filters"><h3 id="heading--manual-filters">How to create manual filters</h3></a>
 
@@ -72,9 +76,6 @@ The following table describes the expanded filter set for the MAAS machine list:
 - Items which are not dynamic present the entire range of possible values, regardless of whether that value currently exists in MAAS; for example, all machine status values are available to be filtered, even if no machines currently have that status.
 - Items marked "Grp" can be used to group machines, instead of the default machine status.
 - Items marked "Man" must be manually entered, i.e., they are not in the UI filter dropdown, but can be entered in the "Search" box if properly formatted (as in the examples given).
-
-See [How to search MAAS](/t/how-to-find-machines/5192) for more details on how to use these parameters.
-
 
 | Parameter (bold) w/example           | Shows nodes...                   | Dyn | Grp | Man |
 |--------------------------------------|----------------------------------|-----|-----|-----|

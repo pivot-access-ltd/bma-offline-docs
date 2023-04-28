@@ -9,9 +9,9 @@ Here is a proof-of-concept scenario, with all MAAS components installed on a sin
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
 |:---|----:|----:|----:|
-| [Region controller](/t/maas-glossary/785#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
+| [Region controller](/t/maas-glossary/5416#heading--controllers) (minus PostgreSQL) | 512 | 0.5 | 5 |
 | PostgreSQL | 512 | 0.5 | 5 |
-| [Rack controller](/t/maas-glossary/785#heading--controllers") | 512 | 0.5 | 5 |
+| [Rack controller](/t/maas-glossary/5416#heading--controllers") | 512 | 0.5 | 5 |
 | Ubuntu Server (including logs)| 512 | 0.5 | 5 |
 
 Based on this table, the approximate requirements for this scenario are 2 GB memory, 2 GHz CPU, and 20 GB of disk space.
@@ -22,9 +22,9 @@ Here is a production scenario designed to handle a high number of sustained clie
 
 | | Memory (MB) | CPU (GHz) | Disk (GB) |
 |:---|----:|----:|----:|
-| [Region controller](/t/maas-glossary/785#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
+| [Region controller](/t/maas-glossary/5416#heading--controllers) (minus PostgreSQL) | 2048 | 2.0 | 5 |
 | PostgreSQL | 2048 | 2.0 | 20 |
-| [Rack controller](/t/maas-glossary/785#heading--controllers") | 2048 | 2.0 | 20 |
+| [Rack controller](/t/maas-glossary/5416#heading--controllers") | 2048 | 2.0 | 20 |
 | Ubuntu Server (including logs)| 512 | 0.5 | 5 |
 
 So, based on the above, the approximate requirements for this scenario are:
@@ -34,7 +34,7 @@ So, based on the above, the approximate requirements for this scenario are:
 - A rack controller installed on a third host, with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 - A duplicate rack controller on a fourth host, also with 2.5 GB memory, 2.5 GHz CPU, and 40 GB of disk space.
 
-The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management-reference/5246) for more details.
+The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-drivers-reference/5246) for more details.
 
 Some examples of factors that influence hardware specifications include:
 

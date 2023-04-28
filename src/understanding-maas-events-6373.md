@@ -85,7 +85,7 @@ regiond.log:     * ip 10.103.114.192 disconnected from fun-zebra on eth0
 
 Not all of this output is relevant, nor does it all trigger a recorded MAAS event.  Interpreting MAAS logs is a matter of practice with known events in a controlled environment.
 
-<a href="#heading--maas-events-query"><h2 id="heading--mass-events-query">MAAS CLI events query command</h2></a>
+<a href="#heading--maas-events-query"><h2 id="heading--maas-events-query">MAAS CLI events query command</h2></a>
 
 In fact, probably the best way to review events is via the CLI sub-command, `events query`. This sub-command can help you filter and summarise events.  Let's take a look at how this tool works.
 

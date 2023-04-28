@@ -1,5 +1,5 @@
 <!-- "How to connect MAAS networks" -->
-You can easily manage the basic networking elements of MAAS, including subnets, fabrics, VLANs, spaces, IP ranges, machine interfaces, and proxies.  This section shows how to access and edit these elements. 
+You can easily manage the basic networking elements of MAAS, including subnets, fabrics, VLANs, spaces, IP ranges, machine interfaces, and proxies.
 
 This article will help you learn:
 
@@ -8,14 +8,14 @@ This article will help you learn:
 - [How to manage proxies](#heading--how-to-manage-proxies)
 - [How to set up Network Time Protocol (NTP)](#heading--how-to-set-up-ntp)
 
-This document provides procedures only.  For theory and explanation, please see [About networks](/t/about-networks/6680).
+Feel free to review some of the [theory](/t/networking/6680) first.
 
 <a href="#heading--how-to-manage-MAAS-network-elements"><h2 id="heading--how-to-manage-MAAS-network-elements">How to manage MAAS network elements</h2></a>
 
 This section will show you:
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 - [How to enable network discovery](#heading--how-to-enable-network-discovery)
 - [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
 - [How to access the main networking view](#heading--how-to-access-ui-main-networking-view)
@@ -28,7 +28,7 @@ This section will show you:
 - [How to set up a bridge with MAAS](#heading--how-to-set-up-a-bridge-with-maas)
 - [How to set up a bridge with netplan](#heading--how-to-set-up-a-bridge-with-netplan)
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 - [How to enable network discovery](#heading--how-to-enable-network-discovery)
 - [How to toggle subnet management](#heading--how-to-toggle-subnet-management)
 - [How to determine fabric ID](#heading--how-to-determine-fabric-id)
@@ -45,7 +45,6 @@ This section will show you:
 <a href="#heading--how-to-enable-network-discovery"><h3 id="heading--how-to-enable-network-discovery">How to enable network discovery</h3></a>
 
 [tabs]
-<!--
 [tab version="v3.4 Snap,v3.4 Packages" view="UI"]
 To enable network discovery:
 
@@ -57,8 +56,7 @@ To enable network discovery:
 
 4. Select *Save* to register your changes.
 [/tab]
--->
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To enable network discovery:
 
 1. Click on "Canonical MAAS" at the top left of the screen.
@@ -68,7 +66,7 @@ To enable network discovery:
 3. In the dropdown labeled "Network discovery", choose "Enabled" or "Disabled".
 
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To enable network discovery, enter the following at the command line:
 
 ```nohighlight
@@ -90,9 +88,8 @@ Network discovery can be disabled or re-enabled at any time with this CLI comman
 <a href="#heading--how-to-toggle-subnet-management"><h3 id="heading--how-to-toggle-subnet-management">How to toggle subnet management</h3></a>
 
 [tabs]
-<!--
 [tab version="v3.4 Snap,v3.4 Packages" view="UI"]
-To disable subnet management:
+To toggle subnet management:
 
 1. Select *Subnets* from the left navigation panel.
 
@@ -100,29 +97,38 @@ To disable subnet management:
 
 3. Select *Edit* in the upper right of the *Subnet summary* panel.
 
-4. Uncheck *Managed allocation*.
+4. Select *Managed allocation* to toggle between enabled and disabled.
 
 5. Select *Save* to register your changes.
-[/tab]
--->
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
-To disable (or re-enable) subnet management, use the following procedure:
 
-1. Navigate to the 'Subnets' page and select the subnet.
-
-2. Press the 'Edit' button to allow changes; the 'Managed allocation' field will become a slide switch.
-
-3. Click the label (or the switch icon itself) to toggle between enabled (dark blue) and disabled (grey).
-
-4. Click 'Save summary'.
+You can (re)enable subnet management at any time by checking *Managed allocation*.
 
 <a href="#heading--how-to-access-ui-main-networking-view"><h3 id="heading--how-to-access-ui-main-networking-view">How to access the main networking view</h3></a>
 
-To access the main networking view visit the 'Subnets' page.
+To access the main networking view, select *Networking > Subnets*.
 
-This main view can also be filtered either by fabrics or by spaces through the use of the 'Group by' drop-down.
+This main view can also be filtered through the use of the 'Filters' drop-down.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+To disable (or re-enable) subnet management, use the following procedure:
+
+1. Select *Subnets*.
+
+2. Select the subnet in question
+
+3. Select *Edit*.
+
+4. Select *Managed allocation* to toggle between enabled and disabled.
+
+5. Select *Save summary*.
+
+<a href="#heading--how-to-access-ui-main-networking-view"><h3 id="heading--how-to-access-ui-main-networking-view">How to access the main networking view</h3></a>
+
+To access the main networking view, select *Subnets*.
+
+This main view can also be filtered via the *Group by* drop-down.
+[/tab]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To enable or disable subnet management:
 
 ``` nohighlight
@@ -180,19 +186,19 @@ jq -r '(["FABRIC", "VLAN", "DHCP", "SUBNET"]
 [/tabs]
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-display-the-subnet-window"><h3 id="heading--ui-how-to-display-the-subnet-window">How to display the subnet window</h3></a>
 
-Clicking a subnet (here `192.168.100.0/24`) will display its detail screen.  See [About networking](/t/about-networking/6680#heading--the-subnet-summary) for details about the parameters shown there.
+Selecting a subnet will display its [detail screen](/t/networking/6680#heading--the-subnet-summary).
 
 <a href="#heading--ui-how-to-view-subnet-utilisation"><h3 id="heading--ui-how-to-view-subnet-utilisation">How to view subnet utilisation</h3></a>
 
-This section of the subnet page presents metrics regarding address usage by this subnet.  See [About networking](/t/about-networking/6680/#heading--subnet-utilisation) for details about the parameters shown there.
+This section of the subnet page presents [metrics](/t/about-networking/6680/#heading--subnet-utilisation).
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
 
-To view the details of an individual subnet with the command:
+View the details of an individual subnet with the command:
 
 ```nohighlight
 maas $PROFILE subnet read $SUBNET_ID \
@@ -200,7 +206,7 @@ maas $PROFILE subnet read $SUBNET_ID \
 | (., map(length*"-"))), ([.name,.cidr,.gateway_ip // "-", .allow_dns,.active_discovery,.vlan.name,.vlan.fabric]) | @tsv' | column -t
 ```
 
-If you don't know the subnet ID, you can look it up like this:
+Look up the subnet ID like this:
 
 ```nohighlight
 maas $PROFILE subnets read \
@@ -209,7 +215,7 @@ maas $PROFILE subnets read \
 | column -t | grep $SUBNET_NAME
 ```
 
-For example, if you're using the "admin" profile, and your subnet name contains "192.168.123," you could find the subnet ID with this command:
+For example, using the "admin" profile with a subnet name containing "192.168.123," find the subnet ID with this command:
 
 ```nohighlight
 maas admin subnets read \
@@ -224,11 +230,10 @@ maas admin subnets read \
 <a href="#heading--how-to-manage-static-routes"><h3 id="heading--how-to-manage-static-routes">How to manage static routes between subnets</h3></a>
 
 [tabs]
-<!-- 
 [tab version="v3.4 Snap,v3.4 Packages" view="UI"]
 To create a static route:
 
-1. Select *Networking > Subnets* from the left navigation panel.
+1. Select *Networking > Subnets*.
 
 2. Select the Subnet you want to change by clicking on its IP address.
 
@@ -242,7 +247,6 @@ To create a static route:
 
 7. Select *Save* to register your changes.
 [/tab]
--->
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To create a static route:
 
@@ -259,7 +263,7 @@ To create a static route:
 Routes can be edited and removed using the icons to the right of each entry.
 
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a static route between two subnets, use the following command:
 
 ```nohighlight
@@ -270,12 +274,11 @@ gateway_ip=$GATEWAY_IP
 [/tabs]
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-view-reserved-ranges"><h3 id="heading--how-to-view-reserved-ranges">How to view reserved ranges</h3></a>
 
-The reserved ranges section of the subnet screen contains information on defined IP ranges.  More details and instructions regarding these ranges can be found in [IP ranges](/t/how-to-enable-dhcp/5132#heading--how-to-manage-ip-ranges).
-[/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+The reserved ranges section of the subnet screen contains information on [defined IP ranges](/t/how-to-enable-dhcp/5132#heading--how-to-manage-ip-ranges).
+
 <a href="#heading--ui-how-to-view-used-ip-addresses"><h3 id="heading--ui-how-to-view-used-ip-addresses">How to view used IP addresses</h3></a>
 
 The "Used IP addresses" section displays hosts (including controllers) associated with the used addresses along with related bits of host information.
@@ -285,22 +288,34 @@ The "Used IP addresses" section displays hosts (including controllers) associate
 <a href="#heading--how-to-set-up-a-bridge-with-maas"><h3 id="heading--how-to-set-up-a-bridge-with-maas">How to set up a bridge with MAAS</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To configure a bridge with the MAAS UI: 
 
-1. Select the machine you want to bridge. 
+1. Select *Machines*.
 
-2. Switch to the "Network" tab. 
+2. Select the machine you want to bridge. 
 
-3. Select the network where you want to create the bridge and click "Create bridge".
+3. Select *Network*. 
 
-4. Configure the bridge on a subnet MAAS controls (you may use any IP mode for the bridge).
+4. Checkbox the network where you want to create the bridge.
 
-Then you can deploy machines using this bridge.
+5. Select *Create bridge*.
 
-**NOTE** that you can create an "Open switch" bridge if desired, and MAAS will create the netplan model for you.
+6. Fill in the bridge details in the form which appears.
+
+7. Optionally include the bridge in the spanning tree protocol by selecting the slider under *Advanced options*.
+
+8. Optionally set the *Forward delay* in milliseconds.
+
+9. Select *Save interface* to register your changes.
+
+You can then deploy machines using this bridge.
+
+[note]
+You can create an "Open switch" bridge if desired, and MAAS will create the netplan model for you.
+[/note]
 [/tab] 
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can use the MAAS CLI/API to configure a bridge via the following procedure:
 
 1. Select the interface on which you wish to configure the bridge. This example uses the boot interface, since the boot interface must be connected to a MAAS controlled network -- but any interface is allowed:
@@ -386,6 +401,27 @@ This section will explain the following procedures related to machine interfaces
 <a href="#heading--how-to-edit-interfaces"><h3 id="heading--how-to-edit-interfaces">How to edit machine interfaces</h3></a>
 
 [tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+To edit a machine interface:
+
+1. Select *Machines*.
+
+2. Select the machine in question by clicking on its name.
+
+3. Select *Network*.
+
+4. Checkbox the interface in question.
+
+5. Click the *Actions* dropdown at the right end of row for that interface.
+
+6. Select *Edit physical*.
+
+7. Change any of the desired parameters in the form which appears.
+
+8. Select an [*IP mode*](/t/networking/6680#heading--IP-modes).
+
+9. Select *Save interface* to register your changes.
+[/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 To edit a machine interface:
 
@@ -395,7 +431,7 @@ To edit a machine interface:
 
 3. Press *Save* to apply the changes.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To edit the IP assignment mode of a network interface, perform the following steps:
 
 1. Find the interface ID and subnet link ID with the command:
@@ -423,7 +459,7 @@ See [the glossary](/t/maas-glossary/5416#heading--ip-ranges) for the definitions
 <a href="#heading--bond-interfaces"><h3 id="heading--bond-interfaces">How to create a bond interface</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
 1. Select more than one interface. 
 
@@ -447,11 +483,11 @@ See [the glossary](/t/maas-glossary/5416#heading--ip-ranges) for the definitions
 
 -   **balance-alb**: Adaptive load balancing, includes balance-tlb plus receive load balancing (rlb) for IPV4 traffic. This mode does not require any special switch support.  ARP negotiation achieves load balancing in this case.
 
-5. Assign a MAC address to the aggregate device.
+5. Assign a *MAC address* to the aggregate device.
 
-6. Attach one or more tags, if desired.
+6. Attach one or more *Tags*, if desired.
 
-7. The interfaces aggregated into the bond interface are listed below the "Tags" field; use the "Primary" column to select the interface to act as the primary device.
+7. Select the *Primary* device.
 
 8. Select *Save* to register your changes.
 
@@ -459,7 +495,7 @@ See [the glossary](/t/maas-glossary/5416#heading--ip-ranges) for the definitions
 The MAC address defaults to the MAC address of the primary interface.
 [/note]
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a bond, execute the following command:
 
 ```
@@ -510,7 +546,7 @@ Note that:
 <a href="#heading--bridge-interfaces"><h3 id="heading--bridge-interfaces">How to create a bridge interface</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
 To create a bridge interface:
 
@@ -543,7 +579,7 @@ To create a bridge interface:
 14. Register your new bridge by selecting *Save interface*.
 
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Please use the UI interface to create a bridge interface.  Select the "UI" dropdown above to see how.
 [/tab]
 [/tabs]
@@ -551,10 +587,10 @@ Please use the UI interface to create a bridge interface.  Select the "UI" dropd
 <a href="#heading--delete-an-interface"><h3 id="heading--delete-an-interface">How to delete an interface</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 An interface can only be deleted via the MAAS CLI.  Choose the "CLI" dropdown above to see how.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a bridge interface:
 
 ```
@@ -618,10 +654,10 @@ Note that while the label is presented, there is no machine-readable output expe
 <a href="#heading--assign-a-network-interface-to-a-fabric"><h3 id="heading--assign-a-network-interface-to-a-fabric">How to assign a network interface to a fabric</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 A network interface may be assigned to a fabric with the MAAS CLI only.  Choose the "CLI" dropdown above to see how.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 This task is made easier with the aid of the `jq` utility. It filters the `maas` command (JSON formatted) output and prints it in the desired way, which allows you to view and compare data quickly. Go ahead and install it:
 
 ``` bash
@@ -704,10 +740,10 @@ The output shows that the interface is now on fabric-0:
 <a href="#heading--interface-identifiers"><h3 id="heading--interface-identifiers">How to discover interface identifiers</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 Interface identifiers can only be discovered via the MAAS CLI.  Choose the "CLI" dropdown above to see how.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 The MAAS CLI uses a numeric interface identifier for many interface operations. Use the following command to retrieve the identifier(s):
 
 ``` bash
@@ -730,10 +766,10 @@ Look for either id or the number at the end of an interface's resource URI, such
 <a href="#heading--create-a-vlan-interface"><h3 id="heading--create-a-vlan-interface">How to create a VLAN interface</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 VLAN interfaces can only be created via the MAAS CLI. Select the "CLI" dropdown above to see how.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 To create a VLAN interface, use the following syntax:
 
 ``` bash
@@ -835,10 +871,10 @@ Machine-readable output follows:
 <a href="#heading--delete-a-vlan-interface"><h3 id="heading--delete-a-vlan-interface">How to delete a VLAN interface</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 VLAN interfaces can only be deleted via the MAAS CLI. Select the "CLI" dropdown above to see how.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 The following command outlines the syntax required to delete a VLAN interface from the command line:
 
 ``` bash
@@ -871,7 +907,7 @@ Configuring a proxy with MAAS consists of enabling/disabling one of the above th
 <a href="#heading--configure-proxy"><h3 id="heading--configure-proxy">How to create an external proxy</h3></a>
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 
 1. In the web UI, visit the 'Settings' page and select the 'Network services' tab. 
 
@@ -885,7 +921,7 @@ Configuring a proxy with MAAS consists of enabling/disabling one of the above th
 
 - To prevent MAAS machines from using a proxy, enable the 'Don't use a proxy' checkbox.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 Enabling and disabling proxying, in general, is done via a Boolean option ('true' or 'false'). The following command will disable proxying completely:
 
 ``` bash
@@ -933,14 +969,14 @@ The region controller configures the NTP service to keep its time synchronised f
 External sites, such as an existing NTP infrastructure, can be used directly as a time source for both rack controllers and machines.
 
 [tabs]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 You can specify an external site by choosing the NTP server(s) and selecting the 'External Only' option. The region controller always uses an external site.
 
 1. On the 'Settings' page, select the 'Network services' tab and scroll down to the 'NTP' section.
 
 2. Enter the address of the desired NTP server.
 [/tab]
-[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
+[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can specify an external NTP server with two successive commands:
 
 ```
