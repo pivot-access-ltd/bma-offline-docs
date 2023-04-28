@@ -1,14 +1,8 @@
 <!-- "How to label devices" -->
-MAAS offers a wide range of device labelling: tags that can carry information; static annotations which can identify and describe machines; and dynamic annotations which can describe current workloads for deployed machines.
+MAAS provides a robust device labelling system that allows you to easily manage and configure your machines. With tags, annotations, and dynamic annotations, you can sort and describe your machines with ease, and filter your UI dashboards quickly and efficiently.
 
-- [Tag machines](/t/how-to-tag-machines/5928): The most common tags are machine tags, which can not only help you sort machines, but also help to configure that machine, e.g., with kernel options, when being deployed.
+[Machine tags](/t/how-to-tag-machines/5928) are the most commonly used tags, which not only help to sort your machines but also to configure them during deployment, such as with kernel options. You can also add static and dynamic [annotations](/t/how-to-annotate-machines/5929) to your machines, with the former being persistent and the latter lasting only for the duration of a specific deployment.
 
-- [Annotate machines](/t/how-to-annotate-machines/5929): You can also annotate machines.  Static annotations stick with a machine as long as it exists.  Dynamic annotations, on the other hand, last only as long as a specific deployment.
+[Using machine tags](/t/how-to-use-machine-tags/5224) comes with several nuances, so it’s essential to know how to use them effectively. Additionally, you can also [tag controllers](/t/how-to-use-controller-tags/5216), making it easy to distinguish them, and use [storage](/t/how-to-use-storage-tags/5232) and [network](/t/how-to-use-network-tags/5228) tags to remember specialized configurations for storage and network interfaces.
 
-- [Use machine tags](/t/how-to-use-machine-tags/5224): There are quite a few nuances to machine tags.
-
-- [Use controller tags](/t/how-to-use-controller-tags/5216): You can also tag controllers to help easily tell them apart.
-
-- [Use storage tags](/t/how-to-use-storage-tags/5232): Storage tags help you mark and remember specialized storage configurations.
-
-- [Use network tags](/t/how-to-use-network-tags/5228): Network tags let you remember how you set up specific network interfaces.
+With MAAS device labelling, managing and configuring your machines has never been easier.

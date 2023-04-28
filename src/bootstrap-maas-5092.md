@@ -1,5 +1,9 @@
 <!-- "Bootstrap MAAS" -->
-An evolving example may be useful to introduce you to MAAS, and it doesn't have to be comprehensive --  just coherent and plausible.  For this example, we'll use the latest MAAS snap from the UI.
+MAAS is a powerful tool for managing physical servers and data centers. This guide will take you through a brief example of setting up a MAAS snap from the UI, installing PostgreSQL, creating a suitable MAAS database, and adding it to the PostgreSQL HBA configuration. We'll use the production configuration to give you a better sense of the range of options and possibilities. 
+
+Next, we'll put that production system through its paces.  Casting you as an IT administrator for a new hospital, you'll be designing a flexible data center using MAAS to deploy VMs in a VM host. You'll start with a list of functions, and allocate functions to individual machines that can be modified and assigned to different tasks as needed. You'll also create resource pools for each function to manage the machines better, assign tags to machines to keep track of these functions, and add VLANs and fabrics to separate network traffic for the different functions.
+
+The process is straightforward, and this example is only meant to be coherent and plausible, not comprehensive. Whether you're new to MAAS or an experienced user, this tutorial should give you an intuitive feel for the normal, day-to-day operation of MAAS.
 
 <a href="#heading--Installation"><h2 id="heading--Installation">Installation</h2></a>
 

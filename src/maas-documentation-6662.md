@@ -118,7 +118,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | release-notes                     | [Release notes](/t/-/5292)                                      |
 | 3     | installation-requirements         | [Installation requirements](/t/-/6233)                          |
 | 3     | maas-settings                     | [MAAS settings](/t/-/6347)                                      |
-| 3     | maas-source-code                  | [MAAS source code](/https://launchpad.net/maas)                 |
+| 3     | maas-source-code                  | [MAAS source code](https://launchpad.net/maas)                 |
 | 3     | doc-style-guide                   | [Doc style guide](/t/-/4186)                                    |
 | 3     | maas-glossary                     | [Glossary](/t/-/5416)                                           |
 | 3     | code-of-conduct                   | [Code of conduct](https://ubuntu.com/community/code-of-conduct) |
@@ -257,6 +257,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-install-maas|/docs/how-to-do-a-fresh-install-of-maas|
 |/docs/about-rbac|/docs/how-to-protect-your-secrets|
 |/docs/maas-terraform-provider|/docs/maas-terraform-provider-reference|
 |/docs/commissioning-script-reference|/docs/commissioning-scripts-tech-reference|

@@ -1,6 +1,10 @@
 <!-- "Try out the MAAS CLI" -->
 
-Let's get some machines up and running, using the MAAS CLI.  If you haven't installed MAAS yet, you can [follow these instructions](/t/how-to-do-a-fresh-install-of-maas/5128) first.
+Once you have [installed MAAS](/t/how-to-do-a-fresh-install-of-maas/5128), a valuable next step is to get some virtual machines up and running using the MAAS CLI. 
+
+The MAAS CLI provides a command-line interface that allows you to manage your MAAS installation from the terminal. You can use it to add machines, manage nodes, allocate resources, and more. With the MAAS CLI, you can automate your infrastructure deployment and management tasks, making it easier to scale your infrastructure and respond to changing business needs. To get started with the MAAS CLI, you'll need to familiarize yourself with the available commands and their syntax -- and that's the purpose of this tutorial.
+
+Once you have a comfort level with the CLI, you can start creating scripts and automation workflows to make your infrastructure management more efficient.
 
 <a href="#heading--Logging-into-MAAS"><h2 id="heading--Logging-into-MAAS">Log into MAAS</h2></a>
 

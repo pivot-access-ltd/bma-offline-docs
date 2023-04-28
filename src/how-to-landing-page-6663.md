@@ -1,0 +1,6 @@
+<!-- "How-to guides" -->
+Looking to make the most out of MAAS? Look no further than our comprehensive how-to guides. Whether you're just getting started or looking to optimize your current setup, these guides provide step-by-step instructions for configuring, managing, and using MAAS to its fullest potential.
+
+Get started with ease thanks to our instructions for installing and configuring MAAS. From there, learn how to create and configure networks, customize and deploy OS images, configure controllers for high availability, manage machines, and even create virtual machines. Need to label devices, secure MAAS, or discover best practices for operating MAAS? We've got you covered with detailed instructions for those as well.  Of course, since MAAS is open-source, we also include plenty of guidance on how to give and receive help, including paid support options for those that need them.
+
+And don't forget to check out our Tutorials for even more hands-on guidance. Want to delve deeper into the technical details? The Reference and Explanation sections offer valuable information and insights. Plus, if you need help along the way, we've got instructions for finding answers, requesting features, and contributing to the MAAS community. Let's get started.

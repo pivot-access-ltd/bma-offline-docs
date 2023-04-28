@@ -1,10 +1,10 @@
 <!-- "How to manage machines" -->
+Now that you have your network properly configured -- and your images selected and downloaded -- it's time to get down to business and start deploying machines.
 
-With your network properly configured, and suitable images selected and downloaded, you're ready to begin deploying machines.
- 
-- [Make machines available](/t/how-to-make-machines-available/5160): Before deploying machines, you need to discover, enlist, or add them manually to MAAS.
- 
-- [Customise machines](/t/how-to-customise-machines/5108): In many cases, you'll want to customise the hardware and software of your machines as they are deployed.
- 
-- [Put machines to work](/t/how-to-put-machines-to-work/5112): The real purpose of MAAS is to deploy machines to fulfill the goals of your organization.
- 
+- [Make machines available](/t/how-to-make-machines-available/5160): The first step in deployment is to make the machines available to MAAS. This can be done by discovering them on the network or adding them using their power and network settings. Once available, you can start to customize them to meet the specific needs of your organization.
+
+- [Customise machines](/t/how-to-customise-machines/5108): Customization is often an essential step in deploying machines, and MAAS makes it easy to do so. You can modify the hardware configuration of your machines, such as increasing the RAM or storage capacity, or you can customize the software that runs on them, such as installing specific packages or tweaking the network settings. With MAAS, you have full control over how your machines are set up; you can customize them extensively to meet your organization's unique requirements.
+
+- [Put machines to work](/t/how-to-put-machines-to-work/5112): After customizing your machines, it's time to put them to work. Whether you're deploying machines to run a web server, process data, or perform other tasks, MAAS can help you achieve your goals quickly and efficiently. By deploying machines with MAAS, you can easily scale your infrastructure up or down, depending on your needs, and ensure that your organization has the computing power it needs to succeed.
+
+Deploying machines with MAAS is a straightforward process that allows you to customize and manage your infrastructure with ease. With MAAS, you can quickly deploy machines to meet your organization's specific needs and put them to work right away. But don't take our word for it. Start deploying your machines with MAAS today and see how easy it can be to manage your infrastructure.

@@ -1,7 +1,9 @@
 <!-- "Create a custom image" -->
-When we talk about creating custom OS images for MAAS, it feels like something that's about to get really complex.  But with packer-maas, that's often not the case.
+Custom OS image creation is often viewed as a complex task, but with `packer-maas`, the process can be simplified significantly. The `packer-maas` tool provides a robust interface for creating and deploying custom Ubuntu images on MAAS. With `packer-maas`, you can easily create and customize your own Ubuntu images with just a few simple commands.
 
-Let's see if we can't create and deploy a custom Ubuntu image with packer, just to see how easy it can be.
+Creating a custom Ubuntu image with `packer-maas` is a straightforward process. With `packer-maas`, you can create a new image from scratch or use an existing Ubuntu image as a base. You can then customize the image with any software packages, configuration files, or other modifications that you require. By simplifying the process of image creation and deployment, `packer-maas` makes it relatively easy to create customized images (Ubuntu and others) that meet your requirements.
+
+Let's walk through the process, using a simple example, to get comfortable with the process.
 
 <a href="#heading--install-maas"><h2 id="heading--install-maas">First, install MAAS</h2></a>
 
