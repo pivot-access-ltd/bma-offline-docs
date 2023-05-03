@@ -22,13 +22,13 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 MAAS is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
 - [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
-- [Get support](https://ubuntu.com/pro)`↗`
-- [Learn about MAAS performance](/t/about-maas-performance/6178)
-- [Join our online chat](/t/how-to-use-our-discourse-forum/6802)
+- [Get support](https://maas.io/docs/how-to-contact-us)`↗`
+- [Learn about MAAS performance](https://maas.io/docs/maas-performance)`↗`
+- [Join our online chat](/t/how-to-use-our-discourse-forum/6802)`↗`
 - [Contribute code](https://launchpad.net/maas)`↗`
-- [Improve our doc](/t/how-to-contribute-documentation/6949)
-- [Request a feature](/t/how-to-request-a-new-feature/4447)
-- [Report a bug](/t/how-to-report-a-bug/4446)
+- [Improve our doc](/t/how-to-contribute-documentation/6949)`↗`
+- [Request a feature](/t/how-to-request-a-new-feature/4447)`↗`
+- [Report a bug](/t/how-to-report-a-bug/4446)`↗`
 
 ### Our roadmap
 
@@ -36,7 +36,7 @@ Here's a view of our current roadmap:
 
 <a href="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6cb3381fd1cfb2f3a871c281e118d2b94ee05bf1.jpeg"></a>
 
-Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448)
+Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-to-contact-us)`↗`
 
 <!-- nohtml begin-nohtml -->
 ## Navigation
@@ -108,34 +108,34 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-troubleshoot-maas          | [Troubleshoot MAAS](/t/-/5333)                                  |
 | 2     | how-to-give-and-receive-help      | [Give and receive help](/t/-/5428)                              |
 | 3     | how-to-use-our-discourse-forum    | [Use our Discourse forum](/t/-/6802)                            |
-| 3     | how-to-get-support                | [Get support](/t/-/5448)           |
+| 3     | how-to-get-support                | [Get support](https://maas.io/docs/how-to-contact-us)           |
 | 3     | how-to-request-new-features       | [Request new features](/t/-/4447)                               |
 | 3     | how-to-review-and-report-bugs     | [Review and report bugs](/t/-/4446)                             |
 | 3     | how-to-contribute-doc             | [Contribute documentation](/t/-/6949)                           |
 | 0     |                                   |                                                                 |
 | 1     | reference                         | [Reference](/t/-/6143)                                          |
-| 2     | general-reference                 | [General](/t/-/6950)                                            |
+| 2     | general-reference                 | [General reference ](/t/-/6950)                                 |
 | 3     | release-notes                     | [Release notes](/t/-/5292)                                      |
 | 3     | installation-requirements         | [Installation requirements](/t/-/6233)                          |
 | 3     | maas-settings                     | [MAAS settings](/t/-/6347)                                      |
-| 3     | maas-source-code                  | [MAAS source code](https://launchpad.net/maas)                 |
+| 3     | maas-source-code                  | [MAAS source code](/https://launchpad.net/maas)                 |
 | 3     | doc-style-guide                   | [Doc style guide](/t/-/4186)                                    |
 | 3     | maas-glossary                     | [Glossary](/t/-/5416)                                           |
 | 3     | code-of-conduct                   | [Code of conduct](https://ubuntu.com/community/code-of-conduct) |
-| 2     | api-reference                     | [API](/t/-/6665)                                                |
+| 2     | api-reference                     | [API reference](/t/-/6665)                                      |
 | 3     | api-authentication-reference      | [API authentication](/t/-/5060)                                 |
 | 3     | python-api-client-reference       | [Python API client](/t/-/5404)                                  |
 | 3     | maas-api-documentation            | [API documentation](https://maas.io/docs/api)                   |
-| 2     | scripts-reference                 | [Scripts](/t/-/5375)                                            |
+| 2     | scripts-reference                 | [Scripts reference](/t/-/5375)                                  |
 | 3     | commissioning-scripts-reference   | [Commissioning scripts](/t/-/6605)                              |
 | 3     | testing-scripts-reference         | [Hardware test scripts](/t/-/5392)                              |
 | 3     | maas-terraform-reference          | [Terraform](/t/-/6327)                                          |
-| 2     | log-reference                     | [Logging](/t/-/6956)                                            |
+| 2     | log-reference                     | [Log reference](/t/-/6956)                                      |
 | 3     | event-logs-reference              | [Event logs](/t/-/5252)                                         |
 | 3     | audit-event-logs-reference        | [Audit event logs](/t/-/5256)                                   |
 | 3     | commissioning-logs-reference      | [Commissioning logs](/t/-/5248)                                 |
 | 3     | testing-logs-reference            | [Testing logs](/t/-/5314)                                       |
-| 2     | machine-parameters-reference      | [Machine parameters](/t/-/6957)                                 |
+| 2     | machine-parameters-reference      | [Machine parameters reference](/t/-/6957)                       |
 | 3     | power-drivers-reference           | [Power drivers](/t/-/5246)                                      |
 | 3     | storage-layouts-reference         | [Storage layouts](/t/-/5973)                                    |
 | 3     | device-labelling                  | [Device labelling](/t/-/6941)                                   |
@@ -143,22 +143,18 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 1     | explanation                       | [Explanation](/t/-/6141)                                        |
 | 2     | about-maas                        | [MAAS](/t/-/6678)                                               |
 | 2     | about-high-availability           | [High availability](/t/-/6992)                                  |
-| 2     | networking                        | Networking                                                      |
-| 3     | about-maas-networks               | [MAAS networks](/t/-/5084)                                         |
-| 3     | about-tcp-ip-network              | [TCP/IP primer](/t/-/6683)                                             |
-| 3     | about-dhcp                        | [DHCP primer](/t/-/6682)                                               |
-| 3     | about-cloud-networking            | [Cloud networking primer](/t/-/6684)                                   |
-| 2     | about-images                      | [Images](/t/-/6685)                                             |
-| 2     | about-controllers                 | [Controllers](/t/-/6690)                                        |
-| 2     | about-machines                    | [Machines](/t/-/6695)                                           |
-| 2     | about-virtual-machines            | [Virtual machines](/t/-/6704)                                   |
-| 2     | about-device-labels               | [Device labels](/t/-/6709)                                      |
-| 2     | about-maas-events                 | [MAAS events](/t/-/6510)                                        |
-| 2     | about-audit-events                | [Audit events](/t/-/6372)                                       |
-| 2     | about-maas-logging                | [MAAS logging](/t/-/5240)                                       |
-| 2     | about-maas-security               | [MAAS security](/t/-/6719)                                      |
-| 2     | about-maas-performance            | [MAAS performance](/t/-/6178)                                   |
-| 2     | about-ansible                     | [Ansible](/t/-/6888)                                            |
+| 2     | about-maas-networks               | [Networking](/t/-/6680)                                |
+| 2     | about-images                      | [Images](/t/-/6685)                                       |
+| 2     | about-controllers                 | [Controllers](/t/-/6690)                                  |
+| 2     | about-machines                    | [Machines](/t/-/6695)                                     |
+| 2     | about-virtual-machines            | [Virtual machines](/t/-/6704)                             |
+| 2     | about-device-labels               | [Device labels](/t/-/6709)                                |
+| 2     | about-maas-events                 | [MAAS events](/t/-/6510)                                  |
+| 2     | about-audit-events                | [Audit events](/t/-/6372)                                 |
+| 2     | about-maas-logging                | [MAAS logging](/t/-/5240)                                 |
+| 2     | about-maas-security               | [MAAS security](/t/-/6719)                                |
+| 2     | about-maas-performance            | [MAAS performance](/t/-/6178)                             |
+| 2     | about-ansible                     | [Ansible](/t/-/6888)                                      |
 [/details]
 
 <!--
@@ -257,7 +253,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
-|/docs/how-to-install-maas|/docs/how-to-do-a-fresh-install-of-maas|
+|/docs/how-to-deploy-a-rt-kernel-via-cloud-init|/docs/how-to-deploy-a-rt-kernel|
 |/docs/about-rbac|/docs/how-to-protect-your-secrets|
 |/docs/maas-terraform-provider|/docs/maas-terraform-provider-reference|
 |/docs/commissioning-script-reference|/docs/commissioning-scripts-tech-reference|
