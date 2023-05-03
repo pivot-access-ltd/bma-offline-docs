@@ -253,6 +253,7 @@ Considering MAAS for your next project? [Get in touch](https://maas.io/docs/how-
 [details=Mapping table]
 |PATH|LOCATION|
 |--------|--------|
+|/docs/how-to-install-maas|/docs/how-to-do-a-fresh-install-of-maas|
 |/docs/how-to-deploy-a-rt-kernel-via-cloud-init|/docs/how-to-deploy-a-rt-kernel|
 |/docs/about-rbac|/docs/how-to-protect-your-secrets|
 |/docs/maas-terraform-provider|/docs/maas-terraform-provider-reference|
