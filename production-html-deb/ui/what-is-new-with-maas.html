@@ -422,8 +422,19 @@
 
 <p>Here you will find release notes for:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--current-maas-release-notes">The current version of MAAS</a></li>
+<li>The current version of MAAS</li>
 <li><a href="#heading--other-maas-versions">Other MAAS versions</a></li>
+</ul>
+<p><a href="#heading--MAAS-3-3-3-has-been-released"><h2 id="heading--MAAS-3-3-3-has-been-released">MAAS 3.3.3 has been released</h2></a></p>
+<p>We are happy to announce that MAAS 3.3.3 has been released.  This is a maintenance release, with no new features, providing the following bug fixes:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/maas/+bug/1959648">1959648</a>: Websocket vlan handler should include associated subnet ids</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1979403">1979403</a>: commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1990416">1990416</a>: MAAS reports invalid command to run when maas-url is incorrect</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1999668">1999668</a>: reverse DNS not working for some interfaces</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2003940">2003940</a>: MAAS 3.3 RC shows incorrect storage amount</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2011841">2011841</a>: DNS resolution fails</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2012466">2012466</a>: Fractional value for available CPU cores with an overcommit ratio breaks UI</li>
 </ul>
 <p><a href="#heading--MAAS-3-3-2-has-been-released"><h2 id="heading--MAAS-3-3-2-has-been-released">MAAS 3.3.2 has been released</h2></a></p>
 <p>We are happy to announce that MAAS 3.3.2 has been release with the following bug fixes:</p>
@@ -471,7 +482,7 @@
 <p><a href="#heading--UI-performance-improvements">UI performance improvements for large machine counts</a>: We&rsquo;ve improved the performance of the UI machine list for large (&gt;10000 machines) MAAS instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.</p>
 </li>
 <li>
-<p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</a>: The <a href="how-to-build-custom-images.html#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
+<p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</a>: The <a href="how-to-customise-images.html#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
 </li>
 </ul>
 <p>Greatly expanded documentation sections include:</p>
@@ -483,7 +494,7 @@
 <p><a href="#heading--Improved-MAAS-event-documentation">Improved MAAS event documentation</a>: MAAS event documentation has been expanded to include <a href="understanding-maas-events.html">much better explanations</a> of MAAS events, including many examples.</p>
 </li>
 <li>
-<p><a href="#heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</a>: MAAS audit event documentation has been greatly expanded to include <a href="understanding-maas-audit-events.html">much better explanations</a> of MAAS audit events, including many examples and use cases.</p>
+<p><a href="#heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</a>: MAAS audit event documentation has been greatly expanded to include <a href="maas-audit-events.html">much better explanations</a> of MAAS audit events, including many examples and use cases.</p>
 </li>
 </ul>
 <p>Several forward-looking improvements are included as well:</p>
@@ -728,13 +739,6 @@ all:
 <p>When running the playbook for a host with the <code>maas_region_controller</code> role, the playbook installs the MAAS region controller. The documented ansible variable <code>maas_installation_type</code> provides the user with the ability to set whether it’s a deb installation or a snap installation, along with additional variables for MAAS version, snap channel and/or PPA.</p>
 <p>The default installation is a snap. A successful run of the playbook should give the operator an accessible and ready MAAS instance.  The playbook uses an Ansible variable to determine what version of MAAS to deploy. The playbook won’t execute (i.e “skipped” in the context of Ansible) if the Ubuntu version is incompatible with the version and install method. The Region Controller tasks should be able to execute on multiple hosts in a single execution if the target is an Ansible Group rather than a single host.  The newly-installed region controller should be accessible at the specified host ip address, as though the controller had been installed manually.</p>
 <p>Read the <a href="how-to-spin-up-maas-with-ansible.html">Ansible playbooks reference</a> document to learn more about the feature and the additional playbooks that are available.</p>
-<!--
-<a href="#heading--vault-integration"><h2 id="heading--vault-integration">Integration of Vault for credential storage</h2></a>
-
-MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …), currently stored in the database -- which is insecure by default. This configuration may not meet everyone's security requirements or regulations. For this reason, we've integrated MAAS with Hashicorp Vault, a well-established solution for secure, centralised credential storage.
-
-You can read the [MAAS Vault reference](maas-vault-reference.html) documentation to learn more. -->
-
 <p><a href="#heading--Improved-machine-list-filtering"><h2 id="heading--Improved-machine-list-filtering">Improved machine list filtering</h2></a></p>
 <p>MAAS 3.3 dramatically reduces the latency associated with refreshing large machine lists.</p>
 <p><a href="#heading--Ten-words-or-less-2"><h3 id="heading--Ten-words-or-less-2">Ten words or less</h3></a></p>
@@ -1242,7 +1246,7 @@ You can read the [MAAS Vault reference](maas-vault-reference.html) documentation
 <p>MAAS packages now run on Ubuntu 22.04, aka Jammy Jellyfish.</p>
 <p><a href="#heading--Notes-on-22.04-LTS-MAAS-packages"><h3 id="heading--Notes-on-22.04-LTS-MAAS-packages">Notes on 22.04 LTS MAAS packages</h3></a></p>
 <p>MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.</p>
-<p>Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The <a href="how-to-install-maas.html">installation guide</a> provides the necessary details.</p>
+<p>Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The <a href="how-to-do-a-fresh-install-of-maas.html">installation guide</a> provides the necessary details.</p>
 <!--
 <a href="#heading--simultaneous-deployment-improvements"><h2 id="heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</h2></a>
 
@@ -1260,7 +1264,7 @@ Long-term, we know that MAAS administrators want to enlist and use DPUs with MAA
 <p><a href="#heading--Background-performance-work"><h3 id="heading--Background-performance-work">Background performance work</h3></a></p>
 <p>In MAAS 3.2 and earlier, machine search and filter requires that all machines be fetched by the UI client before it becomes usable. For smaller MAASes this may not be an issue, but when considering MAASes with 1000 machines or more this can make the user wait an unacceptably long time before they can search and filter.  With the release of MAAS 3.3, when a MAAS UI user wants to find a particular machine, they do not have to wait for all their machines data to load before they can start searching. The user can start searching for machines within a short time after the visible page of the machine list has fully loaded on the UI screen.  See <a href="#heading--Improved-machine-list-filtering">Improved machine list filtering</a>, in these release notes, for details on the enhanced filtering capabilities that were included in this work.</p>
 <p><a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h2 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h2></a></p>
-<p>The <a href="how-to-build-custom-images.html#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
+<p>The <a href="how-to-customise-images.html#heading--custom-windows-images">procedure</a> for creating custom Windows OS images has been thoroughly updated and verified.</p>
 <p><a href="#heading--Ten-words-or-less-5"><h3 id="heading--Ten-words-or-less-5">Ten words or less</h3></a></p>
 <p>MAAS custom Windows images now support most releases and options.</p>
 <p><a href="#heading--What-has-been-added-to-Windows-custom-images"><h3 id="heading--What-has-been-added-to-Windows-custom-images">What has been added to Windows custom images</h3></a></p>
@@ -1435,7 +1439,7 @@ unknown   bk7mg8  fun-zebra  INFO   Thu, 29 Sep. 2022 20:00:16  Commissioning
 </code></pre>
 <p>Additional examples and techniques are provided as part of this new documentation.</p>
 <p><a href="#heading--Improved-MAAS-audit-event-documentation"><h2 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h2></a></p>
-<p>MAAS audit event documentation has been greatly expanded to include <a href="understanding-maas-audit-events.html">much better explanations</a> of MAAS audit events, including <a href="how-to-work-with-audit-event-logs.html#heading--How-to-audit-a-machines-life-cycle-with-audit-events">detailed examples of how to reconstruct machine life-cycles</a> in the updated version of &ldquo;<a href="how-to-work-with-audit-event-logs.html">How to work with audit event logs</a>&rdquo;.</p>
+<p>MAAS audit event documentation has been greatly expanded to include <a href="maas-audit-events.html">much better explanations</a> of MAAS audit events, including <a href="how-to-audit-maas.html#heading--How-to-audit-a-machines-life-cycle-with-audit-events">detailed examples of how to reconstruct machine life-cycles</a> in the updated version of &ldquo;<a href="how-to-audit-maas.html">How to work with audit event logs</a>&rdquo;.</p>
 <p><a href="#heading--Ten-words-or-less-9"><h3 id="heading--Ten-words-or-less-9">Ten words or less</h3></a></p>
 <p>We&rsquo;ve finally offered details about how you should audit MAAS.</p>
 <p><a href="#heading--Understanding-how-audit-events-explain-MAAS-internal-operations"><h3 id="heading--Understanding-how-audit-events-explain-MAAS-internal-operations">Understanding how audit events explain MAAS internal operations</h3></a></p>
@@ -1500,7 +1504,7 @@ admin     unknown      Thu, 21 Apr. 2022 19:20:24  Logged in admin.
 </li>
 </ol>
 <p><a href="#heading--Auditing-with-finesse"><h3 id="heading--Auditing-with-finesse">Auditing with finesse</h3></a></p>
-<p>As part of the updates to our &ldquo;<a href="how-to-work-with-audit-event-logs.html">How to work with audit event logs</a>&rdquo;, we&rsquo;ve tried to offer you some finesse in reconstructing machine life-cycles.  We&rsquo;ve shown how to combine various levels of MAAS event queries with standard command line utilities to produce clear audit trails such as this one:</p>
+<p>As part of the updates to our &ldquo;<a href="how-to-audit-maas.html">How to work with audit event logs</a>&rdquo;, we&rsquo;ve tried to offer you some finesse in reconstructing machine life-cycles.  We&rsquo;ve shown how to combine various levels of MAAS event queries with standard command line utilities to produce clear audit trails such as this one:</p>
 <pre><code class="language-nohighlight">418606  ERROR    Marking node broken               Wed, 17 Nov. 2021 00:02:52  A Physical Interface requires a MAC address.
 418607  DEBUG    Node changed status               Wed, 17 Nov. 2021 00:02:52  From 'New' to 'Broken'
 418608  DEBUG    Marking node fixed                Wed, 17 Nov. 2021 00:04:24  
