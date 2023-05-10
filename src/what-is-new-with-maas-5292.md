@@ -2,7 +2,7 @@
 
 Here you will find release notes for:
 
-- [The current version of MAAS](#heading--current-maas-release-notes)
+- The current version of MAAS
 - [Other MAAS versions](#heading--other-maas-versions)
 
 <a href="#heading--MAAS-3-3-2-has-been-released"><h2 id="heading--MAAS-3-3-2-has-been-released">MAAS 3.3.2 has been released</h2></a>
@@ -49,7 +49,7 @@ Improved capabilities include the following:
 
 - [UI performance improvements for large machine counts](#heading--UI-performance-improvements): We've improved the performance of the UI machine list for large (>10000 machines) MAAS instances.  The machine list now goes live just a few seconds after the first visible page loads, with the rest of the list loading in background.
 
-- [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images): The [procedure](/t/how-to-build-custom-images/5104#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
+- [Enhanced MIB support for Windows OS images](#heading--Enhanced-MIB-support-for-Windows-OS-images): The [procedure](/t/how-to-customise-images/5104#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
 
 Greatly expanded documentation sections include:
 
@@ -57,7 +57,7 @@ Greatly expanded documentation sections include:
 
 - [Improved MAAS event documentation](#heading--Improved-MAAS-event-documentation): MAAS event documentation has been expanded to include [much better explanations](/t/understanding-maas-events/6373) of MAAS events, including many examples.
 
-- [Improved MAAS audit event documentation](#heading--Improved-MAAS-audit-event-documentation): MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including many examples and use cases.
+- [Improved MAAS audit event documentation](#heading--Improved-MAAS-audit-event-documentation): MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/maas-audit-events/6372) of MAAS audit events, including many examples and use cases.
 
 Several forward-looking improvements are included as well:
 
@@ -388,13 +388,6 @@ The default installation is a snap. A successful run of the playbook should give
 
 Read the [Ansible playbooks reference](/t/how-to-spin-up-maas-with-ansible/6367) document to learn more about the feature and the additional playbooks that are available.
 
-<!--
-<a href="#heading--vault-integration"><h2 id="heading--vault-integration">Integration of Vault for credential storage</h2></a>
-
-MAAS deals with a number of secrets (user password, certificates and keys, API tokens, …), currently stored in the database -- which is insecure by default. This configuration may not meet everyone's security requirements or regulations. For this reason, we've integrated MAAS with Hashicorp Vault, a well-established solution for secure, centralised credential storage.
-
-You can read the [MAAS Vault reference](/t/maas-vault-reference/6368) documentation to learn more. -->
-
 <a href="#heading--Improved-machine-list-filtering"><h2 id="heading--Improved-machine-list-filtering">Improved machine list filtering</h2></a>
 
 MAAS 3.3 dramatically reduces the latency associated with refreshing large machine lists.
@@ -510,7 +503,7 @@ MAAS packages now run on Ubuntu 22.04, aka Jammy Jellyfish.
 
 MAAS users want to install MAAS on a 22.04 LTS system via deb packages, as well as upgrade machines currently running MAAS on Ubuntu 20.04 LTS to 22.04 LTS.  With the advent of MAAS 3.3, we have created an appropriate PPA with all required dependencies.  This PPA can be directly installed on Ubuntu 22.04, Jammy Jellyfish, with no requirement to use snaps.
 
-Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The [installation guide](/t/how-to-install-maas/5128) provides the necessary details.
+Note that the upgrade procedure will require a release upgrade from previous Ubuntu versions to Ubuntu 22.04.  Also note that, with this version of MAAS, PostgreSQL 12 is deprecated and should be upgraded to PostgreSQL 14.  The [installation guide](/t/how-to-do-a-fresh-install-of-maas/5128) provides the necessary details.
 
 <!--
 <a href="#heading--simultaneous-deployment-improvements"><h2 id="heading--simultaneous-deployment-improvements">Reliability improvements for simultaneous machine deployments</h2></a>
@@ -536,7 +529,7 @@ In MAAS 3.2 and earlier, machine search and filter requires that all machines be
 
 <a href="#heading--Enhanced-MIB-support-for-Windows-OS-images"><h2 id="heading--Enhanced-MIB-support-for-Windows-OS-images">Enhanced MIB support for Windows OS images</h2></a>
 
-The [procedure](/t/how-to-build-custom-images/5104#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
+The [procedure](/t/how-to-customise-images/5104#heading--custom-windows-images) for creating custom Windows OS images has been thoroughly updated and verified.
 
 <a href="#heading--Ten-words-or-less-5"><h3 id="heading--Ten-words-or-less-5">Ten words or less</h3></a>
 
@@ -724,7 +717,7 @@ Additional examples and techniques are provided as part of this new documentatio
 
 <a href="#heading--Improved-MAAS-audit-event-documentation"><h2 id="heading--Improved-MAAS-audit-event-documentation">Improved MAAS audit event documentation</h2></a>
 
-MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/understanding-maas-audit-events/6372) of MAAS audit events, including [detailed examples of how to reconstruct machine life-cycles](/t/how-to-work-with-audit-event-logs/5987#heading--How-to-audit-a-machines-life-cycle-with-audit-events) in the updated version of "[How to work with audit event logs](/t/how-to-work-with-audit-event-logs/5987)".
+MAAS audit event documentation has been greatly expanded to include [much better explanations](/t/maas-audit-events/6372) of MAAS audit events, including [detailed examples of how to reconstruct machine life-cycles](/t/how-to-audit-maas/5987#heading--How-to-audit-a-machines-life-cycle-with-audit-events) in the updated version of "[How to work with audit event logs](/t/how-to-audit-maas/5987)".
 
 <a href="#heading--Ten-words-or-less-9"><h3 id="heading--Ten-words-or-less-9">Ten words or less</h3></a>
 
@@ -801,7 +794,7 @@ Later on in the documentation, we walk through a sample of audit events and demo
 
 <a href="#heading--Auditing-with-finesse"><h3 id="heading--Auditing-with-finesse">Auditing with finesse</h3></a>
 
-As part of the updates to our "[How to work with audit event logs](/t/how-to-work-with-audit-event-logs/5987)", we've tried to offer you some finesse in reconstructing machine life-cycles.  We've shown how to combine various levels of MAAS event queries with standard command line utilities to produce clear audit trails such as this one:
+As part of the updates to our "[How to work with audit event logs](/t/how-to-audit-maas/5987)", we've tried to offer you some finesse in reconstructing machine life-cycles.  We've shown how to combine various levels of MAAS event queries with standard command line utilities to produce clear audit trails such as this one:
 
 ```nohighlight
 418606  ERROR    Marking node broken               Wed, 17 Nov. 2021 00:02:52  A Physical Interface requires a MAC address.
