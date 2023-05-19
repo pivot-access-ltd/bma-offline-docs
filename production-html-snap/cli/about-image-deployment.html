@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;<strong>Offline docs</strong>
+      <a href="https://maas.io/docs">(switch to live docs)</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../ui/about-image-deployment.html">
+	  UI-only
+	</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="ui/maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <p>
+      <strong>
+	<a href="ui/tutorials.html">
+	  Tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/bootstrap-maas.html">
+	    Bootstrap MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/get-fancy-cli-output.html">
+	    Get fancy CLI output
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-do-a-fresh-install-of-maas.html">
+	    Do a fresh install of MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-use-availability-zones.html">
+	    Use availability zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-use-images.html">
+	  How to use images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-customise-images.html">
+	    Customise images
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-deploy-a-real-time-kernel.html">
+	    Deploy a RT kernel
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-manage-controllers.html">
+	  How to manage controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-configure-controllers.html">
+	    Configure controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-manage-machines.html">
+	  How to manage machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-use-virtual-machines.html">
+	  How to use virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-manage-virtual-machines.html">
+	    Manage virtual machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-label-devices.html">
+	  How to label devices
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-secure-maas.html">
+	  How to secure MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-use-hashicorp-vault-with-maas.html">
+	    Use Vault with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-operate-maas.html">
+	  How to operate MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-monitor-maas.html">
+	    Monitor MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-audit-maas.html">
+	    Audit MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/how-to-give-and-receive-help.html">
+	  How to give and receive help
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/how-to-use-our-discourse-forum.html">
+	    Use our discourse forum
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contact-us">
+	    Get support↗
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-request-new-features.html">
+	    Request new features
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-review-and-report-bugs.html">
+	    Review and report bugs
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-contribute-doc.html">
+	    Contribute documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/general-reference.html">
+	  General reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/maas-settings-reference.html">
+	    MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/https://launchpad.net/maas.html">
+	    MAAS source code↗
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/how-to-help-improve-the-doc.html">
+	    Doc style guide
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+	<li>
+	  <a href="https://ubuntu.com/community/code-of-conduct">
+	    Code of conduct↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/api-reference.html">
+	  API reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/python-api-client-reference.html">
+	    Python API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api">
+	    API documentation↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/maas-scripts-reference.html">
+	  Scripts reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/maas-terraform-reference.html">
+	    Terraform
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/maas-logs-reference.html">
+	  Log reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/event-logs-reference.html">
+	    Event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/audit-event-logs-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/commissioning-logs-reference.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/testing-logs-reference.html">
+	    Testing logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/machine-parameters-reference.html">
+	  Machine parameters reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/power-drivers-reference.html">
+	    Power drivers
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/device-labelling-reference.html">
+	    Device labelling
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="ui/.html">
+	  Explanation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="ui/about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-networking.html">
+	    About networking
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-virtual-machines.html">
+	    About virtual machines
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-device-labels.html">
+	    About device labels
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-maas-events.html">
+	    About MAAS events
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-maas-audit-events.html">
+	    About audit events
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-maas-logging.html">
+	    About MAAS logging
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-maas-security.html">
+	    About MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-maas-performance.html">
+	    About MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="ui/about-ansible.html">
+	    About Ansible
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>About image deployment</h1><!-- "About image deployment" -->
+
+<p>Here&rsquo;s a conceptual view of the way that images get deployed to create a running MAAS machine:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4bcb44d49eae1238d6cbd3724f2ec7cab6b8acab.jpeg"></a></p>
+<p>This is a good place to explain how images work, including the nuances of <code>cloud-init</code> and <code>curtin</code> configurations.  Let&rsquo;s take it from the top.</p>
+<p>Before a machine can be deployed, it must be added to MAAS, commissioned, and allocated.  Machines can be added to MAAS either by <a href="how-to-deploy-physical-machines.html#heading--about-enlistment">enlistment</a> or by direct user action.  This machine must then be <a href="how-to-deploy-physical-machines.html#heading--about-commissioning-machines">commissioned</a>, which establishes the configuration and resources of the machine.  Finally, that machine must be allocated, that is, assigned to the control of one and only one user, so that conflicting commands to the same machine are not possible.  This aggregate step is represented by the green lines in the above diagram.</p>
+<p>When MAAS receives the &ldquo;deploy&rdquo; command from the user (blue lines), it must first retrieve (from the MAAS DB) the machine info that was gathered about the machine during commissioning (red lines).  MAAS then boots the machine and waits for the machine&rsquo;s firmware to request a bootable &ldquo;ephemeral&rdquo; OS.  This ephemeral OS must be one of the images supplied by <a href="https://images.maas.io">the MAAS simplestreams</a><code>↗</code> and cannot be a custom OS image.</p>
+<p>At the point that MAAS must send the ephemeral OS to the machine, MAAS needs to have this OS downloaded to the rack controller, based on earlier selections made by the user (yellow lines).  Assuming that the a suitable simplestreams image is available, MAAS can send it to the machine.  This ephemeral OS is not deployed, but it is used to download and deploy the image you&rsquo;ve chosen for the machine.</p>
+<p>When the ephemeral OS boots, it immediately spawns <a href="https://curtin.readthedocs.io/en/latest/topics/overview.html">curtin</a><code>↗</code>.  Curtin&rsquo;s deployment of the target image can be customised with pre-seeds, shown by the brown lines in the diagram.  These pre-seeds control things which are difficult to change once the target OS has been installed (such as <a href="http://caribou.kamikamamak.com/2015/06/26/custom-partitioning-with-maas-and-curtin-2/">partitioning</a><code>↗</code>.  Things which can be customized after the target image is running are generally configured with <a href="https://cloudinit.readthedocs.io/en/latest/">cloud-init</a><code>↗</code>, represented by the pink lines.</p>
+<p>To continue with the deployment flow, curtin retrieves the target image, either from the rack controller&rsquo;s cache (if the image is standard) or from the MAAS DB (if the image is custom).  Curtin then installs the target image and reboots the machine.  When the target image boots, it retrieves cloud-init configuration either from the MAAS metadata server (proxied by the region controller), or from cloud-init configuration data packed with the target image &ndash; whichever is &ldquo;closer&rdquo;.</p>
+<p>Once cloud-init has finished, the machine is deployed, that is, up and running, ready to perform whatever functions have been assigned to it.</p>
+<p><a href="#heading--key-takeaways"><h2 id="heading--key-takeaways">Key takeaways from this flowchart</h2></a></p>
+<p>The flowchart above is a bit complicated, but there are few key takeaways you should remember:</p>
+<ol>
+<li>
+<p>Machines have to be added, either by enlistment or direct user action, before they can be deployed.</p>
+</li>
+<li>
+<p>Machines must be commissioned before deployment, so that MAAS knows what resources the machine has available.</p>
+</li>
+<li>
+<p>Machines must be allocated before deployment, to lock out all other users (so that no command deadlock can occur).</p>
+</li>
+<li>
+<p>You must have selected and downloaded at least one suitable image from the MAAS simplestreams before you can deploy a machine, because this simplestreams image is used to boot the machine from the network, so that the target OS can then be installed on the machine.</p>
+</li>
+<li>
+<p>If you need to customize things about the machine that can&rsquo;t be changed after the target OS is installed (like partitioning drives), you must use curtin pre-seeds to do this.  You must specify these pre-seeds before you start deployment.</p>
+</li>
+<li>
+<p>If you want to customize things about the machine that can be changed after the target OS is installed (like downloading and installing an application),  you must use cloud-init to do this.  You must specify this cloud-init configuration, at the very least, before deployment begins.</p>
+</li>
+<li>
+<p>If you wish to deploy a custom image, you must pack it and upload it to MAAS before deployment begins.</p>
+</li>
+</ol>
+<p><a href="#heading--boot-sources"><h2 id="heading--boot-sources">About boot sources and why they matter</h2></a></p>
+<p>A region controller downloads its images from a boot source. The main characteristics of a boot source are location (URL) and an associated GPG public keyring.</p>
+<p><strong>NOTE:</strong> 
+A boot resource is another name for an image. So boot resources are found within a boot source.</p>
+<p>MAAS stores images in the region controller&rsquo;s database, from where the rack controller proxies them to the individual machines.  It&rsquo;s important to note that for ESXi images, network configuration includes only these five parameters:</p>
+<ol>
+<li>DHCP</li>
+<li>Static/auto IP assignments</li>
+<li>Aliases</li>
+<li>VLANs</li>
+<li>Bonds</li>
+</ol>
+<p>Bonds are mapped to NIC teaming in only three ways:</p>
+<ol>
+<li>balance-rr &ndash; portid</li>
+<li>active-backup &ndash; explicit</li>
+<li>802.3ad &ndash; iphash, LACP rate and XMIT hash policy settings ignored</li>
+</ol>
+<p>MAAS comes configured with a boot source that should suffice for most users:</p>
+<p><a href="https://images.maas.io/ephemeral-v3/stable/"><code>https://images.maas.io/ephemeral-v3/stable/</code></a><code>↗</code></p>
+<p>The above URL points to the &lsquo;stable&rsquo; stream (for the v3 format). See <a href="how-to-mirror-images-locally.html">Local image mirror</a> for some explanation regarding the availability of other streams.</p>
+<p>Although the backend supports multiple boot sources, MAAS itself uses a single source. If multiple sources are detected, the web UI will print a warning and will be unable to manage images.</p>
+    </div>
+  </body>
+</html>

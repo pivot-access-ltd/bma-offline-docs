@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/about-rbac-and-candid.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong>
+      <p>
+      <strong>
+	<a href="tutorials.html">
+	  Tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="bootstrap-maas.html">
+	    Bootstrap MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="get-fancy-cli-output.html">
+	    Get fancy CLI output
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-do-a-fresh-install-of-maas.html">
+	    Do a fresh install of MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-availability-zones.html">
+	    Use availability zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-images.html">
+	  How to use images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-images.html">
+	    Customise images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-a-real-time-kernel.html">
+	    Deploy a RT kernel
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-controllers.html">
+	  How to manage controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-configure-controllers.html">
+	    Configure controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-machines.html">
+	  How to manage machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-virtual-machines.html">
+	  How to use virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-virtual-machines.html">
+	    Manage virtual machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-devices.html">
+	  How to label devices
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-secure-maas.html">
+	  How to secure MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-hashicorp-vault-with-maas.html">
+	    Use Vault with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-operate-maas.html">
+	  How to operate MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-monitor-maas.html">
+	    Monitor MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-audit-maas.html">
+	    Audit MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-give-and-receive-help.html">
+	  How to give and receive help
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-our-discourse-forum.html">
+	    Use our discourse forum
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contact-us">
+	    Get support↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-new-features.html">
+	    Request new features
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-review-and-report-bugs.html">
+	    Review and report bugs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contribute-doc.html">
+	    Contribute documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="general-reference.html">
+	  General reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-settings-reference.html">
+	    MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="https://launchpad.net/maas.html">
+	    MAAS source code↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-help-improve-the-doc.html">
+	    Doc style guide
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+	<li>
+	  <a href="https://ubuntu.com/community/code-of-conduct">
+	    Code of conduct↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api-reference.html">
+	  API reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    Python API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api">
+	    API documentation↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-scripts-reference.html">
+	  Scripts reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-reference.html">
+	    Terraform
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-logs-reference.html">
+	  Log reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="event-logs-reference.html">
+	    Event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs-reference.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="testing-logs-reference.html">
+	    Testing logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machine-parameters-reference.html">
+	  Machine parameters reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-drivers-reference.html">
+	    Power drivers
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="device-labelling-reference.html">
+	    Device labelling
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Explanation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    About networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-virtual-machines.html">
+	    About virtual machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-device-labels.html">
+	    About device labels
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-events.html">
+	    About MAAS events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-audit-events.html">
+	    About audit events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-logging.html">
+	    About MAAS logging
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-security.html">
+	    About MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-performance.html">
+	    About MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="about-ansible.html">
+	    About Ansible
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>About RBAC and candid</h1><!-- "About RBAC and candid" -->
+<p><a href="#heading--multi-tenancy-in-maas"><h2 id="heading--multi-tenancy-in-maas">Multi-tenancy in MAAS</h2></a></p>
+<p>Likewise, you want to grant fine-grained access-controls to different users, based on assigned roles.  Working in concert with RBAC and Candid, MAAS can restrict user access and actions based on four roles:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Administrator: can access all settings and perform any operation on any machine in any resource pool; equivalent to a MAAS administrator.</li>
+<li>Operator: can act as a MAAS administrator, but only within an assigned resource pool.  Machines in other resource pools &ndash; and system settings &ndash; are not accessible.</li>
+<li>User: can access and manipulate machines that are not currently allocated to other users, within the confines of an assigned resource pool; equivalent to a MAAS user, but only over the resource pool.  Users cannot access any settings.</li>
+<li>Auditor: can view information for all machines within an assigned resource pool; cannot make any changes or alter any settings.</li>
+</ul>
+<p>MAAS controls access with the help of RBAC (Role-Based Access Control), Candid (Canonical Identity Manager), and an identity service of your choice, such as SSO (Single Sign-On).  From this point on, we&rsquo;ll refer to this solution as MAAS/RBAC, even though it uses more than two tools.  You can design and deploy a carefully-controlled MAAS environment using MAAS/RBAC.</p>
+<p>As a MAAS/RBAC administrator or designer, you should understand the concept of multi-tenancy.  Multi-tenancy means that groups of users own a group of resources (machines), but without knowing about other groups of users &ndash; or their machines.  A common multi-tenancy use case provides different sets of machines for different users or groups of users. </p>
+<p>MAAS alone can achieve this, to some degree, by allowing users to allocate machines, but this approach has some drawbacks:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Other administrative users can still see the allocated machines, as well as release and reallocate someone else&rsquo;s machines for themselves.</li>
+<li>Other administrative users can take administrative actions on someone else&rsquo;s machines (e.g., deployment).</li>
+</ul>
+<p>With MAAS/RBAC, an operator can act as administrator for one resource pool, without the ability to manipulate someone else&rsquo;s machines. Users can only operate within the confines of their resource pool, and auditors can review actions without making any changes.</p>
+<p><a href="#heading--how-resource-pools-link-to-rbac"><h3 id="heading--how-resource-pools-link-to-rbac">How resource pools are integrated into MAAS/RBAC</h3></a></p>
+<p>Resource pools are just a way of grouping machines.  Any given machine can be assigned to exactly one resource pool.  If you control access to resource pools, and you assign roles properly, you can effectively control user access.</p>
+<p>Note that just using resource pools to hide machines is a flawed access control approach, known as &ldquo;security by obscurity.&rdquo;  What users don&rsquo;t know will hurt you when the users figure it out. More often than not, users figure these things out entirely by accident, and hurt you unintentionally while trying to do the right thing.</p>
+<p>Consequently, there must also be some means of active authorisation that allows access to a resource pool.  That authorisation must be based on user identity. There must be some way of controlling what the user can do with that resource pool.  In the parlance of standard security model, &ldquo;what the user can do&rdquo; would be called &ldquo;privilege&rdquo;, but for the purposes of MAAS, we simply call them &ldquo;permissions.&rdquo;  </p>
+<p><a href="#heading--about-identity-services"><h3 id="heading--about-identity-services">About identity services</h3></a></p>
+<p>MAAS/RBAC will interface with many identity services, using Candid as a mediator.  While the choice of identity service is up to you, we should cover some general principles of identity servers as they relate to MAAS/RBAC.  Let&rsquo;s take a closer look at <a href="https://help.ubuntu.com/community/SingleSignOn">Ubuntu Single Sign-On (SSO)</a><code>↗</code></p>
+<p>SSO permits users to log in once to access many network services.  SSO centralises authentication (via Kerberos), account management (via LDAP), resource-sharing (via <code>pam_mount</code>), and limited authorisation through group memberships in LDAP, coupled with file system permissions.</p>
+<p>RBAC (Role-based access control) does not authenticate users or verify their identity; that function is assigned to the identity service you choose.  RBAC does receive an identity token or &ldquo;macaroon&rdquo; (via Candid) that RBAC uses to assign user roles.  MAAS uses these roles, in turn, to control user access and actions.</p>
+<p><a href="#heading--about-candid"><h2 id="heading--about-candid">How Candid fits into the picture</h2></a></p>
+<p>Direct authentication involves a user entering something unique in response to a challenge, in order to gain access.  &ldquo;Something unique&rdquo; means &ldquo;something you know, something you have, or something you are&rdquo;, e.g., a password, a hardware key, or a fingerprint, respectively.  Authentication can be automated with private/public key exchanges, protected with a password on the first exchange.  Adding another access point (another trusted client) usually means providing a public key, setting a password, or registering some biometric data.  Direct authentication works well when there are a limited number of clients and not a lot of user turnover.</p>
+<p>Increase the number of users and services that need to authenticate, and direct authentication becomes an IT nightmare: generating access requests; validating requests; setting up authentication; and then managing access as users move around the organisation.  <a href="https://github.com/canonical/candid">Candid</a><code>↗</code>, the Canonical identity service, was designed to meet this need.  Candid acts as an authentication gateway that connects a service like RBAC to your chosen identity service.</p>
+<p>Candid manages authenticated users via special access tokens (<a href="https://askubuntu.com/questions/940640/what-is-a-macaroon">macaroons</a>)<code>↗</code> that confirm user identity.  Unlike standard access tokens, macaroons can be verified independently, in a standard way, so they reduce the network traffic and delays of repeatedly querying the identity server.  Traditional access tokens must be short-lived; macaroons are valid for much longer and they can be refreshed easily.  Macaroons can also be bound to TLS certificates.  And macaroons can be used by multiple clients and services with no loss of security.</p>
+<p>Candid can do the following things:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>find users by various identity parameters, such as e-mail, full name, last login time, etc.</li>
+<li>show details for a user, based on e-mail or username.</li>
+<li>add or remove users from ACLs (access control lists), or list members of an ACL.</li>
+<li>add or remove users from arbitrary groups.</li>
+<li>clear the multi-factor authentication (MFA) credentials for a specific user.</li>
+<li>manage Candid agents.</li>
+</ul>
+<p>Candid can use certificates and agents, if desired.  You specify the identity provider by URL when instantiating the program.</p>
+<p>When a user tries to log into a MAAS which is working with RBAC, MAAS redirects that login to the RBAC server.  RBAC, in turn, requests authentication via Candid, which then consults the specified identity server (at the URL provided on startup).  If the user is authenticated, Candid constructs a macaroon, which is then passed to RBAC and on to MAAS.  This macaroon serves as the user&rsquo;s authentication token until it expires.</p>
+<p><a href="#heading--about-rbac"><h2 id="heading--about-rbac">About RBAC</h2></a></p>
+<p>RBAC uses a database to associate a given role with a properly-authenticated user identity.  With RBAC, permissions are associated with roles, not individual users. Within a given resource pool, the role assigned to a properly authenticated user controls what they can and cannot do within that pool.</p>
+<p>In the parlance of RBAC, MAAS would be a service, while each resource pool would be considered a separate scope. RBAC/MAAS also recognises scopes that are not tied to machines, including:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>DNS</li>
+<li>Availability zones</li>
+<li>Images</li>
+<li>System settings</li>
+</ul>
+<p>RBAC can help MAAS also control access to these &ldquo;non-machine resources&rdquo;.</p>
+<p>Note that it is possible for a given user to be an operator for one resource pool, a user for another, and an auditor for still another, but have no ability to change system settings or manipulate images.  Nothing about RBAC prohibits this arrangement.</p>
+<p><a href="#heading--the-rbac-permissions-model"><h3 id="heading--the-rbac-permissions-model">The MAAS/RBAC permissions model</h3></a></p>
+<p>Here is a thumbnail sketch of the permissions model:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>MAAS maintains resource pools, which are a machine attribute.  Every machine can be assigned to one and only one resource pool.  </li>
+<li>RBAC maintains roles, which are associated with user identities.  For a given user identity to carry out a particular operation in MAAS, that user identity must correspond to a role that has permission to carry out that operation in a given resource pool.</li>
+<li>Candid vouches for the user with a macaroon.</li>
+<li>Some identity service (e.g., SSO) authenticates the user to Candid, so that macaroons are not generated for unrecognised users.</li>
+</ul>
+<p>Relationships between roles, resource pools, and users is maintained by RBAC as a source of truth.  MAAS mediates access to resource pools, based on user roles, using information obtained from RBAC. </p>
+<p><a href="#heading--the-rbac-maas-security-architecture"><h3 id="heading--the-rbac-maas-security-architecture">The MAAS/RBAC security architecture</h3></a></p>
+<p>The following diagram will give you a graphical view of how MAAS, RBAC, Candid, and an identity provider work together to control access to MAAS resources:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/4/4433c6995c342efebe565f4888a46d7107d1525f.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/4/4433c6995c342efebe565f4888a46d7107d1525f.png"></a></p>
+<p>The step-by-step walk-through of the MAAS/RBAC relationship goes like this:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>When MAAS is initiated with RBAC connected, MAAS pushes a list of resource pools and a global resource key to RBAC.  The global resource key covers things that are not added to resource pools, such as devices or settings.</li>
+<li>When a user tries to login, MAAS redirects that login request to RBAC.</li>
+<li>RBAC, in turn, requests an authentication check from Candid.</li>
+<li>Candid attempts to authenticate the user via whatever identity provider was configured when Candid was started (e.g., SSO).</li>
+<li>If Candid successfully authenticates the user, Candid creates a macaroon as a temporary identity token for the user.</li>
+<li>Candid passes the macaroon back to RBAC.</li>
+<li>RBAC passes the macaroon, in turn, to MAAS, along with a dictionary of groups, role(s) and resource pools corresponding to that user.</li>
+<li>As needed, MAAS then mediates access to resource pools, using the macaroon to recognise the user and their group(s), and using the role/resource pool pairs to adjudicate access.</li>
+</ul>
+<p>Note that RBAC does not adjudicate individual permissions against resource pools. RBAC only sends MAAS the combination of users, roles, and related resource pools to MAAS when requested.  The MAAS code has a built-in understanding of the four roles (user, administrator, operator, and auditor) and what those roles can and cannot do with a given item.  </p>
+<p><a href="#heading--how-the-four-maas-roles-protect-maas-resources"><h3 id="heading--how-the-four-maas-roles-protect-maas-resource">How the four MAAS RBAC roles protect MAAS resources</h3></a></p>
+<p>The most important thing to understand about MAAS RBAC roles is that restricted users cannot see or interact with machines in resource pools that aren&rsquo;t permitted for them. This is more than just &ldquo;security by obscurity,&rdquo; because even if a user knows the name or system ID of a machine in a non-permitted resource pool, that user can&rsquo;t access it.  Removing non-permitted machines from view, though, prevents confusion about what the user can and can&rsquo;t do.</p>
+<p>Here is a quick breakdown of how the four roles experience MAAS:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Administrator: an administrator can do anything that a normal MAAS administrator can do in the absence of RBAC.  This means an admin can see all resource pools, take any action against any machine, and change any MAAS settings.</p>
+</li>
+<li>
+<p>Operator: an operator can do almost anything that a normal MAAS administrator can do, but only against machines in their permitted resource pools.  An operator cannot see or change system settings.</p>
+</li>
+<li>
+<p>User: a user can do just what a normal MAAS user can do.  They can only view and allocate machines that aren&rsquo;t allocated to someone else, even if that someone else is another user in the same resource pool.  Users can&rsquo;t change or access settings at all.</p>
+</li>
+<li>
+<p>Auditor: an auditor can view anything about machines in the resource pool(s) for which they are permitted.  Auditors cannot change or access settings.</p>
+</li>
+</ul>
+<p>MAAS makes no assumptions about how these roles might be used in the day-to-day operation of your MAAS instance.  The capabilities listed above form the complete set of what these roles can do.</p>
+    </div>
+  </body>
+</html>

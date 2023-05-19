@@ -1,0 +1,3229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/tutorial-try-out-the-maas-cli.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong> 
+      <strong>
+	<a href="tutorials.html">
+	  Tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="bootstrap-maas.html">
+	    Bootstrap MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="get-fancy-cli-output.html">
+	    Get fancy CLI output
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-do-a-fresh-install-of-maas.html">
+	    Do a fresh install of MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-availability-zones.html">
+	    Use availability zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-images.html">
+	  How to use images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-images.html">
+	    Customise images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-a-rt-kernel-via-cloud-init.html">
+	    Deploy a RT kernel
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-controllers.html">
+	  How to manage controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-configure-controllers.html">
+	    Configure controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-machines.html">
+	  How to manage machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-virtual-machines.html">
+	  How to use virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-virtual-machines.html">
+	    Manage virtual machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-devices.html">
+	  How to label devices
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-secure-maas.html">
+	  How to secure MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-hashicorp-vault-with-maas.html">
+	    Use Vault with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-operate-maas.html">
+	  How to operate MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-monitor-maas.html">
+	    Monitor MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-audit-maas.html">
+	    Audit MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-give-and-receive-help.html">
+	  How to give and receive help
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-our-discourse-forum.html">
+	    Use our discourse forum
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contact-us">
+	    Get support↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-new-features.html">
+	    Request new features
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-review-and-report-bugs.html">
+	    Review and report bugs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contribute-doc.html">
+	    Contribute documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="general-reference.html">
+	  General reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-settings-reference.html">
+	    MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="https://launchpad.net/maas.html">
+	    MAAS source code↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-help-improve-the-doc.html">
+	    Doc style guide
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+	<li>
+	  <a href="https://ubuntu.com/community/code-of-conduct">
+	    Code of conduct↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api-reference.html">
+	  API reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    Python API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api">
+	    API documentation↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-scripts-reference.html">
+	  Scripts reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-reference.html">
+	    Terraform
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-logs-reference.html">
+	  Log reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="event-logs-reference.html">
+	    Event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs-reference.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="testing-logs-reference.html">
+	    Testing logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machine-parameters-reference.html">
+	  Machine parameters reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-drivers-reference.html">
+	    Power drivers
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="device-labelling-reference.html">
+	    Device labelling
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Explanation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    About networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-virtual-machines.html">
+	    About virtual machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-device-labels.html">
+	    About device labels
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-events.html">
+	    About MAAS events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-audit-events.html">
+	    About audit events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-logging.html">
+	    About MAAS logging
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-security.html">
+	    About MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-performance.html">
+	    About MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="about-ansible.html">
+	    About Ansible
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Try out the MAAS CLI</h1><!-- "Try out the MAAS CLI" -->
+
+<p>Let&rsquo;s get some machines up and running, using the MAAS CLI.  If you haven&rsquo;t installed MAAS yet, you can <a href="how-to-install-maas.html">follow these instructions</a> first.</p>
+<p><a href="#heading--Logging-into-MAAS"><h2 id="heading--Logging-into-MAAS">Log into MAAS</h2></a></p>
+<p>In the CLI, logging in is a two-stepper:</p>
+<pre><code class="language-nohighlight">sudo maas apikey --username=admin &gt; api-key-file
+</code></pre>
+<p>You can make sure you got a valid API key by displaying the contents of api-key-file:</p>
+<pre><code class="language-nohighlight">cat api-key-file
+XXEjkeeqM:zXb7LkuPY7VxShFNhCFDaD8WnP8gLVL8V64GbSn:tTKdwWV64GbSn:tTKdwW
+</code></pre>
+<p><strong>NOTE:</strong> 
+You need to run the <code>apikey</code> command to get an API key.  You can&rsquo;t cut and paste the one above, it won&rsquo;t work.</p>
+<p>Anyway, we can now login to MAAS.  But first, let&rsquo;s try &ldquo;maas &ndash;help&rdquo; &ndash; there&rsquo;s an important distinction that you&rsquo;ll want to remember:</p>
+<pre><code class="language-nohighlight">maas --help
+usage: maas [-h] COMMAND ...
+
+optional arguments:
+   -h, --help      show this help message and exit
+
+drill down:
+   COMMAND
+      login         Log in to a remote API, and remember its description and credentials.
+      logout        Log out of a remote API, purging any stored credentials.
+      list          List remote APIs that have been logged-in to.
+      refresh       Refresh the API descriptions of all profiles.
+      init          Initialise MAAS in the specified run mode.
+      config        View or change controller configuration.
+      status        Status of controller services.
+      migrate       Perform migrations on connected database.
+      apikey        Used to manage a user's API keys. Shows existing keys unless --generate or --delete is passed.
+      configauth    Configure external authentication.
+      createadmin   Create a MAAS administrator account.
+      changepassword
+            Change a MAAS user's password.
+      admin         Interact with http://192.168.43.251:5240/MAAS/api/2.0/
+
+
+</code></pre>
+<p>This is the help you get (a) if you&rsquo;re not logged in, or (b) if you don&rsquo;t type a logged-in username (called a &ldquo;profile&rdquo;) after &ldquo;maas&rdquo;. What you see above isn&rsquo;t even half of what MAAS can do, but it&rsquo;s all you get as an unrecognized user.</p>
+<p>So now, let&rsquo;s login and try that help again:</p>
+<p><strong>NOTE:</strong> 
+Your MAAS address will probably not be the same as the one I&rsquo;m using; cutting and pasting won&rsquo;t work.</p>
+<pre><code class="language-nohighlight">maas login admin http://192.168.43.251:5240/MAAS/api/2.0/ $(head -1 api-key-file)
+
+You are now logged in to the MAAS server at
+http://192.168.43.251:5240/MAAS/api/2.0/ with the profile name 'admin'.
+
+For help with the available commands, try:
+
+maas admin --help
+</code></pre>
+<p><a href="#heading--Check-the-detailed-help"><h2 id="heading--Check-the-detailed-help">Check the detailed help</h2></a></p>
+<p>Now, having done that, we can get a much better idea what MAAS will do:</p>
+<pre><code class="language-nohighlight">maas admin --help
+
+usage: maas admin [-h] COMMAND ...
+
+Issue commands to the MAAS region controller at http://192.168.43.251:5240/MAAS/api/2.0/.
+
+optional arguments:
+   -h, --help            show this help message and exit
+
+drill down:
+   COMMAND
+      account             Manage the current logged-in user.
+      bcache-cache-set    Manage bcache cache set on a machine.
+      bcache-cache-sets   Manage bcache cache sets on a machine.
+      bcache              Manage bcache device on a machine.
+      bcaches             Manage bcache devices on a machine.
+      block-device        Manage a block device on a machine.
+      block-devices       Manage block devices on a machine.
+      boot-resource       Manage a boot resource.
+      boot-resources      Manage the boot resources.
+      boot-source         Manage a boot source.
+      boot-source-selection
+              Manage a boot source selection.
+      boot-source-selections
+              Manage the collection of boot source selections.
+      boot-sources        Manage the collection of boot sources.
+      commissioning-script
+              Manage a custom commissioning script.
+      commissioning-scripts
+              Manage custom commissioning scripts.
+      dhcpsnippet         Manage an individual DHCP snippet.
+      dhcpsnippets        Manage the collection of all DHCP snippets in MAAS.
+      dnsresource         Manage dnsresource.
+      dnsresource-record  Manage dnsresourcerecord.
+      dnsresource-records
+              Manage DNS resource records (e.g. CNAME, MX, NS, SRV, TXT)
+      dnsresources        Manage dnsresources.
+      device              Manage an individual device.
+      devices             Manage the collection of all the devices in the MAAS.
+      discoveries         Query observed discoveries.
+      discovery           Read or delete an observed discovery.
+      domain              Manage domain.
+      domains             Manage domains.
+      events              Retrieve filtered node events.
+      fabric              Manage fabric.
+      fabrics             Manage fabrics.
+      fan-network         Manage Fan Network.
+      fan-networks        Manage Fan Networks.
+      file                Manage a FileStorage object.
+      files               Manage the collection of all the files in this MAAS.
+      ipaddresses         Manage IP addresses allocated by MAAS.
+      iprange             Manage IP range.
+      ipranges            Manage IP ranges.
+      interface           Manage a node's or device's interface.
+      interfaces          Manage interfaces on a node.
+      license-key         Manage a license key.
+      license-keys        Manage the license keys.
+      maas                Manage the MAAS server.
+      machine             Manage an individual machine.
+      machines            Manage the collection of all the machines in the MAAS.
+      network             Manage a network.
+      networks            Manage the networks.
+      node                Manage an individual Node.
+      node-results        Read the collection of commissioning script results.
+      node-script         Manage or view a custom script.
+      node-script-result  Manage node script results.
+      node-script-results
+              Manage node script results.
+      node-scripts        Manage custom scripts.
+      nodes               Manage the collection of all the nodes in the MAAS.
+      notification        Manage an individual notification.
+      notifications       Manage the collection of all the notifications in MAAS.
+      package-repositories
+              Manage the collection of all Package Repositories in MAAS.
+      package-repository  Manage an individual package repository.
+      partition           Manage partition on a block device.
+      partitions          Manage partitions on a block device.
+      pod                 Manage an individual pod.
+      pods                Manage the collection of all the pod in the MAAS.
+      rack-controller     Manage an individual rack controller.
+      rack-controllers    Manage the collection of all rack controllers in MAAS.
+      raid                Manage a specific RAID (Redundant Array of Independent
+              Disks) on a machine.
+      raids               Manage all RAIDs (Redundant Array of Independent Disks) on
+              a machine.
+      region-controller   Manage an individual region controller.
+      region-controllers  Manage the collection of all region controllers in MAAS.
+      resource-pool       Manage a resource pool.
+      resource-pools      Manage resource pools.
+      sshkey              Manage an SSH key.
+      sshkeys             Manage the collection of all the SSH keys in this MAAS.
+      sslkey              Manage an SSL key.
+      sslkeys             Operations on multiple keys.
+      space               Manage space.
+      spaces              Manage spaces.
+      static-route        Manage static route.
+      static-routes       Manage static routes.
+      subnet              Manage subnet.
+      subnets             Manage subnets.
+      tag                 Tags are properties that can be associated with a Node and
+              serve as criteria for selecting and allocating nodes.
+      tags                Manage all tags known to MAAS.
+      user                Manage a user account.
+      users               Manage the user accounts of this MAAS.
+      version             Information about this MAAS instance.
+      virtual-machine     Manage individual virtual machines.
+      virtual-machines    Manage a collection of virtual machines.
+      vlan                Manage a VLAN on a fabric.
+      vlans               Manage VLANs on a fabric.
+      vm-host             Manage an individual vm-host.
+      vm-hosts            Manage the collection of all the vm-hosts in the MAAS.
+      vmfs-datastore      Manage VMFS datastore on a machine.
+      vmfs-datastores     Manage VMFS datastores on a machine.
+      volume-group        Manage volume group on a machine.
+      volume-groups       Manage volume groups on a machine.
+      zone                Manage a physical zone.
+      zones               Manage physical zones.
+
+      This is a profile.  Any commands you issue on this profile will
+      operate on the MAAS region server.
+
+      The command information you see here comes from the region server's
+      API; it may differ for different profiles.  If you believe the API may
+      have changed, use the command's 'refresh' sub-command to fetch the
+      latest version of this help information from the server.
+</code></pre>
+<p><a href="#heading--Set-the-DNS-server-IP-address"><h2 id="heading--Set-the-DNS-server-IP-address">Set the DNS server IP address</h2></a></p>
+<p>The next step?  Set the DNS server IP address.  You can do this by issuing the CLI subcommand called &ldquo;dnsresource&rdquo;.  Let&rsquo;s look at the help for that command:</p>
+<pre><code class="language-nohighlight">maas admin dnsresource --help
+Usage: maas admin dnsresource [-h] COMMAND ...
+
+Manage dnsresource.
+
+optional arguments:
+   -h, --help  show this help message and exit
+
+drill down:
+   COMMAND
+      read      Read a DNS resource
+      update    Update a DNS resource
+      delete    Delete a DNS resource
+</code></pre>
+<p>That looks like what we want; let&rsquo;s be naive and try that:</p>
+<pre><code class="language-nohighlight">maas admin dnsresource read
+Usage: maas admin dnsresource read [--help] [-d] [-k] id [data [data ...]]
+
+Read a DNS resource
+
+positional arguments:
+   id
+   data
+
+optional arguments:
+   --help, -h      Show this help message and exit.
+   -d, --debug     Display more information about API responses.
+   -k, --insecure  Disable SSL certificate check
+
+Read a DNS resource by id.
+   the following arguments are required: id, data
+</code></pre>
+<p>Well, that&rsquo;s weird, and not what we want.  But wait &ndash; the CLI follows the &ldquo;collection-instance&rdquo; rule.  Listing DNS resources would be part of a collection, so they would be pluralized.  Let&rsquo;s try <code>dnsresources</code> (plural):</p>
+<pre><code class="language-nohighlight">maas admin dnsresources read
+Success.
+Machine-readable output follows:
+[]
+</code></pre>
+<p>That isn&rsquo;t it either, but in the <code>maas set-config</code> command there is a parameter named <code>upstream_dns</code> for which we can set a value.  Let&rsquo;s try that:</p>
+<pre><code class="language-nohighlight">maas admin maas set-config name=upstream_dns value=&quot;8.8.8.8&quot;
+Success.
+Machine-readable output follows:
+OK
+</code></pre>
+<p>Yep, that&rsquo;s it. It isn&rsquo;t obvious whether we needed to type the IP address with quotes.  In fact, it doesn&rsquo;t matter; whatever makes you feel more comfortable:</p>
+<pre><code class="language-nohighlight">maas admin maas set-config name=upstream_dns value=8.8.8.8
+Success.
+Machine-readable output follows:
+OK
+</code></pre>
+<p><a href="#heading--Import-some-images"><h2 id="heading--Import-some-images">Import some images</h2></a></p>
+<p>Next, we need to import images.  Some images automatically sync, so let&rsquo;s bring in some other image (like Ubuntu 16.04 LTS) just to see how that works.</p>
+<p>Reading the help, it says we can discover the images we&rsquo;ve already downloaded, using the following command:</p>
+<pre><code class="language-nohighlight">maas admin boot-resources read
+</code></pre>
+<p>The JSON resulting from this command is rather lengthy, so we&rsquo;ve collapsed it to a pop-down.  You can click the arrow to see the JSON returns.  Incidentally, we&rsquo;ll do that from now on with long listings:</p>
+<p><details><summary>Success.</summary></p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+[
+    {
+    &quot;id&quot;: 7,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;grub-efi-signed/uefi&quot;,
+    &quot;architecture&quot;: &quot;amd64/generic&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/7/&quot;
+    },
+    {
+    &quot;id&quot;: 8,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;grub-efi/uefi&quot;,
+    &quot;architecture&quot;: &quot;arm64/generic&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/8/&quot;
+    },
+    {
+    &quot;id&quot;: 9,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;grub-ieee1275/open-firmware&quot;,
+    &quot;architecture&quot;: &quot;ppc64el/generic&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/9/&quot;
+    },
+    {
+    &quot;id&quot;: 10,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;pxelinux/pxe&quot;,
+    &quot;architecture&quot;: &quot;i386/generic&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/10/&quot;
+    },
+    {
+    &quot;id&quot;: 1,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;ubuntu/bionic&quot;,
+    &quot;architecture&quot;: &quot;amd64/ga-18.04&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/1/&quot;,
+    &quot;subarches&quot;: &quot;generic,hwe-p,hwe-q,hwe-r,hwe-s,hwe-t,hwe-u,hwe-v,hwe-w,ga-16.04,ga-16.10,ga-17.04,ga-17.10,ga-18.04&quot;
+    },
+    {
+    &quot;id&quot;: 2,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;ubuntu/bionic&quot;,
+    &quot;architecture&quot;: &quot;amd64/ga-18.04-lowlatency&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/2/&quot;,
+    &quot;subarches&quot;: &quot;generic,hwe-p,hwe-q,hwe-r,hwe-s,hwe-t,hwe-u,hwe-v,hwe-w,ga-16.04,ga-16.10,ga-17.04,ga-17.10,ga-18.04&quot;
+    },
+    {
+    &quot;id&quot;: 3,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;ubuntu/bionic&quot;,
+    &quot;architecture&quot;: &quot;amd64/hwe-18.04&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/3/&quot;,
+    &quot;subarches&quot;: &quot;generic,hwe-p,hwe-q,hwe-r,hwe-s,hwe-t,hwe-u,hwe-v,hwe-w,ga-16.04,ga-16.10,ga-17.04,ga-17.10,ga-18.04&quot;
+    },
+    {
+    &quot;id&quot;: 4,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;ubuntu/bionic&quot;,
+    &quot;architecture&quot;: &quot;amd64/hwe-18.04-edge&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/4/&quot;,
+    &quot;subarches&quot;: &quot;generic,hwe-p,hwe-q,hwe-r,hwe-s,hwe-t,hwe-u,hwe-v,hwe-w,ga-16.04,ga-16.10,ga-17.04,ga-17.10,ga-18.04,hwe-18.10,hwe-19.04&quot;
+    },
+    {
+    &quot;id&quot;: 5,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;ubuntu/bionic&quot;,
+    &quot;architecture&quot;: &quot;amd64/hwe-18.04-lowlatency&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/5/&quot;,
+    &quot;subarches&quot;: &quot;generic,hwe-p,hwe-q,hwe-r,hwe-s,hwe-t,hwe-u,hwe-v,hwe-w,ga-16.04,ga-16.10,ga-17.04,ga-17.10,ga-18.04&quot;
+    },
+    {
+    &quot;id&quot;: 6,
+    &quot;type&quot;: &quot;Synced&quot;,
+    &quot;name&quot;: &quot;ubuntu/bionic&quot;,
+    &quot;architecture&quot;: &quot;amd64/hwe-18.04-lowlatency-edge&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-resources/6/&quot;,
+    &quot;subarches&quot;: &quot;generic,hwe-p,hwe-q,hwe-r,hwe-s,hwe-t,hwe-u,hwe-v,hwe-w,ga-16.04,ga-16.10,ga-17.04,ga-17.10,ga-18.04,hwe-18.10,hwe-19.04&quot;
+    }
+]
+</code></pre>
+<p></details></p>
+<p>Okay, that&rsquo;s a lot of information, but it looks like we have a bunch of 18.04 images downloaded and synched.  Depending on what version of MAAS you&rsquo;re using, your list could be a lot different, and that doesn&rsquo;t matter here.</p>
+<p><a href="#heading--Try-getting-a-more-compact-image-list"><h3 id="heading--Try-getting-a-more-compact-image-list">Try getting a more compact image list</h3></a></p>
+<p>Let&rsquo;s try to get a little fancy with  <code>grep</code> and see if we can make that list shorter:</p>
+<pre><code class="language-nohighlight">maas admin boot-resources read | grep architecture
+</code></pre>
+<p>This produces a quick list of the images we&rsquo;ve successfully downloaded:<br /></p>
+<pre><code class="language-nohighlight">&quot;architecture&quot;: &quot;amd64/generic&quot;,
+&quot;architecture&quot;: &quot;arm64/generic&quot;,
+&quot;architecture&quot;: &quot;ppc64el/generic&quot;,
+&quot;architecture&quot;: &quot;i386/generic&quot;,
+&quot;architecture&quot;: &quot;amd64/ga-18.04&quot;,
+&quot;architecture&quot;: &quot;amd64/ga-18.04-lowlatency&quot;,
+&quot;architecture&quot;: &quot;amd64/hwe-18.04&quot;,
+&quot;architecture&quot;: &quot;amd64/hwe-18.04-edge&quot;,
+&quot;architecture&quot;: &quot;amd64/hwe-18.04-lowlatency&quot;,
+&quot;architecture&quot;: &quot;amd64/hwe-18.04-lowlatency-edge&quot;,
+</code></pre>
+<p>That definitely confirms that we have some images.  But what are those three or four on top?  Looking at the massive JSON output, notice that they have names like &ldquo;open-firmware,&rdquo; &ldquo;uefi,&rdquo; and &ldquo;pxe.&rdquo;  Those are images that can PXE-boot machines, basically.  But how can we sort this information out in a neat way?</p>
+<p><a href="#heading--Get-familiar-with-jq"><h3 id="heading--Get-familiar-with-jq">Get familiar with jq</h3></a></p>
+<p>Well, if you&rsquo;re going to use anything with JSON-based output, you&rsquo;ll want to consider learning the command line tool <a href="https://stedolan.github.io/jq/">jq</a><code>↗</code>.  It&rsquo;s quite handy for parsing the JSON output of the MAAS CLI.  So, for example, if we want a lightly formatted table of names and architectures, we can run that last command through <code>jq</code> like this:</p>
+<pre><code class="language-nohighlight">maas admin boot-resources read | jq -r '.[] | &quot;\(.name)\t\(.architecture)&quot;'
+</code></pre>
+<p>This gives us a cleaner image list that looks something like this:</p>
+<pre><code class="language-nohighlight">grub-efi-signed/uefi         amd64/generic
+grub-efi/uefi                arm64/generic
+grub-ieee1275/open-firmware  ppc64el/generic
+pxelinux/pxe                 i386/generic
+ubuntu/bionic                amd64/ga-18.04
+ubuntu/bionic                amd64/ga-18.04-lowlatency
+ubuntu/bionic                amd64/hwe-18.04
+ubuntu/bionic                amd64/hwe-18.04-edge
+ubuntu/bionic                amd64/hwe-18.04-lowlatency
+ubuntu/bionic                amd64/hwe-18.04-lowlatency-edge
+</code></pre>
+<p>So basically, we have images needed to boot and deloy machines.  That&rsquo;s a good start, but let&rsquo;s pull down another image for the practice.</p>
+<p>We can select images with the <code>boot-source-selections</code> command, so let&rsquo;s try that with old &ldquo;Trusty&rdquo; (Xenial Xerus, aka 16.04):</p>
+<pre><code class="language-nohighlight">maas admin boot-source-selections create 1 \
+  &gt; os=&quot;ubuntu&quot; release=&quot;trusty&quot; arches=&quot;amd64&quot; subarches=&quot;*&quot; \
+  &gt; labels=&quot;*&quot;
+</code></pre>
+<p>The results look like this:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;os&quot;: &quot;ubuntu&quot;,
+    &quot;release&quot;: &quot;trusty&quot;,
+    &quot;arches&quot;: [
+    &quot;amd64&quot;
+    ],
+    &quot;subarches&quot;: [
+    &quot;*&quot;
+    ],
+    &quot;labels&quot;: [
+    &quot;*&quot;
+    ],
+    &quot;boot_source_id&quot;: 1,
+    &quot;id&quot;: 2,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/boot-sources/1/selections/2/&quot;
+}
+</code></pre>
+<p>And that worked, which is good, because that was a long command to type correctly.  Luckily, downloading (importing) them is a fairly simple command:</p>
+<pre><code class="language-nohighlight">maas admin boot-resources import
+Success.
+Machine-readable output follows:
+Import of boot resources started
+</code></pre>
+<p><a href="#heading--Configure-DHCP"><h2 id="heading--Configure-DHCP">Configure DHCP</h2></a></p>
+<p>The whole point here is to get machines deployed, so the next step is to get DHCP working.  We have to find the right VLAN, which isn&rsquo;t too hard, since at this point there&rsquo;s only one.</p>
+<p>In order to turn on DHCP, we need to know two things besides the VLAN name (&ldquo;untagged&rdquo;): we need to know the fabric ID and the primary rack controller name. Actually, to start with, all the fabrics will be on the same untagged VLAN, so any fabric will do. We can find a usable fabric by picking a valid bridge IP address like this:</p>
+<pre><code class="language-nohighlight">maas admin subnet read 192.168.123.0/24 | grep fabric_id
+&quot;fabric_id&quot;: 2,
+</code></pre>
+<p>Then we need to find the name of the primary rack controller:</p>
+<pre><code class="language-nohighlight"> maas admin rack-controllers read | grep hostname | cut -d '&quot;' -f 4
+wintermute
+</code></pre>
+<p>So we should be able to turn on DHCP like this:</p>
+<pre><code class="language-nohighlight">maas admin vlan update 2 untagged dhcp_on=True primary_rack=wintermute
+{&quot;dhcp_on&quot;: [&quot;dhcp can only be turned on when a dynamic IP range is defined.&quot;]}
+</code></pre>
+<p>Wait. We need to define a dynamic IP range for this to work.  Well, my virtual bridge is on 192.168.123.0/24. Yours will be in a different place, most likely.  We want to use that subnet, so let&rsquo;s choose a reasonable IP range, like, say, 192.168.123.190 to 192.168.123.253:</p>
+<pre><code class="language-nohighlight"> maas admin ipranges create type=dynamic start_ip=192.168.123.190 end_ip=192.168.123.253
+</code></pre>
+<p>Remember that your subnet address will probably be different, so you&rsquo;ll need to create a range within that subnet.  The result of this command is:</p>
+<p><details><summary>Success.</summary></p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;subnet&quot;: {
+    &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;vlan&quot;: {
+        &quot;vid&quot;: 0,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: false,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;fabric&quot;: &quot;fabric-2&quot;,
+        &quot;primary_rack&quot;: null,
+        &quot;name&quot;: &quot;untagged&quot;,
+        &quot;id&quot;: 5003,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;secondary_rack&quot;: null,
+        &quot;fabric_id&quot;: 2,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+    },
+    &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+    &quot;rdns_mode&quot;: 2,
+    &quot;gateway_ip&quot;: null,
+    &quot;dns_servers&quot;: [],
+    &quot;allow_dns&quot;: true,
+    &quot;allow_proxy&quot;: true,
+    &quot;active_discovery&quot;: false,
+    &quot;managed&quot;: true,
+    &quot;id&quot;: 4,
+    &quot;space&quot;: &quot;undefined&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+    },
+    &quot;type&quot;: &quot;dynamic&quot;,
+    &quot;start_ip&quot;: &quot;192.168.123.190&quot;,
+    &quot;end_ip&quot;: &quot;192.168.123.253&quot;,
+    &quot;user&quot;: {
+    &quot;is_superuser&quot;: true,
+    &quot;username&quot;: &quot;admin&quot;,
+    &quot;email&quot;: &quot;admin@admin.com&quot;,
+    &quot;is_local&quot;: true,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/users/admin/&quot;
+    },
+    &quot;comment&quot;: &quot;&quot;,
+    &quot;id&quot;: 1,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/ipranges/1/&quot;
+}
+</code></pre>
+<p></details></p>
+<p>Okay, now let&rsquo;s try that DHCP switch-on one more time:</p>
+<pre><code class="language-nohighlight"> maas admin vlan update 2 untagged dhcp_on=True primary_rack=wintermute
+</code></pre>
+<p>Now it works:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;vid&quot;: 0,
+    &quot;mtu&quot;: 1500,
+    &quot;dhcp_on&quot;: true,
+    &quot;external_dhcp&quot;: null,
+    &quot;relay_vlan&quot;: null,
+    &quot;fabric&quot;: &quot;fabric-2&quot;,
+    &quot;space&quot;: &quot;undefined&quot;,
+    &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+    &quot;secondary_rack&quot;: null,
+    &quot;name&quot;: &quot;untagged&quot;,
+    &quot;fabric_id&quot;: 2,
+    &quot;id&quot;: 5003,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+}
+</code></pre>
+<p><a href="#heading--Commission-some-machines"><h2 id="heading--Commission-some-machines">Commission some machines</h2></a></p>
+<p>In order to deploy machines, we&rsquo;ve got to create some, plain and simple, and then commission them.  We&rsquo;re using <code>virsh</code> for this example, but you can use LXD or any VM hosting tool you&rsquo;re comfortable with:</p>
+<pre><code class="language-nohighlight"> maas admin machines create
+  &gt; architecture=amd64
+  &gt; mac_addresses=52:54:00:15:36:f2
+  &gt; power_type=virsh
+  &gt; power_parameters_power_id=f677a842-571c-4e65-adc9-11e2cf92d363
+  &gt; power_parameters_power_address=qemu+ssh://stormrider@192.168.123.1/system
+  &gt; power_parameters_power_pass=xxxxxxxx
+
+</code></pre>
+<p>That seemed to work:</p>
+<p><details><summary>Success.</summary></p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;storage&quot;: 0.0,
+    &quot;tag_names&quot;: [],
+    &quot;special_filesystems&quot;: [],
+    &quot;memory&quot;: 0,
+    &quot;boot_disk&quot;: null,
+    &quot;virtualblockdevice_set&quot;: [],
+    &quot;hardware_info&quot;: {
+    &quot;system_vendor&quot;: &quot;Unknown&quot;,
+    &quot;system_product&quot;: &quot;Unknown&quot;,
+    &quot;system_family&quot;: &quot;Unknown&quot;,
+    &quot;system_version&quot;: &quot;Unknown&quot;,
+    &quot;system_sku&quot;: &quot;Unknown&quot;,
+    &quot;system_serial&quot;: &quot;Unknown&quot;,
+    &quot;cpu_model&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_vendor&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_product&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_serial&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_version&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_firmware_vendor&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_firmware_date&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_firmware_version&quot;: &quot;Unknown&quot;,
+    &quot;chassis_vendor&quot;: &quot;Unknown&quot;,
+    &quot;chassis_type&quot;: &quot;Unknown&quot;,
+    &quot;chassis_serial&quot;: &quot;Unknown&quot;,
+    &quot;chassis_version&quot;: &quot;Unknown&quot;
+    },
+    &quot;address_ttl&quot;: null,
+    &quot;memory_test_status&quot;: -1,
+    &quot;other_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;osystem&quot;: &quot;&quot;,
+    &quot;status_message&quot;: &quot;Commissioning&quot;,
+    &quot;netboot&quot;: true,
+    &quot;physicalblockdevice_set&quot;: [],
+    &quot;node_type&quot;: 0,
+    &quot;cpu_test_status&quot;: -1,
+    &quot;memory_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;bcaches&quot;: [],
+    &quot;storage_test_status&quot;: 0,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;status&quot;: 1,
+    &quot;commissioning_status&quot;: 0,
+    &quot;power_type&quot;: &quot;virsh&quot;,
+    &quot;locked&quot;: false,
+    &quot;numanode_set&quot;: [
+    {
+        &quot;index&quot;: 0,
+        &quot;memory&quot;: 0,
+        &quot;cores&quot;: []
+    }
+    ],
+    &quot;bios_boot_method&quot;: null,
+    &quot;fqdn&quot;: &quot;ace-swan.maas&quot;,
+    &quot;node_type_name&quot;: &quot;Machine&quot;,
+    &quot;hostname&quot;: &quot;ace-swan&quot;,
+    &quot;volume_groups&quot;: [],
+    &quot;testing_status&quot;: 0,
+    &quot;network_test_status&quot;: -1,
+    &quot;other_test_status&quot;: -1,
+    &quot;interface_test_status&quot;: -1,
+    &quot;hwe_kernel&quot;: null,
+    &quot;blockdevice_set&quot;: [],
+    &quot;testing_status_name&quot;: &quot;Pending&quot;,
+    &quot;power_state&quot;: &quot;unknown&quot;,
+    &quot;min_hwe_kernel&quot;: &quot;&quot;,
+    &quot;owner&quot;: &quot;admin&quot;,
+    &quot;distro_series&quot;: &quot;&quot;,
+    &quot;storage_test_status_name&quot;: &quot;Pending&quot;,
+    &quot;cpu_speed&quot;: 0,
+    &quot;swap_size&quot;: null,
+    &quot;cpu_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;hardware_uuid&quot;: null,
+    &quot;architecture&quot;: &quot;amd64/generic&quot;,
+    &quot;pool&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;Default pool&quot;,
+    &quot;id&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/resourcepool/0/&quot;
+    },
+    &quot;cache_sets&quot;: [],
+    &quot;pod&quot;: null,
+    &quot;iscsiblockdevice_set&quot;: [],
+    &quot;disable_ipv4&quot;: false,
+    &quot;status_action&quot;: &quot;&quot;,
+    &quot;boot_interface&quot;: {
+    &quot;name&quot;: &quot;eth0&quot;,
+    &quot;id&quot;: 10,
+    &quot;product&quot;: null,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;effective_mtu&quot;: 1500,
+    &quot;children&quot;: [],
+    &quot;link_connected&quot;: true,
+    &quot;enabled&quot;: true,
+    &quot;interface_speed&quot;: 0,
+    &quot;numa_node&quot;: 0,
+    &quot;firmware_version&quot;: null,
+    &quot;parents&quot;: [],
+    &quot;discovered&quot;: null,
+    &quot;params&quot;: &quot;&quot;,
+    &quot;links&quot;: [],
+    &quot;sriov_max_vf&quot;: 0,
+    &quot;tags&quot;: [],
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;vlan&quot;: null,
+    &quot;vendor&quot;: null,
+    &quot;link_speed&quot;: 0,
+    &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    },
+    &quot;cpu_count&quot;: 0,
+    &quot;domain&quot;: {
+    &quot;authoritative&quot;: true,
+    &quot;ttl&quot;: null,
+    &quot;resource_record_count&quot;: 0,
+    &quot;name&quot;: &quot;maas&quot;,
+    &quot;is_default&quot;: true,
+    &quot;id&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/domains/0/&quot;
+    },
+    &quot;current_testing_result_id&quot;: 7,
+    &quot;default_gateways&quot;: {
+    &quot;ipv4&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    },
+    &quot;ipv6&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    }
+    },
+    &quot;interface_set&quot;: [
+    {
+        &quot;name&quot;: &quot;eth0&quot;,
+        &quot;id&quot;: 10,
+        &quot;product&quot;: null,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;effective_mtu&quot;: 1500,
+        &quot;children&quot;: [],
+        &quot;link_connected&quot;: true,
+        &quot;enabled&quot;: true,
+        &quot;interface_speed&quot;: 0,
+        &quot;numa_node&quot;: 0,
+        &quot;firmware_version&quot;: null,
+        &quot;parents&quot;: [],
+        &quot;discovered&quot;: null,
+        &quot;params&quot;: &quot;&quot;,
+        &quot;links&quot;: [],
+        &quot;sriov_max_vf&quot;: 0,
+        &quot;tags&quot;: [],
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;vlan&quot;: null,
+        &quot;vendor&quot;: null,
+        &quot;link_speed&quot;: 0,
+        &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    }
+    ],
+    &quot;status_name&quot;: &quot;Commissioning&quot;,
+    &quot;commissioning_status_name&quot;: &quot;Pending&quot;,
+    &quot;owner_data&quot;: {},
+    &quot;ip_addresses&quot;: [],
+    &quot;raids&quot;: [],
+    &quot;network_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;current_commissioning_result_id&quot;: 6,
+    &quot;interface_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;current_installation_result_id&quot;: null,
+    &quot;zone&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 1,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/zones/default/&quot;
+    },
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/machines/bhxws3/&quot;
+}
+</code></pre>
+<p></details></p>
+<p>And just like that, it&rsquo;s already commissioning (MAAS does that if it can).</p>
+<p><a href="#heading--Manually-commission-a-machine"><h2 id="heading--Manually-commission-a-machine">Manually commission a machine</h2></a></p>
+<p>So now we have a machine in the &ldquo;Ready&rdquo; state, but let&rsquo;s also get familiar with commanding MAAS to commission it via the CLI.  All we really need for that is the system ID, which is the last parameter in the &ldquo;resource uri&rdquo; above.  But just for grins, let&rsquo;s go ahead and retrieve the system ID using the CLI.</p>
+<p>There&rsquo;s only one in this example, so we don&rsquo;t have to worry about any other cross-referencing on this machine:</p>
+<pre><code class="language-nohighlight"> maas admin machines read | jq '.[] | .hostname, .system_id'
+&quot;ace-swan&quot;
+&quot;bhxws3&quot;
+</code></pre>
+<p>Okay, now we can use that system ID to commission the machine via the CLI:</p>
+<pre><code class="language-nohighlight"> maas admin machine commission bhxws3
+</code></pre>
+<p>And commissioning should start and return success:</p>
+<p><details><summary>Success.</summary></p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;storage_test_status_name&quot;: &quot;Pending&quot;,
+    &quot;bcaches&quot;: [],
+    &quot;cpu_count&quot;: 1,
+    &quot;interface_set&quot;: [
+    {
+        &quot;params&quot;: &quot;&quot;,
+        &quot;numa_node&quot;: 0,
+        &quot;tags&quot;: [],
+        &quot;id&quot;: 10,
+        &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+        &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+        &quot;children&quot;: [],
+        &quot;effective_mtu&quot;: 1500,
+        &quot;discovered&quot;: [],
+        &quot;links&quot;: [],
+        &quot;link_speed&quot;: 0,
+        &quot;link_connected&quot;: true,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;enabled&quot;: true,
+        &quot;interface_speed&quot;: 0,
+        &quot;firmware_version&quot;: null,
+        &quot;name&quot;: &quot;ens3&quot;,
+        &quot;sriov_max_vf&quot;: 0,
+        &quot;product&quot;: null,
+        &quot;vlan&quot;: {
+        &quot;vid&quot;: 0,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: true,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;fabric&quot;: &quot;fabric-2&quot;,
+        &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+        &quot;name&quot;: &quot;untagged&quot;,
+        &quot;id&quot;: 5003,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;secondary_rack&quot;: null,
+        &quot;fabric_id&quot;: 2,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+        },
+        &quot;parents&quot;: [],
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    }
+    ],
+    &quot;network_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;numanode_set&quot;: [
+    {
+        &quot;index&quot;: 0,
+        &quot;memory&quot;: 985,
+        &quot;cores&quot;: [
+        0
+        ]
+    }
+    ],
+    &quot;locked&quot;: false,
+    &quot;hardware_uuid&quot;: &quot;F677A842-571C-4E65-ADC9-11E2CF92D363&quot;,
+    &quot;default_gateways&quot;: {
+    &quot;ipv4&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    },
+    &quot;ipv6&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    }
+    },
+    &quot;status_action&quot;: &quot;&quot;,
+    &quot;status_message&quot;: &quot;Commissioning&quot;,
+    &quot;cpu_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;memory_test_status&quot;: -1,
+    &quot;virtualblockdevice_set&quot;: [],
+    &quot;pool&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;Default pool&quot;,
+    &quot;id&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/resourcepool/0/&quot;
+    },
+    &quot;current_testing_result_id&quot;: 9,
+    &quot;current_installation_result_id&quot;: null,
+    &quot;netboot&quot;: true,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;special_filesystems&quot;: [],
+    &quot;testing_status&quot;: 0,
+    &quot;memory&quot;: 1024,
+    &quot;current_commissioning_result_id&quot;: 8,
+    &quot;storage&quot;: 5368.70912,
+    &quot;commissioning_status&quot;: 0,
+    &quot;cpu_test_status&quot;: -1,
+    &quot;tag_names&quot;: [
+    &quot;virtual&quot;
+    ],
+    &quot;memory_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;swap_size&quot;: null,
+    &quot;status_name&quot;: &quot;Commissioning&quot;,
+    &quot;other_test_status&quot;: -1,
+    &quot;pod&quot;: null,
+    &quot;storage_test_status&quot;: 0,
+    &quot;blockdevice_set&quot;: [
+    {
+        &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+        &quot;size&quot;: 5368709120,
+        &quot;block_size&quot;: 512,
+        &quot;tags&quot;: [
+        &quot;ssd&quot;
+        ],
+        &quot;serial&quot;: &quot;QM00001&quot;,
+        &quot;uuid&quot;: null,
+        &quot;numa_node&quot;: 0,
+        &quot;available_size&quot;: 5368709120,
+        &quot;id&quot;: 3,
+        &quot;partition_table_type&quot;: null,
+        &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+        &quot;storage_pool&quot;: null,
+        &quot;used_for&quot;: &quot;Unused&quot;,
+        &quot;filesystem&quot;: null,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;used_size&quot;: 0,
+        &quot;partitions&quot;: [],
+        &quot;name&quot;: &quot;sda&quot;,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    }
+    ],
+    &quot;other_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;distro_series&quot;: &quot;&quot;,
+    &quot;testing_status_name&quot;: &quot;Pending&quot;,
+    &quot;ip_addresses&quot;: [],
+    &quot;address_ttl&quot;: null,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;physicalblockdevice_set&quot;: [
+    {
+        &quot;firmware_version&quot;: &quot;2.5+&quot;,
+        &quot;serial&quot;: &quot;QM00001&quot;,
+        &quot;uuid&quot;: null,
+        &quot;numa_node&quot;: 0,
+        &quot;available_size&quot;: 5368709120,
+        &quot;size&quot;: 5368709120,
+        &quot;tags&quot;: [
+        &quot;ssd&quot;
+        ],
+        &quot;id&quot;: 3,
+        &quot;partition_table_type&quot;: null,
+        &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+        &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+        &quot;storage_pool&quot;: null,
+        &quot;used_for&quot;: &quot;Unused&quot;,
+        &quot;filesystem&quot;: null,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;used_size&quot;: 0,
+        &quot;partitions&quot;: [],
+        &quot;name&quot;: &quot;sda&quot;,
+        &quot;block_size&quot;: 512,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    }
+    ],
+    &quot;fqdn&quot;: &quot;ace-swan.maas&quot;,
+    &quot;osystem&quot;: &quot;&quot;,
+    &quot;domain&quot;: {
+    &quot;authoritative&quot;: true,
+    &quot;ttl&quot;: null,
+    &quot;resource_record_count&quot;: 0,
+    &quot;name&quot;: &quot;maas&quot;,
+    &quot;id&quot;: 0,
+    &quot;is_default&quot;: true,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/domains/0/&quot;
+    },
+    &quot;boot_interface&quot;: {
+    &quot;params&quot;: &quot;&quot;,
+    &quot;numa_node&quot;: 0,
+    &quot;tags&quot;: [],
+    &quot;id&quot;: 10,
+    &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+    &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+    &quot;children&quot;: [],
+    &quot;effective_mtu&quot;: 1500,
+    &quot;discovered&quot;: [],
+    &quot;links&quot;: [],
+    &quot;link_speed&quot;: 0,
+    &quot;link_connected&quot;: true,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;enabled&quot;: true,
+    &quot;interface_speed&quot;: 0,
+    &quot;firmware_version&quot;: null,
+    &quot;name&quot;: &quot;ens3&quot;,
+    &quot;sriov_max_vf&quot;: 0,
+    &quot;product&quot;: null,
+    &quot;vlan&quot;: {
+        &quot;vid&quot;: 0,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: true,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;fabric&quot;: &quot;fabric-2&quot;,
+        &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+        &quot;name&quot;: &quot;untagged&quot;,
+        &quot;id&quot;: 5003,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;secondary_rack&quot;: null,
+        &quot;fabric_id&quot;: 2,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+    },
+    &quot;parents&quot;: [],
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    },
+    &quot;hostname&quot;: &quot;ace-swan&quot;,
+    &quot;network_test_status&quot;: -1,
+    &quot;min_hwe_kernel&quot;: &quot;&quot;,
+    &quot;power_state&quot;: &quot;off&quot;,
+    &quot;interface_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;owner_data&quot;: {},
+    &quot;volume_groups&quot;: [],
+    &quot;power_type&quot;: &quot;virsh&quot;,
+    &quot;node_type&quot;: 0,
+    &quot;owner&quot;: &quot;admin&quot;,
+    &quot;cache_sets&quot;: [],
+    &quot;architecture&quot;: &quot;amd64/generic&quot;,
+    &quot;hwe_kernel&quot;: null,
+    &quot;zone&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 1,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/zones/default/&quot;
+    },
+    &quot;disable_ipv4&quot;: false,
+    &quot;boot_disk&quot;: {
+    &quot;firmware_version&quot;: &quot;2.5+&quot;,
+    &quot;serial&quot;: &quot;QM00001&quot;,
+    &quot;uuid&quot;: null,
+    &quot;numa_node&quot;: 0,
+    &quot;available_size&quot;: 5368709120,
+    &quot;size&quot;: 5368709120,
+    &quot;tags&quot;: [
+        &quot;ssd&quot;
+    ],
+    &quot;id&quot;: 3,
+    &quot;partition_table_type&quot;: null,
+    &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+    &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+    &quot;storage_pool&quot;: null,
+    &quot;used_for&quot;: &quot;Unused&quot;,
+    &quot;filesystem&quot;: null,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;used_size&quot;: 0,
+    &quot;partitions&quot;: [],
+    &quot;name&quot;: &quot;sda&quot;,
+    &quot;block_size&quot;: 512,
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    },
+    &quot;status&quot;: 1,
+    &quot;iscsiblockdevice_set&quot;: [],
+    &quot;raids&quot;: [],
+    &quot;node_type_name&quot;: &quot;Machine&quot;,
+    &quot;hardware_info&quot;: {
+    &quot;system_vendor&quot;: &quot;QEMU&quot;,
+    &quot;system_product&quot;: &quot;Standard PC (i440FX + PIIX, 1996)&quot;,
+    &quot;system_family&quot;: &quot;Unknown&quot;,
+    &quot;system_version&quot;: &quot;pc-i440fx-focal&quot;,
+    &quot;system_sku&quot;: &quot;Unknown&quot;,
+    &quot;system_serial&quot;: &quot;Unknown&quot;,
+    &quot;cpu_model&quot;: &quot;Intel Core Processor (Skylake, IBRS)&quot;,
+    &quot;mainboard_vendor&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_product&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_serial&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_version&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_firmware_vendor&quot;: &quot;SeaBIOS&quot;,
+    &quot;mainboard_firmware_date&quot;: &quot;04/01/2014&quot;,
+    &quot;mainboard_firmware_version&quot;: &quot;1.13.0-1ubuntu1&quot;,
+    &quot;chassis_vendor&quot;: &quot;QEMU&quot;,
+    &quot;chassis_type&quot;: &quot;Other&quot;,
+    &quot;chassis_serial&quot;: &quot;Unknown&quot;,
+    &quot;chassis_version&quot;: &quot;pc-i440fx-focal&quot;
+    },
+    &quot;commissioning_status_name&quot;: &quot;Pending&quot;,
+    &quot;bios_boot_method&quot;: &quot;pxe&quot;,
+    &quot;interface_test_status&quot;: -1,
+    &quot;cpu_speed&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/machines/bhxws3/&quot;
+}
+</code></pre>
+<p></details></p>
+<p>And that&rsquo;s it, it&rsquo;s that easy. It takes a minute to get all the parameters together to create a new machine, but it isn&rsquo;t that difficult.  </p>
+<p><a href="#heading--Deploy-some-machines"><h2 id="heading--Deploy-some-machines">Deploy some machines</h2></a></p>
+<p>The real value of MAAS, of course, is deploying machines without having to be there.  That&rsquo;s what we&rsquo;re going to do next.</p>
+<p><a href="#heading--Allocate-a-machine"><h3 id="heading--Allocate-a-machine">Allocate a machine</h3></a></p>
+<p>When it&rsquo;s finished commissioning, we can allocate a machine like this:</p>
+<pre><code class="language-nohighlight">maas admin machines allocate system_id=bhxws3
+</code></pre>
+<p>Allocating assigns ownership of that machine to the requesting user, which prevents others from changing the state of your machine you aren&rsquo;t expecting it.  When successful, you&rsquo;ll get a return like this:</p>
+<p><details><summary>Success.</summary></p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;raids&quot;: [],
+    &quot;zone&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 1,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/zones/default/&quot;
+    },
+    &quot;current_commissioning_result_id&quot;: 8,
+    &quot;storage_test_status&quot;: 2,
+    &quot;current_testing_result_id&quot;: 9,
+    &quot;bcaches&quot;: [],
+    &quot;ip_addresses&quot;: [
+    &quot;192.168.123.190&quot;
+    ],
+    &quot;pool&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;Default pool&quot;,
+    &quot;id&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/resourcepool/0/&quot;
+    },
+    &quot;physicalblockdevice_set&quot;: [
+    {
+        &quot;firmware_version&quot;: &quot;2.5+&quot;,
+        &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;partition_table_type&quot;: &quot;GPT&quot;,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;block_size&quot;: 512,
+        &quot;id&quot;: 3,
+        &quot;numa_node&quot;: 0,
+        &quot;partitions&quot;: [
+        {
+            &quot;uuid&quot;: &quot;8aa1164c-8a91-41d7-92e3-c411634355bb&quot;,
+            &quot;size&quot;: 5360320512,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;id&quot;: 3,
+            &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+            &quot;device_id&quot;: 3,
+            &quot;system_id&quot;: &quot;bhxws3&quot;,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part2&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;ext4&quot;,
+            &quot;label&quot;: &quot;root&quot;,
+            &quot;uuid&quot;: &quot;68487852-7e38-4605-a84e-d787532fd443&quot;,
+            &quot;mount_point&quot;: &quot;/&quot;,
+            &quot;mount_options&quot;: null
+            },
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/partition/3&quot;
+        }
+        ],
+        &quot;filesystem&quot;: null,
+        &quot;available_size&quot;: 0,
+        &quot;size&quot;: 5368709120,
+        &quot;storage_pool&quot;: null,
+        &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+        &quot;used_size&quot;: 5366611968,
+        &quot;tags&quot;: [
+        &quot;ssd&quot;
+        ],
+        &quot;used_for&quot;: &quot;GPT partitioned with 1 partition&quot;,
+        &quot;uuid&quot;: null,
+        &quot;name&quot;: &quot;sda&quot;,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+        &quot;serial&quot;: &quot;QM00001&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    }
+    ],
+    &quot;swap_size&quot;: null,
+    &quot;storage&quot;: 5368.70912,
+    &quot;node_type_name&quot;: &quot;Machine&quot;,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;owner_data&quot;: {},
+    &quot;special_filesystems&quot;: [],
+    &quot;tag_names&quot;: [
+    &quot;virtual&quot;
+    ],
+    &quot;cpu_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;locked&quot;: false,
+    &quot;cpu_count&quot;: 1,
+    &quot;volume_groups&quot;: [],
+    &quot;storage_test_status_name&quot;: &quot;Passed&quot;,
+    &quot;hardware_info&quot;: {
+    &quot;system_vendor&quot;: &quot;QEMU&quot;,
+    &quot;system_product&quot;: &quot;Standard PC (i440FX + PIIX, 1996)&quot;,
+    &quot;system_family&quot;: &quot;Unknown&quot;,
+    &quot;system_version&quot;: &quot;pc-i440fx-focal&quot;,
+    &quot;system_sku&quot;: &quot;Unknown&quot;,
+    &quot;system_serial&quot;: &quot;Unknown&quot;,
+    &quot;cpu_model&quot;: &quot;Intel Core Processor (Skylake, IBRS)&quot;,
+    &quot;mainboard_vendor&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_product&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_serial&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_version&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_firmware_vendor&quot;: &quot;SeaBIOS&quot;,
+    &quot;mainboard_firmware_date&quot;: &quot;04/01/2014&quot;,
+    &quot;mainboard_firmware_version&quot;: &quot;1.13.0-1ubuntu1&quot;,
+    &quot;chassis_vendor&quot;: &quot;QEMU&quot;,
+    &quot;chassis_type&quot;: &quot;Other&quot;,
+    &quot;chassis_serial&quot;: &quot;Unknown&quot;,
+    &quot;chassis_version&quot;: &quot;pc-i440fx-focal&quot;
+    },
+    &quot;node_type&quot;: 0,
+    &quot;other_test_status&quot;: -1,
+    &quot;hostname&quot;: &quot;ace-swan&quot;,
+    &quot;interface_test_status&quot;: -1,
+    &quot;boot_interface&quot;: {
+    &quot;link_speed&quot;: 0,
+    &quot;params&quot;: &quot;&quot;,
+    &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+    &quot;firmware_version&quot;: null,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;enabled&quot;: true,
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;links&quot;: [
+        {
+        &quot;id&quot;: 15,
+        &quot;mode&quot;: &quot;auto&quot;,
+        &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+            &quot;vid&quot;: 0,
+            &quot;mtu&quot;: 1500,
+            &quot;dhcp_on&quot;: true,
+            &quot;external_dhcp&quot;: null,
+            &quot;relay_vlan&quot;: null,
+            &quot;fabric&quot;: &quot;fabric-2&quot;,
+            &quot;id&quot;: 5003,
+            &quot;secondary_rack&quot;: null,
+            &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+            &quot;name&quot;: &quot;untagged&quot;,
+            &quot;fabric_id&quot;: 2,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+        }
+        }
+    ],
+    &quot;id&quot;: 10,
+    &quot;discovered&quot;: [
+        {
+        &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+            &quot;vid&quot;: 0,
+            &quot;mtu&quot;: 1500,
+            &quot;dhcp_on&quot;: true,
+            &quot;external_dhcp&quot;: null,
+            &quot;relay_vlan&quot;: null,
+            &quot;fabric&quot;: &quot;fabric-2&quot;,
+            &quot;id&quot;: 5003,
+            &quot;secondary_rack&quot;: null,
+            &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+            &quot;name&quot;: &quot;untagged&quot;,
+            &quot;fabric_id&quot;: 2,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+        },
+        &quot;ip_address&quot;: &quot;192.168.123.190&quot;
+        }
+    ],
+    &quot;numa_node&quot;: 0,
+    &quot;children&quot;: [],
+    &quot;parents&quot;: [],
+    &quot;link_connected&quot;: true,
+    &quot;effective_mtu&quot;: 1500,
+    &quot;tags&quot;: [],
+    &quot;sriov_max_vf&quot;: 0,
+    &quot;interface_speed&quot;: 0,
+    &quot;name&quot;: &quot;ens3&quot;,
+    &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+    &quot;product&quot;: null,
+    &quot;vlan&quot;: {
+        &quot;vid&quot;: 0,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: true,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;fabric&quot;: &quot;fabric-2&quot;,
+        &quot;id&quot;: 5003,
+        &quot;secondary_rack&quot;: null,
+        &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+        &quot;name&quot;: &quot;untagged&quot;,
+        &quot;fabric_id&quot;: 2,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+    },
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    },
+    &quot;memory&quot;: 1024,
+    &quot;memory_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;default_gateways&quot;: {
+    &quot;ipv4&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    },
+    &quot;ipv6&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    }
+    },
+    &quot;blockdevice_set&quot;: [
+    {
+        &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+        &quot;size&quot;: 5368709120,
+        &quot;block_size&quot;: 512,
+        &quot;tags&quot;: [
+        &quot;ssd&quot;
+        ],
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;partition_table_type&quot;: &quot;GPT&quot;,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;id&quot;: 3,
+        &quot;numa_node&quot;: 0,
+        &quot;partitions&quot;: [
+        {
+            &quot;uuid&quot;: &quot;8aa1164c-8a91-41d7-92e3-c411634355bb&quot;,
+            &quot;size&quot;: 5360320512,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;id&quot;: 3,
+            &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+            &quot;device_id&quot;: 3,
+            &quot;system_id&quot;: &quot;bhxws3&quot;,
+            &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part2&quot;,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;ext4&quot;,
+            &quot;label&quot;: &quot;root&quot;,
+            &quot;uuid&quot;: &quot;68487852-7e38-4605-a84e-d787532fd443&quot;,
+            &quot;mount_point&quot;: &quot;/&quot;,
+            &quot;mount_options&quot;: null
+            },
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/partition/3&quot;
+        }
+        ],
+        &quot;filesystem&quot;: null,
+        &quot;available_size&quot;: 0,
+        &quot;storage_pool&quot;: null,
+        &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+        &quot;used_size&quot;: 5366611968,
+        &quot;used_for&quot;: &quot;GPT partitioned with 1 partition&quot;,
+        &quot;uuid&quot;: null,
+        &quot;name&quot;: &quot;sda&quot;,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+        &quot;serial&quot;: &quot;QM00001&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    }
+    ],
+    &quot;interface_set&quot;: [
+    {
+        &quot;link_speed&quot;: 0,
+        &quot;params&quot;: &quot;&quot;,
+        &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+        &quot;firmware_version&quot;: null,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;enabled&quot;: true,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;links&quot;: [
+        {
+            &quot;id&quot;: 15,
+            &quot;mode&quot;: &quot;auto&quot;,
+            &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+                &quot;vid&quot;: 0,
+                &quot;mtu&quot;: 1500,
+                &quot;dhcp_on&quot;: true,
+                &quot;external_dhcp&quot;: null,
+                &quot;relay_vlan&quot;: null,
+                &quot;fabric&quot;: &quot;fabric-2&quot;,
+                &quot;id&quot;: 5003,
+                &quot;secondary_rack&quot;: null,
+                &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+                &quot;name&quot;: &quot;untagged&quot;,
+                &quot;fabric_id&quot;: 2,
+                &quot;space&quot;: &quot;undefined&quot;,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+            }
+        }
+        ],
+        &quot;id&quot;: 10,
+        &quot;discovered&quot;: [
+        {
+            &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+                &quot;vid&quot;: 0,
+                &quot;mtu&quot;: 1500,
+                &quot;dhcp_on&quot;: true,
+                &quot;external_dhcp&quot;: null,
+                &quot;relay_vlan&quot;: null,
+                &quot;fabric&quot;: &quot;fabric-2&quot;,
+                &quot;id&quot;: 5003,
+                &quot;secondary_rack&quot;: null,
+                &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+                &quot;name&quot;: &quot;untagged&quot;,
+                &quot;fabric_id&quot;: 2,
+                &quot;space&quot;: &quot;undefined&quot;,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+            },
+            &quot;ip_address&quot;: &quot;192.168.123.190&quot;
+        }
+        ],
+        &quot;numa_node&quot;: 0,
+        &quot;children&quot;: [],
+        &quot;parents&quot;: [],
+        &quot;link_connected&quot;: true,
+        &quot;effective_mtu&quot;: 1500,
+        &quot;tags&quot;: [],
+        &quot;sriov_max_vf&quot;: 0,
+        &quot;interface_speed&quot;: 0,
+        &quot;name&quot;: &quot;ens3&quot;,
+        &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+        &quot;product&quot;: null,
+        &quot;vlan&quot;: {
+        &quot;vid&quot;: 0,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: true,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;fabric&quot;: &quot;fabric-2&quot;,
+        &quot;id&quot;: 5003,
+        &quot;secondary_rack&quot;: null,
+        &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+        &quot;name&quot;: &quot;untagged&quot;,
+        &quot;fabric_id&quot;: 2,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+        },
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    }
+    ],
+    &quot;numanode_set&quot;: [
+    {
+        &quot;index&quot;: 0,
+        &quot;memory&quot;: 985,
+        &quot;cores&quot;: [
+        0
+        ]
+    }
+    ],
+    &quot;min_hwe_kernel&quot;: &quot;&quot;,
+    &quot;memory_test_status&quot;: -1,
+    &quot;power_type&quot;: &quot;virsh&quot;,
+    &quot;power_state&quot;: &quot;off&quot;,
+    &quot;status&quot;: 10,
+    &quot;testing_status_name&quot;: &quot;Passed&quot;,
+    &quot;interface_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;cache_sets&quot;: [],
+    &quot;constraints_by_type&quot;: {},
+    &quot;domain&quot;: {
+    &quot;authoritative&quot;: true,
+    &quot;ttl&quot;: null,
+    &quot;id&quot;: 0,
+    &quot;resource_record_count&quot;: 0,
+    &quot;name&quot;: &quot;maas&quot;,
+    &quot;is_default&quot;: true,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/domains/0/&quot;
+    },
+    &quot;network_test_status&quot;: -1,
+    &quot;current_installation_result_id&quot;: null,
+    &quot;bios_boot_method&quot;: &quot;pxe&quot;,
+    &quot;status_name&quot;: &quot;Allocated&quot;,
+    &quot;address_ttl&quot;: null,
+    &quot;fqdn&quot;: &quot;ace-swan.maas&quot;,
+    &quot;cpu_speed&quot;: 0,
+    &quot;hwe_kernel&quot;: null,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;commissioning_status_name&quot;: &quot;Passed&quot;,
+    &quot;pod&quot;: null,
+    &quot;network_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;hardware_uuid&quot;: &quot;F677A842-571C-4E65-ADC9-11E2CF92D363&quot;,
+    &quot;commissioning_status&quot;: 2,
+    &quot;status_message&quot;: &quot;Ready&quot;,
+    &quot;owner&quot;: &quot;admin&quot;,
+    &quot;distro_series&quot;: &quot;&quot;,
+    &quot;status_action&quot;: &quot;&quot;,
+    &quot;testing_status&quot;: 2,
+    &quot;cpu_test_status&quot;: -1,
+    &quot;architecture&quot;: &quot;amd64/generic&quot;,
+    &quot;netboot&quot;: true,
+    &quot;iscsiblockdevice_set&quot;: [],
+    &quot;disable_ipv4&quot;: false,
+    &quot;virtualblockdevice_set&quot;: [],
+    &quot;osystem&quot;: &quot;&quot;,
+    &quot;boot_disk&quot;: {
+    &quot;firmware_version&quot;: &quot;2.5+&quot;,
+    &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;partition_table_type&quot;: &quot;GPT&quot;,
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;block_size&quot;: 512,
+    &quot;id&quot;: 3,
+    &quot;numa_node&quot;: 0,
+    &quot;partitions&quot;: [
+        {
+        &quot;uuid&quot;: &quot;8aa1164c-8a91-41d7-92e3-c411634355bb&quot;,
+        &quot;size&quot;: 5360320512,
+        &quot;bootable&quot;: false,
+        &quot;tags&quot;: [],
+        &quot;id&quot;: 3,
+        &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+        &quot;device_id&quot;: 3,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part2&quot;,
+        &quot;type&quot;: &quot;partition&quot;,
+        &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;ext4&quot;,
+            &quot;label&quot;: &quot;root&quot;,
+            &quot;uuid&quot;: &quot;68487852-7e38-4605-a84e-d787532fd443&quot;,
+            &quot;mount_point&quot;: &quot;/&quot;,
+            &quot;mount_options&quot;: null
+        },
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/partition/3&quot;
+        }
+    ],
+    &quot;filesystem&quot;: null,
+    &quot;available_size&quot;: 0,
+    &quot;size&quot;: 5368709120,
+    &quot;storage_pool&quot;: null,
+    &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+    &quot;used_size&quot;: 5366611968,
+    &quot;tags&quot;: [
+        &quot;ssd&quot;
+    ],
+    &quot;used_for&quot;: &quot;GPT partitioned with 1 partition&quot;,
+    &quot;uuid&quot;: null,
+    &quot;name&quot;: &quot;sda&quot;,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+    &quot;serial&quot;: &quot;QM00001&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    },
+    &quot;other_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/machines/bhxws3/&quot;
+}
+</code></pre>
+<p></details></p>
+<p><a href="#heading--Deploying-a-machine-with-the-CLI"><h3 id="heading--Deploying-a-machine-with-the-CLI">Deploying a machine with the CLI</h3></a></p>
+<p>Finally, let&rsquo;s deploy that machine this way:</p>
+<pre><code class="language-nohighlight">maas admin machine deploy bhxws3
+</code></pre>
+<p><details><summary>Success.</summary></p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;architecture&quot;: &quot;amd64/generic&quot;,
+    &quot;cpu_speed&quot;: 0,
+    &quot;tag_names&quot;: [
+    &quot;virtual&quot;
+    ],
+    &quot;boot_interface&quot;: {
+    &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+    &quot;links&quot;: [
+        {
+        &quot;id&quot;: 15,
+        &quot;mode&quot;: &quot;auto&quot;,
+        &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+            &quot;vid&quot;: 0,
+            &quot;mtu&quot;: 1500,
+            &quot;dhcp_on&quot;: true,
+            &quot;external_dhcp&quot;: null,
+            &quot;relay_vlan&quot;: null,
+            &quot;fabric_id&quot;: 2,
+            &quot;id&quot;: 5003,
+            &quot;fabric&quot;: &quot;fabric-2&quot;,
+            &quot;secondary_rack&quot;: null,
+            &quot;name&quot;: &quot;untagged&quot;,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+        }
+        }
+    ],
+    &quot;numa_node&quot;: 0,
+    &quot;enabled&quot;: true,
+    &quot;params&quot;: &quot;&quot;,
+    &quot;firmware_version&quot;: null,
+    &quot;sriov_max_vf&quot;: 0,
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;children&quot;: [],
+    &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;parents&quot;: [],
+    &quot;vlan&quot;: {
+        &quot;vid&quot;: 0,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: true,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;fabric_id&quot;: 2,
+        &quot;id&quot;: 5003,
+        &quot;fabric&quot;: &quot;fabric-2&quot;,
+        &quot;secondary_rack&quot;: null,
+        &quot;name&quot;: &quot;untagged&quot;,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+    },
+    &quot;link_connected&quot;: true,
+    &quot;id&quot;: 10,
+    &quot;effective_mtu&quot;: 1500,
+    &quot;discovered&quot;: [
+        {
+        &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+            &quot;vid&quot;: 0,
+            &quot;mtu&quot;: 1500,
+            &quot;dhcp_on&quot;: true,
+            &quot;external_dhcp&quot;: null,
+            &quot;relay_vlan&quot;: null,
+            &quot;fabric_id&quot;: 2,
+            &quot;id&quot;: 5003,
+            &quot;fabric&quot;: &quot;fabric-2&quot;,
+            &quot;secondary_rack&quot;: null,
+            &quot;name&quot;: &quot;untagged&quot;,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+        },
+        &quot;ip_address&quot;: &quot;192.168.123.190&quot;
+        }
+    ],
+    &quot;link_speed&quot;: 0,
+    &quot;name&quot;: &quot;ens3&quot;,
+    &quot;product&quot;: null,
+    &quot;interface_speed&quot;: 0,
+    &quot;tags&quot;: [],
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    },
+    &quot;ip_addresses&quot;: [
+    &quot;192.168.123.190&quot;
+    ],
+    &quot;testing_status_name&quot;: &quot;Passed&quot;,
+    &quot;osystem&quot;: &quot;ubuntu&quot;,
+    &quot;bcaches&quot;: [],
+    &quot;owner&quot;: &quot;admin&quot;,
+    &quot;special_filesystems&quot;: [],
+    &quot;numanode_set&quot;: [
+    {
+        &quot;index&quot;: 0,
+        &quot;memory&quot;: 985,
+        &quot;cores&quot;: [
+        0
+        ]
+    }
+    ],
+    &quot;node_type&quot;: 0,
+    &quot;cpu_test_status&quot;: -1,
+    &quot;storage_test_status_name&quot;: &quot;Passed&quot;,
+    &quot;locked&quot;: false,
+    &quot;disable_ipv4&quot;: false,
+    &quot;status_message&quot;: &quot;Deploying&quot;,
+    &quot;other_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;interface_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;status_name&quot;: &quot;Deploying&quot;,
+    &quot;commissioning_status&quot;: 2,
+    &quot;hardware_uuid&quot;: &quot;F677A842-571C-4E65-ADC9-11E2CF92D363&quot;,
+    &quot;fqdn&quot;: &quot;ace-swan.maas&quot;,
+    &quot;min_hwe_kernel&quot;: &quot;&quot;,
+    &quot;network_test_status&quot;: -1,
+    &quot;iscsiblockdevice_set&quot;: [],
+    &quot;current_testing_result_id&quot;: 9,
+    &quot;interface_test_status&quot;: -1,
+    &quot;status_action&quot;: &quot;&quot;,
+    &quot;pool&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;Default pool&quot;,
+    &quot;id&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/resourcepool/0/&quot;
+    },
+    &quot;netboot&quot;: true,
+    &quot;distro_series&quot;: &quot;bionic&quot;,
+    &quot;current_installation_result_id&quot;: 10,
+    &quot;memory_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;cpu_count&quot;: 1,
+    &quot;hwe_kernel&quot;: &quot;ga-18.04&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;current_commissioning_result_id&quot;: 8,
+    &quot;cpu_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;storage_test_status&quot;: 2,
+    &quot;hardware_info&quot;: {
+    &quot;system_vendor&quot;: &quot;QEMU&quot;,
+    &quot;system_product&quot;: &quot;Standard PC (i440FX + PIIX, 1996)&quot;,
+    &quot;system_family&quot;: &quot;Unknown&quot;,
+    &quot;system_version&quot;: &quot;pc-i440fx-focal&quot;,
+    &quot;system_sku&quot;: &quot;Unknown&quot;,
+    &quot;system_serial&quot;: &quot;Unknown&quot;,
+    &quot;cpu_model&quot;: &quot;Intel Core Processor (Skylake, IBRS)&quot;,
+    &quot;mainboard_vendor&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_product&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_serial&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_version&quot;: &quot;Unknown&quot;,
+    &quot;mainboard_firmware_vendor&quot;: &quot;SeaBIOS&quot;,
+    &quot;mainboard_firmware_date&quot;: &quot;04/01/2014&quot;,
+    &quot;mainboard_firmware_version&quot;: &quot;1.13.0-1ubuntu1&quot;,
+    &quot;chassis_vendor&quot;: &quot;QEMU&quot;,
+    &quot;chassis_type&quot;: &quot;Other&quot;,
+    &quot;chassis_serial&quot;: &quot;Unknown&quot;,
+    &quot;chassis_version&quot;: &quot;pc-i440fx-focal&quot;
+    },
+    &quot;bios_boot_method&quot;: &quot;pxe&quot;,
+    &quot;storage&quot;: 5368.70912,
+    &quot;blockdevice_set&quot;: [
+    {
+        &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+        &quot;size&quot;: 5368709120,
+        &quot;block_size&quot;: 512,
+        &quot;tags&quot;: [
+        &quot;ssd&quot;
+        ],
+        &quot;numa_node&quot;: 0,
+        &quot;partition_table_type&quot;: &quot;GPT&quot;,
+        &quot;storage_pool&quot;: null,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;filesystem&quot;: null,
+        &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+        &quot;used_size&quot;: 5366611968,
+        &quot;serial&quot;: &quot;QM00001&quot;,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;uuid&quot;: null,
+        &quot;available_size&quot;: 0,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;sda&quot;,
+        &quot;partitions&quot;: [
+        {
+            &quot;uuid&quot;: &quot;8aa1164c-8a91-41d7-92e3-c411634355bb&quot;,
+            &quot;size&quot;: 5360320512,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part2&quot;,
+            &quot;device_id&quot;: 3,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 3,
+            &quot;system_id&quot;: &quot;bhxws3&quot;,
+            &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;ext4&quot;,
+            &quot;label&quot;: &quot;root&quot;,
+            &quot;uuid&quot;: &quot;68487852-7e38-4605-a84e-d787532fd443&quot;,
+            &quot;mount_point&quot;: &quot;/&quot;,
+            &quot;mount_options&quot;: null
+            },
+            &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/partition/3&quot;
+        }
+        ],
+        &quot;used_for&quot;: &quot;GPT partitioned with 1 partition&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    }
+    ],
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;boot_disk&quot;: {
+    &quot;firmware_version&quot;: &quot;2.5+&quot;,
+    &quot;tags&quot;: [
+        &quot;ssd&quot;
+    ],
+    &quot;numa_node&quot;: 0,
+    &quot;partition_table_type&quot;: &quot;GPT&quot;,
+    &quot;size&quot;: 5368709120,
+    &quot;storage_pool&quot;: null,
+    &quot;type&quot;: &quot;physical&quot;,
+    &quot;block_size&quot;: 512,
+    &quot;filesystem&quot;: null,
+    &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+    &quot;used_size&quot;: 5366611968,
+    &quot;serial&quot;: &quot;QM00001&quot;,
+    &quot;system_id&quot;: &quot;bhxws3&quot;,
+    &quot;uuid&quot;: null,
+    &quot;available_size&quot;: 0,
+    &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+    &quot;id&quot;: 3,
+    &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+    &quot;name&quot;: &quot;sda&quot;,
+    &quot;partitions&quot;: [
+        {
+        &quot;uuid&quot;: &quot;8aa1164c-8a91-41d7-92e3-c411634355bb&quot;,
+        &quot;size&quot;: 5360320512,
+        &quot;bootable&quot;: false,
+        &quot;tags&quot;: [],
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part2&quot;,
+        &quot;device_id&quot;: 3,
+        &quot;type&quot;: &quot;partition&quot;,
+        &quot;id&quot;: 3,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;ext4&quot;,
+            &quot;label&quot;: &quot;root&quot;,
+            &quot;uuid&quot;: &quot;68487852-7e38-4605-a84e-d787532fd443&quot;,
+            &quot;mount_point&quot;: &quot;/&quot;,
+            &quot;mount_options&quot;: null
+        },
+        &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/partition/3&quot;
+        }
+    ],
+    &quot;used_for&quot;: &quot;GPT partitioned with 1 partition&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    },
+    &quot;default_gateways&quot;: {
+    &quot;ipv4&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    },
+    &quot;ipv6&quot;: {
+        &quot;gateway_ip&quot;: null,
+        &quot;link_id&quot;: null
+    }
+    },
+    &quot;raids&quot;: [],
+    &quot;cache_sets&quot;: [],
+    &quot;domain&quot;: {
+    &quot;authoritative&quot;: true,
+    &quot;ttl&quot;: null,
+    &quot;is_default&quot;: true,
+    &quot;id&quot;: 0,
+    &quot;name&quot;: &quot;maas&quot;,
+    &quot;resource_record_count&quot;: 0,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/domains/0/&quot;
+    },
+    &quot;hostname&quot;: &quot;ace-swan&quot;,
+    &quot;virtualblockdevice_set&quot;: [],
+    &quot;memory&quot;: 1024,
+    &quot;owner_data&quot;: {},
+    &quot;zone&quot;: {
+    &quot;name&quot;: &quot;default&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 1,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/zones/default/&quot;
+    },
+    &quot;power_state&quot;: &quot;off&quot;,
+    &quot;status&quot;: 9,
+    &quot;address_ttl&quot;: null,
+    &quot;other_test_status&quot;: -1,
+    &quot;volume_groups&quot;: [],
+    &quot;power_type&quot;: &quot;virsh&quot;,
+    &quot;pod&quot;: null,
+    &quot;testing_status&quot;: 2,
+    &quot;physicalblockdevice_set&quot;: [
+    {
+        &quot;firmware_version&quot;: &quot;2.5+&quot;,
+        &quot;tags&quot;: [
+        &quot;ssd&quot;
+        ],
+        &quot;numa_node&quot;: 0,
+        &quot;partition_table_type&quot;: &quot;GPT&quot;,
+        &quot;size&quot;: 5368709120,
+        &quot;storage_pool&quot;: null,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;block_size&quot;: 512,
+        &quot;filesystem&quot;: null,
+        &quot;model&quot;: &quot;QEMU HARDDISK&quot;,
+        &quot;used_size&quot;: 5366611968,
+        &quot;serial&quot;: &quot;QM00001&quot;,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;uuid&quot;: null,
+        &quot;available_size&quot;: 0,
+        &quot;path&quot;: &quot;/dev/disk/by-dname/sda&quot;,
+        &quot;id&quot;: 3,
+        &quot;id_path&quot;: &quot;/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001&quot;,
+        &quot;name&quot;: &quot;sda&quot;,
+        &quot;partitions&quot;: [
+        {
+            &quot;uuid&quot;: &quot;8aa1164c-8a91-41d7-92e3-c411634355bb&quot;,
+            &quot;size&quot;: 5360320512,
+            &quot;bootable&quot;: false,
+            &quot;tags&quot;: [],
+            &quot;path&quot;: &quot;/dev/disk/by-dname/sda-part2&quot;,
+            &quot;device_id&quot;: 3,
+            &quot;type&quot;: &quot;partition&quot;,
+            &quot;id&quot;: 3,
+            &quot;system_id&quot;: &quot;bhxws3&quot;,
+            &quot;filesystem&quot;: {
+            &quot;fstype&quot;: &quot;ext4&quot;,
+            &quot;label&quot;: &quot;root&quot;,
+            &quot;uuid&quot;: &quot;68487852-7e38-4605-a84e-d787532fd443&quot;,
+            &quot;mount_point&quot;: &quot;/&quot;,
+            &quot;mount_options&quot;: null
+            },
+            &quot;used_for&quot;: &quot;ext4 formatted filesystem mounted at /&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/partition/3&quot;
+        }
+        ],
+        &quot;used_for&quot;: &quot;GPT partitioned with 1 partition&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/blockdevices/3/&quot;
+    }
+    ],
+    &quot;interface_set&quot;: [
+    {
+        &quot;mac_address&quot;: &quot;52:54:00:15:36:f2&quot;,
+        &quot;links&quot;: [
+        {
+            &quot;id&quot;: 15,
+            &quot;mode&quot;: &quot;auto&quot;,
+            &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+                &quot;vid&quot;: 0,
+                &quot;mtu&quot;: 1500,
+                &quot;dhcp_on&quot;: true,
+                &quot;external_dhcp&quot;: null,
+                &quot;relay_vlan&quot;: null,
+                &quot;fabric_id&quot;: 2,
+                &quot;id&quot;: 5003,
+                &quot;fabric&quot;: &quot;fabric-2&quot;,
+                &quot;secondary_rack&quot;: null,
+                &quot;name&quot;: &quot;untagged&quot;,
+                &quot;space&quot;: &quot;undefined&quot;,
+                &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+            }
+        }
+        ],
+        &quot;numa_node&quot;: 0,
+        &quot;enabled&quot;: true,
+        &quot;params&quot;: &quot;&quot;,
+        &quot;firmware_version&quot;: null,
+        &quot;sriov_max_vf&quot;: 0,
+        &quot;type&quot;: &quot;physical&quot;,
+        &quot;children&quot;: [],
+        &quot;vendor&quot;: &quot;Red Hat, Inc.&quot;,
+        &quot;system_id&quot;: &quot;bhxws3&quot;,
+        &quot;parents&quot;: [],
+        &quot;vlan&quot;: {
+        &quot;vid&quot;: 0,
+        &quot;mtu&quot;: 1500,
+        &quot;dhcp_on&quot;: true,
+        &quot;external_dhcp&quot;: null,
+        &quot;relay_vlan&quot;: null,
+        &quot;fabric_id&quot;: 2,
+        &quot;id&quot;: 5003,
+        &quot;fabric&quot;: &quot;fabric-2&quot;,
+        &quot;secondary_rack&quot;: null,
+        &quot;name&quot;: &quot;untagged&quot;,
+        &quot;space&quot;: &quot;undefined&quot;,
+        &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+        },
+        &quot;link_connected&quot;: true,
+        &quot;id&quot;: 10,
+        &quot;effective_mtu&quot;: 1500,
+        &quot;discovered&quot;: [
+        {
+            &quot;subnet&quot;: {
+            &quot;name&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;vlan&quot;: {
+                &quot;vid&quot;: 0,
+                &quot;mtu&quot;: 1500,
+                &quot;dhcp_on&quot;: true,
+                &quot;external_dhcp&quot;: null,
+                &quot;relay_vlan&quot;: null,
+                &quot;fabric_id&quot;: 2,
+                &quot;id&quot;: 5003,
+                &quot;fabric&quot;: &quot;fabric-2&quot;,
+                &quot;secondary_rack&quot;: null,
+                &quot;name&quot;: &quot;untagged&quot;,
+                &quot;space&quot;: &quot;undefined&quot;,
+                &quot;primary_rack&quot;: &quot;8dwnne&quot;,
+                &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/vlans/5003/&quot;
+            },
+            &quot;cidr&quot;: &quot;192.168.123.0/24&quot;,
+            &quot;rdns_mode&quot;: 2,
+            &quot;gateway_ip&quot;: null,
+            &quot;dns_servers&quot;: [],
+            &quot;allow_dns&quot;: true,
+            &quot;allow_proxy&quot;: true,
+            &quot;active_discovery&quot;: false,
+            &quot;managed&quot;: true,
+            &quot;id&quot;: 4,
+            &quot;space&quot;: &quot;undefined&quot;,
+            &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/subnets/4/&quot;
+            },
+            &quot;ip_address&quot;: &quot;192.168.123.190&quot;
+        }
+        ],
+        &quot;link_speed&quot;: 0,
+        &quot;name&quot;: &quot;ens3&quot;,
+        &quot;product&quot;: null,
+        &quot;interface_speed&quot;: 0,
+        &quot;tags&quot;: [],
+        &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/nodes/bhxws3/interfaces/10/&quot;
+    }
+    ],
+    &quot;node_type_name&quot;: &quot;Machine&quot;,
+    &quot;commissioning_status_name&quot;: &quot;Passed&quot;,
+    &quot;network_test_status_name&quot;: &quot;Unknown&quot;,
+    &quot;memory_test_status&quot;: -1,
+    &quot;swap_size&quot;: null,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/machines/bhxws3/&quot;
+}
+</code></pre>
+<p></details></p>
+<p>Okay then. We&rsquo;ve installed and configured MAAS, started DHCP, created a machine, commissioned it, acquired it, and deployed it, with minimal hassle.  There&rsquo;s just one more useful thing to experience before diving into MAAS head-first.</p>
+<p><a href="#heading--Log-into-running-machines"><h2 id="heading--Log-into-running-machines">Log into running machines</h2></a></p>
+<p>What if we just set ourselves up to SSH into our MAAS machines?  Making this work will also allow us to <code>scp</code> files in &ndash; and I&rsquo;m sure you can see how we&rsquo;d provision a machine from there.  We can also do the provisioning with MAAS, but that&rsquo;s a more complex topic for later.</p>
+<p>First things first: we need to build the MAAS infrastructure necessary to play with this feature.</p>
+<p><a href="#heading--Create-a-VM-host"><h3 id="heading--Create-a-VM-host">Create a VM host</h3></a></p>
+<p>We start by creating a vm-host.  Let&rsquo;s play dumb and walk our way through this; first, we&rsquo;ll just try creating a vm-host, like this:</p>
+<pre><code class="language-nohighlight">maas admin vm-host create
+</code></pre>
+<p>This doesn&rsquo;t give anything like the expected result:</p>
+<pre><code class="language-nohighlight">usage: maas admin vm-host [-h] COMMAND ...
+
+Manage an individual vm-host.
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+drill down:
+  COMMAND
+    refresh   Refresh a pod
+    parameters
+          Obtain pod parameters
+    compose   Compose a pod machine
+    add-tag   Add a tag to a pod
+    remove-tag
+          Remove a tag from a pod
+    read
+    update    Update a specific pod
+    delete    Deletes a pod
+
+A vm-host is identified by its id.
+
+argument COMMAND: invalid choice: 'create' (choose from 'refresh', 'parameters', 'compose', 'add-tag', 'remove-tag', 'read', 'update', 'delete')
+</code></pre>
+<p>We forgot about the collective pluralism of the MAAS CLI. We need to use <code>vm-hosts</code> to create one, because we&rsquo;re adding to the collection, so the correct command should look something like this:</p>
+<pre><code class="language-nohighlight">maas admin vm-hosts create
+</code></pre>
+<p>Still not quite what we expected, but we&rsquo;re failing forward fast, which is a great way to learn.  MAAS tells us we need to specify a <code>type</code>:</p>
+<pre><code class="language-nohighlight">{&quot;type&quot;: [&quot;This field is required.&quot;]}
+</code></pre>
+<p>We have to specify what kind of <code>vm-host</code> we want; in this case, it&rsquo;s going to be an LXD <code>vm-host</code>, so we modify our previous command like this:</p>
+<pre><code class="language-nohighlight">maas admin vm-hosts create type=lxd
+</code></pre>
+<p>Hmm, still one more thing to enter: the <code>power_address</code>:</p>
+<pre><code class="language-nohighlight">{&quot;power_address&quot;: [&quot;This field is required.&quot;]}
+</code></pre>
+<p>We need to update our command to tell MAAS what LXD instance we&rsquo;re going to use.  The <code>power_address</code> for an LXD vm-host is of the form <code>https://&lt;gateway-ip-address&gt;:8443</code>.  The <code>8443</code> is the default port when you ran <code>lxd init</code> to get LXD started, after installing it.  In my case, the LXD gateway is <code>10.38.31.1</code> at the moment, so my modified command would be:</p>
+<pre><code class="language-nohighlight">maas admin vm-hosts create type=lxd power_address=https://10.38.31.1:8443
+</code></pre>
+<p>Within seconds, we get a success message and JSON output.  From now on, I&rsquo;ll leave the JSON output for you to generate and view on your own, unless it bears specifically on the discussion.  In this case, all that we&rsquo;ll need is the last non-bracket line of the JSON return, which is:</p>
+<pre><code class="language-nohighlight">&quot;resource_uri&quot;: &quot;/MAAS/api/2.0/pods/7/&quot;
+</code></pre>
+<p>Your address will vary, so check carefully.</p>
+<p>What we&rsquo;ll need in the next step is the <code>vm-host ID</code>, which is the number on the end of the <code>resource_uri</code>. In this case that&rsquo;s &ldquo;7&rdquo;.</p>
+<p><a href="#heading--Compose-a-machine"><h3 id="heading--Compose-a-machine">Compose a machine</h3></a></p>
+<p>Having a VM host is great, but we can&rsquo;t demonstrate <code>ssh/scp</code> machine actions without a virtual machine running on that host.  Let&rsquo;s create one.  This may get tricky, so let&rsquo;s start by looking at the MAAS CLI help:</p>
+<pre><code class="language-nohighlight">maas admin --help
+</code></pre>
+<p>This gives us the following, very long command list:</p>
+<pre><code class="language-nohighlight">usage: maas admin [-h] COMMAND ...
+
+Issue commands to the MAAS region controller at http://192.168.56.91:5240/MAAS/api/2.0/.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+drill down:
+  COMMAND
+    account             Manage the current logged-in user.
+    bcache-cache-set    Manage bcache cache set on a machine.
+    bcache-cache-sets   Manage bcache cache sets on a machine.
+    bcache              Manage bcache device on a machine.
+    bcaches             Manage bcache devices on a machine.
+    block-device        Manage a block device on a machine.
+    block-devices       Manage block devices on a machine.
+    boot-resource       Manage a boot resource.
+    boot-resources      Manage the boot resources.
+    boot-source         Manage a boot source.
+    boot-source-selection
+            Manage a boot source selection.
+    boot-source-selections
+            Manage the collection of boot source selections.
+    boot-sources        Manage the collection of boot sources.
+    commissioning-script
+            Manage a custom commissioning script.
+    commissioning-scripts
+            Manage custom commissioning scripts.
+    dhcpsnippet         Manage an individual DHCP snippet.
+    dhcpsnippets        Manage the collection of all DHCP snippets in MAAS.
+    dnsresource         Manage dnsresource.
+    dnsresource-record  Manage dnsresourcerecord.
+    dnsresource-records
+            Manage DNS resource records (e.g. CNAME, MX, NS, SRV,
+            TXT)
+    dnsresources        Manage dnsresources.
+    device              Manage an individual device.
+    devices             Manage the collection of all the devices in the MAAS.
+    discoveries         Query observed discoveries.
+    discovery           Read or delete an observed discovery.
+    domain              Manage domain.
+    domains             Manage domains.
+    events              Retrieve filtered node events.
+    fabric              Manage fabric.
+    fabrics             Manage fabrics.
+    fan-network         Manage Fan Network.
+    fan-networks        Manage Fan Networks.
+    file                Manage a FileStorage object.
+    files               Manage the collection of all the files in this MAAS.
+    ipaddresses         Manage IP addresses allocated by MAAS.
+    iprange             Manage IP range.
+    ipranges            Manage IP ranges.
+    interface           Manage a node's or device's interface.
+    interfaces          Manage interfaces on a node.
+    license-key         Manage a license key.
+    license-keys        Manage the license keys.
+    maas                Manage the MAAS server.
+    machine             Manage an individual machine.
+    machines            Manage the collection of all the machines in the MAAS.
+    network             Manage a network.
+    networks            Manage the networks.
+    node                Manage an individual Node.
+    node-results        Read the collection of commissioning script results.
+    node-script         Manage or view a custom script.
+    node-script-result  Manage node script results.
+    node-script-results
+            Manage node script results.
+    node-scripts        Manage custom scripts.
+    nodes               Manage the collection of all the nodes in the MAAS.
+    notification        Manage an individual notification.
+    notifications       Manage the collection of all the notifications in
+            MAAS.
+    package-repositories
+            Manage the collection of all Package Repositories in
+            MAAS.
+    package-repository  Manage an individual package repository.
+    partition           Manage partition on a block device.
+    partitions          Manage partitions on a block device.
+    pod                 Manage an individual pod.
+    pods                Manage the collection of all the pod in the MAAS.
+    rack-controller     Manage an individual rack controller.
+    rack-controllers    Manage the collection of all rack controllers in MAAS.
+    raid                Manage a specific RAID (Redundant Array of Independent
+            Disks) on a machine.
+    raids               Manage all RAIDs (Redundant Array of Independent
+            Disks) on a machine.
+    region-controller   Manage an individual region controller.
+    region-controllers  Manage the collection of all region controllers in
+            MAAS.
+    resource-pool       Manage a resource pool.
+    resource-pools      Manage resource pools.
+    sshkey              Manage an SSH key.
+    sshkeys             Manage the collection of all the SSH keys in this
+            MAAS.
+    sslkey              Manage an SSL key.
+    sslkeys             Operations on multiple keys.
+    space               Manage space.
+    spaces              Manage spaces.
+    static-route        Manage static route.
+    static-routes       Manage static routes.
+    subnet              Manage subnet.
+    subnets             Manage subnets.
+    tag                 Tags are properties that can be associated with a Node
+            and serve as criteria for selecting and allocating
+            nodes.
+    tags                Manage all tags known to MAAS.
+    user                Manage a user account.
+    users               Manage the user accounts of this MAAS.
+    version             Information about this MAAS instance.
+    virtual-machine     Manage individual virtual machines.
+    virtual-machines    Manage a collection of virtual machines.
+    vlan                Manage a VLAN on a fabric.
+    vlans               Manage VLANs on a fabric.
+    vm-host             Manage an individual vm-host.
+    vm-hosts            Manage the collection of all the vm-hosts in the MAAS.
+    vmfs-datastore      Manage VMFS datastore on a machine.
+    vmfs-datastores     Manage VMFS datastores on a machine.
+    volume-group        Manage volume group on a machine.
+    volume-groups       Manage volume groups on a machine.
+    zone                Manage a physical zone.
+    zones               Manage physical zones.
+
+This is a profile.  Any commands you issue on this profile will
+operate on the MAAS region server.
+
+The command information you see here comes from the region server's
+API; it may differ for different profiles.  If you believe the API may
+have changed, use the command's 'refresh' sub-command to fetch the
+latest version of this help information from the server.
+</code></pre>
+<p>We&rsquo;re looking to compose a machine here, so where would you look instinctively?  Well, the first thought might be <code>machines</code>, so we can give that help screen a try:</p>
+<pre><code class="language-nohighlight">maas admin machines --help
+</code></pre>
+<p>This produces a few commands:</p>
+<pre><code class="language-nohighlight">sage: maas admin machines [-h] COMMAND ...
+
+Manage the collection of all the machines in the MAAS.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+drill down:
+  COMMAND
+    is-registered       MAC address registered
+    set-zone            Assign nodes to a zone
+    power-parameters    Get power parameters
+    accept              Accept declared machines
+    accept-all          Accept all declared machines
+    release             Release machines
+    list-allocated      List allocated
+    allocate            Allocate a machine
+    add-chassis         Add special hardware
+    clone               Clone storage and/or interface configurations
+    read                List Nodes visible to the user
+    create              Create a new machine
+    is-action-in-progress
+            MAC address of deploying or commissioning node
+</code></pre>
+<p>This list is interesting, but there isn&rsquo;t a specific <code>compose</code> command here.  We could go down the garden path with <code>maas admin machines create</code>, but first, let&rsquo;s see if the vm-host command has anything we&rsquo;re seeking:</p>
+<pre><code class="language-nohighlight">maas admin vm-host --help
+</code></pre>
+<p>Bingo. Found the command; do you see it in this list?</p>
+<pre><code class="language-nohighlight">usage: maas admin vm-host [-h] COMMAND ...
+
+Manage an individual vm-host.
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+drill down:
+  COMMAND
+    refresh   Refresh a pod
+    parameters
+          Obtain pod parameters
+    compose   Compose a pod machine
+    add-tag   Add a tag to a pod
+    remove-tag
+          Remove a tag from a pod
+    read
+    update    Update a specific pod
+    delete    Deletes a pod
+
+A vm-host is identified by its id.
+</code></pre>
+<p>Okay, so <code>maas admin vm-host compose</code> is the root command; let&rsquo;s see what it requires:</p>
+<pre><code class="language-nohighlight">maas admin vm-host compose --help
+</code></pre>
+<p>This command is robust:</p>
+<pre><code class="language-nohighlight">usage: maas admin vm-host compose [--help] [-d] [-k] id [data [data ...]]
+
+Compose a pod machine
+
+
+Positional arguments:
+    id
+
+
+This method accepts keyword arguments.  Pass each argument as a
+key-value pair with an equals sign between the key and the value:
+key1=value1 key2=value key3=value3.  Keyword arguments must come after
+any positional arguments.
+
+Compose a new machine from a pod.
+
+:param cores: Optional.  The minimum number of CPU cores.
+:type cores: Int
+
+ :param memory: Optional.  The minimum amount of memory,
+specified in MiB (e.g. 2 MiB == 2*1024*1024).
+:type memory: Int
+
+ :param hugepages_backed: Optional.  Whether to request
+hugepages backing for the machine.
+:type hugepages_backed: Boolean
+
+ :param pinned_cores: Optional.  List of host CPU cores
+to pin the VM to. If this is passed, the &quot;cores&quot; parameter is ignored.
+:type pinned_cores: Int
+
+ :param cpu_speed: Optional.  The minimum CPU speed,
+specified in MHz.
+:type cpu_speed: Int
+
+ :param architecture: Optional.  The architecture of
+the new machine (e.g. amd64). This must be an architecture the pod
+supports.
+:type architecture: String
+
+ :param storage: Optional.  A list of storage
+constraint identifiers in the form ``label:size(tag,tag,...),
+label:size(tag,tag,...)``. For more information please see the CLI
+pod management page of the official MAAS documentation.
+:type storage: String
+
+ :param interfaces: Optional.  A
+labeled constraint map associating constraint labels with desired
+interface properties. MAAS will assign interfaces that match the
+given interface properties.
+
+Format: ``label:key=value,key=value,...``
+
+Keys:
+
+- ``id``: Matches an interface with the specific id
+- ``fabric``: Matches an interface attached to the specified fabric.
+- ``fabric_class``: Matches an interface attached to a fabric
+  with the specified class.
+- ``ip``: Matches an interface whose VLAN is on the subnet implied by
+  the given IP address, and allocates the specified IP address for
+  the machine on that interface (if it is available).
+- ``mode``: Matches an interface with the specified mode. (Currently,
+  the only supported mode is &quot;unconfigured&quot;.)
+- ``name``: Matches an interface with the specified name.
+  (For example, &quot;eth0&quot;.)
+- ``hostname``: Matches an interface attached to the node with
+  the specified hostname.
+- ``subnet``: Matches an interface attached to the specified subnet.
+- ``space``: Matches an interface attached to the specified space.
+- ``subnet_cidr``: Matches an interface attached to the specified
+  subnet CIDR. (For example, &quot;192.168.0.0/24&quot;.)
+- ``type``: Matches an interface of the specified type. (Valid
+  types: &quot;physical&quot;, &quot;vlan&quot;, &quot;bond&quot;, &quot;bridge&quot;, or &quot;unknown&quot;.)
+- ``vlan``: Matches an interface on the specified VLAN.
+- ``vid``: Matches an interface on a VLAN with the specified VID.
+- ``tag``: Matches an interface tagged with the specified tag.
+:type interfaces: String
+
+ :param hostname: Optional.  The hostname of the newly
+composed machine.
+:type hostname: String
+
+ :param domain: Optional.  The ID of the domain in which
+to put the newly composed machine.
+:type domain: Int
+
+ :param zone: Optional.  The ID of the zone in which to
+put the newly composed machine.
+:type zone: Int
+
+ :param pool: Optional.  The ID of the pool in which to
+put the newly composed machine.
+:type pool: Int
+
+
+Common command-line options:
+    --help, -h
+    Show this help message and exit.
+    -d, --debug
+    Display more information about API responses.
+    -k, --insecure
+    Disable SSL certificate check
+</code></pre>
+<p>We could get fancy, but for these purposes, we just need a machine.  The only thing that&rsquo;s absolutely required is the vm-host ID.  Remember that line of JSON from above?  In this example, the ID is &ldquo;7&rdquo;; remember to check your own machine for the correct ID.  We&rsquo;ll enter this command:</p>
+<pre><code class="language-nohighlight">maas admin vm-host compose 7
+</code></pre>
+<p>We got some feedback with a machine <code>system_id</code>:</p>
+<pre><code class="language-nohighlight">Success.
+Machine-readable output follows:
+{
+    &quot;system_id&quot;: &quot;xttpfx&quot;,
+    &quot;resource_uri&quot;: &quot;/MAAS/api/2.0/machines/xttpfx/&quot;
+}
+</code></pre>
+<p>We can use this, along with some jq tricks, to see if this machine is commissioning (as expected):</p>
+<pre><code class="language-nohighlight">maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;,
+&quot;POWER&quot;,&quot;STATUS&quot;,&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;,&quot;VLAN&quot;,&quot;FABRIC&quot;,
+&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),(.[] | [.hostname, .system_id, 
+.power_state, .status_name, .owner // &quot;-&quot;,.tag_names[0] // &quot;-&quot;, 
+.pool.name,.boot_interface.vlan.name,.boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+</code></pre>
+<p>This gives the following output on my machine:</p>
+<pre><code class="language-nohighlight">HOSTNAME    SYSID   POWER  STATUS   OWNER  TAGS     POOL     VLAN      FABRIC    SUBNET
+--------    -----   -----  ------   -----  ----     ----     ----      ------    ------
+native-cub  xttpfx  on     Testing  admin  virtual  default  untagged  fabric-1  10.38.31.0/24
+</code></pre>
+<p>By the time I got this command typed in, commissioning had already nearly finished, and the machine was in the &ldquo;testing&rdquo; phase.  If we run this command again now, we should see that it&rsquo;s in the &ldquo;Ready&rdquo; state:</p>
+<pre><code class="language-nohighlight">HOSTNAME    SYSID   POWER  STATUS  OWNER  TAGS     POOL     VLAN      FABRIC    SUBNET
+--------    -----   -----  ------  -----  ----     ----     ----      ------    ------
+native-cub  xttpfx  off    Ready   -      virtual  default  untagged  fabric-1  10.38.31.0/24
+</code></pre>
+<p><a href="#heading--Get-the-machine-to-a-login-state"><h3 id="heading--Get-the-machine-to-a-login-state">Get the machine to a login state</h3></a></p>
+<p>We can&rsquo;t SSH into it, because it automatically turned off after commissioning, and anyway, we didn&rsquo;t have a chance to ask for SSH keys to be loaded during the commissioning process.  Let&rsquo;s run that commissioning again, with SSH keys enabled, and making sure that it&rsquo;s left on after it&rsquo;s done.  For this operation, we just use the standard <code>machine</code> commands, because the <code>vm-host</code> is now hosting a MAAS machine:</p>
+<pre><code class="language-nohighlight">maas admin machine commission xttpfx enable_ssh=1
+</code></pre>
+<p>This will return a success message (be sure to substitute the &ldquo;xttpfx&rdquo; with whatever your composed machine <code>system_id</code> turns out to be; remember, your mileage may vary).  After a little while, the machine should return to a &ldquo;Ready&rdquo; state again, but this time, with the power left /on/, and with SSH keys passed to the machine, so that we can login to it.</p>
+<p>We can check this again, with the above jq command:</p>
+<pre><code class="language-nohighlight">HOSTNAME    SYSID   POWER  STATUS  OWNER  TAGS     POOL     VLAN      FABRIC    SUBNET
+--------    -----   -----  ------  -----  ----     ----     ----      ------    ------
+native-cub  xttpfx  on     Ready   -      virtual  default  untagged  fabric-1  10.38.31.0/24
+</code></pre>
+<p><a href="#heading--Logging-into-a-commissioned-machine"><h3 id="heading--Logging-into-a-commissioned-machine">Logging into a commissioned machine</h3></a></p>
+<p>So it&rsquo;s &ldquo;Ready&rdquo; and it&rsquo;s powered on, that&rsquo;s good.  In order to log in, we&rsquo;ll need to know the machine&rsquo;s IP address.  There are several ways to get this, but by far the easiest (with LXD VMs) is just using the <code>lxc</code> command:</p>
+<pre><code class="language-nohighlight">lxc list
+</code></pre>
+<p>This will give us the following output:</p>
+<pre><code class="language-nohighlight">+------------+---------+---------------------+-----------------------------------------------+-----------------+-----------+
+|    NAME    |  STATE  |        IPV4         |                     IPV6                      |      TYPE       | SNAPSHOTS |
++------------+---------+---------------------+-----------------------------------------------+-----------------+-----------+
+| first-one  | RUNNING | 10.38.31.193 (eth0) |                                               | CONTAINER       | 0         |
++------------+---------+---------------------+-----------------------------------------------+-----------------+-----------+
+| native-cub | RUNNING | 10.38.31.202 (eth0) | fd42:fd4c:6ab9:19bc:216:3eff:fe9e:bc7b (eth0) | VIRTUAL-MACHINE | 0         |
++------------+---------+---------------------+-----------------------------------------------+-----------------+-----------+
+</code></pre>
+<p>This brings up some important nuances about the LXD list.  Note that there are two machines, one of which is a <code>CONTAINER</code>, not useful for this tutorial.  The other, &ldquo;native-cub,&rdquo; is the <code>VIRTUAL-MACHINE</code> we just created, and that&rsquo;s the one whose IP address we want for SSH purposes: <code>10.38.31.202</code>.</p>
+<p>Okay, so now we can try logging in via SSH, using the &ldquo;ubuntu&rdquo; user (always):</p>
+<pre><code class="language-nohighlight">ssh ubuntu@10.38.31.202
+</code></pre>
+<p>We get the expected first-login response:</p>
+<pre><code class="language-nohighlight">The authenticity of host '10.38.31.202 (10.38.31.202)' can't be established.
+ECDSA key fingerprint is SHA256:hkKRDyRDG9JcsSmAQ0ir5jy0UKQ+PrU/FTJr36U3bvw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+</code></pre>
+<p>And if we say &ldquo;yes,&rdquo; we should get this result:</p>
+<pre><code class="language-nohighlight">Warning: Permanently added '10.38.31.202' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-64-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Feb  1 00:11:52 UTC 2021
+
+  System load:    0.0       Processes:               127
+  Usage of /home: unknown   Users logged in:         0
+  Memory usage:   10%       IPv4 address for enp5s0: 10.38.31.202
+  Swap usage:     0%
+
+14 updates can be installed immediately.
+2 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+tmpfs-root /media/root-rw tmpfs rw,relatime 0 0
+overlayroot / overlay rw,relatime,lowerdir=/media/root-ro,upperdir=/media/root-rw/overlay,workdir=/media/root-rw/overlay-workdir/_ 0 0
+/dev/loop0 /media/root-ro squashfs ro,relatime 0 0
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &amp;lt;command&amp;gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+ubuntu@native-cub:`$ 
+</code></pre>
+<p><a href="#heading--Using-SCP"><h3 id="heading--Using-SCP">Using SCP</h3></a></p>
+<p>We can jump out of this machine and use its IP address to copy files over to it.  First, let&rsquo;s make sure that there isn&rsquo;t anything in the local directory on the machine:</p>
+<pre><code class="language-nohighlight">ls
+</code></pre>
+<p>And we get what we&rsquo;d expect:</p>
+<pre><code class="language-nohighlight">ubuntu@native-cub:`$ ls
+ubuntu@native-cub:`$ 
+</code></pre>
+<p>So now, let&rsquo;s exit the machine with <code>exit</code>, and just <code>touch</code> a file called &ldquo;tutorial-try-out-the-maas-cli.html&rdquo; (a very uncommon filename) in the CWD on the local machine:</p>
+<pre><code class="language-nohighlight">ubuntu@native-cub:`$ exit
+logout
+Connection to 10.38.31.202 closed.
+stormrider@wintermute:`$ touch tutorial-try-out-the-maas-cli.html
+stormrider@wintermute:`$ ls
+ api-key-file   Credentials   Dropbox   Pictures      snap            Templates
+ Backups        Desktop       git       Public        stormrider.io   Videos
+ BRF            Documents     mnt      '#scratch#'    temp            Websites
+ Code           Downloads     Music     Show-n-Tell   temp`           tutorial-try-out-the-maas-cli.html
+stormrider@wintermute:`$ 
+</code></pre>
+<p>Now, let&rsquo;s try to <code>scp</code> (secure copy) the file over to the machine, login, and see if the file made it:</p>
+<pre><code class="language-nohighlight">stormrider@wintermute:`$ scp ./tutorial-try-out-the-maas-cli.html ubuntu@10.38.31.202:
+tutorial-try-out-the-maas-cli.html                                          100%    0     0.0KB/s   00:00    
+stormrider@wintermute:`$ ssh ubuntu@10.38.31.202
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-64-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Feb  1 00:20:42 UTC 2021
+
+  System load:    0.0       Processes:               123
+  Usage of /home: unknown   Users logged in:         0
+  Memory usage:   10%       IPv4 address for enp5s0: 10.38.31.202
+  Swap usage:     0%
+
+
+14 updates can be installed immediately.
+2 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+tmpfs-root /media/root-rw tmpfs rw,relatime 0 0
+overlayroot / overlay rw,relatime,lowerdir=/media/root-ro,upperdir=/media/root-rw/overlay,workdir=/media/root-rw/overlay-workdir/_ 0 0
+/dev/loop0 /media/root-ro squashfs ro,relatime 0 0
+
+Last login: Mon Feb  1 00:19:34 2021 from 10.38.31.1
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &amp;lt;command&amp;gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+ubuntu@native-cub:`$ ls
+tutorial-try-out-the-maas-cli.html
+ubuntu@native-cub:`$ 
+</code></pre>
+<p>Good, we can copy files to a MAAS-managed machine.</p>
+<p><a href="#heading--Copying-files-to-a-deployed-machine"><h3 id="heading--Copying-files-to-a-deployed-machine">Copying files to a deployed machine</h3></a></p>
+<p>Copying files to a commissioned machine doesn&rsquo;t do us much good, of course, since the machine gets wiped out and reloaded on deployment.  Let&rsquo;s acquire and deploy that same machine, and then try logging in and copying files again.</p>
+<p>First, we have to acquire and deploy the machine:</p>
+<pre><code class="language-nohighlight">maas admin machines allocate system_id=xttpfx
+(Success message and JSON data stream)
+
+maas admin machine deploy xttpfx
+(Success message and JSON data stream)
+
+maas admin machines read | jq -r '([&quot;HOSTNAME&quot;,&quot;SYSID&quot;, 
+&quot;POWER&quot;,&quot;STATUS&quot;,&quot;OWNER&quot;, &quot;TAGS&quot;, &quot;POOL&quot;,&quot;VLAN&quot;,&quot;FABRIC&quot;,
+&quot;SUBNET&quot;] | (., map(length*&quot;-&quot;))),(.[] | [.hostname, .system_id, 
+.power_state, .status_name, .owner // &quot;-&quot;,.tag_names[0] // &quot;-&quot;, 
+.pool.name,.boot_interface.vlan.name,.boot_interface.vlan.fabric,
+.boot_interface.links[0].subnet.name]) | @tsv' | column -t
+
+HOSTNAME    SYSID   POWER  STATUS     OWNER  TAGS     POOL     VLAN      FABRIC    SUBNET
+--------    -----   -----  ------     -----  ----     ----     ----      ------    ------
+native-cub  xttpfx  on     Deploying  admin  virtual  default  untagged  fabric-1  10.38.31.0/24
+</code></pre>
+<p>When it finally reaches the &ldquo;Deployed&rdquo; state, we can try and log into it:</p>
+<pre><code class="language-nohighlight">stormrider@wintermute:`$ ssh ubuntu@10.38.31.2
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:AsOdI357mZdmymQG/bmZzbtrDwZPKNYwdUDgCecHHhI.
+Please contact your system administrator.
+Add correct host key in /home/stormrider/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /home/stormrider/.ssh/known_hosts:20
+  remove with:
+  ssh-keygen -f &quot;/home/stormrider/.ssh/known_hosts&quot; -R &quot;10.38.31.2&quot;
+ECDSA host key for 10.38.31.2 has changed and you have requested strict checking.
+Host key verification failed.
+</code></pre>
+<p>No surprise.  On deployment, the SSH key just got updated, so just do what the message suggests, and you can SSH in normally:</p>
+<pre><code class="language-nohighlight">stormrider@wintermute:`$ ssh-keygen -f &quot;/home/stormrider/.ssh/known_hosts&quot; -R &quot;10.38.31.2&quot;
+# Host 10.38.31.2 found: line 20
+/home/stormrider/.ssh/known_hosts updated.
+Original contents retained as /home/stormrider/.ssh/known_hosts.old
+stormrider@wintermute:`$ ssh ubuntu@10.38.31.2
+The authenticity of host '10.38.31.2 (10.38.31.2)' can't be established.
+ECDSA key fingerprint is SHA256:AsOdI357mZdmymQG/bmZzbtrDwZPKNYwdUDgCecHHhI.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.38.31.2' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-65-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Feb  1 00:34:27 UTC 2021
+
+  System load:  0.08              Processes:               133
+  Usage of /:   48.2% of 6.78GB   Users logged in:         0
+  Memory usage: 10%               IPv4 address for enp5s0: 10.38.31.2
+  Swap usage:   0%
+
+14 updates can be installed immediately.
+2 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &amp;lt;command&amp;gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+ubuntu@native-cub:`$ 
+</code></pre>
+<p><a href="#heading--Copying-a-script-to-a-machine-and-running-it"><h3 id="heading--Copying-a-script-to-a-machine-and-running-it">Copying a script to a machine and running it</h3></a></p>
+<p>So first, let&rsquo;s verify that the script we want to copy over there isn&rsquo;t /already/ there.  In fact, to keep it simple, let&rsquo;s just create a simple and fun script to see what <code>scp</code> can get us.  First, we&rsquo;ll need to install a couple of software packages on the deployed machine:</p>
+<pre><code class="language-nohighlight">ubuntu@native-cub:`$ fortune
+
+Command 'fortune' not found, but can be installed with:
+
+sudo apt install fortune-mod
+
+ubuntu@native-cub:`$ sudo apt install fortune-mod
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  fortunes-min librecode0
+Suggested packages:
+  fortunes x11-utils
+The following NEW packages will be installed:
+  fortune-mod fortunes-min librecode0
+0 upgraded, 3 newly installed, 0 to remove and 17 not upgraded.
+Need to get 615 kB of archives.
+After this operation, 2135 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 librecode0 amd64 3.6-24 [523 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 fortune-mod amd64 1:1.99.1-7build1 [37.3 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 fortunes-min all 1:1.99.1-7build1 [55.1 kB]
+Fetched 615 kB in 3s (203 kB/s)    
+Selecting previously unselected package librecode0:amd64.
+(Reading database ... 71387 files and directories currently installed.)
+Preparing to unpack .../librecode0_3.6-24_amd64.deb ...
+Unpacking librecode0:amd64 (3.6-24) ...
+Selecting previously unselected package fortune-mod.
+Preparing to unpack .../fortune-mod_1%3a1.99.1-7build1_amd64.deb ...
+Unpacking fortune-mod (1:1.99.1-7build1) ...
+Selecting previously unselected package fortunes-min.
+Preparing to unpack .../fortunes-min_1%3a1.99.1-7build1_all.deb ...
+Unpacking fortunes-min (1:1.99.1-7build1) ...
+Setting up librecode0:amd64 (3.6-24) ...
+Setting up fortunes-min (1:1.99.1-7build1) ...
+Setting up fortune-mod (1:1.99.1-7build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+ubuntu@native-cub:`$ ddate
+
+Command 'ddate' not found, but can be installed with:
+
+sudo apt install ddate
+
+ubuntu@native-cub:`$ sudo apt install ddate
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  ddate
+0 upgraded, 1 newly installed, 0 to remove and 17 not upgraded.
+Need to get 10.8 kB of archives.
+After this operation, 34.8 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 ddate amd64 0.2.2-1build1 [10.8 kB]
+Fetched 10.8 kB in 1s (20.0 kB/s)
+Selecting previously unselected package ddate.
+(Reading database ... 71424 files and directories currently installed.)
+Preparing to unpack .../ddate_0.2.2-1build1_amd64.deb ...
+Unpacking ddate (0.2.2-1build1) ...
+Setting up ddate (0.2.2-1build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+ubuntu@native-cub:`$ cowsay
+
+Command 'cowsay' not found, but can be installed with:
+
+sudo apt install cowsay
+
+ubuntu@native-cub:`$ sudo apt install cowsay
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  filters cowsay-off
+The following NEW packages will be installed:
+  cowsay
+0 upgraded, 1 newly installed, 0 to remove and 17 not upgraded.
+Need to get 18.5 kB of archives.
+After this operation, 93.2 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 cowsay all 3.03+dfsg2-7 [18.5 kB]
+Fetched 18.5 kB in 2s (7603 B/s) 
+Selecting previously unselected package cowsay.
+(Reading database ... 71431 files and directories currently installed.)
+Preparing to unpack .../cowsay_3.03+dfsg2-7_all.deb ...
+Unpacking cowsay (3.03+dfsg2-7) ...
+Setting up cowsay (3.03+dfsg2-7) ...
+Processing triggers for man-db (2.9.1-1) ...
+ubuntu@native-cub:`$ 
+</code></pre>
+<p>Now we can drop back and write a script that uses these three packages to produce an interesting result.  Here&rsquo;s what should be in the script:</p>
+<pre><code class="language-nohighlight">#!/bin/bash
+ddate &amp;gt; /tmp/foo
+echo '   ' &amp;gt;&amp;gt; /tmp/foo
+fortune -s &amp;gt;&amp;gt; /tmp/foo
+cat /tmp/foo | cowsay
+</code></pre>
+<p>Add the text above to a script called <code>motd.sh</code>, and then <code>chmod 777 motd.sh</code>.  Then, use the following command to copy the script to the deployed machine:</p>
+<pre><code class="language-nohighlight">scp ./motd.sh ubuntu@10.38.31.2:
+</code></pre>
+<p>Then we can log back into the deployed machine and check the permissions on <code>motd.sh</code> in the arriving CWD:</p>
+<pre><code class="language-nohighlight">ssh ubuntu@10.38.31.2
+...
+ls -lsa motd.sh
+
+ubuntu@native-cub:`$ ls -lsa motd.sh
+4 -rwxrwxr-x 1 ubuntu ubuntu 97 Feb  1 00:49 motd.sh
+ubuntu@native-cub:`$ 
+</code></pre>
+<p>On my machine, it didn&rsquo;t copy the permissions precisely, but it is executable by me, so I can run it and get the highly-important output:</p>
+<pre><code class="language-nohighlight"> ________________________________________
+/ Today is Boomtime, the 32nd day of     \
+| Chaos in the YOLD 3187                 |
+|                                        |
+| Water, taken in moderation cannot hurt |
+| anybody.                               |
+|                                        |
+\ -- Mark Twain                          /
+ ----------------------------------------
+    \   ^__^
+     \  (oo)\_______
+        (__)\       )\/\
+        ||----w |
+        ||     ||
+</code></pre>
+<p><a href="#heading--Summary"><h2 id="heading--Summary">Summary</h2></a></p>
+<p>As you see, it&rsquo;s not that difficult to install MAAS, deploy a machine, and then load usable software on it. Now you can go through the MAAS documenation to learn more about what you just did.</p>
+    </div>
+  </body>
+</html>

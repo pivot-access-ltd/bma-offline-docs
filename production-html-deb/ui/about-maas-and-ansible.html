@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/about-maas-and-ansible.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong> 
+      <strong>
+	<a href="tutorials.html">
+	  Tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="bootstrap-maas.html">
+	    Bootstrap MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="get-fancy-cli-output.html">
+	    Get fancy CLI output
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-do-a-fresh-install-of-maas.html">
+	    Do a fresh install of MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-availability-zones.html">
+	    Use availability zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-images.html">
+	  How to use images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-images.html">
+	    Customise images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-a-real-time-kernel.html">
+	    Deploy a RT kernel
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-controllers.html">
+	  How to manage controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-configure-controllers.html">
+	    Configure controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-machines.html">
+	  How to manage machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-virtual-machines.html">
+	  How to use virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-virtual-machines.html">
+	    Manage virtual machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-devices.html">
+	  How to label devices
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-secure-maas.html">
+	  How to secure MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-hashicorp-vault-with-maas.html">
+	    Use Vault with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-operate-maas.html">
+	  How to operate MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-monitor-maas.html">
+	    Monitor MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-audit-maas.html">
+	    Audit MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-give-and-receive-help.html">
+	  How to give and receive help
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-our-discourse-forum.html">
+	    Use our discourse forum
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contact-us">
+	    Get support↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-new-features.html">
+	    Request new features
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-review-and-report-bugs.html">
+	    Review and report bugs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contribute-doc.html">
+	    Contribute documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="general-reference.html">
+	  General reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-settings-reference.html">
+	    MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="https://launchpad.net/maas.html">
+	    MAAS source code↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-help-improve-the-doc.html">
+	    Doc style guide
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+	<li>
+	  <a href="https://ubuntu.com/community/code-of-conduct">
+	    Code of conduct↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api-reference.html">
+	  API reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    Python API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api">
+	    API documentation↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-scripts-reference.html">
+	  Scripts reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-reference.html">
+	    Terraform
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-logs-reference.html">
+	  Log reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="event-logs-reference.html">
+	    Event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs-reference.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="testing-logs-reference.html">
+	    Testing logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machine-parameters-reference.html">
+	  Machine parameters reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-drivers-reference.html">
+	    Power drivers
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="device-labelling-reference.html">
+	    Device labelling
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Explanation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    About networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-virtual-machines.html">
+	    About virtual machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-device-labels.html">
+	    About device labels
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-events.html">
+	    About MAAS events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-audit-events.html">
+	    About audit events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-logging.html">
+	    About MAAS logging
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-security.html">
+	    About MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-performance.html">
+	    About MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="about-ansible.html">
+	    About Ansible
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>About MAAS and Ansible</h1><!-- "About MAAS and Ansible" -->
+<p>A user should probably have a solid grasp of the Ansible standard terminology:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Playbooks / plays</li>
+<li>Hosts and groups</li>
+<li>Inventory</li>
+</ul>
+<p><a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a><code>↗</code> is a sophisticated IT automation tool that allows users to set up <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a><code>↗</code>, which automate complex, repetitive (or error-prone)<code>↗</code> setup activities.  While we won&rsquo;t provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules">Modules</a><code>↗</code></strong> are binaries (or even pieces of code)<code>↗</code> that Ansible can run on a managed node.  These modules can be grouped into named collections.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks">Tasks</a><code>↗</code></strong> are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as &ldquo;partition and format /sda&rdquo;.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays">Plays</a><code>↗</code></strong> are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., &ldquo;install the OS&rdquo; ==&gt; &ldquo;partition and format /sda&rdquo;, &ldquo;install binary x.7.iso&rdquo;, etc.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">Playbooks</a><code>↗</code></strong> are YAML files that run plays in a specific order; for example, &ldquo;install the OS&rdquo;, &ldquo;install MAAS&rdquo;, &ldquo;create a region controller&rdquo;, &ldquo;sync images&rdquo;, etc.</li>
+<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3">Inventory</a><code>↗</code></strong> is a source(s)<code>↗</code> of managed nodes; also called a &ldquo;hostfile&rdquo;.</li>
+</ul>
+<p>These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms &ldquo;<a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">hosts and groups</a><code>↗</code>&rdquo;, since these are applied somewhat differently than we use them in MAAS.</p>
+<p>Playbooks are available to automate the setup for:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><a href="#heading--MAAS-region-controller">MAAS region controllers</a>: install and configure a MAAS region on a targeted host; running the playbook on hosts with a MAAS region will upgrade it.</p>
+</li>
+<li>
+<p><a href="#heading--MAAS-rack-controller">MAAS rack controllers</a>: install and configure a MAAS rack.</p>
+</li>
+<li>
+<p><a href="#heading--MAAS-de-installation">MAAS de-installation</a>: remove MAAS from a targeted host.</p>
+</li>
+<li>
+<p><a href="#heading--MAAS-high-availability">MAAS high availability</a>: install and configure the HA proxy.</p>
+</li>
+<li>
+<p><a href="#heading--PostgreSQL-primary-role">PostgreSQL primary role</a>: setup the postgres primary role.</p>
+</li>
+<li>
+<p><a href="#heading--PostgreSQL-secondary-role">PostgreSQL secondary role</a>: setup the postgres secondary role.</p>
+</li>
+<li>
+<p><a href="#heading--Firewall-rules">Firewall rules</a>: setup firewall rules.</p>
+</li>
+</ul>
+<p>MAAS Playbooks will eventually be available through Ansible Galaxy.</p>
+<p>There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.  These groups include:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</a></li>
+<li>?? (there must be more, huh?)</li>
+</ul>
+<p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
+<p><a href="#heading--Running-a-MAAS-Ansible-playbook"><h2 id="heading--Running-a-MAAS-Ansible-playbook">Running a MAAS Ansible playbook</h2></a></p>
+<p>In general terms, you can run any of the MAAS Ansible plays with a command of this form:</p>
+<pre><code class="language-nohighlight">ansible-playbook -i hosts \
+--extra_vars \
+&quot;maas_version=$MAAS_VERSION 
+maas_postgres_password=$MAAS_PG_PASSWORD 
+maas_postgres_replication_password=$MAAS_PG_REP_PASSWORD 
+maas_installation_type=&lt;deb|snap&gt; 
+maas_url=$MAAS_URL&quot; \
+./site.yaml
+</code></pre>
+<p>A command of this form will run all of the plays below (i.e., the entire playbook).  If you want to run the tasks for one particular role (or roles), you can use the form  <code>--tags &lt;target role(s)&gt;</code> to limit which parts of the MAAS Ansible playbook run.  Consult the Ansible documentation for more details on additional options and command structure.</p>
+<p><a href="#heading--MAAS-region-controller"><h2 id="heading--MAAS-region-controller">MAAS region controller</h2></a></p>
+<p>As an operator, you want want to install a MAAS region controller onto a given host using Ansible.  To accomplish this, you must:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Setting-the-maas_region_controller-role">set a maas_region_controller</a> role on a given host, </li>
+<li><a href="#heading--Running-the-region-controller-playbook">run the region controller playbook</a>,</li>
+<li>and <a href="#heading--Finding-the-new-region-controller">find the newly-configured region controller</a> present on that host .</li>
+</ul>
+<p><a href="#heading--Setting-the-maas_region_controller-role"><h3 id="heading--Setting-the-maas_region_controller-role">Setting the maas_region_controller role</h3></a></p>
+<p>To attach roles to hosts, a user adds each role to their <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups">Inventory file</a><code>↗</code> in the form of either an INI or a YAML file where each role is followed by the addresses of each host to attach the role to. The example  below attaches the region controller role to a host running on <code>10.10.0.20</code> with the user <code>ubuntu</code>:*</p>
+<p>INI:</p>
+<pre><code class="language-INI">[maas_region_controller]
+10.10.0.20 ansible_user=ubuntu
+</code></pre>
+<p>YAML:</p>
+<pre><code class="language-YAML">all:
+  maas_region_controller:
+    hosts:
+      10.10.0.20:
+        ansible_user: ubuntu
+</code></pre>
+<p><a href="#heading--Running-the-region-controller-playbook"><h3 id="heading--Running-the-region-controller-playbook">Running the region controller playbook</h3></a></p>
+<p>When running the playbook for a host with the maas_region_controller role, the playbook installs the MAAS region controller.  The documented ansible variable <code>maas_installation_type</code> provides the user with the ability to set whether it’s a deb installation or a snap installation, along with additional variables for MAAS version, snap channel and/or PPA. </p>
+<p>The default installation is a snap.  A successful run of the playbook should give the operator an accessible and ready MAAS instance.  Some notes on installation:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The installed region controller is used to set a maas_url variable when there is not one already set for later Rack Controller configuration use.</li>
+<li>The operator can optionally enable TLS.</li>
+<li>The playbook sets up the admin user.</li>
+<li>The playbook adds any provided preseeds.</li>
+<li>The playbook only installs the maas-region-api deb if the operator chooses the deb installation.</li>
+<li>Once the region controller is installed, the playbook will run migrations using the configured postgresql primary instance.</li>
+<li>Running on an already configured machine &ndash; but with a new version &ndash; should upgrade the instance.</li>
+<li>The operator can override the postgres DSN variable on any machine (hence not setting <code>maas_postgres_primary</code> or <code>maas_postgres_secondary</code>) to use an existing PostgreSQL instance not managed by this playbook.</li>
+<li>Optionally, the user can install a grafana agent by setting the variable <code>install_metrics=true</code> either in the hosts or on the command line.</li>
+</ul>
+<p><code>[MAAS_Region_Controller]</code> variables:</p>
+<pre><code>maas_version: &quot;latest&quot;          # The version of MAAS to install on the host
+maas_installation_type: &quot;snap&quot;  # The installation manager to use
+maas_snap_channel: &quot;stable&quot;     # The snap channel, if using snap
+maas_url: $Ip_Address           # The url of the database for this MAAS
+enable_tls: false               # Whether TLS should be enabled for this MAAS
+install_metrics: false          # Whether metrics should be enabled for this MAAS
+
+# Details for the administrative account
+admin_username: &quot;admin&quot;
+admin_password: &quot;admin&quot;
+admin_email: &quot;admin@email.com&quot;
+admin_id: &quot;admin&quot;
+</code></pre>
+<p>These variables can be defined in the <code>Hosts</code> file above, or at the command line using the <code>--extra_vars</code> argument.</p>
+<p>The playbook uses an ansible variable to determine what version of MAAS to deploy.  The playbook won’t execute (i.e “skipped” in the context of Ansible) if <code>host_vars</code> show the Ubuntu version is incompatible with the version and install method.  The Region Controller tasks should be able to execute on multiple hosts in a single execution if the target is an Ansible Group rather than a single host.</p>
+<p><a href="#heading--Finding-the-new-region-controller"><h3 id="heading--Finding-the-new-region-controller">Finding the new region controller</h3></a></p>
+<p>The newly-installed region controller should be accessible at the specified host ip address, as though the controller had been installed manually.</p>
+<p><a href="#heading--MAAS-rack-controller"><h2 id="heading--MAAS-rack-controller">MAAS rack controller</h2></a></p>
+<p>As an operator, you want to install a MAAS rack controller to a given host, using Ansible. To accomplish this, you must: </p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Setting-the-maas_rack_controller-role">set a maas_rack_controller role</a> on a given host, </li>
+<li><a href="#heading--Running-the-rack-controller-playbook">run the playbook</a>, </li>
+<li>and <a href="#heading--Finding-the-new-rack-controller">find the newly-configured rack controller</a>, now present on the host.</li>
+</ul>
+<p><a href="#heading--Setting-the-maas_rack_controller-role"><h3 id="heading--Setting-the-maas_rack_controller-role">Setting the maas_rack_controller role</h3></a></p>
+<p>Assigning a host the <code>maas_rack_controller</code> role is straightforward. The role is given a set of hosts in the <code>hosts</code> file of the ansible configuration:</p>
+<p>INI</p>
+<pre><code class="language-INI">[$role]
+$Host_Ip_Address extra_variable=$Variable_Value
+$Second_Host_Ip
+</code></pre>
+<p>YAML</p>
+<pre><code>all:
+  $role:
+    hosts:
+      $Host_Ip_Address:
+        extra_variable: $Variable_Value
+      $Second_Host_Ip
+</code></pre>
+<p><a href="#heading--Running-the-rack-controller-playbook"><h3 id="heading--Running-the-rack-controller-playbook">Running the rack controller playbook</h3></a></p>
+<p>When running the playbook for a host with the <code>maas_rack_controller</code> role, the playbook installs the MAAS Rack Controller. The <code>maas_url</code> variable is used to connect the Region Controller(s), either previously configured from a Region Controller install task, or provided by the user. If the <code>maas_url</code> variable is not set, the Rack Controller tasks are “skipped”.  Some notes about the installation:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The operator can optionally enable TLS.</li>
+<li>The rack controller tasks should be able to execute on multiple hosts in a single execution if an Ansible Group is targeted rather than a single host.</li>
+<li>Only install the maas-rack-controller deb if using the deb installation.</li>
+<li>Running on an already configured machine but with a new version should upgrade the instance.</li>
+<li>You can optionally install a grafana agent by setting the <code>install_metrics</code> variable to <code>true</code> either in the hosts file or at the command line.</li>
+</ul>
+<p><code>[MAAS_Rack_Controller]</code> Variables</p>
+<pre><code class="language-bash">maas_version: &quot;latest&quot;          # The version of MAAS to install on the host
+maas_installation_type: &quot;snap&quot;  # The installation manager to use
+maas_snap_channel: &quot;stable&quot;     # The snap channel, if using snap
+maas_url: $Ip_Address           # The url of the database for this MAAS
+maas_rack_secret:               # The secret used to enroll a MAAS rack
+enable_tls: false               # Whether TLS should be enabled for this MAAS
+install_metrics: false          # Whether metrics should be enabled for this MAAS
+</code></pre>
+<p><a href="#heading--Finding-the-new-rack-controller"><h3 id="heading--Finding-the-new-rack-controller">Finding the new rack controller</h3></a></p>
+<p>The rack controller should be accessible at the specified host IP address, just as if you had installed it there manually.</p>
+<p><a href="#heading--MAAS-de-installation"><h3 id="heading--MAAS-de-installation">MAAS de-installation</h3></a></p>
+<p>As an operator, you want to be able to revert the MAAS setup installed by this playbook, such that the machine is clean of all MAAS packages or snaps.  In order to teardown a MAAS deployment, you can run a separate entry-point within the playbook to teardown the installed MAAS packages or snaps.  This entry-point is provided in the playbook to remove the installation that the default entry-point provides: Running this playbook with the default configuration with perfectly undo the default installation.</p>
+<p>You must <a href="how-to-keep-maas-backed-up.html">back up</a> the database and MAAS configuration, if desired.  The target machine is restored state prior to installation, with no MAAS, directories, or files present on the system.</p>
+<p><a href="#heading--MAAS-high-availability"><h3 id="heading--MAAS-high-availability">MAAS high availability</h3></a></p>
+<p>As an operator, you want to install a reverse proxy and configure high-availability region controllers for a given host using Ansible.  Note that HA region controllers require an HAProxy configuration. You can accomplish this with the following steps:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Set-the-maas_cluster_proxy">set the maas_cluster_proxy</a>,</li>
+<li><a href="#heading--Use-Ansible-to-configure-HAProxy">have Ansible install and configure HAProxy</a> on the designated instances, </li>
+<li>and <a href="#heading--Verify-HAProxy-forwarding">verify that the HAProxy is forwarding traffic</a> to the region controllers.</li>
+</ul>
+<p>Ansible configures the HAProxy instance for optimal use, such that OS images can be uploaded, for example. An unresponsive Region Controller is taken out of the upstream pool quickly.
+The HAProxy instance does not interfere with Nginx/MAAS TLS configuration</p>
+<p><a href="#heading--Set-the-maas_proxy"><h3 id="heading--Set-the-maas_proxy">Set the maas_proxy role</h3></a></p>
+<p>Set the following in the <code>hosts</code> file to set the <code>maas_proxy</code> role:</p>
+<pre><code class="language-nohighlight">maas_proxy
+my.host ansible_user=ssh_user
+</code></pre>
+<p>For example, on a host called &ldquo;neuromancer&rdquo; with an SSH-capable user called &ldquo;stormrider&rdquo;, this YAML would be:</p>
+<pre><code class="language-nohighlight">maas_proxy
+neuromancer ansible_user=stormrider
+</code></pre>
+<p><a href="#heading--Use-Ansible-to-configure-HAProxy"><h3 id="heading--Use-Ansible-to-configure-HAProxy">Use Ansible to configure HAProxy</h3></a></p>
+<p>Run the full playbook, or add <code>--tags &lt;target role(s)&gt;</code> to run only the tasks for a given role.</p>
+<p><a href="#heading--Verify-HAProxy-forwarding"><h3 id="heading--Verify-HAProxy-forwarding">Verify HAProxy forwarding</h3></a></p>
+<p>You can verify the HAProxy forwarding by running <code>curl -L http://&lt;haproxy host&gt;:5240/MAAS</code> if HAProxy is on a separate host from the region controller; otherwise, change the port number to 5050 like this:</p>
+<pre><code class="language-nohighlight">curl -L http://&lt;haproxy hostd&gt;:5050/MAAS
+</code></pre>
+<p><a href="#heading--PostgreSQL-primary-role"><h2 id="heading--PostgreSQL-primary-role">PostgreSQL primary role</h2></a></p>
+<p>As an operator, you want to install a Postgresql database as a primary to a given host using Ansible. You can accomplish this with the following steps:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Set-the-maas_postgresql_primary-role">set the maas_postgresql_primary role</a> on a host, </li>
+<li><a href="#heading--Use-Ansible-to-install-a-postgres-instance">have Ansible install a readable and writable PostgreSQL instance</a>, with optimal configuration for MAAS,</li>
+<li><a href="#heading--Verify-the-PostgreSQL-instance">verify that the PostgreSQL instance is working properly</a>.</li>
+</ul>
+<p>Ansible installs the latest supported version of PostgreSQL supported for the given MAAS version. <strong>Do they select the MAAS version?  How does it know?</strong>  If the playbook runs with other roles set on targeted hosts / groups, the tasks associated with the maas_postgresql_primary role runs first. If the operator sets a variable for importing a backup, the backup is loaded into PostgreSQL. <strong> How do they set this variable?  What is the variable?</strong></p>
+<p><a href="#heading--Set-the-maas_postgres_primary-role"><h3 id="heading--Set-the-maas_postgres_primary-role">Set the maas_postgres_primary role</h3></a></p>
+<p>Set the following in the <code>hosts</code> file to set the <code>maas_postgres_primary</code> role:</p>
+<pre><code class="language-nohighlight">maas_postgres_primary
+my.host ansible_user=ssh_user
+</code></pre>
+<p>For example, on a host called &ldquo;neuromancer&rdquo; with an SSH-capable user called &ldquo;stormrider&rdquo;, this YAML would be:</p>
+<pre><code class="language-nohighlight">maas_postgres_primary
+neuromancer ansible_user=stormrider
+</code></pre>
+<p><a href="#heading--Use-Ansible-to-install-a-postgres-instance"><h3 id="heading--Use-Ansible-to-install-a-postgres-instance">Use Ansible to install a postgres instance</h3></a></p>
+<p>Run the full playbook, or add <code>--tags &lt;target role(s)&gt;</code> to run only the tasks for a given role.</p>
+<p><a href="#heading--Verify-the-PostgreSQL-instance"><h3 id="heading--Verify-the-PostgreSQL-instance">Verify the PostgreSQL instance</h3></a></p>
+<p>You can verify the primary by running <code>sudo -u postgres psql</code> and making sure you get a prompt.</p>
+<p><a href="#heading--PostgreSQL-secondary-role"><h2 id="heading--PostgreSQL-secondary-role">PostgreSQL secondary role</h2></a></p>
+<p>As an operator, you want to install a PostgreSQL database as a secondary for a given host using Ansible. You can accomplish this with the following steps:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>set the maas_postregresql_secondary role on a host,</li>
+<li>have Ansible install a readable PostgreSQL instance, with an optimal configuration, set as a failover instance,</li>
+<li>and verify that the failover instance works properly.</li>
+</ul>
+<p>Ansible installs the latest supported version of PostgreSQL for the given MAAS version that’s available for the host’s Ubuntu series in the Ubuntu repo. (<strong>need a clearer way to say this</strong>). </p>
+<p>If the playbook runs with other roles set on targeted hosts / groups, the tasks associated with the maas_postgresql_secondary role runs after maas_postgresql_primary but before any other roles.  The configured secondary from this role replicates from a primary PostgreSQL instance created from the maas_postgresql_primary role.</p>
+<p>Automated failover is configured manually, external to this playbook. Manual failover can be achieved by a separate set of tasks for the maas_postgresql_secondary role, which once successful, changes the machine’s role to a maas_postgresql_primary and its configuration reflects that.</p>
+<p><a href="#heading--Set-the-maas_postregres_secondary-role-"><h3 id="heading--Set-the-maas_postregres_secondary-role-">Set the maas_postregres_secondary role </h3></a></p>
+<p>Set the following in the <code>hosts</code> file to set the <code>maas_postgres_secondary</code> role:</p>
+<pre><code class="language-nohighlight">maas_postgres_secondary
+my.host ansible_user=ssh_user
+</code></pre>
+<p>For example, on a host called &ldquo;neuromancer&rdquo; with an SSH-capable user called &ldquo;stormrider&rdquo;, this YAML would be:</p>
+<pre><code class="language-nohighlight">maas_postgres_secondary
+neuromancer ansible_user=stormrider
+</code></pre>
+<p><a href="#heading--Use-Ansible-to-install-PostgreSQL-failover-instance"><h3 id="heading--Use-Ansible-to-install-PostgreSQL-failover-instance">Use Ansible to install PostgreSQL failover instance</h3></a></p>
+<p>Run the full playbook, or add <code>--tags &lt;target role(s)&gt;</code> to run only the tasks for a given role.</p>
+<p><a href="#heading--Verify-that-the-failover-instance-works-properly"><h3 id="heading--Verify-that-the-failover-instance-works-properly">Verify that the failover instance works properly</h3></a></p>
+<p>You can verify the primary by running <code>sudo -u postgres psql</code>; when you get a prompt, enter <code>select * from pg_stat_replication;</code>.  This should return a list of all secondaries connected to that primary.</p>
+<!--
+<a href="#heading--Firewall-rules"><h2 id="heading--Firewall-rules">Firewall rules</h2></a>
+
+As a operator, you want to be able to setup MAAS in a secure way, following best practices and operational guidance on securing MAAS. In order to make a MAAS setup secure, I would Ansible playbooks to configure firewalls and file permissions based on https://maas.io/docs/how-to-secure-maas.
+
+
+<a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
+    </div>
+  </body>
+</html>

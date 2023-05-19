@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/the-machine-lifecycle.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong> 
+      <strong>
+	<a href="tutorials.html">
+	  Tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="bootstrap-maas.html">
+	    Bootstrap MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="get-fancy-cli-output.html">
+	    Get fancy CLI output
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-do-a-fresh-install-of-maas.html">
+	    Do a fresh install of MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-availability-zones.html">
+	    Use availability zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-images.html">
+	  How to use images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-images.html">
+	    Customise images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-a-real-time-kernel.html">
+	    Deploy a RT kernel
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-controllers.html">
+	  How to manage controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-configure-controllers.html">
+	    Configure controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-machines.html">
+	  How to manage machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-virtual-machines.html">
+	  How to use virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-virtual-machines.html">
+	    Manage virtual machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-devices.html">
+	  How to label devices
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-secure-maas.html">
+	  How to secure MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-hashicorp-vault-with-maas.html">
+	    Use Vault with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-operate-maas.html">
+	  How to operate MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-monitor-maas.html">
+	    Monitor MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-audit-maas.html">
+	    Audit MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-give-and-receive-help.html">
+	  How to give and receive help
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-our-discourse-forum.html">
+	    Use our discourse forum
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contact-us">
+	    Get support↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-new-features.html">
+	    Request new features
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-review-and-report-bugs.html">
+	    Review and report bugs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contribute-doc.html">
+	    Contribute documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="general-reference.html">
+	  General reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-settings-reference.html">
+	    MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="https://launchpad.net/maas.html">
+	    MAAS source code↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-help-improve-the-doc.html">
+	    Doc style guide
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+	<li>
+	  <a href="https://ubuntu.com/community/code-of-conduct">
+	    Code of conduct↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api-reference.html">
+	  API reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    Python API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api">
+	    API documentation↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-scripts-reference.html">
+	  Scripts reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-reference.html">
+	    Terraform
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-logs-reference.html">
+	  Log reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="event-logs-reference.html">
+	    Event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs-reference.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="testing-logs-reference.html">
+	    Testing logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machine-parameters-reference.html">
+	  Machine parameters reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-drivers-reference.html">
+	    Power drivers
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="device-labelling-reference.html">
+	    Device labelling
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Explanation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    About networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-virtual-machines.html">
+	    About virtual machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-device-labels.html">
+	    About device labels
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-events.html">
+	    About MAAS events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-audit-events.html">
+	    About audit events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-logging.html">
+	    About MAAS logging
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-security.html">
+	    About MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-performance.html">
+	    About MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="about-ansible.html">
+	    About Ansible
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>The machine lifecycle</h1><!-- "The machine lifecycle" -->
+
+<p>One of the most important things to understand about machines is their life-cycle. In this subsection, you will learn:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--Introduction-to-the-machine-life-cycle">Introduction to the machine life-cycle</a></li>
+<li><a href="#heading--about-enlistment">About enlistment</a></li>
+<li><a href="#heading--about-commissioning-machines">About commissioning machines</a></li>
+<li><a href="#heading--about-allocation-and-deployment">About allocation and deployment</a></li>
+</ul>
+<p><a href="#heading--Introduction-to-the-machine-life-cycle"><h3 id="heading--Introduction-to-the-machine-life-cycle">Introduction to the machine life-cycle</h3></a></p>
+<p>Everything that happens to a machine under MAAS control conforms to a specific life-cycle.  All MAAS machines are in a named state, or in transition between states.  Most of these transitions are user-controlled.  Only the &ldquo;failure&rdquo; state is reached under the direction of MAAS, when a user&rsquo;s request for certain state changes can&rsquo;t be successfully completed.</p>
+<p>In general, the various states and transitions can be summarised in a diagram:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg"></a></p>
+<p>The central state flow at the bottom of the diagram is the &ldquo;standard&rdquo; life-cycle.  If all goes well, you won&rsquo;t have to deviate much from this flow:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Machines start as servers in your environment, attached to a network or subnet that MAAS can reach and manage.  If those machines are configured to netboot, MAAS can discover them and enlist them, assigning a status of &ldquo;NEW&rdquo;. By definition, NEW machines are: (2) enabled to network boot, and (2) on a subnet accessible to MAAS. </p>
+</li>
+<li>
+<p>Once you&rsquo;ve pared the list to machines that you want MAAS to control, you can choose to commission them.  You can select any machine that is marked &ldquo;NEW&rdquo; and tell MAAS to commission it, or, if you add machine manually, MAAS will automatically commission it.  Commissioning PXE boots the machine and loads an ephemeral version of the Ubuntu operating system into the machine&rsquo;s RAM.  MAAS then uses that OS to scan the machine to determine its hardware configuration: CPUs, RAM, storage layouts, PCI and USB devices, and so forth.  Commissioning can be customised &ndash; more on that in a later section.  If a machine fails to properly commission, either because of a commissioning error, or because the commissioning process timed out, that machine enters a &ldquo;FAILED&rdquo; state.</p>
+</li>
+<li>
+<p>MAAS next tests the machine to make sure it&rsquo;s working properly. These basic tests just assure that the discovered hardware works as expected.  Testing can also be customised, if you wish.  Machines that don&rsquo;t pass these tests are moved to a &ldquo;FAILED&rdquo; state.</p>
+</li>
+<li>
+<p>Having tested it, MAAS then places that machine in the &ldquo;READY&rdquo; state, meaning that MAAS should be able to deploy it, based on the gathered hardware information.</p>
+</li>
+<li>
+<p>Before you deploy a machine, you should allocate it.  This step essentially involves taking ownership of the machine, so that no other users can deploy it.</p>
+</li>
+<li>
+<p>Having allocated a machine, you can deploy it.  When deploying, MAAS again loads an ephemeral Ubuntu OS onto the machine, uses <code>curtin</code> to configure the hardware in the way you&rsquo;ve specified, and then loads and boots the OS image you&rsquo;ve requested.  Deployment also runs some <code>cloud-init</code> steps to finish machine configuration, before leaving it up and ready for use.  </p>
+</li>
+</ul>
+<p>Once deployed, there are a couple of minor state changes you can effect without releasing the machine:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>You can lock a machine, if desired, to provide a little extra insurance that it won&rsquo;t accidentally be changed by you &ndash; or anyone.</p>
+</li>
+<li>
+<p>Depending upon the machine&rsquo;s duty cycle, you can also power it on, power it off, or even power-cycle it (to effect a reboot, for example).</p>
+</li>
+</ul>
+<p>Note that these minor state changes are not shown in the diagram above.  There are also some exceptional states you can command:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>For any machine that is ready, allocated, or deployed, you can cycle it through a battery of tests at any time.  Be aware, of course, that testing causes the machine to be unavailable for normal use for the duration of the text cycle.</p>
+</li>
+<li>
+<p>Machines that are ready, allocated, or deployed can also be placed in &ldquo;rescue mode&rdquo;.  Essentially, rescue mode is the same as walking to a malfunctioning or mis-configured machine, taking it off the network, and fixing whatever may be wrong with it &ndash; except that you&rsquo;re doing so via SSH, or by running tests from MAAS, rather than standing in front of the machine.  Machines in rescue mode can&rsquo;t enter normal life cycle states until you remove them from rescue mode.  You can, of course, delete them, modify their parameters (tags, zone, and so on), power them off, and mark them broken.  Rescue mode is like a remote repair state that you can control from wherever you are.</p>
+</li>
+<li>
+<p>Machines that are allocated or deployed can also be marked broken.  A broken machine powers off by default.  You can still power it on, delete it, or enter rescue mode, but you can&rsquo;t log into it via SSH.  This state is intended for machines that experience catastrophic hardware or software failures and need direct repairs.</p>
+</li>
+</ul>
+<p>There is one more state that a machine can get into: &ldquo;failed&rdquo;.  This state is entered when commissioning, allocation, or deployment are not successful.  Getting out of a failed state means figuring out what went wrong, correcting it, and retrying the failed operation.  For example, when a machine fails, you can try and commission it again, hopefully after you&rsquo;ve found the bug in your custom commissioning script that&rsquo;s causing it to fail (for instance).</p>
+<p>Now that we have a solid overview of the life-cycle, let&rsquo;s break down some of these states and transitions in greater detail.</p>
+<p><a href="#heading--about-enlistment"><h3 id="heading--about-enlistment">About enlistment</h3></a></p>
+<p>MAAS is built to manage machines, including the operating systems on those machines. Enlistment and commissioning are features that make it easier to start managing a machine &ndash; as long as that machine has been configured to netboot. Enlistment enables users to simply connect a machine, configure the firmware properly, and power it on so that MAAS can find it and add it.</p>
+<p>Enlistment happens when MAAS starts; it reaches out on connected subnets to locate any nodes &ndash; that is, devices and machines &ndash; that reside on those subnets. MAAS finds a machine that&rsquo;s configured to netboot (e.g., via PXE), boots that machine into Ubuntu, and then sends cloud-init user data which runs standard (i.e., built-in) commissioning scripts. The machine actually adds itself over the MAAS API, and then requests permission to send commissioning data.</p>
+<p>Since MAAS doesn&rsquo;t know whether you might intend to actually include these discovered machines in your cloud configuration, it won&rsquo;t automatically take them over, but it will read them to get an idea how they&rsquo;re set up. MAAS then presents these machines to you with a MAAS state of &ldquo;New.&rdquo; This allows you to examine them and decide whether or not you want MAAS to manage them.</p>
+<p>When you configure a machine to netboot &ndash; and turn it on while connected to the network &ndash; MAAS will enlist it, giving it a status of &ldquo;New.&rdquo;  You can also <a href="how-to-make-machines-available.html#heading--how-to-add-a-machine-manually">add a machine manually</a>. In either case, the next step is <em>commissioning</em>, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.</p>
+<p><a href="#heading--about-the-enlistment-process"><h4 id="heading--about-the-enlistment-process">About the enlistment process</h4></a></p>
+<p>When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can&rsquo;t accept domain names.  Once the machine has a bootable kernel, MAAS boots it:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a></p>
+<p>Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a></p>
+<p>Finally, cloud-init runs enlistment and setup scripts:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a></p>
+<p>The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as <a href="maas-networks.html#heading--about-network-discovery">automatic discovery or network discovery</a>.</p>
+<p>Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually. Typically this is done when enlistment doesn&rsquo;t work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you&rsquo;ve added it.</p>
+<p>After the commissioning process, MAAS places the machine in the ‘Ready’ state. ‘Ready’ is a holding state for machines that are commissioned, waiting to be deployed when needed.</p>
+<p><strong>NOTE:</strong> 
+MAAS runs built-in commissioning scripts during the enlistment phase. When you commission a machine, any customised commissioning scripts you add will have access to data collected during enlistment. Follow the link above for more information about commissioning and commission scripts.</p>
+<p><a href="#heading--about-bmc-enlistment"><h4 id="heading--about-bmc-enlistment">About BMC enlistment</h4></a></p>
+<p>For IPMI machines, you only need to provide IPMI credentials. MAAS automatically discovers the machine and runs enlistment configuration by matching the BMC address.  For non-IPMI machines, you must specify a non-PXE MAC address. MAAS automatically discovers the machine and runs enlistment configuration by matching the non-PXE MAC address.</p>
+<p><a href="#heading--about-adding-machines"><h4 id="heading--about-adding-machines">About adding machines</h4></a></p>
+<p>There are two ways to add a machine to MAAS:</p>
+<ol>
+<li>
+<p>If you place the machine on a connected network, and the machine is configured to netboot, MAAS will automatically enlist it.</p>
+</li>
+<li>
+<p>If you add a machine manually, MAAS will automatically commission it.  There are also ways to turn off this automatic commissioning, should you desire to do so.</p>
+</li>
+</ol>
+<p>MAAS typically adds a machine via a combination of DHCP, TFTP, and PXE. By now, you should have enabled MAAS to automatically add devices and machines to your environment. This unattended method of adding machines is called enlistment.</p>
+<p>Configuring a computer to boot over PXE is done via its BIOS, often referred to as &ldquo;netboot&rdquo; or &ldquo;network boot&rdquo;. Normally, when you add a machine manually, MAAS will immediately attempt to commission the machine. Note that you will need to configure the underlying machine to netboot, or commissioning will fail. MAAS cannot handle this configuration for you.  While the correct method for configuring network boot depends heavily on your server, there are two common elements:</p>
+<ol>
+<li>
+<p>The network card on your server must be able to support PXE, i.e., your NIC &ndash; whether independent or integrated on a motherboard &ndash; must have a boot PROM that supports network booting.  You&rsquo;ll need to consult the documentation for the machine in question to determine this. Note that in MAAS versions before 2.5, you are required to provide the MAC address of the PXE interface when adding a new machine manually.</p>
+</li>
+<li>
+<p>You usually have to interrupt the boot process and enter the BIOS/UEFI menu to configure the network card&rsquo;s PXE stack.  Again, you may need to consult your machine&rsquo;s documentation to pin down this step.</p>
+</li>
+</ol>
+<p>Additional steps will vary widely by machine type and architecture.</p>
+<p>Regardless of how MAAS adds a machine, there are no special requirements for the underlying machine itself, other than being able to netboot. In particular, there is no need to install an operating system on it.</p>
+<p><a href="#heading--about-cloning-machines"><h4 id="heading--about-cloning-machines">About cloning machines</h4></a></p>
+<p>MAAS 3.1 provides the ability to quickly clone or copy configuration from one machine to one or more machines, via the MAAS UI, providing convenient access to an existing API feature.. This is a step towards machine profile templating work. </p>
+<p>Creating a machine profile is a repetitive task. Based on the responses to our survey &ndash; and multiple forum posts, we have learned that most users create multiple machines of the same configuration in batches. Some users create a machine profile template and loop them through the API, while some create a script to interface with the CLI. However, there is no easy way to do this in the UI except by going through each machine and configuring them individually.   </p>
+<p>MAAS API already has the cloning functionality, but it was never exposed in the UI. Hence, users may not know that this API feature exists, nor is there any current documentation about how to use this feature.  Although the current cloning API feature does not solve all machine profile templating problems, it is a great place for us to start moving in the direction of machine templates.</p>
+<p><a href="#heading--About-copying-machine-configurations"><h4 id="heading--About-copying-machine-configurations">About copying machine configurations</h4></a></p>
+<p>As a MAAS user &ndash; API or UI &ndash; you may want to copy the configuration of a given machine and apply it to multiple existing machines. Assuming that at least one machine is already set to the desired configuration, you should be able to apply these same settings to a list of destination machines.  This means that a user should be able to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>select the source machine to copy from.</li>
+<li>validate that the source machine exists.</li>
+<li>select at least 1 destination machine.</li>
+<li>validate that the destination machine(s) exist.</li>
+<li>edit the source machine or destination machines, if needed.</li>
+<li>know at all times which machines are affected.</li>
+<li>see the cloned machines when cloning is successful, or</li>
+<li>get clear failure information, if cloning fails. </li>
+</ul>
+<p><a href="#heading--About-choosing-configuration-items-to-copy"><h4 id="heading--About-choosing-configuration-items-to-copy">About choosing configuration items to copy</h4></a></p>
+<p>As a MAAS user, you will likely want to select whether storage, network, or both configurations should be cloned. The cloning API allows users to choose interfaces and storage separately.  Thus, this new feature should allow the user to:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>clone only the interface (network) configuration.</li>
+<li>clone only the storage configuration.</li>
+<li>clone both configurations.</li>
+</ul>
+<p><a href="#heading--About-cloning-restrictions"><h4 id="heading--About-cloning-restrictions">About cloning restrictions</h4></a></p>
+<p>In order for cloning to succeed, a few restrictions must be met:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>The destination interface names must be the same source.</li>
+<li>The destination drive must be equal to or larger than the source drive.</li>
+<li>For static IPs, a new IP will be allocated to the interface on the destination machine</li>
+</ul>
+<p><a href="#heading--enlisting-deployed-machines"><h4 id="heading--enlisting-deployed-machines">About enlisting deployed machines</h4></a></p>
+<p>In general, when adding a machine to MAAS, it network boots the machine into an ephemeral environment to collect hardware information about the machine. While this is not a destructive action, it doesn’t work if you have machines that are already running a workload.</p>
+<p>For one, you might not be able to disrupt the workload in order to network boot it. But also, the machine would be marked as Ready, which is incorrect.</p>
+<p>When adding a machine, you may specify that the machine is already deployed. In that case, it won’t be going through the normal commissioning process and will be marked as being deployed.</p>
+<p>Such machines lack hardware information. In order to update the information, a script is provided to run a subset of the commissioning scripts and send them back to MAAS.</p>
+<p>Because already-deployed machines were not deployed by MAAS, most of the standard MAAS commands will not affect the machine and may, at times, return some odd results.  This is not errant behaviour; the goal of enlisting deployed machines is to avoid disturbing their workload. </p>
+<p><a href="#heading--about-commissioning-machines"><h3 id="heading--about-commissioning-machines">About commissioning machines</h3></a></p>
+<p>When MAAS commissions a machine, the following sequence of events takes place:</p>
+<ol>
+<li>DHCP server is contacted</li>
+<li>kernel and initrd are received over TFTP</li>
+<li>machine boots</li>
+<li>initrd mounts a Squashfs image ephemerally over HTTP</li>
+<li>cloud-init runs built-in and custom commissioning scripts</li>
+<li>machine shuts down</li>
+</ol>
+<p>The commissioning scripts will talk to the region API server to ensure that everything is in order and that eventual deployment will succeed.</p>
+<p>MAAS chooses the latest Ubuntu LTS release as the default image for commissioning.  If desired, you can select a different image in the &ldquo;Settings&rdquo; page of the web UI, by selecting the &ldquo;General&rdquo; tab and then scrolling down to the Commissioning section.</p>
+<p><strong>NOTE:</strong> 
+Commissioning requires 60 seconds.</p>
+<p><a href="#heading--about-numa-sriov-commissioning"><h4 id="heading--about-numa-sriov-commissioning">About commissioning NUMA and SR-IOV nodes</h4></a></p>
+<p>If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine&rsquo;s resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.</p>
+<p><strong>NOTE:</strong> 
+You must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a></p>
+<p>When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.</p>
+<p><a href="#heading--about-maas-commissioning-scripts"><h4 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h4></a></p>
+<p>MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status.</p>
+<p>Scripts can be selected to run from web UI during commissioning, by testing hardware,  or from the command line. Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:</p>
+<p>Add machine -&gt; Enlistment (runs built-in commissioning scripts MAAS) -&gt; New -&gt; Commission (runs built-in and custom commissioning scripts) -&gt; Ready -&gt; Deploy</p>
+<p>NOTE: Scripts are run in alphabetical order in an ephemeral environment.  We recommend running your scripts after any MAAS built-in scripts.  This can be done by naming your scripts 99-z*.  It is possible to reboot the system during commissioning using a script, however, as the environment is ephemeral, any changes to the environment will be destroyed upon reboot (barring, of course, firmware type updates).</p>
+<p>When a machine boots, MAAS first instructs it to run cloud-init to set up SSH keys (during commissioning only), set up NTP, and execute a script that runs other commissioning scripts.  Currently, the sequence of MAAS-provided commissioning scripts proceeds like this:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>maas-support-info:</strong> MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  <strong>Runs in parallel with other scripts.</strong></p>
+</li>
+<li>
+<p><strong>maas-lshw:</strong> this script pulls system BIOS and vendor info, and generates user-defined tags for later use.  <strong>Runs in parallel with other scripts.</strong></p>
+</li>
+<li>
+<p><strong>20-maas-01-install-lldpd:</strong> this script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This script provides some extensive logging.</p>
+</li>
+<li>
+<p><strong>maas-list-modaliases:</strong> this script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  <strong>Runs in parallel with other scripts.</strong></p>
+</li>
+<li>
+<p><strong>20-maas-02-dhcp-unconfigured-ifaces:</strong> MAAS will want to know all the ways the machine is connected to the network.  Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script provides extensive logging.</p>
+</li>
+<li>
+<p><strong>maas-get-fruid-api-data:</strong> this script gathers information for the Facebook wedge power type.  <strong>Runs in parallel with other scripts.</strong></p>
+</li>
+<li>
+<p><strong>maas-serial-ports:</strong> this script lists what serial ports are available on the machine.  <strong>Runs in parallel with other scripts.</strong></p>
+</li>
+</ul>
+<p><strong>NOTE:</strong> 
+As of MAAS version 3.0, <strong>40-maas-01-network-interfaces</strong> is no longer used by MAAS.</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>50-maas-01-commissioning:</strong> this script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, details about attached USB and PCI devices, etc.  We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.  This script also checks whether the machine being commissioning is a virtual machine, which may affect how MAAS interacts with it.</p>
+</li>
+<li>
+<p><strong>maas-capture-lldp:</strong> this script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  <strong>Runs in parallel with other scripts.</strong></p>
+</li>
+<li>
+<p><strong>maas-kernel-cmdline:</strong> this script is used to update the boot devices; it double-checks that the right boot interface is selected.</p>
+</li>
+</ul>
+<p>Commissioning runs the same dozen or so scripts as enlistment, gathering all the same information, but with these caveats:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Commissioning also runs user-supplied commissioning scripts, if present.  Be aware that these scripts run as root, so they can execute any system command.</p>
+</li>
+<li>
+<p>Commissioning runs test scripts which are not run during enlistment.</p>
+</li>
+<li>
+<p>Commissioning scripts can send BMC configuration data, and can be used to configure BMC data.</p>
+</li>
+<li>
+<p>The environment variable BMC_CONFIG_PATH is passed to serially run commissioning scripts; these scripts may write BMC power credentials to BMC_CONFIG_PATH in YAML format, where each key is a power parameter.  The first script to write BMC_CONFIG_PATH is the only script allowed to configure the BMC, allowing you to override MAAS&rsquo; built-in BMC detection.  If the script returns 0, that value will be send to MAAS.</p>
+</li>
+<li>
+<p>All built-in commissioning scripts have been migrated into the database.</p>
+</li>
+<li>
+<p><code>maas-run-remote-scripts</code> is capable of enlisting machines, so enlistment <code>user-data</code> scripts have been removed.</p>
+</li>
+<li>
+<p>The metadata endpoints <code>http://&lt;MAAS&gt;:5240/&lt;latest or 2012-03-01&gt;/</code> and <code>http://&lt;MAAS&gt;:5240/&lt;latest or 2012-03-01&gt;/meta-data/</code> are now available anonymously for use during enlistment.</p>
+</li>
+</ul>
+<p>In both enlistment and commissioning, MAAS uses either the MAC address or the UUID to identify machines.  Currently, because some machine types encountered by MAAS do <strong>not</strong> use unique MAC addresses, we are trending toward using the UUID.</p>
+<p><strong>NOTE:</strong> 
+To commission a node, it must have a status of &ldquo;New&rdquo;.</p>
+<p>You have the option of setting some parameters to change how commissioning runs:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><code>enable_ssh</code>: Optional integer. Controls whether to enable SSH for the commissioning environment using the user&rsquo;s SSH key(s). &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False. Roughly equivalent to the <strong>Allow SSH access and prevent machine powering off</strong> in the web UI.</p>
+</li>
+<li>
+<p><code>skip_bmc_config</code>: Optional integer.  Controls whether to skip re-configuration of the BMC for IPMI based machines. &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False.</p>
+</li>
+<li>
+<p><code>skip_networking</code>: Optional integer.  Controls whether to skip re-configuring the networking on the machine after the commissioning has completed. &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False. Roughly equivalent to <strong>Retain network configuration</strong> in the web UI.</p>
+</li>
+<li>
+<p><code>skip_storage</code>: Optional integer.  Controls whether to skip re-configuring the storage on the machine after the commissioning has completed. &lsquo;1&rsquo; == True, &lsquo;0&rsquo; == False.  Roughly equivalent to <strong>Retain storage configuration</strong> in the web UI.</p>
+</li>
+<li>
+<p><code>commissioning_scripts</code>: Optional string.  A comma separated list of commissioning script names and tags to be run. By default all custom commissioning scripts are run. Built-in commissioning scripts always run. Selecting <code>update_firmware</code> or <code>configure_hba</code> will run firmware updates or configure HBA&rsquo;s on matching machines.</p>
+</li>
+<li>
+<p><code>testing_scripts</code>: Optional string.  A comma separated list of testing script names and tags to be run. By default all tests tagged <code>commissioning</code> will be run. Set to <code>none</code> to disable running tests.</p>
+</li>
+<li>
+<p><code>parameters</code>: Optional string.  Scripts selected to run may define their own parameters. These parameters may be passed using the parameter name. Optionally a parameter may have the script name prepended to have that parameter only apply to that specific script.</p>
+</li>
+</ul>
+<p><a href="#heading--commissioning-log"><h4 id="heading--commissioning-log">About machine commissioning logs</h4></a></p>
+<p>MAAS keeps extensive logs of the commissioning process for each machine. These logs present an extremely detailed, timestamped record of completion and status items from the commissioning process.</p>
+<p><a href="#heading--about-disabling-individual-boot-methods"><h4 id="heading--about-disabling-individual-boot-methods">About disabling individual boot methods</h4></a></p>
+<p>It is possible to disable individual boot methods.  This must be done via the CLI. When a boot method is disabled MAAS will configure MAAS controlled <code>isc-dhcpd</code> to not respond to the associated <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a><code>↗</code>. External DHCP servers must be configured manually.</p>
+<p>To allow different boot methods to be in different states on separate physical networks using the same VLAN ID configuration is done on the subnet in the UI or API. When using the API boot methods to be disabled may be specified using the MAAS internal name or <a href="https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#processor-architecture">boot architecture code</a><code>↗</code> in octet or hex form. </p>
+<p>For MAAS 3.0 and above, the following boot method changes have been implemented:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>UEFI AMD64 HTTP(00:10) has been re-enabled.</li>
+<li>UEFI ARM64 HTTP(00:13) has been enabled.</li>
+<li>UEFI ARM64 TFTP(00:0B) and UEFI ARM64 HTTP(00:13) will now provide a shim and GRUB signed with the Microsoft boot loader keys.</li>
+<li>grub.cfg for all UEFI platforms has been updated to replace the deprecated <code>linuxefi</code> and <code>initrdefi</code> commands with the standard <code>linux</code> and <code>initrd</code> commands.</li>
+<li>GRUB debug may now be enabled by enabling rackd debug logging.</li>
+</ul>
+<p><a href="#heading--about-automatic-script-selection-by-hardware-type"><h4 id="heading--about-automatic-script-selection-by-hardware-type">About automatic script selection by hardware type</h4></a></p>
+<p>When selecting multiple machines, scripts which declare the <code>for_hardware</code> field will only run on machines with matching hardware. To automatically run a script when &lsquo;Update firmware&rsquo; or &lsquo;Configure HBA&rsquo; is selected, you must tag the script with &lsquo;update_firmware&rsquo; or &lsquo;configure_hba&rsquo;.</p>
+<p>Similarly, scripts selected by tag on the command line which specify the <code>for_hardware</code> field will only run on matching hardware.</p>
+<p><a href="#heading--about-script-results"><h4 id="heading--about-script-results">About script results</h4></a></p>
+<p>A script can output its results to a YAML file, and those results will be associated with the hardware type defined within the script. MAAS provides the path for the results file in an environment variable, <code>RESULT_PATH</code>. Scripts should write YAML to this file before exiting.</p>
+<p>If the hardware type is storage, for example, and the script accepts a storage type parameter, the result will be associated with a specific storage device.</p>
+<p>The YAML file must represent a dictionary with these two fields:</p>
+<ol>
+<li>
+<p><code>result</code>: The completion status of the script. This status can be <code>passed</code>, <code>failed</code>, <code>degraded</code>, or <code>skipped</code>. If no status is defined, an exit code of <code>0</code> indicates a pass while a non-zero value indicates a failure.</p>
+</li>
+<li>
+<p><code>results</code>: A dictionary of results. The key may map to a results key defined as embedded YAML within the script. The value of each result must be a string or a list of strings.</p>
+</li>
+</ol>
+<p>Optionally, a script may define what results to return in the YAML file in the metadata fields.. The <code>results</code> field should contain a dictionary of dictionaries. The key for each dictionary is a name which is returned by the results YAML. Each dictionary may contain the following two fields:</p>
+<ol>
+<li>
+<p><code>title</code> - The title for the result, used in the UI.</p>
+</li>
+<li>
+<p><code>description</code> - The description of the field used as a tool-tip in the UI.</p>
+</li>
+</ol>
+<p>Here is an example of &ldquo;degrade detection&rdquo;:</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+
+# --- Start MAAS 1.0 script metadata ---
+# name: example
+# results:
+#   memspeed:
+#     title: Memory Speed
+#     description: Bandwidth speed of memory while performing random read writes
+# --- End MAAS 1.0 script metadata ---
+
+import os
+import yaml
+
+memspeed = some_test()
+
+print('Memspeed: %s' % memspeed)
+results = {
+   'results': {
+       'memspeed': memspeed,
+   }
+}
+if memspeed &lt; 100:
+   print('WARN: Memory test passed but performance is low!')
+   results['status'] = 'degraded'
+
+result_path = os.environ.get(&quot;RESULT_PATH&quot;)
+if result_path is not None:
+   with open(result_path, 'w') as results_file:
+       yaml.safe_dump(results, results_file)
+</code></pre>
+<p><a href="#heading--about-tags-and-scripts"><h4 id="heading--about-tags-and-scripts">About tags and scripts</h4></a></p>
+<p>As with general tag management, tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:</p>
+<pre><code class="language-bash">maas $PROFILE node-script add-tag $SCRIPT_NAME tag=$TAG
+maas $PROFILE node-script remove-tag $SCRIPT_NAME tag=$TAG
+</code></pre>
+<p>MAAS runs all commissioning scripts by default. However, you can select which custom scripts to run during commissioning by name or tag:</p>
+<pre><code class="language-bash">maas $PROFILE machine commission \
+commissioning_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+<p>You can also select which testing scripts to run by name or tag:</p>
+<pre><code class="language-bash">maas $PROFILE machine commission \
+testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
+</code></pre>
+<p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
+<p><a href="#heading--about-debugging-script-failures"><h4 id="heading--about-debugging-script-failures">About debugging script failures</h4></a></p>
+<p>You can individually access the output from both completed and failed scripts.</p>
+<p><a href="https://assets.ubuntu.com/v1/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/855015e5-nodes-hw-scripts__2.2_fail.png"></a></p>
+<p>If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.</p>
+<p><a href="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></p>
+<p>Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script&rsquo;s status.</p>
+<p>As long as you&rsquo;ve added your <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
+<p><a href="#heading--about-testing-hardware"><h4 id="heading--about-testing-hardware">About testing hardware</h4></a></p>
+<p>If you wish, you can tell MAAS to test machine hardware using well-known Linux utilities.  MAAS can test machines that have a status of <strong>Ready</strong>, <strong>Broken</strong>, or <strong>Deployed</strong>.  You can include testing as part of the commissioning process. When you choose the &lsquo;Commission&rsquo; action, MAAS will display the dialog described below.  Be aware, though, that if the hardware tests fail, the machine will become unavailable for Deployment.</p>
+<p><strong>NOTE:</strong> 
+The majority of testing scripts only work with machines that are backed by physical hardware (e.g. they may be incompatible with VM-based machines).</p>
+<p>With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.</p>
+<p><a href="#heading--hardware-tests"><h4 id="heading--hardware-tests">About machine hardware &amp; test logs</h4></a></p>
+<p>MAAS logs test results and allows you to view a summary of tests run against a particular machine.  You can also example details on any particular tests:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a></p>
+<p>You can also examine the &ldquo;raw&rdquo; log output:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a></p>
+<p>Help interpreting these logs can be found under the <a href="how-to-work-with-log-files.html">Logging</a> section of this documentation.</p>
+<p><a href="#heading--about-testing-machine-networking"><h4 id="heading--about-testing-machine-networking">About testing machine networking</h4></a></p>
+<p>MAAS provides a comprehensive suite of network and link testing capabilities.  MAAS can check whether or not links are connected, detect slow links, and report link and interface speeds via UI or API. In addition, you can test Internet connectivity against a user-provided list of URLs or IP addresses.  Bonded NICS will be separated during this testing, so that each side of a redundant interface is fully evaluated.</p>
+<p>Network testing also includes customisable network testing and commissioning scripts. There are no particular restrictions on these scripts, allowing you to test a wide variety of possible conditions and situations.</p>
+<p><a href="#heading--about-post-commission-configuration"><h4 id="heading--about-post-commission-configuration">About post-commission configuration</h4></a></p>
+<p>Once commissioned, you can configure the machine&rsquo;s network interface(s). Specifically, when a machine&rsquo;s status is either &ldquo;Ready&rdquo; or &ldquo;Broken&rdquo;, interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces.</p>
+<p><a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a></p>
+<p>Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to <a href="images.html#heading--how-images-deploy">install an operating system on it</a>, along with any other application loads you wish to run on that machine.</p>
+<p>A detailed picture of deployment looks something like this:</p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a></p>
+<p>Before deploying a machine, MAAS must allocate it (status &lsquo;Allocated&rsquo;). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.</p>
+<p>The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a &ldquo;cloud&rdquo; resource, then <a href="https://jaas.ai/">Juju</a><code>↗</code> is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.</p>
+<p>Machines deployed with MAAS will also be ready to accept connections via SSH, to the &lsquo;ubuntu&rsquo; user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH keys</a>.</p>
+<p><strong>NOTE:</strong> 
+Juju adds SSH keys to machines under its control.</p>
+<p>MAAS also supports machine customisation with a process called &ldquo;preseeding.&rdquo; For more information about customising machines, see <a href="how-to-customise-machines.html">How to customise machines</a>.</p>
+<p>To deploy, you must configure the underlying machine to netboot.  Such a machine will undergo the following process, outlined in the above diagram:</p>
+<ol>
+<li>MAAS boots the machine via the machine&rsquo;s BMC, using whatever power driver is necessary to properly communicate with the machine.</li>
+<li>The booted machine sends a DHCP Discover request.</li>
+<li>The MAAS-managed DHCP server (ideally) responds with an IP address and the location of a MAAS-managed HTTP or TFTP boot server.</li>
+<li>The machine uses the HTTP/TFTP location to request a usable Network Boot Program (NBP).</li>
+<li>The machine recieves the NBP and boots.</li>
+<li>The machine firmware requests a bootable image.</li>
+<li>MAAS sends an ephemeral OS image, including an initrd; this ephemeral (RAM-only) image is necessary for <code>curtin</code> to carry out any hardware-prep instructions (such as disk paritioning) before the deployed OS is booted.</li>
+<li>The initrd mounts a SquashFS image, also ephemerally, over HTTP.</li>
+<li>The machine boots the emphemeral image.</li>
+<li>The ephemeral image runs <code>curtin</code>, with passed pre-seed information, to configure the machine&rsquo;s hardware.</li>
+<li>The desired deployment (target) image is retrieved by <code>curtin</code>, which installs and boots that deployment image.  Note that the curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see <a href="how-to-customise-machines.html">How to customise machines</a>.</li>
+<li>The target image runs its embedded <code>cloud-init</code> script set, including any customisations and pre-seeds.</li>
+</ol>
+<p>Once this is done, the target image is up and running on the machine, and the machine can be considered successfully deployed.</p>
+<p>Also note that, before deploying, you should take two key actions:</p>
+<ol>
+<li>
+<p>Review and possibly set the <a href="how-to-customise-machines.html#heading--about-ubuntu-kernels">Ubuntu kernels</a> and the <a href="how-to-customise-machines.html#heading--about-kernel-boot-options">Kernel boot options</a> that will get used by deployed machines.</p>
+</li>
+<li>
+<p>Ensure any pertinent SSH keys are imported (see <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH keys</a>) to MAAS so it can connect to deployed machines.</p>
+</li>
+</ol>
+    </div>
+  </body>
+</html>

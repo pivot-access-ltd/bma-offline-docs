@@ -1279,7 +1279,7 @@ There are several Windows editions/install options supported by `maas-image-buil
 
 The examples in this section use Windows Hyper-V 2012 R2.
 
-<a href="#heading--MAAS-Image-Builder-for-Window"><h4 id="heading--MAAS-Image-Builder-for-Window">MAAS Image Builder for Window</h4></a>
+<a href="#heading--MAAS-Image-Builder-for-Windows"><h4 id="heading--MAAS-Image-Builder-for-Windows">MAAS Image Builder for Windows</h4></a>
 
 MAAS Image Builder (also known as "MIB") can automate the process of generating images for MAAS and <code>curtin</code>.
 
