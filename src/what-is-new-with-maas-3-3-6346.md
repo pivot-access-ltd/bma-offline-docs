@@ -1,6 +1,46 @@
 <!-- "What is new with MAAS 3.3" -->
 
-MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+These are the release notes for MAAS 3.3.
+
+<a href="#heading--MAAS-3-3-3-has-been-released"><h2 id="heading--MAAS-3-3-3-has-been-released">MAAS 3.3.3 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.3 has been released.  This is a maintenance release, with no new features, providing the following bug fixes:
+
+- [1959648](https://bugs.launchpad.net/maas/+bug/1959648): Websocket vlan handler should include associated subnet ids
+- [1979403](https://bugs.launchpad.net/maas/+bug/1979403): commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled
+- [1990416](https://bugs.launchpad.net/maas/+bug/1990416): MAAS reports invalid command to run when maas-url is incorrect
+- [1999668](https://bugs.launchpad.net/maas/+bug/1999668): reverse DNS not working for some interfaces
+- [2003940](https://bugs.launchpad.net/maas/+bug/2003940): MAAS 3.3 RC shows incorrect storage amount
+- [2011841](https://bugs.launchpad.net/maas/+bug/2011841): DNS resolution fails
+- [2012466](https://bugs.launchpad.net/maas/+bug/2012466): Fractional value for available CPU cores with an overcommit ratio breaks UI
+
+<a href="#heading--MAAS-3-3-2-has-been-released"><h2 id="heading--MAAS-3-3-2-has-been-released">MAAS 3.3.2 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.2 has been release with the following bug fixes:
+
+- [1990867](https://bugs.launchpad.net/maas/+bug/1990867)	TestImportBootImages - test_update_last_image_sync_end_to_end_import_not_performed
+- [1990872](https://bugs.launchpad.net/maas/+bug/1990872)	Flaky test: TestClusterClient - test_registerRackWithRegion_end_to_end
+- [2011822](https://bugs.launchpad.net/maas/+bug/2011822)	Reverse DNS resolution fails for some machines
+- [2012139](https://bugs.launchpad.net/maas/+bug/2012139)	maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled
+- [1986590](https://bugs.launchpad.net/maas/+bug/1986590)	maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named 'provisioningserver'
+
+<a href="#heading--MAAS-3-3-1-has-been-released"><h2 id="heading--MAAS-3-3-1-has-been-released">MAAS 3.3.1 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:
+
+- [1773150](https://bugs.launchpad.net/maas/+bug/1773150) smartctl verify fails due to Unicode in Disk Vendor Name
+- [1993618](https://bugs.launchpad.net/maas/+bug/1993618) Web UI redirection policy can invalidate HAProxy and/or TLS setup
+- [1996997](https://bugs.launchpad.net/maas/+bug/1996997) LXD resources fails on a Raspberry Pi with no Ethernet
+- [2003310](https://bugs.launchpad.net/maas/+bug/2003310) Refresh scripts are not re-run if they pass, but fail to report the results to the region
+- [2008275](https://bugs.launchpad.net/maas/+bug/2008275) Intel AMT support is broken in MAAS 3.3.0
+- [2009137](https://bugs.launchpad.net/maas/+bug/2009137) MAAS OpenApi Schema missing parameters
+- [2009140](https://bugs.launchpad.net/maas/+bug/2009140) MAAS OpenApi Schema cutoff variable names
+- [2009186](https://bugs.launchpad.net/maas/+bug/2009186) CLI results in connection timed out when behind haproxy and 5240 is blocked
+- [2009805](https://bugs.launchpad.net/maas/+bug/2009805) machine deploy install_kvm=True fails
+
+<a href="#heading--MAAS-3-3-has-been-released"><h2 id="heading--MAAS-3-3-has-been-released">MAAS 3.3 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3 has been released, with [one additional bug fix](#heading--MAAS-3-3-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
 <a href="#heading--Cumulative-summary-of-MAAS-3-3-features"><h2 id="heading--Cumulative-summary-of-MAAS-3-3-features">Cumulative summary of MAAS 3.3 features</h2></a>
 
@@ -36,19 +76,17 @@ Several forward-looking improvements are included as well:
 
 - Shifting the MAAS API documentation toward [OpenAPI standards](https://www.openapis.org/)`↗`
 
-- Shifting the MAAS documentation toward the [Diátaxis](https://diataxis.fr/)`↗` style of documentation
-
 These will be documented later in blog posts.
 
 
 This release also includes well over one-hundred [bug fixes](#heading--MAAS-3.3-bug-list).  Read on to catch up with what we've done so far this cycle.
 
-<a href="#heading--how-to-do-a-fresh-install-of-maas-3-3"><h2 id="heading--how-to-do-a-fresh-install-of-maas-3-3">How to install MAAS 3.3</h2></a>
+<a href="#heading--How-to-install-MAAS-3-3"><h2 id="heading--How-to-install-MAAS-3-3">How to install MAAS 3.3</h2></a>
 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 
 [note]
-**NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+**NOTE** that PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.  Also note, though, that Postgres 14 does not run on Focal 20.04 LTS.
 [/note]
 
 <a href="#heading--fresh-install-3-3-snap"><h3 id="heading--fresh-install-3-3-snap">How to do a fresh snap install of MAAS 3.3</h3></a>
@@ -150,9 +188,9 @@ To install MAAS in a production configuration, you need to setup PostgreSQL, as 
 
 To set up PostgreSQL, even if it's running on a different machine, you can use the following procedure:
 
-1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 10 or better) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
+1. You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 14) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:
 
-        sudo apt update -y
+        sudo apt update
         sudo apt install -y postgresql
 
 2. You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where `$MAAS_DBUSER` is your desired database username, and `$MAAS_DBPASS` is the intended password for that username.  Note that if you're executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.

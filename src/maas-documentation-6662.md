@@ -13,7 +13,7 @@ MAAS is applicable to nearly any situation.  It is currently deployed in banking
 
 |                                                                                       |                                                                                             |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| [Tutorials](/t/tutorials/6140)</br>  Hands-on introduction to MAAS features for new users       | [How-to guides](/t/how-to-guides/6142) </br> Step-by-step guides covering key operations and common tasks |
+| [Tutorials](/t/tutorials/6140)</br>  Hands-on introduction to MAAS features for new users       | [How-to guides](/t/how-to-guides/6663) </br> Step-by-step guides covering key operations and common tasks |
 | [Reference](/t/reference/6143) </br> Technical information - specifications, APIs, architecture | [Explanation](/t/explanation/6141) </br> Detailed theory on the inner workings of MAAS                  |
 
 
@@ -108,17 +108,17 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-troubleshoot-maas          | [Troubleshoot MAAS](/t/-/5333)                                  |
 | 2     | how-to-give-and-receive-help      | [Give and receive help](/t/-/5428)                              |
 | 3     | how-to-use-our-discourse-forum    | [Use our Discourse forum](/t/-/6802)                            |
-| 3     | how-to-get-support                | [Get support](/t/-/5448)           |
+| 3     | how-to-get-support                | [Get support](https://ubuntu.com/pro)                           |
 | 3     | how-to-request-new-features       | [Request new features](/t/-/4447)                               |
 | 3     | how-to-review-and-report-bugs     | [Review and report bugs](/t/-/4446)                             |
 | 3     | how-to-contribute-doc             | [Contribute documentation](/t/-/6949)                           |
 | 0     |                                   |                                                                 |
 | 1     | reference                         | [Reference](/t/-/6143)                                          |
 | 2     | general-reference                 | [General](/t/-/6950)                                            |
-| 3     | release-notes                     | [Release notes](/t/-/5292)                                      |
+| 3     | maas-release-notes                | [Release notes](/t/-/7071)                                      |
 | 3     | installation-requirements         | [Installation requirements](/t/-/6233)                          |
 | 3     | maas-settings                     | [MAAS settings](/t/-/6347)                                      |
-| 3     | maas-source-code                  | [MAAS source code](https://launchpad.net/maas)                 |
+| 3     | maas-source-code                  | [MAAS source code](https://launchpad.net/maas)                  |
 | 3     | doc-style-guide                   | [Doc style guide](/t/-/4186)                                    |
 | 3     | maas-glossary                     | [Glossary](/t/-/5416)                                           |
 | 3     | code-of-conduct                   | [Code of conduct](https://ubuntu.com/community/code-of-conduct) |
@@ -127,7 +127,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | python-api-client-reference       | [Python API client](/t/-/5404)                                  |
 | 3     | maas-api-documentation            | [API documentation](https://maas.io/docs/api)                   |
 | 2     | scripts-reference                 | [Scripts](/t/-/5375)                                            |
-| 3     | commissioning-scripts-reference   | [Commissioning scripts](/t/-/6605)                              |
+| 3     | comm-scripts-reference            | [Commissioning scripts](/t/-/6605)                              |
 | 3     | testing-scripts-reference         | [Hardware test scripts](/t/-/5392)                              |
 | 3     | maas-terraform-reference          | [Terraform](/t/-/6327)                                          |
 | 2     | log-reference                     | [Logging](/t/-/6956)                                            |
@@ -144,10 +144,10 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | about-maas                        | [MAAS](/t/-/6678)                                               |
 | 2     | about-high-availability           | [High availability](/t/-/6992)                                  |
 | 2     | networking                        | Networking                                                      |
-| 3     | about-maas-networks               | [MAAS networks](/t/-/5084)                                         |
-| 3     | about-tcp-ip-network              | [TCP/IP primer](/t/-/6683)                                             |
-| 3     | about-dhcp                        | [DHCP primer](/t/-/6682)                                               |
-| 3     | about-cloud-networking            | [Cloud networking primer](/t/-/6684)                                   |
+| 3     | about-maas-networks               | [MAAS networks](/t/-/5084)                                      |
+| 3     | about-tcp-ip-network              | [TCP/IP primer](/t/-/6683)                                      |
+| 3     | about-dhcp                        | [DHCP primer](/t/-/6682)                                        |
+| 3     | about-cloud-networking            | [Cloud networking primer](/t/-/6684)                            |
 | 2     | about-images                      | [Images](/t/-/6685)                                             |
 | 2     | about-controllers                 | [Controllers](/t/-/6690)                                        |
 | 2     | about-machines                    | [Machines](/t/-/6695)                                           |
@@ -159,6 +159,15 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | about-maas-security               | [MAAS security](/t/-/6719)                                      |
 | 2     | about-maas-performance            | [MAAS performance](/t/-/6178)                                   |
 | 2     | about-ansible                     | [Ansible](/t/-/6888)                                            |
+|       | what-is-new-with-maas-303         | [MAAS 3.3 release notes](/t/-/6346)                             |
+|       | what-is-new-with-maas-2-9         | [MAAS 2.9 release notes](/t/-/5961)                             |
+|       | what-is-new-with-maas-3-2         | [MAAS 3.2 release notes](/t/-/5962)                             |
+|       | what-is-new-with-maas-3-0         | [MAAS 3.0 release notes](/t/-/5963)                             |
+|       | what-is-new-with-maas-3-1         | [MAAS 3.1 release notes](/t/-/5964)                             |
+|       | what-is-new-with-maas-2-7         | [MAAS 2.7 release notes](/t/-/5993)                             |
+|       | what-is-new-with-maas-2-8         | [MAAS 2.8 release notes](/t/-/5994)                             |
+|       |                                   |                                                                 |
+
 [/details]
 
 <!--
@@ -255,88 +264,117 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 ## Redirects
 
 [details=Mapping table]
-|PATH|LOCATION|
-|--------|--------|
-|/docs/how-to-install-maas|/docs/how-to-do-a-fresh-install-of-maas|
-|/docs/about-rbac|/docs/how-to-protect-your-secrets|
-|/docs/maas-terraform-provider|/docs/maas-terraform-provider-reference|
-|/docs/commissioning-script-reference|/docs/commissioning-scripts-tech-reference|
-|/docs/technical-reference|/docs/maas-technical-reference|
-|/docs/how-to-set-up-maas-metrics|/docs/how-to-observe-a-live-maas|
-|/docs/how-to-back-up-maas|/docs/how-to-keep-maas-backed-up|
-|/docs/how-to-use-maas-in-an-air-gapped-environment|/docs/how-to-set-up-an-air-gapped-maas|
-|/docs/how-to-enable-tls-encryption|/docs/how-to-enable-maas-native-tls|
-|/docs/how-to-secure-maas|/docs/how-to-improve-maas-security|
-|/docs/maas-logging-reference|/docs/how-to-work-with-log-files|
-|/docs/how-to-search-maas|/docs/how-to-find-machines|
-|/docs/how-to-work-with-annotations|/docs/how-to-annotate-machines|
-|/docs/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/how-to-use-tags|/docs/how-to-label-and-find-machines|
-|/docs/how-to-manage-vms|/docs/how-to-create-and-manage-vms|
-|/docs/how-to-manage-vm-hosts|/docs/how-to-create-vm-hosts|
-|/docs/how-to-use-lxd|/docs/how-to-set-up-lxd|
-|/docs/how-to-deploy-machines|/docs/how-to-put-machines-to-work|
-|/docs/how-to-manage-machines|/docs/how-to-make-machines-available|
-|/docs/how-to-deploy-maas|/docs/how-to-deploy-physical-machines|
-|/docs/how-to-manage-controllers|/docs/how-to-adjust-your-controllers|
-|/docs/how-to-manage-vmware-images|/docs/how-to-employ-vmware-images|
-|/docs/how-to-create-custom-images|/docs/how-to-build-custom-images|
-|/docs/how-to-import-images|/docs/how-use-standard-images|
-|/docs/how-to-choose-images|/docs/how-to-acquire-images|
-|/docs/how-to-manage-ip-addresses|/docs/how-to-enable-dhcp|
-|/docs/how-to-manage-networks|/docs/how-to-connect-maas-networks|
-|/docs/how-to-configure-networking|/docs/how-to-set-up-networks|
-|/docs/report-a-bug|/docs/how-to-report-a-bug|
-|/docs/request-a-feature|/docs/how-to-request-a-feature|
-|/docs/how-to-get-help|/docs/how-to-ask-for-help| 
-|/docs/configuration-settings-reference|/docs/how-to-change-maas-settings|
-|/docs/ansible-playbooks-reference|/docs/how-to-spin-up-maas-with-ansible|
-|/docs/how-to-get-maas-running|/docs/how-to-get-started-with-maas|
-|/docs/create-a-custom-image|/docs/custom-image-tutorial|
-|/docs/how-to-use-the-maas-cli|/docs/try-out-the-maas-cli|
-|/docs/maas-bootstrap-tutorial|/docs/get-started-with-maas|
-|/docs/tutorials|/docs/basic-tutorials|
-|/docs/maas-concepts-and-terms-reference|/docs/maas-glossary|
-|/docs/installation-requirements|/docs/maas-installation-requirements|
-|/docs/whats-new-in-maas|/docs/what-is-new-with-maas|
-|/docs/vmware-images|/docs/how-to-employ-vmware-images|
-|/docs/about-tags|/docs/how-to-label-and-find-machines|
-|/docs/ssl|/docs/how-to-enable-maas-native-tls|
-|/docs/stp|/docs/how-to-connect-maas-networks|
-|/docs/subnet-management|/docs/how-to-connect-maas-newtorks|
-|/docs/deploy-nodes|/docs/how-to-put-machines-to-work|
-|/docs/storage|/docs/about-machines#heading--machine-storage|
-|/docs/how-to-manage-regions|/docs/how-to-adjust-your-controllers|
-|/docs/how-to-manage-racks|/docs/how-to-adjust-your-controllers|
-|/docs/how-to-create-a-custom-ubuntu-image|/docs/how-to-build-custom-images|
-|/docs/how-to-build-maas-images/docs/how-to-build-custom-images|
-|/docs/how-to-use-image-streams|/docs/how-use-standard-images|
-|/docs/how-to-manage-dhcp|/docs/how-to-enable-dhcp|
-|/docs/how-to-manage-ip-ranges|/docs//docs/how-to-enable-dhcp|
-|/docs/how-to-set-up-ntp-services|/docs/how-to-connect-maas-networks|
-|/docs/how-to-manage-machine-interfaces|/docs/how-to-connect-maas-networks|
-|/docs/how-to-manage-proxies|/docs/how-to-connect-maas-networks|
-|/docs/deb/3.0/cli/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/deb/3.0/ui/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/deb/3.1/cli/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/deb/3.1/ui/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/snap/2.7/cli/how-to-upgrade-maas|/docs/how-to-upgrade-maas|
-|/docs/snap/2.7/cli/installation-tech-reference|/docs/how-to-install-maas|
-|/docs/snap/2.7/cli/interactive-search|/docs/how-to-find-machines|
-|/docs/snap/2.7/ui/how-to-upgrade-maas|/docs/how-to-upgrade-maas|
-|/docs/snap/2.7/ui/installation-tech-reference|/docs/how-to-install-maas|
-|/docs/snap/2.7/ui/interactive-search|/docs/how-to-find-machines|
-|/docs/snap/2.8/cli/how-to-upgrade-maas|/docs/how-to-upgrade-maas|
-|/docs/snap/2.8/cli/installation-tech-reference|/docs/how-to-install-maas|
-|/docs/snap/2.8/cli/interactive-search|/docs/how-to-find-machines|
-|/docs/snap/2.8/ui/how-to-upgrade-maas|/docs/how-to-upgrade-maas|
-|/docs/snap/2.8/ui/installation-tech-reference|/docs/how-to-install-maas|
-|/docs/snap/2.8/ui/interactive-search|/docs/how-to-find-machines|
-|/docs/snap/2.9/cli/how-to-work-with-tags|/docs/how-to-tag-machiness|
-|/docs/snap/2.9/ui/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/snap/3.0/cli/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/snap/3.0/ui/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/snap/3.1/cli/how-to-work-with-tags|/docs/how-to-tag-machines|
-|/docs/snap/3.1/ui/how-to-work-with-tags|/docs/how-to-tag-machines|
+| PATH                                               | LOCATION                                      |
+|----------------------------------------------------|-----------------------------------------------|
+| /docs/how-to-use-tags                              | /docs/how-to-tag-machines                     |
+| /docs/how-to-create-vm-hosts                       | /docs/how-to-manage-vm-hosts                  |
+| /docs/how-to-protect-your-secrets                  | /docs/how-to-secure-maas                      |
+| /docs/about-rbac                                   | /docs/about-maas-security                     |
+| /docs/how-to-keep-maas-backed-up                   | /docs/how-to-back-up-maas                     |
+| /docs/how-to-back-up-maas                          | /docs/how-to-back-up-maas                     |
+| /docs/commissioning-scripts-tech-reference         | /docs/comm-scripts-reference         |
+| /docs/how-to-terraform-with-maas                   | /docs/maas-terraform-reference                |
+| /docs/maas-terraform-provider-reference            | /docs/maas-terraform-reference                |
+| /docs/understanding-maas-audit-events              | /docs/about-maas-audit-events                 |
+| /docs/how-to-gauge-maas-performance                | /docs/about-maas-performance                  |
+| /docs/maas-performance                             | /docs/about-maas-performance                  |
+| /docs/how-to-enable-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
+| /docs/how-to-unseal-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
+| /docs/how-to-manage-availability-zones             | /docs/how-to-use-availability-zones           |
+| /docs/test-log-reference                           | /docs/testing-logs-reference                  |
+| /docs/how-to-customise-images                   | /docs/how-to-customise-images                 |
+| /docs/power-management-reference                   | /docs/power-drivers-reference                 |
+| /docs/how-to-change-maas-settings                  | /docs/how-to-change-maas-settings                 |
+| /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
+| /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
+| /docs/request-a-feature                            | /docs/how-to-request-new-features             |
+| /docs/how-to-request-a-feature                     | /docs/how-to-request-new-features             |
+| /docs/how-to-work-with-log-files                   | /docs/about-maas-logging                      |
+| /docs/how-to-work-with-audit-event-logs            | /docs/how-to-audit-maas                       |
+| /docs/how-to-diagnose-issues                       | /docs/how-to-troubleshoot-maas                |
+| /docs/how-to-observe-a-live-maas                   | /docs/how-to-monitor-maas                     |
+| /docs/how-to-label-and-find-machines               | /docs/how-to-label-devices                    |
+| /docs/how-to-create-and-manage-vms                 | /docs/how-to-manage-virtual-machines          |
+| /docs/how-to-adjust-your-controllers               | /docs/how-to-configure-controllers            |
+| /docs/how-to-install-maas                          | /docs/how-to-do-a-fresh-install-of-maas       |
+| /docs/how-to-deploy-virtual-machines               | /docs/how-to-use-virtual-machines             |
+| /docs/about-tags                                   | /docs/about-device-labels                     |
+| /docs/ansible-playbooks-reference                  | /docs/how-to-spin-up-maas-with-ansible        |
+| /docs/basic-tutorials                              | /docs/tutorials                               |
+| /docs/commissioning-script-reference               | /docs/comm-scripts-reference         |
+| /docs/configuration-settings-reference             | /docs/how-to-change-maas-settings                 |
+| /docs/custom-image-tutorial                        | /docs/create-a-custom-image                   |
+| /docs/deb/3.0/cli/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
+| /docs/deb/3.0/ui/how-to-work-with-tags             | /docs/how-to-tag-machines                     |
+| /docs/deb/3.1/cli/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
+| /docs/deb/3.1/ui/how-to-work-with-tags             | /docs/how-to-tag-machines                     |
+| /docs/deploy-nodes                                 | /docs/how-to-put-machines-to-work             |
+| /docs/how-to-acquire-images                        | /docs/how-to-use-images                       |
+| /docs/how-to-build-maas-images                     | /docs/how-to-customise-images                 |
+| /docs/how-to-choose-images                         | /docs/how-to-use-images                       |
+| /docs/how-to-configure-networking                  | /docs/how-to-set-up-networks                  |
+| /docs/how-to-create-a-custom-ubuntu-image          | /docs/how-to-customise-images                 |
+| /docs/how-to-create-custom-images                  | /docs/how-to-customise-images                 |
+| /docs/how-to-deploy-maas                           | /docs/how-to-manage-machines                  |
+| /docs/how-to-deploy-machines                       | /docs/how-to-put-machines-to-work             |
+| /docs/how-to-manage-machines              | /docs/how-to-manage-machines                  |
+| /docs/how-to-enable-tls-encryption                 | /docs/how-to-enable-maas-native-tls           |
+| /docs/how-to-get-help                              | /docs/how-to-give-and-receive-help            |
+| /docs/how-to-get-maas-running                      | /docs/how-to-get-started-with-maas            |
+| /docs/how-to-import-images                         | /docs/how-use-standard-images                 |
+| /docs/how-to-manage-dhcp                           | /docs/how-to-enable-dhcp                      |
+| /docs/how-to-manage-ip-addresses                   | /docs/how-to-enable-dhcp                      |
+| /docs/how-to-manage-ip-ranges                      | /docs/how-to-enable-dhcp                      |
+| /docs/how-to-manage-machine-interfaces             | /docs/how-to-connect-maas-networks            |
+| /docs/how-to-manage-machines                       | /docs/how-to-make-machines-available          |
+| /docs/how-to-manage-proxies                        | /docs/how-to-connect-maas-networks            |
+| /docs/how-to-manage-racks                          | /docs/how-to-configure-controllers            |
+| /docs/how-to-manage-regions                        | /docs/how-to-configure-controllers            |
+| /docs/how-to-manage-vms                            | /docs/how-to-manage-virtual-machines          |
+| /docs/how-to-manage-vmware-images                  | /docs/how-to-employ-vmware-images             |
+| /docs/how-to-search-maas                           | /docs/how-to-find-machines                    |
+| /docs/how-to-set-up-maas-metrics                   | /docs/how-to-monitor-maas                     |
+| /docs/how-to-set-up-ntp-services                   | /docs/how-to-connect-maas-networks            |
+| /docs/how-to-tune-controllers                      | /docs/how-to-manage-controllers               |
+| /docs/how-to-use-image-streams                     | /docs/how-use-standard-images                 |
+| /docs/how-to-use-lxd                               | /docs/how-to-set-up-lxd                       |
+| /docs/how-to-use-maas-in-an-air-gapped-environment | /docs/how-to-set-up-an-air-gapped-maas        |
+| /docs/how-to-use-the-maas-cli                      | /docs/try-out-the-maas-cli                    |
+| /docs/how-to-work-with-annotations                 | /docs/how-to-annotate-machines                |
+| /docs/how-to-work-with-tags                        | /docs/how-to-tag-machines                     |
+| /docs/installation-requirements                    | /docs/maas-installation-requirements          |
+| /docs/maas-bootstrap-tutorial                      | /docs/bootstrap-maas                          |
+| /docs/maas-bootstrap-tutorial                      | /docs/get-started-with-maas                   |
+| /docs/maas-concepts-and-terms-reference            | /docs/maas-glossary                           |
+| /docs/maas-logging-reference                       | /docs/maas-logs-reference                     |
+| /docs/maas-terraform-provider                      | /docs/maas-terraform-provider-reference       |
+| /docs/report-a-bug                                 | /docs/how-to-review-and-report-bugs           |
+| /docs/request-a-feature                            | /docs/how-to-request-a-feature                |
+| /docs/snap/2.7/cli/how-to-upgrade-maas             | /docs/how-to-upgrade-maas                     |
+| /docs/snap/2.7/cli/installation-tech-reference     | /docs/snap/2.7/cli/installation               |
+| /docs/snap/2.7/cli/interactive-search              | /docs/how-to-find-machines                    |
+| /docs/snap/2.7/ui/how-to-upgrade-maas              | /docs/how-to-upgrade-maas                     |
+| /docs/snap/2.7/ui/installation-tech-reference      | /docs/snap/ui/ui/installation                 |
+| /docs/snap/2.7/ui/interactive-search               | /docs/how-to-find-machines                    |
+| /docs/snap/2.8/cli/how-to-upgrade-maas             | /docs/how-to-upgrade-maas                     |
+| /docs/snap/2.8/cli/installation-tech-reference     | /docs/snap/2.8/cli/installation               |
+| /docs/snap/2.8/cli/interactive-search              | /docs/how-to-find-machines                    |
+| /docs/snap/2.8/ui/how-to-upgrade-maas              | /docs/how-to-upgrade-maas                     |
+| /docs/snap/2.8/ui/installation-tech-reference      | /docs/snap/2.8/ui/installation                |
+| /docs/snap/2.8/ui/interactive-search               | /docs/how-to-find-machines                    |
+| /docs/snap/2.9/cli/how-to-work-with-tags           | /docs/how-to-tag-machiness                    |
+| /docs/snap/2.9/ui/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
+| /docs/snap/3.0/cli/how-to-work-with-tags           | /docs/how-to-tag-machines                     |
+| /docs/snap/3.0/ui/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
+| /docs/snap/3.1/cli/how-to-work-with-tags           | /docs/how-to-tag-machines                     |
+| /docs/snap/3.1/ui/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
+| /docs/ssl                                          | /docs/how-to-enable-maas-native-tls           |
+| /docs/storage                                      | /docs/about-machines#heading--machine-storage |
+| /docs/stp                                          | /docs/how-to-connect-maas-networks            |
+| /docs/subnet-management                            | /docs/how-to-connect-maas-newtorks            |
+| /docs/technical-reference                          | /docs/maas-technical-reference                |
+| /docs/using-jq-with-the-maas-cli                   | /docs/get-fancy-cli-output                    |
+| /docs/vmware-images                                | /docs/how-to-employ-vmware-images             |
+| /docs/whats-new-in-maas                            | /docs/what-is-new-with-maas                   |
 [/details]
 <!-- nohtml end-nohtml -->

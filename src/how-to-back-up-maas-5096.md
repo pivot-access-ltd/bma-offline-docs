@@ -23,7 +23,13 @@ Running sessions, such as pg_dumpall, will appear in the `application_name` colu
 ```bash
 sudo systemctl stop postgresql.service
 ```
-4. Take a snapshot of the snap service (you don't have to stop it to do this):
+4. Stop the MAAS snap service:
+
+```bash
+sudo snap stop maas
+```
+
+5. Take a snapshot of the snap service:
 
 ```bash
 sudo snap save maas
@@ -42,6 +48,14 @@ sudo snap check-snapshot <snapshot-id>
 ```bash
 sudo snap export-snapshot <snapshot-id> <external-media-path/snapshot-filename>
 ```
+
+Be sure to restart the MAAS service if you plan to continue to use the current configuration, with:
+
+```bash
+sudo snap restart maas
+```
+
+Otherwise, you can leave MAAS stopped.
 
 7. If reinstalling MAAS on the same system, use the following command to completely remove the old MAAS instance from your system:
 
