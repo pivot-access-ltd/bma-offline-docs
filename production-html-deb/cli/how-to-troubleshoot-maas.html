@@ -744,14 +744,14 @@ sudo: packer: command not found
 make: *** [Makefile:21: custom-ubuntu-lvm.dd.gz] Error 1
 rm OVMF_VARS.fd
 </code></pre>
-<p>In both cases, the problem is the same: <code>packer</code> has not been installed. You can fix it by <a href="https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer">following these instructions</a><code>↗</code>.</p>
+<p>In both cases, the problem is the same: <code>packer</code> has not been installed. You can fix it by <a href="https://maas.io/docs/how-to-customise-images#heading--how-to-install-packer">following these instructions</a><code>↗</code>.</p>
 <p><a href="#heading--no-rule-for-ovmf"><h3 id="heading--no-rule-for-ovmf">No rule to make target &hellip;OVMF_VARS.fd</h3></a></p>
 <p>If you encounter an error like this:</p>
 <pre><code class="language-nohighlight">stormrider@neuromancer:~/mnt/Dropbox/src/git/packer-maas/ubuntu$ make
 sudo rm -f -rf output-qemu custom-ubuntu*.gz
 make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF_VARS.fd'.  Stop.
 </code></pre>
-<p>then you have forgotten to <a href="https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer">install a needed dependency</a><code>↗</code>.</p>
+<p>then you have forgotten to <a href="https://maas.io/docs/how-to-customise-images#heading--how-to-install-packer">install a needed dependency</a><code>↗</code>.</p>
 <p><a href="#heading--failed-creating-qemu-driver"><h3 id="heading--failed-creating-qemu-driver">Failure to create QEMU driver</h3></a></p>
 <p>If you encounter an error such as this one:</p>
 <pre><code class="language-nohighlight">2022/06/04 17:04:47 machine readable: error-count []string{&quot;1&quot;}
@@ -760,7 +760,7 @@ make: *** No rule to make target '/usr/share/OVMF/OVMF_VARS.fd', needed by 'OVMF
 ==&gt; Builds finished but no artefacts were created.
 Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: &quot;qemu-img&quot;: executable file not found in $PATH
 </code></pre>
-<p>then you have forgotten to <a href="https://maas.io/docs/how-to-build-custom-images#heading--how-to-install-packer">install a needed dependency</a><code>↗</code>.</p>
+<p>then you have forgotten to <a href="https://maas.io/docs/how-to-customise-images#heading--how-to-install-packer">install a needed dependency</a><code>↗</code>.</p>
 <p><a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a></p>
 <p>Finally, you may be facing an issue which doesn&rsquo;t fit into any category, such as one of these:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
