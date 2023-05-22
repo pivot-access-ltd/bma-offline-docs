@@ -41,14 +41,11 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 <!-- nohtml begin-nohtml -->
 ## Navigation
 
-<!--
 [details=Documentation versions]
 | Path | Version |
 |--|--|
-|  | [snap-2.9](/t/unlisted-docs-testing/4315) |
-| snap-2.8 | [snap-2.8](/t/unlisted-docs-testing-snap-2-8/4668) |
+| MAAS 3.4  | [MAAS 3.4](/t/maas-documentation/6662) |
 [/details]
--->
 
 [details=Navigation items]
 | Level | Path                              | Navlink                                                         |
@@ -125,7 +122,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | api-reference                     | [API](/t/-/6665)                                                |
 | 3     | api-authentication-reference      | [API authentication](/t/-/5060)                                 |
 | 3     | python-api-client-reference       | [Python API client](/t/-/5404)                                  |
-| 3     | maas-api-documentation            | [API documentation](/docs/api)                   |
+| 3     | maas-api-documentation            | [API documentation](/docs/api)                                  |
 | 2     | scripts-reference                 | [Scripts](/t/-/5375)                                            |
 | 3     | comm-scripts-reference            | [Commissioning scripts](/t/-/6605)                              |
 | 3     | testing-scripts-reference         | [Hardware test scripts](/t/-/5392)                              |
