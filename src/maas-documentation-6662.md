@@ -266,13 +266,14 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/about-networking                             | /docs/about-maas-networks                     |
 | /docs/how-to-use-tags                              | /docs/how-to-tag-machines                     |
 | /docs/how-to-create-vm-hosts                       | /docs/how-to-manage-vm-hosts                  |
 | /docs/how-to-protect-your-secrets                  | /docs/how-to-secure-maas                      |
 | /docs/about-rbac                                   | /docs/about-maas-security                     |
 | /docs/how-to-keep-maas-backed-up                   | /docs/how-to-back-up-maas                     |
 | /docs/how-to-back-up-maas                          | /docs/how-to-back-up-maas                     |
-| /docs/commissioning-scripts-tech-reference         | /docs/comm-scripts-reference         |
+| /docs/commissioning-scripts-tech-reference         | /docs/comm-scripts-reference                  |
 | /docs/how-to-terraform-with-maas                   | /docs/maas-terraform-reference                |
 | /docs/maas-terraform-provider-reference            | /docs/maas-terraform-reference                |
 | /docs/understanding-maas-audit-events              | /docs/about-maas-audit-events                 |
@@ -282,9 +283,9 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-unseal-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
 | /docs/how-to-manage-availability-zones             | /docs/how-to-use-availability-zones           |
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
-| /docs/how-to-customise-images                   | /docs/how-to-customise-images                 |
+| /docs/how-to-customise-images                      | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
-| /docs/how-to-change-maas-settings                  | /docs/how-to-change-maas-settings                 |
+| /docs/how-to-change-maas-settings                  | /docs/how-to-change-maas-settings             |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
 | /docs/request-a-feature                            | /docs/how-to-request-new-features             |
@@ -301,8 +302,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/about-tags                                   | /docs/about-device-labels                     |
 | /docs/ansible-playbooks-reference                  | /docs/how-to-spin-up-maas-with-ansible        |
 | /docs/basic-tutorials                              | /docs/tutorials                               |
-| /docs/commissioning-script-reference               | /docs/comm-scripts-reference         |
-| /docs/configuration-settings-reference             | /docs/how-to-change-maas-settings                 |
+| /docs/commissioning-script-reference               | /docs/comm-scripts-reference                  |
+| /docs/configuration-settings-reference             | /docs/how-to-change-maas-settings             |
 | /docs/custom-image-tutorial                        | /docs/create-a-custom-image                   |
 | /docs/deb/3.0/cli/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
 | /docs/deb/3.0/ui/how-to-work-with-tags             | /docs/how-to-tag-machines                     |
@@ -317,7 +318,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-create-custom-images                  | /docs/how-to-customise-images                 |
 | /docs/how-to-deploy-maas                           | /docs/how-to-manage-machines                  |
 | /docs/how-to-deploy-machines                       | /docs/how-to-put-machines-to-work             |
-| /docs/how-to-manage-machines              | /docs/how-to-manage-machines                  |
+| /docs/how-to-manage-machines                       | /docs/how-to-manage-machines                  |
 | /docs/how-to-enable-tls-encryption                 | /docs/how-to-enable-maas-native-tls           |
 | /docs/how-to-get-help                              | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-get-maas-running                      | /docs/how-to-get-started-with-maas            |
