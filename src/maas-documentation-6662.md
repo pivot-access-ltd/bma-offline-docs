@@ -125,7 +125,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | api-reference                     | [API](/t/-/6665)                                                |
 | 3     | api-authentication-reference      | [API authentication](/t/-/5060)                                 |
 | 3     | python-api-client-reference       | [Python API client](/t/-/5404)                                  |
-| 3     | maas-api-documentation            | [API documentation](https://maas.io/docs/api)                   |
+| 3     | maas-api-documentation            | [API documentation](/docs/api)                   |
 | 2     | scripts-reference                 | [Scripts](/t/-/5375)                                            |
 | 3     | comm-scripts-reference            | [Commissioning scripts](/t/-/6605)                              |
 | 3     | testing-scripts-reference         | [Hardware test scripts](/t/-/5392)                              |
@@ -159,7 +159,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | about-maas-security               | [MAAS security](/t/-/6719)                                      |
 | 2     | about-maas-performance            | [MAAS performance](/t/-/6178)                                   |
 | 2     | about-ansible                     | [Ansible](/t/-/6888)                                            |
-|       | what-is-new-with-maas-303         | [MAAS 3.3 release notes](/t/-/6346)                             |
+|       | what-is-new-with-maas-3-3         | [MAAS 3.3 release notes](/t/-/6346)                             |
 |       | what-is-new-with-maas-2-9         | [MAAS 2.9 release notes](/t/-/5961)                             |
 |       | what-is-new-with-maas-3-2         | [MAAS 3.2 release notes](/t/-/5962)                             |
 |       | what-is-new-with-maas-3-0         | [MAAS 3.0 release notes](/t/-/5963)                             |
