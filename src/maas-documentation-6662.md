@@ -266,6 +266,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
+| /docs/snap/3.0/ui/About-MAAS                       | /docs/about-maas                              |
+| /docs/maas-settings-reference                      | /docs/maas-settings                           |
 | /docs/about-networking                             | /docs/about-maas-networks                     |
 | /docs/how-to-use-tags                              | /docs/how-to-tag-machines                     |
 | /docs/how-to-create-vm-hosts                       | /docs/how-to-manage-vm-hosts                  |
@@ -286,7 +288,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
 | /docs/how-to-customise-images                      | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
-| /docs/how-to-change-maas-settings                  | /docs/how-to-change-maas-settings             |
+| /docs/how-to-change-maas-settings                  | /docs/maas-settings                           |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
 | /docs/request-a-feature                            | /docs/how-to-request-new-features             |
@@ -304,7 +306,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/ansible-playbooks-reference                  | /docs/how-to-spin-up-maas-with-ansible        |
 | /docs/basic-tutorials                              | /docs/tutorials                               |
 | /docs/commissioning-script-reference               | /docs/comm-scripts-reference                  |
-| /docs/configuration-settings-reference             | /docs/how-to-change-maas-settings             |
+| /docs/configuration-settings-reference             | /docs/maas-settings                           |
 | /docs/custom-image-tutorial                        | /docs/create-a-custom-image                   |
 | /docs/deb/3.0/cli/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
 | /docs/deb/3.0/ui/how-to-work-with-tags             | /docs/how-to-tag-machines                     |
