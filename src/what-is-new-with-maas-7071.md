@@ -9,7 +9,7 @@ Here you will find release notes for:
 
 We are happy to announce that MAAS 3.4 Beta1 has been released, with new features and [many bug fixes](#heading--MAAS-3-4-beta-1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
 
-<a href="#heading--MAAS-3-4-beta-1-features"><h2 id="heading--MAAS-3-4-beta-1-features">MAAS 3.3 Beta 1 features</h2></a>
+<a href="#heading--MAAS-3-4-beta-1-features"><h2 id="heading--MAAS-3-4-beta-1-features">MAAS 3.4 Beta 1 features</h2></a>
 
 The following visible new features are a part of MAAS 3.4 Beta 1:
 
