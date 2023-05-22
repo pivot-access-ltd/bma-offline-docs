@@ -1,13 +1,5 @@
 <!-- "How to change MAAS settings" -->
 
-MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
-
-[tabs]
-[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
-<!-- "How to change MAAS settings" -->
-
-MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
-
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages" view="UI"]
 *Settings* is available near the bottom of the left navigation panel.
