@@ -5,7 +5,7 @@ No need to manage servers individually: MAAS turns bare metal into an elastic, c
 
 <a href="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/18456dbd3fbfec14eddd044816fd0719692282da.jpeg"></a>
 
-MAAS comprehensively meets your need to rapidly deploy, destroy, and reconfigure constellations of bare metal.  Any application that requires frequently rearranging the server topology will benefit.
+MAAS comprehensively meets the need to rapidly deploy, destroy, and reconfigure constellations of bare metal.  Any application that requires frequently rearranging the server topology will benefit.
 
 MAAS is applicable to nearly any situation.  It is currently deployed in banking, telecom, and industrial environments, as well as niche uses as diverse as national lotteries, supercomputer front-end validation, streaming music services, disaster recovery, and computer security risk analysis.
 
