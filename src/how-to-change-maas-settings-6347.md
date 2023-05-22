@@ -4,91 +4,287 @@ MAAS has a significant number of configuration settings.  This article will list
 
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages" view="UI"]
+<!-- "How to change MAAS settings" -->
+
+MAAS has a significant number of configuration settings.  This article will list these settings and their possible values, with brief instructions on how to adjust each setting.
+
+[tabs]
+[tab version="v3.4 Snap,v3.4 Packages" view="UI"]
 *Settings* is available near the bottom of the left navigation panel.
 
-<a href="#heading--General-items"><h2 id="heading--General-items">General</h2></a>
+<a href="#heading--General-items"><h2 id="heading--General-items">Configuration > General</h2></a>
 
-The following options are found in *Settings > Configuration > General*.
+<a href="#heading--MAAS-name"><h3 id="heading--MAAS-name">MAAS name</h3></a>
 
-Managing MAAS site identity is useful when you are running more than one MAAS instance - say,  *Test* and *Production* environments.  This section also provides data collection and version notification options. 
+Use the MAAS name field and Unicode emoji(s) to describe your MAAS instance. This will help differentiate and identify your instance easily.
 
-- *MAAS name*: The "* MAAS name" is a text box that sets the text which appears at the bottom of every MAAS screen, in front of the version descriptor.
+Examples:
 
-- *MAAS name emoji*: You may also paste a suitable emoji in front of the MAAS name to help identify it.
+```
+US-west-2 🇺🇸 MAAS-prod
+my-maas ❗ no-deploys
+```
 
-- *MAAS theme main colour*: You may also help identify your MAAS instance by changing the colour of the top bar; several colour choices are available.
+<a href="#heading--MAAS-theme-main-colour"><h3 id="heading--MAAS-theme-main-colour">MAAS theme main colour</h3></a>
 
-- *Google Analytics*: MAAS uses Google Analytics, Usabilla and Sentry Error Tracking to improve user experience.  You can opt in or out of this service by setting or clearing this checkbox.
+Choose the main colour theme for your MAAS instance. This will determine the overall visual appearance of the interface.
 
-- *Release notification*: If you select this checkbox, MAAS will notify all users when new releases are available.
+Options:
 
-<a href="#heading--Security"><h2 id="heading--Security">Security</h2></a>
+- Default
+- Bark
+- Sage
+- Olive
+- Viridian
+- Prussian green
+- Blue
+- Purple
+- Magenta
+- Red
 
-Choosing *Settings* > *Configuration* > *Security* provides instructions for enabling TLS with a certificate and a private key.  This is a CLI-operation; use the listed command at the command line, after logging into your MAAS instance.
+<a href="#heading--Data-analytics"><h3 id="heading--Data-analytics">Data analytics</h3></a>
 
-<a href="#heading--Commissioning"><h2 id="heading--Commissioning">Commissioning</h2></a>
+Enable analytics to shape improvements to the user experience. The analytics used in MAAS include Google Analytics, Usabilla, and Sentry Error Tracking. This data is handled with privacy in mind.
 
-The parameters under *Settings* > *Configuration* > *Commissioning* allow you to change the way machines are commissioned:
+<a href="#heading--Notifications"><h3 id="heading--Notifications">Notifications</h3></a>
 
-- *Default commissioning release*: You can choose the default Ubuntu release that will be used for commissioning from a dropdown menu.
+Enable notifications for new releases. This feature applies to all MAAS users. You will receive notifications regarding the availability of new releases.
 
-- *Default minimum kernel version*: The default minimum kernel version used on all new and commissioned nodes.  You can also choose this default from a dropdown menu.
+<a href="#heading--Configuration-Commissioning"><h2 id="heading--Configuration-Commissioning">Configuration > Commissioning</h2></a>
 
-- *IPMI username*: You can set the default IPMI username, which will control IPMI access to machines.
+<a href="#heading--Default-Ubuntu-release-used-for-commissioning"><h3 id="heading--Default-Ubuntu-release-used-for-commissioning">Default Ubuntu release used for commissioning</h3></a>
+The default Ubuntu release used for commissioning determines the version of Ubuntu that is installed on newly commissioned machines.
 
-- *K_g BMC key*: Specify this key to encrypt all communication between IPMI clients and the BMC. Leave this blank for no encryption. 
+By default, the Ubuntu 20.04 LTS "Focal Fossa" release is used. This is the recommended and supported release for commissioning.
 
-- *IPMI privilege level*: You can choose the privilege level for IPMI access from a set of radio buttons (admin, operator, user).
+<a href="#heading--Default-minimum-kernel-version"><h3 id="heading--Default-minimum-kernel-version">Default minimum kernel version</h3></a>
 
-<a href="#heading--Deployment"><h2 id="heading--Deployment">Deployment</h2></a>
+The default minimum kernel version is the lowest kernel version allowed on all new and commissioned nodes.
 
-*Settings* > *Configuration* > *Deployment* lets you configure machine deployment:
+Currently, there is no minimum kernel version set. This means that any kernel version can be used on the machines.
 
-- *Default deployment OS*: You can choose the default operating system used for deployment from a dropdown list.
+Please note that the absence of a minimum kernel version provides flexibility, but it's important to ensure compatibility with your specific system requirements.
 
-- *Default deployment OS release*: You can also choose the default OS release used for deployment, also from a dropdown.
+<a href="#heading--Configuration-Deploy"><h2 id="heading--Configuration-Deploy">Configuration > Deploy</h2></a>
 
-- *Default hardware sync interval*: You can set the default hardware sync interval, in minutes.
+<a href="#heading--Default-operating-system-used-for-deployment"><h3 id="heading--Default-operating-system-used-for-deployment">Default operating system used for deployment</h3></a>
 
-<a href="#heading--Kernel-parameters"><h2 id="heading--Kernel-parameters">Kernel parameters</h2></a>
+The default operating system determines the operating system that is automatically deployed on machines during the deployment process.
 
-Under *Configuration* > *General* > *Kernel parameters*, you can set global boot that are always passed to the machine kernel.
+By default, the deployment uses the Ubuntu operating system.
 
-<a href="#heading--Users"><h2 id="heading--Users">Users</h2></a>
+<a href="#heading--Default-OS-release-used-for-deployment"><h3 id="heading--Default-OS-release-used-for-deployment">Default OS release used for deployment</h3></a>
 
-*Settings* > *Users* MAAS gives you the ability to manage your users in a tabular format:
+The default OS release used for deployment specifies the version of Ubuntu that is automatically installed on the machines.
 
-- *Add user button*: This button can be used to add a new user.
+The current default OS release is Ubuntu 20.04 LTS "Focal Fossa". This release is recommended and widely supported for deployment.
 
-- *Sortable columns*: some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+<a href="#heading--Default-hardware-sync-interval-minutes"><h3 id="heading--Default-hardware-sync-interval-minutes">Default hardware sync interval (minutes)</h3></a>
 
-- *Actions column*: Each table row also has an "Actions" column, which allows you to delete or edit the information in that row.  Note that the delete and/or edit buttons may be greyed out (unavailable) based on your role.
+The default hardware sync interval refers to the frequency at which hardware information is synchronized between the MAAS server and the deployed machines.
 
-Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen.  A search bar is also provided to help you locate a particular user in a longer list.
+By default, the hardware sync interval is set to 15 minutes. This means that every 15 minutes, the MAAS server will update and synchronize the hardware information of the deployed machines.
 
-<a href="#heading--Images"><h2 id="heading--Images">Images</h2></a>
+You can adjust this interval according to your specific needs and requirements, but it's recommended to maintain a reasonable interval for efficient synchronization.
 
-*Settings* > *Images* allows you to specify parameters that control different types of MAAS images.
+<a href="#heading--Configuration-Kernel-parameters"><h2 id="heading--Configuration-Kernel-parameters">Configuration > Kernel parameters</h2></a>
 
-<a href="#heading--Ubuntu-images"><h3 id="heading--Ubuntu-images">Ubuntu images</h3></a>
+Global kernel parameters are settings that are consistently passed to the kernel during the boot process for all machines in your MAAS instance. These parameters can be used to configure specific behaviors or enable certain features in the kernel.  Ensure that the boot parameters you specify are compatible with the kernel and any specific requirements of your system.
 
-Under *Settings* > *Images* > *Ubuntu*, you can enable the installation of proprietary drives by selecting the appropriate checkbox.
+[note]
+Please note that changes to the global boot parameters will affect all machines in your MAAS instance during the boot process. Make sure to review and test the parameters thoroughly before applying them to your production environment.
+[/note]
 
-<a href="#heading--Windows-images"><h3 id="heading--Windows-images">Windows images</h3></a>
+<a href="#heading--Security-Security-protocols"><h2 id="heading--Security-Security-protocols">Security > Security protocols</h2></a>
 
-*Settings* > *Images* > *Windows* allows you to specify the Windows KMS activation host.  This is the FQDN or IP address of the host that provides the KMS Windows activation service, which is needed for Windows deployments that use KMS activation.
+By default, TLS (Transport Layer Security) is disabled in MAAS. However, if you want to enable TLS to ensure secure communication, you can follow these instructions:
 
-<a href="#heading--VMWare-images"><h3 id="heading--VMWare-images">VMWare images</h3></a>
+1. Open the command-line interface (CLI) on the machine running MAAS.
 
-If you are using VMWare images, *Settings* > *Images* > *VMware* offers several parameters that you can adjust:
+2. Run the following command as a superuser (sudo):
 
-- *VMware vCenter server FQDN or IP address*: the VMware vCenter server FQDN or IP address which is passed to a deployed VMware ESXi host.
+```
+sudo maas config-tls enable $key $cert --port YYYY
+```
 
-- *VMware vCenter username*: the VMware vCenter server username which is passed to a deployed VMware ESXi host.
+This command will enable TLS for the MAAS instance.  More information about MAAS native TLS can be found [here](/t/how-to-enable-maas-native-tls/5116)
 
-- *VMware vCenter password*: the VMware vCenter server password which is passed to a deployed VMware ESXi host.
+<a href="#heading--Security-Secret-storage"><h2 id="heading--Security-Secret-storage">Security > Secret storage</h2></a>
 
-- *VMware vCenter datacenter*: the VMware vCenter datacenter which is passed to a deployed VMware ESXi host.
+To integrate MAAS with Vault, use the following procedure.
+
+### Obtain the necessary information from Vault
+
+Get the $wrapped_token and $role_id from Vault. Refer to the documentation provided by Hashicorp Vault for more details on retrieving these values.
+
+### Configure Vault on each region controller
+
+1. SSH into each region controller.
+
+2. Run the following command, replacing the variables with the appropriate values:
+
+```
+sudo maas config-vault configure $url $approle_id $wrapped_token $secrets_path --secrets-mount $secret_mount
+```
+
+This command configures Vault on the region controller using the provided parameters.
+
+### Migrate secrets on one of the region controllers
+
+After configuring Vault on all region controllers, select one of the region controllers. Run the following command on that controller to migrate the secrets:
+
+```
+sudo maas config-vault migrate
+```
+
+For more information on Vault integration with MAAS, refer to the [additional documentation](/t/maas-security/6719) provided.
+
+<a href="#heading--Security-Session-timeout"><h2 id="heading--Security-Session-timeout">Security > Session timeout</h2></a>
+
+MAAS allows you to configure the session timeout, which determines the length of time a user session can remain active before requiring reauthentication. Follow these instructions to manage the session timeout:
+
+1. Determine the desired session timeout duration:
+
+ - The maximum session length is 14 days or 2 weeks.
+ - You can specify the duration in weeks, days, hours, and/or minutes.
+ - Access the MAAS web interface and log in with your credentials.
+
+2. Navigate to the settings section or preferences.
+
+3. Look for the session timeout or expiration settings.
+
+4. Enter the desired duration for the session timeout. Use the appropriate format options (e.g., "2 weeks," "14 days," "336 hours," or "20,160 minutes").
+
+5. Be sure to save the changes.
+
+Please note that after changing the session expiration time, MAAS will automatically log out all users. The new session timeout will apply for subsequent logins.
+
+<a href="#heading--Security-IPMI-settings"><h2 id="heading--Security-IPMI-settings">Security > IPMI settings</h2></a>
+
+MAAS provides options to configure the IPMI (Intelligent Platform Management Interface) settings for your systems. Follow these instructions to configure the MAAS-generated IPMI settings:
+
+<a href="#heading--MAAS-generated-IPMI-username"><h3 id="heading--MAAS-generated-IPMI-username">MAAS-generated IPMI username</h3></a>
+The MAAS-generated IPMI username is set to "maas" by default. This username is used for IPMI authentication.
+
+<a href="#heading--K-g-BMC-Key"><h3 id="heading--K-g-BMC-Key">K_g BMC key</h3></a>
+
+The K_g BMC key is used to encrypt all communication between IPMI clients and the BMC (Baseboard Management Controller). If you wish to enable encryption, specify the key in this field. Leave the field blank for no encryption.
+
+<a href="#heading--MAAS-generated-IPMI-user-privilege-level"><h3 id="heading--MAAS-generated-IPMI-user-privilege-level">MAAS-generated IPMI user privilege level</h3></a>
+
+MAAS provides three user privilege levels for the MAAS-generated IPMI user:
+
+- Admin: This privilege level grants full access to all IPMI features and controls.
+- Operator: This privilege level allows access to most IPMI features but restricts certain critical functions.
+- User: This privilege level provides limited access to IPMI features.
+
+Choose the appropriate privilege level for the MAAS-generated IPMI user based on your requirements.
+
+<a href="#heading--Configuring-IPMI-security"><h3 id="heading--Configuring-IPMI-security">Configuring IPMI security</h3></a>
+
+To configure these settings:
+
+1. Access the MAAS web interface and log in with your credentials.
+
+2. Navigate to the system settings or IPMI configuration section.
+
+3. Locate the fields for the MAAS-generated IPMI username, K_g BMC key, and IPMI user privilege level.
+
+4. Enter the desired values for each setting.
+
+5. Save the changes.
+
+Please note that these settings are specific to the MAAS-generated IPMI user and apply to the IPMI communication for your systems.
+
+<a href="#heading--User-management"><h2 id="heading--User-management">User management</h2></a>
+
+<a href="#heading--Search"><h3 id="heading--Search">Search</h3></a>
+
+The search feature allows you to find specific users in the MAAS system based on different criteria. You can search by username, real name, email, machines, type, last seen, role, or MAAS keys.
+
+The search results will display a table with relevant information for each user, including their username, real name, email, number of machines, user type, last seen date and time, role, and MAAS keys. Additionally, actions such as editing or deleting users can be performed using the respective buttons under the "Actions" column.
+
+<a href="#heading--Add-User"><h3 id="heading--Add-User">Add User</h3></a>
+
+To add a new user to the MAAS system:
+
+1. Click on the "Add user" button. This will open a new user creation form.
+
+2. Fill in the required information for the new user:
+
+- Username: Enter the desired username for the new user.
+- Full name: Provide the real name of the user.
+- Email address: Enter the email address associated with the user.
+- Password: Enter a password for the new user and confirm it.
+
+After filling in the necessary information, be sure to save your work.
+
+<a href="#heading--Editing-a-user-entry"><h3 id="heading--Editing-a-user-entry">Editing a user entry</h3></a>
+
+To edit an existing user:
+
+1. Click on the pencil icon at the end of a given user's row. This will open an editing creation form.
+
+2. Fill in the required information for the new user:
+
+- Username: Update the username for this user.
+- Full name: Provide or update the real name of the user.
+- Email address: Update the email address associated with the user.
+- Change password: Expand the box and update the user password; you will need to provide the current password for this change to be successful.
+
+After filling in the necessary information, be sure to save your work.
+
+<a href="#heading--Use-proprietary-drivers"><h2 id="heading--Use-proprietary-drivers">Use proprietary drivers</h2></a>
+
+To enable the installation of proprietary drivers, follow these instructions:
+
+1. Locate the switch or toggle button labeled "Enable the Installation of Proprietary Drivers" under *Images > Ubuntu* on the settings page.
+
+2. Move the switch to the "On" or "Enabled" position to allow the installation of proprietary drivers.
+
+3. Save the changes by clicking on the "Save" button.
+
+Enabling this option will allow the system to install proprietary drivers, such as HPVSA (High-Performance Virtual Storage Architecture), when necessary or desired.
+
+Please note that the availability and functionality of proprietary drivers may vary depending on your specific system and hardware configuration.  It may also be necessary for you to load the needed drivers onto your system.
+
+<a href="#heading--Windows-KMS-host"><h2 id="heading--Windows-KMS-host">Windows KMS host</h2></a>
+
+The Windows KMS (Key Management Service) activation host is used for activating Windows deployments through KMS activation. Follow these instructions to configure the KMS activation host:
+
+1. Obtain the FQDN (Fully Qualified Domain Name) or IP address of the host that provides the KMS Windows activation service. You may need to consult with your network or system administrator to obtain this information.
+
+2. Navigate to *Settings > Images > Windows*.
+
+3. Under *Windows KMS activation host*, enter the FQDN or IP address of the KMS activation host in the provided field.
+
+4. Save the changes to apply the configuration.
+
+Please note that this configuration is only necessary for Windows deployments that use KMS activation. If you are not using KMS activation or have already configured a different activation method, you can leave this field blank.
+
+
+To provide instructions for configuring the VMware vCenter server settings in MAAS, you can use the following format:
+
+<a href="#heading--VMware-vCenter-server-configuration"><h2 id="heading--VMware-vCenter-server-configuration">VMware vCenter server configuration</h2></a>
+
+To configure the VMware vCenter server settings in MAAS, follow these steps:
+
+1. Obtain the necessary information related to your VMware vCenter server:
+
+- VMware vCenter server FQDN or IP address: This is the Fully Qualified Domain Name (FQDN) or IP address of your VMware vCenter server, which will be passed to the deployed VMware ESXi host.
+- VMware vCenter username: This is the username for your VMware vCenter server, which will be passed to the deployed VMware ESXi host.
+- VMware vCenter password: This is the password for your VMware vCenter server, which will be passed to the deployed VMware ESXi host.
+- VMware vCenter datacenter: This is the datacenter in your VMware vCenter environment, which will be passed to the deployed VMware ESXi host.
+
+2. Access the MAAS web interface and log in with your credentials.
+
+3. Navigate to *Settings > Images > VMware*.
+
+4. Locate the configuration options for the above parameters, and enter the respective information into the provided fields.
+
+5. Save the changes to apply the configuration.
+
+Please ensure that the provided information is accurate and corresponds to your VMware vCenter server environment. This configuration will be passed to the deployed VMware ESXi hosts for proper integration.
 
 <a href="#heading--License-keys"><h2 id="heading--License-keys">License keys</h2></a>
 
@@ -102,107 +298,140 @@ If you are using VMWare images, *Settings* > *Images* > *VMware* offers several 
 
 Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular license key in a longer list.
 
-<a href="#heading--Storage"><h2 id="heading--Storage">Storage</h2></a>
+<a href="#heading--Default-storage-layout"><h2 id="heading--Default-storage-layout">Default storage layout</h2></a>
 
-Under *Settings* > *Storage*, you can set some parameters related to machine disks:
+The default storage layout determines the layout that is applied to a node when it is commissioned. Follow these instructions to configure the default storage layout:
 
-- *Default storage layout*: The default storage layout that is applied to a machine when it is commissioned.
+1. Access the MAAS web interface and log in with your credentials.
 
-- *Erase before releasing*: Checking this box forces users to always erase disks when releasing machines.
+2. Navigate to *Settings > Storage*.
 
-- *Use secure erase*: Check this box to use secure erase by default when erasing disks. This will only be used on devices that support secure erase. Other devices will fall back to full wipe or quick erase depending on the selected options.
+3. Locate the option labeled "Default Storage Layout" or similar.
 
-- *Use quick erase*: Check this box to use quick erase by default when erasing disks.  This box is selected separately to provide a fallback for devices that do not support secure erase, should you have selected secure erase as the default method.  Note that this is not a secure erase; it wipes only the beginning and end of each disk.
+4. Choose the desired storage layout from the available options. For example, you may select the "Flat layout" as the default storage layout.
 
-<a href="#heading--Network"><h2 id="heading--Network">Network</h2></a>
+5. Save the changes to apply the configuration.
 
-*Settings* > *Network* allows you to set several network defaults for MAAS machines.
+Please note that the selected default storage layout will be applied to nodes during the commissioning process.
 
-<a href="#heading--HTTP-proxy"><h3 id="heading--HTTP-proxy">HTTP proxy</h3></a>
+<a href="#heading--Erasing-disks-prior-to-releasing"><h2 id="heading--Erasing-disks-prior-to-releasing">Erasing disks prior to releasing</h2></a>
 
-By choosing *Settings* > *Network* > *Proxy*, you can define the HTTP proxy used by MAAS to download images, and used by provisioned machines for APT and YUM packages. Your choices are (1) no proxy, (2) MAAS built-in proxy, (3) external proxy, or (4) peer proxy.  If you choose external or peer proxy, you will be presented with a text box to specify the external proxy URL that the MAAS built-in proxy will use as an upstream cache peer.  Note that machines will be configured to use MAAS' built-in proxy to download APT packages when external or peer proxies are specified.
+The option "Erase nodes' disks prior to releasing" forces users to always erase disks when releasing nodes. Follow these instructions to configure this option:
 
-<a href="#heading--Upstream-DNS"><h3 id="heading--Upstream-DNS">Upstream DNS</h3></a>
+1. Access the MAAS web interface and log in with your credentials.
 
-*Settings* > *Network* > *DNS* lets you set DNS parameters for your MAAS.  Upstream DNS used to resolve domains not managed by this MAAS (space-separated IP addresses).  This only applies when MAAS is running its own DNS server, since this value is used to define forwarding in the DNS server config.  You can set the following parameters:
+2. Navigate to *Settings > Storage*.
 
-- *Enable DNSSEC validation*: If you wish to enable DNSSEC validation of upstream zones, you can choose the method from this dropdown list.  This is only used when MAAS is running its own DNS server. This value is used as the value of 'dnssec_validation' in the DNS server config.
+3. Locate the option labeled "Erase nodes' disks prior to releasing" or similar.
 
-- *List of external networks*: You can also provide a list of external networks to be used for MAAS DNS resolution. MAAS keeps a list of networks that are allowed to use MAAS for DNS resolution. This option allows you to add extra, previously-unknown networks to the trusted ACL where this list of networks is kept. It also supports specifying IPs or ACL names.
+4. Enable or select this option to ensure that disks are always erased before releasing nodes.
 
-<a href="#heading--NTP-service"><h3 id="heading--NTP-service">NTP service</h3></a>
+5. Save the changes to apply the configuration.
 
-Access the NTP service is controlled using *Settings* > *Network* > *NTP*. You can enter the address of NTP servers, specified as IP addresses or hostnames delimited by commas and/or spaces, to be used as time references for MAAS itself, the machines MAAS deploys, and devices that make use of MAAS DHCP services.  
+Please note that enabling this option ensures that disks are properly wiped before releasing nodes.
 
-You can also instruct MAAS to *Use external NTP only*, so that all daemons and machines refer directly to the external NTP server (and not to each other). If this is not set, only region controller hosts will be configured to use those external NTP servers; rack controller hosts will in turn refer to the regions' NTP servers, and deployed machines will refer to the racks' NTP servers.
+<a href="#heading--Disk-erasure-options"><h2 id="heading--Disk-erasure-options">Disk erasure options </h2></a>
 
-<a href="#heading--Syslog-configuration"><h3 id="heading--Syslog-configuration">Syslog configuration</h3></a>
+MAAS provides different disk erasure options depending on the capabilities of the devices. Follow these instructions to configure the disk erasure options:
 
-You can use *Settings* > *Network* > *Syslog* to specify a remote syslog server to which machine logs should be forwarded.  MAAS will use this remote syslog server for all log messages when enlisting, commissioning, testing, and deploying machines. Conversely, clearing this value will restore the default behaviour of forwarding syslog entries to MAAS.
+1. Access the MAAS web interface and log in with your credentials.
 
-<a href="#heading--Network-discovery"><h3 id="heading--Network-discovery">Network discovery</h3></a>
+2. Navigate to *Settings > Storage*.
 
-*Settings* > *Network* > *Network discovery*, when enabled, will cause MAAS to use passive techniques (such as listening to ARP requests and mDNS advertisements) to observe networks attached to rack controllers. Active subnet mapping will also be available to be enabled on the configured subnets.  You can set the *Active subnet mapping interval* by choosing a desired interval from a dropdown.  When network discovery is enabled, each rack will scan subnets enabled for active mapping, which helps to ensure that discovery information is accurate and complete.
+3. Locate the options labeled "Use secure erase by default when erasing disks" and "Use quick erase by default when erasing disks."
 
-<a href="#heading--Scripts"><h2 id="heading--Scripts">Scripts</h2></a>
+4. Choose the desired option based on your requirements:
 
-Under the section *Settings* > *Scripts*, MAAS provides a great deal of flexibility when dealing with commissioning and testing scripts.
+- "Use secure erase by default when erasing disks": This option will be used on devices that support secure erase. Other devices will fall back to full wipe or quick erase depending on the selected options.
+- "Use quick erase by default when erasing disks": This option performs a non-secure erase by wiping only the beginning and end of each disk.
+Save the changes to apply the configuration.
 
-<a href="#heading--Commissioning-scripts"><h3 id="heading--Commissioning-scripts">Commissioning scripts</h3></a>
+Please note that the disk erasure options define the default behavior when erasing disks in the MAAS environment.
 
-*Settings* > *Scripts* > *Commissioning scripts* gives you the ability to manage machine commissioning scripts in a tabular format:
+<a href="#heading--HTTP-proxy-configuration"><h2 id="heading--HTTP-proxy-configuration">HTTP proxy configuration</h2></a>
 
-- *Upload script button*: This button can be used to upload a new commissioning script.
+MAAS allows you to configure an HTTP proxy for image downloads and for provisioned machines to access APT and YUM packages. Follow these instructions to configure the HTTP proxy:
 
-- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+1. Access the MAAS web interface and log in with your credentials.
 
-- *Expandable script contents*: Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.
+2. Navigate to *Settings > Network > Proxy*.
 
-- *Actions column*: Each table row has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
+3. Choose the appropriate option based on your requirements:
 
-Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular commissioning script in a longer list.
+- Don't use a proxy: Select this option if you do not want to use an HTTP proxy for MAAS image downloads or for APT/YUM package access by provisioned machines.
 
-<a href="#heading--Testing-scripts"><h3 id="heading--Testing-scripts">Testing scripts</h3></a>
+- MAAS built-in: Select this option if you want to use the built-in HTTP proxy provided by MAAS. This is the default option and requires no additional configuration.
 
-Similar to *Commissioning scripts*, the choices *Settings* > *Scripts* > *Testing scripts* give you the ability to manage your machines testing scripts in a tabular format:
+- External: Enter the URL of the external proxy that MAAS will use to download images, and the machines will use to download APT packages for provisioned machines.  Be sure to provide the complete URL of the external proxy server, including the protocol (e.g., http:// or https://), the hostname or IP address, and the port number.
 
-- *Upload script button*: This button can be used to upload a new test script.
+- Peer: Enter the URL of an external proxy that will serve as an upstream cache peer for the MAAS built-in proxy. Machines provisioned by MAAS will be configured to use the MAAS built-in proxy to download APT packages, and this external proxy will be used as a peer for caching.  By configuring an upstream cache peer, MAAS can leverage caching functionality to improve APT package download performance for provisioned machines.  Be sure to provide the complete URL of the external proxy server, including the protocol (e.g., http:// or https://), the hostname or IP address, and the port number.
 
-- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+4. Save the changes to apply the configuration.
 
-- *Expandable script contents*: Also note that individual script names are clickable, allowing you to expand that row to see the contents of the script.
+[note]
+Please note that configuring an HTTP proxy is optional and depends on your network setup and requirements.
+[/note]
 
-- *Actions column*: Each table row has an "Actions" column, which allows you to delete the script in that row, depending upon your role.
+<a href="#heading--Upstream-DNS-configuration"><h2 id="heading--Upstream-DNS-configuration">Upstream DNS configuration</h2></a>
 
-Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
+MAAS allows you to configure the upstream DNS settings for resolving domains not managed by MAAS. Follow these instructions to configure the upstream DNS:
 
-<a href="#heading--DHCP-snippets"><h2 id="heading--DHCP-snippets">DHCP snippets</h2></a>
+1. Access the MAAS web interface and log in with your credentials.
 
-*Settings* > *DHCP snippets* lets you manage your DHCP snippets in a table:
+2. Navigate to *Settings > Network > DNS*.
 
-- *Add snippet button*: This button can be used to add a new DHCP snippet.
+3. Locate the option labeled "Upstream DNS" or similar.
 
-- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+4. Enter the IP addresses of the upstream DNS servers. Separate multiple IP addresses with a space. For example, you can enter 8.8.8.8 to use Google's public DNS server.
 
-- *Expandable snippets*: Also note that individual snippets are clickable, allowing you to expand that row to see the contents of that snippet.
+5. Save the changes to apply the configuration.
 
-- *Actions column*: Each table row has an "Actions" column, which allows you to edit delete the snippet in that row, depending upon your role.
+[note]
+Please note that the upstream DNS configuration is only used when MAAS is running its own DNS server. The provided IP addresses will be used as the value of 'forwarders' in the DNS server configuration.
+[/note]
 
-Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular snippet in a longer list.
+<a href="#heading--Enable-DNSSEC-validation-of-upstream-zones"><h2 id="heading--Enable-DNSSEC-validation-of-upstream-zones">Enable DNSSEC validation of upstream zones</h2></a>
 
-<a href="#heading--Package-repos"><h2 id="heading--Package-repos">Package repos</h2></a>
+MAAS provides the option to enable DNSSEC (Domain Name System Security Extensions) validation for upstream zones. Follow these instructions to configure DNSSEC validation:
 
-You can manage your MAAS repositories with the *Settings* > *Package repos* option.  Referenced repos are listed in a table:
+1. Access the MAAS web interface and log in with your credentials.
 
-- *Add PPA button*: This button can be used to add a new PPA to the search path.
+2. Navigate to *Settings > Network > DNS*.
 
-- *Add repository button*: This button can be used to add a new repository to the search path.
+3. Locate the option labeled "Enable DNSSEC validation of upstream zones" or similar.
 
-- *Sortable columns*: Note that some of the column headings are clickable, allowing you to sort those columns.  These are "three click" sorts: ascending, descending, and none.
+4. Choose the desired option based on your requirements:
 
-- *Actions column*: Each table row also has an "Actions" column, which allows you to edit or delete the repository information in that row, depending upon your role.
+- Automatic (use default root key): Select this option to enable DNSSEC validation using the default root key. This is the recommended option as it simplifies the configuration and maintenance of DNSSEC.
 
-Note that if the table becomes longer than one screen will accommodate, paging buttons will appear at the bottom of the screen. A search bar is also provided to help you locate a particular test script in a longer list.
+- Yes (manually configured root key): Select this option if you have a specific root key that you want to use for DNSSEC validation. This allows you to manually configure and manage the root key used for validation.
+
+- No (Disable DNSSEC; useful when upstream DNS is misconfigured): Select this option to disable DNSSEC validation. This option is useful when the upstream DNS is misconfigured or does not support DNSSEC properly.Automatic (use default root key): Select this option to enable DNSSEC validation using the default root key.
+
+4. Save the changes to apply the configuration.
+
+[note]
+Please note that DNSSEC validation is only used when MAAS is running its own DNS server. The selected option will be used as the value of 'dnssec_validation' in the DNS server configuration.
+[/note]
+
+<a href="#heading--List-of-external-networks-allowed-to-use-MAAS-for-DNS-resolution"><h2 id="heading--List-of-external-networks-allowed-to-use-MAAS-for-DNS-resolution">List of external networks allowed to use MAAS for DNS resolution</h2></a>
+
+MAAS maintains a list of networks that are allowed to use MAAS for DNS resolution. You can add extra networks to this trusted ACL list, specifically networks that were not previously known. Follow these instructions to add extra networks:
+
+1. Access the MAAS web interface and log in with your credentials.
+
+2. Navigate to *Settings > Network > DNS*.
+
+3. Locate the option labeled "List of external networks (not previously known) that will be allowed to use MAAS for DNS resolution" or similar.
+
+4. Enter the IP addresses or ACL (Access Control List) names of the extra networks that should be allowed to use MAAS for DNS resolution. Separate multiple entries with a space.
+
+5. Save the changes to apply the configuration.
+
+[note]
+Please note that this option allows you to add networks that were not previously known to the trusted ACL list maintained by MAAS.
+[/note]
+
 [/tab]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages" view="UI"]
 A *Settings* tab is available at the top of the MAAS interface.
