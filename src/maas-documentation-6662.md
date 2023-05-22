@@ -277,6 +277,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-terraform-with-maas                   | /docs/maas-terraform-reference                |
 | /docs/maas-terraform-provider-reference            | /docs/maas-terraform-reference                |
 | /docs/understanding-maas-audit-events              | /docs/about-maas-audit-events                 |
+| /docs/understanding-maas-events                    | /docs/about-maas-events                       |
 | /docs/how-to-gauge-maas-performance                | /docs/about-maas-performance                  |
 | /docs/maas-performance                             | /docs/about-maas-performance                  |
 | /docs/how-to-enable-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
