@@ -41,12 +41,14 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 <!-- nohtml begin-nohtml -->
 ## Navigation
 
+<!--
 [details=Documentation versions]
 | Path | Version |
 |--|--|
 | MAAS 3.4  | [MAAS 3.4](/t/maas-documentation/6662) |
 | MAAS 3.3  | [MAAS 3.3](/t/maas-documentation/25) |
 [/details]
+-->
 
 [details=Navigation items]
 | Level | Path                              | Navlink                                                         |
