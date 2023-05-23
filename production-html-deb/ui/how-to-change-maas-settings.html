@@ -548,18 +548,41 @@
       <h1>How to change MAAS settings</h1><!-- "How to change MAAS settings" -->
 
 <p><em>Settings</em> is available near the bottom of the left navigation panel.</p>
-<p><a href="#heading--General-items"><h2 id="heading--General-items">Configuration &gt; General</h2></a></p>
-<p><a href="#heading--MAAS-name"><h3 id="heading--MAAS-name">MAAS name</h3></a></p>
-<p>Use the MAAS name field and Unicode emoji(s) to describe your MAAS instance. This will help differentiate and identify your instance easily.</p>
-<p>Examples:</p>
+<p><a href="#heading--MAAS-name"><h2 id="heading--MAAS-name">MAAS name</h2></a></p>
+<p>You can assign a unique name to each MAAS instance, along with one or more Unicode emojis. To do so:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; General</em>.</p>
+</li>
+<li>
+<p>Use the MAAS name field and Unicode emoji(s) to describe your MAAS instance. </p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p>This will help differentiate and identify your instance easily, for example:</p>
 <pre><code>US-west-2 🇺🇸 MAAS-prod
 my-maas ❗ no-deploys
 </code></pre>
-<p><a href="#heading--MAAS-theme-main-colour"><h3 id="heading--MAAS-theme-main-colour">MAAS theme main colour</h3></a></p>
-<p>Choose the main colour theme for your MAAS instance. This will determine the overall visual appearance of the interface.</p>
-<p>Options:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>Default</li>
+<p><a href="#heading--MAAS-theme-main-colour"><h2 id="heading--MAAS-theme-main-colour">MAAS theme main colour</h2></a></p>
+<p>In addition to a unique name and emoji (see above), you can differentiate MAAS instances by changing the theme color.  You can do so like this:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; General</em>.</p>
+</li>
+<li>
+<p>Choose the main colour theme for your MAAS instance. Options include:</p>
+</li>
+<li>
+<p>Default</p>
+</li>
 <li>Bark</li>
 <li>Sage</li>
 <li>Olive</li>
@@ -568,33 +591,158 @@ my-maas ❗ no-deploys
 <li>Blue</li>
 <li>Purple</li>
 <li>Magenta</li>
-<li>Red</li>
-</ul>
-<p><a href="#heading--Data-analytics"><h3 id="heading--Data-analytics">Data analytics</h3></a></p>
-<p>Enable analytics to shape improvements to the user experience. The analytics used in MAAS include Google Analytics, Usabilla, and Sentry Error Tracking. This data is handled with privacy in mind.</p>
-<p><a href="#heading--Notifications"><h3 id="heading--Notifications">Notifications</h3></a></p>
-<p>Enable notifications for new releases. This feature applies to all MAAS users. You will receive notifications regarding the availability of new releases.</p>
-<p><a href="#heading--Configuration-Commissioning"><h2 id="heading--Configuration-Commissioning">Configuration &gt; Commissioning</h2></a></p>
-<p><a href="#heading--Default-Ubuntu-release-used-for-commissioning"><h3 id="heading--Default-Ubuntu-release-used-for-commissioning">Default Ubuntu release used for commissioning</h3></a>
-The default Ubuntu release used for commissioning determines the version of Ubuntu that is installed on newly commissioned machines.</p>
-<p>By default, the Ubuntu 20.04 LTS &ldquo;Focal Fossa&rdquo; release is used. This is the recommended and supported release for commissioning.</p>
-<p><a href="#heading--Default-minimum-kernel-version"><h3 id="heading--Default-minimum-kernel-version">Default minimum kernel version</h3></a></p>
-<p>The default minimum kernel version is the lowest kernel version allowed on all new and commissioned nodes.</p>
+<li>
+<p>Red</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p>This will determine the overall visual appearance of the interface.</p>
+<p><a href="#heading--Data-analytics"><h2 id="heading--Data-analytics">Data analytics</h2></a></p>
+<p>You can enable analytics to shape improvements to the user experience. The analytics used in MAAS include Google Analytics, Usabilla, and Sentry Error Tracking. To do so:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; General</em>.</p>
+</li>
+<li>
+<p>Check the box entitled, &ldquo;Enable analytics to shape improvements to user experience&rdquo;.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p>This data is handled with privacy in mind.</p>
+<p><a href="#heading--Notifications"><h2 id="heading--Notifications">Notifications</h2></a></p>
+<p>You can also enable notifications for new releases, like this:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; General</em>.</p>
+</li>
+<li>
+<p>Check the box entitled, &ldquo;Enable new release notifications&rdquo;.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p>This feature applies to all MAAS users, allowing you to receive dismissable notifications regarding the availability of new releases.</p>
+<p><a href="#heading--Default-Ubuntu-release-used-for-commissioning"><h2 id="heading--Default-Ubuntu-release-used-for-commissioning">Default Ubuntu release used for commissioning</h2></a></p>
+<p>The default Ubuntu release used for commissioning determines the version of Ubuntu that is installed on newly commissioned machines. By default, the Ubuntu 20.04 LTS &ldquo;Focal Fossa&rdquo; release is used. This is the recommended and supported release for commissioning.</p>
+<p>If you have synced other release images using <em>Configuration &gt; Images</em>, they will appear in the dropdown entitled, &ldquo;Default Ubuntu release used for commissioning&rdquo;.  You can access this dropdown and change the default commissioning release like this:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; Commissioning</em>.</p>
+</li>
+<li>
+<p>Select your desired default commissioning release from the &ldquo;Default Ubuntu release used for commissioning&rdquo; dropdown.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> 
+Unless you have synced images other than the default Ubuntu 20.04, no other choices will be available in this dropdown.</p>
+<p><a href="#heading--Default-minimum-kernel-version"><h2 id="heading--Default-minimum-kernel-version">Default minimum kernel version</h2></a></p>
+<p>The default minimum kernel version is the lowest kernel version allowed on all new and commissioned nodes.  To set this kernel:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; Commissioning</em>.</p>
+</li>
+<li>
+<p>Select your desired kernel from the &ldquo;Default minimum kernel version&rdquo; dropdown.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
 <p>Currently, there is no minimum kernel version set. This means that any kernel version can be used on the machines.</p>
-<p>Please note that the absence of a minimum kernel version provides flexibility, but it&rsquo;s important to ensure compatibility with your specific system requirements.</p>
-<p><a href="#heading--Configuration-Deploy"><h2 id="heading--Configuration-Deploy">Configuration &gt; Deploy</h2></a></p>
-<p><a href="#heading--Default-operating-system-used-for-deployment"><h3 id="heading--Default-operating-system-used-for-deployment">Default operating system used for deployment</h3></a></p>
-<p>The default operating system determines the operating system that is automatically deployed on machines during the deployment process.</p>
-<p>By default, the deployment uses the Ubuntu operating system.</p>
-<p><a href="#heading--Default-OS-release-used-for-deployment"><h3 id="heading--Default-OS-release-used-for-deployment">Default OS release used for deployment</h3></a></p>
-<p>The default OS release used for deployment specifies the version of Ubuntu that is automatically installed on the machines.</p>
-<p>The current default OS release is Ubuntu 20.04 LTS &ldquo;Focal Fossa&rdquo;. This release is recommended and widely supported for deployment.</p>
-<p><a href="#heading--Default-hardware-sync-interval-minutes"><h3 id="heading--Default-hardware-sync-interval-minutes">Default hardware sync interval (minutes)</h3></a></p>
-<p>The default hardware sync interval refers to the frequency at which hardware information is synchronized between the MAAS server and the deployed machines.</p>
+<p><strong>NOTE:</strong> 
+Please note that while the absence of a minimum kernel version provides flexibility, it&rsquo;s important to ensure compatibility with your specific system requirements.</p>
+<p><a href="#heading--Default-operating-system-used-for-deployment"><h2 id="heading--Default-operating-system-used-for-deployment">Default operating system used for deployment</h2></a></p>
+<p>The default operating system used for deployment determines the OS that will be deployed on machines in the absence of any configuration changes.</p>
+<p>Only the OS images you have synced using <em>Configuration &gt; Images</em> will appear in the dropdown entitled, &ldquo;Default operating system used for deployment&rdquo;.  You can access this dropdown and change the default OS like this:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; Deploy</em>.</p>
+</li>
+<li>
+<p>Select your desired default OS from the &ldquo;Default OS release used for deployment&rdquo; dropdown.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> 
+Unless you have synced custom images, only &ldquo;Ubuntu&rdquo; will be available in this dropdown.</p>
+<p><a href="#heading--Default-OS-release-used-for-deployment"><h2 id="heading--Default-OS-release-used-for-deployment">Default OS release used for deployment</h2></a></p>
+<p>The default OS release used for deployment specifies the release of your chosen OS that is automatically installed on machines.</p>
+<p>Only OS releases you have synced using <em>Configuration &gt; Images</em> will appear in the dropdown entitled, &ldquo;Default operating system used for deployment&rdquo;.  In order to access a release from a given OS, you must first select that OS as <a href="#heading--Default-operating-system-used-for-deployment">described above</a>.</p>
+<p>Once you have done so, you can select the default deployment OS release as follows:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; Deploy</em>.</p>
+</li>
+<li>
+<p>Select your desired default OS from the &ldquo;Default operating system used for deployment&rdquo; dropdown.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p><a href="#heading--Default-hardware-sync-interval-minutes"><h2 id="heading--Default-hardware-sync-interval-minutes">Default hardware sync interval (minutes)</h2></a></p>
+<p>The default hardware sync interval refers to the frequency at which hardware information is synchronized between the MAAS server and the deployed machines.  To change it:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; Deploy</em>.</p>
+</li>
+<li>
+<p>Set your desired sync interval in the field entitled, &ldquo;Default hardware sync interval (minutes)&rdquo;.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
 <p>By default, the hardware sync interval is set to 15 minutes. This means that every 15 minutes, the MAAS server will update and synchronize the hardware information of the deployed machines.</p>
 <p>You can adjust this interval according to your specific needs and requirements, but it&rsquo;s recommended to maintain a reasonable interval for efficient synchronization.</p>
 <p><a href="#heading--Configuration-Kernel-parameters"><h2 id="heading--Configuration-Kernel-parameters">Configuration &gt; Kernel parameters</h2></a></p>
-<p>Global kernel parameters are settings that are consistently passed to the kernel during the boot process for all machines in your MAAS instance. These parameters can be used to configure specific behaviors or enable certain features in the kernel.  Ensure that the boot parameters you specify are compatible with the kernel and any specific requirements of your system.</p>
+<p>Global kernel parameters are settings that are consistently passed to the kernel during the boot process for all machines in your MAAS instance. These parameters can be used to configure specific behaviors or enable certain features in the kernel.</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Configuration &gt; Kernel parameters</em>.</p>
+</li>
+<li>
+<p>Set your kernel parameters in the field entitled, &ldquo;Global boot parameters always passed to the kernel&rdquo;.</p>
+</li>
+<li>
+<p>Save the changes.</p>
+</li>
+</ol>
+<p>Ensure that the boot parameters you specify are compatible with the kernel and any specific requirements of your system.</p>
 <p><strong>NOTE:</strong> 
 Please note that changes to the global boot parameters will affect all machines in your MAAS instance during the boot process. Make sure to review and test the parameters thoroughly before applying them to your production environment.</p>
 <p><a href="#heading--Security-Security-protocols"><h2 id="heading--Security-Security-protocols">Security &gt; Security protocols</h2></a></p>
@@ -612,9 +760,9 @@ Please note that changes to the global boot parameters will affect all machines 
 <p>This command will enable TLS for the MAAS instance.  More information about MAAS native TLS can be found <a href="how-to-enable-maas-native-tls.html">here</a></p>
 <p><a href="#heading--Security-Secret-storage"><h2 id="heading--Security-Secret-storage">Security &gt; Secret storage</h2></a></p>
 <p>To integrate MAAS with Vault, use the following procedure.</p>
-<h3>Obtain the necessary information from Vault</h3>
+<p><a href="#heading--Obtain-the-necessary-information-from-Vault"><h3 id="heading--Obtain-the-necessary-information-from-Vault">Obtain the necessary information from Vault</h3></a></p>
 <p>Get the $wrapped_token and $role_id from Vault. Refer to the documentation provided by Hashicorp Vault for more details on retrieving these values.</p>
-<h3>Configure Vault on each region controller</h3>
+<p><a href="#heading--Configure-Vault-on-each-region-controller"><h3 id="heading--Configure-Vault-on-each-region-controller">Configure Vault on each region controller</h3></a></p>
 <ol>
 <li>
 <p>SSH into each region controller.</p>
@@ -626,7 +774,7 @@ Please note that changes to the global boot parameters will affect all machines 
 <pre><code>sudo maas config-vault configure $url $approle_id $wrapped_token $secrets_path --secrets-mount $secret_mount
 </code></pre>
 <p>This command configures Vault on the region controller using the provided parameters.</p>
-<h3>Migrate secrets on one of the region controllers</h3>
+<p><a href="#heading--Migrate-secrets-on-one-of-the-region-controllers"><h3 id="heading--Migrate-secrets-on-one-of-the-region-controllers">Migrate secrets on one of the region controllers</h3></a></p>
 <p>After configuring Vault on all region controllers, select one of the region controllers. Run the following command on that controller to migrate the secrets:</p>
 <pre><code>sudo maas config-vault migrate
 </code></pre>
@@ -645,10 +793,7 @@ Please note that changes to the global boot parameters will affect all machines 
 <p>Access the MAAS web interface and log in with your credentials.</p>
 </li>
 <li>
-<p>Navigate to the settings section or preferences.</p>
-</li>
-<li>
-<p>Look for the session timeout or expiration settings.</p>
+<p>Navigate to <em>Settings &gt; Security &gt; Session timeout</em>.</p>
 </li>
 <li>
 <p>Enter the desired duration for the session timeout. Use the appropriate format options (e.g., &ldquo;2 weeks,&rdquo; &ldquo;14 days,&rdquo; &ldquo;336 hours,&rdquo; or &ldquo;20,160 minutes&rdquo;).</p>
@@ -657,11 +802,12 @@ Please note that changes to the global boot parameters will affect all machines 
 <p>Be sure to save the changes.</p>
 </li>
 </ol>
-<p>Please note that after changing the session expiration time, MAAS will automatically log out all users. The new session timeout will apply for subsequent logins.</p>
+<p><strong>NOTE:</strong> 
+Please note that after changing the session expiration time, MAAS will automatically log out all users. The new session timeout will apply for subsequent logins.</p>
 <p><a href="#heading--Security-IPMI-settings"><h2 id="heading--Security-IPMI-settings">Security &gt; IPMI settings</h2></a></p>
-<p>MAAS provides options to configure the IPMI (Intelligent Platform Management Interface) settings for your systems. Follow these instructions to configure the MAAS-generated IPMI settings:</p>
-<p><a href="#heading--MAAS-generated-IPMI-username"><h3 id="heading--MAAS-generated-IPMI-username">MAAS-generated IPMI username</h3></a>
-The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This username is used for IPMI authentication.</p>
+<p>MAAS provides options to configure the IPMI (Intelligent Platform Management Interface) settings for your systems. </p>
+<p><a href="#heading--MAAS-generated-IPMI-username"><h3 id="heading--MAAS-generated-IPMI-username">MAAS-generated IPMI username</h3></a></p>
+<p>The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This username is used for IPMI authentication.</p>
 <p><a href="#heading--K-g-BMC-Key"><h3 id="heading--K-g-BMC-Key">K_g BMC key</h3></a></p>
 <p>The K_g BMC key is used to encrypt all communication between IPMI clients and the BMC (Baseboard Management Controller). If you wish to enable encryption, specify the key in this field. Leave the field blank for no encryption.</p>
 <p><a href="#heading--MAAS-generated-IPMI-user-privilege-level"><h3 id="heading--MAAS-generated-IPMI-user-privilege-level">MAAS-generated IPMI user privilege level</h3></a></p>
@@ -679,26 +825,34 @@ The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This u
 <p>Access the MAAS web interface and log in with your credentials.</p>
 </li>
 <li>
-<p>Navigate to the system settings or IPMI configuration section.</p>
+<p>Navigate to <em>Settings &gt; Security &gt; IPMI settings</em>.</p>
 </li>
 <li>
 <p>Locate the fields for the MAAS-generated IPMI username, K_g BMC key, and IPMI user privilege level.</p>
 </li>
 <li>
-<p>Enter the desired values for each setting.</p>
+<p>Enter the desired values for each setting, based on the discussion above.</p>
 </li>
 <li>
 <p>Save the changes.</p>
 </li>
 </ol>
-<p>Please note that these settings are specific to the MAAS-generated IPMI user and apply to the IPMI communication for your systems.</p>
+<p><strong>NOTE:</strong> 
+Please note that these settings are specific to the MAAS-generated IPMI user and apply to the IPMI communication for your systems.</p>
 <p><a href="#heading--User-management"><h2 id="heading--User-management">User management</h2></a></p>
+<p>MAAS provides basic functionality to manage users, as described in this section.</p>
 <p><a href="#heading--Search"><h3 id="heading--Search">Search</h3></a></p>
 <p>The search feature allows you to find specific users in the MAAS system based on different criteria. You can search by username, real name, email, machines, type, last seen, role, or MAAS keys.</p>
 <p>The search results will display a table with relevant information for each user, including their username, real name, email, number of machines, user type, last seen date and time, role, and MAAS keys. Additionally, actions such as editing or deleting users can be performed using the respective buttons under the &ldquo;Actions&rdquo; column.</p>
 <p><a href="#heading--Add-User"><h3 id="heading--Add-User">Add User</h3></a></p>
 <p>To add a new user to the MAAS system:</p>
 <ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Users</em>.</p>
+</li>
 <li>
 <p>Click on the &ldquo;Add user&rdquo; button. This will open a new user creation form.</p>
 </li>
@@ -710,12 +864,25 @@ The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This u
 </li>
 <li>Full name: Provide the real name of the user.</li>
 <li>Email address: Enter the email address associated with the user.</li>
-<li>Password: Enter a password for the new user and confirm it.</li>
+<li>
+<p>Password: Enter a password for the new user and confirm it.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
 </ol>
-<p>After filling in the necessary information, be sure to save your work.</p>
 <p><a href="#heading--Editing-a-user-entry"><h3 id="heading--Editing-a-user-entry">Editing a user entry</h3></a></p>
 <p>To edit an existing user:</p>
 <ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Users</em>.</p>
+</li>
+<li>
+<p>If you have a large number of users, use the <a href="#heading--Search">Search function described above</a> to filter the list.</p>
+</li>
 <li>
 <p>Click on the pencil icon at the end of a given user&rsquo;s row. This will open an editing creation form.</p>
 </li>
@@ -727,12 +894,22 @@ The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This u
 </li>
 <li>Full name: Provide or update the real name of the user.</li>
 <li>Email address: Update the email address associated with the user.</li>
-<li>Change password: Expand the box and update the user password; you will need to provide the current password for this change to be successful.</li>
+<li>
+<p>Change password: Expand the box and update the user password; you will need to provide the current password for this change to be successful.</p>
+</li>
+<li>
+<p>Save your work.</p>
+</li>
 </ol>
-<p>After filling in the necessary information, be sure to save your work.</p>
 <p><a href="#heading--Use-proprietary-drivers"><h2 id="heading--Use-proprietary-drivers">Use proprietary drivers</h2></a></p>
 <p>To enable the installation of proprietary drivers, follow these instructions:</p>
 <ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Images &gt; Ubuntu</em>.</p>
+</li>
 <li>
 <p>Locate the switch or toggle button labeled &ldquo;Enable the Installation of Proprietary Drivers&rdquo; under <em>Images &gt; Ubuntu</em> on the settings page.</p>
 </li>
@@ -740,11 +917,12 @@ The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This u
 <p>Move the switch to the &ldquo;On&rdquo; or &ldquo;Enabled&rdquo; position to allow the installation of proprietary drivers.</p>
 </li>
 <li>
-<p>Save the changes by clicking on the &ldquo;Save&rdquo; button.</p>
+<p>Save your changes.</p>
 </li>
 </ol>
 <p>Enabling this option will allow the system to install proprietary drivers, such as HPVSA (High-Performance Virtual Storage Architecture), when necessary or desired.</p>
-<p>Please note that the availability and functionality of proprietary drivers may vary depending on your specific system and hardware configuration.  It may also be necessary for you to load the needed drivers onto your system.</p>
+<p><strong>NOTE:</strong> 
+Please note that the availability and functionality of proprietary drivers may vary depending on your specific system and hardware configuration.  It may also be necessary for you to load the needed drivers onto your system.</p>
 <p><a href="#heading--Windows-KMS-host"><h2 id="heading--Windows-KMS-host">Windows KMS host</h2></a></p>
 <p>The Windows KMS (Key Management Service) activation host is used for activating Windows deployments through KMS activation. Follow these instructions to configure the KMS activation host:</p>
 <ol>
@@ -761,8 +939,8 @@ The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This u
 <p>Save the changes to apply the configuration.</p>
 </li>
 </ol>
-<p>Please note that this configuration is only necessary for Windows deployments that use KMS activation. If you are not using KMS activation or have already configured a different activation method, you can leave this field blank.</p>
-<p>To provide instructions for configuring the VMware vCenter server settings in MAAS, you can use the following format:</p>
+<p><strong>NOTE:</strong> 
+Please note that this configuration is only necessary for Windows deployments that use KMS activation. If you are not using KMS activation or have already configured a different activation method, you can leave this field blank.</p>
 <p><a href="#heading--VMware-vCenter-server-configuration"><h2 id="heading--VMware-vCenter-server-configuration">VMware vCenter server configuration</h2></a></p>
 <p>To configure the VMware vCenter server settings in MAAS, follow these steps:</p>
 <ol>
@@ -792,7 +970,7 @@ The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This u
 </ol>
 <p>Please ensure that the provided information is accurate and corresponds to your VMware vCenter server environment. This configuration will be passed to the deployed VMware ESXi hosts for proper integration.</p>
 <p><a href="#heading--License-keys"><h2 id="heading--License-keys">License keys</h2></a></p>
-<p><em>Settings</em> &gt; <em>License keys</em> gives you the ability to manage your product licenses in a tabular format:</p>
+<p><em>Settings &gt; License keys</em> gives you the ability to manage your product licenses in a tabular format:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><em>Add license key button</em>: This button can be used to add a new license key.</p>
@@ -969,6 +1147,25 @@ Please note that DNSSEC validation is only used when MAAS is running its own DNS
 </ol>
 <p><strong>NOTE:</strong> 
 Please note that this option allows you to add networks that were not previously known to the trusted ACL list maintained by MAAS.</p>
+<p><a href="#heading--Configuring-NTP-servers"><h2 id="heading--Configuring-NTP-servers">Configuring NTP servers</h2></a></p>
+<p>To configure NTP servers in MAAS settings:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface by opening a web browser and entering the URL or IP address of your MAAS server. Log in with appropriate credentials.</p>
+</li>
+<li>
+<p>In the MAAS web interface, navigate to the &ldquo;Settings&rdquo; section. This is typically located in the left navigation bar.</p>
+</li>
+<li>
+<p>Within the &ldquo;Settings&rdquo; popout, locate and click on the &ldquo;NTP&rdquo; tab or option. This will take you to the NTP server configuration page.</p>
+</li>
+</ol>
+<p>On the NTP configuration page, you will see a text field or an area where you can enter the addresses of the desired NTP servers.</p>
+<p>Enter the addresses of the NTP servers you want to use as time references for MAAS itself, the machines deployed by MAAS, and devices utilizing MAAS&rsquo;s DHCP services. Separate multiple NTP servers by commas and/or spaces.</p>
+<p>If you want to ensure that all region controller hosts, rack controller hosts, and subsequently deployed machines use only the external NTP servers specified, look for a checkbox or toggle option labeled &ldquo;Use external NTP servers only&rdquo; or a similar phrase. Enable this option to enforce the use of external NTP servers exclusively.</p>
+<p>Once you have entered the NTP server addresses and configured the desired option, click on the &ldquo;Save&rdquo; or &ldquo;Apply&rdquo; button to save the changes.</p>
+<p>MAAS will apply the new NTP server configuration, and all associated hosts and subsequently deployed machines will use the specified external NTP servers for time synchronization.</p>
+<p>It is recommended to verify that the chosen NTP servers are reliable and accessible from the MAAS infrastructure and the deployed machines to ensure accurate time synchronization.</p>
     </div>
   </body>
 </html>
