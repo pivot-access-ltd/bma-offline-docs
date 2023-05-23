@@ -745,7 +745,7 @@ Unless you have synced custom images, only &ldquo;Ubuntu&rdquo; will be availabl
 <p>Ensure that the boot parameters you specify are compatible with the kernel and any specific requirements of your system.</p>
 <p><strong>NOTE:</strong> 
 Please note that changes to the global boot parameters will affect all machines in your MAAS instance during the boot process. Make sure to review and test the parameters thoroughly before applying them to your production environment.</p>
-<p><a href="#heading--Security-Security-protocols"><h2 id="heading--Security-Security-protocols">Security &gt; Security protocols</h2></a></p>
+<p><a href="#heading--Security-Security-protocols"><h2 id="heading--Security-Security-protocols">Security protocols</h2></a></p>
 <p>By default, TLS (Transport Layer Security) is disabled in MAAS. However, if you want to enable TLS to ensure secure communication, you can follow these instructions:</p>
 <ol>
 <li>
@@ -758,7 +758,7 @@ Please note that changes to the global boot parameters will affect all machines 
 <pre><code>sudo maas config-tls enable $key $cert --port YYYY
 </code></pre>
 <p>This command will enable TLS for the MAAS instance.  More information about MAAS native TLS can be found <a href="how-to-enable-maas-native-tls.html">here</a></p>
-<p><a href="#heading--Security-Secret-storage"><h2 id="heading--Security-Secret-storage">Security &gt; Secret storage</h2></a></p>
+<p><a href="#heading--Security-Secret-storage"><h2 id="heading--Security-Secret-storage">Secret storage</h2></a></p>
 <p>To integrate MAAS with Vault, use the following procedure.</p>
 <p><a href="#heading--Obtain-the-necessary-information-from-Vault"><h3 id="heading--Obtain-the-necessary-information-from-Vault">Obtain the necessary information from Vault</h3></a></p>
 <p>Get the $wrapped_token and $role_id from Vault. Refer to the documentation provided by Hashicorp Vault for more details on retrieving these values.</p>
@@ -779,7 +779,7 @@ Please note that changes to the global boot parameters will affect all machines 
 <pre><code>sudo maas config-vault migrate
 </code></pre>
 <p>For more information on Vault integration with MAAS, refer to the <a href="maas-security.html">additional documentation</a> provided.</p>
-<p><a href="#heading--Security-Session-timeout"><h2 id="heading--Security-Session-timeout">Security &gt; Session timeout</h2></a></p>
+<p><a href="#heading--Security-Session-timeout"><h2 id="heading--Security-Session-timeout">Session timeout</h2></a></p>
 <p>MAAS allows you to configure the session timeout, which determines the length of time a user session can remain active before requiring reauthentication. Follow these instructions to manage the session timeout:</p>
 <ol>
 <li>
@@ -804,7 +804,7 @@ Please note that changes to the global boot parameters will affect all machines 
 </ol>
 <p><strong>NOTE:</strong> 
 Please note that after changing the session expiration time, MAAS will automatically log out all users. The new session timeout will apply for subsequent logins.</p>
-<p><a href="#heading--Security-IPMI-settings"><h2 id="heading--Security-IPMI-settings">Security &gt; IPMI settings</h2></a></p>
+<p><a href="#heading--Security-IPMI-settings"><h2 id="heading--Security-IPMI-settings">IPMI settings</h2></a></p>
 <p>MAAS provides options to configure the IPMI (Intelligent Platform Management Interface) settings for your systems. </p>
 <p><a href="#heading--MAAS-generated-IPMI-username"><h3 id="heading--MAAS-generated-IPMI-username">MAAS-generated IPMI username</h3></a></p>
 <p>The MAAS-generated IPMI username is set to &ldquo;maas&rdquo; by default. This username is used for IPMI authentication.</p>
@@ -1147,25 +1147,109 @@ Please note that DNSSEC validation is only used when MAAS is running its own DNS
 </ol>
 <p><strong>NOTE:</strong> 
 Please note that this option allows you to add networks that were not previously known to the trusted ACL list maintained by MAAS.</p>
-<p><a href="#heading--Configuring-NTP-servers"><h2 id="heading--Configuring-NTP-servers">Configuring NTP servers</h2></a></p>
-<p>To configure NTP servers in MAAS settings:</p>
+<p><a href="#heading--NTP-server-configuration"><h2 id="heading--NTP-server-configuration">NTP server configuration</h2></a></p>
+<p>MAAS allows you to configure NTP (Network Time Protocol) servers to be used as time references for MAAS itself, the machines deployed by MAAS, and devices utilizing MAAS&rsquo;s DHCP services. Follow these instructions to configure the NTP servers:</p>
 <ol>
 <li>
-<p>Access the MAAS web interface by opening a web browser and entering the URL or IP address of your MAAS server. Log in with appropriate credentials.</p>
+<p>Access the MAAS web interface and log in with your credentials.</p>
 </li>
 <li>
-<p>In the MAAS web interface, navigate to the &ldquo;Settings&rdquo; section. This is typically located in the left navigation bar.</p>
+<p>Navigate to <em>Settings &gt; Network &gt; NTP</em>.</p>
 </li>
 <li>
-<p>Within the &ldquo;Settings&rdquo; popout, locate and click on the &ldquo;NTP&rdquo; tab or option. This will take you to the NTP server configuration page.</p>
+<p>Locate the option labeled &ldquo;Addresses of NTP servers&rdquo; or similar.</p>
+</li>
+<li>
+<p>Enter the addresses of the NTP servers. Specify the NTP servers as IP addresses or hostnames delimited by commas and/or spaces. For example, you can enter ntp.ubuntu.com to use the default Ubuntu NTP server or provide specific IP addresses of NTP servers.</p>
+</li>
+<li>
+<p>Save the changes to apply the configuration.</p>
 </li>
 </ol>
-<p>On the NTP configuration page, you will see a text field or an area where you can enter the addresses of the desired NTP servers.</p>
-<p>Enter the addresses of the NTP servers you want to use as time references for MAAS itself, the machines deployed by MAAS, and devices utilizing MAAS&rsquo;s DHCP services. Separate multiple NTP servers by commas and/or spaces.</p>
-<p>If you want to ensure that all region controller hosts, rack controller hosts, and subsequently deployed machines use only the external NTP servers specified, look for a checkbox or toggle option labeled &ldquo;Use external NTP servers only&rdquo; or a similar phrase. Enable this option to enforce the use of external NTP servers exclusively.</p>
-<p>Once you have entered the NTP server addresses and configured the desired option, click on the &ldquo;Save&rdquo; or &ldquo;Apply&rdquo; button to save the changes.</p>
-<p>MAAS will apply the new NTP server configuration, and all associated hosts and subsequently deployed machines will use the specified external NTP servers for time synchronization.</p>
-<p>It is recommended to verify that the chosen NTP servers are reliable and accessible from the MAAS infrastructure and the deployed machines to ensure accurate time synchronization.</p>
+<p><strong>NOTE:</strong> 
+Please note that the configured NTP servers will be used as time references for MAAS itself, the machines deployed by MAAS, and devices utilizing MAAS&rsquo;s DHCP services.</p>
+<p><a href="#heading--Use-external-NTP-servers-only"><h2 id="heading--Use-external-NTP-servers-only">Use external NTP servers only</h2></a></p>
+<p>MAAS provides the option to configure the use of external NTP servers exclusively. Follow these instructions to enable this option:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Network &gt; NTP</em>.</p>
+</li>
+<li>
+<p>Locate the option labeled &ldquo;Use external NTP servers only&rdquo; or similar.</p>
+</li>
+<li>
+<p>Enable or select this option to configure all region controller hosts, rack controller hosts, and subsequently deployed machines to refer directly to the configured external NTP servers.</p>
+</li>
+<li>
+<p>Save the changes to apply the configuration.</p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> 
+Please note that enabling this option ensures that all relevant MAAS components, including region controller hosts, rack controller hosts, and deployed machines, will refer directly to the configured external NTP servers for time synchronization. Disabling this option will result in a different hierarchy of NTP server references.</p>
+<p><a href="#heading--Remote-syslog-server-configuration"><h2 id="heading--Remote-syslog-server-configuration">Remote syslog server configuration</h2></a></p>
+<p>MAAS allows you to configure a remote syslog server to which log messages from enlisted, commissioned, tested, and deployed machines will be sent. Follow these instructions to configure the remote syslog server:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Network &gt; Syslog</em>.</p>
+</li>
+<li>
+<p>Locate the option labeled &ldquo;Remote syslog server to forward machine logs&rdquo; or similar.</p>
+</li>
+<li>
+<p>Enter the address of the remote syslog server. This can be an IP address or a hostname.</p>
+</li>
+<li>
+<p>Save the changes to apply the configuration.</p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> 
+Please note that once configured, MAAS will automatically set the remote syslog server on enlisted, commissioned, tested, and deployed machines to forward all log messages to the specified server.</p>
+<p>If you wish to restore the default behavior of forwarding syslog to MAAS instead of a remote server, simply clear the configured value in this field. MAAS will revert to its default behavior.</p>
+<p><a href="#heading--Network-discovery-configuration"><h2 id="heading--Network-discovery-configuration">Network discovery configuration</h2></a></p>
+<p>MAAS allows you to configure network discovery, which enables MAAS to observe networks attached to rack controllers using passive techniques such as listening to ARP requests and mDNS advertisements. Follow these instructions to configure network discovery:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Network &gt; Network discovery</em>.</p>
+</li>
+<li>
+<p>Locate the option labeled &ldquo;Network discovery&rdquo; or similar.</p>
+</li>
+<li>
+<p>Enable the option to activate network discovery in MAAS.</p>
+</li>
+<li>
+<p>Save the changes to apply the configuration.</p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> 
+Please note that when network discovery is enabled, MAAS will passively observe networks attached to rack controllers to gather information.</p>
+<p><a href="#heading--Active-subnet-mapping-interval"><h2 id="heading--Active-subnet-mapping-interval">Active subnet mapping interval</h2></a></p>
+<p>MAAS provides the option to enable active subnet mapping, which involves scanning subnets at regular intervals to ensure accurate and complete discovery information. Follow these instructions to configure the active subnet mapping interval:</p>
+<ol>
+<li>
+<p>Access the MAAS web interface and log in with your credentials.</p>
+</li>
+<li>
+<p>Navigate to <em>Settings &gt; Network &gt; Network discovery</em>.</p>
+</li>
+<li>
+<p>Locate the option labeled &ldquo;Active subnet mapping interval&rdquo; or similar.</p>
+</li>
+<li>
+<p>Choose the desired interval for the active subnet mapping. For example, you can select &ldquo;Every 3 hours&rdquo; to perform subnet mapping every three hours.</p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> 
+Please note that enabling active subnet mapping helps ensure that the discovery information gathered by MAAS is up-to-date and accurate.</p>
     </div>
   </body>
 </html>
