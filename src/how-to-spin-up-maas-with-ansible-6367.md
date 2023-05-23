@@ -1,6 +1,264 @@
 <!-- "How to spin up MAAS with Ansible" -->
 [tabs]
-[tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
+[tab version="v3.4 Snap,v3.4 Packages"]
+Ansible playbooks provide a straightforward way to install and configure MAAS (Metal as a Service). This documentation will guide you through the process of setting up and managing MAAS using Ansible.
+
+<a href="#heading--Installation-of-MAAS"><h2 id="heading--Installation-of-MAAS">Installation of MAAS</h2></a>
+
+To get started, follow these steps to install MAAS using Ansible:
+
+1. Clone the MAAS-ansible-playbook repository from GitHub:
+
+```
+git clone git@github.com:maas/maas-ansible-playbook
+```
+
+2. Ensure that you have Ansible installed on the machine where you'll be running the playbook. The playbook has been tested with Ansible version 5.10.0 and above.
+
+3. Verify that the `netaddr` Python library is installed on the machine running Ansible. 
+
+[note]
+Note that this library is not required on remote hosts.
+[/note]
+
+<a href="#heading--Installing-a-region-controller"><h2 id="heading--Installing-a-region-controller">Installing a region controller</h2></a>
+
+As an operator, you may want to install a MAAS region controller on a specific host using Ansible. Follow these steps to accomplish this:
+
+1. Assign the `maas_region_controller` role to your region controller host by adding the following to your inventory file:
+
+**INI Format**:
+
+```
+[maas_region_controller]
+10.10.0.20 ansible_user=ubuntu
+```
+
+**YAML Format**:
+
+```
+all:
+  maas_region_controller:
+    hosts:
+      10.10.0.20:
+        ansible_user: ubuntu
+```
+
+2. Set the required Ansible variables in the hosts file under the `[maas_region_controller]` group:
+
+```
+[maas_region_controller]
+maas_version="latest"
+maas_installation_type="snap"
+maas_snap_channel="stable"
+maas_url="$Ip_Address"
+enable_tls=false
+o11y_enable=false
+admin_username="admin"
+admin_password="admin"
+admin_email="admin@email.com"
+admin_id="lp:admin"
+```
+
+[note]
+Note: Adjust the values accordingly for `maas_version`, `maas_installation_type`, `maas_snap_channel`, `maas_url`, `enable_tls`, `o11y_enable`, `admin_username`, `admin_password`, `admin_email`, and `admin_id`.
+[\note]
+
+3. Run the playbook to install the region controller:
+
+```
+ansible-playbook -i ./hosts site.yaml
+```
+
+Upon successful execution, you should have a functional MAAS instance accessible from the specified MAAS host IP address.
+
+<a href="#heading--Installing-a-rack-controller"><h2 id="heading--Installing-a-rack-controller">Installing a rack controller</h2></a>
+
+To install a MAAS rack controller using Ansible, follow these steps:
+
+1. Assign the `maas_rack_controller` role to the desired host(s) in your Ansible hosts file:
+
+**INI Format**:
+
+```
+[maas_rack_controller]
+$Host_Ip_Address extra_variable=$Variable_Value
+$Second_Host_Ip
+```
+
+**YAML Format**:
+
+```
+all:
+  maas_rack_controller:
+    hosts:
+      $Host_Ip_Address:
+        extra_variable: $Variable_Value
+      $Second_Host_Ip
+```
+
+2. Set the required Ansible variables in the hosts file under the [maas_rack_controller] group:
+
+```
+[maas_rack_controller]
+maas_version="latest"
+maas_installation_type="snap"
+maas_snap_channel="stable"
+maas_url="$Ip_Address"
+maas_rack_secret=
+enable_tls=false
+o11y_enable=false
+```
+
+[note]
+Note: Adjust the values accordingly for `maas_version`, `maas_installation_type`, `maas_snap_channel`, `maas_url`, `maas_rack_secret`, `enable_tls`, and `o11y_enable`.
+[/note]
+
+3. Run the playbook to install the rack controller:
+
+```
+ansible-playbook -i ./hosts site.yaml
+```
+
+The rack controller should now be accessible at the specified host IP address.
+
+<a href="#heading--Uninstalling-MAAS"><h2 id="heading--Uninstalling-MAAS">Uninstalling MAAS</h2></a>
+
+If you need to revert the MAAS setup installed by the playbook, follow these steps to uninstall MAAS:
+
+1. Identify the entry-point within the playbook that corresponds to tearing down the MAAS installation.  Optionally, back up the MAAS database and configuration.
+
+2. Run the playbook from the identified entry-point to remove the installation:
+
+```
+ansible-playbook -i ./hosts teardown.yaml
+```
+
+This will remove all MAAS packages or snaps, restoring the machine to its pre-installation state.
+
+<a href="#heading--Configuring-MAAS-high-availability-(HA)"><h2 id="heading--Configuring-MAAS-high-availability-(HA)">Configuring MAAS high availability (HA)</h2></a>
+
+To set up high availability for MAAS using Ansible, including a reverse proxy and HA region controllers, follow these steps:
+
+1. Assign the maas_proxy role to the desired host acting as the reverse proxy in your Ansible hosts file:
+
+```
+[maas_proxy]
+my.host ansible_user=ssh_user
+```
+
+2. Run the full playbook or use the `--tags maas_proxy` option to execute the tasks specific to the `maas_proxy` role.
+
+3. Verify that HAProxy is forwarding traffic by running the following command:
+
+```
+curl -L http://<haproxy_host>:5240/MAAS
+```
+
+If HAProxy is not on a separate host, replace `<haproxy_host>` with the appropriate host IP and port (e.g., 5050).
+
+[note]
+Note that the playbook optimizes the HAProxy configuration to ensure smooth operation, including proper handling of OS image uploads and quick removal of unresponsive region controllers. The HAProxy instance does not interfere with Nginx/MAAS TLS configuration.
+[/note]
+
+<a href="#heading--Installing-HA-PostgreSQL"><h2 id="heading--Installing-HA-PostgreSQL">Installing HA PostgreSQL</h2></a>
+
+To install a high-availability PostgreSQL database cluster for MAAS using Ansible, follow these steps:
+
+1. Assign the `maas_postgres` and `maas_corosync` roles to the desired hosts in your Ansible hosts file:
+
+**INI Format**:
+
+```
+[maas_corosync]
+my.db1 ansible_user=ssh_user
+my.db2 ansible_user=ssh_user
+my.db3 ansible_user=ssh_user
+
+[maas_pacemaker:children]
+maas_corosync
+
+[maas_postgres]
+my.db1 ansible_user=ssh_user
+my.db2 ansible_user=ssh_user
+my.db3 ansible_user=ssh_user
+```
+
+**YAML Format**:
+
+```
+all:
+  maas_pacemaker:
+    children:
+      maas_corosync:
+        hosts:
+          - my.db1
+          - my.db2
+          - my.db3
+  maas_postgres:
+    hosts:
+      - my.db1
+      - my.db2
+      - my.db3
+```
+
+2. Set the required Ansible variables in the hosts file under the `[maas_pacemaker]` group:
+
+```
+[maas_pacemaker]
+maas_pacemaker_fencing_driver="$stonith_driver"
+maas_pacemaker_stonith_params="$stonith_parameters"
+
+[maas_postgres]  # HA-related variables
+maas_postgres_floating_ip="$vIP"
+maas_postgres_floating_ip_prefix_len="$vIP_masklen"
+```
+
+[note]
+Note: Adjust the values accordingly for `maas_pacemaker_fencing_driver`, `maas_pacemaker_stonith_params`, `maas_postgres_floating_ip`, and `maas_postgres_floating_ip_prefix_len`.
+[/note]
+
+3. Run the playbook or use the `--tags maas_ha_postgres` option to execute the tasks specific to the HA PostgreSQL installation.
+
+[note]
+Note: The playbook installs the latest supported version of PostgreSQL for the given MAAS version. If the playbook is run with other roles set on targeted hosts or groups, the tasks associated with the `maas_postgresql` role will run first. If you wish to import a backup, ensure the appropriate variable is set.
+[/note]
+
+<a href="#heading--Enabling-observability-capabilities"><h2 id="heading--Enabling-observability-capabilities">Enabling observability capabilities</h2></a>
+
+To export MAAS metrics and logs to your observability stack using Ansible, follow these steps:
+
+1. Set the following Ansible variables in the hosts file:
+
+```
+[all]
+o11y_enable=true
+o11y_prometheus_url=http://$prometheus_ip:9090/api/v1/write
+o11y_loki_url=http://$loki:3100/loki/api/v1/push
+```
+
+Optionally, you can set o11y_enable only on hosts of interest.
+
+2. Run the playbook to install and configure the Grafana Agent service on the relevant roles:
+
+```
+ansible-playbook -i ./hosts site.yaml
+```
+
+By default, both metrics and logs are exported. You can disable either one by omitting the respective endpoint definition. Ensure that your Prometheus server is running with the remote-write-receiver feature enabled to receive metrics pushed by the agents.
+
+3. Optionally, you can export the observability alert rules using the following command:
+
+```
+ansible-playbook --extra-vars="o11y_alertrules_dest=/tmp" ./alertrules.yaml
+```
+
+The resulting files (`loki-alert-rules.yml` and `prometheus-alert-rules.yml`) should be installed in your Loki and Prometheus servers, respectively. Refer to the MAAS documentation for [setting up a basic observability stack](/t/how-to-monitor-maas/5204).
+
+Please refer to the [specific Ansible playbooks and README instructions](https://github.com/maas/maas-ansible-playbook#maas-ansible-playbook) for further details and advanced usage.
+
+[/tab]
+[tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
 Ansible playbooks make it easy to install and configure MAAS.
 
 <a href="#heading--MAAS-region-controller"><h2 id="heading--MAAS-region-controller">How to install a region controller with Ansible</h2></a>
