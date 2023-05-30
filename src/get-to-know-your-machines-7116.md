@@ -1,5 +1,5 @@
-<!-- "Deploy some machines" -->
-As an exercise, let's create some virtual machines with MAAS and run them through their paces.  Be sure you've completed [this tutorial](/t/bootstrap-maas/5092) first, so that everything is set up and running.
+<!-- "Get to know your machines" -->
+As an exercise, let's create some virtual machines with MAAS and find out how to examine them.  Be sure you've completed [this tutorial](/t/bootstrap-maas/5092) first, so that everything is set up and running.
 
 <a href="#heading--Step-1-Create-a-virtual-machine"><h2 id="heading--Step-1-Create-a-virtual-machine">Step 1: Create a virtual machine</h2></a>
 
@@ -84,3 +84,24 @@ Let's run some tests to assess the virtual machine's CPU performance. Follow the
 7. If you wish to stop the tests, do this: Go to the navigation menu, select *Hardware > Machines*, mark the checkbox corresponding to the machine undergoing tests, and choose *Actions > Abort* (confirm the action when prompted).
 
 Feel free to explore other Test... options independently.  By following these steps, you can evaluate the the fitness and performance of the virtual machine and monitor the progress of the tests.
+
+<a href="#heading--Network-tab"><h3 id="heading--Network-tab">Network tab</h3></a>
+
+The network tab in MAAS provides a comprehensive overview of the network configuration for your machines. It displays essential information such as interfaces, bonds, bridges, VLANs, subnets, and DHCP snippets. Each entry in the table represents a distinct network element and includes details like MAC address, link speed, associated fabric, subnet information, and more. Additionally, you can perform various actions related to network management, such as adding interfaces, creating bonds and bridges, and validating the network configuration. 
+
+For the moment, let's ignore most of the buttons on this page and explore the central table that describes the interfaces. Reviewing the table, we find the following columns:
+
+- **NAME**: The name of the interface or bridge. It identifies the network device within MAAS.
+- **MAC**: The MAC address associated with the network device. It serves as a unique identifier for the device.
+- **PXE**: Indicates whether the interface can be used to PXE (Preboot Execution Environment) boot the device.
+- **LINK/INTERFACE SPEED**: Represents the link speed and interface speed of the network device. It indicates the maximum data transfer rate between the device and the network. This column may contain zeroes under certain conditions, such as when the link has not been tested or is not active.
+- **TYPE: Specifies the type of network device, such as "Physical" for a physical interface or "Alias" for an alias interface.
+- **NUMA NODE**: Identifies the NUMA (Non-Uniform Memory Access) node to which the network device is assigned. NUMA architecture optimizes memory access in multiprocessor systems.
+- **FABRIC**: Indicates the associated fabric, which represents a network fabric or infrastructure in MAAS. It helps organize and manage network resources.
+- **VLAN**: Describes the VLAN (Virtual Local Area Network) configuration for the network device. VLANs enable the segmentation and isolation of network traffic.
+- **SUBNET**: Provides details about the subnet associated with the network device.
+- **NAME**: The name of the subnet, which helps identify and differentiate it from other subnets. This is often the same as the subnet address, unless you have otherwise labelled it.
+- **IP ADDRESS**: The IP address assigned to the subnet, or alternatively, the IP allocation method (e.g., "Auto assign"),.
+- **STATUS**: Reflects the status of the network configuration. It indicates whether the configuration is active, pending, or has encountered an error. A blank status does not necessarily indicate an error.
+- **DHCP**: Displays the DHCP (Dynamic Host Configuration Protocol) status. It indicates whether DHCP is enabled or disabled for the subnet, and how the DHCP is provided.
+- **ACTIONS**: Shows the available actions for network management. These actions may include disconnecting an interface, setting an alias, changing the VLAN configuration, editing the physical interface, removing the interface altogether, or, if the interface is an alias, editing or removing the alias.

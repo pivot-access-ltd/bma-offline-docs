@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;list-style-type:none;}
+      li {margin: 4px 0;}
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+	  UI-only
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="../cli/get-to-know-your-machines.html">
+	  CLI-only
+	</a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <strong>
+	<a href="maas-documentation-25.html">
+	  Home
+	</a>
+      </strong> 
+      <strong>
+	<a href="tutorials.html">
+	  Tutorials
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="bootstrap-maas.html">
+	    Bootstrap MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="try-out-the-maas-cli.html">
+	    Try out the MAAS CLI
+	  </a>
+	</li>
+	<li>
+	  <a href="create-a-custom-image.html">
+	    Create a custom image
+	  </a>
+	</li>
+	<li>
+	  <a href="get-fancy-cli-output.html">
+	    Get fancy CLI output
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-get-started-with-maas.html">
+	  How to get started with MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-do-a-fresh-install-of-maas.html">
+	    Do a fresh install of MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-upgrade-maas.html">
+	    Upgrade MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-spin-up-maas-with-ansible.html">
+	    Spin up MAAS with Ansible
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-set-up-networks.html">
+	  How to set up networks
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-connect-maas-networks.html">
+	    Connect MAAS networks
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-dhcp.html">
+	    Enable DHCP
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-availability-zones.html">
+	    Use availability zones
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-images.html">
+	  How to use images
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-standard-images.html">
+	    Use standard images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-mirror-images-locally.html">
+	    Mirror images locally
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-images.html">
+	    Customise images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-employ-vmware-images.html">
+	    Employ VMWare images
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-deploy-a-real-time-kernel.html">
+	    Deploy a RT kernel
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-controllers.html">
+	  How to manage controllers
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-configure-controllers.html">
+	    Configure controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-high-availability.html">
+	    Enable HA
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-manage-machines.html">
+	  How to manage machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-make-machines-available.html">
+	    Make machines available
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-customise-machines.html">
+	    Customise machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-put-machines-to-work.html">
+	    Put machines to work
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-use-virtual-machines.html">
+	  How to use virtual machines
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-set-up-lxd.html">
+	    Set up LXD
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-vm-hosts.html">
+	    Manage VM hosts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-virtual-machines.html">
+	    Manage virtual machines
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-label-devices.html">
+	  How to label devices
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-tag-machines.html">
+	    Tag machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-annotate-machines.html">
+	    Annotate machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-machine-tags.html">
+	    Use machine tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-controller-tags.html">
+	    Use controller tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-storage-tags.html">
+	    Use storage tags
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-network-tags.html">
+	    Use network tags
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-secure-maas.html">
+	  How to secure MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-improve-maas-security.html">
+	    Improve MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-manage-user-accounts.html">
+	    Manage user accounts
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-enable-maas-native-tls.html">
+	    Enable MAAS native TLS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-use-hashicorp-vault-with-maas.html">
+	    Use Vault with MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-set-up-an-air-gapped-maas.html">
+	    Set up an air-gapped MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-operate-maas.html">
+	  How to operate MAAS
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-find-machines.html">
+	    Find machines
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-back-up-maas.html">
+	    Back up MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-monitor-maas.html">
+	    Monitor MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-audit-maas.html">
+	    Audit MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-troubleshoot-maas.html">
+	    Troubleshoot MAAS
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="how-to-give-and-receive-help.html">
+	  How to give and receive help
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="how-to-use-our-discourse-forum.html">
+	    Use our discourse forum
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contact-us">
+	    Get support↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-request-new-features.html">
+	    Request new features
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-review-and-report-bugs.html">
+	    Review and report bugs
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-contribute-doc.html">
+	    Contribute documentation
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="general-reference.html">
+	  General reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="what-is-new-with-maas.html">
+	    Release notes
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-installation-requirements.html">
+	    Installation requirements
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-settings-reference.html">
+	    MAAS settings
+	  </a>
+	</li>
+	<li>
+	  <a href="https://launchpad.net/maas.html">
+	    MAAS source code↗
+	  </a>
+	</li>
+	<li>
+	  <a href="how-to-help-improve-the-doc.html">
+	    Doc style guide
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-glossary.html">
+	    Glossary
+	  </a>
+	</li>
+	<li>
+	  <a href="https://ubuntu.com/community/code-of-conduct">
+	    Code of conduct↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="api-reference.html">
+	  API reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="api-authentication-reference.html">
+	    API authentication
+	  </a>
+	</li>
+	<li>
+	  <a href="python-api-client-reference.html">
+	    Python API client
+	  </a>
+	</li>
+	<li>
+	  <a href="api">
+	    API documentation↗
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-scripts-reference.html">
+	  Scripts reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="commissioning-scripts-reference.html">
+	    Commissioning scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="hardware-test-scripts-reference.html">
+	    Hardware test scripts
+	  </a>
+	</li>
+	<li>
+	  <a href="maas-terraform-reference.html">
+	    Terraform
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="maas-logs-reference.html">
+	  Log reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="event-logs-reference.html">
+	    Event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="audit-event-logs-reference.html">
+	    Audit event logs
+	  </a>
+	</li>
+	<li>
+	  <a href="commissioning-logs-reference.html">
+	    Commissioning logs
+	  </a>
+	</li>
+	<li>
+	  <a href="testing-logs-reference.html">
+	    Testing logs
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href="machine-parameters-reference.html">
+	  Machine parameters reference
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="power-drivers-reference.html">
+	    Power drivers
+	  </a>
+	</li>
+	<li>
+	  <a href="storage-layouts-reference.html">
+	    Storage layouts
+	  </a>
+	</li>
+	<li>
+	  <a href="device-labelling-reference.html">
+	    Device labelling
+	  </a>
+	</li>
+      </ul>
+      <strong>
+	<a href=".html">
+	  Explanation
+	</a>
+      </strong>
+      <ul>
+	<li>
+	  <a href="about-maas.html">
+	    About MAAS
+	  </a>
+	</li>
+	<li>
+	  <a href="about-networking.html">
+	    About networking
+	  </a>
+	</li>
+	<li>
+	  <a href="about-images.html">
+	    About images
+	  </a>
+	</li>
+	<li>
+	  <a href="about-controllers.html">
+	    About controllers
+	  </a>
+	</li>
+	<li>
+	  <a href="about-machines.html">
+	    About machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-virtual-machines.html">
+	    About virtual machines
+	  </a>
+	</li>
+	<li>
+	  <a href="about-device-labels.html">
+	    About device labels
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-events.html">
+	    About MAAS events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-audit-events.html">
+	    About audit events
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-logging.html">
+	    About MAAS logging
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-security.html">
+	    About MAAS security
+	  </a>
+	</li>
+	<li>
+	  <a href="about-maas-performance.html">
+	    About MAAS performance
+	  </a>
+	</li>
+	<li>
+	  <a href="about-ansible.html">
+	    About Ansible
+	  </a>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Get to know your machines</h1><!-- "Get to know your machines" -->
+<p>As an exercise, let&rsquo;s create some virtual machines with MAAS and find out how to examine them.  Be sure you&rsquo;ve completed <a href="bootstrap-maas.html">this tutorial</a> first, so that everything is set up and running.</p>
+<p><a href="#heading--Step-1-Create-a-virtual-machine"><h2 id="heading--Step-1-Create-a-virtual-machine">Step 1: Create a virtual machine</h2></a></p>
+<p>Create your first virtual machine with the following procedure:</p>
+<ol>
+<li>
+<p>Open your web browser and access the MAAS web interface.</p>
+</li>
+<li>
+<p>In the MAAS navigation menu, click on &ldquo;KVM&rdquo; and then select &ldquo;LXD&rdquo;.</p>
+</li>
+<li>
+<p>Choose the LXD KVM host you previously created in the <a href="bootstrap-maas.html">previous tutorial</a>, or any other available LXD KVM host.</p>
+</li>
+<li>
+<p>Select &ldquo;Add VM&rdquo;.</p>
+</li>
+<li>
+<p>Optionally, provide a name for the new VM.</p>
+</li>
+<li>
+<p>Scroll down to the &ldquo;Compose machine&rdquo; section and select it. You should see a success message shortly after.</p>
+</li>
+<li>
+<p>Navigate to the &ldquo;Hardware&rdquo; tab and click on &ldquo;Machines&rdquo;.</p>
+</li>
+<li>
+<p>Look for the newly created-machine by checking for the &ldquo;Commissioning&rdquo; message.</p>
+</li>
+<li>
+<p>Underneath the &ldquo;Commissioning&rdquo; status, you will see MAAS progressing through the various stages of commissioning for the machine. This process may take a few minutes.</p>
+</li>
+<li>
+<p>Watch for the machine to change to the &ldquo;Ready&rdquo; status, and switch off.</p>
+</li>
+</ol>
+<p>Congratulations!  You just created your first MAAS machine.</p>
+<p><a href="#heading--Step-2-Get-to-know-your-new-machine"><h2 id="heading--Step-2-Get-to-know-your-new-machine">Step 2: Get to know your new machine</h2></a></p>
+<p>Select the machine name; MAAS will zoom in on the machine, displaying several tabs across the top.  Let&rsquo;s briefly run through each tab in turn, using typical values for a standard LXD VM (yours may vary some).</p>
+<p><a href="#heading--Status-tab"><h3 id="heading--Status-tab">Status tab</h3></a></p>
+<p>The &ldquo;Virtual Machine Status&rdquo; section provides an overview of the current status and configuration of the virtual machine. Let&rsquo;s break down the different panels:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>Ready</strong>: This indicates that the virtual machine is ready for use, that is, it can be allocated and deployed.</p>
+</li>
+<li>
+<p><strong>CPU</strong>: Specifies the CPU architecture and details of the virtual machine&rsquo;s processor. In this case, it is an AMD64/Generic CPU with 1 core running at 1.6 GHz, specifically an Intel Core i5-10210U CPU. You can also test the CPU to verify its functionality.</p>
+</li>
+<li>
+<p><strong>Memory</strong>: Displays the amount of memory allocated to the virtual machine, which is 2 GiB (gibibytes). You can also perform a memory test if needed.</p>
+</li>
+<li>
+<p><strong>Storage</strong>: Indicates the total storage capacity of the virtual machine, which is 8 GB over 1 disk. You can click on &ldquo;View results&rdquo; to get more detailed information about the storage configuration.</p>
+</li>
+<li>
+<p><strong>Owner</strong>: Shows the owner of the virtual machine. Since your machine has not been <em>Allocated</em>, it will not have any owner information.</p>
+</li>
+<li>
+<p><strong>Host</strong>: Specifies the network bridge (lxdbr0) to which the virtual machine is connected.</p>
+</li>
+<li>
+<p><strong>Zone</strong>: Identifies the zone in which the virtual machine resides. For a new machine, it is the default zone.</p>
+</li>
+<li>
+<p><strong>Resource pool</strong>: Indicates the resource pool to which the virtual machine belongs. For a new machine, it is the default resource pool.</p>
+</li>
+<li>
+<p><strong>Power type</strong>: Specifies the power type used for the virtual machine, which is LXD.</p>
+</li>
+<li>
+<p><strong>Tags</strong>: Displays any tags assigned to the virtual machine. As a new LXD VM, it has the tags &ldquo;pod-console-logging&rdquo; and &ldquo;virtual&rdquo;.</p>
+</li>
+<li>
+<p><strong>Hardware Information</strong>: Provides details about the virtual machine&rsquo;s hardware configuration.</p>
+</li>
+<li>
+<p><strong>System</strong>: Describes the system information of the virtual machine, including the vendor (e.g., QEMU), product (e.g., Standard PC), version, and serial number.</p>
+</li>
+<li>
+<p><strong>Mainboard</strong>: Specifies information about the virtual machine&rsquo;s mainboard, including the vendor (e.g., Canonical Ltd.), product (e.g, LXD), firmware (e.g., EFI Development Kit II / OVMF), boot mode (e.g., UEFI), version, and date.</p>
+</li>
+<li>
+<p><strong>1 NUMA NODE</strong>: Indicates the NUMA (Non-Uniform Memory Access) node configuration of the virtual machine. It shows the details of Node 0, including the CPU cores (e.g., 1 core) and memory (e.g., 2 GiB) assigned to that node.</p>
+</li>
+<li>
+<p><strong>Network</strong>: Provides information about the virtual machine&rsquo;s network configuration. It displays the network interface name, MAC address, assigned IP address, subnet, link speed, fabric, VLAN, DHCP status, and SR-IOV (Single Root I/O Virtualization) support.</p>
+</li>
+<li>
+<p><strong>Test network</strong>: Allows you to perform a network test to check the connectivity and functionality of the virtual machine&rsquo;s network.</p>
+</li>
+</ul>
+<p>Let&rsquo;s run some tests to assess the virtual machine&rsquo;s CPU performance. Follow these steps:</p>
+<ol>
+<li>
+<p>Select <em>Test CPU&hellip;</em>.</p>
+</li>
+<li>
+<p>In the displayed panel, select <em>Start tests for machine</em>.  Notice that the <em>Test&hellip;</em> button in the CPU panel will transform into a hyperlinked number, accompanied by the phrase <em>View results</em>.</p>
+</li>
+<li>
+<p>Select the hyperlinked number to navigate to the <em>Tests</em> tab. Most likely, several tests will be listed as <em>Pending</em>.</p>
+</li>
+<li>
+<p>Switch to the <em>Summary</em> tab and click on <em>View results</em>; this action will also redirect you to the <em>Tests</em> tab.</p>
+</li>
+<li>
+<p>Keep an eye on the <em>Tests</em> tab as the tests are being executed.</p>
+</li>
+<li>
+<p>Periodically, access the <em>Logs</em> section to view more detailed status updates about the ongoing testing process.</p>
+</li>
+<li>
+<p>If you wish to stop the tests, do this: Go to the navigation menu, select <em>Hardware &gt; Machines</em>, mark the checkbox corresponding to the machine undergoing tests, and choose <em>Actions &gt; Abort</em> (confirm the action when prompted).</p>
+</li>
+</ol>
+<p>Feel free to explore other Test&hellip; options independently.  By following these steps, you can evaluate the the fitness and performance of the virtual machine and monitor the progress of the tests.</p>
+<p><a href="#heading--Network-tab"><h3 id="heading--Network-tab">Network tab</h3></a></p>
+<p>The network tab in MAAS provides a comprehensive overview of the network configuration for your machines. It displays essential information such as interfaces, bonds, bridges, VLANs, subnets, and DHCP snippets. Each entry in the table represents a distinct network element and includes details like MAC address, link speed, associated fabric, subnet information, and more. Additionally, you can perform various actions related to network management, such as adding interfaces, creating bonds and bridges, and validating the network configuration. </p>
+<p>For the moment, let&rsquo;s ignore most of the buttons on this page and explore the central table that describes the interfaces. Reviewing the table, we find the following columns:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><strong>NAME</strong>: The name of the interface or bridge. It identifies the network device within MAAS.</li>
+<li><strong>MAC</strong>: The MAC address associated with the network device. It serves as a unique identifier for the device.</li>
+<li><strong>PXE</strong>: Indicates whether the interface can be used to PXE (Preboot Execution Environment) boot the device.</li>
+<li><strong>LINK/INTERFACE SPEED</strong>: Represents the link speed and interface speed of the network device. It indicates the maximum data transfer rate between the device and the network. This column may contain zeroes under certain conditions, such as when the link has not been tested or is not active.</li>
+<li>**TYPE: Specifies the type of network device, such as &ldquo;Physical&rdquo; for a physical interface or &ldquo;Alias&rdquo; for an alias interface.</li>
+<li><strong>NUMA NODE</strong>: Identifies the NUMA (Non-Uniform Memory Access) node to which the network device is assigned. NUMA architecture optimizes memory access in multiprocessor systems.</li>
+<li><strong>FABRIC</strong>: Indicates the associated fabric, which represents a network fabric or infrastructure in MAAS. It helps organize and manage network resources.</li>
+<li><strong>VLAN</strong>: Describes the VLAN (Virtual Local Area Network) configuration for the network device. VLANs enable the segmentation and isolation of network traffic.</li>
+<li><strong>SUBNET</strong>: Provides details about the subnet associated with the network device.</li>
+<li><strong>NAME</strong>: The name of the subnet, which helps identify and differentiate it from other subnets. This is often the same as the subnet address, unless you have otherwise labelled it.</li>
+<li><strong>IP ADDRESS</strong>: The IP address assigned to the subnet, or alternatively, the IP allocation method (e.g., &ldquo;Auto assign&rdquo;),.</li>
+<li><strong>STATUS</strong>: Reflects the status of the network configuration. It indicates whether the configuration is active, pending, or has encountered an error. A blank status does not necessarily indicate an error.</li>
+<li><strong>DHCP</strong>: Displays the DHCP (Dynamic Host Configuration Protocol) status. It indicates whether DHCP is enabled or disabled for the subnet, and how the DHCP is provided.</li>
+<li><strong>ACTIONS</strong>: Shows the available actions for network management. These actions may include disconnecting an interface, setting an alias, changing the VLAN configuration, editing the physical interface, removing the interface altogether, or, if the interface is an alias, editing or removing the alias.</li>
+</ul>
+    </div>
+  </body>
+</html>
