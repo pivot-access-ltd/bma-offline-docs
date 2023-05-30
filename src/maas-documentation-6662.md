@@ -45,8 +45,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Documentation versions]
 | Path | Version |
 |--|--|
-| MAAS 3.4  | [MAAS 3.4](/t/maas-documentation/6662) |
-| MAAS 3.3  | [MAAS 3.3](/t/maas-documentation/25) |
+|  | [snap-2.9](/t/unlisted-docs-testing/4315) |
+| snap-2.8 | [snap-2.8](/t/unlisted-docs-testing-snap-2-8/4668) |
 [/details]
 -->
 
@@ -125,7 +125,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | api-reference                     | [API](/t/-/6665)                                                |
 | 3     | api-authentication-reference      | [API authentication](/t/-/5060)                                 |
 | 3     | python-api-client-reference       | [Python API client](/t/-/5404)                                  |
-| 3     | maas-api-documentation            | [API documentation](/docs/api)                                  |
+| 3     | maas-api-documentation            | [API documentation](/docs/api)                   |
 | 2     | scripts-reference                 | [Scripts](/t/-/5375)                                            |
 | 3     | comm-scripts-reference            | [Commissioning scripts](/t/-/6605)                              |
 | 3     | testing-scripts-reference         | [Hardware test scripts](/t/-/5392)                              |
@@ -266,9 +266,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 [details=Mapping table]
 | PATH                                               | LOCATION                                      |
 |----------------------------------------------------|-----------------------------------------------|
-| /docs/snap/3.0/ui/About-MAAS                       | /docs/about-maas                              |
-| /docs/maas-settings-reference                      | /docs/maas-settings                           |
-| /docs/about-networking                             | /docs/about-maas-networks                     |
+| /docs/what-is-new-with-maas                        | /docs/maas-release-notes                      |
 | /docs/how-to-use-tags                              | /docs/how-to-tag-machines                     |
 | /docs/how-to-create-vm-hosts                       | /docs/how-to-manage-vm-hosts                  |
 | /docs/how-to-protect-your-secrets                  | /docs/how-to-secure-maas                      |
@@ -278,9 +276,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/commissioning-scripts-tech-reference         | /docs/comm-scripts-reference                  |
 | /docs/how-to-terraform-with-maas                   | /docs/maas-terraform-reference                |
 | /docs/maas-terraform-provider-reference            | /docs/maas-terraform-reference                |
-| /docs/understanding-maas-audit-events              | /docs/about-audit-events                      |
-| /docs/understanding-maas-events                    | /docs/about-maas-events                       |
-| /docs/about-maas-audit-events                      | /docs/about-audit-events                      |
+| /docs/understanding-maas-audit-events              | /docs/about-maas-audit-events                 |
 | /docs/how-to-gauge-maas-performance                | /docs/about-maas-performance                  |
 | /docs/maas-performance                             | /docs/about-maas-performance                  |
 | /docs/how-to-enable-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
@@ -289,7 +285,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
 | /docs/how-to-customise-images                      | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
-| /docs/how-to-change-maas-settings                  | /docs/maas-settings                           |
+| /docs/how-to-change-maas-settings                  | /docs/how-to-change-maas-settings             |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
 | /docs/request-a-feature                            | /docs/how-to-request-new-features             |
@@ -307,7 +303,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/ansible-playbooks-reference                  | /docs/how-to-spin-up-maas-with-ansible        |
 | /docs/basic-tutorials                              | /docs/tutorials                               |
 | /docs/commissioning-script-reference               | /docs/comm-scripts-reference                  |
-| /docs/configuration-settings-reference             | /docs/maas-settings                           |
+| /docs/configuration-settings-reference             | /docs/how-to-change-maas-settings             |
 | /docs/custom-image-tutorial                        | /docs/create-a-custom-image                   |
 | /docs/deb/3.0/cli/how-to-work-with-tags            | /docs/how-to-tag-machines                     |
 | /docs/deb/3.0/ui/how-to-work-with-tags             | /docs/how-to-tag-machines                     |
