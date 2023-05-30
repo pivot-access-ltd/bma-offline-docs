@@ -1,4 +1,5 @@
-Welcome to MAAS, the powerful tool for managing physical servers and data centres. This tutorial will guide you through using MAAS effectively, whether you're a beginner or an experienced user. We're going to get MAAS up and running, so that you can create, commission, and deploy some virtual machines. Let's jump right in and start doing things.  
+<!-- "Bootstrap MAAS" -->
+Welcome to MAAS, the powerful tool for managing physical servers and data centres. This tutorial will help you get MAAS up and running, so that you can create, commission, and deploy some virtual machines in later tutorials. Let's jump right in and start doing things.
 
 <a href="#heading--Step-1-Install-MAAS"><h2 id="heading--Step-1-Install-MAAS">Step 1: Install MAAS</h2></a>
 
