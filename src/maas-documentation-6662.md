@@ -58,6 +58,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 1     | tutorials                         | [Tutorials](/t/-/6140)                                          |
 | 2     | try-out-maas                      | Try out MAAS                                                    |
 | 3     | bootstrap-maas                    | [Bootstrap MAAS](/t/-/5092)                                     |
+| 3     | get-to-know-your-machines         | [Get to know your machines](/t/-/7116)                          |
 | 2     | try-out-the-maas-cli              | [Try out the MAAS CLI](/t/-/5236)                               |
 | 2     | create-custom-images              | [Create custom images](/t/-/6102)                               |
 | 2     | get-fancy-cli-output              | [Get fancy CLI output](/t/-/6027)                               |
