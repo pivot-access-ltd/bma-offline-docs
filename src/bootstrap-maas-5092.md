@@ -17,25 +17,17 @@ Welcome to the "Bootstrap MAAS" tutorial.  By following this comprehensive guide
 
 By the end of this tutorial, you will have a fully operational MAAS setup.  Let's dive in and get started.
 
-<a href="#heading--Step-1-Install-MAAS"><h2 id="heading--Step-1-Install-MAAS">Step 1: Install MAAS</h2></a>
+<a href="#heading--Activity-1-Install-MAAS"><h2 id="heading--Activity-1-Install-MAAS">Activity 1: Install MAAS</h2></a>
 
 To kickstart your MAAS journey, we'll begin with a simple and easy installation process. Follow the steps below to get MAAS up and running on your system:
 
-1. Install the MAAS snap:
-
-```nohighlight
-sudo snap install maas
-```
-
+1. Install the MAAS snap:<br><br>  
+`sudo snap install maas`<br><br>  
 This command will install the MAAS snap package, which contains all the necessary components for MAAS.
 
-Install PostgreSQL and update necessary packages:
-
-```nohighlight
-sudo apt update -y
-sudo apt install -y postgresql
-```
-
+2. Install PostgreSQL and update necessary packages:<br><br>  
+`sudo apt update -y`<br>  
+`sudo apt install -y postgresql`<br><br>  
 These commands will update your system's package information and install PostgreSQL, a required dependency for MAAS.
 
 Create a PostgreSQL user and a secure password:
@@ -79,3 +71,4 @@ sudo maas createadmin
 By running this command, you will create an admin user for MAAS, allowing you to manage and configure MAAS effectively.
 
 Congratulations! Your MAAS installation is complete, and you've taken the first step towards efficient infrastructure management. In the next section, we'll guide you through the MAAS configuration process.
+
