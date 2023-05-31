@@ -71,4 +71,3 @@ sudo maas createadmin
 By running this command, you will create an admin user for MAAS, allowing you to manage and configure MAAS effectively.
 
 Congratulations! Your MAAS installation is complete, and you've taken the first step towards efficient infrastructure management. In the next section, we'll guide you through the MAAS configuration process.
-
