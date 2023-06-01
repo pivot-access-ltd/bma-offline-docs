@@ -21,21 +21,18 @@ By the end of this tutorial, you will have a fully operational MAAS setup.  Let'
 
 To kickstart your MAAS journey, we'll begin with a simple and easy installation process. Follow the steps below to get MAAS up and running on your system:
 
-1. Install the MAAS snap:<br><br>  
-`sudo snap install maas`<br><br>  
+1. Install the MAAS snap:<br>  
+`sudo snap install maas`<br>  
 This command will install the MAAS snap package, which contains all the necessary components for MAAS.
 
-2. Install PostgreSQL and update necessary packages:<br><br>  
-`sudo apt update -y`<br>  
-`sudo apt install -y postgresql`<br><br>  
+2. Install PostgreSQL and update necessary packages:<br>  
+`sudo apt update -y`
+`sudo apt install -y postgresql`<br>  
 These commands will update your system's package information and install PostgreSQL, a required dependency for MAAS.
 
-Create a PostgreSQL user and a secure password:
-
-```nohighlight
-sudo -u postgres psql -c "CREATE USER \"maascli\" WITH ENCRYPTED PASSWORD 'maascli'"
-```
-
+3. Create a PostgreSQL user and a secure password:
+`sudo -u postgres psql -c \`
+`"CREATE USER \"maascli\" WITH ENCRYPTED PASSWORD 'maascli'"`<br>  
 This command will create a PostgreSQL user named "maascli" with the password "maascli". Feel free to choose a different password for increased security.
 
 Create a MAAS database:

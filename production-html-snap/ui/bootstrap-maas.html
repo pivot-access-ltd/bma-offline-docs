@@ -576,21 +576,23 @@
 <p>To kickstart your MAAS journey, we&rsquo;ll begin with a simple and easy installation process. Follow the steps below to get MAAS up and running on your system:</p>
 <ol>
 <li>
-<p>Install the MAAS snap:<br><br><br>
-<code>sudo snap install maas</code><br><br><br>
+<p>Install the MAAS snap:<br><br>
+<code>sudo snap install maas</code><br><br>
 This command will install the MAAS snap package, which contains all the necessary components for MAAS.</p>
 </li>
 <li>
-<p>Install PostgreSQL and update necessary packages:<br><br><br>
-<code>sudo apt update -y</code><br><br>
-<code>sudo apt install -y postgresql</code><br><br><br>
+<p>Install PostgreSQL and update necessary packages:<br><br>
+<code>sudo apt update -y</code>
+<code>sudo apt install -y postgresql</code><br><br>
 These commands will update your system&rsquo;s package information and install PostgreSQL, a required dependency for MAAS.</p>
 </li>
+<li>
+<p>Create a PostgreSQL user and a secure password:
+<code>sudo -u postgres psql -c \</code>
+<code>"CREATE USER \"maascli\" WITH ENCRYPTED PASSWORD 'maascli'"</code><br><br>
+This command will create a PostgreSQL user named &ldquo;maascli&rdquo; with the password &ldquo;maascli&rdquo;. Feel free to choose a different password for increased security.</p>
+</li>
 </ol>
-<p>Create a PostgreSQL user and a secure password:</p>
-<pre><code class="language-nohighlight">sudo -u postgres psql -c &quot;CREATE USER \&quot;maascli\&quot; WITH ENCRYPTED PASSWORD 'maascli'&quot;
-</code></pre>
-<p>This command will create a PostgreSQL user named &ldquo;maascli&rdquo; with the password &ldquo;maascli&rdquo;. Feel free to choose a different password for increased security.</p>
 <p>Create a MAAS database:</p>
 <pre><code class="language-nohighlight">sudo -u postgres createdb -O &quot;maascli&quot; &quot;maasclidb&quot;
 </code></pre>
