@@ -90,7 +90,7 @@ Once you’ve done this, MAAS has been successfully set up. Now, let’s install
 You can use any virtualization tool you like, but for this tutorial, we will use the recommended LXD product. To install and set up LXD for use with MAAS, follow these steps:
 
 1. Check if LXD is already installed and up to date:<br>  
-`sudo snap refresh`<br>__
+`sudo snap refresh lxd`<br>  
 This command checks for updates to the LXD snap package and installs them if available.
 
 2. If LXD isn’t installed at all (i.e., the above command fails), run the following command:<br>  
@@ -118,7 +118,7 @@ Once these steps are completed, your LXD installation will be good to go – and
 As a final configuration step, you need to enable DHCP to communicate with the LXD bridge you just created; follow these steps:
 
 1. Open a terminal and type the following command:<br>  
-`ip addr`<br>__
+`ip addr`<br>  
 This command displays the network interfaces and their IP addresses.
 
 2. Note the IP address of the bridge `lxdbr0` (or whatever you named your LXD bridge). You will need this IP address for the next steps.
