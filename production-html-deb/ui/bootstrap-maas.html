@@ -546,7 +546,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>Bootstrap MAAS</h1><!-- "Bootstrap MAAS" -->
-<p>Welcome to the &ldquo;Bootstrap MAAS&rdquo; tutorial.  By following this comprehensive guide, you will successfully set up and configure MAAS, a powerful tool for managing physical servers and data centres. During this tutorial, you will achieve the following:</p>
+<p>Welcome to the “Bootstrap MAAS” tutorial. By following this comprehensive guide, you will successfully set up and configure MAAS, a powerful tool for managing physical servers and data centres. During this tutorial, you will achieve the following:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
 <p><strong>Installation</strong>: You will learn how to install MAAS on your system, ensuring a solid foundation for managing your infrastructure.</p>
@@ -570,9 +570,11 @@
 <p><strong>DHCP Enablement</strong>: You will enable DHCP communication with the LXD bridge, ensuring seamless networking for your virtual machines.</p>
 </li>
 </ul>
-<p>By the end of this tutorial, you will have a fully operational MAAS setup.  Let&rsquo;s dive in and get started.</p>
+<p>By the end of this tutorial, you will have a fully operational MAAS setup. Let’s dive in and get started.</p>
+<p><a href="#heading--Activity-0-Preparing-the-Host-System"><h2 id="heading--Activity-0-Preparing-the-Host-System">Activity 0: Preparing the Host System</h2></a></p>
+<p>Before we begin, make sure you have an Ubuntu system installed. Since we&rsquo;re using snaps for this tutorial, the specific version of Ubuntu is less important, but we recommend Ubuntu 22.04 LTS or higher.  Ensure that your system is in a safe environment, and if UFW (Uncomplicated Firewall) is enabled, consider disabling it or implementing a workaround for LXD.</p>
 <p><a href="#heading--Activity-1-Install-MAAS"><h2 id="heading--Activity-1-Install-MAAS">Activity 1: Install MAAS</h2></a></p>
-<p>To kickstart your MAAS journey, we&rsquo;ll begin with a simple and easy installation process. Follow the steps below to get MAAS up and running on your system:</p>
+<p>To kickstart your MAAS journey, we’ll begin with the installation process. Follow the steps below to get MAAS up and running on your system:</p>
 <ol>
 <li>
 <p>Install the MAAS snap:<br><br>
@@ -583,29 +585,32 @@ This command will install the MAAS snap package, which contains all the necessar
 <p>Install PostgreSQL and update necessary packages:<br><br>
 <code>sudo apt update -y</code>
 <code>sudo apt install -y postgresql</code><br><br>
-These commands will update your system&rsquo;s package information and install PostgreSQL, a required dependency for MAAS.</p>
+These commands will update your system’s package information and install PostgreSQL, a required dependency for MAAS.</p>
 </li>
 <li>
-<p>Create a PostgreSQL user and a secure password:<br><br>
+<p>Create a secure PostgreSQL user and a secure password:<br><br>
 <code>sudo -u postgres psql -c \</code>
-<code>"CREATE USER \"maascli\" WITH ENCRYPTED PASSWORD 'maascli'"</code><br><br>
-This command will create a PostgreSQL user named &ldquo;maascli&rdquo; with the password &ldquo;maascli&rdquo;. Feel free to choose a different password for increased security.</p>
+<code>"CREATE USER \"maascli\" WITH PASSWORD 'md5$PASSWORD_HASH'"</code><br><br>
+This command will create a PostgreSQL user named &ldquo;maascli&rdquo; with a secure password. You can create a secure password with the following command:<br><br>
+<code>openssl passwd -6 -salt maascli $USER_PASSWORD</code><br><br>
+By doing so, the password won&rsquo;t show up as plain text in the process listing and PostgreSQL log files.</p>
 </li>
 <li>
 <p>Create a MAAS database:<br><br>
 <code>sudo -u postgres createdb -O "maascli" "maasclidb"</code><br><br>
-This command will create a MAAS database named &ldquo;maasclidb&rdquo; and assign the ownership to the &ldquo;maascli&rdquo; user.</p>
+This command will create a MAAS database named &ldquo;maasclidb&rdquo; and assign ownership to the &ldquo;maascli&rdquo; user.</p>
 </li>
 <li>
 <p>Edit the pg_hba.conf file to enhance security and connectivity:<br><br>
 <code>sudo vi /etc/postgresql/12/main/pg_hba.conf</code><br><br>
-Use a text editor, such as vi, to open the pg_hba.conf file. Inside the file, you can make necessary changes to enhance security and ensure proper connectivity for MAAS.</p>
+Use a text editor, such as vi, to open the pg_hba.conf file. Inside the file, you should add the following line to the end of teh file; this will help secure the MAAS database:<br><br>
+<code>host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5</code></p>
 </li>
 <li>
-<p>Initialise MAAS using the command line:<br><br>
+<p>Initialize MAAS using the command line:<br><strong>
 <code>sudo maas init region+rack --database-uri \</code>
-<code>"postgres://maascli:maascli@localhost/maasclidb"</code><br><br>
-This command will initialise MAAS and set up the region and rack controllers. It will also provide you with a URL that you&rsquo;ll need for future steps.</p>
+<code>"postgres://maascli:md5$PASSWORD_HASH@localhost/maasclidb"</code><br></strong>
+This command will initialize MAAS and set up the region and rack controllers. It will also provide you with a URL that you’ll need for future steps.</p>
 </li>
 <li>
 <p>Create your admin user for MAAS:<br><br>
@@ -613,60 +618,51 @@ This command will initialise MAAS and set up the region and rack controllers. It
 By running this command, you will create an admin user for MAAS, allowing you to manage and configure MAAS effectively.</p>
 </li>
 </ol>
-<p>Congratulations! You&rsquo;ve taken the first step towards efficient infrastructure management. In the next section, we&rsquo;ll guide you through the MAAS configuration process.</p>
+<p>Congratulations! You’ve taken the first step towards efficient infrastructure management. In the next section, we’ll guide you through the MAAS configuration process.</p>
 <p><a href="#heading--Activity-2-Configure-MAAS"><h2 id="heading--Activity-2-Configure-MAAS">Activity 2: Configure MAAS</h2></a></p>
-<p>Next up, you&rsquo;ll want to configure MAAS for first-time use, following these steps:</p>
+<p>Next up, you’ll want to configure MAAS for first-time use, following these steps:</p>
 <ol>
 <li>
-<p>Access MAAS at this address, where $API_HOST is the hostname or IP address of the region API server, which was set during installation:<br><br>
+<p>Access MAAS at this address, where <code>$API_HOST</code> is the MAAS URL which was generated during <a href="#heading--Activity-1-Install-MAAS">Activity 1</a>:<br><br>
 <code>http://${API_HOST}:5240/MAAS</code><br><br>
 Log in using the login information you created when initializing MAAS.</p>
 </li>
 <li>
-<p>Set the DNS forwarder to a suitable value, e.g., <code>8.8.8.8</code>.  This step ensures that MAAS can resolve domain names correctly by configuring the DNS forwarder.</p>
+<p>Set the DNS forwarder to a suitable value, e.g., <code>8.8.8.8</code>. This step ensures that MAAS can resolve domain names correctly by configuring the DNS forwarder.</p>
 </li>
 <li>
-<p>Check the default image to see if it has synced yet.  This ensures that you will have Ubuntu image that will correctly deploy in MAAS.</p>
+<p>Check the default image to see if it has synced yet. This ensures that you will have Ubuntu image that will correctly deploy in MAAS.</p>
 </li>
 </ol>
 <p>Good, now MAAS is able to perform its basic functions, with the exception of DHCP, which we will set up shortly.</p>
 <p><a href="#heading--Activity-3-Set-up-SSH-access"><h2 id="heading--Activity-3-Set-up-SSH-access">Activity 3: Set up SSH access</h2></a></p>
-<p>Once your machines deploy, you may want to log into them with <code>SSH</code> to monitor or configure them further.  To set up <code>SSH</code> access for admin users, follow these steps:</p>
-<p>Import your SSH public key from Launchpad, GitHub, or upload your existing public key, following the on-screen instructions.  This step enables SSH authentication for admin users, providing secure access to the MAAS server.</p>
-<p>Make sure to select <em>Import</em> to import the SSH key.  By importing the SSH key, you authorize its use for SSH connections to MAAS.</p>
-<p>Once you&rsquo;ve done this, MAAS has been successfully set up. Now, let&rsquo;s install and set up an LXD virtual machine host, so you can put MAAS through its paces.</p>
-<p><a href="#heading--Activity-4-Install-LXD"><h2 id="heading--Activity-4-Install-LXD">Activity 4: Install LXD</h2></a></p>
-<p>You can use any virtualisation tool you like, but for this tutorial, we will use the recommended LXD product.  To install and set up LXD for use with MAAS, follow these steps:</p>
+<p>Once your machines deploy, you may want to log into them with SSH to monitor or configure them further. To set up SSH access for admin users, follow these steps:</p>
 <ol>
 <li>
-<p>If you&rsquo;re on a version of Ubuntu older than 20.04 or have the Debian version of LXD, initiate the uninstall process:<br><br>
-<code>sudo apt-get purge -y *lxd* *lxc*</code><br><br>
-This step ensures a clean installation by removing any existing LXD packages. If you&rsquo;re not on an older version, just skip this step.</p>
+<p>Import your SSH public key from Launchpad, GitHub, or upload your existing public key, following the on-screen instructions. This step enables SSH authentication for admin users, providing secure access to the MAAS server.</p>
 </li>
 <li>
-<p>Free up disk space by running the autoremove command:<br><br>
-<code>sudo apt-get autoremove -y</code><br><br>
-This command removes unnecessary packages, freeing up disk space on your system.</p>
+<p>Make sure to select &ldquo;Import&rdquo; to import the SSH key. By importing the SSH key, you authorize its use for SSH connections to MAAS.</p>
 </li>
+</ol>
+<p>Once you’ve done this, MAAS has been successfully set up. Now, let’s install and set up an LXD virtual machine host, so you can put MAAS through its paces.</p>
+<p><a href="#heading--Activity-4-Install-LXD"><h2 id="heading--Activity-4-Install-LXD">Activity 4: Install LXD</h2></a></p>
+<p>You can use any virtualization tool you like, but for this tutorial, we will use the recommended LXD product. To install and set up LXD for use with MAAS, follow these steps:</p>
+<ol>
 <li>
 <p>Check if LXD is already installed and up to date:<br><br>
-<code>sudo snap refresh</code><br><br>
+<code>sudo snap refresh</code><br>__
 This command checks for updates to the LXD snap package and installs them if available.</p>
 </li>
 <li>
-<p>If LXD isn&rsquo;t installed, run the following command:<br><br>
+<p>If LXD isn’t installed at all (i.e., the above command fails), run the following command:<br><br>
 <code>sudo snap install lxd</code><br><br>
-This command installs most current LXD snap package.</p>
+This command installs the most current LXD snap package.</p>
 </li>
 <li>
-<p>Run the initialization command and follow the interactive prompts to configure LXD based on your requirements:<br><br>
+<p>Run the initialization command and follow the interactive prompts to configure LXD based on your requirements.  Note that you definitely want to configure the bridge (e.g., <code>lxdbr0</code>) when you come to that step:<br><br>
 <code>sudo lxd init</code><br><br>
-This step initializes LXD and allows you to customize its configuration, such as network settings and storage pools. Note that you <em>definitely</em> want to configure a bridge (e.g., <code>lxdbr0</code>), so that you can reach your LXD server.</p>
-</li>
-<li>
-<p>Check the LXD network configuration:<br><br>
-<code>lxc network show lxdbr0</code><br><br>
-This command displays the current configuration of the LXD network.</p>
+This step initializes LXD and allows you to customize its configuration, such as network settings and storage pools. </p>
 </li>
 <li>
 <p>Make sure you turn off LXD-provided DHCP with the following commands:<br><br>
@@ -681,13 +677,13 @@ These commands disable DHCP provided by LXD for the lxdbr0 bridge, giving you mo
 This command confirms that the changes to the LXD network configuration were applied successfully.</p>
 </li>
 </ol>
-<p>Once these steps are completed, your LXD installation will be good to go &ndash; and any DHCP provided by LXD will be disabled. This is important, because you&rsquo;ll need MAAS to provide DHCP in the next step.</p>
+<p>Once these steps are completed, your LXD installation will be good to go – and any DHCP provided by LXD will be disabled. This is important because you&rsquo;ll need MAAS to provide DHCP in the next step.</p>
 <p><a href="#heading--Activity-5-Enable-DHCP-for-LXD"><h2 id="heading--Activity-5-Enable-DHCP-for-LXD">Activity 5: Enable DHCP for LXD</h2></a></p>
 <p>As a final configuration step, you need to enable DHCP to communicate with the LXD bridge you just created; follow these steps:</p>
 <ol>
 <li>
 <p>Open a terminal and type the following command:<br><br>
-<code>ip addr</code><br><br>
+<code>ip addr</code><br>__
 This command displays the network interfaces and their IP addresses.</p>
 </li>
 <li>
@@ -706,13 +702,13 @@ This command displays the network interfaces and their IP addresses.</p>
 <p>In the dropdown <em>Select rack controller</em>, select a rack controller on which to configure DHCP. For this example, there should only be one, but you should choose the appropriate rack controller responsible for managing the VLAN.</p>
 </li>
 <li>
-<p>In the dropdown <em>Select subnet</em>, select select the desired subnet for the VLAN.</p>
+<p>In the dropdown <em>Select subnet</em>, select the desired subnet for the VLAN.</p>
 </li>
 <li>
-<p>Select <em>Configure DHCP</em>.  This action applies the DHCP configuration to the selected VLAN, enabling communication with the LXD bridge.</p>
+<p>Select <em>Configure DHCP</em>. This action applies the DHCP configuration to the selected VLAN, enabling communication with the LXD bridge.</p>
 </li>
 </ol>
-<p>Congratulations!  You now have MAAS in a fully operational state, ready to create and explore your first machines in the <a href="get-to-know-your-machines.html">next tutorial</a>.</p>
+<p>Congratulations! You now have MAAS in a fully operational state, ready to create and explore your first machines in the <a href="get-to-know-your-machines.html">next tutorial</a>.</p>
     </div>
   </body>
 </html>
