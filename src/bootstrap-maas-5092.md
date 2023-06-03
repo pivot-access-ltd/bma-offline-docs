@@ -19,7 +19,7 @@ By the end of this tutorial, you will have a fully operational MAAS setup.  Let'
 
 <a href="#heading--Activity-1-Install-MAAS"><h2 id="heading--Activity-1-Install-MAAS">Activity 1: Install MAAS</h2></a>
 
-To kickstart your MAAS journey, we'll begin with a simple and easy installation process. Follow the steps below to get MAAS up and running on your system:
+To kickstart your MAAS journey, we'll begin with the installation process. Follow the steps below to get MAAS up and running on your system:
 
 1. Install the MAAS snap:<br>  
 `sudo snap install maas`<br>  
