@@ -289,7 +289,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-unseal-vault                          | /docs/how-to-use-hashicorp-vault-with-maas    |
 | /docs/how-to-manage-availability-zones             | /docs/how-to-use-availability-zones           |
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
-| /docs/how-to-customise-images                      | /docs/how-to-customise-images                 |
+| /docs/maas-image-builder                           | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
 | /docs/how-to-change-maas-settings                  | /docs/maas-settings                           |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
