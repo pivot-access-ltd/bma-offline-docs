@@ -117,7 +117,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 0     |                                   |                                                                 |
 | 1     | reference                         | [Reference](/t/-/6143)                                          |
 | 2     | general-reference                 | [General](/t/-/6950)                                            |
-| 3     | maas-release-notes                | [Release notes](/t/-/7071)                                      |
+| 3     | maas-release-notes                | [Release notes](/t/-/5292)                                      |
 | 3     | installation-requirements         | [Installation requirements](/t/-/6233)                          |
 | 3     | maas-settings                     | [MAAS settings](/t/-/6347)                                      |
 | 3     | maas-source-code                  | [MAAS source code](https://launchpad.net/maas)                  |
@@ -161,6 +161,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | about-maas-security               | [MAAS security](/t/-/6719)                                      |
 | 2     | about-maas-performance            | [MAAS performance](/t/-/6178)                                   |
 | 2     | about-ansible                     | [Ansible](/t/-/6888)                                            |
+|       | what-is-new-with-maas-3-4         | [MAAS 3.4 release notes](/t/-/7071)                             |
 |       | what-is-new-with-maas-3-3         | [MAAS 3.3 release notes](/t/-/6346)                             |
 |       | what-is-new-with-maas-2-9         | [MAAS 2.9 release notes](/t/-/5961)                             |
 |       | what-is-new-with-maas-3-2         | [MAAS 3.2 release notes](/t/-/5962)                             |
