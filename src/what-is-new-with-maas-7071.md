@@ -1,13 +1,14 @@
-<!-- "What is new with MAAS" -->
+<!-- "What is new with MAAS 3.4 Beta" -->
 
-Here you will find release notes for:
+Here you will find release notes for the Beta version(s) of MAAS 3.4.
 
-- The current version of MAAS
-- [Other MAAS versions](#heading--other-maas-versions)
+<a href="#heading--MAAS-3-4-Beta2-has-been-released"><h2 id="heading--MAAS-3-4-Beta2-has-been-released">MAAS 3.4 Beta2 has been released</h2></a>
+
+We are happy to announce that MAAS 3.4 Beta1 has been released with [more bug fixes](#heading--MAAS-3-4-Beta2-bug-list).
 
 <a href="#heading--MAAS-3-4-beta-1-has-been-released"><h2 id="heading--MAAS-3-4-beta-1-has-been-released">MAAS 3.4 Beta1 has been released</h2></a>
 
-We are happy to announce that MAAS 3.4 Beta1 has been released, with new features and [many bug fixes](#heading--MAAS-3-4-beta-1-bug-list).  MAAS 3.3 is a concerted effort to improve MAAS on multiple fronts, including a large number of bug fixes. 
+We are happy to announce that MAAS 3.4 Beta1 has been released, with [many bug fixes](#heading--MAAS-3-4-beta-1-bug-list).
 
 <a href="#heading--MAAS-3-4-beta-1-features"><h2 id="heading--MAAS-3-4-beta-1-features">MAAS 3.4 Beta 1 features</h2></a>
 
@@ -276,57 +277,61 @@ If this didn’t work, you will need to restore from the backup you made in step
 
 <a href="#heading--MAAS-3-4-beta-1-bug-list"><h2 id="heading--MAAS-3-4-beta-1-bug-list">MAAS 3.4 Beta1 bug list</h2></a>
 
-[1999160](https://bugs.launchpad.net/bugs/1999160)`↗`:	Region controller fails to run commissioning scripts in proxied environment		
-[1999191](https://bugs.launchpad.net/bugs/1999191)`↗`:	bad interaction between Colorama and the CLI		
-[1999557](https://bugs.launchpad.net/bugs/1999557)`↗`:	MAAS fails to startup when installed from deb package and vault is enabled		
-[2002109](https://bugs.launchpad.net/bugs/2002109)`↗`:	Migration of BMC power credentials fails with manual driver		
-[2002111](https://bugs.launchpad.net/bugs/2002111)`↗`:	Connection to local Vault fails if proxy is configured		
-[2003888](https://bugs.launchpad.net/bugs/2003888)`↗`:	Grouped machine list view: Inconsistent display when machine state changes		
-[1743648](https://bugs.launchpad.net/bugs/1743648)`↗`:	Image import fails		
-[1811799](https://bugs.launchpad.net/bugs/1811799)`↗`:	Normal users can read machine details of owned machines		
-[1812377](https://bugs.launchpad.net/bugs/1812377)`↗`:	An admin is allowed to create raids for an Allocated node in the UI, but not the API		
-[1958451](https://bugs.launchpad.net/bugs/1958451)`↗`:	power_driver parameter is not preserved		
-[1990172](https://bugs.launchpad.net/bugs/1990172)`↗`:	"20-maas-03-machine-resources" commissioning script improperly reports a Pass when the test fails		
-[1995084](https://bugs.launchpad.net/bugs/1995084)`↗`:	MAAS TLS sets HSTS forcibly and with too short value		
-[1999147](https://bugs.launchpad.net/bugs/1999147)`↗`:	[3.3.0-candidate] failure when arch is requested as a filter		
-[1999368](https://bugs.launchpad.net/bugs/1999368)`↗`:	[3.3.0 RC] wrong DNS records		
-[1999579](https://bugs.launchpad.net/bugs/1999579)`↗`:	MAAS OpenAPI docs are not available in air-gapped mode		
-[2001546](https://bugs.launchpad.net/bugs/2001546)`↗`:	Server reboot will make subnet entries disappear from zone.maas-internal		
-[2003310](https://bugs.launchpad.net/bugs/2003310)`↗`:	Refresh scripts are not re-run if they pass, but fail to report the results to the region		
-[2003940](https://bugs.launchpad.net/bugs/2003940)`↗`:	MAAS 3.3 RC shows incorrect storage amount		
-[2008275](https://bugs.launchpad.net/bugs/2008275)`↗`:	Intel AMT support is broken in MAAS 3.3.0		
-[2009137](https://bugs.launchpad.net/bugs/2009137)`↗`:	MAAS OpenApi Schema missing parameters		
-[2009186](https://bugs.launchpad.net/bugs/2009186)`↗`:	CLI results in connection timed out when behind haproxy and 5240 is blocked		
-[2009805](https://bugs.launchpad.net/bugs/2009805)`↗`:	machine deploy install_kvm=True fails		
-[2011274](https://bugs.launchpad.net/bugs/2011274)`↗`:	MAAS 3.4: Deployment fails on LXD VMs		
-[2011822](https://bugs.launchpad.net/bugs/2011822)`↗`:	Reverse DNS resolution fails for some machines		
-[2012139](https://bugs.launchpad.net/bugs/2012139)`↗`:	maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled		
-[2017504](https://bugs.launchpad.net/bugs/2017504)`↗`:	Cannot deploy from the cli when "Allow DNS resolution" is set on minimal subnet		
-[1696108](https://bugs.launchpad.net/bugs/1696108)`↗`:	Interface model validates the MAC address twice		
-[1773150](https://bugs.launchpad.net/bugs/1773150)`↗`:	smartctl verify fails due to Unicode in Disk Vendor Name		
-[1773671](https://bugs.launchpad.net/bugs/1773671)`↗`:	MAC address column should use mono font		
-[1959648](https://bugs.launchpad.net/bugs/1959648)`↗`:	Websocket vlan handler should include associated subnet ids		
-[1979403](https://bugs.launchpad.net/bugs/1979403)`↗`:	commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled		
-[1986590](https://bugs.launchpad.net/bugs/1986590)`↗`:	maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named 'provisioningserver'		
-[1990416](https://bugs.launchpad.net/bugs/1990416)`↗`:	MAAS reports invalid command to run when maas-url is incorrect		
-[1993618](https://bugs.launchpad.net/bugs/1993618)`↗`:	Web UI redirection policy can invalidate HAProxy and/or TLS setup		
-[1994945](https://bugs.launchpad.net/bugs/1994945)`↗`:	Failure to create ephemeral VM when no architectures are found on the VM host		
-[1996997](https://bugs.launchpad.net/bugs/1996997)`↗`:	LXD resources fails on a Raspberry Pi with no Ethernet		
-[1999064](https://bugs.launchpad.net/bugs/1999064)`↗`:	`maas_run_scripts.py` does not clean up temporary directory		
-[2002550](https://bugs.launchpad.net/bugs/2002550)`↗`:	Controller type displays as "Undefined"		
-[2007297](https://bugs.launchpad.net/bugs/2007297)`↗`:	LXD REST API connection goes via proxy		
-[2009045](https://bugs.launchpad.net/bugs/2009045)`↗`:	WebSocket API to report reasons for failure for machine bulk actions		
-[2009140](https://bugs.launchpad.net/bugs/2009140)`↗`:	MAAS OpenApi Schema cutoff variable names		
-[2012054](https://bugs.launchpad.net/bugs/2012054)`↗`:	RPC logging when debug is too verbose
+- [1999160](https://bugs.launchpad.net/bugs/1999160)`↗`:	Region controller fails to run commissioning scripts in proxied environment		
+- [1999191](https://bugs.launchpad.net/bugs/1999191)`↗`:	bad interaction between Colorama and the CLI		
+- [1999557](https://bugs.launchpad.net/bugs/1999557)`↗`:	MAAS fails to startup when installed from deb package and vault is enabled		
+- [2002109](https://bugs.launchpad.net/bugs/2002109)`↗`:	Migration of BMC power credentials fails with manual driver		
+- [2002111](https://bugs.launchpad.net/bugs/2002111)`↗`:	Connection to local Vault fails if proxy is configured		
+- [2003888](https://bugs.launchpad.net/bugs/2003888)`↗`:	Grouped machine list view: Inconsistent display when machine state changes		
+- [1743648](https://bugs.launchpad.net/bugs/1743648)`↗`:	Image import fails		
+- [1811799](https://bugs.launchpad.net/bugs/1811799)`↗`:	Normal users can read machine details of owned machines		
+- [1812377](https://bugs.launchpad.net/bugs/1812377)`↗`:	An admin is allowed to create raids for an Allocated node in the UI, but not the API		
+- [1958451](https://bugs.launchpad.net/bugs/1958451)`↗`:	power_driver parameter is not preserved		
+- [1990172](https://bugs.launchpad.net/bugs/1990172)`↗`:	"20-maas-03-machine-resources" commissioning script improperly reports a Pass when the test fails		
+- [1995084](https://bugs.launchpad.net/bugs/1995084)`↗`:	MAAS TLS sets HSTS forcibly and with too short value		
+- [1999147](https://bugs.launchpad.net/bugs/1999147)`↗`:	[3.3.0-candidate] failure when arch is requested as a filter		
+- [1999368](https://bugs.launchpad.net/bugs/1999368)`↗`:	[3.3.0 RC] wrong DNS records		
+- [1999579](https://bugs.launchpad.net/bugs/1999579)`↗`:	MAAS OpenAPI docs are not available in air-gapped mode		
+- [2001546](https://bugs.launchpad.net/bugs/2001546)`↗`:	Server reboot will make subnet entries disappear from zone.maas-internal		
+- [2003310](https://bugs.launchpad.net/bugs/2003310)`↗`:	Refresh scripts are not re-run if they pass, but fail to report the results to the region		
+- [2003940](https://bugs.launchpad.net/bugs/2003940)`↗`:	MAAS 3.3 RC shows incorrect storage amount		
+- [2008275](https://bugs.launchpad.net/bugs/2008275)`↗`:	Intel AMT support is broken in MAAS 3.3.0		
+- [2009137](https://bugs.launchpad.net/bugs/2009137)`↗`:	MAAS OpenApi Schema missing parameters		
+- [2009186](https://bugs.launchpad.net/bugs/2009186)`↗`:	CLI results in connection timed out when behind haproxy and 5240 is blocked		
+- [2009805](https://bugs.launchpad.net/bugs/2009805)`↗`:	machine deploy install_kvm=True fails		
+- [2011274](https://bugs.launchpad.net/bugs/2011274)`↗`:	MAAS 3.4: Deployment fails on LXD VMs		
+- [2011822](https://bugs.launchpad.net/bugs/2011822)`↗`:	Reverse DNS resolution fails for some machines		
+- [2012139](https://bugs.launchpad.net/bugs/2012139)`↗`:	maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled		
+- [2017504](https://bugs.launchpad.net/bugs/2017504)`↗`:	Cannot deploy from the cli when "Allow DNS resolution" is set on minimal subnet		
+- [1696108](https://bugs.launchpad.net/bugs/1696108)`↗`:	Interface model validates the MAC address twice		
+- [1773150](https://bugs.launchpad.net/bugs/1773150)`↗`:	smartctl verify fails due to Unicode in Disk Vendor Name		
+- [1773671](https://bugs.launchpad.net/bugs/1773671)`↗`:	MAC address column should use mono font		
+- [1959648](https://bugs.launchpad.net/bugs/1959648)`↗`:	Websocket vlan handler should include associated subnet ids		
+- [1979403](https://bugs.launchpad.net/bugs/1979403)`↗`:	commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled		
+- [1986590](https://bugs.launchpad.net/bugs/1986590)`↗`:	maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named 'provisioningserver'		
+- [1990416](https://bugs.launchpad.net/bugs/1990416)`↗`:	MAAS reports invalid command to run when maas-url is incorrect		
+- [1993618](https://bugs.launchpad.net/bugs/1993618)`↗`:	Web UI redirection policy can invalidate HAProxy and/or TLS setup		
+- [1994945](https://bugs.launchpad.net/bugs/1994945)`↗`:	Failure to create ephemeral VM when no architectures are found on the VM host		
+- [1996997](https://bugs.launchpad.net/bugs/1996997)`↗`:	LXD resources fails on a Raspberry Pi with no Ethernet		
+- [1999064](https://bugs.launchpad.net/bugs/1999064)`↗`:	`maas_run_scripts.py` does not clean up temporary directory		
+- [2002550](https://bugs.launchpad.net/bugs/2002550)`↗`:	Controller type displays as "Undefined"		
+- [2007297](https://bugs.launchpad.net/bugs/2007297)`↗`:	LXD REST API connection goes via proxy		
+- [2009045](https://bugs.launchpad.net/bugs/2009045)`↗`:	WebSocket API to report reasons for failure for machine bulk actions		
+- [2009140](https://bugs.launchpad.net/bugs/2009140)`↗`:	MAAS OpenApi Schema cutoff variable names		
+- [2012054](https://bugs.launchpad.net/bugs/2012054)`↗`:	RPC logging when debug is too verbose
 
-<a href="#heading--other-maas-versions"><h2 id="heading--other-maas-versions">Release notes for other MAAS versions</h2></a>
+<a href="#heading--MAAS-3-4-Beta2-bug-list"><h2 id="heading--MAAS-3-4-Beta2-bug-list">MAAS 3.4 Beta2 bug list</h2></a>
+#heading--MAAS-3-4-beta-2-bug-list.
 
-Here are release notes for other relatively recent MAAS versions:
-
-- [MAAS 3.3](https://maas.io/docs/what-is-new-with-maas-3-3)`↗`
-- [MAAS 3.2](https://maas.io/docs/what-is-new-with-maas-3-2)`↗`
-- [MAAS 3.1](https://maas.io/docs/what-is-new-with-maas-3-1)`↗`
-- [MAAS 3.0](https://maas.io/docs/what-is-new-with-maas-3-0)`↗`
-- [MAAS 2.9](https://maas.io/docs/what-is-new-with-maas-2-9)`↗`
-- [MAAS 2.8](https://maas.io/docs/what-is-new-with-maas-2-8)`↗`
-- [MAAS 2.7](https://maas.io/docs/what-is-new-with-maas-2-7)`↗`
+- [1974050](https://bugs.launchpad.net/bugs/1974050)`↗`: Vmware no longer supports image cloning
+- [2009209](https://bugs.launchpad.net/bugs/2009209)`↗`: snap deployed maas is not able to use openstack nova power type due to missing python3-novaclient dependency
+- [1830619](https://bugs.launchpad.net/bugs/1830619)`↗`: The "authoritative" field value is ignored when creating/editing domains
+- [1914762](https://bugs.launchpad.net/bugs/1914762)`↗`: test network configuration broken with openvswitch bridge
+- [1999668](https://bugs.launchpad.net/bugs/1999668)`↗`: reverse DNS not working for some interfaces
+- [2016908](https://bugs.launchpad.net/bugs/2016908)`↗`: udev fails to make prctl() syscall with apparmor=0 (as used by maas by default)
+- [2019229](https://bugs.launchpad.net/bugs/2019229)`↗`: 3.4.0~beta1 maas-region-api fails to start with pylxd 2.3.2~alpha1-420-10-g.72426bf~ubuntu22.04.1
+- [1818672](https://bugs.launchpad.net/bugs/1818672)`↗`: Option to show full name of a user in the UI
+- [1823153](https://bugs.launchpad.net/bugs/1823153)`↗`: maas init doesn't check if the user or email already exists
+- [1876365](https://bugs.launchpad.net/bugs/1876365)`↗`: host passthrough not working with KVMs
+- [2018149](https://bugs.launchpad.net/bugs/2018149)`↗`: MAAS generates netplan with illegal autoconf and accept_ra flags for 22.04
+- [2020427](https://bugs.launchpad.net/bugs/2020427)`↗`: crash importing large database dump into maas-test-db
