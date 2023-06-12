@@ -547,7 +547,7 @@
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>RBAC and candid</h1><!-- "RBAC and candid" -->
 <p><a href="#heading--multi-tenancy-in-maas"><h2 id="heading--multi-tenancy-in-maas">Multi-tenancy in MAAS</h2></a></p>
-<p>Likewise, you want to grant fine-grained access-controls to different users, based on assigned roles.  Working in concert with RBAC and Candid, MAAS can restrict user access and actions based on four roles:</p>
+<p>Likewise, you want to grant fine-grained access-controls to different users, based on assigned roles.  Working in concert with RBAC and <a href="https://github.com/canonical/candid#readme">Candid</a>, MAAS can restrict user access and actions based on four roles:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Administrator: can access all settings and perform any operation on any machine in any resource pool; equivalent to a MAAS administrator.</li>
 <li>Operator: can act as a MAAS administrator, but only within an assigned resource pool.  Machines in other resource pools &ndash; and system settings &ndash; are not accessible.</li>
@@ -585,6 +585,7 @@
 </ul>
 <p>Candid can use certificates and agents, if desired.  You specify the identity provider by URL when instantiating the program.</p>
 <p>When a user tries to log into a MAAS which is working with RBAC, MAAS redirects that login to the RBAC server.  RBAC, in turn, requests authentication via Candid, which then consults the specified identity server (at the URL provided on startup).  If the user is authenticated, Candid constructs a macaroon, which is then passed to RBAC and on to MAAS.  This macaroon serves as the user&rsquo;s authentication token until it expires.</p>
+<p>For details about how to use Candid, please consult the <a href="https://github.com/canonical/candid#readme">repository README</a> or contact your Canonical sales representative.</p>
 <p><a href="#heading--about-rbac"><h2 id="heading--about-rbac">About RBAC</h2></a></p>
 <p>RBAC uses a database to associate a given role with a properly-authenticated user identity.  With RBAC, permissions are associated with roles, not individual users. Within a given resource pool, the role assigned to a properly authenticated user controls what they can and cannot do within that pool.</p>
 <p>In the parlance of RBAC, MAAS would be a service, while each resource pool would be considered a separate scope. RBAC/MAAS also recognises scopes that are not tied to machines, including:</p>

@@ -1,7 +1,7 @@
 <!-- "RBAC and candid" -->
 <a href="#heading--multi-tenancy-in-maas"><h2 id="heading--multi-tenancy-in-maas">Multi-tenancy in MAAS</h2></a>
 
-Likewise, you want to grant fine-grained access-controls to different users, based on assigned roles.  Working in concert with RBAC and Candid, MAAS can restrict user access and actions based on four roles:
+Likewise, you want to grant fine-grained access-controls to different users, based on assigned roles.  Working in concert with RBAC and [Candid](https://github.com/canonical/candid#readme), MAAS can restrict user access and actions based on four roles:
 
 - Administrator: can access all settings and perform any operation on any machine in any resource pool; equivalent to a MAAS administrator.
 - Operator: can act as a MAAS administrator, but only within an assigned resource pool.  Machines in other resource pools -- and system settings -- are not accessible.
@@ -55,6 +55,8 @@ Candid can do the following things:
 Candid can use certificates and agents, if desired.  You specify the identity provider by URL when instantiating the program.
 
 When a user tries to log into a MAAS which is working with RBAC, MAAS redirects that login to the RBAC server.  RBAC, in turn, requests authentication via Candid, which then consults the specified identity server (at the URL provided on startup).  If the user is authenticated, Candid constructs a macaroon, which is then passed to RBAC and on to MAAS.  This macaroon serves as the user's authentication token until it expires.
+
+For details about how to use Candid, please consult the [repository README](https://github.com/canonical/candid#readme) or contact your Canonical sales representative.
 
 <a href="#heading--about-rbac"><h2 id="heading--about-rbac">About RBAC</h2></a>
 
@@ -116,3 +118,4 @@ Here is a quick breakdown of how the four roles experience MAAS:
 - Auditor: an auditor can view anything about machines in the resource pool(s) for which they are permitted.  Auditors cannot change or access settings.
 
 MAAS makes no assumptions about how these roles might be used in the day-to-day operation of your MAAS instance.  The capabilities listed above form the complete set of what these roles can do.
+
