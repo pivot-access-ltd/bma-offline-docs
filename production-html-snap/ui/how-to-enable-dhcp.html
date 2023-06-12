@@ -16,7 +16,31 @@
     </style>
   </head>
   <body>
-    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+<div id="sidebar">
+  <ul class="menu">
+    <li>
+      Item 1
+      <ul class="submenu">
+        <li>Subitem 1</li>
+        <li>Subitem 2</li>
+      </ul>
+    </li>
+    <li>
+      Item 2
+      <ul class="submenu">
+        <li>Subitem 3</li>
+        <li>
+          Subitem 4
+          <ul class="submenu">
+            <li>Sub-subitem 1</li>
+            <li>Sub-subitem 2</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
       &nbsp;&nbsp;
       <strong>Offline docs
       </strong>
@@ -553,7 +577,7 @@
 <li><a href="#heading--how-to-manage-ip-ranges">How to manage IP ranges</a></li>
 </ul>
 <p>If needed, you can review an <a href="how-to-set-up-networks.html#heading--Its-always-DHCP">explanation of MAAS  DHCP</a> before undertaking to manage or set MAAS DHCP parameters.</p>
-<p>This article will help you understand:</p>
+<p>This article will help you fathom:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--enabling-dhcp">How to enable MAAS-managed DHCP</a></li>
 <li><a href="#heading--resolving-ip-conflicts">How to resolve IP conflicts</a></li>

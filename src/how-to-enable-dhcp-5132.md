@@ -6,7 +6,7 @@ Management of DHCP and IP ranges is a key element of configuring and managing MA
 
 If needed, you can review an [explanation of MAAS  DHCP](/t/how-to-set-up-networks/6174#heading--Its-always-DHCP) before undertaking to manage or set MAAS DHCP parameters.
 
-This article will help you understand:
+This article will help you fathom:
 
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
