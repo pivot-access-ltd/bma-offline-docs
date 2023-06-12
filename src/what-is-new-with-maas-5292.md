@@ -3,19 +3,8 @@
 Here you will find release notes for:
 
 - The current version of MAAS
+- [MAAS 3.4 Beta](https://maas.io/docs/what-is-new-with-maas-3-4)`↗`
 - [Other MAAS versions](#heading--other-maas-versions)
-
-<a href="#heading--MAAS-3-3-3-has-been-released"><h2 id="heading--MAAS-3-3-3-has-been-released">MAAS 3.3.3 has been released</h2></a>
-
-We are happy to announce that MAAS 3.3.3 has been released.  This is a maintenance release, with no new features, providing the following bug fixes:
-
-- [1959648](https://bugs.launchpad.net/maas/+bug/1959648): Websocket vlan handler should include associated subnet ids
-- [1979403](https://bugs.launchpad.net/maas/+bug/1979403): commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled
-- [1990416](https://bugs.launchpad.net/maas/+bug/1990416): MAAS reports invalid command to run when maas-url is incorrect
-- [1999668](https://bugs.launchpad.net/maas/+bug/1999668): reverse DNS not working for some interfaces
-- [2003940](https://bugs.launchpad.net/maas/+bug/2003940): MAAS 3.3 RC shows incorrect storage amount
-- [2011841](https://bugs.launchpad.net/maas/+bug/2011841): DNS resolution fails
-- [2012466](https://bugs.launchpad.net/maas/+bug/2012466): Fractional value for available CPU cores with an overcommit ratio breaks UI
 
 <a href="#heading--MAAS-3-3-2-has-been-released"><h2 id="heading--MAAS-3-3-2-has-been-released">MAAS 3.3.2 has been released</h2></a>
 
@@ -997,6 +986,7 @@ More bug-fixes are planned for later 3.3 releases.
 
 Here are release notes for other relatively recent MAAS versions:
 
+- [MAAS 3.4](https://maas.io/docs/what-is-new-with-maas-3-4)`↗` -- currently in Beta
 - [MAAS 3.2](https://maas.io/docs/what-is-new-with-maas-3-2)`↗`
 - [MAAS 3.1](https://maas.io/docs/what-is-new-with-maas-3-1)`↗`
 - [MAAS 3.0](https://maas.io/docs/what-is-new-with-maas-3-0)`↗`
