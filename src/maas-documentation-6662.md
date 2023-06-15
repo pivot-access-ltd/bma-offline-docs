@@ -62,6 +62,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | try-out-the-maas-cli              | [Try out the MAAS CLI](/t/-/5236)                               |
 | 2     | create-custom-images              | [Create custom images](/t/-/6102)                               |
 | 2     | get-fancy-cli-output              | [Get fancy CLI output](/t/-/6027)                               |
+| 2  | primers | Primer tutorials |
+| 3 | primer-tutorial-the-osi-model | [OSI model tutorial](/t/primer-tutorial-the-osi-model/7160) |
 | 0     |                                   |                                                                 |
 | 1     | how-to-guides                     | [How-to guides](/t/-/6663)                                      |
 | 2     | how-to-get-started-with-maas      | [Get started with MAAS](/t/-/6202)                              |
