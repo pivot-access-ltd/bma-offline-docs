@@ -2,41 +2,50 @@
 
 These are the release notes for MAAS 3.3.
 
+<a href="#heading--MAAS-3-3-4-has-been-released"><h2 id="heading--MAAS-3-3-4-has-been-released">MAAS 3.3.4 has been released</h2></a>
+
+We are happy to announce that MAAS 3.3.4 has been released.  This is a maintenance release, with no new features, providing the following bug fixes:
+
+- [1998615](https://bugs.launchpad.net/maas/+bug/1998615)`↗`: Rack controller status flapping when "ClusterClient connection lost" messages in rackd.log
+- [2013476](https://bugs.launchpad.net/maas/+bug/2013476)`↗`: 3.3/UI: Machines page is flapping once the machine operation in progress 
+- [1807725](https://bugs.launchpad.net/maas/+bug/1807725)`↗`: Machine interfaces allow '_' character, results on a interface based domain breaking bind (as it doesn't allow it for the host part). 
+- [1914762](https://bugs.launchpad.net/maas/+bug/1914762)`↗`: test network configuration broken with openvswitch bridge 
+
 <a href="#heading--MAAS-3-3-3-has-been-released"><h2 id="heading--MAAS-3-3-3-has-been-released">MAAS 3.3.3 has been released</h2></a>
 
 We are happy to announce that MAAS 3.3.3 has been released.  This is a maintenance release, with no new features, providing the following bug fixes:
 
-- [1959648](https://bugs.launchpad.net/maas/+bug/1959648): Websocket vlan handler should include associated subnet ids
-- [1979403](https://bugs.launchpad.net/maas/+bug/1979403): commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled
-- [1990416](https://bugs.launchpad.net/maas/+bug/1990416): MAAS reports invalid command to run when maas-url is incorrect
-- [1999668](https://bugs.launchpad.net/maas/+bug/1999668): reverse DNS not working for some interfaces
-- [2003940](https://bugs.launchpad.net/maas/+bug/2003940): MAAS 3.3 RC shows incorrect storage amount
-- [2011841](https://bugs.launchpad.net/maas/+bug/2011841): DNS resolution fails
-- [2012466](https://bugs.launchpad.net/maas/+bug/2012466): Fractional value for available CPU cores with an overcommit ratio breaks UI
+- [1959648](https://bugs.launchpad.net/maas/+bug/1959648)`↗`: Websocket vlan handler should include associated subnet ids
+- [1979403](https://bugs.launchpad.net/maas/+bug/1979403)`↗`: commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled
+- [1990416](https://bugs.launchpad.net/maas/+bug/1990416)`↗`: MAAS reports invalid command to run when maas-url is incorrect
+- [1999668](https://bugs.launchpad.net/maas/+bug/1999668)`↗`: reverse DNS not working for some interfaces
+- [2003940](https://bugs.launchpad.net/maas/+bug/2003940)`↗`: MAAS 3.3 RC shows incorrect storage amount
+- [2011841](https://bugs.launchpad.net/maas/+bug/2011841)`↗`: DNS resolution fails
+- [2012466](https://bugs.launchpad.net/maas/+bug/2012466)`↗`: Fractional value for available CPU cores with an overcommit ratio breaks UI
 
 <a href="#heading--MAAS-3-3-2-has-been-released"><h2 id="heading--MAAS-3-3-2-has-been-released">MAAS 3.3.2 has been released</h2></a>
 
 We are happy to announce that MAAS 3.3.2 has been release with the following bug fixes:
 
-- [1990867](https://bugs.launchpad.net/maas/+bug/1990867)	TestImportBootImages - test_update_last_image_sync_end_to_end_import_not_performed
-- [1990872](https://bugs.launchpad.net/maas/+bug/1990872)	Flaky test: TestClusterClient - test_registerRackWithRegion_end_to_end
-- [2011822](https://bugs.launchpad.net/maas/+bug/2011822)	Reverse DNS resolution fails for some machines
-- [2012139](https://bugs.launchpad.net/maas/+bug/2012139)	maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled
-- [1986590](https://bugs.launchpad.net/maas/+bug/1986590)	maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named 'provisioningserver'
+- [1990867](https://bugs.launchpad.net/maas/+bug/1990867T)`↗`: TestImportBootImages - test_update_last_image_sync_end_to_end_import_not_performed
+- [1990872](https://bugs.launchpad.net/maas/+bug/1990872)`↗`: Flaky test: TestClusterClient - test_registerRackWithRegion_end_to_end
+- [2011822](https://bugs.launchpad.net/maas/+bug/2011822)`↗`: Reverse DNS resolution fails for some machines
+- [2012139](https://bugs.launchpad.net/maas/+bug/2012139)`↗`: maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled
+- [1986590](https://bugs.launchpad.net/maas/+bug/1986590)`↗`: maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named 'provisioningserver'
 
 <a href="#heading--MAAS-3-3-1-has-been-released"><h2 id="heading--MAAS-3-3-1-has-been-released">MAAS 3.3.1 has been released</h2></a>
 
 We are happy to announce that MAAS 3.3.1 has been released with the following bug fixes:
 
-- [1773150](https://bugs.launchpad.net/maas/+bug/1773150) smartctl verify fails due to Unicode in Disk Vendor Name
-- [1993618](https://bugs.launchpad.net/maas/+bug/1993618) Web UI redirection policy can invalidate HAProxy and/or TLS setup
-- [1996997](https://bugs.launchpad.net/maas/+bug/1996997) LXD resources fails on a Raspberry Pi with no Ethernet
-- [2003310](https://bugs.launchpad.net/maas/+bug/2003310) Refresh scripts are not re-run if they pass, but fail to report the results to the region
-- [2008275](https://bugs.launchpad.net/maas/+bug/2008275) Intel AMT support is broken in MAAS 3.3.0
-- [2009137](https://bugs.launchpad.net/maas/+bug/2009137) MAAS OpenApi Schema missing parameters
-- [2009140](https://bugs.launchpad.net/maas/+bug/2009140) MAAS OpenApi Schema cutoff variable names
-- [2009186](https://bugs.launchpad.net/maas/+bug/2009186) CLI results in connection timed out when behind haproxy and 5240 is blocked
-- [2009805](https://bugs.launchpad.net/maas/+bug/2009805) machine deploy install_kvm=True fails
+- [1773150](https://bugs.launchpad.net/maas/+bug/1773150)`↗`:  smartctl verify fails due to Unicode in Disk Vendor Name
+- [1993618](https://bugs.launchpad.net/maas/+bug/1993618)`↗`:  Web UI redirection policy can invalidate HAProxy and/or TLS setup
+- [1996997](https://bugs.launchpad.net/maas/+bug/1996997)`↗`:  LXD resources fails on a Raspberry Pi with no Ethernet
+- [2003310](https://bugs.launchpad.net/maas/+bug/2003310)`↗`:  Refresh scripts are not re-run if they pass, but fail to report the results to the region
+- [2008275](https://bugs.launchpad.net/maas/+bug/2008275)`↗`:  Intel AMT support is broken in MAAS 3.3.0
+- [2009137](https://bugs.launchpad.net/maas/+bug/2009137)`↗`:  MAAS OpenApi Schema missing parameters
+- [2009140](https://bugs.launchpad.net/maas/+bug/2009140)`↗`:  MAAS OpenApi Schema cutoff variable names
+- [2009186](https://bugs.launchpad.net/maas/+bug/2009186)`↗`:  CLI results in connection timed out when behind haproxy and 5240 is blocked
+- [2009805](https://bugs.launchpad.net/maas/+bug/2009805)`↗`:  machine deploy install_kvm=True fails
 
 <a href="#heading--MAAS-3-3-has-been-released"><h2 id="heading--MAAS-3-3-has-been-released">MAAS 3.3 has been released</h2></a>
 
