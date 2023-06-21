@@ -1,5 +1,5 @@
 <!-- "Virtual machines" -->
-Virtual machines bring tremendous advantages to MAAS.  We use [LXD](https://linuxcontainers.org/lxd/introduction/)`↗` as our primary VM host, so everything about MAAS VMs is optimised for LXD VMs.  For reference, VM hosts are called "KVMs" in the MAAS Web UI.
+Virtual machines bring useful advantages to MAAS.  We use [LXD](https://linuxcontainers.org/lxd/introduction/)`↗` as our primary VM host, so everything about MAAS VMs is optimised for LXD VMs.  For reference, VM hosts are called "KVMs" in the MAAS Web UI.
 
 If KVMs and LXD VMs are not new to you, feel free to go ahead and [set up LXD](/t/how-to-set-up-lxd/5208), create one or more [VM hosts](/t/how-to-create-vm-hosts/5140), and start [deploying virtual machines](/t/how-to-create-and-manage-vms/5148) to cover your workload.  The rest of this article provides a little theory about MAAS VM hosts, just in case you need to catch up.
 
@@ -226,5 +226,3 @@ Please use the MAAS UI to view overcommit ratios for NUMA resources.
 [/tabs]
 
 Over-committing resources allows a user to compose many MAAS-managed machines without worrying about the physical limitations of the host. For example, on a physical host with four cores and 12 GB of memory, you could compose four libvirt machines, each using two cores and 4 GB of memory.  This arrangement over commits the available physical resources. Provided you never run all four VMs simultaneously, you would have all the benefits of MAAS-managed VMs without over-taxing your host.
-
-
