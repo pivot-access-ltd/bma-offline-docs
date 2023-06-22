@@ -62,8 +62,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | try-out-the-maas-cli              | [Try out the MAAS CLI](/t/-/5236)                               |
 | 2     | create-custom-images              | [Create custom images](/t/-/6102)                               |
 | 2     | get-fancy-cli-output              | [Get fancy CLI output](/t/-/6027)                               |
-| 2  | primers | Primer tutorials |
-| 3 | primer-tutorial-the-osi-model | [OSI model tutorial](/t/primer-tutorial-the-osi-model/7160) |
+| 2     | primers                           | Primer tutorials                                                |
+| 3     | primer-tutorial-the-osi-model     | [OSI model tutorial](/t/primer-tutorial-the-osi-model/7160)     |
 | 0     |                                   |                                                                 |
 | 1     | how-to-guides                     | [How-to guides](/t/-/6663)                                      |
 | 2     | how-to-get-started-with-maas      | [Get started with MAAS](/t/-/6202)                              |
@@ -118,8 +118,16 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-contribute-doc             | [Contribute documentation](/t/-/6949)                           |
 | 0     |                                   |                                                                 |
 | 1     | reference                         | [Reference](/t/-/6143)                                          |
+| 2     | maas-release-notes                | [Release notes](/t/-/5292)                                      |
+| 3     | what-is-new-with-maas-3-4         | [MAAS 3.4 release notes](/t/-/7071)                             |
+| 3     | what-is-new-with-maas-3-3         | [MAAS 3.3 release notes](/t/-/6346)                             |
+| 3     | what-is-new-with-maas-3-2         | [MAAS 3.2 release notes](/t/-/5962)                             |
+| 3     | what-is-new-with-maas-3-1         | [MAAS 3.1 release notes](/t/-/5964)                             |
+| 3     | what-is-new-with-maas-3-0         | [MAAS 3.0 release notes](/t/-/5963)                             |
+| 3     | what-is-new-with-maas-2-9         | [MAAS 2.9 release notes](/t/-/5961)                             |
+| 3     | what-is-new-with-maas-2-8         | [MAAS 2.8 release notes](/t/-/5994)                             |
+| 3     | what-is-new-with-maas-2-7         | [MAAS 2.7 release notes](/t/-/5993)                             |
 | 2     | general-reference                 | [General](/t/-/6950)                                            |
-| 3     | maas-release-notes                | [Release notes](/t/-/5292)                                      |
 | 3     | installation-requirements         | [Installation requirements](/t/-/6233)                          |
 | 3     | maas-settings                     | [MAAS settings](/t/-/6347)                                      |
 | 3     | maas-source-code                  | [MAAS source code](https://launchpad.net/maas)                  |
@@ -163,14 +171,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | about-maas-security               | [MAAS security](/t/-/6719)                                      |
 | 2     | about-maas-performance            | [MAAS performance](/t/-/6178)                                   |
 | 2     | about-ansible                     | [Ansible](/t/-/6888)                                            |
-|       | what-is-new-with-maas-3-4         | [MAAS 3.4 release notes](/t/-/7071)                             |
-|       | what-is-new-with-maas-3-3         | [MAAS 3.3 release notes](/t/-/6346)                             |
-|       | what-is-new-with-maas-2-9         | [MAAS 2.9 release notes](/t/-/5961)                             |
-|       | what-is-new-with-maas-3-2         | [MAAS 3.2 release notes](/t/-/5962)                             |
-|       | what-is-new-with-maas-3-0         | [MAAS 3.0 release notes](/t/-/5963)                             |
-|       | what-is-new-with-maas-3-1         | [MAAS 3.1 release notes](/t/-/5964)                             |
-|       | what-is-new-with-maas-2-7         | [MAAS 2.7 release notes](/t/-/5993)                             |
-|       | what-is-new-with-maas-2-8         | [MAAS 2.8 release notes](/t/-/5994)                             |
 |       |                                   |                                                                 |
 
 [/details]
