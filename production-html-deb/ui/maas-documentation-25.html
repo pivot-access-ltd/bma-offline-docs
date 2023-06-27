@@ -11,8 +11,23 @@
       #sidebar a:visited{color:black;}
       #sidebar a:active{color:black;}
       #sidebar a:hover{color:blue;}
-      ul {margin-left:0;list-style-type:none;padding-left:20px;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
       li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
     </style>
   </head>
   <body>
@@ -36,11 +51,12 @@
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <ul>
 	<li>
-          <a href="maas-documentation.html">MAAS Documentation</a>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
 	</li>
+	<hr style="margin-top:15px;">
 	<li>
           <details>
-            <summary><a href="tutorial.html">Tutorials</a></summary>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
             <ul>
               <li>
 		<details>
@@ -77,9 +93,10 @@
             </ul>
           </details>
 	</li>
+	<hr style="margin-top:15px;">
 	<li>
           <details>
-            <summary><a href="how-to-guides.html">How-to Guides</a></summary>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
             <ul>
               <li>
 		<details>
@@ -230,6 +247,7 @@
             </ul>
           </details>
 	</li>
+	<hr style="margin-top:15px;">
 	<li>
           <details>
             <summary><a href="reference.html">Reference</a></summary>
@@ -355,6 +373,7 @@
 	    </ul>
 	  </details>
 	</li>
+	<hr style="margin-top:15px;">
 	<li>
 	  <details>
 	    <summary><a href="explanation.html">Explanation</a></summary>
