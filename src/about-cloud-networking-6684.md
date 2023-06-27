@@ -1,4 +1,4 @@
-<!-- "Cloud networking" -->
+<!-- "About cloud networking" -->
 
 Cloud network architectures deviate significantly from the architecture of the Internet infrastructure.  These deviations are driven mostly by economics, simplicity, and scalability.  This article will help you learn:
 
@@ -9,7 +9,7 @@ Cloud network architectures deviate significantly from the architecture of the I
 
 <a href="#heading--clos-architecture"><h2 id="heading--clos-architecture">About old and new network architectures</h2></a>
 
-Before there were networks, monolithic applications ran on a mainframe with hardwired I/O devices.  As CPUs proliferated in separate enclosures, LANs like [Banyan Vines](https://en.wikipedia.org/wiki/Banyan_VINES)`↗` grew up.  Proprietary mismatch led to the [OSI model](https://maas.io/docs/about-tcp-ip-network#heading--about-the-osi-model)`↗`.  Next came the Web, which distributed processing to client devices.  Now, we have the idea of generic switches and servers in cloud and bare-metal clusters.  Servers have shifted from dedicated applications to being completely [virtualised](https://en.wikipedia.org/wiki/Virtualization)`↗`.
+Before there were networks, monolithic applications ran on a mainframe with hardwired I/O devices.  As CPUs proliferated in separate enclosures, LANs like [Banyan Vines](https://en.wikipedia.org/wiki/Banyan_VINES)`↗` grew up.  Proprietary mismatch led to the [OSI model](https://maas.io/docs/about-tcp-ip-networks#heading--about-the-osi-model)`↗`.  Next came the Web, which distributed processing to client devices.  Now, we have the idea of generic switches and servers in cloud and bare-metal clusters.  Servers have shifted from dedicated applications to being completely [virtualised](https://en.wikipedia.org/wiki/Virtualization)`↗`.
 
 A traditional AAC architecture looks like this:
 
