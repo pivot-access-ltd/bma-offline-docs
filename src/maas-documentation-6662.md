@@ -163,12 +163,14 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | controllers                       | Controllers                                                     |
 | 3     | about-controllers                 | [Region and rack controllers](/t/-/6690)                        |
 | 3     | about-high-availability           | [High availability](/t/-/6992)                                  |
-| 2     | about-machines                    | [Machines](/t/-/6695)                                           |
-| 2     | about-virtual-machines            | [Virtual machines](/t/-/6704)                                   |
-| 2     | about-device-labels               | [Device labels](/t/-/6709)                                      |
-| 2     | about-maas-events                 | [MAAS events](/t/-/6510)                                        |
-| 2     | about-audit-events                | [Audit events](/t/-/6372)                                       |
-| 2     | about-maas-logging                | [MAAS logging](/t/-/5240)                                       |
+| 2     | machines-and-devices              | Machines and devices                                            |
+| 3     | about-machines                    | [Machines](/t/-/6695)                                           |
+| 3     | about-virtual-machines            | [Virtual machines](/t/-/6704)                                   |
+| 3     | about-device-labels               | [Device labels](/t/-/6709)                                      |
+| 2     | events-and-logging                | Events and logging                                              |
+| 3     | about-maas-events                 | [MAAS events](/t/-/6510)                                        |
+| 3     | about-audit-events                | [Audit events](/t/-/6372)                                       |
+| 3     | about-maas-logging                | [MAAS logging](/t/-/5240)                                       |
 | 2     | about-maas-security               | [MAAS security](/t/-/6719)                                      |
 | 2     | about-maas-performance            | [MAAS performance](/t/-/6178)                                   |
 | 2     | about-ansible                     | [Ansible](/t/-/6888)                                            |
