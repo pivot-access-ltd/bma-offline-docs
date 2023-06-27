@@ -2,7 +2,7 @@
 
 Once you have [installed MAAS](/t/how-to-do-a-fresh-install-of-maas/5128), a valuable next step is to get some virtual machines up and running using the MAAS CLI. 
 
-The MAAS CLI provides a command-line interface that allows you to manage your MAAS installation from the terminal. You can use it to add machines, manage nodes, allocate resources, and more. With the MAAS CLI, you can automate your infrastructure deployment and management tasks, making it easier to scale your infrastructure and respond to changing business needs. To get started with the MAAS CLI, you'll need to familiarize yourself with the available commands and their syntax -- and that's the purpose of this tutorial.
+The MAAS CLI provides a command-line interface that allows you to manage your MAAS installation from the terminal. You can use it to add machines, manage nodes, allocate resources, and more. With the MAAS CLI, you can automate your infrastructure deployment and management tasks, making it easier to scale your infrastructure and respond to changing business needs. To get started with the MAAS CLI, you'll need to familiarise yourself with the available commands and their syntax -- and that's the purpose of this tutorial.
 
 Once you have a comfort level with the CLI, you can start creating scripts and automation workflows to make your infrastructure management more efficient.
 
@@ -54,7 +54,7 @@ drill down:
 
 ```
 
-This is the help you get (a) if you're not logged in, or (b) if you don't type a logged-in username (called a "profile") after "maas". What you see above isn't even half of what MAAS can do, but it's all you get as an unrecognized user.
+This is the help you get (a) if you're not logged in, or (b) if you don't type a logged-in username (called a "profile") after "maas". What you see above isn't even half of what MAAS can do, but it's all you get as an unrecognised user.
 
 So now, let's login and try that help again:
 
@@ -206,7 +206,7 @@ drill down:
 
 <a href="#heading--Set-the-DNS-server-IP-address"><h2 id="heading--Set-the-DNS-server-IP-address">Set the DNS server IP address</h2></a>
 
-The next step?  Set the DNS server IP address.  You can do this by issuing the CLI subcommand called "dnsresource".  Let's look at the help for that command:
+The next step?  Set the DNS server IP address.  You can do this by issuing the CLI sub-command called "dnsresource".  Let's look at the help for that command:
 
 ```nohighlight
 maas admin dnsresource --help
@@ -245,7 +245,7 @@ Read a DNS resource by id.
    the following arguments are required: id, data
 ```
 
-Well, that's weird, and not what we want.  But wait -- the CLI follows the "collection-instance" rule.  Listing DNS resources would be part of a collection, so they would be pluralized.  Let's try `dnsresources` (plural):
+Well, that's weird, and not what we want.  But wait -- the CLI follows the "collection-instance" rule.  Listing DNS resources would be part of a collection, so they would be pluralised.  Let's try `dnsresources` (plural):
 
 ```nohighlight
 maas admin dnsresources read
@@ -370,7 +370,7 @@ Machine-readable output follows:
 ```
 </details>
 
-Okay, that's a lot of information, but it looks like we have a bunch of 18.04 images downloaded and synched.  Depending on what version of MAAS you're using, your list could be a lot different, and that doesn't matter here.
+Okay, that's a lot of information, but it looks like we have a bunch of 18.04 images downloaded and synced.  Depending on what version of MAAS you're using, your list could be a lot different, and that doesn't matter here.
 
 <a href="#heading--Try-getting-a-more-compact-image-list"><h3 id="heading--Try-getting-a-more-compact-image-list">Try getting a more compact image list</h3></a>
 
@@ -420,7 +420,7 @@ ubuntu/bionic                amd64/hwe-18.04-lowlatency
 ubuntu/bionic                amd64/hwe-18.04-lowlatency-edge
 ```
 
-So basically, we have images needed to boot and deloy machines.  That's a good start, but let's pull down another image for the practice.
+So basically, we have images needed to boot and deploy machines.  That's a good start, but let's pull down another image for the practice.
 
 We can select images with the `boot-source-selections` command, so let's try that with old "Trusty" (Xenial Xerus, aka 16.04):
 
@@ -2457,7 +2457,7 @@ pod management page of the official MAAS documentation.
 :type storage: String
 
  :param interfaces: Optional.  A
-labeled constraint map associating constraint labels with desired
+labelled constraint map associating constraint labels with desired
 interface properties. MAAS will assign interfaces that match the
 given interface properties.
 
@@ -2955,4 +2955,4 @@ On my machine, it didn't copy the permissions precisely, but it is executable by
 
 <a href="#heading--Summary"><h2 id="heading--Summary">Summary</h2></a>
 
-As you see, it's not that difficult to install MAAS, deploy a machine, and then load usable software on it. Now you can go through the MAAS documenation to learn more about what you just did.
+As you see, it's not that difficult to install MAAS, deploy a machine, and then load usable software on it. Now you can go through the MAAS documentation to learn more about what you just did.
