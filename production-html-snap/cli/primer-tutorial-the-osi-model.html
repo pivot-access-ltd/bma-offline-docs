@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
+      li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../ui/primer-tutorial-the-osi-model.html">
+          UI-only
+        </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+          &nbsp;CLI-only&nbsp;
+      </span>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <ul>
+	<li>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary>Try out MAAS</summary>
+		  <ul>
+		    <li>
+		      <a href="bootstrap-maas.html">Bootstrap MAAS</a>
+		    </li>
+		    <li>
+		      <a href="get-to-know-your-machines.html">Get to know your machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<a href="try-out-the-maas-cli.html">Try out the MAAS CLI</a>
+	      </li>
+	      <li>
+		<a href="create-custom-images.html">Create custom images</a>
+	      </li>
+	      <li>
+		<a href="get-fancy-cli-output.html">Get fancy CLI output</a>
+	      </li>
+              <li>
+		<details>
+                  <summary>Primer tutorials</summary>
+		  <ul>
+		    <li>
+		      <a href="primer-tutorial-the-osi-model.html">OSI model tutorial</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary><a href="get-started-with-maas.thml">Get started with MAAS</a></summary>
+		  <ul>
+                    <li>
+                      <a href="do-a-fresh-install-of-maas.html">Do a fresh install of MAAS</a>
+		    </li>
+		    <li>
+                      <a href="upgrade-maas.html">Upgrade MAAS</a>
+		    </li>
+		    <li>
+                      <a href="spin-up-maas-with-ansible.html">Spin up MAAS with Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="set-up-networks.html">Set up networks</a></summary>
+		  <ul>
+                    <li>
+                      <a href="connect-maas-networks.html">Connect MAAS networks</a>
+                    </li>
+                    <li>
+                      <a href="enable-dhcp.html">Enable DHCP</a>
+                    </li>
+                    <li>
+                      <a href="use-availability-zones.html">Use availability zones</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="use-images.html">Use images</a></summary>
+		  <ul>
+                    <li>
+                      <a href="use-standard-images.html">Use standard images</a>
+                    </li>
+                    <li>
+                      <a href="mirror-images-locally.html">Mirror images locally</a>
+                    </li>
+                    <li>
+                      <a href="customise-images.html">Customise images</a>
+                    </li>
+                    <li>
+                      <a href="employ-vmware-images.html">Employ VMWare images</a>
+                    </li>
+                    <li>
+                      <a href="deply-a-rt-kernel.html">Deploy a RT kernel</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="manage-controllers.html">Manage controllers</a></summary>
+		  <ul>
+		    <li>
+		      <a href="configure-controllers.html">Configure controllers</a>
+		    </li>
+		    <li>
+		      <a href="enable-high-availability.html">Enable high availability</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="manage-machines.html">Manage machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="make-machines-available.html">Make machines available</a>
+		    </li>
+		    <li>
+		      <a href="customise-machines.html">Customise machines</a>
+		    </li>
+		    <li>
+		      <a href="put-machines-to-work.html">Put machines to work</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="use-virtual-machines.html">Use virtual machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="set-up-lxd.html">Set up LXD</a>
+		    </li>
+		    <li>
+		      <a href="manage-vm-hosts.html">Manage VM hosts</a>
+		    </li>
+		    <li>
+		      <a href="manage-virtual-machines.html">Manage virtual machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="label-devices.html">Label devices</a></summary>
+		  <ul>
+		    <li>
+		      <a href="tag-machines.html">Tag machines</a>
+		    </li>
+		    <li>
+		      <a href="annotate-machines.html">Annotate machines</a>
+		    </li>
+		    <li>
+		      <a href="use-machine-tags.html">Use machine tags</a>
+		    </li>
+		    <li>
+		      <a href="use-controller-tags.html">Use controller tags</a>
+		    </li>
+		    <li>
+		      <a href="use-storage-tags.html">Use storage tags</a>
+		    </li>
+		    <li>
+		      <a href="use-network-tags.html">Use network tags</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="secure-maas.html">Secure MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"improve-MAAS-security.html">Improve MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="manage-user-accounts.html">Manage user accounts</a>
+		    </li>
+		    <li>
+		      <a href="enable-MAAS-native TLS.html">Enable MAAS native TLS</a>
+		    </li>
+		    <li>
+		      <a href="use-Vault-with-MAAS.html">Use Vault with MAAS</a>
+		    </li>
+		    <li>
+		      <a href="set-up-an-air-gapped MAAS.html">Set up an air-gapped MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="reference.html">Reference</a></summary>
+            <ul>
+	      <details>
+		<summary><a href="release-notes.html">Release notes</a></summary>
+		<ul>
+		  <li>
+		    <a href="maas-3-4-release notes.html">MAAS 3.4 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-3-release notes.html">MAAS 3.3 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-2-release notes.html">MAAS 3.2 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-1-release notes.html">MAAS 3.1 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-0-release notes.html">MAAS 3.0 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-2-9-release notes.html">MAAS 2.9 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-2-8-release notes.html">MAAS 2.8 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-2-7-release notes.html">MAAS 2.7 release notes</a>
+              	  </li>
+		</ul>
+	      </details>
+              <li>
+		<details>
+                  <summary><a href="general-reference.html">General</a></summary>
+		  <ul>
+		    <li>
+		      <a href="maas-settings.html">Settings</a>
+		    </li>
+		    <li>
+		      <a href="https://launchpad.net/maas">Source code</a>
+		    </li>
+		    <li>
+		      <a href="doc-style-guide.html">Doc style guide</a>
+		    </li>
+		    <li>
+		      <a href="glossary.html">Glossary</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/community/code-of-conduct">Code of conduct</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+              <li>
+		<details>
+		  <summary><a href="api.html">API</a></summary>
+		  <ul>
+		    <li>
+                      <a href="api-authentication.html">API authentication</a>
+                    </li>
+		    <li>
+                      <a href="python-api-client.html">Python API client</a>
+                    </li>
+		    <li>
+                      <a href="/docs/api">API documentation</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="scripts.html">Scripts</a></summary>
+		  <ul>
+		    <li>
+                      <a href="commissioning-scripts.html">Commissioning scripts</a>
+                    </li>
+		    <li>
+                      <a href="hardware-test-scripts.html">Hardware test scripts</a>
+                    </li>
+		    <li>
+                      <a href="terraform.html">Terraform</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="logging.html">Logging</a></summary>
+		  <ul>
+		    <li>
+                      <a href="event-logs.html">Event logs</a>
+                    </li>
+		    <li>
+                      <a href="audit-event-logs.html">Audit event logs</a>
+                    </li>
+		    <li>
+                      <a href="commissioning-logs.html">Commissioning logs</a>
+                    </li>
+		    <li>
+                      <a href="testing-logs.html">Testing logs</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="machine-parameters.html">machine-parameters</a></summary>
+		  <ul>
+		    <li>
+                      <a href=.html"power-drivers.html">Power drivers</a>
+                    </li>
+		    <li>
+                      <a href="storage-layouts.html">Storage layouts</a>
+                    </li>
+		    <li>
+                      <a href="device-labelling.html">Device labelling</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+	  <details>
+	    <summary><a href="explanation.html">Explanation</a></summary>
+	    <ul>
+	      <li>
+		<a href="maas.html">About MAAS</a>
+		-           </li>
+	      <li>
+		<a href=.html"high-availability.html">High availability</a>
+              </li>
+	      <li>
+		<details>
+		  <summary>Networking</summary>
+		  <ul>
+		    <li>
+		      <a href="maas-networks.html">MAAS networks</a>
+		    </li>
+		    <li>
+		      <a href="tcp/IP-primer.html">TCP/IP primer</a>
+		    </li>
+		    <li>
+		      <a href="dhcp-primer.html">DHCP primer</a>
+		    </li>
+		    <li>
+		      <a href="cloud-networking-primer.html">Cloud networking primer</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<a href="images.html">Images</a>
+              </li>
+	      <li>
+		<a href="controllers.html">Controllers</a>
+              </li>
+	      <li>
+		<a href="machines.html">Machines</a>
+              </li>
+	      <li>
+		<a href="virtual-machines.html">Virtual machines</a>
+              </li>
+	      <li>
+		<a href="device-labels.html">Device labels</a>
+              </li>
+	      <li>
+		<a href="maas-events.html">Events</a>
+              </li>
+	      <li>
+		<a href="audit-events.html">Audit events</a>
+              </li>
+	      <li>
+		<a href="maas-logging.html">Logging</a>
+              </li>
+	      <li>
+		<a href="maas-security.html">Security</a>
+              </li>
+	      <li>
+		<a href="maas-performance.html">Performance</a>
+              </li>
+	      <li>
+		<a href="ansible.html">Ansible</a>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Primer Tutorial: The OSI model</h1><!-- "Primer Tutorial: The OSI model" -->
+<p>Let’s explore each of the seven layers of the OSI model through this tutorial.  You’ll get to see how these layers stack together to create the Internet we know today. At the end, we’ll draw you a picture of the OSI “network stack” to help you remember what you’ve learned.</p>
+<p><a href="#heading--Physical-Layer"><h2 id="heading--Physical-Layer">Physical Layer</h2></a></p>
+<p>The Physical Layer deals with the physical aspects of network communication, such as cables and connectors. Use the <code>ifconfig</code> command on Ubuntu to display physical network interfaces and their configurations:</p>
+<ol>
+<li>Open a terminal on your Ubuntu system.</li>
+<li>Type the following command: </li>
+</ol>
+<pre><code class="language-nohighlight">ifconfig eth0
+# (replace &quot;eth0&quot; with the name of your interface if different)
+</code></pre>
+<p>This command provides details about the specified network interface, including its MAC address, speed, and media type. Here&rsquo;s an example output:</p>
+<pre><code class="language-nohighlight">eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.0.100  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::1234:5678:90ab:cdef  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 00:11:22:33:44:55  txqueuelen 1000  (Ethernet)
+        RX packets 123456  bytes 78901234 (78.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 234567  bytes 56789012 (56.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</code></pre>
+<p>In this example, we can observe the following details about the &ldquo;eth0&rdquo; interface:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>MAC address: The line <code>ether 00:11:22:33:44:55</code> displays the MAC (Media Access Control) address, which uniquely identifies the network interface.</li>
+<li>Speed and media type: While not explicitly mentioned in this output, additional information about the speed and media type of the interface may be displayed, depending on the system and network card. This information can include the interface&rsquo;s speed (e.g., 100 Mbps, 1 Gbps) and media type (e.g., Ethernet).</li>
+</ul>
+<p>By using the <code>ifconfig</code> command and examining the output, we can gain insights into the physical layer attributes of a specific network interface, including its MAC address, speed, and media type. Information at this level is frequently used for troubleshooting network issues, configuring network settings, and understanding the physical characteristics of the network infrastructure.</p>
+<p><a href="#heading--The-Data-Link-Layer"><h2 id="heading--The-Data-Link-Layer">The Data Link Layer</h2></a></p>
+<p>The Data Link Layer is the second layer of the OSI model, responsible for error-free data transfer over a physical link. It handles framing, error detection, and flow control. To see the Data Link Layer in action, use the <code>arp</code> command on an Ubuntu system to view the ARP cache:</p>
+<ol>
+<li>Open a terminal on your Ubuntu system.</li>
+<li>Type the following command: </li>
+</ol>
+<pre><code class="language-nohighlight">arp -a
+</code></pre>
+<p>Running the <code>arp -a</code> command will display the ARP cache entries, which include the IP addresses and corresponding MAC addresses of devices on your local network. Here&rsquo;s an example output:</p>
+<pre><code class="language-nohighlight">router (192.168.0.1) at 00:11:22:33:44:55 [ether] on eth0
+laptop (192.168.0.10) at AA:BB:CC:DD:EE:FF [ether] on eth0
+printer (192.168.0.20) at 11:22:33:44:55:66 [ether] on eth0
+</code></pre>
+<p>The ARP cache shows the translation of IP addresses to MAC addresses:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>IP address: Each entry represents a device on the network and includes its IP address (e.g., &ldquo;router&rdquo; has <code>192.168.0.1</code>).</li>
+<li>MAC address: The MAC addresses uniquely identify network interfaces (e.g., &ldquo;router&rdquo; has <code>00:11:22:33:44:55</code>).</li>
+</ul>
+<p>Examining the ARP cache with the <code>arp</code> command reveals how the Data Link Layer translates IP addresses to MAC addresses. This translation is crucial for network communication, as MAC addresses are used at this layer to identify devices on the local network, while IP addresses are used at the Network Layer for addressing devices across different networks.</p>
+<p><a href="#heading--The-Network-Layer"><h2 id="heading--The-Network-Layer">The Network Layer</h2></a></p>
+<p>The Network Layer, the third layer of the OSI model, handles logical addressing and routing of data across networks. It determines the best path for data packets from source to destination. To see its functionality, use the <code>ping</code> command on an Ubuntu system:</p>
+<ol>
+<li>Open the command prompt or terminal on your Ubuntu system.</li>
+<li>Type the following command: </li>
+</ol>
+<pre><code class="language-nohighlight">ping [destination IP address]
+</code></pre>
+<p>The &ldquo;ping&rdquo; command sends ICMP echo requests to the destination IP address. It measures round-trip time and verifies connectivity between network devices. Here&rsquo;s some example output:</p>
+<pre><code class="language-nohighlight">Pinging 192.168.0.1 with 32 bytes of data:
+Reply from 192.168.0.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.0.1: bytes=32 time=2ms TTL=64
+Reply from 192.168.0.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.0.1: bytes=32 time=3ms TTL=64
+
+Ping statistics for 192.168.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milliseconds:
+    Minimum = 1ms, Maximum = 3ms, Average = 1ms
+</code></pre>
+<p>Here&rsquo;s what happened:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Packet routing: When you run the <code>ping</code> command, it sends packets containing a request to a specific IP address. The Network Layer determines the best path for these packets to reach the destination by consulting routing tables and protocols like IP.</li>
+<li>Connectivity verification: The <code>ping</code> command waits for a reply from the destination device. When it receives the reply, it confirms connectivity and measures the round-trip time. The Network Layer ensures that these packets are properly routed and delivered.</li>
+</ul>
+<p>Using <code>ping</code>, we can observe how the Network Layer handles packet routing and verifies connectivity between devices. This is important for smooth communication and troubleshooting network issues.</p>
+<p><a href="#heading--The-Transport-Layer"><h2 id="heading--The-Transport-Layer">The Transport Layer</h2></a></p>
+<p>The Transport Layer, the fourth layer of the OSI model, handles connections, reliability, and data transfer for applications. To see how it works, we can use the <code>netstat</code> command:</p>
+<ol>
+<li>Open the command prompt or terminal on your Ubuntu system.</li>
+<li>Type the following command and press Enter:</li>
+</ol>
+<pre><code class="language-nohighlight">netstat -a
+</code></pre>
+<p>The <code>netstat</code> command displays active network connections and their associated transport layer protocols like TCP and UDP. This allows us to observe how the Transport Layer establishes connections, ensures reliability, and handles data transfer. Here&rsquo;s some example output:</p>
+<pre><code class="language-nohighlight">Active Connections
+
+Proto   Local Address     Foreign Address     State
+TCP     0.0.0.0:80        0.0.0.0:0           LISTENING
+TCP     192.168.0.10:45678 123.45.67.89:443  ESTABLISHED
+UDP     0.0.0.0:53        0.0.0.0:0
+</code></pre>
+<p>Using this sample output, we can explore the Transport Layer&rsquo;s functionality in a very direct way:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Establishing connections: The output shows TCP connections in &ldquo;LISTENING&rdquo; and &ldquo;ESTABLISHED&rdquo; states. When an application listens on a specific port, like TCP port 80, it waits for incoming connection requests. &ldquo;LISTENING&rdquo; means it&rsquo;s ready to accept connections, and &ldquo;ESTABLISHED&rdquo; indicates an active connection between local and foreign addresses.</p>
+</li>
+<li>
+<p>Maintaining reliability: TCP ensures accurate data delivery without loss. It uses acknowledgement, re-transmission, and flow control to achieve this, guaranteeing successful transmission and reception.</p>
+</li>
+<li>
+<p>Handling data transfer: The output includes both TCP and UDP. TCP offers reliable and ordered data transfer, while UDP provides faster but less reliable communication. The Transport Layer segments data, adds protocol-specific headers, and ensures proper delivery to the receiving application.</p>
+</li>
+</ul>
+<p>By using the <code>netstat</code> command, we can observe active connections and their transport layer protocols. This helps us understand how the Transport Layer establishes connections, maintains reliability, and handles data transfer between applications.</p>
+<p><a href="#heading--The-Session-Layer"><h2 id="heading--The-Session-Layer">The Session Layer</h2></a></p>
+<p>The Session Layer, the fifth layer of the OSI model, handles the setup, maintenance, and termination of sessions between network applications. It allows for coordinated data exchange between devices or processes. To see how it works, we can use the <code>telnet</code> command to create a session between your device and the remote server. We can use that session to demonstrate how the Session Layer manages session establishment, maintenance, and termination.</p>
+<p>Here&rsquo;s what to do:</p>
+<ol>
+<li>Open a command prompt or terminal on your system.</li>
+<li>Use the <code>netstat -an</code> command to display active network connections for any IP address containing “129.129”:</li>
+</ol>
+<pre><code class="language-nohighlight">netstat -an | grep “129.129”
+</code></pre>
+<ol>
+<li>Type the following command to initiate a Telnet session with the IP address of the “freechess.org” remote server:</li>
+</ol>
+<pre><code class="language-nohighlight">telnet freechess.org
+</code></pre>
+<ol>
+<li>
+<p>The Session Layer establishes a synchronised session between a Telnet client and “freechess.org”, managing the channel.</p>
+</li>
+<li>
+<p>Don’t interact with the remote server through the Telnet client, so that it will time out in just a minute or two.</p>
+</li>
+<li>
+<p>While the Telnet session is ongoing, use the <code>netstat -an</code> command in another command prompt or terminal to display active network connections:</p>
+</li>
+</ol>
+<pre><code class="language-nohighlight">netstat -an | grep “129.129”
+</code></pre>
+<ol>
+<li>
+<p>Observe any changes in the network connections, specifically looking for the established Telnet session to the “freechess.org” IP address and port.</p>
+</li>
+<li>
+<p>Wait for the telnet session to time out.  When it does, use that <code>netstat -an</code> command again:</p>
+</li>
+</ol>
+<pre><code class="language-nohighlight">netstat -an | grep “129.129”
+</code></pre>
+<ol>
+<li>Observe that the Telnet session connection to freechess.org is no longer present in the output.</li>
+</ol>
+<p>By using the <code>telnet</code> command and monitoring network connections with the <code>netstat -an</code> command, we can establish, observe, and terminate a Telnet session, providing a practical demonstration of the functionality of the Session Layer. </p>
+<p><a href="#heading--The-Presentation-Layer"><h2 id="heading--The-Presentation-Layer">The Presentation Layer</h2></a></p>
+<p>The Presentation Layer, the sixth layer of the OSI model, manages the formatting, encryption, compression, and translation of data to facilitate the exchange of multimedia files and ensure compatibility between different systems.  We’ll demonstrate this by proxy, using translation tools to approximate what goes on at this layer:</p>
+<ol>
+<li>
+<p>Assume you have a scenario where a user wants to share a multimedia presentation file (e.g., a LibreOffice Impress presentation) with another user over a network.</p>
+</li>
+<li>
+<p>The user initiates the file transfer process by selecting the multimedia presentation file on their local system.  You might want to put together a simple LibreOffice presentation file with a couple of random slides.  Call it “presentation.odp”.</p>
+</li>
+<li>
+<p>The Presentation Layer first formats the file in a standardised way, ensuring that it can be understood on the receiving end. This formatting can be demonstrated using a command-line tool like &ldquo;hexdump&rdquo; to view the hexadecimal representation of the file:</p>
+</li>
+</ol>
+<pre><code class="language-nohighlight">hexdump -C presentation.odp
+</code></pre>
+<p>Your sample output might look something like this:</p>
+<pre><code class="language-nohighlight">00000000  50 4b 03 04 14 00 00 08  00 00 c1 82 cf 56 33 26  |PK...........V3&amp;|
+00000010  ac a8 2f 00 00 00 2f 00  00 00 08 00 00 00 6d 69  |../.../.......mi|
+00000020  6d 65 74 79 70 65 61 70  70 6c 69 63 61 74 69 6f  |metypeapplicatio|
+00000030  6e 2f 76 6e 64 2e 6f 61  73 69 73 2e 6f 70 65 6e  |n/vnd.oasis.open|
+00000040  64 6f 63 75 6d 65 6e 74  2e 70 72 65 73 65 6e 74  |document.present|
+00000050  61 74 69 6f 6e 50 4b 03  04 14 00 00 08 00 00 c1  |ationPK.........|
+00000060  82 cf 56 00 00 00 00 00  00 00 00 00 00 00 00 18  |..V.............|
+00000070  00 00 00 43 6f 6e 66 69  67 75 72 61 74 69 6f 6e  |...Configuration|
+00000080  73 32 2f 6d 65 6e 75 62  61 72 2f 50 4b 03 04 14  |s2/menubar/PK...|
+00000090  00 00 08 00 00 c1 82 cf  56 00 00 00 00 00 00 00  |........V.......|
+000000a0  00 00 00 00 00 18 00 00  00 43 6f 6e 66 69 67 75  |.........Configu|
+000000b0  72 61 74 69 6f 6e 73 32  2f 74 6f 6f 6c 62 61 72  |rations2/toolbar|
+000000c0  2f 50 4b 03 04 14 00 00  08 00 00 c1 82 cf 56 00  |/PK...........V.|
+000000d0  00 00 00 00 00 00 00 00  00 00 00 1a 00 00 00 43  |...............C|
+000000e0  6f 6e 66 69 67 75 72 61  74 69 6f 6e 73 32 2f 73  |onfigurations2/s|
+000000f0  74 61 74 75 73 62 61 72  2f 50 4b 03 04 14 00 00  |tatusbar/PK.....|
+00000100  08 00 00 c1 82 cf 56 00  00 00 00 00 00 00 00 00  |......V.........|
+00000110  00 00 00 18 00 00 00 43  6f 6e 66 69 67 75 72 61  |.......Configura|
+00000120  74 69 6f 6e 73 32 2f 66  6c 6f 61 74 65 72 2f 50  |tions2/floater/P|
+00000130  4b 03 04 14 00 00 08 00  00 c1 82 cf 56 00 00 00  |K...........V...|
+00000140  00 00 00 00 00 00 00 00  00 1a 00 00 00 43 6f 6e  |.............Con|
+00000150  66 69 67 75 72 61 74 69  6f 6e 73 32 2f 70 6f 70  |figurations2/pop|
+00000160  75 70 6d 65 6e 75 2f 50  4b 03 04 14 00 00 08 00  |upmenu/PK.......|
+</code></pre>
+<ol>
+<li>The Presentation Layer then applies any necessary data compression techniques to reduce the file&rsquo;s size, optimising network transmission and storage. This can be demonstrated using a tool like <code>gzip</code>:</li>
+</ol>
+<pre><code class="language-nohighlight">gzip presentation.odp
+</code></pre>
+<ol>
+<li>After this operation, the file’s hex dump looks different:</li>
+</ol>
+<pre><code class="language-nohighlight">$ hexdump -C presentation.odp.gz | less
+00000000  1f 8b 08 08 aa 3a 8b 64  00 03 70 72 65 73 65 6e  |.....:.d..presen|
+00000010  74 61 74 69 6f 6e 2e 6f  64 70 00 cd fd 05 54 1d  |tation.odp....T.|
+00000020  c1 b6 2e 8c 2e 5c 83 13  dc 82 bb 04 0d ee c1 17  |.....\..........|
+00000030  1e dc dd dd 61 e1 ee ee  4e 70 82 bb 05 08 ee ee  |....a...Np......|
+00000040  c1 dd dd ff 64 ef 7b ce  4e f6 3d e7 fc f7 be 31  |....d.{.N.=....1|
+00000050  de 78 6f 65 74 7f d5 c5  9c b3 e6 ac ae fe aa 3b  |.xoet..........;|
+00000060  a3 ba 27 50 0a 02 12 03  00 80 05 00 ba fd c6 55  |..'P...........U|
+00000070  3e 52 94 17 33 02 00 80  df db af 2a 80 95 99 95  |&gt;R..3......*....|
+00000080  91 a3 9b ad 91 9e ad ad  a5 99 81 9e a3 99 8d 35  |...............5|
+00000090  a3 b3 b5 21 83 8d 9e 83  99 03 83 8d ad 91 b5 a1  |...!............|
+000000a0  8d 81 93 95 91 b5 23 83  ad bd 91 c3 2f fc 87 0c  |......#...../...|
+000000b0  f0 2f a3 80 3f 7e d8 bf  36 61 1b 6b 63 33 13 27  |./..?~..6a.kc3.'|
+000000c0  fb 7f 88 3a b0 30 fe 52  77 d2 d7 b3 67 fc bf d3  |...:.0.Rw...g...|
+000000d0  72 b4 b1 b1 fc 9f b5 70  ff 0b 2d 87 5f 0e 3a 39  |r......p..-._.:9|
+000000e0  fc df b7 66 6c 69 a3 e7  68 f4 7f db 9a ad 8d ad  |...fli..h.......|
+000000f0  93 ed ef f0 fe 07 3d fc  ff 4a cf de c6 e4 57 77  |......=..J....Ww|
+00000100  fe bf f8 f9 5f b5 f8 bb  57 6c f5 ac 8d 2c ff 07  |...._...Wl...,..|
+00000110  3d a2 ff 42 cf cc 4a cf  c4 c8 81 51 c8 cc d1 4a  |=..B..J....Q...J|
+00000120  cf d6 e1 ff d2 5d 3d 03  03 23 4b a3 5f 87 36 ff  |.....]=..#K._.6.|
+00000130  e1 2e 2c 2c ec ff a6 89  f0 6b 33 b0 b1 76 fc 3d  |..,,.....k3..v.=|
+00000140  58 5c ad 2c 77 34 96 ed  33 d8 b1 3b ce 14 99 0c  |X\.,w4..3..;....|
+00000150  97 ca 6a e8 be 59 78 34  36 7c b4 62 69 37 cd 94  |..j..Yx46|.bi7..|
+00000160  2e 72 e6 3e 29 7c 0f 59  26 42 2c 86 e6 b1 af bc  |.r.&gt;)|.Y&amp;B,.....|
+:
+</code></pre>
+<ol>
+<li>If encryption is desired for secure transmission, the Presentation Layer can encrypt the file to protect its contents from unauthorised access. You can use a tool like <code>openssl</code> to demonstrate encryption:</li>
+</ol>
+<pre><code class="language-nohighlight">openssl enc -aes-256-cbc -salt \
+ -in presentation.odp.gz \
+ -out presentation.odp.gz.crypt
+</code></pre>
+<ol>
+<li>Another hex dump will show yet more changes to the file:</li>
+</ol>
+<pre><code class="language-nohighlight">$ hexdump -C presentation.odp.gz.crypt | less
+00000000  53 61 6c 74 65 64 5f 5f  77 5a ef 37 94 ea bb 5b  |Salted__wZ.7...[|
+00000010  2f c8 4a 4d 30 a9 2a ec  3d 55 4d dd dd b0 7c a2  |/.JM0.*.=UM...|.|
+00000020  d5 92 fa 92 85 ce 86 c7  b3 fb ef 42 42 37 5e 91  |...........BB7^.|
+00000030  f3 08 81 0e a2 22 dc 74  a6 c0 1d d8 7a 97 0d a1  |.....&quot;.t....z...|
+00000040  5b 87 ac 89 3f 50 02 31  8f 35 8f 63 7c e5 6d 2d  |[...?P.1.5.c|.m-|
+00000050  72 76 1a a5 fc 61 1f cc  5d 47 da af 68 97 07 7b  |rv...a..]G..h..{|
+00000060  5e 75 3c e0 9c 1c 04 1b  23 a3 10 9c ea 38 92 69  |^u&lt;.....#....8.i|
+00000070  e2 84 6c 3f 0a 91 83 f1  1b 3e 3a 96 54 e3 af bd  |..l?.....&gt;:.T...|
+00000080  14 b8 16 c9 67 21 ec a0  85 21 33 ca ce 8b b5 09  |....g!...!3.....|
+00000090  6f 08 42 21 58 aa 65 46  ec 31 8d a4 62 ca 1f ac  |o.B!X.eF.1..b...|
+000000a0  04 9b b5 5a dc c5 ae 88  95 6f 13 ab b1 90 fa f2  |...Z.....o......|
+000000b0  50 50 63 22 86 e2 5a 4e  37 fe 92 a6 65 88 7a 5f  |PPc&quot;..ZN7...e.z_|
+000000c0  42 89 b2 b3 65 26 0f 53  57 ed d4 97 50 ab df 7b  |B...e&amp;.SW...P..{|
+000000d0  48 1e f6 84 c4 f3 c5 34  3b fb e4 91 e3 31 6c be  |H......4;....1l.|
+000000e0  11 43 9a 64 68 13 c6 3a  34 9d 58 64 10 b8 b5 01  |.C.dh..:4.Xd....|
+000000f0  69 8d 64 ef b9 e6 35 09  7e 86 d8 08 cf 07 b9 fd  |i.d...5.~.......|
+00000100  8b 6b 59 2e ba df 2a 50  34 1f 72 5f bc 19 d7 2d  |.kY...*P4.r_...-|
+00000110  67 4a dc 3f ab 29 9a db  7c 6d a9 c9 04 42 ab 72  |gJ.?.)..|m...B.r|
+00000120  af 27 de 57 8a 73 f2 75  8d 33 15 4f 6f b5 76 91  |.'.W.s.u.3.Oo.v.|
+00000130  52 25 52 76 81 58 9e 1f  ef 66 0e a5 d2 34 69 01  |R%Rv.X...f...4i.|
+00000140  59 5c ea 55 1c 38 2b ef  1f 6a 9a 14 9c e1 11 72  |Y\.U.8+..j.....r|
+00000150  c2 1b 49 59 ff 1c d3 45  46 69 7c 5d a7 fd 29 d2  |..IY...EFi|]..).|
+00000160  30 d5 c9 64 cf 0c 14 17  13 0f 1c d0 23 2b e6 67  |0..d........#+.g|
+:
+</code></pre>
+<ol>
+<li>Once the file is formatted, compressed, and optionally encrypted, it is ready for transmission over the network. This can be achieved using various network protocols or file transfer utilities, such as &ldquo;scp&rdquo; (Secure Copy) or &ldquo;rsync&rdquo;:</li>
+</ol>
+<pre><code class="language-nohighlight">scp &lt;file&gt; &lt;username&gt;@&lt;remote_server&gt;:&lt;destination_path&gt;
+</code></pre>
+<ol>
+<li>At the receiving end, the Presentation Layer of the recipient&rsquo;s system receives the transmitted file. The Presentation Layer then performs the reverse processes to the received file.  First, it decrypts the file:</li>
+</ol>
+<pre><code class="language-nohighlight">openssl enc -aes-256-cbc -d \
+-in presentation.odp.gz.crypt \
+-out presentation.odp.gz
+</code></pre>
+<ol>
+<li>Next, it decompresses the data to restore it to its original size and format; for this proxy example, try using <code>gunzip</code> to decompress the file:</li>
+</ol>
+<pre><code class="language-nohighlight">gunzip presentation.odp.gz
+</code></pre>
+<ol>
+<li>Finally, the Presentation Layer presents the multimedia presentation file to the receiving user in a compatible format that can be displayed by the appropriate application or software. You can open the file using the appropriate software, such as LibreOffice:</li>
+</ol>
+<pre><code class="language-nohighlight">libreoffice --impress presentation.odp
+</code></pre>
+<p>In this example, our faux (proxied) Presentation Layer performs various tasks such as data formatting, compression, encryption, and decryption to ensure the seamless exchange of the multimedia presentation file between users over the network. The provided CLI commands demonstrate each step of the process, albeit by analogy, allowing you to observe the kind of transformations done by the Presentation Layer.</p>
+<p>The Presentation Layer&rsquo;s functionalities extend beyond this example, encompassing other tasks such as character encoding conversions, graphic image compression, and handling different data representations between systems. It plays a vital role in enabling interoperability and ensuring that data is properly understood and utilised by different applications and devices within a network.</p>
+<p><a href="#heading--Wrap-up"><h2 id="heading--Wrap-up">Wrap-up</h2></a></p>
+<p>Here, you got a rough feel for how the various OSI layers manipulate and transfer data, from your application at the Presentation Layer, all the way down to the Physical Layer, and then back to Presentation for display on the other end.  The actual process is more complex and invokes a lot of standards &ndash; which is why it works so reliably.  In the next tutorial, we&rsquo;ll explore these layers in more depth. </p>
+<p>And, as promised, here&rsquo;s a concise picture of what we just covered:</p>
+<p><img alt="image|690x469" src="upload://AflI1wcMYwng8ByjV2is5kagVFT.png"></p>
+    </div>
+  </body>
+</html>
