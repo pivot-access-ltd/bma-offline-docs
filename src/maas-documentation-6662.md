@@ -154,14 +154,15 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 0     |                                   |                                                                 |
 | 1     | explanation                       | [Explanation](/t/-/6141)                                        |
 | 2     | about-maas                        | [MAAS](/t/-/6678)                                               |
-| 2     | about-high-availability           | [High availability](/t/-/6992)                                  |
 | 2     | networking                        | Networking                                                      |
 | 3     | about-maas-networks               | [MAAS networks](/t/-/5084)                                      |
 | 3     | about-tcp-ip-network              | [TCP/IP primer](/t/-/6683)                                      |
 | 3     | about-dhcp                        | [DHCP primer](/t/-/6682)                                        |
 | 3     | about-cloud-networking            | [Cloud networking primer](/t/-/6684)                            |
 | 2     | about-images                      | [Images](/t/-/6685)                                             |
-| 2     | about-controllers                 | [Controllers](/t/-/6690)                                        |
+| 2     | controllers                       | Controllers                                                     |
+| 3     | about-controllers                 | [Region and rack controllers](/t/-/6690)                        |
+| 3     | about-high-availability           | [High availability](/t/-/6992)                                  |
 | 2     | about-machines                    | [Machines](/t/-/6695)                                           |
 | 2     | about-virtual-machines            | [Virtual machines](/t/-/6704)                                   |
 | 2     | about-device-labels               | [Device labels](/t/-/6709)                                      |
