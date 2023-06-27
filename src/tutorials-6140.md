@@ -9,4 +9,3 @@ If you're good with the basics, but want to get fancy, there are tutorials for t
 And for dedicated command line users, we offer "[Get fancy CLI output](/t/get-fancy-cli-output/6027)," which will teach you how to customize the output of the MAAS CLI to make it more informative and easier to understand, using the wonderful, open-source [jq](https://stedolan.github.io/jq/tutorial/) tool.  Using `jq` will give you just enough tabular output to give the CLI that command-line, dashboard feel that makes it a joy to use -- without spending time in a mouse-driven browser GUI.
 
 By following these tutorials, you can gain some skills and confidence needed to help you engage MAAS and manage your infrastructure with ease.
-
