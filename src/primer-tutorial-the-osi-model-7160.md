@@ -313,4 +313,8 @@ The Presentation Layer's functionalities extend beyond this example, encompassin
 
 <a href="#heading--Wrap-up"><h2 id="heading--Wrap-up">Wrap-up</h2></a>
 
-Here, you got a rough feel for how the various OSI layers manipulate and transfer data, from your application at the Presentation Layer, all the way down to the Physical Layer, and then back to Presentation for display on the other end.  The actual process is more complex and invokes a lot of standards -- which is why it works so reliably.  In the next tutorial, we'll explore these layers in more depth.
+Here, you got a rough feel for how the various OSI layers manipulate and transfer data, from your application at the Presentation Layer, all the way down to the Physical Layer, and then back to Presentation for display on the other end.  The actual process is more complex and invokes a lot of standards -- which is why it works so reliably.  In the next tutorial, we'll explore these layers in more depth. 
+
+And, as promised, here's a concise picture of what we just covered:
+
+![image|690x469](upload://AflI1wcMYwng8ByjV2is5kagVFT.png)
