@@ -1,7 +1,9 @@
-<!-- "MAAS installation requirements" -->
-<a href="#heading--check-system-requirements-for-maas"><h2 id="heading--check-system-requirements-for-maas">How to check system requirements for MAAS</h2></a>
-
+<!-- MAAS installation requirements -->
 Before installing MAAS for the first time, you should make sure that the target system meets the minimum requirements for the machines that run MAAS, which vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.
+
+<a href="#heading--maas-ntp-and-chrony"><h2 id="heading--maas-ntp-and-chrony">MAAS, NTP, and chrony</h2></a>
+
+When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, `systemd-timesyncd`, and the NTP client/server provided by MAAS, `chrony`. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by `systemd-timesyncd`.  Appropriate instructions are provided in the MAAS installation guides.
 
 <a href="#heading--test-environment"><h2 id="heading--test-environment">Requirements for a test environment</h2></a>
 
