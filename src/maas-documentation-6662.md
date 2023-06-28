@@ -140,7 +140,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | python-api-client-reference           | [Python API client](/t/-/5404)                                  |
 | 3     | maas-api-documentation                | [API documentation](/docs/api)                                  |
 | 2     | scripts-reference                     | [Scripts](/t/-/5375)                                            |
-| 3     | comm-scripts-reference                | [Commissioning scripts](/t/-/6605)                              |
+| 3     | commissioning-scripts-reference       | [Commissioning scripts](/t/-/6605)                              |
 | 3     | testing-scripts-reference             | [Hardware test scripts](/t/-/5392)                              |
 | 3     | maas-terraform-reference              | [Terraform](/t/-/6327)                                          |
 | 2     | log-reference                         | [Logging](/t/-/6956)                                            |
