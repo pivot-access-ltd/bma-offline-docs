@@ -4,7 +4,7 @@ MAAS is relatively easy to install and configure.  Let's give it a try.
 
 [tabs]
 [tab version="v3.4 Snap"]
-Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.4, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) installing MAAS 3.4.
+Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.4, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) before installing MAAS 3.4.
 
 To install MAAS 3.4 from a snap:
 
@@ -22,7 +22,7 @@ At this point, the snap will download and install from the 3.4 channel.
 
 [/tab]
 [tab version="v3.4 Packages"]
-Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.4, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) installing MAAS 3.4.
+Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.4, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) before installing MAAS 3.4.
 
 To install MAAS 3.4 from packages:
 
@@ -50,7 +50,7 @@ sudo apt-get -y install maas
 
 [/tab]
 [tab version="v3.3 Snap"]
-Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.3, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) installing MAAS 3.3.
+Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.3, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) before installing MAAS 3.3.
 
 To install MAAS 3.3 from a snap:
 
@@ -67,7 +67,7 @@ sudo snap install --channel=3.3 maas
 At this point, the snap will download and install from the 3.3 channel.
 [/tab]
 [tab version="v3.3 Packages"]
-Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.3, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) installing MAAS 3.3.
+Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.3, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) before installing MAAS 3.3.
 
 To install MAAS 3.3 from packages:
 
