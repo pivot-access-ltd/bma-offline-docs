@@ -129,7 +129,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | what-is-new-with-maas-2-7             | [MAAS 2.7 release notes](/t/-/5993)                             |
 | 2     | general-reference                     | [General](/t/-/6950)                                            |
 | 3     | installation-requirements             | [Installation requirements](/t/-/6233)                          |
-| 3     | maas-settings                         | [MAAS settings](/t/-/6347)                                      |
+| 3     | how-to-change-maas-settings           | [MAAS settings](/t/-/6347)                                      |
 | 3     | upgrading-postgresql-12-to-version-14 | [Upgrading PostgreSQL v12 to v14](/t/-/7203)                    |
 | 3     | maas-source-code                      | [MAAS source code](https://launchpad.net/maas)                  |
 | 3     | doc-style-guide                       | [Doc style guide](/t/-/4186)                                    |
