@@ -79,7 +79,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-mirror-images-locally          | [Mirror images locally](/t/-/5927)                              |
 | 3     | how-to-customise-images               | [Customise images](/t/-/5104)                                   |
 | 3     | how-to-employ-vmware-images           | [Employ VMWare images](/t/-/5144)                               |
-| 3     | how-to-deploy-a-rt-kernel             | [Deploy a RT kernel](/t/-/6658)                                 |
+| 3     | how-to-deploy-a-real-time-kernel      | [Deploy a RT kernel](/t/-/6658)                                 |
 | 2     | how-to-manage-controllers             | [Manage controllers](/t/-/6498)                                 |
 | 3     | how-to-configure-controllers          | [Configure controllers](/t/-/5172)                              |
 | 3     | how-to-enable-high-availability       | [Enable high availability](/t/-/5120)                           |
