@@ -5,6 +5,8 @@ This article gives instructions for upgrading your MAAS installation.  Please al
 [tab version="v3.3 Snap"]
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade a snap to MAAS 3.3</h2></a>
 
+Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.3, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) before installing MAAS 3.3.
+
 To upgrade from a earlier snap version to the 3.3 snap (using a `region+rack` configuration):
 
 1. Enter the following command:
@@ -21,6 +23,8 @@ If you are using a multi-node maas deployment with separate regions and racks, y
 [/tab]
 [tab version="v3.3 Packages"] 
 <a href="#heading--How-to-upgrade-from-3-2-through-MAAS-2-9-to-MAAS-3-3"><h2 id="heading--How-to-upgrade-from-3-2-through-MAAS-2-9-to-MAAS-3-3">How to upgrade MAAS 2.9++ to MAAS 3.3</h2></a>
+
+Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.3, and will be discontinued in MAAS 3.5.  We recommend [upgrading to PostgreSQL version 14](/t/upgrading-postgresql-12-to-version-14/7203) before installing MAAS 3.3.
 
 If you are running MAAS 3.2 through MAAS 2.9, you can upgrade directly to MAAS 3.3 with the following procedure:
 
@@ -433,3 +437,4 @@ sudo systemctl disable --now systemd-timesyncd
 ```
 
 Also note that support for PostgreSQL 12 has been deprecated in MAAS 3.3 and will be discontinued in MAAS 3.5.
+
