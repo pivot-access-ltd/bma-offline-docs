@@ -1,4 +1,4 @@
-<!-- "MAAS and Ansible" -->
+<!-- MAAS and ansible -->
 A user should probably have a solid grasp of the Ansible standard terminology:
 
 - Playbooks / plays

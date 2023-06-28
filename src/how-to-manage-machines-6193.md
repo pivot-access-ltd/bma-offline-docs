@@ -1,4 +1,4 @@
-<!-- "How to manage machines" -->
+<!-- How to manage machines -->
 Now that you have your network properly configured -- and your images selected and downloaded -- it's time to get down to business and start deploying machines.
 
 - [Make machines available](/t/how-to-make-machines-available/5160): The first step in deployment is to make the machines available to MAAS. This can be done by discovering them on the network or adding them using their power and network settings. Once available, you can start to customize them to meet the specific needs of your organization.

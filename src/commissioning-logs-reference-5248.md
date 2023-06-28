@@ -1,4 +1,4 @@
-<!-- "Commissioning logs reference" -->
+<!-- Commissioning logs reference -->
 Commissioning logs contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts in the UI by clicking on the "Commissioning" tab for a specific machine.  
 
 You will be presented with a status table of commissioning scripts.  Each of the items in the "NAME" column is the name of a [commissioning script](/t/how-to-put-machines-to-work/5112#heading--how-to-commission-a-machine).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.

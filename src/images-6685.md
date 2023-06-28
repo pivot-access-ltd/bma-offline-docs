@@ -1,4 +1,4 @@
-<!-- "Images" -->
+<!-- Images -->
 
 MAAS provides supported images for stable Ubuntu releases, and for CentOS 7 and CentOS 8.0 releases.  Other images can be [customised](/t/how-to-customise-images/5104) for use with MAAS.
 

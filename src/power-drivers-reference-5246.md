@@ -1,4 +1,4 @@
-<!-- "Power drivers reference" -->
+<!-- Power drivers reference -->
 To manage a machine, MAAS must be able to power cycle it, usually through the machine's [BMC](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller)`↗` card.  Until you configure the power type, a newly-added machine can't be enlisted and used by MAAS.
 
 [tabs]

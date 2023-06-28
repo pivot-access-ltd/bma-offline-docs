@@ -1,4 +1,4 @@
-<!-- "How to use standard images" -->
+<!-- How to use standard images -->
 MAAS is only useful once it has images available to provision its nodes. Therefore, one key post-install task is to select and import images from the boot source. Once MAAS imports images, it will update them on an hourly basis, via a default sync mechanism.  This page explains how to select and import the images that MAAS requires to provision its nodes.
 
 [tabs]

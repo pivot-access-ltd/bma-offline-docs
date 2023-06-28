@@ -1,4 +1,4 @@
-<!-- "Machine storage" -->
+<!-- Machine storage -->
 
 One of the key elements of managing machines is configuring and managing their storage space.  This subsection will help you learn:
 

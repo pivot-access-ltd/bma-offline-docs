@@ -1,4 +1,4 @@
-<!-- "Region-rack communication" -->
+<!-- Region rack communication -->
 
 MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/how-to-enable-high-availability/5120) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
 

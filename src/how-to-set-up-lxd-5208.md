@@ -1,4 +1,4 @@
-<!-- "How to set up LXD" -->
+<!-- How to set up lxd -->
 LXD and MAAS are separate products, and it's useful to allow them to interact as equals, covering a much wider range of use cases.  To allow each of them to follow their own operational models, but still allow them to work together, we've taken advantage of LXD projects.
 
 There is a [refresher on VM hosting](/t/how-to-deploy-virtual-machines/6500#heading--MAAS-VM-hosting) available, if you need it.

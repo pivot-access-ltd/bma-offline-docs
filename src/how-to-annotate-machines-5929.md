@@ -1,4 +1,4 @@
-<!-- "How to annotate machines" -->
+<!-- How to annotate machines -->
 Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: notes (always present in any machine state), and dynamic annotations (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
 
 [note]

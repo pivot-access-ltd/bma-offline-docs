@@ -1,4 +1,4 @@
-<!-- "MAAS audit events" -->
+<!-- MAAS audit events -->
 
 An audit event is a [MAAS event](/t/understanding-maas-events/6373) tagged with `AUDIT`. It captures changes to the MAAS configuration and machine states. These events provide valuable oversight of user actions and automated updates -- and their effects -- especially when multiple users are interacting with multiple machines.  See [Understanding MAAS events](/t/understanding-maas-events/6373) for basic usage of the CLI `events query` command.
 

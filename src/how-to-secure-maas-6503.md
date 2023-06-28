@@ -1,4 +1,4 @@
-<!-- "How to secure MAAS" -->
+<!-- How to secure MAAS -->
 Securing your MAAS instance is essential, and fortunately, there are many options to improve its security.
 
 - [Improve MAAS security](/t/how-to-improve-maas-security/5196): To start, you can take simple, everyday steps that go a long way towards securing MAAS. These include [managing user accounts](/t/how-to-manage-user-accounts/5184) and assigning access rights carefully -- among several other measures you can enact.

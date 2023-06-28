@@ -1,4 +1,4 @@
-<!-- "How to operate MAAS" -->
+<!-- How to operate MAAS -->
 Working with MAAS in your enterprise can be made easier when you adopt some best practices. A lot of these best practices are specific to your situation, requiring some [support and consulting](https://ubuntu.com/pro) to figure out.  Still, we offer a lot of tips and best-effort support to help you manage your MAAS instances more efficiently:
 
 - To find machines quickly and easily, [use filters and matching](/t/how-to-find-machines/5192) when dealing with a large number of MAAS machines. This will save you time and help you find what you need more efficiently.

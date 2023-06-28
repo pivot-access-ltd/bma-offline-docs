@@ -1,4 +1,4 @@
-<!-- "What is new with MAAS 3.1" -->
+<!-- What is new with MAAS 3 1 -->
 
 We are happy to announce that MAAS 3.1 is now available. This release provides new features and critical bug fixes.
 

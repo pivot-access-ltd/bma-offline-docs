@@ -1,4 +1,4 @@
-<!-- "Machines" -->
+<!-- Machines -->
 
 This article will help you sort out the theoretical aspects of MAAS machines.
 

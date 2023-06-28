@@ -1,1 +1,1 @@
-<!-- "The MAAS log file" -->
+<!-- The MAAS log -->

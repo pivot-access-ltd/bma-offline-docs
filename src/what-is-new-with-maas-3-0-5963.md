@@ -1,4 +1,4 @@
-<!-- "What is new with MAAS 3.0" -->
+<!-- What is new with MAAS 3 0 -->
 We are happy to announce the release of MAAS 3.0. This release provides new features, along with critical and high-priority [bug fixes](#heading--maas-3-bug-fixes).
 
 <a href="#heading--Cumulative-summary-of-new-features-in-MAAS-3.0"><h2 id="heading--Cumulative-summary-of-new-features-in-MAAS-3.0">Cumulative summary of new features in MAAS 3.0</h2></a>

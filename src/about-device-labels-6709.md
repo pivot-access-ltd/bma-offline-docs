@@ -1,4 +1,4 @@
-<!-- "Device labels" -->
+<!-- About device labels -->
 When you're working with a half-dozen machines, a lot of labelling isn't necessary.  As your constellation of machines grows, though, you reach a point where you can't keep a compact picture in your head.  This is where tags, annotations, and filtering come in.  
 
 Two of the more useful attributes of machines are tags and annotations.  These can be used not only to identify machines, but to customise them (e.g., kernel options) when they are commissioned and deployed. You can [tag machines](/t/how-to-tag-machines/5928), [annotate machines](/t/how-to-annotate-machines/5929), and use tags to mark [machines](/t/how-to-use-machine-tags/5224), [storage](/t/how-to-use-storage-tags/5232), [controllers](/t/how-to-use-controller-tags/5216), and [network interfaces](/t/how-to-use-network-tags/5228).  

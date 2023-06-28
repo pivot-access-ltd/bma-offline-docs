@@ -1,4 +1,4 @@
-<!-- "MAAS logging" -->
+<!-- MAAS logging -->
 <a href="#heading--path"><h2 id="heading--path">About the syslog logging path</h2></a>
 
 [tabs]

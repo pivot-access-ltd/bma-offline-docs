@@ -1,4 +1,4 @@
-<!-- "Image deployment" -->
+<!-- Image deployment -->
 
 Here's a conceptual view of the way that images get deployed to create a running MAAS machine:
 

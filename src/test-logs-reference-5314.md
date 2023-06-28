@@ -1,4 +1,4 @@
-<!-- "Test log reference" -->
+<!-- Test logs reference -->
 For any machine which has undergone testing, the Tests log screen -- under the "Tests" tab -- shows a list of tests that have been run for that machine, along with a timestamp and result.  You can view the detailed logs for each test script from this tab.
 
 By default, every MAAS machine is tested with the `smartctl-validate` script, which is a script prepared by Canonical using the [smartmontools](https://www.smartmontools.org)`↗` kit.  This is a disk integrity test.  Typical output includes the following:

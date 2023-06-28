@@ -1,4 +1,4 @@
-<!-- "How to contribute documentation" -->
+<!-- How to contribute documentation -->
 
 [note]
 Before contributing documentation, you should review the [MAAS documentation style guide](/t/maas-documentation-style-guide/4186).

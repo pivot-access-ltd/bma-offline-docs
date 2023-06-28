@@ -1,4 +1,4 @@
-<!-- "How to spin up MAAS with Ansible" -->
+<!-- How to spin up MAAS with ansible -->
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages"]
 Ansible playbooks provide a straightforward way to install and configure MAAS (Metal as a Service). This documentation will guide you through the process of setting up and managing MAAS using Ansible.

@@ -1,4 +1,4 @@
-<!-- "How to put machines to work" -->
+<!-- How to put machines to work -->
 The ultimate purpose of MAAS is to deploy and manage machines.  It's important to understand [how images get deployed](/t/how-to-acquire-images/6192#heading--how-images-deploy) -- as explained in [About the machine life-cycle](/t/how-to-manage-machines/6193#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then allocated, then deployed.  This article will help you build on that understanding by explaining:
 
 - [How to commission a machine](#heading--how-to-commission-a-machine)

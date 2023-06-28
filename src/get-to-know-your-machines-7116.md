@@ -1,4 +1,4 @@
-<!-- "Get to know your machines" -->
+<!-- Get to know your machines -->
 As an exercise, let's create some virtual machines with MAAS and find out how to examine them.  Be sure you've completed [this tutorial](/t/bootstrap-maas/5092) first, so that everything is set up and running.
 
 <a href="#heading--Step-1-Create-a-virtual-machine"><h2 id="heading--Step-1-Create-a-virtual-machine">Step 1: Create a virtual machine</h2></a>

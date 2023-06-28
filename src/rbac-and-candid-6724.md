@@ -1,4 +1,4 @@
-<!-- "RBAC and candid" -->
+<!-- Rbac and candid -->
 <a href="#heading--multi-tenancy-in-maas"><h2 id="heading--multi-tenancy-in-maas">Multi-tenancy in MAAS</h2></a>
 
 Likewise, you want to grant fine-grained access-controls to different users, based on assigned roles.  Working in concert with RBAC and [Candid](https://github.com/canonical/candid#readme), MAAS can restrict user access and actions based on four roles:

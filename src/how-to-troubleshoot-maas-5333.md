@@ -1,4 +1,4 @@
-<!-- "How to troubleshoot MAAS" -->
+<!-- How to troubleshoot MAAS -->
 This article may help you deal with some common problems.  It is organised by topic:
 
 - [Find and fix a leaked MAAS admin API key](#heading--Find-and-fix-a-leaked-MAAS-admin-API-key)

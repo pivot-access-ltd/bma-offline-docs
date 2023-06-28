@@ -1,4 +1,4 @@
-<!-- "Search and filter operations" -->
+<!-- Search and filter -->
 <a href="#heading--About-the-MAAS-search-parameter"><h2 id="heading--About-the-MAAS-search-parameter">About the MAAS search parameter</h2></a>
 
 A valid MAAS search parameter looks like this:

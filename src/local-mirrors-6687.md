@@ -1,1 +1,1 @@
-<!-- "Local mirrors" -->
+<!-- Local mirrors -->

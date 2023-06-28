@@ -1,4 +1,4 @@
-<!-- "What is new with MAAS 3.4 Beta" -->
+<!-- What is new with MAAS -->
 
 Here you will find release notes for the Beta version(s) of MAAS 3.4.
 

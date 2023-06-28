@@ -1,4 +1,4 @@
-<!-- "Rack controllers" -->
+<!-- Rack controllers -->
 
 A rack controller provides four services:
 

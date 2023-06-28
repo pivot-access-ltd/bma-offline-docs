@@ -1,4 +1,4 @@
-<!-- "Audit event logs reference" -->
+<!-- Audit event logs reference -->
 Audit events are a subset of the MAAS event logs.  This article will provide reference material for those who want to review and report on events designated as MAAS audit events.
 
 <a href="#heading--about-maas-audit-events"><h2 id="heading--about-maas-audit-events">About MAAS audit events</h2></a>

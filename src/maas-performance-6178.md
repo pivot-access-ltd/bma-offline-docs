@@ -1,4 +1,4 @@
-<!-- "MAAS performance" -->
+<!-- MAAS performance -->
 The MAAS engineering team actively works to improve the performance of MAAS.
 
 <a href="#heading--performance-measurements"><h2 id="heading--performance-measurements">Recent performance measurements</h2></a>

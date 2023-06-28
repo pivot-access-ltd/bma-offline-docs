@@ -1,4 +1,4 @@
-<!-- "How to use HashiCorp Vault with MAAS" -->
+<!-- How to use hashicorp vault with MAAS -->
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages"]
 For MAAS to be able to integrate with Vault, a few steps are required.  Specifically, you must get a role_id and wrapped_token via Vault CLI (follow the instructions from [Hashicorp Vault](https://learn.hashicorp.com/tutorials/vault/approle-best-practices?in=vault/auth-methods#approle-response-wrapping)`↗`).

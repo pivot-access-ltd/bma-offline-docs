@@ -1,4 +1,4 @@
-<!-- "LXD VM hosts" -->
+<!-- Lxd vm hosts -->
 
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages" view="UI"]

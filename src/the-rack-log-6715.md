@@ -1,1 +1,1 @@
-<!-- "The rack log" -->
+<!-- The rack log -->

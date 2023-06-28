@@ -1,4 +1,4 @@
-<!-- "How to manage networking" --> 
+<!-- How to manage networking -->
 Networking is at the very heart of MAAS, and getting it right is essential for smooth operations. Here are some key steps to take:
 
 - [Connect MAAS networks](/t/how-to-connect-maas-networks/5164): First things first -- connect those MAAS networks. You'll need to set up connections between MAAS nodes and controllers so they can communicate. Without this, you're going nowhere fast.  In most cases, you may find it useful to [bone up on MAAS networking essentials](/t/maas-networks/5084) before you start this step.

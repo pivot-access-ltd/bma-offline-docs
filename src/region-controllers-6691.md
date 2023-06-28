@@ -1,4 +1,4 @@
-<!-- "Region controllers" -->
+<!-- Region controllers -->
 
 A region controller consists of the following components:
 

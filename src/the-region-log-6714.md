@@ -1,1 +1,1 @@
-<!-- "the region log" -->
+<!-- The region log -->

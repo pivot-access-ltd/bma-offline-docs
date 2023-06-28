@@ -1,4 +1,4 @@
-<!-- "Try out the MAAS CLI" -->
+<!-- Try out the MAAS cli -->
 
 Once you have [installed MAAS](/t/how-to-do-a-fresh-install-of-maas/5128), a valuable next step is to get some virtual machines up and running using the MAAS CLI. 
 

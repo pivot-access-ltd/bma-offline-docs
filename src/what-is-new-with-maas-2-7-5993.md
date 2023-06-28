@@ -1,4 +1,4 @@
-<!-- "What is new with MAAS 2.7" -->
+<!-- What is new with MAAS 2 7 -->
 
 <a href="#heading--MAAS-2-7-3-released"><h2 id="heading--MAAS-2-7-3-released">MAAS 2.7.3 released</h2></a>
 

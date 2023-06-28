@@ -1,4 +1,4 @@
-<!-- "API authentication reference" -->
+<!-- Api authentication reference -->
 The MAAS API uses [OAuth](http://en.wikipedia.org/wiki/OAuth)`↗` as its authentication mechanism. This isn't third-party (3-legged) OAuth, so the process used is what's commonly referred to as 0-legged OAuth: the consumer accesses protected resources by submitting OAuth signed requests.
 
 Note that some API endpoints support unauthenticated requests (i.e. anonymous access). This article will help you learn:

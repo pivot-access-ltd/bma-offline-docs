@@ -1,4 +1,4 @@
-<!-- "Storage layouts reference" -->
+<!-- Storage layouts reference -->
 There are several possible MAAS storage layouts:
 
 - [Flat layout storage](#heading--flat-storage-layout-reference)

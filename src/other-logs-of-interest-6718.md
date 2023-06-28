@@ -1,1 +1,1 @@
-<!-- "Other logs of interest" -->
+<!-- Other logs of interest -->

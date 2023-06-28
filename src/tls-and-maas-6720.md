@@ -1,4 +1,4 @@
-<!-- "TLS and MAAS" -->
+<!-- Tls and MAAS -->
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
 <a href="#heading--about-maas-native-tls"><h2 id="heading--about-maas-native-tls">About MAAS Native TLS</h2></a>

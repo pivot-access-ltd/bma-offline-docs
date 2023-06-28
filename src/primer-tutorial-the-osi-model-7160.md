@@ -1,4 +1,4 @@
-<!-- "Primer Tutorial: The OSI model" -->
+<!-- Primer tutorial the osi model -->
 Let’s explore each of the seven layers of the OSI model through this tutorial.  You’ll get to see how these layers stack together to create the Internet we know today. At the end, we’ll draw you a picture of the OSI “network stack” to help you remember what you’ve learned.
 
 <a href="#heading--Physical-Layer"><h2 id="heading--Physical-Layer">Physical Layer</h2></a>

@@ -1,1 +1,1 @@
-<!-- "Testing scripts" -->
+<!-- Testing scripts -->

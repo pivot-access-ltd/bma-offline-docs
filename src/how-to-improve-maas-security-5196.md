@@ -1,4 +1,4 @@
-<!-- "How to improve MAAS security" -->
+<!-- How to improve MAAS security -->
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 
 #### This article will help you learn:

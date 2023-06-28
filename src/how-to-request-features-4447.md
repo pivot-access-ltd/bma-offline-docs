@@ -1,4 +1,4 @@
-<!-- "How to request a feature" -->
+<!-- How to request features -->
 
 Sometimes, what starts out as a bug report turns into a feature request, when someone realises that MAAS is not broken, just designed differently than you expected.  At other times, there are capabilities you'd like to see that simply haven't been added to MAAS yet -- or that we wouldn't have considered.  In either case, a feature request is the right answer.  
 

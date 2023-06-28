@@ -1,4 +1,4 @@
-<!-- "MAAS Terraform provider reference" -->
+<!-- MAAS terraform reference -->
 If you wish to use MAAS with [Terraform](https://www.terraform.io/)`↗`, we have made a [provider available](https://github.com/maas/terraform-provider-maas)`↗`.  This article provides reference information about the data sources and resources that can be accessed via this provider.  It does not attempt to explain the mechanics or usage of Terraform or offer any tutorial information related to this MAAS Terraform provider.
 
 <a href="#heading--what-is-this"><h1 id="heading--what-is-this">The MAAS Terraform provider</h1></a>

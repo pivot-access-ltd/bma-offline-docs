@@ -1,4 +1,4 @@
-<!-- "How to make machines available" -->
+<!-- How to make machines available -->
 This article explains:
 
 [tabs]

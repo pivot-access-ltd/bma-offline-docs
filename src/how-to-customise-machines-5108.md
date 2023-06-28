@@ -1,4 +1,4 @@
-<!-- "How to customise machines" -->
+<!-- How to customise machines -->
 MAAS provides the capability to customise machines.  This article will help you learn:
 
 [tabs]

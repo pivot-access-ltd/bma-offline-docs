@@ -1,1 +1,1 @@
-<!-- "Vault and MAAS" -->
+<!-- Vault and MAAS -->

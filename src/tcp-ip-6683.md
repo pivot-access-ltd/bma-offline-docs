@@ -1,4 +1,4 @@
-<!-- "A TCP/IP primer" -->
+<!-- Tcp ip -->
 Good understanding of networking fundamentals makes it much easier to design, operate, and debug MAAS networks. You may have a good grasp of these fundamentals, but not everyone does, and that's perfectly normal.  Here's a quick refresher on TCP/IP networking, with references.  Feel free to pick and choose sections as you need them.
 
 TCP/IP networks evolved to meet a specific need: How can we keep a network functioning if important nodes go offline?  Well, you build the ARPAnet -- now called the Internet -- which relies heavily on TCP/IP networks.  The OSI model underlying TCP/IP can adapt to changing loads, handle significant failures, and strictly limit the network "blast radius" (yes, that's what it's called) when things go wrong.   

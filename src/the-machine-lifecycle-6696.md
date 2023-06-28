@@ -1,4 +1,4 @@
-<!-- "The machine lifecycle" -->
+<!-- The machine lifecycle -->
 
 One of the most important things to understand about machines is their life-cycle. In this subsection, you will learn:
 

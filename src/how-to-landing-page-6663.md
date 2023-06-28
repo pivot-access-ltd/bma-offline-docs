@@ -1,4 +1,4 @@
-<!-- "How-to guides" -->
+<!-- How to landing page -->
 Looking to make the most out of MAAS? Look no further than our comprehensive how-to guides. Whether you're just getting started or looking to optimize your current setup, these guides provide step-by-step instructions for configuring, managing, and using MAAS to its fullest potential.
 
 Get started with ease thanks to our [instructions for installing and configuring MAAS](/t/-/6202). From there, learn how to:

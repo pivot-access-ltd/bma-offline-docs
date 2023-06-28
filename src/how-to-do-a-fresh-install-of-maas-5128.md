@@ -1,4 +1,4 @@
-<!-- "How to do a fresh install of MAAS" -->
+<!-- How to do a fresh install of MAAS -->
 
 MAAS is relatively easy to install and configure.  Let's give it a try.
 

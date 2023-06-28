@@ -1,4 +1,4 @@
-<!-- "How to install and use RBAC with MAAS" -->
+<!-- How to install and use rbac with MAAS -->
 
 Prologue text that explains what this document is about.
 

@@ -1,4 +1,4 @@
-<!-- "How to label devices" -->
+<!-- How to label devices -->
 MAAS provides a robust device labelling system that allows you to easily manage and configure your machines. With tags, annotations, and dynamic annotations, you can sort and describe your machines with ease, and filter your UI dashboards quickly and efficiently.
 
 [Machine tags](/t/how-to-tag-machines/5928) are the most commonly used tags, which not only help to sort your machines but also to configure them during deployment, such as with kernel options. You can also add static and dynamic [annotations](/t/how-to-annotate-machines/5929) to your machines, with the former being persistent and the latter lasting only for the duration of a specific deployment.
