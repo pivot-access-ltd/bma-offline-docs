@@ -1,6 +1,7 @@
 <!-- How to upgrade MAAS -->
 This article gives instructions for upgrading your MAAS installation.  Please also check the [installation notes](#heading--installation-notes) at the end of this document.
 
+[tabs]
 [tab version="v3.3 Snap"]
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade a snap to MAAS 3.3</h2></a>
 
@@ -423,8 +424,7 @@ You have now upgraded to the Ubuntu 20.04 LTS base, and if you check your runnin
 [/tab]
 [/tabs]
 
-<a href="#heading--installation-notes"><h2
-id="heading----installation-notes">Some installation notes</h2></a>
+<a href="#heading--installation-notes"><h2 id="heading----installation-notes">Some installation notes</h2></a>
 
 When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:
 
@@ -433,3 +433,4 @@ sudo systemctl disable --now systemd-timesyncd
 ```
 
 Also note that support for PostgreSQL 12 has been deprecated in MAAS 3.3 and will be discontinued in MAAS 3.5.
+
