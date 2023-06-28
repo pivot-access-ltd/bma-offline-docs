@@ -433,4 +433,3 @@ sudo systemctl disable --now systemd-timesyncd
 ```
 
 Also note that support for PostgreSQL 12 has been deprecated in MAAS 3.3 and will be discontinued in MAAS 3.5.
-
