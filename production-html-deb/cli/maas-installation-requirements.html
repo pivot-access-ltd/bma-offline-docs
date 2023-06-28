@@ -442,8 +442,8 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>d<!-- MAAS installation requirements --></h1><p>d<!-- MAAS installation requirements -->
-Before installing MAAS for the first time, you should make sure that the target system meets the minimum requirements for the machines that run MAAS, which vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.</p>
+      <h1><!-- MAAS installation requirements --></h1><!-- MAAS installation requirements -->
+<p>Before installing MAAS for the first time, you should make sure that the target system meets the minimum requirements for the machines that run MAAS, which vary widely depending on local implementation and usage.  Below, you will find resource estimates based on MAAS components and operating system (Ubuntu Server). We consider both a test configuration (for proof of concept) and a production environment.</p>
 <p><a href="#heading--maas-ntp-and-chrony"><h2 id="heading--maas-ntp-and-chrony">MAAS, NTP, and chrony</h2></a></p>
 <p>When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, <code>systemd-timesyncd</code>, and the NTP client/server provided by MAAS, <code>chrony</code>. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by <code>systemd-timesyncd</code>.  Appropriate instructions are provided in the MAAS <a href="how-to-do-a-fresh-install-of-maas.html#heading--installation-notes">installation guide</a>.</p>
 <p><a href="#heading--test-environment"><h2 id="heading--test-environment">Requirements for a test environment</h2></a></p>
