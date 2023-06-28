@@ -1,4 +1,4 @@
-<!-- How to upgrade MAAS -->
+<!-- "How to upgrade MAAS" -->
 [tabs]
 [tab version="v3.3 Snap"]
 [note]
