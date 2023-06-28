@@ -115,7 +115,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-get-support                    | [Get support](https://ubuntu.com/pro)                           |
 | 3     | how-to-request-new-features           | [Request new features](/t/-/4447)                               |
 | 3     | how-to-review-and-report-bugs         | [Review and report bugs](/t/-/4446)                             |
-| 3     | how-to-contribute-doc                 | [Contribute documentation](/t/-/6949)                           |
+| 3     | how-to-contribute-documentation       | [Contribute documentation](/t/-/6949)                           |
 | 0     |                                       |                                                                 |
 | 1     | reference                             | [Reference](/t/-/6143)                                          |
 | 2     | maas-release-notes                    | [Release notes](/t/-/5292)                                      |
