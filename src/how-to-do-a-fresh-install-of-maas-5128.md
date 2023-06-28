@@ -247,7 +247,7 @@ sudo apt-get -y install maas
 [/tab]
 [/tabs]
 
-<a href="#heading--installation-notes"><h2 id="heading----installation-notes">Some installation notes</h2></a>
+<a href="#heading--installation-notes"><h2 id="heading--installation-notes">Some installation notes</h2></a>
 
 When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:
 
