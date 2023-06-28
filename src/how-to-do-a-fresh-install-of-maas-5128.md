@@ -3,21 +3,19 @@
 MAAS is relatively easy to install and configure.  Let's give it a try.
 
 [note]
-When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. 
+**Important installation notes**
 
-To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:
+1. When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:
 
 ```bash
 sudo systemctl disable --now systemd-timesyncd
 ```
+
+2. Support for PostgreSQL 12 has been deprecated in MAAS 3.3 will be discontinued in MAAS 3.5.
 [/note]
 
 [tabs]
 [tab version="v3.4 Snap"]
-[note]
-Support for PostgreSQL 12 will be discontinued in MAAS 3.5.
-[/note]
-
 To install MAAS 3.4 from a snap:
 
 1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
@@ -34,10 +32,6 @@ At this point, the snap will download and install from the 3.4 channel.
 
 [/tab]
 [tab version="v3.4 Packages"]
-[note]
-Support for PostgreSQL 12 will be discontinued in MAAS 3.5.
-[/note]
-
 To install MAAS 3.4 from packages:
 
 1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
@@ -64,9 +58,6 @@ sudo apt-get -y install maas
 
 [/tab]
 [tab version="v3.3 Snap"]
-[note]
-PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
-[/note]
 To install MAAS 3.3 from a snap:
 
 1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.
@@ -82,9 +73,6 @@ sudo snap install --channel=3.3 maas
 At this point, the snap will download and install from the 3.3 channel.
 [/tab]
 [tab version="v3.3 Packages"]
-[note]
-PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
-[/note]
 To install MAAS 3.3 from packages:
 
 1. Check the [MAAS installation requirements](/t/maas-installation-requirements/6233) to make sure that your hardware will support MAAS.

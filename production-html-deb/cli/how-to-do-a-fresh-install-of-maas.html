@@ -446,12 +446,15 @@
 
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
 <p><strong>NOTE:</strong> 
-When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. </p>
-<p>To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:</p>
+<strong>Important installation notes</strong></p>
+<ol>
+<li>When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:</li>
+</ol>
 <pre><code class="language-bash">sudo systemctl disable --now systemd-timesyncd
 </code></pre>
-<p><strong>NOTE:</strong> 
-Support for PostgreSQL 12 will be discontinued in MAAS 3.5.</p>
+<ol>
+<li>Support for PostgreSQL 12 has been deprecated in MAAS 3.3 will be discontinued in MAAS 3.5.</li>
+</ol>
 <p>To install MAAS 3.4 from packages:</p>
 <ol>
 <li>
