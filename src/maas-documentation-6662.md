@@ -90,7 +90,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | how-to-use-virtual-machines           | [Use virtual machines](/t/-/6500)                               |
 | 3     | how-to-set-up-lxd                     | [Set up LXD](/t/-/5208)                                         |
 | 3     | how-to-manage-vm-hosts                | [Manage VM hosts](/t/-/5140)                                    |
-| 3     | how-to-manage-vms                     | [Manage virtual machines](/t/-/5148)                            |
+| 3     | how-to-manage-virtual-machines        | [Manage virtual machines](/t/-/5148)                            |
 | 2     | how-to-label-devices                  | [Label devices](/t/-/6200)                                      |
 | 3     | how-to-tag-machines                   | [Tag machines](/t/-/5928)                                       |
 | 3     | how-to-annotate-machines              | [Annotate machines](/t/-/5929)                                  |
