@@ -1,10 +1,18 @@
-<!-- "How to upgrade MAAS" -->
-[tabs]
-[tab version="v3.3 Snap"]
+<!-- How to upgrade MAAS -->
 [note]
-PostgreSQL 12 is deprecated with the release of MAAS 3.3, in favour of PostgreSQL 14. Support for PostgreSQL 12 will be discontinued in MAAS 3.4.
+**Important installation notes**
+
+1. When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:
+
+```bash
+sudo systemctl disable --now systemd-timesyncd
+```
+
+2. Support for PostgreSQL 12 has been deprecated in MAAS 3.3 will be discontinued in MAAS 3.5.
 [/note]
 
+[tabs]
+[tab version="v3.3 Snap"]
 <a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h2 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade a snap to MAAS 3.3</h2></a>
 
 To upgrade from a earlier snap version to the 3.3 snap (using a `region+rack` configuration):
