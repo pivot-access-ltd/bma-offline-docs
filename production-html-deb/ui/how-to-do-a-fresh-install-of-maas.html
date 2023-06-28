@@ -445,16 +445,6 @@
       <h1><!-- How to do a fresh install of MAAS --></h1><!-- How to do a fresh install of MAAS -->
 
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
-<p><strong>NOTE:</strong> 
-<strong>Important installation notes</strong></p>
-<ol>
-<li>When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:<br/></li>
-</ol>
-<pre><code class="language-bash">sudo systemctl disable --now systemd-timesyncd&lt;br/&gt;
-</code></pre>
-<ol>
-<li>Support for PostgreSQL 12 has been deprecated in MAAS 3.3 will be discontinued in MAAS 3.5.</li>
-</ol>
 <p>To install MAAS 3.4 from packages:</p>
 <ol>
 <li>
@@ -479,6 +469,11 @@
 <ol>
 <li>Choose &ldquo;Y&rdquo; if asked about whether to continue with the install.</li>
 </ol>
+<p><a href="#heading--installation-notes"><h2 id="heading----installation-notes">Some installation notes</h2></a></p>
+<p>When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:</p>
+<pre><code class="language-bash">sudo systemctl disable --now systemd-timesyncd
+</code></pre>
+<p>Also note that support for PostgreSQL 12 has been deprecated in MAAS 3.3 and will be discontinued in MAAS 3.5.</p>
 <p><a href="#heading--service-status"><h2 id="heading--service-status">How to check the status of MAAS services</h2></a></p>
 <p>To check the status of running services, enter:</p>
 <pre><code class="language-nohighlight">sudo maas status
