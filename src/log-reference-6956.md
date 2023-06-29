@@ -1,4 +1,4 @@
-<!-- "MAAS logs reference" -->
+<!-- "Log reference" -->
 MAAS offers an extensive logging capability across events, scripts, and normal operations.
 
 - [Event logs](/t/event-logs-reference/5252): MAAS event logs will help you diagnose a very large percentage of MAAS issues.
