@@ -1,4 +1,4 @@
-<!-- What is new with MAAS 2 8 -->
+<!-- "What is new with MAAS 2.8" -->
 <h3>MAAS 2.8.4 released</h3>
 
 MAAS 2.8.4 has been released, replacing the `2.8/stable` channel in snap and the [ppa:maas/2.8](https://launchpad.net/~maas/+archive/ubuntu/2.8)`↗` .  You can update your 2.8 release to 2.8.4 with the command:

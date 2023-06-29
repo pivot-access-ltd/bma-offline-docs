@@ -1,4 +1,4 @@
-<!-- Commissioning scripts reference -->
+<!-- "Commissioning scripts reference" -->
 This document provides technical details about commissioning scripts.  For the corresponding details about test scripts, see [Hardware test scripts reference](/t/hardware-test-scripts-reference/5392).
 
 <a href="#heading--metadata-field-reference"><h2 id="heading--metadata-field-reference">Metadata field reference</h2></a>

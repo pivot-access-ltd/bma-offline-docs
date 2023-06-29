@@ -1,4 +1,4 @@
-<!-- How to use hashicorp vault with MAAS -->
+<!-- "How to use Hashicorp Vault with MAAS" -->
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages"]
 For MAAS to be able to integrate with Vault, a few steps are required.  Specifically, you must get a role_id and wrapped_token via Vault CLI (follow the instructions from [Hashicorp Vault](https://learn.hashicorp.com/tutorials/vault/approle-best-practices?in=vault/auth-methods#approle-response-wrapping)`↗`).
@@ -85,7 +85,7 @@ Once this operation has been performed on all region controllers, it's possible 
 ```nohighlight
 $ sudo maas config-vault migrate
 ```
-During migration, MAAS might be offline for a few seconds, but it will refresh quickly.  After this command, MAAS will be fully integrated and functional with Vault. You can confirm success in the UI by checking *Settings --> Configuration --> Security --> Secret Storage*.
+During migration, MAAS might be offline for a few seconds, but it will refresh quickly.  After this command, MAAS will be fully integrated and functional with Vault. You can confirm success in the UI by checking *Settings" --> Configuration --> Security --> Secret Storage*.
 
 [note] 
 If you try to migrate secrets before all region controllers are configured with Vault, the migrate command will fail with an error message.

@@ -1,4 +1,4 @@
-<!-- How to monitor MAAS -->
+<!-- "How to monitor MAAS" -->
 [tabs]
 [tab version="v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
 We aim to make MAAS observable, a system in which the internal state can be estimated using only telemetry data. We now offer easier integration with Prometheus and Loki, which are the data ingestion components of the popular Grafana / Prometheus / Loki / AlarmManager stack. This data should be consumed by a stack composed of off-the-shelf open source software, provided by either Juju (for example with the Canonical Observability Stack) or third-parties (SaaS, self-managed).
@@ -66,7 +66,7 @@ $(wget -qO- ${GRAFANA_KEY} | sed 's/^/                        /')
         - chmod a+x /opt/loki/loki-linux-amd64
         - wget -qO- "${PROM_PKG}" | tar xz --strip-components=1 -C /opt/prometheus
         - wget -qO- "${PROM_ALERT_PKG}" | tar xz --strip-components=1 -C /opt/alertmanager
-        - cat /dev/zero | sudo -u ubuntu -- ssh-keygen -q -N ""
+        - cat /dev/zero | sudo -u ubuntu -- ssh-keygen -q -N "
         ssh_authorized_keys:
         - $(cat ${HOME}/.ssh/id_rsa.pub | cut -d' ' -f1-2)
 description: O11y stack

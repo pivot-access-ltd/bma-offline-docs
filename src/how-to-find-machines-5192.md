@@ -1,4 +1,4 @@
-<!-- How to find machines -->
+<!-- "How to find machines" -->
 The Machines and Devices pages contain a powerful interactive search bar that lets you filter machines and devices.  This article is designed to help you understand how to use this resource. 
 
 #### This article will explain:

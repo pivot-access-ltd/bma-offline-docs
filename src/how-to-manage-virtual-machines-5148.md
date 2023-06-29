@@ -1,4 +1,4 @@
-<!-- How to manage virtual machines -->
+<!-- "How to manage virtual machines" -->
 If you have already created a [VM host](/t/vm-hosting/6705), you will want to create and delete [virtual machines](/t/virtual-machines/6704) (VMs).
 
 [tabs]

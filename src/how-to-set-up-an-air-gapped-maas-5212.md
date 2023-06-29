@@ -1,4 +1,4 @@
-<!-- How to set up an air gapped MAAS -->
+<!-- "How to set up an air-gapped MAAS" -->
 Many MAAS users maintain their data centres in an air-gapped environment that does not have an external Internet connection. MAAS runs well in this configuration, though keeping MAAS supplied with updates and images requires a bit of extra effort.
 
 There are essentially four things that must be available to an air-gapped MAAS for smooth operation:

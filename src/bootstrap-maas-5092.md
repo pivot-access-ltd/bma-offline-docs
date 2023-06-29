@@ -1,4 +1,4 @@
-<!-- Bootstrap MAAS -->
+<!-- "Bootstrap MAAS" -->
 Welcome to the “Bootstrap MAAS” tutorial. By following this comprehensive guide, you will successfully set up and configure MAAS, a powerful tool for managing physical servers and data centres. During this tutorial, you will achieve the following:
 
 - **Installation**: You will learn how to install MAAS on your system, ensuring a solid foundation for managing your infrastructure.

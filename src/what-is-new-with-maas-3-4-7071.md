@@ -1,4 +1,4 @@
-<!-- What is new with MAAS -->
+<!-- "What is new with MAAS 3.4" -->
 
 Here you will find release notes for the Beta version(s) of MAAS 3.4.
 
@@ -191,7 +191,7 @@ sudo maas-rack register
 
 These two steps will lead you through two similar <code>apt</code> install sequences.
 
-<!-- 3.2 or lower upgrade to 3.4
+<!-- "3.2 or lower upgrade to 3.4
 <a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h3 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h3></a>
 
 If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:

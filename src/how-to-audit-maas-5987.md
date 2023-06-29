@@ -1,4 +1,4 @@
-<!-- How to audit MAAS -->
+<!-- "How to audit MAAS" -->
 
 This article gives concise procedures for working with [audit events](/t/maas-audit-events/6372).  Here you will learn:
 

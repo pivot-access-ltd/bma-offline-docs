@@ -1,4 +1,4 @@
-<!-- How to enable dhcp -->
+<!-- "How to enable DHCP" -->
 Management of DHCP and IP ranges is a key element of configuring and managing MAAS:
 
 - [How to manage MAAS DHCP](#heading--how-to-manage-maas-dhcp)

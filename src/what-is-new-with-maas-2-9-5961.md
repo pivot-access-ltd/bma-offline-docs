@@ -1,4 +1,4 @@
-<!-- What is new with MAAS 2 9 -->
+<!-- "What is new with MAAS 2.9" -->
 
 <h2>MAAS 2.9.2 release notes</h2>
 

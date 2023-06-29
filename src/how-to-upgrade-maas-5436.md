@@ -1,4 +1,4 @@
-<!-- How to upgrade MAAS -->
+<!-- "How to upgrade MAAS" -->
 This article gives instructions for upgrading your MAAS installation.  Please also check the [installation notes](#heading--installation-notes) at the end of this document.
 
 [tabs]

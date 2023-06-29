@@ -1,4 +1,4 @@
-<!-- Try out the MAAS cli -->
+<!-- "Try out the MAAS CLI" -->
 
 Once you have [installed MAAS](/t/how-to-do-a-fresh-install-of-maas/5128), a valuable next step is to get some virtual machines up and running using the MAAS CLI. 
 
@@ -504,7 +504,7 @@ Machine-readable output follows:
 {
     "subnet": {
 	"name": "192.168.123.0/24",
-	"description": "",
+	"description": ",
 	"vlan": {
 	    "vid": 0,
 	    "mtu": 1500,
@@ -542,7 +542,7 @@ Machine-readable output follows:
 	"is_local": true,
 	"resource_uri": "/MAAS/api/2.0/users/admin/"
     },
-    "comment": "",
+    "comment": ",
     "id": 1,
     "resource_uri": "/MAAS/api/2.0/ipranges/1/"
 }
@@ -629,7 +629,7 @@ Machine-readable output follows:
     "address_ttl": null,
     "memory_test_status": -1,
     "other_test_status_name": "Unknown",
-    "osystem": "",
+    "osystem": ",
     "status_message": "Commissioning",
     "netboot": true,
     "physicalblockdevice_set": [],
@@ -663,9 +663,9 @@ Machine-readable output follows:
     "blockdevice_set": [],
     "testing_status_name": "Pending",
     "power_state": "unknown",
-    "min_hwe_kernel": "",
+    "min_hwe_kernel": ",
     "owner": "admin",
-    "distro_series": "",
+    "distro_series": ",
     "storage_test_status_name": "Pending",
     "cpu_speed": 0,
     "swap_size": null,
@@ -682,7 +682,7 @@ Machine-readable output follows:
     "pod": null,
     "iscsiblockdevice_set": [],
     "disable_ipv4": false,
-    "status_action": "",
+    "status_action": ",
     "boot_interface": {
 	"name": "eth0",
 	"id": 10,
@@ -697,7 +697,7 @@ Machine-readable output follows:
 	"firmware_version": null,
 	"parents": [],
 	"discovered": null,
-	"params": "",
+	"params": ",
 	"links": [],
 	"sriov_max_vf": 0,
 	"tags": [],
@@ -744,7 +744,7 @@ Machine-readable output follows:
 	    "firmware_version": null,
 	    "parents": [],
 	    "discovered": null,
-	    "params": "",
+	    "params": ",
 	    "links": [],
 	    "sriov_max_vf": 0,
 	    "tags": [],
@@ -762,13 +762,13 @@ Machine-readable output follows:
     "ip_addresses": [],
     "raids": [],
     "network_test_status_name": "Unknown",
-    "description": "",
+    "description": ",
     "current_commissioning_result_id": 6,
     "interface_test_status_name": "Unknown",
     "current_installation_result_id": null,
     "zone": {
 	"name": "default",
-	"description": "",
+	"description": ",
 	"id": 1,
 	"resource_uri": "/MAAS/api/2.0/zones/default/"
     },
@@ -810,7 +810,7 @@ Machine-readable output follows:
     "cpu_count": 1,
     "interface_set": [
 	{
-	    "params": "",
+	    "params": ",
 	    "numa_node": 0,
 	    "tags": [],
 	    "id": 10,
@@ -871,7 +871,7 @@ Machine-readable output follows:
 	    "link_id": null
 	}
     },
-    "status_action": "",
+    "status_action": ",
     "status_message": "Commissioning",
     "cpu_test_status_name": "Unknown",
     "memory_test_status": -1,
@@ -885,7 +885,7 @@ Machine-readable output follows:
     "current_testing_result_id": 9,
     "current_installation_result_id": null,
     "netboot": true,
-    "description": "",
+    "description": ",
     "special_filesystems": [],
     "testing_status": 0,
     "memory": 1024,
@@ -930,7 +930,7 @@ Machine-readable output follows:
 	}
     ],
     "other_test_status_name": "Unknown",
-    "distro_series": "",
+    "distro_series": ",
     "testing_status_name": "Pending",
     "ip_addresses": [],
     "address_ttl": null,
@@ -964,7 +964,7 @@ Machine-readable output follows:
 	}
     ],
     "fqdn": "ace-swan.maas",
-    "osystem": "",
+    "osystem": ",
     "domain": {
 	"authoritative": true,
 	"ttl": null,
@@ -975,7 +975,7 @@ Machine-readable output follows:
 	"resource_uri": "/MAAS/api/2.0/domains/0/"
     },
     "boot_interface": {
-	"params": "",
+	"params": ",
 	"numa_node": 0,
 	"tags": [],
 	"id": 10,
@@ -1015,7 +1015,7 @@ Machine-readable output follows:
     },
     "hostname": "ace-swan",
     "network_test_status": -1,
-    "min_hwe_kernel": "",
+    "min_hwe_kernel": ",
     "power_state": "off",
     "interface_test_status_name": "Unknown",
     "owner_data": {},
@@ -1028,7 +1028,7 @@ Machine-readable output follows:
     "hwe_kernel": null,
     "zone": {
 	"name": "default",
-	"description": "",
+	"description": ",
 	"id": 1,
 	"resource_uri": "/MAAS/api/2.0/zones/default/"
     },
@@ -1117,7 +1117,7 @@ Machine-readable output follows:
     "raids": [],
     "zone": {
 	"name": "default",
-	"description": "",
+	"description": ",
 	"id": 1,
 	"resource_uri": "/MAAS/api/2.0/zones/default/"
     },
@@ -1223,7 +1223,7 @@ Machine-readable output follows:
     "interface_test_status": -1,
     "boot_interface": {
 	"link_speed": 0,
-	"params": "",
+	"params": ",
 	"vendor": "Red Hat, Inc.",
 	"firmware_version": null,
 	"system_id": "bhxws3",
@@ -1235,7 +1235,7 @@ Machine-readable output follows:
 		"mode": "auto",
 		"subnet": {
 		    "name": "192.168.123.0/24",
-		    "description": "",
+		    "description": ",
 		    "vlan": {
 			"vid": 0,
 			"mtu": 1500,
@@ -1270,7 +1270,7 @@ Machine-readable output follows:
 	    {
 		"subnet": {
 		    "name": "192.168.123.0/24",
-		    "description": "",
+		    "description": ",
 		    "vlan": {
 			"vid": 0,
 			"mtu": 1500,
@@ -1392,7 +1392,7 @@ Machine-readable output follows:
     "interface_set": [
 	{
 	    "link_speed": 0,
-	    "params": "",
+	    "params": ",
 	    "vendor": "Red Hat, Inc.",
 	    "firmware_version": null,
 	    "system_id": "bhxws3",
@@ -1404,7 +1404,7 @@ Machine-readable output follows:
 		    "mode": "auto",
 		    "subnet": {
 			"name": "192.168.123.0/24",
-			"description": "",
+			"description": ",
 			"vlan": {
 			    "vid": 0,
 			    "mtu": 1500,
@@ -1439,7 +1439,7 @@ Machine-readable output follows:
 		{
 		    "subnet": {
 			"name": "192.168.123.0/24",
-			"description": "",
+			"description": ",
 			"vlan": {
 			    "vid": 0,
 			    "mtu": 1500,
@@ -1508,7 +1508,7 @@ Machine-readable output follows:
 	    ]
 	}
     ],
-    "min_hwe_kernel": "",
+    "min_hwe_kernel": ",
     "memory_test_status": -1,
     "power_type": "virsh",
     "power_state": "off",
@@ -1534,7 +1534,7 @@ Machine-readable output follows:
     "fqdn": "ace-swan.maas",
     "cpu_speed": 0,
     "hwe_kernel": null,
-    "description": "",
+    "description": ",
     "commissioning_status_name": "Passed",
     "pod": null,
     "network_test_status_name": "Unknown",
@@ -1542,8 +1542,8 @@ Machine-readable output follows:
     "commissioning_status": 2,
     "status_message": "Ready",
     "owner": "admin",
-    "distro_series": "",
-    "status_action": "",
+    "distro_series": ",
+    "status_action": ",
     "testing_status": 2,
     "cpu_test_status": -1,
     "architecture": "amd64/generic",
@@ -1551,7 +1551,7 @@ Machine-readable output follows:
     "iscsiblockdevice_set": [],
     "disable_ipv4": false,
     "virtualblockdevice_set": [],
-    "osystem": "",
+    "osystem": ",
     "boot_disk": {
 	"firmware_version": "2.5+",
 	"id_path": "/dev/disk/by-id/ata-QEMU_HARDDISK_QM00001",
@@ -1632,7 +1632,7 @@ Machine-readable output follows:
 		"mode": "auto",
 		"subnet": {
 		    "name": "192.168.123.0/24",
-		    "description": "",
+		    "description": ",
 		    "vlan": {
 			"vid": 0,
 			"mtu": 1500,
@@ -1664,7 +1664,7 @@ Machine-readable output follows:
 	],
 	"numa_node": 0,
 	"enabled": true,
-	"params": "",
+	"params": ",
 	"firmware_version": null,
 	"sriov_max_vf": 0,
 	"type": "physical",
@@ -1694,7 +1694,7 @@ Machine-readable output follows:
 	    {
 		"subnet": {
 		    "name": "192.168.123.0/24",
-		    "description": "",
+		    "description": ",
 		    "vlan": {
 			"vid": 0,
 			"mtu": 1500,
@@ -1761,12 +1761,12 @@ Machine-readable output follows:
     "commissioning_status": 2,
     "hardware_uuid": "F677A842-571C-4E65-ADC9-11E2CF92D363",
     "fqdn": "ace-swan.maas",
-    "min_hwe_kernel": "",
+    "min_hwe_kernel": ",
     "network_test_status": -1,
     "iscsiblockdevice_set": [],
     "current_testing_result_id": 9,
     "interface_test_status": -1,
-    "status_action": "",
+    "status_action": ",
     "pool": {
 	"name": "default",
 	"description": "Default pool",
@@ -1779,7 +1779,7 @@ Machine-readable output follows:
     "memory_test_status_name": "Unknown",
     "cpu_count": 1,
     "hwe_kernel": "ga-18.04",
-    "description": "",
+    "description": ",
     "current_commissioning_result_id": 8,
     "cpu_test_status_name": "Unknown",
     "storage_test_status": 2,
@@ -1928,7 +1928,7 @@ Machine-readable output follows:
     "owner_data": {},
     "zone": {
 	"name": "default",
-	"description": "",
+	"description": ",
 	"id": 1,
 	"resource_uri": "/MAAS/api/2.0/zones/default/"
     },
@@ -1998,7 +1998,7 @@ Machine-readable output follows:
 		    "mode": "auto",
 		    "subnet": {
 			"name": "192.168.123.0/24",
-			"description": "",
+			"description": ",
 			"vlan": {
 			    "vid": 0,
 			    "mtu": 1500,
@@ -2030,7 +2030,7 @@ Machine-readable output follows:
 	    ],
 	    "numa_node": 0,
 	    "enabled": true,
-	    "params": "",
+	    "params": ",
 	    "firmware_version": null,
 	    "sriov_max_vf": 0,
 	    "type": "physical",
@@ -2060,7 +2060,7 @@ Machine-readable output follows:
 		{
 		    "subnet": {
 			"name": "192.168.123.0/24",
-			"description": "",
+			"description": ",
 			"vlan": {
 			    "vid": 0,
 			    "mtu": 1500,

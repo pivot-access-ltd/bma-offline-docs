@@ -1,4 +1,4 @@
-<!-- How to enable high availability -->
+<!-- "How to enable high availability" -->
 High availability is built into MAAS: region and rack controllers balance the load and execute failover as part of normal operations. This article will help you understand how to take advantage of these built-in features.
 
 <a href="#heading--rack-controller-ha"><h2 id="heading--rack-controller-ha">How to put MAAS in HA mode</h2></a>

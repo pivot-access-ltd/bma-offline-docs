@@ -1,4 +1,4 @@
-<!-- Virtual machines -->
+<!-- "About virtual machines" -->
 Virtual machines create useful advantages for MAAS users.  Our trusted VM host is [LXD](https://linuxcontainers.org/lxd/introduction/)`↗`, so everything about MAAS VMs is optimised for LXD VMs.  For reference, VM hosts are called "KVMs" in the MAAS Web UI.
 
 If KVMs and LXD VMs are not new to you, feel free to go ahead and [set up LXD](/t/how-to-set-up-lxd/5208), create one or more [VM hosts](/t/how-to-create-vm-hosts/5140), and start [deploying virtual machines](/t/how-to-create-and-manage-vms/5148) to cover your workload.  The rest of this article provides a little theory about MAAS VM hosts, just in case you need to catch up.

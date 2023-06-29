@@ -1,4 +1,4 @@
-<!-- How to use images -->
+<!-- "How to use images" -->
 When using MAAS, it's important to understand how to manage images. By default, every deployed machine runs an image provided by MAAS. These images can be either standard or custom and are downloaded from a stream or local mirror.
 
 - [Standard images](/t/how-to-use-standard-images/5124): Standard images include a broad inventory of Ubuntu versions for different architectures. However, if you need to deploy other types of images, such as CentOS, RHEL, Rocky, SLES, or even Windows, MAAS also supports [custom images](/t/how-to-customise-images/5104).

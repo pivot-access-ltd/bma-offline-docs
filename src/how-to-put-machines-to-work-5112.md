@@ -1,4 +1,4 @@
-<!-- How to put machines to work -->
+<!-- "How to put machines to work" -->
 The ultimate purpose of MAAS is to deploy and manage machines.  It's important to understand [how images get deployed](/t/how-to-acquire-images/6192#heading--how-images-deploy) -- as explained in [About the machine life-cycle](/t/how-to-manage-machines/6193#heading--about-the-machine-life-cycle), machines must first be enlisted or commissioned, then allocated, then deployed.  This article will help you build on that understanding by explaining:
 
 - [How to commission a machine](#heading--how-to-commission-a-machine)
@@ -76,7 +76,7 @@ Machine-readable output follows:
     "cpu_count": 1,
     "interface_set": [
         {
-            "params": "",
+            "params": ",
             "numa_node": 0,
             "tags": [],
             "id": 10,
@@ -137,7 +137,7 @@ Machine-readable output follows:
             "link_id": null
         }
     },
-    "status_action": "",
+    "status_action": ",
     "status_message": "Commissioning",
     "cpu_test_status_name": "Unknown",
     "memory_test_status": -1,
@@ -151,7 +151,7 @@ Machine-readable output follows:
     "current_testing_result_id": 9,
     "current_installation_result_id": null,
     "netboot": true,
-    "description": "",
+    "description": ",
     "special_filesystems": [],
     "testing_status": 0,
     "memory": 1024,
@@ -196,7 +196,7 @@ Machine-readable output follows:
         }
     ],
     "other_test_status_name": "Unknown",
-    "distro_series": "",
+    "distro_series": ",
     "testing_status_name": "Pending",
     "ip_addresses": [],
     "address_ttl": null,
@@ -230,7 +230,7 @@ Machine-readable output follows:
         }
     ],
     "fqdn": "ace-swan.maas",
-    "osystem": "",
+    "osystem": ",
     "domain": {
         "authoritative": true,
         "ttl": null,
@@ -241,7 +241,7 @@ Machine-readable output follows:
         "resource_uri": "/MAAS/api/2.0/domains/0/"
     },
     "boot_interface": {
-        "params": "",
+        "params": ",
         "numa_node": 0,
         "tags": [],
         "id": 10,
@@ -281,7 +281,7 @@ Machine-readable output follows:
     },
     "hostname": "ace-swan",
     "network_test_status": -1,
-    "min_hwe_kernel": "",
+    "min_hwe_kernel": ",
     "power_state": "off",
     "interface_test_status_name": "Unknown",
     "owner_data": {},
@@ -294,7 +294,7 @@ Machine-readable output follows:
     "hwe_kernel": null,
     "zone": {
         "name": "default",
-        "description": "",
+        "description": ",
         "id": 1,
         "resource_uri": "/MAAS/api/2.0/zones/default/"
     },
@@ -585,10 +585,10 @@ where `$SUPPRESSED` is either `True` or `False`. The JSON formatted output to th
                 "type": "storage",
                 "value": {
                     "id_path": "/dev/vda",
-                    "model": "",
+                    "model": ",
                     "name": "sda",
                     "physical_blockdevice_id": 1,
-                    "serial": ""
+                    "serial": "
                 }
             }
         },
@@ -812,10 +812,10 @@ where `$SUPPRESSED` is either `True` or `False`. The JSON formatted output to th
                 "type": "storage",
                 "value": {
                     "id_path": "/dev/vda",
-                    "model": "",
+                    "model": ",
                     "name": "sda",
                     "physical_blockdevice_id": 1,
-                    "serial": ""
+                    "serial": "
                 }
             }
         },

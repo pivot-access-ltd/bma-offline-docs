@@ -1,4 +1,4 @@
-<!-- Understanding MAAS events -->
+<!-- "Understanding MAAS events" -->
 
 Events are state changes that happen to MAAS elements, such as controllers, networks, or machines.  These state changes can be caused by MAAS itself, some external agent (such as an external DHCP server), or by users (such as when commissioning a machine).  Being able to review events is often essential to debugging or verifying your MAAS system.
 
@@ -20,7 +20,7 @@ This information appears this way when events are queried from the CLI:
             "level": "INFO",
             "created": "Thu, 29 Sep. 2022 20:04:17",
             "type": "Ready",
-            "description": ""
+            "description": "
         },
         {
             "username": "unknown",

@@ -1,4 +1,4 @@
-<!-- How to get started with MAAS -->
+<!-- "How to get started with MAAS" -->
 If you're looking to get MAAS up and running, you're in luck - it's a relatively painless process that won't have you pulling your hair out in frustration. Here are a few options for getting started:
 
 - [Install MAAS](/t/how-to-do-a-fresh-install-of-maas/5128): First off, you can install MAAS from snaps or Debian packages, and choose between a proof-of-concept or production mode. Whichever route you take, the installation process is straightforward and user-friendly.

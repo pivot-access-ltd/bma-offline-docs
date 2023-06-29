@@ -1,4 +1,4 @@
-<!-- How to improve MAAS security -->
+<!-- "How to improve MAAS security" -->
 As a MAAS administrator, you have the critical responsibility of hardening your installation to help repudiate attacks and malicious actors.  While there are too many variables to make meaningful suggestions for your deployed machines, there are a number of steps you can take to improve the overall security of your MASS setup.  This article provides a few suggestions.
 
 #### This article will help you learn:
@@ -247,21 +247,21 @@ Presently, your primary use of MAAS log files to improve security is to periodic
 
 
     2020-03-31 21:17:56 regiond: [info] 10.132.172.1 GET /MAAS/accounts/login/ HTTP/1.1
-    --> 200 OK (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0 (X11;
+   " --> 200 OK (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0 (X11;
     Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149
     Safari/537.36)````
 
 If a login fails due to bad input (username/password), the regiond log will contain an entry something like this one:
 
     2020-03-31 21:18:08 regiond: [info] 10.132.172.1 POST /MAAS/accounts/login/ HTTP/1.1
-    --> 400 BAD_REQUEST (referrer: http://10.132.172.231:5240/MAAS/r/; agent:
+   " --> 400 BAD_REQUEST (referrer: http://10.132.172.231:5240/MAAS/r/; agent:
     Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
     Chrome/80.0.3987.149 Safari/537.36)````
 
 An entry like this one would also be suspect, since it involves omitting username/password entries at the login prompt:
 
     2020-03-31 21:18:45 regiond: [info] 10.132.172.1 POST /MAAS/accounts/login/ HTTP/1.1
-    --> 204 NO_CONTENT (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0
+   " --> 204 NO_CONTENT (referrer: http://10.132.172.231:5240/MAAS/r/; agent: Mozilla/5.0
     (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149
     Safari/537.36)````
 

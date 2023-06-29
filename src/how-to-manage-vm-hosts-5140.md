@@ -1,4 +1,4 @@
-<!-- How to manage vm hosts -->
+<!-- "How to manage VM hosts" -->
 In order to  deploy a VM host in your MAAS network, you first need to set up a bridge to connect between your VM host and MAAS itself. Once that's done, you can add and manage VM hosts -- and subsequently, create VMs to act as MAAS machines.  This article explains:
 
 [tabs]

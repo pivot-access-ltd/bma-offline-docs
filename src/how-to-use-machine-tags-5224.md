@@ -1,4 +1,4 @@
-<!-- How to use machine tags -->
+<!-- "How to use machine tags" -->
 This article will help you learn:
 
 [tabs]

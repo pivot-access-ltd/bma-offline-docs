@@ -1,4 +1,4 @@
-<!-- The machine list -->
+<!-- "The machine list" -->
 The machine list is the basic dashboard for many MAAS operations.  In this subsection, you will learn:
 
 - [About the machine summary](#heading--about-the-machine-summary)

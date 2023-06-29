@@ -1,4 +1,4 @@
-<!-- What is new with MAAS -->
+<!-- "What is new with MAAS" -->
 
 These are the release notes for MAAS 3.3.
 

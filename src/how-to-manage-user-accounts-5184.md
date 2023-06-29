@@ -1,4 +1,4 @@
-<!-- How to manage user accounts -->
+<!-- "How to manage user accounts" -->
 <a href="#heading--add-a-user"><h2 id="heading--add-a-user">How to add a user</h2></a>
 
 [tabs]

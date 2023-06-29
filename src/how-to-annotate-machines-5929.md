@@ -1,4 +1,4 @@
-<!-- How to annotate machines -->
+<!-- "How to annotate machines" -->
 Annotations are descriptive, searchable phrases that apply only to machines.  There are two types of annotations: notes (always present in any machine state), and dynamic annotations (only present in allocated or deployed states).  Annotations help you identify, characterise, and inform others about your machines.
 
 [note]
@@ -81,7 +81,7 @@ maas $PROFILE machine update $SYSTEM_ID description="$A_DIFFERENT_NOTE"
 The existing note will be overwritten by the new one you enter.  You can also remove a note by entering and empty description, like this:
 
 ```bash
-maas admin machine update ke3wc7 description=""
+maas admin machine update ke3wc7 description="
 ```
 
 <a href="#heading--How-to-list-notes-for-all-machines"><h4 id="heading--How-to-list-notes-for-all-machines">How to list notes for all machines</h4></a>
@@ -227,10 +227,10 @@ You can change dynamic annotations for a machine simply by executing a new `set-
 maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=$NEW_VALUE
 ```
 
-You can clear a dynamic annotation by entering the empty string (`""`) as the $VALUE:
+You can clear a dynamic annotation by entering the empty string (`"`) as the $VALUE:
 
 ```bash
-maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY=""
+maas $PROFILE machine set-owner-data $SYSTEM_ID $KEY="
 ```
 
 <a href="#heading--list-dynamic-annotations-for-all-machines"><h3 id="heading--list-dynamic-annotations-for-all-machines">How to list dynamic annotations for all machines</h3></a>

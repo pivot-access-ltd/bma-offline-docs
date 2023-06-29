@@ -1,4 +1,4 @@
-<!-- Machine parameters reference -->
+<!-- "Machine parameters reference" -->
 This reference guide provides detailed parameters related to various machine operations.
 
 - [Power drivers](/t/power-drivers-reference/5246): MAAS provides a wide range of power drivers, each with their own extensive parameter set.

@@ -1,4 +1,4 @@
-<!-- How to contribute code -->
+<!-- "How to contribute code" -->
 ## Soliciting contributions to this document
 
 Please add steps, ideas, sentence fragments, or even complete paragraphs about this topic:

@@ -1,4 +1,4 @@
-<!-- How to contact us -->
+<!-- "How to contact us" -->
 We would love to get your feedback on MAAS and how you are using it. You can get in touch with the team in two ways:
 
 1.   The MAAS [Discourse forum](https://discourse.maas.io)`↗`

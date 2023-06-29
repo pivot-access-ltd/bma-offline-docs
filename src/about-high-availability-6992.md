@@ -1,4 +1,4 @@
-<!-- About high availability -->
+<!-- "About high availability" -->
 High availability is built into MAAS: region and rack controllers balance the load and execute failover as part of normal operations.
 
 <a href="#heading--High-availability-mode"><h2 id="heading--High-availability-mode">High availability mode</h2></a>

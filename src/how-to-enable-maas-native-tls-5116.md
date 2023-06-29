@@ -1,4 +1,4 @@
-<!-- How to enable MAAS native tls -->
+<!-- "How to enable MAAS native TLS" -->
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages"]
 TLS can be enabled/disabled with the new `maas config-tls` command:
 

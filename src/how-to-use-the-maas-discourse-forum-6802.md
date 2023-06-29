@@ -1,4 +1,4 @@
-<!-- How to use the MAAS discourse forum -->
+<!-- "How to use the MAAS discourse forum" -->
 Much of the interaction with the MAAS community takes place via [our Discourse forum](https://discourse.maas.io/).  This article will help you better navigate that forum.
 
 ## Discourse categories

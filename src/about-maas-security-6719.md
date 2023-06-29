@@ -1,4 +1,4 @@
-<!-- MAAS security -->
+<!-- "About MAAS security" -->
 As a MAAS administrator, you do not want secrets associated with a MAAS instance to be stored in the database, since it often doesn’t comply with security regulations.  Examples of the MAAS settings which contain secrets are the OMAPI key and the RPC secret. 
 
 [tabs]

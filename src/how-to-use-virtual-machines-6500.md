@@ -1,4 +1,4 @@
-<!-- How to use virtual machines -->
+<!-- "How to use virtual machines" -->
 Virtual machines have become valuable tools in modern computing due to their ability to mimic the functionality of physical machines. These virtual machines run on a single physical machine, each with its own operating system and applications. As a result, they are great for saving both time and money, as they enable users to run multiple operating systems and applications on a single physical machine, leading to more efficient use of resources.
 
 MAAS supports various types of virtual machines, with [LXD being the recommended virtual machine host](/t/how-to-set-up-lxd/5208). LXD is a container hypervisor that provides a simple and efficient way to deploy and manage virtual machines. MAAS also supports libvirt and VMWare, offering users the flexibility to choose the virtualization platform that best suits their needs.

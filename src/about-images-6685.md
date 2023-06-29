@@ -272,7 +272,7 @@ variable "filename" {
 
 variable "kernel" {
   type        = string
-  default     = ""
+  default     = "
   description = "The package name of the kernel to install. May include version string, e.g linux-image-generic-hwe-22.04=5.15.0.41.43"
 }
 
@@ -366,16 +366,16 @@ source "qemu" "cloudimg" {
   iso_checksum   = "file:https://cloud-images.ubuntu.com/${var.ubuntu_series}/current/SHA256SUMS"
   iso_url        = "https://cloud-images.ubuntu.com/${var.ubuntu_series}/current/${var.ubuntu_series}-server-cloudimg-${var.architecture}.img"
   memory         = 2048
-  qemu_binary    = "qemu-system-${lookup(local.qemu_arch, var.architecture, "")}"
+  qemu_binary    = "qemu-system-${lookup(local.qemu_arch, var.architecture, ")}"
   qemu_img_args {
     create = ["-F", "qcow2"]
   }
   qemuargs = [
-    ["-machine", "${lookup(local.qemu_machine, var.architecture, "")}"],
-    ["-cpu", "${lookup(local.qemu_cpu, var.architecture, "")}"],
+    ["-machine", "${lookup(local.qemu_machine, var.architecture, ")}"],
+    ["-cpu", "${lookup(local.qemu_cpu, var.architecture, ")}"],
     ["-device", "virtio-gpu-pci"],
-    ["-drive", "if=pflash,format=raw,id=ovmf_code,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_CODE.fd"],
-    ["-drive", "if=pflash,format=raw,id=ovmf_vars,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_VARS.fd"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_code,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, ")}/${lookup(local.uefi_imp, var.architecture, ")}_CODE.fd"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_vars,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, ")}/${lookup(local.uefi_imp, var.architecture, ")}_VARS.fd"],
     ["-drive", "file=output-qemu/packer-qemu,format=qcow2"],
     ["-drive", "file=seeds-cloudimg.iso,format=raw"]
   ]
@@ -459,7 +459,7 @@ variable "filename" {
 
 variable "kernel" {
   type        = string
-  default     = ""
+  default     = "
   description = "The package name of the kernel to install. May include version string, e.g linux-image-generic-hwe-22.04=5.15.0.41.43"
 }
 
@@ -565,17 +565,17 @@ source "qemu" "cloudimg" {
   iso_url        = "https://cloud-images.ubuntu.com/${var.ubuntu_series}/current/${var.ubuntu_series}-server-cloudimg-${var.architecture}.img"
 # THE IMAGE SHOULD EXPECT THIS MUCH MEMORY:
   memory         = 2048
-  qemu_binary    = "qemu-system-${lookup(local.qemu_arch, var.architecture, "")}"
+  qemu_binary    = "qemu-system-${lookup(local.qemu_arch, var.architecture, ")}"
   qemu_img_args {
     create = ["-F", "qcow2"]
   }
 # IF YOU STUDY THE QEMU DOCUMENTATION, IT'S FAIRLY EASY TO SEE WHAT THESE ARGS DO:
   qemuargs = [
-    ["-machine", "${lookup(local.qemu_machine, var.architecture, "")}"],
-    ["-cpu", "${lookup(local.qemu_cpu, var.architecture, "")}"],
+    ["-machine", "${lookup(local.qemu_machine, var.architecture, ")}"],
+    ["-cpu", "${lookup(local.qemu_cpu, var.architecture, ")}"],
     ["-device", "virtio-gpu-pci"],
-    ["-drive", "if=pflash,format=raw,id=ovmf_code,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_CODE.fd"],
-    ["-drive", "if=pflash,format=raw,id=ovmf_vars,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, "")}/${lookup(local.uefi_imp, var.architecture, "")}_VARS.fd"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_code,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, ")}/${lookup(local.uefi_imp, var.architecture, ")}_CODE.fd"],
+    ["-drive", "if=pflash,format=raw,id=ovmf_vars,readonly=on,file=/usr/share/${lookup(local.uefi_imp, var.architecture, ")}/${lookup(local.uefi_imp, var.architecture, ")}_VARS.fd"],
     ["-drive", "file=output-qemu/packer-qemu,format=qcow2"],
     ["-drive", "file=seeds-cloudimg.iso,format=raw"]
   ]

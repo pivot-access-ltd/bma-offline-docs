@@ -1,4 +1,4 @@
-<!-- Networking -->
+<!-- "Networking" -->
 Congratulations!  Now that you've [gotten started with MAAS](/t/how-to-get-started-with-maas/6202), configuring your MAAS networks is an important next step.  This major section will help you learn about the theory and practice of MAAS networking.
 
 If you're eager to get started, you can go ahead and [connect your MAAS networks](/t/how-to-connect-maas-networks/5164) and [set up DHCP](/t/how-to-enable-dhcp/5132). You might even want to create some [availability zones](/t/how-to-manage-availability-zones/5152).

@@ -1,4 +1,4 @@
-<!-- How to customise machines -->
+<!-- "How to customise machines" -->
 MAAS provides the capability to customise machines.  This article will help you learn:
 
 [tabs]
@@ -128,7 +128,7 @@ Only an administrator can modify storage at the block device level (providing th
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--how-to-set-default-erasure-configuration"><h3 id="heading--how-to-set-default-erasure-configuration">How to set the default erasure configuration</h3></a>
 
-1. Click on *Settings --> Storage*.
+1. Click on *Settings" --> Storage*.
 
 2. Set or clear *Erase machines' disks prior to releasing*.  If you set this option, users will be compelled to use disk erasure: that option will be pre-filled in the machine's view and the user will be unable to remove the option.
 
@@ -202,7 +202,7 @@ Machine-readable output follows:
     {
         "id": 10,
         "path": "/dev/disk/by-dname/vda",
-        "serial": "",
+        "serial": ",
         "block_size": 4096,
         "available_size": 0,
         "resource_uri": "/MAAS/api/2.0/nodes/4y3h8a/blockdevices/10/",
@@ -210,7 +210,7 @@ Machine-readable output follows:
         "id_path": "/dev/vda",
         "size": 5368709120,
         "partition_table_type": "MBR",
-        "model": "",
+        "model": ",
         "type": "physical",
         "uuid": null,
         "used_size": 5365563392,
@@ -342,7 +342,7 @@ Machine-readable output follows:
     "type": "physical",
     "used_size": 0,
     "filesystem": null,
-    "id_path": "",
+    "id_path": ",
     "id": 12,
     "partition_table_type": null,
     "block_size": 4096,
@@ -383,7 +383,7 @@ Machine-readable output follows:
     "tags": [],
     "used_size": 0,
     "path": "/dev/disk/by-dname/newroot",
-    "id_path": "",
+    "id_path": ",
     "uuid": null,
     "available_size": 21474836480,
     "id": 12,
@@ -420,7 +420,7 @@ Machine-readable output follows:
     "block_size": 4096,
     "size": 3221225472,
     "filesystem": {
-        "label": "",
+        "label": ",
         "fstype": "ext4",
         "mount_options": null,
         "uuid": "75e42f49-9a45-466c-8425-87a40e4f4148",
@@ -506,9 +506,9 @@ Machine-readable output follows:
     "filesystem": {
         "uuid": "6f5965ad-49f7-42da-95ff-8000b739c39f",
         "mount_point": "/srv",
-        "mount_options": "",
+        "mount_options": ",
         "fstype": "ext4",
-        "label": ""
+        "label": "
     },
     "id_path": null,
     "id": 11,
@@ -549,7 +549,7 @@ Machine-readable output follows:
         "mount_point": null,
         "mount_options": null,
         "fstype": "ext4",
-        "label": ""
+        "label": "
     },
     "id_path": null,
     "id": 11,
@@ -684,7 +684,7 @@ Machine-readable output follows:
         "mount_point": null,
         "mount_options": null,
         "fstype": "ext4",
-        "label": ""
+        "label": "
     }
 }
 ```
@@ -741,8 +741,8 @@ Machine-readable output follows:
     "type": "partition",
     "filesystem": {
         "uuid": "1949a5fb-f7bd-4ada-8ba5-d06d3f5857a8",
-        "mount_options": "",
-        "label": "",
+        "mount_options": ",
+        "label": ",
         "fstype": "ext4",
         "mount_point": "/srv"
     }
@@ -774,7 +774,7 @@ Machine-readable output follows:
     "filesystem": {
         "uuid": "1949a5fb-f7bd-4ada-8ba5-d06d3f5857a8",
         "mount_options": null,
-        "label": "",
+        "label": ",
         "fstype": "ext4",
         "mount_point": null
     }
@@ -1336,7 +1336,7 @@ Success.
 Machine-readable output follows:
 {
     "name": "nomodeset_tag",
-    "definition": "",
+    "definition": ",
     "comment": "nomodeset_kernel_option",
     "kernel_opts": "nomodeset vga",
     "resource_uri": "/MAAS/api/2.0/tags/nomodeset_tag/"
