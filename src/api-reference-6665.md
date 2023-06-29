@@ -1,4 +1,4 @@
-<!-- "MAAS API reference" -->
+<!-- "API reference" -->
 MAAS provides a robust API that conforms to the OpenAPI standards.
 
 - [API authentication reference](/t/api-authentication-reference/5060): The MAAS API uses [OAuth](http://en.wikipedia.org/wiki/OAuth)`↗` as its 0-legged authentication mechanism.

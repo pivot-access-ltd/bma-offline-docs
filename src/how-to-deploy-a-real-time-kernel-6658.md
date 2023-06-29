@@ -1,4 +1,4 @@
-<!-- "How to deploy a real time kernel" -->
+<!-- "How to deploy a real-time kernel" -->
 This article explains how to deploy a machine with Ubuntu and configure it to use a [real-time kernel](https://ubuntu.com/blog/real-time-linux-qa).
 
 The real-time kernel is included in all [Ubuntu Pro](https://ubuntu.com/pro) subscriptions for Ubuntu 22.04 LTS.

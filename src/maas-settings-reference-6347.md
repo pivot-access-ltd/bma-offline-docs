@@ -1,4 +1,4 @@
-<!-- "How to change MAAS settings" -->
+<!-- "MAAS settings reference" -->
 
 [tabs]
 [tab version="v3.4 Snap,v3.4 Packages" view="UI"]

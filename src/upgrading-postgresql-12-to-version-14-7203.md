@@ -1,4 +1,4 @@
-<!-- "Upgrading PostgreSQL 12 to verion 14" -->
+<!-- "Upgrading PostgreSQL 12 to version 14 14" -->
 If you need to upgrade Postgresql from v12 to v14, you can follow the procedure given below.
 
 [note]
