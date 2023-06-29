@@ -1,4 +1,4 @@
-<!-- "Ansible" -->
+<!-- "About ansible" -->
 
 [Ansible playbooks](https://github.com/maas/MAAS-ansible-playbook) are now available for MAAS. These extended YAML files automate various routine aspects of MAAS setup and configuration.  Automate the drudgery of installing and configuring MAAS with Ansible.  
 
