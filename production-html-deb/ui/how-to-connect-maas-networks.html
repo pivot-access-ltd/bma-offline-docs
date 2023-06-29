@@ -11,8 +11,23 @@
       #sidebar a:visited{color:black;}
       #sidebar a:active{color:black;}
       #sidebar a:hover{color:blue;}
-      ul {margin-left:0;list-style-type:none;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
       li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
     </style>
   </head>
   <body>
@@ -26,521 +41,403 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  UI-only
+        &nbsp;UI-only&nbsp;
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/how-to-connect-maas-networks.html">
-	  CLI-only
-	</a>
+      <a href="../cli/how-to-connect-maas-networks.html">
+        CLI-only
+      </a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
-      <strong>
-	<a href="maas-documentation-25.html">
-	  Home
-	</a>
-      </strong> 
-      <strong>
-	<a href="tutorials.html">
-	  Tutorials
-	</a>
-      </strong>
       <ul>
 	<li>
-	  <a href="bootstrap-maas.html">
-	    Bootstrap MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="try-out-the-maas-cli.html">
-	    Try out the MAAS CLI
-	  </a>
-	</li>
-	<li>
-	  <a href="create-a-custom-image.html">
-	    Create a custom image
-	  </a>
-	</li>
-	<li>
-	  <a href="get-fancy-cli-output.html">
-	    Get fancy CLI output
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-get-started-with-maas.html">
-	  How to get started with MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-do-a-fresh-install-of-maas.html">
-	    Do a fresh install of MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-spin-up-maas-with-ansible.html">
-	    Spin up MAAS with Ansible
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-set-up-networks.html">
-	  How to set up networks
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-connect-maas-networks.html">
-	    Connect MAAS networks
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-dhcp.html">
-	    Enable DHCP
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-availability-zones.html">
-	    Use availability zones
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-images.html">
-	  How to use images
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-standard-images.html">
-	    Use standard images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-mirror-images-locally.html">
-	    Mirror images locally
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-images.html">
-	    Customise images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-employ-vmware-images.html">
-	    Employ VMWare images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-deploy-a-real-time-kernel.html">
-	    Deploy a RT kernel
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-controllers.html">
-	  How to manage controllers
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-configure-controllers.html">
-	    Configure controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-machines.html">
-	  How to manage machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-make-machines-available.html">
-	    Make machines available
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-machines.html">
-	    Customise machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-put-machines-to-work.html">
-	    Put machines to work
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-virtual-machines.html">
-	  How to use virtual machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-set-up-lxd.html">
-	    Set up LXD
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-vm-hosts.html">
-	    Manage VM hosts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-virtual-machines.html">
-	    Manage virtual machines
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-label-devices.html">
-	  How to label devices
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-tag-machines.html">
-	    Tag machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-annotate-machines.html">
-	    Annotate machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-machine-tags.html">
-	    Use machine tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-controller-tags.html">
-	    Use controller tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-storage-tags.html">
-	    Use storage tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-network-tags.html">
-	    Use network tags
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-secure-maas.html">
-	  How to secure MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-improve-maas-security.html">
-	    Improve MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-user-accounts.html">
-	    Manage user accounts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-maas-native-tls.html">
-	    Enable MAAS native TLS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-hashicorp-vault-with-maas.html">
-	    Use Vault with MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-set-up-an-air-gapped-maas.html">
-	    Set up an air-gapped MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-operate-maas.html">
-	  How to operate MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-find-machines.html">
-	    Find machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-back-up-maas.html">
-	    Back up MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-monitor-maas.html">
-	    Monitor MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-audit-maas.html">
-	    Audit MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshoot MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-give-and-receive-help.html">
-	  How to give and receive help
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-our-discourse-forum.html">
-	    Use our discourse forum
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contact-us">
-	    Get support↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-request-new-features.html">
-	    Request new features
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-review-and-report-bugs.html">
-	    Review and report bugs
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contribute-doc.html">
-	    Contribute documentation
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="general-reference.html">
-	  General reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-installation-requirements.html">
-	    Installation requirements
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-settings-reference.html">
-	    MAAS settings
-	  </a>
-	</li>
-	<li>
-	  <a href="https://launchpad.net/maas.html">
-	    MAAS source code↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-help-improve-the-doc.html">
-	    Doc style guide
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-glossary.html">
-	    Glossary
-	  </a>
-	</li>
-	<li>
-	  <a href="https://ubuntu.com/community/code-of-conduct">
-	    Code of conduct↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="api-reference.html">
-	  API reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
-	  </a>
-	</li>
-	<li>
-	  <a href="python-api-client-reference.html">
-	    Python API client
-	  </a>
-	</li>
-	<li>
-	  <a href="api">
-	    API documentation↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-scripts-reference.html">
-	  Scripts reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="commissioning-scripts-reference.html">
-	    Commissioning scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="hardware-test-scripts-reference.html">
-	    Hardware test scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-terraform-reference.html">
-	    Terraform
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-logs-reference.html">
-	  Log reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="event-logs-reference.html">
-	    Event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="audit-event-logs-reference.html">
-	    Audit event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="commissioning-logs-reference.html">
-	    Commissioning logs
-	  </a>
-	</li>
-	<li>
-	  <a href="testing-logs-reference.html">
-	    Testing logs
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="machine-parameters-reference.html">
-	  Machine parameters reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="power-drivers-reference.html">
-	    Power drivers
-	  </a>
-	</li>
-	<li>
-	  <a href="storage-layouts-reference.html">
-	    Storage layouts
-	  </a>
-	</li>
-	<li>
-	  <a href="device-labelling-reference.html">
-	    Device labelling
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href=".html">
-	  Explanation
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-maas.html">
-	    About MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="about-networking.html">
-	    About networking
-	  </a>
-	</li>
-	<li>
-	  <a href="about-images.html">
-	    About images
-	  </a>
-	</li>
-	<li>
-	  <a href="about-controllers.html">
-	    About controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="about-machines.html">
-	    About machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-virtual-machines.html">
-	    About virtual machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-device-labels.html">
-	    About device labels
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-events.html">
-	    About MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-audit-events.html">
-	    About audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-logging.html">
-	    About MAAS logging
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-security.html">
-	    About MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-performance.html">
-	    About MAAS performance
-	  </a>
-	</li>
-	<li>
-	  <a href="about-ansible.html">
-	    About Ansible
-	  </a>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary>Try out MAAS</summary>
+		  <ul>
+		    <li>
+		      <a href="bootstrap-maas.html">Bootstrap MAAS</a>
+		    </li>
+		    <li>
+		      <a href="get-to-know-your-machines.html">Get to know your machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<a href="try-out-the-maas-cli.html">Try out the MAAS CLI</a>
+	      </li>
+	      <li>
+		<a href="create-custom-images.html">Create custom images</a>
+	      </li>
+	      <li>
+		<a href="get-fancy-cli-output.html">Get fancy CLI output</a>
+	      </li>
+              <li>
+		<details>
+                  <summary>Primer tutorials</summary>
+		  <ul>
+		    <li>
+		      <a href="primer-tutorial-the-osi-model.html">OSI model tutorial</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary><a href="get-started-with-maas.thml">Get started with MAAS</a></summary>
+		  <ul>
+                    <li>
+                      <a href="do-a-fresh-install-of-maas.html">Do a fresh install of MAAS</a>
+		    </li>
+		    <li>
+                      <a href="upgrade-maas.html">Upgrade MAAS</a>
+		    </li>
+		    <li>
+                      <a href="spin-up-maas-with-ansible.html">Spin up MAAS with Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="set-up-networks.html">Set up networks</a></summary>
+		  <ul>
+                    <li>
+                      <a href="connect-maas-networks.html">Connect MAAS networks</a>
+                    </li>
+                    <li>
+                      <a href="enable-dhcp.html">Enable DHCP</a>
+                    </li>
+                    <li>
+                      <a href="use-availability-zones.html">Use availability zones</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="use-images.html">Use images</a></summary>
+		  <ul>
+                    <li>
+                      <a href="use-standard-images.html">Use standard images</a>
+                    </li>
+                    <li>
+                      <a href="mirror-images-locally.html">Mirror images locally</a>
+                    </li>
+                    <li>
+                      <a href="customise-images.html">Customise images</a>
+                    </li>
+                    <li>
+                      <a href="employ-vmware-images.html">Employ VMWare images</a>
+                    </li>
+                    <li>
+                      <a href="deply-a-rt-kernel.html">Deploy a RT kernel</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="manage-controllers.html">Manage controllers</a></summary>
+		  <ul>
+		    <li>
+		      <a href="configure-controllers.html">Configure controllers</a>
+		    </li>
+		    <li>
+		      <a href="enable-high-availability.html">Enable high availability</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="manage-machines.html">Manage machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="make-machines-available.html">Make machines available</a>
+		    </li>
+		    <li>
+		      <a href="customise-machines.html">Customise machines</a>
+		    </li>
+		    <li>
+		      <a href="put-machines-to-work.html">Put machines to work</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="use-virtual-machines.html">Use virtual machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="set-up-lxd.html">Set up LXD</a>
+		    </li>
+		    <li>
+		      <a href="manage-vm-hosts.html">Manage VM hosts</a>
+		    </li>
+		    <li>
+		      <a href="manage-virtual-machines.html">Manage virtual machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="label-devices.html">Label devices</a></summary>
+		  <ul>
+		    <li>
+		      <a href="tag-machines.html">Tag machines</a>
+		    </li>
+		    <li>
+		      <a href="annotate-machines.html">Annotate machines</a>
+		    </li>
+		    <li>
+		      <a href="use-machine-tags.html">Use machine tags</a>
+		    </li>
+		    <li>
+		      <a href="use-controller-tags.html">Use controller tags</a>
+		    </li>
+		    <li>
+		      <a href="use-storage-tags.html">Use storage tags</a>
+		    </li>
+		    <li>
+		      <a href="use-network-tags.html">Use network tags</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="secure-maas.html">Secure MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"improve-MAAS-security.html">Improve MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="manage-user-accounts.html">Manage user accounts</a>
+		    </li>
+		    <li>
+		      <a href="enable-MAAS-native TLS.html">Enable MAAS native TLS</a>
+		    </li>
+		    <li>
+		      <a href="use-Vault-with-MAAS.html">Use Vault with MAAS</a>
+		    </li>
+		    <li>
+		      <a href="set-up-an-air-gapped MAAS.html">Set up an air-gapped MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="reference.html">Reference</a></summary>
+            <ul>
+	      <details>
+		<summary><a href="release-notes.html">Release notes</a></summary>
+		<ul>
+		  <li>
+		    <a href="maas-3-4-release notes.html">MAAS 3.4 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-3-release notes.html">MAAS 3.3 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-2-release notes.html">MAAS 3.2 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-1-release notes.html">MAAS 3.1 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-3-0-release notes.html">MAAS 3.0 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-2-9-release notes.html">MAAS 2.9 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-2-8-release notes.html">MAAS 2.8 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="maas-2-7-release notes.html">MAAS 2.7 release notes</a>
+              	  </li>
+		</ul>
+	      </details>
+              <li>
+		<details>
+                  <summary><a href="general-reference.html">General</a></summary>
+		  <ul>
+		    <li>
+		      <a href="maas-settings.html">Settings</a>
+		    </li>
+		    <li>
+		      <a href="https://launchpad.net/maas">Source code</a>
+		    </li>
+		    <li>
+		      <a href="doc-style-guide.html">Doc style guide</a>
+		    </li>
+		    <li>
+		      <a href="glossary.html">Glossary</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/community/code-of-conduct">Code of conduct</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+              <li>
+		<details>
+		  <summary><a href="api.html">API</a></summary>
+		  <ul>
+		    <li>
+                      <a href="api-authentication.html">API authentication</a>
+                    </li>
+		    <li>
+                      <a href="python-api-client.html">Python API client</a>
+                    </li>
+		    <li>
+                      <a href="/docs/api">API documentation</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="scripts.html">Scripts</a></summary>
+		  <ul>
+		    <li>
+                      <a href="commissioning-scripts.html">Commissioning scripts</a>
+                    </li>
+		    <li>
+                      <a href="hardware-test-scripts.html">Hardware test scripts</a>
+                    </li>
+		    <li>
+                      <a href="terraform.html">Terraform</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="logging.html">Logging</a></summary>
+		  <ul>
+		    <li>
+                      <a href="event-logs.html">Event logs</a>
+                    </li>
+		    <li>
+                      <a href="audit-event-logs.html">Audit event logs</a>
+                    </li>
+		    <li>
+                      <a href="commissioning-logs.html">Commissioning logs</a>
+                    </li>
+		    <li>
+                      <a href="testing-logs.html">Testing logs</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="machine-parameters.html">machine-parameters</a></summary>
+		  <ul>
+		    <li>
+                      <a href=.html"power-drivers.html">Power drivers</a>
+                    </li>
+		    <li>
+                      <a href="storage-layouts.html">Storage layouts</a>
+                    </li>
+		    <li>
+                      <a href="device-labelling.html">Device labelling</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+	  <details>
+	    <summary><a href="explanation.html">Explanation</a></summary>
+	    <ul>
+	      <li>
+		<a href="maas.html">About MAAS</a>
+		-           </li>
+	      <li>
+		<a href=.html"high-availability.html">High availability</a>
+              </li>
+	      <li>
+		<details>
+		  <summary>Networking</summary>
+		  <ul>
+		    <li>
+		      <a href="maas-networks.html">MAAS networks</a>
+		    </li>
+		    <li>
+		      <a href="tcp/IP-primer.html">TCP/IP primer</a>
+		    </li>
+		    <li>
+		      <a href="dhcp-primer.html">DHCP primer</a>
+		    </li>
+		    <li>
+		      <a href="cloud-networking-primer.html">Cloud networking primer</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<a href="images.html">Images</a>
+              </li>
+	      <li>
+		<a href="controllers.html">Controllers</a>
+              </li>
+	      <li>
+		<a href="machines.html">Machines</a>
+              </li>
+	      <li>
+		<a href="virtual-machines.html">Virtual machines</a>
+              </li>
+	      <li>
+		<a href="device-labels.html">Device labels</a>
+              </li>
+	      <li>
+		<a href="maas-events.html">Events</a>
+              </li>
+	      <li>
+		<a href="audit-events.html">Audit events</a>
+              </li>
+	      <li>
+		<a href="maas-logging.html">Logging</a>
+              </li>
+	      <li>
+		<a href="maas-security.html">Security</a>
+              </li>
+	      <li>
+		<a href="maas-performance.html">Performance</a>
+              </li>
+	      <li>
+		<a href="ansible.html">Ansible</a>
+              </li>
+	    </ul>
+	  </details>
 	</li>
       </ul>
     </div>
@@ -554,7 +451,7 @@
 <li><a href="#heading--how-to-manage-proxies">How to manage proxies</a></li>
 <li><a href="#heading--how-to-set-up-ntp">How to set up Network Time Protocol (NTP)</a></li>
 </ul>
-<p>Feel free to review some of the <a href="networking.html">theory</a> first.</p>
+<p>Feel free to review some of the <a href="about-tcp-ip-networks.html">theory</a> first.</p>
 <p><a href="#heading--how-to-manage-MAAS-network-elements"><h2 id="heading--how-to-manage-MAAS-network-elements">How to manage MAAS network elements</h2></a></p>
 <p>This section will show you:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -622,9 +519,9 @@
 <p>To access the main networking view, select <em>Networking &gt; Subnets</em>.</p>
 <p>This main view can also be filtered through the use of the &lsquo;Filters&rsquo; drop-down.</p>
 <p><a href="#heading--ui-how-to-display-the-subnet-window"><h3 id="heading--ui-how-to-display-the-subnet-window">How to display the subnet window</h3></a></p>
-<p>Selecting a subnet will display its <a href="networking.html#heading--the-subnet-summary">detail screen</a>.</p>
+<p>Selecting a subnet will display its detail screen.</p>
 <p><a href="#heading--ui-how-to-view-subnet-utilisation"><h3 id="heading--ui-how-to-view-subnet-utilisation">How to view subnet utilisation</h3></a></p>
-<p>This section of the subnet page presents <a href="about-networking.html/#heading--subnet-utilisation">metrics</a>.</p>
+<p>This section of the subnet page presents networking metrics.</p>
 <p><a href="#heading--how-to-manage-static-routes"><h3 id="heading--how-to-manage-static-routes">How to manage static routes between subnets</h3></a></p>
 <p>To create a static route:</p>
 <ol>
@@ -774,7 +671,7 @@ You can create an &ldquo;Open switch&rdquo; bridge if desired, and MAAS will cre
 <p>Change any of the desired parameters in the form which appears.</p>
 </li>
 <li>
-<p>Select an <a href="networking.html#heading--IP-modes"><em>IP mode</em></a>.</p>
+<p>Select an <em>IP mode</em>.</p>
 </li>
 <li>
 <p>Select <em>Save interface</em> to register your changes.</p>

@@ -8,7 +8,7 @@ This article will help you learn:
 - [How to manage proxies](#heading--how-to-manage-proxies)
 - [How to set up Network Time Protocol (NTP)](#heading--how-to-set-up-ntp)
 
-Feel free to review some of the [theory](/t/networking/6680) first.
+Feel free to review some of the [theory](/t/about-tcp-ip-networks/6683) first.
 
 <a href="#heading--how-to-manage-MAAS-network-elements"><h2 id="heading--how-to-manage-MAAS-network-elements">How to manage MAAS network elements</h2></a>
 
@@ -189,11 +189,11 @@ jq -r '(["FABRIC", "VLAN", "DHCP", "SUBNET"]
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="UI"]
 <a href="#heading--ui-how-to-display-the-subnet-window"><h3 id="heading--ui-how-to-display-the-subnet-window">How to display the subnet window</h3></a>
 
-Selecting a subnet will display its [detail screen](/t/networking/6680#heading--the-subnet-summary).
+Selecting a subnet will display its detail screen.
 
 <a href="#heading--ui-how-to-view-subnet-utilisation"><h3 id="heading--ui-how-to-view-subnet-utilisation">How to view subnet utilisation</h3></a>
 
-This section of the subnet page presents [metrics](/t/about-networking/6680/#heading--subnet-utilisation).
+This section of the subnet page presents networking metrics.
 [/tab]
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 <a href="#heading--cli-how-to-view-subnet-details"><h3 id="heading--cli-how-to-view-subnet-details">How to view subnet details</h3></a>
@@ -418,7 +418,7 @@ To edit a machine interface:
 
 7. Change any of the desired parameters in the form which appears.
 
-8. Select an [*IP mode*](/t/networking/6680#heading--IP-modes).
+8. Select an *IP mode*.
 
 9. Select *Save interface* to register your changes.
 [/tab]
