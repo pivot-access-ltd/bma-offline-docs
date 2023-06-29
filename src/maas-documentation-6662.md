@@ -24,7 +24,7 @@ MAAS is a member of the Ubuntu family. It’s an open source project that warmly
 - [Read our code of conduct](https://ubuntu.com/community/code-of-conduct)`↗`
 - [Get support](https://ubuntu.com/pro)`↗`
 - [Learn about MAAS performance](/t/about-maas-performance/6178)
-- [Join our online chat](/t/how-to-use-our-discourse-forum/6802)
+- [Join our online chat](/t/how-to-use-the-maas-discourse-forum/6802)
 - [Contribute code](https://launchpad.net/maas)`↗`
 - [Improve our doc](/t/how-to-contribute-documentation/6949)
 - [Request a feature](/t/how-to-request-a-new-feature/4447)
@@ -102,7 +102,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-improve-maas-security          | [Improve MAAS security](/t/-/5196)                              |
 | 3     | how-to-manage-user-accounts           | [Manage user accounts](/t/-/5184)                               |
 | 3     | how-to-enable-maas-native-tls         | [Enable MAAS native TLS](/t/-/5116)                             |
-| 3     | how-to-use-vault-with-maas            | [Use Vault with MAAS](/t/-/6942)                                |
+| 3     | how-to-use-hashicorp-vault-with-maas  | [Use Vault with MAAS](/t/-/6942)                                |
 | 3     | how-to-set-up-an-air-gapped-maas      | [Set up an air-gapped MAAS](/t/-/5212)                          |
 | 2     | how-to-operate-maas                   | [Operate MAAS](/t/-/6799)                                       |
 | 3     | how-to-find-machines                  | [Find machines](/t/-/5192)                                      |
@@ -111,7 +111,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-audit-maas                     | [Audit MAAS](/t/-/5987)                                         |
 | 3     | how-to-troubleshoot-maas              | [Troubleshoot MAAS](/t/-/5333)                                  |
 | 2     | how-to-give-and-receive-help          | [Give and receive help](/t/-/5428)                              |
-| 3     | how-to-use-our-discourse-forum        | [Use our Discourse forum](/t/-/6802)                            |
+| 3     | how-to-use-the-maas-discourse-forum   | [Use our Discourse forum](/t/-/6802)                            |
 | 3     | how-to-get-support                    | [Get support](https://ubuntu.com/pro)                           |
 | 3     | how-to-request-new-features           | [Request new features](/t/-/4447)                               |
 | 3     | how-to-review-and-report-bugs         | [Review and report bugs](/t/-/4446)                             |
@@ -132,7 +132,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | how-to-change-maas-settings           | [MAAS settings](/t/-/6347)                                      |
 | 3     | upgrading-postgresql-12-to-version-14 | [Upgrading PostgreSQL v12 to v14](/t/-/7203)                    |
 | 3     | maas-source-code                      | [MAAS source code](https://launchpad.net/maas)                  |
-| 3     | doc-style-guide                       | [Doc style guide](/t/-/4186)                                    |
+| 3     | maas-documentation-style-guide        | [Doc style guide](/t/-/4186)                                    |
 | 3     | maas-glossary                         | [Glossary](/t/-/5416)                                           |
 | 3     | code-of-conduct                       | [Code of conduct](https://ubuntu.com/community/code-of-conduct) |
 | 2     | api-reference                         | [API](/t/-/6665)                                                |
@@ -157,7 +157,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | about-maas                            | [MAAS](/t/-/6678)                                               |
 | 2     | networking                            | Networking                                                      |
 | 3     | about-maas-networks                   | [MAAS networks](/t/-/5084)                                      |
-| 3     | about-tcp-ip-network                  | [TCP/IP primer](/t/-/6683)                                      |
+| 3     | about-tcp-ip-networks                 | [TCP/IP primer](/t/-/6683)                                      |
 | 3     | about-dhcp                            | [DHCP primer](/t/-/6682)                                        |
 | 3     | about-cloud-networking                | [Cloud networking primer](/t/-/6684)                            |
 | 2     | about-images                          | [Images](/t/-/6685)                                             |
