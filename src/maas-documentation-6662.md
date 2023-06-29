@@ -1,4 +1,4 @@
-<!-- MAAS documentation -->
+<!-- "MAAS documentation" -->
 MAAS is **Metal As A Service**, a service that treats physical servers like virtual machines -- instances -- in the cloud.
 
 No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource. Enlist and deploy standard or customised operating systems to hardware and virtual machines -- remotely.  Monitor, manage, and secure your metal infrastructure easily and efficiently.
@@ -27,7 +27,7 @@ MAAS is a member of the Ubuntu family. It’s an open source project that warmly
 - [Join our online chat](/t/how-to-use-the-maas-discourse-forum/6802)
 - [Contribute code](https://launchpad.net/maas)`↗`
 - [Improve our doc](/t/how-to-contribute-documentation/6949)
-- [Request a feature](/t/how-to-request-a-new-feature/4447)
+- [Request a feature](/t/how-to-request-features/4447)
 - [Report a bug](/t/how-to-report-a-bug/4446)
 
 ### Our roadmap
@@ -38,7 +38,7 @@ Here's a view of our current roadmap:
 
 Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448)
 
-<!-- nohtml begin-nohtml -->
+<!-- "nohtml begin-nohtml" -->
 ## Navigation
 
 <!--
@@ -113,7 +113,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | how-to-give-and-receive-help          | [Give and receive help](/t/-/5428)                              |
 | 3     | how-to-use-the-maas-discourse-forum   | [Use our Discourse forum](/t/-/6802)                            |
 | 3     | how-to-get-support                    | [Get support](https://ubuntu.com/pro)                           |
-| 3     | how-to-request-new-features           | [Request new features](/t/-/4447)                               |
+| 3     | how-to-request-features               | [Request new features](/t/-/4447)                               |
 | 3     | how-to-review-and-report-bugs         | [Review and report bugs](/t/-/4446)                             |
 | 3     | how-to-contribute-documentation       | [Contribute documentation](/t/-/6949)                           |
 | 0     |                                       |                                                                 |
@@ -162,7 +162,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | about-cloud-networking                | [Cloud networking primer](/t/-/6684)                            |
 | 2     | about-images                          | [Images](/t/-/6685)                                             |
 | 2     | controllers                           | Controllers                                                     |
-| 3     | about-controllers                     | [Region and rack controllers](/t/-/6690)                        |
+| 3     | about-region-and-rack-controllers     | [Region and rack controllers](/t/-/6690)                        |
 | 3     | about-high-availability               | [High availability](/t/-/6992)                                  |
 | 2     | machines-and-devices                  | Machines and devices                                            |
 | 3     | about-machines                        | [Machines](/t/-/6695)                                           |
@@ -171,7 +171,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 2     | events-and-logging                    | Events and logging                                              |
 | 3     | about-maas-events                     | [MAAS events](/t/-/6510)                                        |
 | 3     | about-audit-events                    | [Audit events](/t/-/6372)                                       |
-| 3     | about-maas-logging                    | [MAAS logging](/t/-/5240)                                       |
+| 3     | about-log-files                       | [MAAS logging](/t/-/5240)                                       |
 | 2     | about-maas-security                   | [MAAS security](/t/-/6719)                                      |
 | 2     | about-maas-performance                | [MAAS performance](/t/-/6178)                                   |
 | 2     | about-ansible                         | [Ansible](/t/-/6888)                                            |
@@ -212,7 +212,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
 | /docs/request-a-feature                            | /docs/how-to-request-new-features             |
 | /docs/how-to-request-a-feature                     | /docs/how-to-request-new-features             |
-| /docs/how-to-work-with-log-files                   | /docs/about-maas-logging                      |
+| /docs/how-to-work-with-log-files                   | /docs/about-log-files                      |
 | /docs/how-to-work-with-audit-event-logs            | /docs/how-to-audit-maas                       |
 | /docs/how-to-diagnose-issues                       | /docs/how-to-troubleshoot-maas                |
 | /docs/how-to-observe-a-live-maas                   | /docs/how-to-monitor-maas                     |
@@ -300,4 +300,4 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/vmware-images                                | /docs/how-to-employ-vmware-images             |
 | /docs/whats-new-in-maas                            | /docs/what-is-new-with-maas                   |
 [/details]
-<!-- nohtml end-nohtml -->
+<!-- "nohtml end-nohtml" -->
