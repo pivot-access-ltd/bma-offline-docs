@@ -1,4 +1,4 @@
-<!-- "About MAAS performance" -->
+<!-- "MAAS performance" -->
 The MAAS engineering team actively works to improve the performance of MAAS.
 
 <a href="#heading--performance-measurements"><h2 id="heading--performance-measurements">Recent performance measurements</h2></a>
@@ -38,10 +38,10 @@ Note that this list only captures the bigger, sustained efforts, although there 
 
 It's possible to [collect your own MAAS metrics](/t/how-to-monitor-maas/5204) -- and even share them with the MAAS engineering team.  We are keen to know everything we can about machine counts, network sizes, and MAAS performance in all areas.  Please use the [discourse performance forum](https://discourse.maas.io/c/maas-performance/26)`↗` to share your feedback and observations.
 
-<a href="#headings--recent-developments"><h2 id="heading--recent-developments">Recent developments</h2></a>
+<a href="#heading--recent-developments"><h2 id="heading--recent-developments">Recent developments</h2></a>
 
 As part of the MAAS 3.2 development effort, we have taken steps to improve the performance of machine listings. To date, we have measured the speed of listing a large number (100-1000) of machines via the REST API to be 32% faster, on average.
 
-<a href="#headings--next-steps"><h2 id="heading--next-steps">Next steps</h2></a>
+<a href="#heading--next-steps"><h2 id="heading--next-steps">Next steps</h2></a>
 
 Currently, we are actively working to improve MAAS performance for other operations, such as search.
