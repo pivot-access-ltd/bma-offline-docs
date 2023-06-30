@@ -526,7 +526,7 @@
 <p>The DHCP negotiation process is known as DORA: Discover, Offer, Request, Acknowledge. Just like the exchange above, it’s carried out by the network equivalent of shouting, that is, broadcast exchanges. While the payloads for the messages carry unique addressing information (after the first DISCOVER message), the Destination IP (DIP) is always 255.255.255.255 — broadcast mode. Every machine on the network will see the packet, but they will ignore it when they look at the payload.</p>
 <p>By the way, there are several other possible responses at various points in the exchange, such as NACK (from the DHCP server, when the client has waited too long to make the request) and DECLINE (e.g., when the IP address configuration offered isn’t usable by the client).</p>
 <p>The network version looks something like this:</p>
-<p><a href="../images/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg"></a></p>
+<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8c1756c1f0a9309fa01f1f5ccc0573e33e436fa.jpeg"></a></p>
 <p>Message 1 (&ldquo;DISCOVER&rdquo;) is the only one that carries no destination info in its payload.  The
 entire exchange takes place in broadcasts, rather than addressed packets. Said differently, the DIP (Destination IP address) is always 255.255.255.255, the broadcast address. The exchange becomes semi-private with the first OFFER, via the use of message payloads.</p>
 <p><strong>NOTE:</strong> 
