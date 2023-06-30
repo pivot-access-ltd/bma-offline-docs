@@ -11,8 +11,23 @@
       #sidebar a:visited{color:black;}
       #sidebar a:active{color:black;}
       #sidebar a:hover{color:blue;}
-      ul {margin-left:0;list-style-type:none;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
       li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
     </style>
   </head>
   <body>
@@ -26,521 +41,471 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  UI-only
+        &nbsp;UI-only&nbsp;
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/power-drivers-reference.html">
-	  CLI-only
-	</a>
+      <a href="../cli/power-drivers-reference.html">
+        CLI-only
+      </a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
-      <strong>
-	<a href="maas-documentation-25.html">
-	  Home
-	</a>
-      </strong> 
-      <strong>
-	<a href="tutorials.html">
-	  Tutorials
-	</a>
-      </strong>
       <ul>
 	<li>
-	  <a href="bootstrap-maas.html">
-	    Bootstrap MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="try-out-the-maas-cli.html">
-	    Try out the MAAS CLI
-	  </a>
-	</li>
-	<li>
-	  <a href="create-a-custom-image.html">
-	    Create a custom image
-	  </a>
-	</li>
-	<li>
-	  <a href="get-fancy-cli-output.html">
-	    Get fancy CLI output
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-get-started-with-maas.html">
-	  How to get started with MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-do-a-fresh-install-of-maas.html">
-	    Do a fresh install of MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-spin-up-maas-with-ansible.html">
-	    Spin up MAAS with Ansible
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-set-up-networks.html">
-	  How to set up networks
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-connect-maas-networks.html">
-	    Connect MAAS networks
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-dhcp.html">
-	    Enable DHCP
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-availability-zones.html">
-	    Use availability zones
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-images.html">
-	  How to use images
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-standard-images.html">
-	    Use standard images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-mirror-images-locally.html">
-	    Mirror images locally
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-images.html">
-	    Customise images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-employ-vmware-images.html">
-	    Employ VMWare images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-deploy-a-real-time-kernel.html">
-	    Deploy a RT kernel
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-controllers.html">
-	  How to manage controllers
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-configure-controllers.html">
-	    Configure controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-machines.html">
-	  How to manage machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-make-machines-available.html">
-	    Make machines available
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-machines.html">
-	    Customise machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-put-machines-to-work.html">
-	    Put machines to work
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-virtual-machines.html">
-	  How to use virtual machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-set-up-lxd.html">
-	    Set up LXD
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-vm-hosts.html">
-	    Manage VM hosts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-virtual-machines.html">
-	    Manage virtual machines
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-label-devices.html">
-	  How to label devices
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-tag-machines.html">
-	    Tag machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-annotate-machines.html">
-	    Annotate machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-machine-tags.html">
-	    Use machine tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-controller-tags.html">
-	    Use controller tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-storage-tags.html">
-	    Use storage tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-network-tags.html">
-	    Use network tags
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-secure-maas.html">
-	  How to secure MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-improve-maas-security.html">
-	    Improve MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-user-accounts.html">
-	    Manage user accounts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-maas-native-tls.html">
-	    Enable MAAS native TLS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-hashicorp-vault-with-maas.html">
-	    Use Vault with MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-set-up-an-air-gapped-maas.html">
-	    Set up an air-gapped MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-operate-maas.html">
-	  How to operate MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-find-machines.html">
-	    Find machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-back-up-maas.html">
-	    Back up MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-monitor-maas.html">
-	    Monitor MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-audit-maas.html">
-	    Audit MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshoot MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-give-and-receive-help.html">
-	  How to give and receive help
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-our-discourse-forum.html">
-	    Use our discourse forum
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contact-us">
-	    Get support↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-request-new-features.html">
-	    Request new features
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-review-and-report-bugs.html">
-	    Review and report bugs
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contribute-doc.html">
-	    Contribute documentation
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="general-reference.html">
-	  General reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-installation-requirements.html">
-	    Installation requirements
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-settings-reference.html">
-	    MAAS settings
-	  </a>
-	</li>
-	<li>
-	  <a href="https://launchpad.net/maas.html">
-	    MAAS source code↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-help-improve-the-doc.html">
-	    Doc style guide
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-glossary.html">
-	    Glossary
-	  </a>
-	</li>
-	<li>
-	  <a href="https://ubuntu.com/community/code-of-conduct">
-	    Code of conduct↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="api-reference.html">
-	  API reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
-	  </a>
-	</li>
-	<li>
-	  <a href="python-api-client-reference.html">
-	    Python API client
-	  </a>
-	</li>
-	<li>
-	  <a href="api">
-	    API documentation↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-scripts-reference.html">
-	  Scripts reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="commissioning-scripts-reference.html">
-	    Commissioning scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="hardware-test-scripts-reference.html">
-	    Hardware test scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-terraform-reference.html">
-	    Terraform
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-logs-reference.html">
-	  Log reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="event-logs-reference.html">
-	    Event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="audit-event-logs-reference.html">
-	    Audit event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="commissioning-logs-reference.html">
-	    Commissioning logs
-	  </a>
-	</li>
-	<li>
-	  <a href="testing-logs-reference.html">
-	    Testing logs
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="machine-parameters-reference.html">
-	  Machine parameters reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="power-drivers-reference.html">
-	    Power drivers
-	  </a>
-	</li>
-	<li>
-	  <a href="storage-layouts-reference.html">
-	    Storage layouts
-	  </a>
-	</li>
-	<li>
-	  <a href="device-labelling-reference.html">
-	    Device labelling
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href=".html">
-	  Explanation
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-maas.html">
-	    About MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="about-networking.html">
-	    About networking
-	  </a>
-	</li>
-	<li>
-	  <a href="about-images.html">
-	    About images
-	  </a>
-	</li>
-	<li>
-	  <a href="about-controllers.html">
-	    About controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="about-machines.html">
-	    About machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-virtual-machines.html">
-	    About virtual machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-device-labels.html">
-	    About device labels
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-events.html">
-	    About MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-audit-events.html">
-	    About audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-logging.html">
-	    About MAAS logging
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-security.html">
-	    About MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-performance.html">
-	    About MAAS performance
-	  </a>
-	</li>
-	<li>
-	  <a href="about-ansible.html">
-	    About Ansible
-	  </a>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary>Try out MAAS</summary>
+		  <ul>
+		    <li>
+		      <a href="bootstrap-maas.html">Bootstrap MAAS</a>
+		    </li>
+		    <li>
+		      <a href="get-to-know-your-machines.html">Get to know your machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<a href="try-out-the-maas-cli.html">Try out the MAAS CLI</a>
+	      </li>
+	      <li>
+		<a href="create-custom-images.html">Create custom images</a>
+	      </li>
+	      <li>
+		<a href="get-fancy-cli-output.html">Get fancy CLI output</a>
+	      </li>
+              <li>
+		<details>
+                  <summary>Primer tutorials</summary>
+		  <ul>
+		    <li>
+		      <a href="primer-tutorial-the-osi-model.html">OSI model tutorial</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary><a href="how-to-get-started-with-maas.html">Get started with MAAS</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-do-a-fresh-install-of-maas.html">Do a fresh install of MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-upgrade-maas.html">Upgrade MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-spin-up-maas-with-ansible.html">Spin up MAAS with Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-networks.html">Manage networks</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-connect-maas-networks.html">Connect MAAS networks</a>
+                    </li>
+                    <li>
+                      <a href="how-to-enable-dhcp.html">Enable DHCP</a>
+                    </li>
+                    <li>
+                      <a href="how-to-use-availability-zones.html">Use availability zones</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-images.html">Use images</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-use-standard-images.html">Use standard images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-mirror-images-locally.html">Mirror images locally</a>
+                    </li>
+                    <li>
+                      <a href="how-to-customise-images.html">Customise images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-employ-vmware-images.html">Employ VMware images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-deploy-a-real-time-kernel.html">Deploy a RT kernel</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-controllers.html">Manage controllers</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-configure-controllers.html">Configure controllers</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-high-availability.html">Enable high availability</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-machines.html">Manage machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-make-machines-available.html">Make machines available</a>
+		    </li>
+		    <li>
+		      <a href="how-to-customise-machines.html">Customise machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-put-machines-to-work.html">Put machines to work</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-virtual-machines.html">Use virtual machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-set-up-lxd.html">Set up LXD</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-vm-hosts.html">Manage VM hosts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-virtual-machines.html">Manage virtual machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-label-devices.html">Label devices</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-tag-machines.html">Tag machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-annotate-machines.html">Annotate machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-machine-tags.html">Use machine tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-controller-tags.html">Use controller tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-storage-tags.html">Use storage tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-network-tags.html">Use network tags</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-secure-maas.html">Secure MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-improve-maas-security.html">Improve MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-user-accounts.html">Manage user accounts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-maas-native-tls.html">Enable MAAS native TLS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-hashicorp-vault-with-maas.html">Use Vault with MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-set-up-an-air-gapped-maas.html">Set up an air-gapped MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-operate-maas.html">Operate MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-find-machines.html">Find machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-back-up-maas.html">Back up MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-monitor-maas.html">Monitor MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-audit-maas.html">Audit MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-troubleshoot-maas">Troubleshoot MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-give-and-receive-help.html">Give and receive help</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-use-the-maas-discourse-forum.html">Use our discourse forum</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/pro">Get support</a>
+		    </li>
+		    <li>
+		      <a href="how-to-request-new-features.html">Request new features</a>
+		    </li>
+		    <li>
+		      <a href="how-to-review-and-report-bugs.html">Review and report bugs</a>
+		    </li>
+		    <li>
+		      <a href="how-to-contribute-documentation.html">Contribute documentation</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="reference.html">Reference</a></summary>
+            <ul>
+	      <details>
+		<summary><a href="maas-release-notes.html">Release notes</a></summary>
+		<ul>
+		  <li>
+		    <a href="what-is-new-with-maas-3-4.html">MAAS 3.4 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-3.html">MAAS 3.3 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-2.html">MAAS 3.2 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-1.html">MAAS 3.1 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-0.html">MAAS 3.0 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-9.html">MAAS 2.9 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-8.html">MAAS 2.8 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-7.html">MAAS 2.7 release notes</a>
+              	  </li>
+		</ul>
+	      </details>
+              <li>
+		<details>
+                  <summary><a href="general-reference.html">General</a></summary>
+		  <ul>
+		    <li>
+		      <a href="installation-requirements.html">Installation requirements</a>
+		    </li>
+		    <li>
+		      <a href="maas-settings-reference.html">MAAS settings</a>
+		    </li>
+		    <li>
+		      <a href="https://launchpad.net/maas">Source code</a>
+		    </li>
+		    <li>
+		      <a href="maas-documentation-style-guide.html">Doc style guide</a>
+		    </li>
+		    <li>
+		      <a href="maas-glossary.html">Glossary</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/community/code-of-conduct">Code of conduct</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+              <li>
+		<details>
+		  <summary><a href="api.html">API</a></summary>
+		  <ul>
+		    <li>
+                      <a href="api-authentication-reference.html">API authentication</a>
+                    </li>
+		    <li>
+                      <a href="python-api-client-reference.html">Python API client</a>
+                    </li>
+		    <li>
+                      <a href="/docs/api">API documentation</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="scripts-reference.html">Scripts</a></summary>
+		  <ul>
+		    <li>
+                      <a href="commissioning-scripts-reference.html">Commissioning scripts</a>
+                    </li>
+		    <li>
+                      <a href="hardware-test-scripts-reference.html">Hardware test scripts</a>
+                    </li>
+		    <li>
+                      <a href="maas-terraform-reference.html">Terraform</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="log-reference.html">Logging</a></summary>
+		  <ul>
+		    <li>
+                      <a href="event-logs-reference.html">Event logs</a>
+                    </li>
+		    <li>
+                      <a href="audit-event-logs-reference.html">Audit event logs</a>
+                    </li>
+		    <li>
+                      <a href="commissioning-logs-reference.html">Commissioning logs</a>
+                    </li>
+		    <li>
+                      <a href="testing-logs-reference.html">Testing logs</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="machine-parameters-reference.html">machine-parameters</a></summary>
+		  <ul>
+		    <li>
+                      <a href=.html"power-drivers-reference.html">Power drivers</a>
+                    </li>
+		    <li>
+                      <a href="storage-layouts-reference.html">Storage layouts</a>
+                    </li>
+		    <li>
+                      <a href="device-labelling-reference.html">Device labelling</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+	  <details>
+	    <summary><a href="explanation.html">Explanation</a></summary>
+	    <ul>
+	      <li>
+		<a href="about-maas.html">About MAAS</a>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Networking</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-networks.html">MAAS networks</a>
+		    </li>
+		    <li>
+		      <a href="about-tcp-ip-networks.html">TCP/IP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-dhcp.html">DHCP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-cloud-networking.html">Cloud networking primer</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<a href="about-images.html">Images</a>
+              </li>
+	      <li>
+		<details>
+		  <summary>Controllers</summary>
+		  <ul>
+		    <li>
+		      <a href="about-region-and-rack-controllers.html">Region and rack controllers</a>
+		    </li>
+		    <li>
+		      <a href="about-high-availability.html">High availability</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Machines and devices</summary>
+		  <ul>
+		    <li>
+		      <a href="about-machines.html">Machines</a>
+		    </li>
+		    <li>
+		      <a href="about-virtual-machines.html">Virtual machines</a>
+		    </li>
+		    <li>
+		      <a href="device-labels.html">Device labels</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Events and logging</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-events.html">MAAS events</a>
+		    </li>
+		    <li>
+		      <a href="about-audit-events.html">Audit events</a>
+		    </li>
+		    <li>
+		      <a href="about-log-files.html">MAAS logging</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-security.html">MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-performance.html">MAAS performance</a>
+		    </li>
+		    <li>
+		      <a href="about-ansible.html">Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	    </ul>
+	  </details>
 	</li>
       </ul>
     </div>
@@ -568,94 +533,94 @@
 <table>
 <thead>
 <tr>
-<th align="left">CLI power_type code</th>
-<th align="left">Description</th>
+<th style="text-align: left;">CLI power_type code</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="#heading--amt">amt</a></td>
-<td align="left">Intel AMT</td>
+<td style="text-align: left;"><a href="#heading--amt">amt</a></td>
+<td style="text-align: left;">Intel AMT</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--apc">apc</a></td>
-<td align="left">American Power Conversion (APC) PDU</td>
+<td style="text-align: left;"><a href="#heading--apc">apc</a></td>
+<td style="text-align: left;">American Power Conversion (APC) PDU</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--dli">dli</a></td>
-<td align="left">Digital Loggers, Inc. PDU</td>
+<td style="text-align: left;"><a href="#heading--dli">dli</a></td>
+<td style="text-align: left;">Digital Loggers, Inc. PDU</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--hmc">hmc</a></td>
-<td align="left">IBM Hardware Management Console (HMC)</td>
+<td style="text-align: left;"><a href="#heading--hmc">hmc</a></td>
+<td style="text-align: left;">IBM Hardware Management Console (HMC)</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--lxd">lxd</a></td>
-<td align="left">LXD VM</td>
+<td style="text-align: left;"><a href="#heading--lxd">lxd</a></td>
+<td style="text-align: left;">LXD VM</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--ipmi">ipmi</a></td>
-<td align="left">IPMI</td>
+<td style="text-align: left;"><a href="#heading--ipmi">ipmi</a></td>
+<td style="text-align: left;">IPMI</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--manual">manual</a></td>
-<td align="left">Manual power configuration</td>
+<td style="text-align: left;"><a href="#heading--manual">manual</a></td>
+<td style="text-align: left;">Manual power configuration</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--moonshot">moonshot</a></td>
-<td align="left">HP Moonshot - iLO4 (IPMI)</td>
+<td style="text-align: left;"><a href="#heading--moonshot">moonshot</a></td>
+<td style="text-align: left;">HP Moonshot - iLO4 (IPMI)</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--mscm">mscm</a></td>
-<td align="left">HP Moonshot - iLO Chassis Manager</td>
+<td style="text-align: left;"><a href="#heading--mscm">mscm</a></td>
+<td style="text-align: left;">HP Moonshot - iLO Chassis Manager</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--mscm">msftocs</a></td>
-<td align="left">Microsoft OCS - Chassis Manager</td>
+<td style="text-align: left;"><a href="#heading--mscm">msftocs</a></td>
+<td style="text-align: left;">Microsoft OCS - Chassis Manager</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--nova">nova</a></td>
-<td align="left">OpenStack Nova</td>
+<td style="text-align: left;"><a href="#heading--nova">nova</a></td>
+<td style="text-align: left;">OpenStack Nova</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--openbmc">openbmc</a></td>
-<td align="left">OpenBMC Power Driver</td>
+<td style="text-align: left;"><a href="#heading--openbmc">openbmc</a></td>
+<td style="text-align: left;">OpenBMC Power Driver</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--proxmox">proxmox</a></td>
-<td align="left">ProxMox Power Driver</td>
+<td style="text-align: left;"><a href="#heading--proxmox">proxmox</a></td>
+<td style="text-align: left;">ProxMox Power Driver</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--recs_box">recs_box</a></td>
-<td align="left">Christmann RECS-Box Power Driver</td>
+<td style="text-align: left;"><a href="#heading--recs_box">recs_box</a></td>
+<td style="text-align: left;">Christmann RECS-Box Power Driver</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--redfish">redfish</a></td>
-<td align="left">Redfish</td>
+<td style="text-align: left;"><a href="#heading--redfish">redfish</a></td>
+<td style="text-align: left;">Redfish</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--sm15k">sm15k</a></td>
-<td align="left">SeaMicro 15000</td>
+<td style="text-align: left;"><a href="#heading--sm15k">sm15k</a></td>
+<td style="text-align: left;">SeaMicro 15000</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--ucsm">ucsm</a></td>
-<td align="left">Cisco UCS Manager</td>
+<td style="text-align: left;"><a href="#heading--ucsm">ucsm</a></td>
+<td style="text-align: left;">Cisco UCS Manager</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--virsh">virsh</a></td>
-<td align="left">libvirt KVM</td>
+<td style="text-align: left;"><a href="#heading--virsh">virsh</a></td>
+<td style="text-align: left;">libvirt KVM</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--vmware">vmware</a></td>
-<td align="left">VMware</td>
+<td style="text-align: left;"><a href="#heading--vmware">vmware</a></td>
+<td style="text-align: left;">VMware</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--webhook">webhook</a></td>
-<td align="left">Webhook</td>
+<td style="text-align: left;"><a href="#heading--webhook">webhook</a></td>
+<td style="text-align: left;">Webhook</td>
 </tr>
 <tr>
-<td align="left"><a href="#heading--wedge">wedge</a></td>
-<td align="left">Facebook&rsquo;s Wedge</td>
+<td style="text-align: left;"><a href="#heading--wedge">wedge</a></td>
+<td style="text-align: left;">Facebook&rsquo;s Wedge</td>
 </tr>
 </tbody>
 </table>
@@ -669,21 +634,21 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -691,26 +656,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">IP for APC PDU</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">IP for APC PDU</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">APU PDU node outlet number (1-16)</td>
-<td align="left">PDU node outlet number</td>
-<td align="left">Required</td>
+<td style="text-align: left;">APU PDU node outlet number (1-16)</td>
+<td style="text-align: left;">PDU node outlet number</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power ON outlet delay (seconds)</td>
-<td align="left">outlet power ON delay</td>
-<td align="left">Optional, default=5</td>
+<td style="text-align: left;">Power ON outlet delay (seconds)</td>
+<td style="text-align: left;">outlet power ON delay</td>
+<td style="text-align: left;">Optional, default=5</td>
 </tr>
 </tbody>
 </table>
@@ -718,31 +683,31 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Outlet ID</td>
-<td align="left">outlet ID</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Outlet ID</td>
+<td style="text-align: left;">outlet ID</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to login</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 </tbody>
 </table>
@@ -750,36 +715,36 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">IP for HMC</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">IP for HMC</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">HMC username</td>
-<td align="left">Username to login</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">HMC username</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">HMC password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">HMC password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">HMC Managed System server name</td>
-<td align="left">HMC managed server name</td>
-<td align="left">Required</td>
+<td style="text-align: left;">HMC Managed System server name</td>
+<td style="text-align: left;">HMC managed server name</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">HMC logical partition</td>
-<td align="left">HMC logical partition of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">HMC logical partition</td>
+<td style="text-align: left;">HMC logical partition of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -787,26 +752,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">LXD address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">LXD address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Instance name</td>
-<td align="left">LXD container instance name</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Instance name</td>
+<td style="text-align: left;">LXD container instance name</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">LXD password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">LXD password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 </tbody>
 </table>
@@ -815,120 +780,120 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Choices</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Choices</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Power driver</td>
-<td align="left">Power driver</td>
-<td align="left"><code>LAN [IPMI 1.5]</code></td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power driver</td>
+<td style="text-align: left;">Power driver</td>
+<td style="text-align: left;"><code>LAN [IPMI 1.5]</code></td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>LAN_2_0 [IPMI 2.0]</code></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>LAN_2_0 [IPMI 2.0]</code></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">Power boot type</td>
-<td align="left">Boot type</td>
-<td align="left"><code>Automatic</code></td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power boot type</td>
+<td style="text-align: left;">Boot type</td>
+<td style="text-align: left;"><code>Automatic</code></td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>Legacy boot</code></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Legacy boot</code></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>EFI boot</code></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>EFI boot</code></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">IP address</td>
-<td align="left">IP address of unit</td>
-<td align="left"></td>
-<td align="left">Required</td>
+<td style="text-align: left;">IP address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to login</td>
-<td align="left"></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left"></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power MAC</td>
-<td align="left">MAC address of unit</td>
-<td align="left"></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power MAC</td>
+<td style="text-align: left;">MAC address of unit</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">K_g</td>
-<td align="left">K_g BMC key</td>
-<td align="left"></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">K_g</td>
+<td style="text-align: left;">K_g BMC key</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Cipher suite</td>
-<td align="left">Cipher suite ID</td>
-<td align="left">- <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Cipher suite</td>
+<td style="text-align: left;">Cipher suite ID</td>
+<td style="text-align: left;">- <code>17</code> <small>(17 - HMAC-SHA256::HMAC_SHA256_128::AES-CBC-128)</small></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>3</code> <small>(3 - HMAC-SHA1::HMAC-SHA1-96::AES-CBC-128)</small></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code></code> (blank) <small>(freeipmi-tools default)</small></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code></code> (blank) <small>(freeipmi-tools default)</small></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>8</code> <small>(8 - HMAC-MD5::HMAC-MD5-128::AES-CBC-128)</small></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>12</code> <small>(12 - HMAC-MD5::MD5-128::AES-CBC-128)</small></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">Privilege level</td>
-<td align="left">IPMI privilege level</td>
-<td align="left"><code>User</code></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Privilege level</td>
+<td style="text-align: left;">IPMI privilege level</td>
+<td style="text-align: left;"><code>User</code></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>Operator</code></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Operator</code></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"><code>Administrator</code></td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Administrator</code></td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
@@ -938,31 +903,31 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Power address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to login</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power hardware address</td>
-<td align="left">Hardware address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power hardware address</td>
+<td style="text-align: left;">Hardware address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -970,41 +935,41 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">IP for MSCM CLI API</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">IP for MSCM CLI API</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">MSCM CLI API user</td>
-<td align="left">Username to login</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">MSCM CLI API user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">MSCM CLI API password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">MSCM CLI API password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Node ID</td>
-<td align="left">cXnY</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Node ID</td>
+<td style="text-align: left;">cXnY</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">- where</td>
-<td align="left">X = cartridge number</td>
-<td align="left"></td>
+<td style="text-align: left;">- where</td>
+<td style="text-align: left;">X = cartridge number</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left">Y = node number</td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y = node number</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
@@ -1012,36 +977,36 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Power address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power port</td>
-<td align="left">Port where unit is attached</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power port</td>
+<td style="text-align: left;">Port where unit is attached</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to login</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Blade ID</td>
-<td align="left">Blade ID (usu. 1-24)</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Blade ID</td>
+<td style="text-align: left;">Blade ID (usu. 1-24)</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -1049,36 +1014,36 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Host UUID</td>
-<td align="left">Host UUID</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Host UUID</td>
+<td style="text-align: left;">Host UUID</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Tenant name</td>
-<td align="left">Tenant name</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Tenant name</td>
+<td style="text-align: left;">Tenant name</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Username</td>
-<td align="left">Username to login</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Username</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Auth URL</td>
-<td align="left">URL to access unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Auth URL</td>
+<td style="text-align: left;">URL to access unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -1086,51 +1051,51 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Power type</td>
-<td align="left">Proxmox</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power type</td>
+<td style="text-align: left;">Proxmox</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Host name or IP</td>
-<td align="left">Power address for the Proxmox driver</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Host name or IP</td>
+<td style="text-align: left;">Power address for the Proxmox driver</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Username, including realm</td>
-<td align="left">Power user, along with realm (i.e., Username@Realm</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Username, including realm</td>
+<td style="text-align: left;">Power user, along with realm (i.e., Username@Realm</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Password</td>
-<td align="left">Required if a token name and secret aren&rsquo;t given</td>
-<td align="left">Provisional</td>
+<td style="text-align: left;">Password</td>
+<td style="text-align: left;">Required if a token name and secret aren&rsquo;t given</td>
+<td style="text-align: left;">Provisional</td>
 </tr>
 <tr>
-<td align="left">API token name</td>
-<td align="left">Token name: must include Username without realm (i.e., Username!Token-name</td>
-<td align="left">Provisional</td>
+<td style="text-align: left;">API token name</td>
+<td style="text-align: left;">Token name: must include Username without realm (i.e., Username!Token-name</td>
+<td style="text-align: left;">Provisional</td>
 </tr>
 <tr>
-<td align="left">API token secret</td>
-<td align="left">Token secret</td>
-<td align="left">Provisional</td>
+<td style="text-align: left;">API token secret</td>
+<td style="text-align: left;">Token secret</td>
+<td style="text-align: left;">Provisional</td>
 </tr>
 <tr>
-<td align="left">Node ID</td>
-<td align="left">VM name or ID</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Node ID</td>
+<td style="text-align: left;">VM name or ID</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Verify SSL connections&hellip;</td>
-<td align="left">Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Verify SSL connections&hellip;</td>
+<td style="text-align: left;">Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -1138,26 +1103,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">OpenBMC address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">OpenBMC address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">OpenBMC user</td>
-<td align="left">Username to login</td>
-<td align="left">Required</td>
+<td style="text-align: left;">OpenBMC user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">OpenBMC password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">OpenBMC password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -1165,36 +1130,36 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Node ID</td>
-<td align="left">Node ID</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Node ID</td>
+<td style="text-align: left;">Node ID</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power port</td>
-<td align="left">Port where unit is attached</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power port</td>
+<td style="text-align: left;">Port where unit is attached</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to login</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 </tbody>
 </table>
@@ -1202,31 +1167,31 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Redfish address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Redfish address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Redfish user</td>
-<td align="left">Username to login</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Redfish user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Redfish password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Redfish password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Node ID</td>
-<td align="left">Node ID</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Node ID</td>
+<td style="text-align: left;">Node ID</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 </tbody>
 </table>
@@ -1235,54 +1200,54 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Choices</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Choices</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">System ID</td>
-<td align="left">System ID</td>
-<td align="left"></td>
-<td align="left">Required</td>
+<td style="text-align: left;">System ID</td>
+<td style="text-align: left;">System ID</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power address</td>
-<td align="left">IP address of unit</td>
-<td align="left"></td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to login</td>
-<td align="left"></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to login</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left"></td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power control type</td>
-<td align="left">Password to access unit</td>
-<td align="left">IPMI</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power control type</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">IPMI</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">REST API v0.9</td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">REST API v0.9</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">REST API v2.0</td>
-<td align="left"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">REST API v2.0</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
@@ -1290,31 +1255,31 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Server UUID</td>
-<td align="left">Server UUID</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Server UUID</td>
+<td style="text-align: left;">Server UUID</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">URL for XML API</td>
-<td align="left">XML API URL</td>
-<td align="left">Required</td>
+<td style="text-align: left;">URL for XML API</td>
+<td style="text-align: left;">XML API URL</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">API user</td>
-<td align="left">API user</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">API user</td>
+<td style="text-align: left;">API user</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">API password</td>
-<td align="left">API password</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">API password</td>
+<td style="text-align: left;">API password</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 </tbody>
 </table>
@@ -1322,26 +1287,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Address</td>
-<td align="left">URL of VM</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Address</td>
+<td style="text-align: left;">URL of VM</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Password</td>
-<td align="left">API password</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Password</td>
+<td style="text-align: left;">API password</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Virsh VM ID</td>
-<td align="left">libvirt VM UUID</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Virsh VM ID</td>
+<td style="text-align: left;">libvirt VM UUID</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
@@ -1349,46 +1314,46 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">VM Name</td>
-<td align="left">VM name (if UUID unknown)</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">VM Name</td>
+<td style="text-align: left;">VM name (if UUID unknown)</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">VM UUID</td>
-<td align="left">VM UUID (if known)</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">VM UUID</td>
+<td style="text-align: left;">VM UUID (if known)</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">VMware IP</td>
-<td align="left">IP address of VM</td>
-<td align="left">Required</td>
+<td style="text-align: left;">VMware IP</td>
+<td style="text-align: left;">IP address of VM</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">VMware username</td>
-<td align="left">Username to access VM</td>
-<td align="left">Required</td>
+<td style="text-align: left;">VMware username</td>
+<td style="text-align: left;">Username to access VM</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">VMware password</td>
-<td align="left">Password to access VM</td>
-<td align="left">Required</td>
+<td style="text-align: left;">VMware password</td>
+<td style="text-align: left;">Password to access VM</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">VMware API port</td>
-<td align="left">VMware API port number</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">VMware API port</td>
+<td style="text-align: left;">VMware API port number</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">VMware API protocol</td>
-<td align="left">VMware API protocol</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">VMware API protocol</td>
+<td style="text-align: left;">VMware API protocol</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 </tbody>
 </table>
@@ -1396,26 +1361,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">IP address</td>
-<td align="left">IP address of unit</td>
-<td align="left">Required</td>
+<td style="text-align: left;">IP address</td>
+<td style="text-align: left;">IP address of unit</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 </tbody>
 </table>
@@ -1430,61 +1395,61 @@ The machine&rsquo;s hostname &ndash; according to MAAS &ndash; is a randomly cho
 <table>
 <thead>
 <tr>
-<th align="left">Form field</th>
-<th align="left">Description</th>
-<th align="left">Required (by Webhook)</th>
+<th style="text-align: left;">Form field</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required (by Webhook)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Power type</td>
-<td align="left">Webhook (from drop-down list)</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Power type</td>
+<td style="text-align: left;">Webhook (from drop-down list)</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">URI to power on the node</td>
-<td align="left">URI to access power driver&rsquo;s API for power on</td>
-<td align="left">Required</td>
+<td style="text-align: left;">URI to power on the node</td>
+<td style="text-align: left;">URI to access power driver&rsquo;s API for power on</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">URI to power off the node</td>
-<td align="left">URI to access power driver&rsquo;s API for power off</td>
-<td align="left">Required</td>
+<td style="text-align: left;">URI to power off the node</td>
+<td style="text-align: left;">URI to access power driver&rsquo;s API for power off</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">URI to query the nodes power status</td>
-<td align="left">URI to access power driver&rsquo;s API for power status</td>
-<td align="left">Required</td>
+<td style="text-align: left;">URI to query the nodes power status</td>
+<td style="text-align: left;">URI to access power driver&rsquo;s API for power status</td>
+<td style="text-align: left;">Required</td>
 </tr>
 <tr>
-<td align="left">Regex to confirm the node is on</td>
-<td align="left">Regex expression that will return a string if the power is on, and no string if the power is off</td>
-<td align="left">Required, defaults supplied</td>
+<td style="text-align: left;">Regex to confirm the node is on</td>
+<td style="text-align: left;">Regex expression that will return a string if the power is on, and no string if the power is off</td>
+<td style="text-align: left;">Required, defaults supplied</td>
 </tr>
 <tr>
-<td align="left">Regex to confirm the node is off</td>
-<td align="left">Regex expression that will return a string if the power is off, and no string if the power is on</td>
-<td align="left">Required, defaults supplied</td>
+<td style="text-align: left;">Regex to confirm the node is off</td>
+<td style="text-align: left;">Regex expression that will return a string if the power is off, and no string if the power is on</td>
+<td style="text-align: left;">Required, defaults supplied</td>
 </tr>
 <tr>
-<td align="left">Power user</td>
-<td align="left">Username to log into the power driver</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power user</td>
+<td style="text-align: left;">Username to log into the power driver</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power password</td>
-<td align="left">Password to access unit</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power password</td>
+<td style="text-align: left;">Password to access unit</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Power token</td>
-<td align="left">Power driver API token (used instead of user and password, if set)</td>
-<td align="left">Optional</td>
+<td style="text-align: left;">Power token</td>
+<td style="text-align: left;">Power driver API token (used instead of user and password, if set)</td>
+<td style="text-align: left;">Optional</td>
 </tr>
 <tr>
-<td align="left">Verify SSL connections&hellip;</td>
-<td align="left">Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
-<td align="left">Required</td>
+<td style="text-align: left;">Verify SSL connections&hellip;</td>
+<td style="text-align: left;">Boolean, whether or not to verify SSL connections with the system&rsquo;s root CA certificate</td>
+<td style="text-align: left;">Required</td>
 </tr>
 </tbody>
 </table>
