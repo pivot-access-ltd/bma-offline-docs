@@ -129,7 +129,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | what-is-new-with-maas-2-7             | [MAAS 2.7 release notes](/t/-/5993)                             |
 | 2     | general-reference                     | [General](/t/-/6950)                                            |
 | 3     | installation-requirements             | [Installation requirements](/t/-/6233)                          |
-| 3     | how-to-change-maas-settings           | [MAAS settings](/t/-/6347)                                      |
+| 3     | maas-settings-reference           | [MAAS settings](/t/-/6347)                                      |
 | 3     | upgrading-postgresql-12-to-version-14 | [Upgrading PostgreSQL v12 to v14](/t/-/7203)                    |
 | 3     | maas-source-code                      | [MAAS source code](https://launchpad.net/maas)                  |
 | 3     | maas-documentation-style-guide        | [Doc style guide](/t/-/4186)                                    |
@@ -192,7 +192,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-protect-your-secrets                  | /docs/how-to-secure-maas                      |
 | /docs/about-rbac                                   | /docs/about-maas-security                     |
 | /docs/how-to-keep-maas-backed-up                   | /docs/how-to-back-up-maas                     |
-| /docs/how-to-back-up-maas                          | /docs/how-to-back-up-maas                     |
 | /docs/commissioning-scripts-tech-reference         | /docs/comm-scripts-reference                  |
 | /docs/how-to-terraform-with-maas                   | /docs/maas-terraform-reference                |
 | /docs/maas-terraform-provider-reference            | /docs/maas-terraform-reference                |
@@ -207,12 +206,13 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
 | /docs/maas-image-builder                           | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
-| /docs/how-to-change-maas-settings                  | /docs/maas-settings                           |
+| /docs/maas-settings-reference                      | /docs/maas-settings                           |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
-| /docs/request-a-feature                            | /docs/how-to-request-new-features             |
-| /docs/how-to-request-a-feature                     | /docs/how-to-request-new-features             |
-| /docs/how-to-work-with-log-files                   | /docs/about-log-files                      |
+| /docs/request-a-feature                            | /docs/how-to-request-features                 |
+| /docs/how-to-request-new-features                  | /docs/how-to-request-features                 |
+| /docs/how-to-request-a-feature                     | /docs/how-to-request-features                 |
+| /docs/how-to-work-with-log-files                   | /docs/about-log-files                         |
 | /docs/how-to-work-with-audit-event-logs            | /docs/how-to-audit-maas                       |
 | /docs/how-to-diagnose-issues                       | /docs/how-to-troubleshoot-maas                |
 | /docs/how-to-observe-a-live-maas                   | /docs/how-to-monitor-maas                     |
@@ -240,7 +240,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-create-custom-images                  | /docs/how-to-customise-images                 |
 | /docs/how-to-deploy-maas                           | /docs/how-to-manage-machines                  |
 | /docs/how-to-deploy-machines                       | /docs/how-to-put-machines-to-work             |
-| /docs/how-to-manage-machines                       | /docs/how-to-manage-machines                  |
 | /docs/how-to-enable-tls-encryption                 | /docs/how-to-enable-maas-native-tls           |
 | /docs/how-to-get-help                              | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-get-maas-running                      | /docs/how-to-get-started-with-maas            |
@@ -249,7 +248,6 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/how-to-manage-ip-addresses                   | /docs/how-to-enable-dhcp                      |
 | /docs/how-to-manage-ip-ranges                      | /docs/how-to-enable-dhcp                      |
 | /docs/how-to-manage-machine-interfaces             | /docs/how-to-connect-maas-networks            |
-| /docs/how-to-manage-machines                       | /docs/how-to-make-machines-available          |
 | /docs/how-to-manage-proxies                        | /docs/how-to-connect-maas-networks            |
 | /docs/how-to-manage-racks                          | /docs/how-to-configure-controllers            |
 | /docs/how-to-manage-regions                        | /docs/how-to-configure-controllers            |
@@ -270,9 +268,8 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/maas-bootstrap-tutorial                      | /docs/get-started-with-maas                   |
 | /docs/maas-concepts-and-terms-reference            | /docs/maas-glossary                           |
 | /docs/maas-logging-reference                       | /docs/maas-logs-reference                     |
-| /docs/maas-terraform-provider                      | /docs/maas-terraform-provider-reference       |
+| /docs/maas-terraform-provider                      | /docs/maas-terraform-reference                |
 | /docs/report-a-bug                                 | /docs/how-to-review-and-report-bugs           |
-| /docs/request-a-feature                            | /docs/how-to-request-a-feature                |
 | /docs/snap/2.7/cli/how-to-upgrade-maas             | /docs/how-to-upgrade-maas                     |
 | /docs/snap/2.7/cli/installation-tech-reference     | /docs/snap/2.7/cli/installation               |
 | /docs/snap/2.7/cli/interactive-search              | /docs/how-to-find-machines                    |
@@ -299,5 +296,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/using-jq-with-the-maas-cli                   | /docs/get-fancy-cli-output                    |
 | /docs/vmware-images                                | /docs/how-to-employ-vmware-images             |
 | /docs/whats-new-in-maas                            | /docs/what-is-new-with-maas                   |
+| /docs/snap/2.7/ui/whats-new-in-maas                | /docs/what-is-new-with-maas-2-7               |
+|                                                    |                                               |
 [/details]
 <!-- "nohtml end-nohtml" -->
