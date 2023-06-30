@@ -40,13 +40,13 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="../ui/device-labelling-reference.html">
-          UI-only
-        </a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-          &nbsp;CLI-only&nbsp;
+        &nbsp;UI-only&nbsp;
       </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../cli/device-labelling-reference.html">
+        CLI-only
+      </a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
       <ul>
@@ -521,7 +521,7 @@
 </ul>
 <p><a href="#heading--Example-1"><h3 id="heading--Example-1">Example 1</h3></a></p>
 <p>This definition will identify machines with proper CPU tags, cores, and RAM, and tag them as a hypervisor:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/d1c8e2674445045ee9c8c9f1d14f3fa413af9be8.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/d1c8e2674445045ee9c8c9f1d14f3fa413af9be8.png"></a></p>
+<p><a href="../images/d1c8e2674445045ee9c8c9f1d14f3fa413af9be8.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/d1c8e2674445045ee9c8c9f1d14f3fa413af9be8.png"></a></p>
 <p>This example looks for at least 40 cores and 256 GB of RAM and has all the required CPU features for being a hypervisor for both Intel and AMD.</p>
 <p><strong>NOTE:</strong> 
 Don&rsquo;t forget to adjust cores and RAM (in bytes) to suit your particular needs and available resources.</p>
@@ -539,7 +539,7 @@ definition='//node[@id=&quot;memory&quot;]/size &gt;= &quot;274877906944&quot; a
 </code></pre>
 <p><a href="#heading--Example-2"><h3 id="heading--Example-2">Example 2</h3></a></p>
 <p>This will tag UEFI enabled KVM VMs running on AMD-based servers:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/adde5f51e396a3a2d2f70daad7787fe087723664.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/adde5f51e396a3a2d2f70daad7787fe087723664.png"></a></p>
+<p><a href="../images/adde5f51e396a3a2d2f70daad7787fe087723664.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/adde5f51e396a3a2d2f70daad7787fe087723664.png"></a></p>
 <p>You can also do this with the CLI:</p>
 <pre><code class="language-nohighlight">maas ${MAAS_PROFILE} tags create \
 name=kvm-amd-uefi \
@@ -549,13 +549,13 @@ comment='Tag for automatically identifying AMD-based KVM vms (UEFI BIOS)'
 </code></pre>
 <p><a href="#heading--Example-3"><h3 id="heading--Example-3">Example 3</h3></a></p>
 <p>This will automatically tag servers that have NVME controllers:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/1/166cd775669610ba454b5f2883e7729b79770bd0.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/1/166cd775669610ba454b5f2883e7729b79770bd0.png"></a></p>
+<p><a href="../images/166cd775669610ba454b5f2883e7729b79770bd0.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/166cd775669610ba454b5f2883e7729b79770bd0.png"></a></p>
 <p>To accomplish the same thing in the CLI:</p>
 <pre><code class="language-nohighlight">maas ${MAAS_PROFILE} tags create name=NVME comment=&quot;xpath tag for automatically tagging servers that have NVME controllers&quot; definition='//node[@id=&quot;storage&quot; and @class=&quot;storage&quot;]/description = &quot;Non-Volatile memory controller&quot;'
 </code></pre>
 <p><a href="#heading--Example-4"><h3 id="heading--Example-4">Example 4</h3></a></p>
 <p>This will tag servers with Mellanox ConnectX-5 NICs:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/34ed75cf40ded49ac5eb8d76467817b5618b11a9.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/34ed75cf40ded49ac5eb8d76467817b5618b11a9.png"></a></p>
+<p><a href="../images/34ed75cf40ded49ac5eb8d76467817b5618b11a9.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/34ed75cf40ded49ac5eb8d76467817b5618b11a9.png"></a></p>
 <p>And you can also do this in the CLI:</p>
 <pre><code class="language-nohighlight">maas ${MAAS_PROFILE} tags create \
 name=connectx-5 \
@@ -564,7 +564,7 @@ comment='Tag for automatically identifying servers with Mellanox Technologies Co
 </code></pre>
 <p><a href="#heading--Example-5"><h3 id="heading--Example-5">Example 5</h3></a></p>
 <p>This will enable GPU passthrough for Nvidia Quadro K series GPUs on AMD:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/3f258d7e98c0adc7b605b8d2846b76737d46a27e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3f258d7e98c0adc7b605b8d2846b76737d46a27e.png"></a></p>
+<p><a href="../images/3f258d7e98c0adc7b605b8d2846b76737d46a27e.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3f258d7e98c0adc7b605b8d2846b76737d46a27e.png"></a></p>
 <p>You can also duplicate this example in the CLI:</p>
 <pre><code class="language-nohighlight">maas ${MAAS_PROFILE} tags create \
 name=gpgpu-quadro-k-a \
