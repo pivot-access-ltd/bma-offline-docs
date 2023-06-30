@@ -11,8 +11,23 @@
       #sidebar a:visited{color:black;}
       #sidebar a:active{color:black;}
       #sidebar a:hover{color:blue;}
-      ul {margin-left:0;list-style-type:none;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
       li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
     </style>
   </head>
   <body>
@@ -26,521 +41,471 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  UI-only
+        &nbsp;UI-only&nbsp;
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/about-maas-networks.html">
-	  CLI-only
-	</a>
+      <a href="../cli/about-maas-networks.html">
+        CLI-only
+      </a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
-      <strong>
-	<a href="maas-documentation-25.html">
-	  Home
-	</a>
-      </strong> 
-      <strong>
-	<a href="tutorials.html">
-	  Tutorials
-	</a>
-      </strong>
       <ul>
 	<li>
-	  <a href="bootstrap-maas.html">
-	    Bootstrap MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="try-out-the-maas-cli.html">
-	    Try out the MAAS CLI
-	  </a>
-	</li>
-	<li>
-	  <a href="create-a-custom-image.html">
-	    Create a custom image
-	  </a>
-	</li>
-	<li>
-	  <a href="get-fancy-cli-output.html">
-	    Get fancy CLI output
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-get-started-with-maas.html">
-	  How to get started with MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-do-a-fresh-install-of-maas.html">
-	    Do a fresh install of MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-spin-up-maas-with-ansible.html">
-	    Spin up MAAS with Ansible
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-set-up-networks.html">
-	  How to set up networks
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-connect-maas-networks.html">
-	    Connect MAAS networks
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-dhcp.html">
-	    Enable DHCP
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-availability-zones.html">
-	    Use availability zones
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-images.html">
-	  How to use images
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-standard-images.html">
-	    Use standard images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-mirror-images-locally.html">
-	    Mirror images locally
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-images.html">
-	    Customise images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-employ-vmware-images.html">
-	    Employ VMWare images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-deploy-a-real-time-kernel.html">
-	    Deploy a RT kernel
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-controllers.html">
-	  How to manage controllers
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-configure-controllers.html">
-	    Configure controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-machines.html">
-	  How to manage machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-make-machines-available.html">
-	    Make machines available
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-machines.html">
-	    Customise machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-put-machines-to-work.html">
-	    Put machines to work
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-virtual-machines.html">
-	  How to use virtual machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-set-up-lxd.html">
-	    Set up LXD
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-vm-hosts.html">
-	    Manage VM hosts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-virtual-machines.html">
-	    Manage virtual machines
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-label-devices.html">
-	  How to label devices
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-tag-machines.html">
-	    Tag machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-annotate-machines.html">
-	    Annotate machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-machine-tags.html">
-	    Use machine tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-controller-tags.html">
-	    Use controller tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-storage-tags.html">
-	    Use storage tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-network-tags.html">
-	    Use network tags
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-secure-maas.html">
-	  How to secure MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-improve-maas-security.html">
-	    Improve MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-user-accounts.html">
-	    Manage user accounts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-maas-native-tls.html">
-	    Enable MAAS native TLS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-hashicorp-vault-with-maas.html">
-	    Use Vault with MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-set-up-an-air-gapped-maas.html">
-	    Set up an air-gapped MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-operate-maas.html">
-	  How to operate MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-find-machines.html">
-	    Find machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-back-up-maas.html">
-	    Back up MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-monitor-maas.html">
-	    Monitor MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-audit-maas.html">
-	    Audit MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshoot MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-give-and-receive-help.html">
-	  How to give and receive help
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-our-discourse-forum.html">
-	    Use our discourse forum
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contact-us">
-	    Get support↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-request-new-features.html">
-	    Request new features
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-review-and-report-bugs.html">
-	    Review and report bugs
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contribute-doc.html">
-	    Contribute documentation
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="general-reference.html">
-	  General reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-installation-requirements.html">
-	    Installation requirements
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-settings-reference.html">
-	    MAAS settings
-	  </a>
-	</li>
-	<li>
-	  <a href="https://launchpad.net/maas.html">
-	    MAAS source code↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-help-improve-the-doc.html">
-	    Doc style guide
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-glossary.html">
-	    Glossary
-	  </a>
-	</li>
-	<li>
-	  <a href="https://ubuntu.com/community/code-of-conduct">
-	    Code of conduct↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="api-reference.html">
-	  API reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
-	  </a>
-	</li>
-	<li>
-	  <a href="python-api-client-reference.html">
-	    Python API client
-	  </a>
-	</li>
-	<li>
-	  <a href="api">
-	    API documentation↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-scripts-reference.html">
-	  Scripts reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="commissioning-scripts-reference.html">
-	    Commissioning scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="hardware-test-scripts-reference.html">
-	    Hardware test scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-terraform-reference.html">
-	    Terraform
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-logs-reference.html">
-	  Log reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="event-logs-reference.html">
-	    Event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="audit-event-logs-reference.html">
-	    Audit event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="commissioning-logs-reference.html">
-	    Commissioning logs
-	  </a>
-	</li>
-	<li>
-	  <a href="testing-logs-reference.html">
-	    Testing logs
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="machine-parameters-reference.html">
-	  Machine parameters reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="power-drivers-reference.html">
-	    Power drivers
-	  </a>
-	</li>
-	<li>
-	  <a href="storage-layouts-reference.html">
-	    Storage layouts
-	  </a>
-	</li>
-	<li>
-	  <a href="device-labelling-reference.html">
-	    Device labelling
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href=".html">
-	  Explanation
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-maas.html">
-	    About MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="about-networking.html">
-	    About networking
-	  </a>
-	</li>
-	<li>
-	  <a href="about-images.html">
-	    About images
-	  </a>
-	</li>
-	<li>
-	  <a href="about-controllers.html">
-	    About controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="about-machines.html">
-	    About machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-virtual-machines.html">
-	    About virtual machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-device-labels.html">
-	    About device labels
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-events.html">
-	    About MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-audit-events.html">
-	    About audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-logging.html">
-	    About MAAS logging
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-security.html">
-	    About MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-performance.html">
-	    About MAAS performance
-	  </a>
-	</li>
-	<li>
-	  <a href="about-ansible.html">
-	    About Ansible
-	  </a>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary>Try out MAAS</summary>
+		  <ul>
+		    <li>
+		      <a href="bootstrap-maas.html">Bootstrap MAAS</a>
+		    </li>
+		    <li>
+		      <a href="get-to-know-your-machines.html">Get to know your machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<a href="try-out-the-maas-cli.html">Try out the MAAS CLI</a>
+	      </li>
+	      <li>
+		<a href="create-custom-images.html">Create custom images</a>
+	      </li>
+	      <li>
+		<a href="get-fancy-cli-output.html">Get fancy CLI output</a>
+	      </li>
+              <li>
+		<details>
+                  <summary>Primer tutorials</summary>
+		  <ul>
+		    <li>
+		      <a href="primer-tutorial-the-osi-model.html">OSI model tutorial</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary><a href="how-to-get-started-with-maas.html">Get started with MAAS</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-do-a-fresh-install-of-maas.html">Do a fresh install of MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-upgrade-maas.html">Upgrade MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-spin-up-maas-with-ansible.html">Spin up MAAS with Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-networks.html">Manage networks</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-connect-maas-networks.html">Connect MAAS networks</a>
+                    </li>
+                    <li>
+                      <a href="how-to-enable-dhcp.html">Enable DHCP</a>
+                    </li>
+                    <li>
+                      <a href="how-to-use-availability-zones.html">Use availability zones</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-images.html">Use images</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-use-standard-images.html">Use standard images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-mirror-images-locally.html">Mirror images locally</a>
+                    </li>
+                    <li>
+                      <a href="how-to-customise-images.html">Customise images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-employ-vmware-images.html">Employ VMware images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-deploy-a-real-time-kernel.html">Deploy a RT kernel</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-controllers.html">Manage controllers</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-configure-controllers.html">Configure controllers</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-high-availability.html">Enable high availability</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-machines.html">Manage machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-make-machines-available.html">Make machines available</a>
+		    </li>
+		    <li>
+		      <a href="how-to-customise-machines.html">Customise machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-put-machines-to-work.html">Put machines to work</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-virtual-machines.html">Use virtual machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-set-up-lxd.html">Set up LXD</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-vm-hosts.html">Manage VM hosts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-virtual-machines.html">Manage virtual machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-label-devices.html">Label devices</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-tag-machines.html">Tag machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-annotate-machines.html">Annotate machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-machine-tags.html">Use machine tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-controller-tags.html">Use controller tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-storage-tags.html">Use storage tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-network-tags.html">Use network tags</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-secure-maas.html">Secure MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-improve-maas-security.html">Improve MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-user-accounts.html">Manage user accounts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-maas-native-tls.html">Enable MAAS native TLS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-hashicorp-vault-with-maas.html">Use Vault with MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-set-up-an-air-gapped-maas.html">Set up an air-gapped MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-operate-maas.html">Operate MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-find-machines.html">Find machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-back-up-maas.html">Back up MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-monitor-maas.html">Monitor MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-audit-maas.html">Audit MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-troubleshoot-maas">Troubleshoot MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-give-and-receive-help.html">Give and receive help</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-use-the-maas-discourse-forum.html">Use our discourse forum</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/pro">Get support</a>
+		    </li>
+		    <li>
+		      <a href="how-to-request-new-features.html">Request new features</a>
+		    </li>
+		    <li>
+		      <a href="how-to-review-and-report-bugs.html">Review and report bugs</a>
+		    </li>
+		    <li>
+		      <a href="how-to-contribute-documentation.html">Contribute documentation</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="reference.html">Reference</a></summary>
+            <ul>
+	      <details>
+		<summary><a href="maas-release-notes.html">Release notes</a></summary>
+		<ul>
+		  <li>
+		    <a href="what-is-new-with-maas-3-4.html">MAAS 3.4 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-3.html">MAAS 3.3 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-2.html">MAAS 3.2 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-1.html">MAAS 3.1 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-0.html">MAAS 3.0 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-9.html">MAAS 2.9 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-8.html">MAAS 2.8 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-7.html">MAAS 2.7 release notes</a>
+              	  </li>
+		</ul>
+	      </details>
+              <li>
+		<details>
+                  <summary><a href="general-reference.html">General</a></summary>
+		  <ul>
+		    <li>
+		      <a href="installation-requirements.html">Installation requirements</a>
+		    </li>
+		    <li>
+		      <a href="maas-settings-reference.html">MAAS settings</a>
+		    </li>
+		    <li>
+		      <a href="https://launchpad.net/maas">Source code</a>
+		    </li>
+		    <li>
+		      <a href="maas-documentation-style-guide.html">Doc style guide</a>
+		    </li>
+		    <li>
+		      <a href="maas-glossary.html">Glossary</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/community/code-of-conduct">Code of conduct</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+              <li>
+		<details>
+		  <summary><a href="api.html">API</a></summary>
+		  <ul>
+		    <li>
+                      <a href="api-authentication-reference.html">API authentication</a>
+                    </li>
+		    <li>
+                      <a href="python-api-client-reference.html">Python API client</a>
+                    </li>
+		    <li>
+                      <a href="/docs/api">API documentation</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="scripts-reference.html">Scripts</a></summary>
+		  <ul>
+		    <li>
+                      <a href="commissioning-scripts-reference.html">Commissioning scripts</a>
+                    </li>
+		    <li>
+                      <a href="hardware-test-scripts-reference.html">Hardware test scripts</a>
+                    </li>
+		    <li>
+                      <a href="maas-terraform-reference.html">Terraform</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="log-reference.html">Logging</a></summary>
+		  <ul>
+		    <li>
+                      <a href="event-logs-reference.html">Event logs</a>
+                    </li>
+		    <li>
+                      <a href="audit-event-logs-reference.html">Audit event logs</a>
+                    </li>
+		    <li>
+                      <a href="commissioning-logs-reference.html">Commissioning logs</a>
+                    </li>
+		    <li>
+                      <a href="testing-logs-reference.html">Testing logs</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="machine-parameters-reference.html">machine-parameters</a></summary>
+		  <ul>
+		    <li>
+                      <a href=.html"power-drivers-reference.html">Power drivers</a>
+                    </li>
+		    <li>
+                      <a href="storage-layouts-reference.html">Storage layouts</a>
+                    </li>
+		    <li>
+                      <a href="device-labelling-reference.html">Device labelling</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+	  <details>
+	    <summary><a href="explanation.html">Explanation</a></summary>
+	    <ul>
+	      <li>
+		<a href="about-maas.html">About MAAS</a>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Networking</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-networks.html">MAAS networks</a>
+		    </li>
+		    <li>
+		      <a href="about-tcp-ip-networks.html">TCP/IP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-dhcp.html">DHCP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-cloud-networking.html">Cloud networking primer</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<a href="about-images.html">Images</a>
+              </li>
+	      <li>
+		<details>
+		  <summary>Controllers</summary>
+		  <ul>
+		    <li>
+		      <a href="about-region-and-rack-controllers.html">Region and rack controllers</a>
+		    </li>
+		    <li>
+		      <a href="about-high-availability.html">High availability</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Machines and devices</summary>
+		  <ul>
+		    <li>
+		      <a href="about-machines.html">Machines</a>
+		    </li>
+		    <li>
+		      <a href="about-virtual-machines.html">Virtual machines</a>
+		    </li>
+		    <li>
+		      <a href="device-labels.html">Device labels</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Events and logging</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-events.html">MAAS events</a>
+		    </li>
+		    <li>
+		      <a href="about-audit-events.html">Audit events</a>
+		    </li>
+		    <li>
+		      <a href="about-log-files.html">MAAS logging</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-security.html">MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-performance.html">MAAS performance</a>
+		    </li>
+		    <li>
+		      <a href="about-ansible.html">Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	    </ul>
+	  </details>
 	</li>
       </ul>
     </div>
@@ -559,7 +524,7 @@
 <li><a href="#heading--about-ipv6">About IPv6</a></li>
 <li><a href="#heading--about-availability-zones">About availability zones</a></li>
 </ul>
-<p><a href="#heading--about-pxe-booting"><h3 id="heading--about-pxe-booting">About PXE booting</h3></a></p>
+<p><a href="#heading--about-pxe-booting"><h2 id="heading--about-pxe-booting">About PXE booting</h2></a></p>
 <p>PXE booting, or <a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Preboot eXecution Environment</a><code>↗</code>, refers to the ability to boot a machine via a Network Interface Card (NIC).  PXE booting requires a Network Interface Card (NIC) which is equipped with a PXE API which can be accessed by the server wishing to boot the device.</p>
 <p>This PXE API has a very small hardware footprint, both to keep NIC density smaller (small footprint PXE ROMs) and to simplify the PXE boot process.  Typically a PXE-capable NIC implements the PXE API with a simple universal network device interface, a tiny UDP/IP stack, a special pre-boot DHCP module, and a trivial file transfer protocol (TFTP) module.  TFTP does have low throughput, but it has been amended twice, once with <a href="https://datatracker.ietf.org/doc/html/rfc2348">better block sizes</a><code>↗</code>, and once with <a href="https://datatracker.ietf.org/doc/html/rfc7440">better window sizes</a><code>↗</code>.  Both of these help to allow for payload deliveries large enough to accommodate basic bootable images, such as the ephemeral Ubuntu image that MAAS transmits, via TFTP, in order to commission a machine.</p>
 <p>PXE absolutely depends on DHCP, which kicks off the process by assigning an IP address, so that the TFTP server can send a network boot program and its peripheral files.  The machine in question is powered on via its baseboard management controller (BMC).  The UEFI PXE firmware broadcasts a DHCPDISCOVER message (customised for PXE) to the UDP port (67), requesting network config and booting parameters.  Because the discover message is PXE-specific, a PXE-enabled DHCP server is normally required.  Otherwise, the DHCPOFFER will have networking information, but not PXE parameters, which include the IP address of the TFTP server and the name of the network booting program; thus the PXE client would not be able to boot.</p>
@@ -573,17 +538,17 @@
 <li><a href="https://datatracker.ietf.org/doc/html/rfc906">Bootstrap loading via TFTP</a><code>↗</code></li>
 </ul>
 <p>If you still have questions about PXE booting, please consider posting a question on our <a href="https://discourse.maas.io/c/users/8">discourse forum</a><code>↗</code>.</p>
-<p><a href="#heading--about-power-drivers"><h3 id="heading--about-power-drivers">About power drivers</h3></a></p>
+<p><a href="#heading--about-power-drivers"><h2 id="heading--about-power-drivers">About power drivers</h2></a></p>
 <p>Power drivers are units of software, embedded in MAAS, that interface with the <a href="https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface#Baseboard_management_controller">BMC</a><code>↗</code> to power-cycle a machine remotely.  Different machines use different BMC configurations.  Typically, these vary by manufacturer, although there are some standard IPMI drivers that can be used.  In addition, it is sometimes possible to control a machine with a specialised BMC via a generic IPMI driver.</p>
 <p>IPMI is designed as a set of protocols that bypass the system&rsquo;s CPU, BIOS, UEFI, and/or OS.  Essentially, IPMI provides a network connection directly to the hardware, allowing a number of management and monitoring functions.  From the perspective of MAAS, the main use of IPMI is to access the machine&rsquo;s BMC to power-cycle the machine.  In order for <a href="#heading--about-pxe-booting">PXE-booting</a> to start, the machine itself must send a PXE-enabled DHCPDISCOVER, which requires the machine to be powered on.</p>
-<p>Specific machine models have different IPMI parameters that can or must be used to successfully power on a machine, although many models respond reasonably well to standard IPMI or <a href="https://en.wikipedia.org/wiki/Redfish_(specification)↗">Redfish</a> commands. MAAS includes customised power drivers for all of the machines listed in the <a href="power-management-reference.html#heading--power-catalogue">power catalogue</a>.</p>
+<p>Specific machine models have different IPMI parameters that can or must be used to successfully power on a machine, although many models respond reasonably well to standard IPMI or <a href="https://en.wikipedia.org/wiki/Redfish_(specification)↗">Redfish</a> commands. MAAS includes customised power drivers for all of the machines listed in the <a href="power-drivers-reference.html#heading--power-catalogue">power catalogue</a>.</p>
 <p>IPMI provides many other functions and capabilities besides power-cycling the machine, such as monitoring system state (e.g., temperature) and possibly adjusting some parameters remotely.  MAAS generally does not avail itself of these additional features.</p>
-<p><a href="#heading--about-proxies"><h3 id="heading--about-proxies">About proxies</h3></a></p>
+<p><a href="#heading--about-proxies"><h2 id="heading--about-proxies">About proxies</h2></a></p>
 <p>A <a href="https://en.wikipedia.org/wiki/Proxy_server">proxy server</a><code>↗</code> (&ldquo;proxy service&rdquo; or just &ldquo;proxy&rdquo;) is an intermediary application that serves to broker network transactions between two hosts.  Proxies provide several benefits, including privacy (protecting internal IP addresses from discovery by those on other networks), security (performing some checks against incoming packets), and load-balancing (routing packets to multiple servers, based on actual load or some statistical algorithm).  </p>
 <p>MAAS provides an <a href="how-to-connect-maas-networks.html#heading--internal-proxy-maas-proxy">internal proxy</a>, which is an HTTP caching proxy server that is available to all hosts residing in any subnet managed by MAAS.  In addition, MAAS allows you to define an <a href="how-to-connect-maas-networks.html#heading--configure-proxy">external proxy</a> if desired.</p>
-<p><a href="#heading--about-rpc"><h3 id="heading--about-rpc">About RPC</h3></a></p>
-<p>A <a href="https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call">Remote Procedure Call</a><code>↗</code>, or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, <a href="about-controllers.html#heading--rackregion">RPC is used for communication between the region and rack controllers</a>, specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine&rsquo;s DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. </p>
-<p><a href="#heading--about-network-discovery"><h3 id="heading--about-network-discovery">About network discovery</h3></a></p>
+<p><a href="#heading--about-rpc"><h2 id="heading--about-rpc">About RPC</h2></a></p>
+<p>A <a href="https://www.ibm.com/docs/en/aix/7.1?topic=concepts-remote-procedure-call">Remote Procedure Call</a><code>↗</code>, or RPC, is a method by which one computer can execute a subroutine sent by another process or system.  These procedures run as if they were native to the machine executing them, even though they may have been prepared or coded on the requesting machine.  In the case of MAAS, <a href="maas-controllers.html#heading--rackregion">RPC is used for communication between the region and rack controllers</a>, specifically to transfer the PXE configuration from region to rack.  This allows the relevant MAAS rack to answer the machine&rsquo;s DHCPDISCOVER with a DHCPOFFER that contains the correct PXE booting information to bring the machine to an ephemeral Ubuntu instance. </p>
+<p><a href="#heading--about-network-discovery"><h2 id="heading--about-network-discovery">About network discovery</h2></a></p>
 <p>MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS can be listed via the CLI. If a device advertises a hostname using <code>mDNS</code> (such as with <code>avahi</code> or <code>Bonjour</code>), MAAS will also present the discovered hostname when listing devices.</p>
 <p>Using the Dashboard, an unknown discovered device can be added to MAAS as a device or as a network interface belonging to a machine or device. Clicking the down arrow to the right of a new device allows values such as &lsquo;Type&rsquo;, &lsquo;Domain&rsquo;, &lsquo;IP Assignment&rsquo; and &lsquo;Parent&rsquo; to be changed prior to the device being added. Selecting a Parent device is optional.</p>
 <p><a href="#heading--subnets"><h2 id="heading--subnets">About subnets</h2></a></p>
@@ -598,7 +563,7 @@
 <p>Managed switches can assign VLANs to each port in either a &ldquo;tagged&rdquo; or an &ldquo;untagged&rdquo; manner. A VLAN is said to be &ldquo;untagged&rdquo; on a particular port when it is the default VLAN for that port and requires no special configuration to access it.</p>
 <p>You can use also use tagged VLANs with MAAS nodes. If a switch port is configured to allow tagged VLAN frames from a MAAS node, that node can automatically access interfaces on that VLAN.</p>
 <p>A &ldquo;Default VLAN&rdquo; is created for every fabric, to which every new VLAN-aware object in the fabric will be associated with by default (unless specified otherwise).</p>
-<p><a href="#heading--about-subnet-management"><h3 id="heading--about-subnet-management">About subnet management</h3></a></p>
+<p><a href="#heading--about-subnet-management"><h2 id="heading--about-subnet-management">About subnet management</h2></a></p>
 <p>Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as <a href="how-to-enable-dhcp.html#heading--enabling-dhcp">enable DHCP</a>.  None of these options requires detailed instruction.</p>
 <p>This subsection will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -608,7 +573,7 @@
 </ul>
 <p>A <a href="https://en.wikipedia.org/wiki/Subnetwork">subnet</a><code>↗</code>, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS. By default, MAAS manages subnets in your configuration, but this is easily changed.</p>
 <p>When a subnet is managed, MAAS handles all aspects of IP address allocation. This process includes managing DHCP leases and assigned static addresses. Typically MAAS would have one managed subnet, with any additional subnets unmanaged. This arrangement allows for more control over which subnet gets used for DHCP. Additionally, as detailed below, an unmanaged subnet treats reserved IP ranges differently, in a way that some administrators find more intuitive.</p>
-<p><a href="#heading--about-managed-subnets"><h4 id="heading--about-managed-subnets">About managed subnets</h4></a></p>
+<p><a href="#heading--about-managed-subnets"><h3 id="heading--about-managed-subnets">About managed subnets</h3></a></p>
 <p>When you enable management for a subnet, MAAS will:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Lease addresses for DHCP from a reserved dynamic IP range</li>
@@ -616,11 +581,11 @@
 </ul>
 <p>See <a href="maas-glossary.html#heading--ip-ranges">Concepts and terms</a> for an explanation of the two kinds of reserved IP ranges MAAS uses.</p>
 <p>If needed, you can also define a static route between two subnets. A static route is defined on a per-subnet basis to use a particular gateway, using a configured destination.</p>
-<p><a href="#heading--about-unmanaged-subnets"><h4 id="heading--about-unmanaged-subnets">About unmanaged subnets</h4></a></p>
+<p><a href="#heading--about-unmanaged-subnets"><h3 id="heading--about-unmanaged-subnets">About unmanaged subnets</h3></a></p>
 <p>When management is disabled for a subnet, the definition of a reserved IP range differs from the managed mode. Here, a reserved IP range tells MAAS to <strong>only allocate addresses from this range</strong> (via &lsquo;Auto assign&rsquo;). Also, DHCP will never lease addresses from an unmanaged subnet.</p>
-<p><a href="#heading--about-ip-address-tracking"><h4 id="heading--about-ip-address-tracking">About IP address tracking</h4></a></p>
+<p><a href="#heading--about-ip-address-tracking"><h3 id="heading--about-ip-address-tracking">About IP address tracking</h3></a></p>
 <p>When you enable IP address tracking, MAAS will keep track of all assigned addresses, regardless of whether they come from managed or unmanaged subnets.</p>
-<p><a href="#heading--about-ipv6"><h3 id="heading--about-ipv6">About IPv6</h3></a></p>
+<p><a href="#heading--about-ipv6"><h2 id="heading--about-ipv6">About IPv6</h2></a></p>
 <p>Support for IPv6 in MAAS is similar to support for IPv4.  This subsection will help you learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--about-enabling-ipv6">About enabling IPv6</a></li>
@@ -633,13 +598,13 @@
 <p>You can access the Web UI and the <a href="try-out-the-maas-cli.html">MAAS CLI</a> (that is, logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (<code>::1</code>, the IPv6 equivalent of <code>localhost</code>):</p>
 <p><strong>NOTE:</strong> 
 MAAS can only control most BMCs using IPv4.</p>
-<p><a href="#heading--about-enabling-ipv6"><h4 id="heading--about-enabling-ipv6">About enabling IPv6</h4></a></p>
+<p><a href="#heading--about-enabling-ipv6"><h3 id="heading--about-enabling-ipv6">About enabling IPv6</h3></a></p>
 <p>You enable IPv6 networking in the same way that you enable IPv4 networking: configure a separate rack controller interface for your IPv6 subnet. The IPv6 interface must define a static address range. Provided that you already have a functioning IPv6 network, that&rsquo;s all there is to it. The following sections explain requirements, supported operations, and what to do if you don&rsquo;t yet have a functioning IPv6 network.</p>
 <p>An IPv6 interface can use the same network interface on the rack controller as an existing IPv4 network interface. It just defines a different subnet, with IPv6 addressing. A machine that&rsquo;s connected to the IPv4 subnet also connected to the IPv6 subnet on the same network segment.</p>
-<p><a href="#heading--about-ipv6-subnets"><h4 id="heading--about-ipv6-subnets">About IPv6 subnets</h4></a></p>
+<p><a href="#heading--about-ipv6-subnets"><h3 id="heading--about-ipv6-subnets">About IPv6 subnets</h3></a></p>
 <p>If you define a reserved static IP range, then machines deployed on the subnet will get a static address in this range. Since IPv6 networks usually are 64 bits wide, you can be generous with the range size. You can typically leave the netmask and broadcast address fields blank.</p>
 <p>You may want MAAS to manage DHCP and DNS, but it&rsquo;s not required. Machines do not need a DHCP server at all for IPv6; MAAS configures static IPv6 addresses on a machine&rsquo;s network interface while deploying it. A DHCPv6 server can provide addresses for containers or virtual machines running on the machines, as well as devices on the network that are not managed by MAAS. The machines do not need DHCPv6. MAAS will not be aware of any addresses issued by DHCP, and cannot guarantee that they will stay unchanged.</p>
-<p><a href="#heading--about-ipv6-routing"><h4 id="heading--about-ipv6-routing">About IPV6 routing</h4></a></p>
+<p><a href="#heading--about-ipv6-routing"><h3 id="heading--about-ipv6-routing">About IPV6 routing</h3></a></p>
 <p>In IPv6, clients do not discover routes through DHCP. Routers make themselves known on their networks by sending out route advertisements. These RAs also contain other configuration items:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>Switches that allow stateless configuration of their unique IP addresses, based on MAC addresses. </li>
@@ -650,22 +615,22 @@ MAAS can only control most BMCs using IPv4.</p>
 <p>However, when MAAS configures IPv6 networking on a machine, it does not rely on RAs. It statically configures a machine&rsquo;s default IPv6 route to use the router that is set on the cluster interface, so that the machine will know their default gateway. They do not need DHCP and will not auto-configure global addresses.</p>
 <p>You may be planning to operate DHCPv6 clients as well, for example, on machines not managed by MAAS, or on virtual machines hosted by MAAS machines.  If this is the case, you may want to configure RAs, so that those clients obtain configuration over DHCP.</p>
 <p>If you need RAs, but your gateway does not send them, you could install and configure <code>radvd</code> somewhere on the network to advertise its route.</p>
-<p><a href="#heading--about-availability-zones"><h3 id="heading--about-availability-zones">About availability zones</h3></a></p>
+<p><a href="#heading--about-availability-zones"><h2 id="heading--about-availability-zones">About availability zones</h2></a></p>
 <p>This subsection explains some characteristics and uses of availability zones.  Here you have the opportunity to learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="#heading--fault-tolerance">About fault tolerance</a></li>
 <li><a href="#heading--service-performance">About service performance</a></li>
 <li><a href="#heading--power-management">About power management</a></li>
 </ul>
-<p><a href="#heading--fault-tolerance"><h4 id="heading--fault-tolerance">About fault tolerance</h4></a></p>
+<p><a href="#heading--fault-tolerance"><h3 id="heading--fault-tolerance">About fault tolerance</h3></a></p>
 <p>Fault tolerance is &ldquo;the property that enables a system to continue operating properly in the event of the failure of (or one or more faults within) some of its components&rdquo;. To help create better fault tolerance, multiple MAAS zones can be employed.</p>
 <p>For this, a zone can be defined in different ways. It can be based on power supply for instance, or it can represent a portion of your network or an entire data centre location.</p>
 <p>Machines that work in tandem in order to provide an instance of a service should be allocated in the same zone. The entire service should be replicated in another zone.</p>
-<p><a href="#heading--service-performance"><h4 id="heading--service-performance">About service performance</h4></a></p>
+<p><a href="#heading--service-performance"><h3 id="heading--service-performance">About service performance</h3></a></p>
 <p>Service performance is the ability of your service to operate in the most efficient manner possible where the typical criteria used is speed. Multiple MAAS zones can be used to help.</p>
 <p>Nodes should be allocated in the zone closest to the performance-critical resources they need.</p>
 <p>For example, for applications that are highly sensitive to network latency, it may make sense to design a network topology consisting of several smaller networks, and have each of those represented as a zone. The zones can then be used to allocate nodes that have the best performance depending on the service offered.</p>
-<p><a href="#heading--power-management"><h4 id="heading--power-management">About power management</h4></a></p>
+<p><a href="#heading--power-management"><h3 id="heading--power-management">About power management</h3></a></p>
 <p>Power management is concerned with power usage density and cooling. This topic can be addressed with the use of several MAAS zones.</p>
 <p>Nodes can be distributed in such a way that power-hungry and/or &ldquo;hot&rdquo; systems are located in different zones. This can help mitigate power consumption and heat problems.</p>
     </div>
