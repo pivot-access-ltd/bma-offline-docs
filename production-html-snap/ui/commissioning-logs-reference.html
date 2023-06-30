@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
+      li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+        &nbsp;UI-only&nbsp;
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../cli/commissioning-logs-reference.html">
+        CLI-only
+      </a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <ul>
+	<li>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary>Try out MAAS</summary>
+		  <ul>
+		    <li>
+		      <a href="bootstrap-maas.html">Bootstrap MAAS</a>
+		    </li>
+		    <li>
+		      <a href="get-to-know-your-machines.html">Get to know your machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<a href="try-out-the-maas-cli.html">Try out the MAAS CLI</a>
+	      </li>
+	      <li>
+		<a href="create-custom-images.html">Create custom images</a>
+	      </li>
+	      <li>
+		<a href="get-fancy-cli-output.html">Get fancy CLI output</a>
+	      </li>
+              <li>
+		<details>
+                  <summary>Primer tutorials</summary>
+		  <ul>
+		    <li>
+		      <a href="primer-tutorial-the-osi-model.html">OSI model tutorial</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary><a href="how-to-get-started-with-maas.html">Get started with MAAS</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-do-a-fresh-install-of-maas.html">Do a fresh install of MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-upgrade-maas.html">Upgrade MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-spin-up-maas-with-ansible.html">Spin up MAAS with Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-networks.html">Manage networks</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-connect-maas-networks.html">Connect MAAS networks</a>
+                    </li>
+                    <li>
+                      <a href="how-to-enable-dhcp.html">Enable DHCP</a>
+                    </li>
+                    <li>
+                      <a href="how-to-use-availability-zones.html">Use availability zones</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-images.html">Use images</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-use-standard-images.html">Use standard images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-mirror-images-locally.html">Mirror images locally</a>
+                    </li>
+                    <li>
+                      <a href="how-to-customise-images.html">Customise images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-employ-vmware-images.html">Employ VMware images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-deploy-a-real-time-kernel.html">Deploy a RT kernel</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-controllers.html">Manage controllers</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-configure-controllers.html">Configure controllers</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-high-availability.html">Enable high availability</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-machines.html">Manage machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-make-machines-available.html">Make machines available</a>
+		    </li>
+		    <li>
+		      <a href="how-to-customise-machines.html">Customise machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-put-machines-to-work.html">Put machines to work</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-virtual-machines.html">Use virtual machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-set-up-lxd.html">Set up LXD</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-vm-hosts.html">Manage VM hosts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-virtual-machines.html">Manage virtual machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-label-devices.html">Label devices</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-tag-machines.html">Tag machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-annotate-machines.html">Annotate machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-machine-tags.html">Use machine tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-controller-tags.html">Use controller tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-storage-tags.html">Use storage tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-network-tags.html">Use network tags</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-secure-maas.html">Secure MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-improve-maas-security.html">Improve MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-user-accounts.html">Manage user accounts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-maas-native-tls.html">Enable MAAS native TLS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-hashicorp-vault-with-maas.html">Use Vault with MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-set-up-an-air-gapped-maas.html">Set up an air-gapped MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-operate-maas.html">Operate MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-find-machines.html">Find machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-back-up-maas.html">Back up MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-monitor-maas.html">Monitor MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-audit-maas.html">Audit MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-troubleshoot-maas">Troubleshoot MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-give-and-receive-help.html">Give and receive help</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-use-the-maas-discourse-forum.html">Use our discourse forum</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/pro">Get support</a>
+		    </li>
+		    <li>
+		      <a href="how-to-request-new-features.html">Request new features</a>
+		    </li>
+		    <li>
+		      <a href="how-to-review-and-report-bugs.html">Review and report bugs</a>
+		    </li>
+		    <li>
+		      <a href="how-to-contribute-documentation.html">Contribute documentation</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="reference.html">Reference</a></summary>
+            <ul>
+	      <details>
+		<summary><a href="maas-release-notes.html">Release notes</a></summary>
+		<ul>
+		  <li>
+		    <a href="what-is-new-with-maas-3-4.html">MAAS 3.4 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-3.html">MAAS 3.3 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-2.html">MAAS 3.2 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-1.html">MAAS 3.1 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-0.html">MAAS 3.0 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-9.html">MAAS 2.9 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-8.html">MAAS 2.8 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-7.html">MAAS 2.7 release notes</a>
+              	  </li>
+		</ul>
+	      </details>
+              <li>
+		<details>
+                  <summary><a href="general-reference.html">General</a></summary>
+		  <ul>
+		    <li>
+		      <a href="installation-requirements.html">Installation requirements</a>
+		    </li>
+		    <li>
+		      <a href="maas-settings-reference.html">MAAS settings</a>
+		    </li>
+		    <li>
+		      <a href="https://launchpad.net/maas">Source code</a>
+		    </li>
+		    <li>
+		      <a href="maas-documentation-style-guide.html">Doc style guide</a>
+		    </li>
+		    <li>
+		      <a href="maas-glossary.html">Glossary</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/community/code-of-conduct">Code of conduct</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+              <li>
+		<details>
+		  <summary><a href="api.html">API</a></summary>
+		  <ul>
+		    <li>
+                      <a href="api-authentication-reference.html">API authentication</a>
+                    </li>
+		    <li>
+                      <a href="python-api-client-reference.html">Python API client</a>
+                    </li>
+		    <li>
+                      <a href="/docs/api">API documentation</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="scripts-reference.html">Scripts</a></summary>
+		  <ul>
+		    <li>
+                      <a href="commissioning-scripts-reference.html">Commissioning scripts</a>
+                    </li>
+		    <li>
+                      <a href="hardware-test-scripts-reference.html">Hardware test scripts</a>
+                    </li>
+		    <li>
+                      <a href="maas-terraform-reference.html">Terraform</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="log-reference.html">Logging</a></summary>
+		  <ul>
+		    <li>
+                      <a href="event-logs-reference.html">Event logs</a>
+                    </li>
+		    <li>
+                      <a href="audit-event-logs-reference.html">Audit event logs</a>
+                    </li>
+		    <li>
+                      <a href="commissioning-logs-reference.html">Commissioning logs</a>
+                    </li>
+		    <li>
+                      <a href="testing-logs-reference.html">Testing logs</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="machine-parameters-reference.html">machine-parameters</a></summary>
+		  <ul>
+		    <li>
+                      <a href=.html"power-drivers-reference.html">Power drivers</a>
+                    </li>
+		    <li>
+                      <a href="storage-layouts-reference.html">Storage layouts</a>
+                    </li>
+		    <li>
+                      <a href="device-labelling-reference.html">Device labelling</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+	  <details>
+	    <summary><a href="explanation.html">Explanation</a></summary>
+	    <ul>
+	      <li>
+		<a href="about-maas.html">About MAAS</a>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Networking</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-networks.html">MAAS networks</a>
+		    </li>
+		    <li>
+		      <a href="about-tcp-ip-networks.html">TCP/IP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-dhcp.html">DHCP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-cloud-networking.html">Cloud networking primer</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<a href="about-images.html">Images</a>
+              </li>
+	      <li>
+		<details>
+		  <summary>Controllers</summary>
+		  <ul>
+		    <li>
+		      <a href="about-region-and-rack-controllers.html">Region and rack controllers</a>
+		    </li>
+		    <li>
+		      <a href="about-high-availability.html">High availability</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Machines and devices</summary>
+		  <ul>
+		    <li>
+		      <a href="about-machines.html">Machines</a>
+		    </li>
+		    <li>
+		      <a href="about-virtual-machines.html">Virtual machines</a>
+		    </li>
+		    <li>
+		      <a href="device-labels.html">Device labels</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Events and logging</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-events.html">MAAS events</a>
+		    </li>
+		    <li>
+		      <a href="about-audit-events.html">Audit events</a>
+		    </li>
+		    <li>
+		      <a href="about-log-files.html">MAAS logging</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-security.html">MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-performance.html">MAAS performance</a>
+		    </li>
+		    <li>
+		      <a href="about-ansible.html">Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	    </ul>
+	  </details>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>Commissioning logs reference</h1><!-- "Commissioning logs reference" -->
+<p>Commissioning logs contain a list of commissioning scripts with a timestamp and result.  You can view the detailed logs for each of these scripts in the UI by clicking on the &ldquo;Commissioning&rdquo; tab for a specific machine.  </p>
+<p>You will be presented with a status table of commissioning scripts.  Each of the items in the &ldquo;NAME&rdquo; column is the name of a <a href="how-to-put-machines-to-work.html#heading--how-to-commission-a-machine">commissioning script</a>.  Each entry gives a timestamp and a result (e.g. passed, failed, &hellip;). At the end of each line is a link to view the log. It&rsquo;s worth taking a look at each of the script logs and their typical output.</p>
+<p>You can also use the MAAS CLI to retrieve the verbatim logs of commissioning script runs, including those that are currently in progress.</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-result read $SYSTEM_ID $RESULTS
+</code></pre>
+<p>If you only want to see the latest or currently-running result, you can use <code>current-commissioning</code>, <code>current-testing</code>, or <code>current-installation</code> instead of <code>$SYSTEM_ID</code>.  You can also limit which results are returned by type (commissioning, testing, or installation), script name, or script run:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-results read \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS
+</code></pre>
+<p>You can also suppress failed results, which is useful if you want to ignore a known failure:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-results update \
+ $SYSTEM_ID type=$SCRIPT_TYPE filters=$SCRIPT_NAME,$TAGS suppressed=$SUPPRESSED
+</code></pre>
+<p>where <code>$SUPPRESSED</code> is either <code>True</code> or <code>False</code>. The JSON formatted output to the above command will include &lsquo;results&rsquo; dictionary with an entry for <code>suppressed</code>:</p>
+<pre><code class="language-nohighlight">&quot;results&quot;: [
+    {
+        &quot;id&quot;: 21,
+        &quot;created&quot;: &quot;Tue, 02 Apr 2019 17:00:36 -0000&quot;,
+        &quot;updated&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;name&quot;: &quot;smartctl-validate&quot;,
+        &quot;status&quot;: 5,
+        &quot;status_name&quot;: &quot;Aborted&quot;,
+        &quot;exit_status&quot;: null,
+        &quot;started&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;ended&quot;: &quot;Tue, 02 Apr 2019 20:56:41 -0000&quot;,
+        &quot;runtime&quot;: &quot;0:00:00&quot;,
+        &quot;starttime&quot;: 1554238601.765214,
+        &quot;endtime&quot;: 1554238601.765214,
+        &quot;estimated_runtime&quot;: &quot;0:00:00&quot;,
+        &quot;parameters&quot;: {
+            &quot;storage&quot;: {
+                &quot;argument_format&quot;: &quot;{path}&quot;,
+                &quot;type&quot;: &quot;storage&quot;,
+                &quot;value&quot;: {
+                    &quot;id_path&quot;: &quot;/dev/vda&quot;,
+                    &quot;model&quot;: &quot;,
+                    &quot;name&quot;: &quot;sda&quot;,
+                    &quot;physical_blockdevice_id&quot;: 1,
+                    &quot;serial&quot;: &quot;
+                }
+            }
+        },
+        &quot;script_id&quot;: 1,
+        &quot;script_revision_id&quot;: null,
+        &quot;suppressed&quot;: true
+    }
+]
+</code></pre>
+<p>Finally, results can be downloaded, either to stdout, stderr, as combined output or as a tar.xz:</p>
+<pre><code class="language-nohighlight">maas $PROFILE node-script-result download $SYSTEM_ID $RUN_ID output=all \
+ filetype=tar.xz &gt; $LOCAL_FILENAME
+</code></pre>
+<p><strong>NOTE:</strong> 
+<strong>$RUN_ID</strong> is labelled <code>id</code> in the verbose result output.</p>
+<p><a href="#heading--maas-support-info"><h2 id="heading--maas-support-info">maas-support-info</h2></a></p>
+<p>MAAS gathers information that helps to identify and characterise the machine for debugging purposes, such as the kernel, versioning of various components, etc.  This script gathers this information, mostly as a bundle to be provided to a support specialist to help get the baseline for the machine in question.  This script runs in parallel with other scripts to speed commissioning. </p>
+<p>Here&rsquo;s a quick breakdown of the fields you may see in the script output:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>KERNEL INFO:</strong> this is the output of <code>uname -a</code> &ndash; the MAC address is the machine name in this case.</p>
+</li>
+<li>
+<p><strong>KERNEL COMMAND LINE:</strong> these are the kernel command line parameters, directed at various modules built into the kernel.  The function <code>modprobe</code> parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.</p>
+</li>
+<li>
+<p><strong>CLOUD CONFIG QUERY:</strong> a cloud-init query is used to retrieve cloud instance metadata used by cloud-init when booting an instance.  This section shows the specific metadata retrieved during cloud-init query for this machine.</p>
+</li>
+<li>
+<p><strong>CPU CORE COUNT AND MODEL:</strong> the data produced here is similar to the output you could retrieve by running <code>nproc</code> and then attempting a <code>cat /sys/devices/cpu/caps/pmu_name</code> &ndash; and so on.  There several ways to retrieve this info, but all can produce the number and type of CPU(s) available.</p>
+</li>
+<li>
+<p><strong>PCI INFO:</strong> the devices, real or virtual, that are connected to the machine via PCI (Peripheral Component Interconnect) bus.</p>
+</li>
+<li>
+<p><strong>USB INFO:</strong> the devices, real or virtual, that are connected to the machine via USB bus.</p>
+</li>
+<li>
+<p><strong>MODALIASES:</strong> a modalias is a sysfs technique to capture the information that a hardware item exposes to the kernel, with the file basically providing a template or structure for this information.  Each of the entries in this list describe one particular part of the machine&rsquo;s (real or virtual) hardware, down to the level of alarm timers, framebuffers, and even speakers.  In the event of a bug, this information can help your support engineer (or yourself) understand exactly what hardware is configured for this machine.</p>
+</li>
+<li>
+<p><strong>SERIAL PORTS:</strong> this section just lists the serial devices made available on this machine.</p>
+</li>
+<li>
+<p><strong>NETWORK INTERFACES:</strong> summarises the network interfaces available on this machine &ndash; essentially an abbreviated version of the output from some form of an <code>ip</code> command.</p>
+</li>
+<li>
+<p><strong>BLOCK DEVICE SUMMARY:</strong> a thumbnail sketch of the block devices (usually storage) available on this machine.</p>
+</li>
+<li>
+<p><strong>#dmidecode&hellip;:</strong> this section presents the basic DMI data, including the BIOS type, extent, size, and table location.</p>
+</li>
+<li>
+<p><strong>DMI DATA:</strong> the raw (undecoded) DMI table for this machine, presented for verification of the following DMI data sections, if desired.</p>
+</li>
+<li>
+<p><strong>DMI KEYPAIRS:</strong> the individual machine specifications, as decoded from the DMI table.  The manpage <strong>dmidecode (8)</strong> gives more details on each of these keypairs.</p>
+</li>
+</ul>
+<p><a href="#heading--maas-lshw"><h2 id="heading--maas-lshw">maas-lshw</h2></a></p>
+<p>This script pulls system BIOS and vendor info, and generates user-defined tags for later use.  <code>maas-lshw</code> runs in parallel with other scripts to speed up the commissioning process.  This output is roughly equivalent to the output of <code>lshw -xml</code> on the machine in question.  </p>
+<p>There are many available references to decode this information, so for now, here is a short glossary of most the terms (essentially, the tags) that typically appear in a listing like this:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p><strong>businfo</strong> - the bus information for this device.</p>
+</li>
+<li>
+<p><strong>capacity</strong> - the maximum capacity reported by the device.</p>
+</li>
+<li>
+<p><strong>class</strong> - the device&rsquo;s class.</p>
+</li>
+<li>
+<p><strong>clock</strong> - the bus clock of the device (in Hz).</p>
+</li>
+<li>
+<p><strong>description</strong> - a human-readable description of the hardware node.</p>
+</li>
+<li>
+<p><strong>dev</strong> - the device number (major.minor).</p>
+</li>
+<li>
+<p><strong>id</strong> - the internal identifier used by <code>lshw</code>.</p>
+</li>
+<li>
+<p><strong>logicalname</strong> - the logical node name used by the system.</p>
+</li>
+<li>
+<p><strong>physid</strong> - the physical id of the device.</p>
+</li>
+<li>
+<p><strong>product</strong> - the specific product name of the device.</p>
+</li>
+<li>
+<p><strong>serial</strong> - the serial number of the device.</p>
+</li>
+<li>
+<p><strong>size</strong> - the actual size of the device.</p>
+</li>
+<li>
+<p><strong>slot</strong> - location of the physical (or virtual) connection.</p>
+</li>
+<li>
+<p><strong>vendor</strong> - the name of the vendor or manufacturer of the device.</p>
+</li>
+<li>
+<p><strong>version</strong> - the version or release information associated with the device.</p>
+</li>
+<li>
+<p><strong>width</strong> - the address width of the device (32/64 bits).</p>
+</li>
+</ul>
+<p>Some additional fields may be present in this output.  These will be identified and described as necessary for specific instances and situations.</p>
+<p><a href="#heading--20-maas-01-install-lldpd"><h2 id="heading--20-maas-01-install-lldpd">20-maas-01-install-lldpd</h2></a></p>
+<p>This script installs the link layer discovery protocol (LLDP) daemon, which will later capture networking information about the machine.  This logs the basic install process to the commissioning logs in real time.</p>
+<p><a href="#heading--maas-list-modaliases"><h2 id="heading--maas-list-modaliases">maas-list-modaliases</h2></a></p>
+<p>This script figures out what hardware modules are loaded, providing a way to autorun certain scripts based on which modules are loaded.  <code>maas-list-modaliases</code> runs in parallel with other scripts to speed up the commissioning process.</p>
+<p><a href="#heading--20-maas-02-dhcp-unconfigured-ifaces"><h2 id="heading--20-maas-02-dhcp-unconfigured-ifaces">20-maas-02-dhcp-unconfigured-ifaces</h2></a></p>
+<p>MAAS will want to know all the ways the machine is connected to the network. Only PXE comes online during boot; this script brings all the other networks online so they can be recognised.  This script logs the discovery of these networks to the commissioning logs.</p>
+<p><a href="#heading--maas-get-fruid-api-data"><h2 id="heading--maas-get-fruid-api-data">maas-get-fruid-api-data</h2></a></p>
+<p>This script gathers information for the Facebook wedge power type, and it runs in parallel with other scripts to improve commissioning speed. You will note that this output does not actually contain any specific information, but rather the echoed commands of a script to gather the information.</p>
+<p><a href="#heading--maas-serial-ports"><h2 id="heading--maas-serial-ports">maas-serial-ports</h2></a></p>
+<p>This script lists what serial ports are available on the machine; it runs in parallel to speed up commissioning.  Log output from a normal, successful run is simply a list of serial ports.  The output of this script may be useful when you&rsquo;re trying to verify that a particular serial interface is active and available on your machine.</p>
+<p><a href="#heading--40-maas-01-network-interfaces"><h2 id="heading--40-maas-01-network-interfaces">40-maas-01-network-interfaces</h2></a></p>
+<p>In MAAS 2.9 and below, this script is just used to get the IP address, which can then be associated with a VLAN/subnet.  The results are simply the output of a command similar to <code>ip a</code>.  This script is not used in MAAS 3.0 and higher.</p>
+<p><a href="#heading--50-maas-01-commissioning"><h2 id="heading--50-maas-01-commissioning">50-maas-01-commissioning</h2></a></p>
+<p>This script is the main MAAS tool, gathering information on machine resources, such as storage, network devices, CPU, RAM, etc. We currently pull this data using lxd: We use a Go binary built from lxd source that just contains the minimum source to gather the resource information we need.</p>
+<p>This output represents a catalogue of the resources available on this machine, in a format readable by both humans and machines.  You can use this to verify that your configuration is what you expected.</p>
+<p><a href="#heading--maas-capture-lldp"><h2 id="heading--maas-capture-lldp">maas-capture-lldp</h2></a></p>
+<p>This script gathers LLDP network information to be presented on the logs page; this data is not used by MAAS at all.  The script runs in parallel with other scripts for speed. Note that the log output from a successful run is uninteresting.</p>
+<p><a href="#heading--maas-kernel-cmdline"><h2 id="heading--maas-kernel-cmdline">maas-kernel-cmdline</h2></a></p>
+<p>This script is used to update the boot devices; it double-checks that the right boot interface is selected.  Successful output is the specific command that boots the machine kernel, something like this:</p>
+<pre><code class="language-nohighlight">nomodeset ro root=squash:http://192.168.122.2:5248/images/ubuntu/amd64/generic/bionic/daily/squashfs ip=::::52-54-00-0b-6d-8c:BOOTIF ip6=off overlayroot=tmpfs overlayroot_cfgdisk=disabled cc:{'datasource_list': ['MAAS']}end_cc cloud-config-url=http://192-168-122-0--24.maas-internal:5248/MAAS/metadata/latest/by-id/pb6833/?op=get_preseed apparmor=0 log_host=192.168.122.2 log_port=5247 BOOTIF=01-52:54:00:0b:6d:8c
+</code></pre>
+<p>These are the kernel command line parameters, which control the invocation of various modules built into the kernel.  The function <code>modprobe</code> parses this kernel command line and collects the relevant module parameters when it loads a module.  Note that this command line could also be used to pull in loadable modules.</p>
+    </div>
+  </body>
+</html>
