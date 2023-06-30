@@ -11,8 +11,23 @@
       #sidebar a:visited{color:black;}
       #sidebar a:active{color:black;}
       #sidebar a:hover{color:blue;}
-      ul {margin-left:0;list-style-type:none;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
       li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
     </style>
   </head>
   <body>
@@ -26,536 +41,478 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
-	  UI-only
+        &nbsp;UI-only&nbsp;
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="../cli/about-machines.html">
-	  CLI-only
-	</a>
+      <a href="../cli/about-machines.html">
+        CLI-only
+      </a>
     </div>
     <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
-      <strong>
-	<a href="maas-documentation-25.html">
-	  Home
-	</a>
-      </strong>
-      <p>
-      <strong>
-	<a href="tutorials.html">
-	  Tutorials
-	</a>
-      </strong>
       <ul>
 	<li>
-	  <a href="bootstrap-maas.html">
-	    Bootstrap MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="try-out-the-maas-cli.html">
-	    Try out the MAAS CLI
-	  </a>
-	</li>
-	<li>
-	  <a href="create-a-custom-image.html">
-	    Create a custom image
-	  </a>
-	</li>
-	<li>
-	  <a href="get-fancy-cli-output.html">
-	    Get fancy CLI output
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-get-started-with-maas.html">
-	  How to get started with MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-do-a-fresh-install-of-maas.html">
-	    Do a fresh install of MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-upgrade-maas.html">
-	    Upgrade MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-spin-up-maas-with-ansible.html">
-	    Spin up MAAS with Ansible
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-set-up-networks.html">
-	  How to set up networks
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-connect-maas-networks.html">
-	    Connect MAAS networks
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-dhcp.html">
-	    Enable DHCP
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-availability-zones.html">
-	    Use availability zones
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-images.html">
-	  How to use images
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-standard-images.html">
-	    Use standard images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-mirror-images-locally.html">
-	    Mirror images locally
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-images.html">
-	    Customise images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-employ-vmware-images.html">
-	    Employ VMWare images
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-deploy-a-real-time-kernel.html">
-	    Deploy a RT kernel
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-controllers.html">
-	  How to manage controllers
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-configure-controllers.html">
-	    Configure controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-high-availability.html">
-	    Enable HA
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-manage-machines.html">
-	  How to manage machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-make-machines-available.html">
-	    Make machines available
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-customise-machines.html">
-	    Customise machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-put-machines-to-work.html">
-	    Put machines to work
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-use-virtual-machines.html">
-	  How to use virtual machines
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-set-up-lxd.html">
-	    Set up LXD
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-vm-hosts.html">
-	    Manage VM hosts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-virtual-machines.html">
-	    Manage virtual machines
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-label-devices.html">
-	  How to label devices
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-tag-machines.html">
-	    Tag machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-annotate-machines.html">
-	    Annotate machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-machine-tags.html">
-	    Use machine tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-controller-tags.html">
-	    Use controller tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-storage-tags.html">
-	    Use storage tags
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-network-tags.html">
-	    Use network tags
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-secure-maas.html">
-	  How to secure MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-improve-maas-security.html">
-	    Improve MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-manage-user-accounts.html">
-	    Manage user accounts
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-enable-maas-native-tls.html">
-	    Enable MAAS native TLS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-use-hashicorp-vault-with-maas.html">
-	    Use Vault with MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-set-up-an-air-gapped-maas.html">
-	    Set up an air-gapped MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-operate-maas.html">
-	  How to operate MAAS
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-find-machines.html">
-	    Find machines
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-back-up-maas.html">
-	    Back up MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-monitor-maas.html">
-	    Monitor MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-audit-maas.html">
-	    Audit MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-troubleshoot-maas.html">
-	    Troubleshoot MAAS
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="how-to-give-and-receive-help.html">
-	  How to give and receive help
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="how-to-use-our-discourse-forum.html">
-	    Use our discourse forum
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contact-us">
-	    Get support↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-request-new-features.html">
-	    Request new features
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-review-and-report-bugs.html">
-	    Review and report bugs
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-contribute-doc.html">
-	    Contribute documentation
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="general-reference.html">
-	  General reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="what-is-new-with-maas.html">
-	    Release notes
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-installation-requirements.html">
-	    Installation requirements
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-settings-reference.html">
-	    MAAS settings
-	  </a>
-	</li>
-	<li>
-	  <a href="https://launchpad.net/maas.html">
-	    MAAS source code↗
-	  </a>
-	</li>
-	<li>
-	  <a href="how-to-help-improve-the-doc.html">
-	    Doc style guide
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-glossary.html">
-	    Glossary
-	  </a>
-	</li>
-	<li>
-	  <a href="https://ubuntu.com/community/code-of-conduct">
-	    Code of conduct↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="api-reference.html">
-	  API reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="api-authentication-reference.html">
-	    API authentication
-	  </a>
-	</li>
-	<li>
-	  <a href="python-api-client-reference.html">
-	    Python API client
-	  </a>
-	</li>
-	<li>
-	  <a href="api">
-	    API documentation↗
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-scripts-reference.html">
-	  Scripts reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="commissioning-scripts-reference.html">
-	    Commissioning scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="hardware-test-scripts-reference.html">
-	    Hardware test scripts
-	  </a>
-	</li>
-	<li>
-	  <a href="maas-terraform-reference.html">
-	    Terraform
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="maas-logs-reference.html">
-	  Log reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="event-logs-reference.html">
-	    Event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="audit-event-logs-reference.html">
-	    Audit event logs
-	  </a>
-	</li>
-	<li>
-	  <a href="commissioning-logs-reference.html">
-	    Commissioning logs
-	  </a>
-	</li>
-	<li>
-	  <a href="testing-logs-reference.html">
-	    Testing logs
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href="machine-parameters-reference.html">
-	  Machine parameters reference
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="power-drivers-reference.html">
-	    Power drivers
-	  </a>
-	</li>
-	<li>
-	  <a href="storage-layouts-reference.html">
-	    Storage layouts
-	  </a>
-	</li>
-	<li>
-	  <a href="device-labelling-reference.html">
-	    Device labelling
-	  </a>
-	</li>
-      </ul>
-      <strong>
-	<a href=".html">
-	  Explanation
-	</a>
-      </strong>
-      <ul>
-	<li>
-	  <a href="about-maas.html">
-	    About MAAS
-	  </a>
-	</li>
-	<li>
-	  <a href="about-networking.html">
-	    About networking
-	  </a>
-	</li>
-	<li>
-	  <a href="about-images.html">
-	    About images
-	  </a>
-	</li>
-	<li>
-	  <a href="about-controllers.html">
-	    About controllers
-	  </a>
-	</li>
-	<li>
-	  <a href="about-machines.html">
-	    About machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-virtual-machines.html">
-	    About virtual machines
-	  </a>
-	</li>
-	<li>
-	  <a href="about-device-labels.html">
-	    About device labels
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-events.html">
-	    About MAAS events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-audit-events.html">
-	    About audit events
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-logging.html">
-	    About MAAS logging
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-security.html">
-	    About MAAS security
-	  </a>
-	</li>
-	<li>
-	  <a href="about-maas-performance.html">
-	    About MAAS performance
-	  </a>
-	</li>
-	<li>
-	  <a href="about-ansible.html">
-	    About Ansible
-	  </a>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary>Try out MAAS</summary>
+		  <ul>
+		    <li>
+		      <a href="bootstrap-maas.html">Bootstrap MAAS</a>
+		    </li>
+		    <li>
+		      <a href="get-to-know-your-machines.html">Get to know your machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<a href="try-out-the-maas-cli.html">Try out the MAAS CLI</a>
+	      </li>
+	      <li>
+		<a href="create-custom-images.html">Create custom images</a>
+	      </li>
+	      <li>
+		<a href="get-fancy-cli-output.html">Get fancy CLI output</a>
+	      </li>
+              <li>
+		<details>
+                  <summary>Primer tutorials</summary>
+		  <ul>
+		    <li>
+		      <a href="primer-tutorial-the-osi-model.html">OSI model tutorial</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary><a href="how-to-get-started-with-maas.html">Get started with MAAS</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-do-a-fresh-install-of-maas.html">Do a fresh install of MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-upgrade-maas.html">Upgrade MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-spin-up-maas-with-ansible.html">Spin up MAAS with Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-networks.html">Manage networks</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-connect-maas-networks.html">Connect MAAS networks</a>
+                    </li>
+                    <li>
+                      <a href="how-to-enable-dhcp.html">Enable DHCP</a>
+                    </li>
+                    <li>
+                      <a href="how-to-use-availability-zones.html">Use availability zones</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-images.html">Use images</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-use-standard-images.html">Use standard images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-mirror-images-locally.html">Mirror images locally</a>
+                    </li>
+                    <li>
+                      <a href="how-to-customise-images.html">Customise images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-employ-vmware-images.html">Employ VMware images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-deploy-a-real-time-kernel.html">Deploy a RT kernel</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-controllers.html">Manage controllers</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-configure-controllers.html">Configure controllers</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-high-availability.html">Enable high availability</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-machines.html">Manage machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-make-machines-available.html">Make machines available</a>
+		    </li>
+		    <li>
+		      <a href="how-to-customise-machines.html">Customise machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-put-machines-to-work.html">Put machines to work</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-virtual-machines.html">Use virtual machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-set-up-lxd.html">Set up LXD</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-vm-hosts.html">Manage VM hosts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-virtual-machines.html">Manage virtual machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-label-devices.html">Label devices</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-tag-machines.html">Tag machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-annotate-machines.html">Annotate machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-machine-tags.html">Use machine tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-controller-tags.html">Use controller tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-storage-tags.html">Use storage tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-network-tags.html">Use network tags</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-secure-maas.html">Secure MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-improve-maas-security.html">Improve MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-user-accounts.html">Manage user accounts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-maas-native-tls.html">Enable MAAS native TLS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-hashicorp-vault-with-maas.html">Use Vault with MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-set-up-an-air-gapped-maas.html">Set up an air-gapped MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-operate-maas.html">Operate MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-find-machines.html">Find machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-back-up-maas.html">Back up MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-monitor-maas.html">Monitor MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-audit-maas.html">Audit MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-troubleshoot-maas">Troubleshoot MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-give-and-receive-help.html">Give and receive help</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-use-the-maas-discourse-forum.html">Use our discourse forum</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/pro">Get support</a>
+		    </li>
+		    <li>
+		      <a href="how-to-request-new-features.html">Request new features</a>
+		    </li>
+		    <li>
+		      <a href="how-to-review-and-report-bugs.html">Review and report bugs</a>
+		    </li>
+		    <li>
+		      <a href="how-to-contribute-documentation.html">Contribute documentation</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="reference.html">Reference</a></summary>
+            <ul>
+	      <details>
+		<summary><a href="maas-release-notes.html">Release notes</a></summary>
+		<ul>
+		  <li>
+		    <a href="what-is-new-with-maas-3-4.html">MAAS 3.4 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-3.html">MAAS 3.3 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-2.html">MAAS 3.2 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-1.html">MAAS 3.1 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-0.html">MAAS 3.0 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-9.html">MAAS 2.9 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-8.html">MAAS 2.8 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-7.html">MAAS 2.7 release notes</a>
+              	  </li>
+		</ul>
+	      </details>
+              <li>
+		<details>
+                  <summary><a href="general-reference.html">General</a></summary>
+		  <ul>
+		    <li>
+		      <a href="installation-requirements.html">Installation requirements</a>
+		    </li>
+		    <li>
+		      <a href="maas-settings-reference.html">MAAS settings</a>
+		    </li>
+		    <li>
+		      <a href="https://launchpad.net/maas">Source code</a>
+		    </li>
+		    <li>
+		      <a href="maas-documentation-style-guide.html">Doc style guide</a>
+		    </li>
+		    <li>
+		      <a href="maas-glossary.html">Glossary</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/community/code-of-conduct">Code of conduct</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+              <li>
+		<details>
+		  <summary><a href="api.html">API</a></summary>
+		  <ul>
+		    <li>
+                      <a href="api-authentication-reference.html">API authentication</a>
+                    </li>
+		    <li>
+                      <a href="python-api-client-reference.html">Python API client</a>
+                    </li>
+		    <li>
+                      <a href="/docs/api">API documentation</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="scripts-reference.html">Scripts</a></summary>
+		  <ul>
+		    <li>
+                      <a href="commissioning-scripts-reference.html">Commissioning scripts</a>
+                    </li>
+		    <li>
+                      <a href="hardware-test-scripts-reference.html">Hardware test scripts</a>
+                    </li>
+		    <li>
+                      <a href="maas-terraform-reference.html">Terraform</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="log-reference.html">Logging</a></summary>
+		  <ul>
+		    <li>
+                      <a href="event-logs-reference.html">Event logs</a>
+                    </li>
+		    <li>
+                      <a href="audit-event-logs-reference.html">Audit event logs</a>
+                    </li>
+		    <li>
+                      <a href="commissioning-logs-reference.html">Commissioning logs</a>
+                    </li>
+		    <li>
+                      <a href="testing-logs-reference.html">Testing logs</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="machine-parameters-reference.html">machine-parameters</a></summary>
+		  <ul>
+		    <li>
+                      <a href=.html"power-drivers-reference.html">Power drivers</a>
+                    </li>
+		    <li>
+                      <a href="storage-layouts-reference.html">Storage layouts</a>
+                    </li>
+		    <li>
+                      <a href="device-labelling-reference.html">Device labelling</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+	  <details>
+	    <summary><a href="explanation.html">Explanation</a></summary>
+	    <ul>
+	      <li>
+		<a href="about-maas.html">About MAAS</a>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Networking</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-networks.html">MAAS networks</a>
+		    </li>
+		    <li>
+		      <a href="about-tcp-ip-networks.html">TCP/IP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-dhcp.html">DHCP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-cloud-networking.html">Cloud networking primer</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<a href="about-images.html">Images</a>
+              </li>
+	      <li>
+		<details>
+		  <summary>Controllers</summary>
+		  <ul>
+		    <li>
+		      <a href="about-region-and-rack-controllers.html">Region and rack controllers</a>
+		    </li>
+		    <li>
+		      <a href="about-high-availability.html">High availability</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Machines and devices</summary>
+		  <ul>
+		    <li>
+		      <a href="about-machines.html">Machines</a>
+		    </li>
+		    <li>
+		      <a href="about-virtual-machines.html">Virtual machines</a>
+		    </li>
+		    <li>
+		      <a href="device-labels.html">Device labels</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Events and logging</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-events.html">MAAS events</a>
+		    </li>
+		    <li>
+		      <a href="about-audit-events.html">Audit events</a>
+		    </li>
+		    <li>
+		      <a href="about-log-files.html">MAAS logging</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-security.html">MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-performance.html">MAAS performance</a>
+		    </li>
+		    <li>
+		      <a href="about-ansible.html">Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	    </ul>
+	  </details>
 	</li>
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>About machines</h1><!-- "About machines" -->
 
-<p>This article will help you sort out the theoretical aspects of MAAS machines, teaching you:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--about-the-machine-life-cycle">About the machine life-cycle</a></li>
-<li><a href="#heading--event-logs">About machine event logs</a></li>
-<li><a href="#heading--about-the-machine-list">About the machine list</a></li>
-<li><a href="#heading--machine-storage">About machine storage info</a></li>
-<li><a href="#heading--about-disk-erasure">About disk erasure</a></li>
-</ul>
+<p>This article will help you sort out the theoretical aspects of MAAS machines.</p>
 <p><a href="#heading--about-the-machine-life-cycle"><h2 id="heading--about-the-machine-life-cycle">About the machine life-cycle</h2></a></p>
 <p>One of the most important things to understand about machines is their life-cycle. In this subsection, you will learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -568,7 +525,7 @@
 <p><a href="#heading--Introduction-to-the-machine-life-cycle"><h3 id="heading--Introduction-to-the-machine-life-cycle">Introduction to the machine life-cycle</h3></a></p>
 <p>Everything that happens to a machine under MAAS control conforms to a specific life-cycle.  All MAAS machines are in a named state, or in transition between states.  Most of these transitions are user-controlled.  Only the &ldquo;failure&rdquo; state is reached under the direction of MAAS, when a user&rsquo;s request for certain state changes can&rsquo;t be successfully completed.</p>
 <p>In general, the various states and transitions can be summarised in a diagram:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/b/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg"></a></p>
+<p><a href="../images/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/bd9e5e225ffee4b2e88104e5bbd363dd2ef61a88.jpeg"></a></p>
 <p>The central state flow at the bottom of the diagram is the &ldquo;standard&rdquo; life-cycle.  If all goes well, you won&rsquo;t have to deviate much from this flow:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
@@ -620,11 +577,11 @@
 <p>When you configure a machine to netboot &ndash; and turn it on while connected to the network &ndash; MAAS will enlist it, giving it a status of &ldquo;New.&rdquo;  You can also <a href="how-to-make-machines-available.html#heading--how-to-add-a-machine-manually">add a machine manually</a>. In either case, the next step is <em>commissioning</em>, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run custom commissioning scripts to meet your specific needs.</p>
 <p><a href="#heading--about-the-enlistment-process"><h4 id="heading--about-the-enlistment-process">About the enlistment process</h4></a></p>
 <p>When MAAS enlists a machine, it first contacts the DHCP server, so that the machine can be assigned an IP address.  An IP address is necessary to download a kernel and initrd via TFTP, since these functions can&rsquo;t accept domain names.  Once the machine has a bootable kernel, MAAS boots it:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a></p>
+<p><a href="../images/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/76f7113545e6950fec60bdeac06cfaf79b14b3ff.jpeg"></a></p>
 <p>Next, initrd mounts a Squashfs image, ephemerally via HTTP, so that cloud-init can execute:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a></p>
+<p><a href="../images/500f9bd2d070790a4007085705035366bee88a4a.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/500f9bd2d070790a4007085705035366bee88a4a.jpeg"></a></p>
 <p>Finally, cloud-init runs enlistment and setup scripts:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a></p>
+<p><a href="../images/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/bd87f78c8ee668a22640bf15607c9e3e532d46bb.jpeg"></a></p>
 <p>The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as <a href="how-to-set-up-networks.html#heading--about-network-discovery">automatic discovery or network discovery</a>.</p>
 <p>Typically, the next step will be to commission the machine. As an alternative to enlistment, an administrator can add a machine manually. Typically this is done when enlistment doesn&rsquo;t work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you&rsquo;ve added it.</p>
 <p>After the commissioning process, MAAS places the machine in the ‘Ready’ state. ‘Ready’ is a holding state for machines that are commissioned, waiting to be deployed when needed.</p>
@@ -708,7 +665,7 @@ Commissioning requires 60 seconds.</p>
 <p>If you are using the NUMA architecture, MAAS versions 2.7 and higher guarantee that machines are assigned to a single NUMA node that contains all the machine&rsquo;s resources. Node boundaries are critical, especially in vNUMA situations.  Splitting nodes can create unnecessary latency.  You want the NUMA node boundaries to match VM boundaries if at all possible.</p>
 <p><strong>NOTE:</strong> 
 You must recommission NUMA/SR-IOV machines that were previously commissioned under version 2.6 or earlier.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a></p>
+<p><a href="../images/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/7b47235ff57a570ccba6a6ed09186a3d7483f5a4.png"></a></p>
 <p>When using these nodes, you can specify a node index for interfaces and physical block devices.  MAAS will display the NUMA node index and details, depending upon your configuration, to include the count of NUMA nodes, number of CPU cores, memory, NICs, and node spaces for bonds and block devices.  You can also filter machines by CPU cores, memory, subnet, VLAN, fabric, space, storage, and RAID, among others.</p>
 <p><a href="#heading--about-maas-commissioning-scripts"><h4 id="heading--about-maas-commissioning-scripts">About MAAS commissioning scripts</h4></a></p>
 <p>MAAS runs scripts during enlistment, commissioning and testing to collect data about nodes. Both enlistment and commissioning run all builtin commissioning scripts, though enlistment runs only built-ins. Commissioning also runs any user-uploaded commissioning scripts by default, unless the user manually provides a list of scripts to run. MAAS uses these commissioning scripts to configure hardware and perform other tasks during commissioning, such as updating the firmware. Similarly, MAAS employs hardware testing scripts to evaluate system hardware and report its status.</p>
@@ -887,9 +844,9 @@ testing_scripts=$SCRIPT_NAME,$SCRIPT_TAG
 <p>Any testing scripts tagged with commissioning will also run during commissioning.</p>
 <p><a href="#heading--about-debugging-script-failures"><h4 id="heading--about-debugging-script-failures">About debugging script failures</h4></a></p>
 <p>You can individually access the output from both completed and failed scripts.</p>
-<p><a href="https://assets.ubuntu.com/v1/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/855015e5-nodes-hw-scripts__2.2_fail.png"></a></p>
+<p><a href="../images/855015e5-nodes-hw-scripts__2.2_fail.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/855015e5-nodes-hw-scripts__2.2_fail.png"></a></p>
 <p>If you need further details, especially when writing and running your own scripts, you can connect to a machine and examine its logs and environment.</p>
-<p><a href="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img src="https://assets.ubuntu.com/v1/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></p>
+<p><a href="../images/da793c67-nodes-hw-scripts__2.4_ssh.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/da793c67-nodes-hw-scripts__2.4_ssh.png"></a></p>
 <p>Because scripts operate within an ephemeral version of Ubuntu, enabling this option stops the machine from shutting down, allowing you to connect and probe a script&rsquo;s status.</p>
 <p>As long as you&rsquo;ve added your <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH key</a> to MAAS, you can connect with SSH to the machine&rsquo;s IP with a username of <code>ubuntu</code>. Type <code>sudo -i</code> to get root access.</p>
 <p><a href="#heading--about-testing-hardware"><h4 id="heading--about-testing-hardware">About testing hardware</h4></a></p>
@@ -899,9 +856,9 @@ The majority of testing scripts only work with machines that are backed by physi
 <p>With MAAS, you can easily write, upload and execute your hardware testing scripts and see the results.</p>
 <p><a href="#heading--hardware-tests"><h4 id="heading--hardware-tests">About machine hardware &amp; test logs</h4></a></p>
 <p>MAAS logs test results and allows you to view a summary of tests run against a particular machine.  You can also example details on any particular tests:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a></p>
+<p><a href="../images/e53a2c01b57df49e56bb4d95552b6a038249aa97.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/e53a2c01b57df49e56bb4d95552b6a038249aa97.png"></a></p>
 <p>You can also examine the &ldquo;raw&rdquo; log output:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/d/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a></p>
+<p><a href="../images/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/dc5bb5e6489a382e257dac605f2dbdc6fa1ca630.png"></a></p>
 <p>Help interpreting these logs can be found under the <a href="how-to-work-with-log-files.html">Logging</a> section of this documentation.</p>
 <p><a href="#heading--about-testing-machine-networking"><h4 id="heading--about-testing-machine-networking">About testing machine networking</h4></a></p>
 <p>MAAS provides a comprehensive suite of network and link testing capabilities.  MAAS can check whether or not links are connected, detect slow links, and report link and interface speeds via UI or API. In addition, you can test Internet connectivity against a user-provided list of URLs or IP addresses.  Bonded NICS will be separated during this testing, so that each side of a redundant interface is fully evaluated.</p>
@@ -911,7 +868,7 @@ The majority of testing scripts only work with machines that are backed by physi
 <p><a href="#heading--about-allocation-and-deployment"><h3 id="heading--about-allocation-and-deployment">About allocation and deployment</h3></a></p>
 <p>Once a machine has been commissioned, the next logical step is to deploy it. Deploying a machine means, effectively, to <a href="how-to-acquire-images.html#heading--how-images-deploy">install an operating system on it</a>, along with any other application loads you wish to run on that machine.</p>
 <p>A detailed picture of deployment looks something like this:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a></p>
+<p><a href="../images/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f7e0fb1916bca084de75fc0479bfec3c95adf7b6.png"></a></p>
 <p>Before deploying a machine, MAAS must allocate it (status &lsquo;Allocated&rsquo;). Allocating a machine reserves the machine for the exclusive use of the allocation process. The machine is no longer available to any other process, including another MAAS instance, or a process such as Juju.</p>
 <p>The agent that triggers deployment may vary. For instance, if the machines are destined to run complex, inter-related services that scale up or down frequently, like a &ldquo;cloud&rdquo; resource, then <a href="https://jaas.ai/">Juju</a><code>↗</code> is the recommended deployment agent. Juju will also install and configure services on the deployed machines. If you want to use MAAS to install a base operating system and work on the machines manually, then you can deploy a machine directly with MAAS.</p>
 <p>Machines deployed with MAAS will also be ready to accept connections via SSH, to the &lsquo;ubuntu&rsquo; user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH keys</a>.</p>
@@ -943,10 +900,6 @@ Juju adds SSH keys to machines under its control.</p>
 <p>Ensure any pertinent SSH keys are imported (see <a href="how-to-manage-user-accounts.html#heading--ssh-keys">SSH keys</a>) to MAAS so it can connect to deployed machines.</p>
 </li>
 </ol>
-<p><a href="#heading--event-logs"><h2 id="heading--event-logs">About machine event logs</h2></a></p>
-<p>Event logs display a list of timestamped status updates for events and actions performed on the machine:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/9/981a1aced2a4c231fa9e4fe1b70e77aeb816f133.png"></a></p>
-<p>Detailed discussion of this event log can be found under the <a href="how-to-work-with-log-files.html">Logging</a> section of this documentation.</p>
 <p><a href="#heading--about-the-machine-list"><h2 id="heading--about-the-machine-list">About the machine list</h2></a></p>
 <p>The machine list is the basic dashboard for many MAAS operations.  In this subsection, you will learn:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -983,13 +936,13 @@ The &lsquo;Filter by&rsquo; section limits the machines listed in the table to s
 </ul>
 <p><a href="#heading--about-the-machine-summary"><h3 id="heading--about-the-machine-summary">About the machine summary</h3></a></p>
 <p>Click a machine&rsquo;s FQDN or MAC address to open a detailed view of a machine&rsquo;s status and configuration.</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a></p>
+<p><a href="../images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a></p>
 <p>The default view is &lsquo;Machine summary&rsquo;, presented as a series of cards detailing the CPU, memory, storage and tag characteristics of the machine, as well as an overview of its current status. When relevant, &lsquo;Edit&rsquo; links take you directly to the settings pane for the configuration referenced within the card.  The machine menu bar within the web UI also includes links to logs, events, and configuration options:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/2/21e9f4dca3a3e0a6657b5b2a570c9fc68a3e4961.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/2/21e9f4dca3a3e0a6657b5b2a570c9fc68a3e4961.png"></a></p>
+<p><a href="../images/21e9f4dca3a3e0a6657b5b2a570c9fc68a3e4961.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/21e9f4dca3a3e0a6657b5b2a570c9fc68a3e4961.png"></a></p>
 <p>The machine status card presents an overview of CPU, memory, storage, tags, and general settings:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/a/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a></p>
+<p><a href="../images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/a8ff4caf6362a3d695682499a74d64cb189dfc37.png"></a></p>
 <p>The first card presents some basics of the machine resources and configuration:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/1X/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a></p>
+<p><a href="../images/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3e50fb21f4985db0a85519e2e933e24658770b9e.jpeg"></a></p>
 <p>Here are some details on what this card presents, with details on in-card links described in following sections:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li>
@@ -1024,11 +977,11 @@ The &lsquo;Filter by&rsquo; section limits the machines listed in the table to s
 </li>
 </ul>
 <p>Note that clicking any of the links in this card will either present a pop-up form or take you to another item in the machine menu &ndash; so using the browser &ldquo;back&rdquo; button will take you completely away from this machine&rsquo;s page.  For example, you can choose the &ldquo;Test CPU&rdquo; option, which brings up this overlay:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png"></a></p>
+<p><a href="../images/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/6d7fe50e5b296a37a03269a1f5be3d25a2a2481a.png"></a></p>
 <p>From this screen, you can choose test scripts and run the tests (in the background) as the interface returns to the Machine summary.  A linked note in the CPU block lets you know that the tests are in progress:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/3/3e140872c407e5b9eb06960b5b42353765567192.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/3/3e140872c407e5b9eb06960b5b42353765567192.png"></a> </p>
+<p><a href="../images/3e140872c407e5b9eb06960b5b42353765567192.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/3e140872c407e5b9eb06960b5b42353765567192.png"></a> </p>
 <p>And you can watch the results under the &ldquo;Tests&rdquo; option in the Machine menu:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/f/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a> </p>
+<p><a href="../images/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/f398c9ed670af8c0886ccc1ed8bf586e3faf1e53.png"></a> </p>
 <p>The rest of the cards on the Machine summary are either self-explanatory, or they&rsquo;re covered in the sections below.  The main point is this: You can see that nearly everything about machines takes place within the main menu&rsquo;s &ldquo;Machines&rdquo; option. </p>
 <p><a href="#heading--usb-pci-devices"><h3 id="heading--usb-pci-devices">Handling attached USB and PCI devices</h3></a></p>
 <p>The machines in your MAAS may have devices attached to them via USB or PCI interface, such as keyboards, cameras, network cards, GPUs, etc.  MAAS will recognise these devices and make them visible to you when a machine is commissioned.</p>
@@ -1097,73 +1050,6 @@ MAAS doesn’t currently support deploying with ZFS for devices other than the r
 <p>A machine&rsquo;s storage is dependant upon the underlying system&rsquo;s disks, but its configuration (i.e., disk usage) is the result of a storage template. In MAAS, this template is called a layout, and MAAS applies it to a machine during commissioning.  Once a layout is applied, a regular user can make modifications to a machine at the filesystem level to arrive at the machine&rsquo;s final storage configuration.  When a machine is no longer needed, a user can choose from among several disk erasure types before releasing it.</p>
 <p><strong>NOTE:</strong> 
 MAAS supports storage configuration for CentOS and RHEL deployments. Support includes RAID, LVM, and custom partitioning with different file systems (ZFS and bcache excluded). This support requires a newer version of Curtin, <a href="https://launchpad.net/ubuntu/+source/curtin">available as a PPA</a><code>↗</code>.</p>
-<p><a href="#heading--machine-storage"><h2 id="heading--machine-storage">About machine storage info</h2></a></p>
-<p>One of the key elements of managing machines is configuring and managing their storage space.  This subsection will help you learn:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--about-block-devices">About block devices</a></li>
-<li><a href="#heading--about-partitions">About partitions</a></li>
-<li><a href="#heading--about-storage-restrictions">About storage restrictions</a></li>
-<li><a href="#heading--about-vmfs-datastores">About VMFS datastores</a></li>
-<li><a href="#heading--about-uefi-booting">About UEFI booting</a></li>
-<li><a href="#heading--final-storage-modifications">About final storage modifications</a></li>
-</ul>
-<p>The Storage tab on the machine list brings up a form that allows you to view/edit the file system, partitioning and storage parameters for the selected machine:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/6/658f4814716a1347fda62ab799ba0d72506c128e.png"></a> </p>
-<p>This tab describes the filesystem(s) in use, as well as the available and used partitions for this machine.  </p>
-<p><a href="#heading--about-block-devices"><h3 id="heading--about-block-devices">About block devices</h3></a></p>
-<p>Once the initial storage layout has been configured on a machine, you can perform many operations to view and adjust the entire storage layout for the machine. In MAAS there are two different types of block devices.</p>
-<p><strong>Physical</strong></p>
-<p>A physical block device is a physically attached block device such as a 100GB hard drive connected to a server.</p>
-<p><strong>Virtual</strong></p>
-<p>A virtual block device is a block device that is exposed by the Linux kernel when an operation is performed. Almost all the operations on a physical block device can be performed on a virtual block device, such as a RAID device exposed as md0.</p>
-<p><a href="#heading--about-partitions"><h3 id="heading--about-partitions">About partitions</h3></a></p>
-<p>As with block devices (see <a href="#heading--about-block-devices">Block devices</a>), MAAS and the MAAS API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.</p>
-<p><a href="#heading--about-storage-restrictions"><h3 id="heading--about-storage-restrictions">About storage restrictions</h3></a></p>
-<p>There are three restrictions for the storage configuration:</p>
-<ol>
-<li>An EFI partition is required to be on the boot disk for UEFI.</li>
-<li>You cannot place partitions on logical volumes.</li>
-<li>You cannot use a logical volume as a Bcache backing device.</li>
-</ol>
-<p>Violating these restrictions will prevent a successful deployment.</p>
-<p><a href="#heading--about-vmfs-datastores"><h3 id="heading--about-vmfs-datastores">About VMFS datastores</h3></a></p>
-<p>MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the VMFS6 storage layout. This layout creates a VMFS Datastore named <code>datastore1</code> which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.</p>
-<p><a href="#heading--about-uefi-booting"><h3 id="heading--about-uefi-booting">About UEFI booting</h3></a></p>
-<p>Every layout type supports a machine booting with UEFI. In such a case, MAAS automatically creates an EFI boot partition (<code>/boot/efi</code>). Other than setting the machine to boot from UEFI, the user does not need to take any additional action.</p>
-<p><strong>NOTE:</strong> 
-UEFI must be enabled or disabled for the lifespan of the machine. For example, do not enlist a machine with UEFI enabled, and then disable it before commissioning. It won&rsquo;t work!</p>
-<p>The EFI partition, if created, will be the first partition (<code>sda1</code>) and will have a FAT32 filesystem with a size of 512 MB.</p>
-<p><a href="#heading--final-storage-modifications"><h3 id="heading--final-storage-modifications">About final storage modifications</h3></a></p>
-<p>Once MAAS provisions a machine with block devices, via a layout or administrator customisation, a regular user can modify the resulting storage configuration at the filesystem level.</p>
-<p><a href="#heading--about-disk-erasure"><h2 id="heading--about-disk-erasure">About disk erasure</h2></a></p>
-<p>Disk erasure pertains to the erasing of data on each of a machine&rsquo;s disks when the machine has been released (see <a href="maas-glossary.html#heading--release">Release action</a>) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action, and a default erasure configuration can also be set.  This section will help you learn:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--about-disk-erasure-types">About disk erasure types</a></li>
-<li><a href="#heading--about-standard-erase">About standard erasure</a></li>
-<li><a href="#heading--about-secure-erasure">About secure erasure</a></li>
-<li><a href="#heading--about-quick-erasure">About quick erasure</a></li>
-<li><a href="#heading--about-erasure-order-of-preference">About erasure order of preference</a></li>
-</ul>
-<p><a href="#heading--about-disk-erasure-types"><h3 id="heading--about-disk-erasure-types">About disk erasure types</h3></a></p>
-<p>The three disk erasure types are:</p>
-<ol>
-<li>Standard erasure</li>
-<li>Secure erasure</li>
-<li>Quick erasure</li>
-</ol>
-<p>Each of these are explained below.</p>
-<p><a href="#heading--about-standard-erase"><h3 id="heading--about-standard-erase">About standard erasure</h3></a></p>
-<p>Overwrites all data with zeros.</p>
-<p><a href="#heading--about-secure-erasure"><h3 id="heading--about-secure-erasure">About secure erasure</h3></a></p>
-<p>Although effectively equivalent to Standard erase, Secure erase is much faster because the disk&rsquo;s firmware performs the operation. Because of this, however, some disks may not be able to perform this erasure type (SCSI, SAS, and FC disks in particular).</p>
-<p><a href="#heading--about-quick-erasure"><h3 id="heading--about-quick-erasure">About quick erasure</h3></a></p>
-<p>Same as Standard erase but only targets the first 1 MB and the last 1 MB of each disk. This removes the partition tables and/or superblock from the disk, making data recovery difficult but not impossible.</p>
-<p><a href="#heading--about-erasure-order-of-preference"><h3 id="heading--about-erasure-order-of-preference">About erasure order of preference</h3></a></p>
-<p>If all three options are checked when the machine is released, the following order of preference is applied:</p>
-<ol>
-<li>Use &lsquo;secure erase&rsquo; if the disk supports it</li>
-<li>If it does not, then use &lsquo;quick erase&rsquo;</li>
-</ol>
 <p><a href="#heading--Customising-machines"><h2 id="heading--Customising-machines">Customising machines</h2></a></p>
 <p>Prior to deployment, MAAS machines can be customised in a number of ways, including:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
@@ -1245,7 +1131,7 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 </ol>
 <p>It is very important to pay close attention to your selections when erasing disks.</p>
 <p><a href="#heading--about-pre-seeding"><h3 id="heading--about-pre-seeding">About pre-seeding</h3></a></p>
-<p>During machine <a href="how-to-deploy-physical-machines.html">enlistment</a>, <a href="how-to-put-machines-to-work.html">deployment</a>, commissioning and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a><code>↗</code> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a><code>↗</code> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>. These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
+<p>During machine <a href="how-to-manage-machines.html">enlistment</a>, <a href="how-to-put-machines-to-work.html">deployment</a>, commissioning and machine installation, MAAS sends <a href="https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt">Tempita-derived</a><code>↗</code> configuration files to the <a href="https://launchpad.net/cloud-init">cloud-init</a><code>↗</code> process running on the target machine. MAAS refers to this process as <strong>preseeding</strong>. These preseed files are used to configure a machine&rsquo;s ephemeral and installation environments and can be modified or augmented to a custom machine configuration.</p>
 <p>Preseeding in MAAS can be achieved in two ways:</p>
 <ol>
 <li>
@@ -1260,22 +1146,22 @@ UEFI must be enabled or disabled for the lifespan of the machine. For example, d
 <table>
 <thead>
 <tr>
-<th align="left">Phase</th>
-<th align="left">Filename prefix</th>
+<th style="text-align: left;">Phase</th>
+<th style="text-align: left;">Filename prefix</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Enlistment</td>
-<td align="left">enlist</td>
+<td style="text-align: left;">Enlistment</td>
+<td style="text-align: left;">enlist</td>
 </tr>
 <tr>
-<td align="left">Commissioning</td>
-<td align="left">commissioning</td>
+<td style="text-align: left;">Commissioning</td>
+<td style="text-align: left;">commissioning</td>
 </tr>
 <tr>
-<td align="left">Installation</td>
-<td align="left">curtin (<a href="https://launchpad.net/curtin">Curtin</a>)<code>↗</code></td>
+<td style="text-align: left;">Installation</td>
+<td style="text-align: left;">curtin (<a href="https://launchpad.net/curtin">Curtin</a>)<code>↗</code></td>
 </tr>
 </tbody>
 </table>
@@ -1372,7 +1258,7 @@ There is the notion of an HWE <em>stack</em>, which refers to the window manager
 </ul>
 <p>You can find the <a href="how-to-customise-machines.html#heading--how-to-enable-hardware-sync-on-a-machine">procedure here</a>.</p>
 <p>While deploying a machine, you can configure that machine to periodically sync its <a href="#heading--about-hardware-sync">hardware configuration</a>.  Deployed machines will also  passively update changes to the BMC and tags for that machine, as these changes are made.</p>
-<p><a href="#heading--about-updating-hardware"><h3 id="heading--about-about-updating-hardware">About updating hardware</h3></a></p>
+<p><a href="#heading--about-updating-hardware"><h3 id="heading--about-updating-hardware">About updating hardware</h3></a></p>
 <p>Updating hardware on a deployed machine works by installing a special binary on the deployed machine.   This binary is configured at a given interval and push hardware info to the MAAS metadata endpoint.  By setting “enable_hw_sync” to true on a machine prior to deployment, MAAS will add configuration to install a systemd service and timer that will download the hardware sync binary.  This binary then authenticates the machine, reads the hardware info from the machine and pushes it to MAAS. The interval is set globally in the MAAS settings.</p>
 <p>Any changes in hardware are written to the machine’s configuration.  Physical hardware changes will be preserved upon release, while virtual changes, such as a SR-IOV interface, will be dropped.</p>
 <p>When deploying a machine from the UI, there is a new “enable_hw_sync” flag available for each machine. This flag marks a machine to be configured with live hardware updates.</p>
