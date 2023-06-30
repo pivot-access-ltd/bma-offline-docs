@@ -728,7 +728,7 @@ The tables are generally self-explanatory.
 </tbody>
 </table>
 
-<a href"#heading--node-performance-metrics-table"><h3 id="heading--node-performance-metrics-table">Node performance metrics</h3></a>
+<a href="#heading--node-performance-metrics-table"><h3 id="heading--node-performance-metrics-table">Node performance metrics</h3></a>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -2159,3 +2159,4 @@ The tables are generally self-explanatory.
 </tr>
 </tbody>
 </table>
+
