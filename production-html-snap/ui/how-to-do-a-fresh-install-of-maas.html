@@ -514,30 +514,21 @@
 
 <p>MAAS is relatively easy to install and configure.  Let&rsquo;s give it a try.</p>
 <p>Note that support for PostgreSQL version 12 is deprecated for MAAS version 3.4, and will be discontinued in MAAS 3.5.  We recommend <a href="upgrading-postgresql-12-to-version-14.html">upgrading to PostgreSQL version 14</a> before installing MAAS 3.4.</p>
-<p>To install MAAS 3.4 from packages:</p>
+<p>To install MAAS 3.4 from a snap:</p>
 <ol>
 <li>
 <p>Check the <a href="maas-installation-requirements.html">MAAS installation requirements</a> to make sure that your hardware will support MAAS.</p>
 </li>
 <li>
-<p>Add the MAAS 3.4 PPA to your <code>apt</code> repository paths:</p>
+<p>Enter the following command:</p>
 </li>
 </ol>
-<pre><code class="language-nohighlight">sudo apt-add-repository ppa:maas/3.4-next
+<pre><code class="language-nohighlight">sudo snap install --channel=latest/edge maas
 </code></pre>
 <ol>
-<li>Update your <code>apt</code> repository lists:</li>
+<li>Enter your account password.</li>
 </ol>
-<pre><code class="language-nohighlight">sudo apt update
-</code></pre>
-<ol>
-<li>Install MAAS with the following command:</li>
-</ol>
-<pre><code class="language-nohighlight">sudo apt-get -y install maas
-</code></pre>
-<ol>
-<li>Choose &ldquo;Y&rdquo; if asked about whether to continue with the install.</li>
-</ol>
+<p>At this point, the snap will download and install from the 3.4 channel.</p>
 <p><a href="#heading--installation-notes"><h2 id="heading--installation-notes">Some installation notes</h2></a></p>
 <p>When installing MAAS on Ubuntu, there can be conflicts between the existing NTP client, systemd-timesyncd, and the NTP client/server provided by MAAS, chrony. This can lead to time synchronization issues, especially if MAAS is configured with different upstream NTP servers than the ones used by systemd-timesyncd. To avoid conflicts, users can manually disable and stop systemd-timesyncd using the following command:</p>
 <pre><code class="language-bash">sudo systemctl disable --now systemd-timesyncd
