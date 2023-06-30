@@ -565,7 +565,7 @@ This operation must be performed on each region controller before the integratio
 <p><strong>NOTE:</strong><br>
 If you try to migrate secrets before all region controllers are configured with Vault, the migrate command will fail with an error message.</p>
 <p>If you&rsquo;ve configured all region controllers with Vault, but haven&rsquo;t yet migrated the secrets, the integration process will simply remain incomplete.  The UI will remind you:</p>
-<p><a href="https://discourse.maas.io/uploads/default/original/2X/5/558b495841536f38600bbe67c4d4293a3e94bd0b.png" target = "_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/5/558b495841536f38600bbe67c4d4293a3e94bd0b.png"></a></p>
+<p><a href="../images/558b495841536f38600bbe67c4d4293a3e94bd0b.png" target = "_blank"><img alt="unlabeled image" width="690" src="../images/558b495841536f38600bbe67c4d4293a3e94bd0b.png"></a></p>
 <p><a href="#heading--How-to-unseal-Vault"><h2 id="heading--How-to-unseal-Vault">How to unseal Vault</h2></a></p>
 <p>There are two conditions that may cause Vault-protected secrets to become unavailable: when the Vault is sealed (using <code>vault operator seal</code> &ndash; see the <a href="https://www.hashicorp.com/products/vault">Vault documentation</a><code>↗</code> and when the Vault is unreachable through misconfiguration or other failure.</p>
 <p>When the Vault is sealed, all queries involving secrets will fail with a user error mentioning that the Vault has been sealed.  Unsealing the Vault requires operator intervention, via the <code>vault operator unseal</code> command (again, see the <a href="https://www.hashicorp.com/products/vault">Vault documentation</a><code>↗</code>.  MAAS will indicate when this is needed.</p>
