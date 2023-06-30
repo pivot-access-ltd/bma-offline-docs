@@ -129,7 +129,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | 3     | what-is-new-with-maas-2-7             | [MAAS 2.7 release notes](/t/-/5993)                             |
 | 2     | general-reference                     | [General](/t/-/6950)                                            |
 | 3     | installation-requirements             | [Installation requirements](/t/-/6233)                          |
-| 3     | maas-settings-reference           | [MAAS settings](/t/-/6347)                                      |
+| 3     | how-to-change-maas-settings           | [MAAS settings](/t/-/6347)                                      |
 | 3     | upgrading-postgresql-12-to-version-14 | [Upgrading PostgreSQL v12 to v14](/t/-/7203)                    |
 | 3     | maas-source-code                      | [MAAS source code](https://launchpad.net/maas)                  |
 | 3     | maas-documentation-style-guide        | [Doc style guide](/t/-/4186)                                    |
@@ -207,7 +207,7 @@ Considering MAAS for your next project? [Get in touch](/t/how-to-contact-us/5448
 | /docs/test-log-reference                           | /docs/testing-logs-reference                  |
 | /docs/maas-image-builder                           | /docs/how-to-customise-images                 |
 | /docs/power-management-reference                   | /docs/power-drivers-reference                 |
-| /docs/maas-settings-reference                  | /docs/maas-settings                           |
+| /docs/how-to-change-maas-settings                  | /docs/maas-settings                           |
 | /docs/how-to-ask-for-help                          | /docs/how-to-give-and-receive-help            |
 | /docs/how-to-report-a-bug                          | /docs/how-to-review-and-report-bugs           |
 | /docs/request-a-feature                            | /docs/how-to-request-new-features             |
