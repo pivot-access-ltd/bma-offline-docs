@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <style>
+      #selector a:link{color:black;}
+      #selector a:visited{color:black;}
+      #selector a:active{color:black;}
+      #selector a:hover{color:blue;}
+      #sidebar a:link{color:black;}
+      #sidebar a:visited{color:black;}
+      #sidebar a:active{color:black;}
+      #sidebar a:hover{color:blue;}
+      ul {margin-left:0;margin-top:0;margin-bottom:0;list-style-type:none;padding-left:20px;}
+      li {margin: 4px 0;}
+      details {margin-top:0;margin-bottom:0;}
+      details > summary {
+	  padding: 0px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  width: 200px;
+	  background-color: #ffffff;
+	  border: none;
+	  cursor: pointer;
+    	  list-style-type: "< ";
+	  direction: rtl;
+      }
+      details[open] > summary {
+	  list-style-type: "v ";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
+      &nbsp;&nbsp;
+      <strong>Offline docs
+      </strong>
+      <a href="https://maas.io/docs">(switch to live docs)
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="background-color:white;border-top:1px solid black; border-left:1px solid black; border-right:1px solid black; border-bottom:5px solid white;">
+        &nbsp;UI-only&nbsp;
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../cli/what-is-new-with-maas-3-4.html">
+        CLI-only
+      </a>
+    </div>
+    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
+      <ul>
+	<li>
+          <a href="maas-documentation.html"><b>MAAS Documentation</b></a>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="tutorials.html">Tutorials</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary>Try out MAAS</summary>
+		  <ul>
+		    <li>
+		      <a href="bootstrap-maas.html">Bootstrap MAAS</a>
+		    </li>
+		    <li>
+		      <a href="get-to-know-your-machines.html">Get to know your machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<a href="try-out-the-maas-cli.html">Try out the MAAS CLI</a>
+	      </li>
+	      <li>
+		<a href="create-custom-images.html">Create custom images</a>
+	      </li>
+	      <li>
+		<a href="get-fancy-cli-output.html">Get fancy CLI output</a>
+	      </li>
+              <li>
+		<details>
+                  <summary>Primer tutorials</summary>
+		  <ul>
+		    <li>
+		      <a href="primer-tutorial-the-osi-model.html">OSI model tutorial</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="how-to-guides.html">How-to guides</a></summary>
+            <ul>
+              <li>
+		<details>
+                  <summary><a href="how-to-get-started-with-maas.html">Get started with MAAS</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-do-a-fresh-install-of-maas.html">Do a fresh install of MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-upgrade-maas.html">Upgrade MAAS</a>
+		    </li>
+		    <li>
+                      <a href="how-to-spin-up-maas-with-ansible.html">Spin up MAAS with Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-networks.html">Manage networks</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-connect-maas-networks.html">Connect MAAS networks</a>
+                    </li>
+                    <li>
+                      <a href="how-to-enable-dhcp.html">Enable DHCP</a>
+                    </li>
+                    <li>
+                      <a href="how-to-use-availability-zones.html">Use availability zones</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-images.html">Use images</a></summary>
+		  <ul>
+                    <li>
+                      <a href="how-to-use-standard-images.html">Use standard images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-mirror-images-locally.html">Mirror images locally</a>
+                    </li>
+                    <li>
+                      <a href="how-to-customise-images.html">Customise images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-employ-vmware-images.html">Employ VMware images</a>
+                    </li>
+                    <li>
+                      <a href="how-to-deploy-a-real-time-kernel.html">Deploy a RT kernel</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-controllers.html">Manage controllers</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-configure-controllers.html">Configure controllers</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-high-availability.html">Enable high availability</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-manage-machines.html">Manage machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-make-machines-available.html">Make machines available</a>
+		    </li>
+		    <li>
+		      <a href="how-to-customise-machines.html">Customise machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-put-machines-to-work.html">Put machines to work</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-use-virtual-machines.html">Use virtual machines</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-set-up-lxd.html">Set up LXD</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-vm-hosts.html">Manage VM hosts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-virtual-machines.html">Manage virtual machines</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+                  <summary><a href="how-to-label-devices.html">Label devices</a></summary>
+		  <ul>
+		    <li>
+		      <a href="how-to-tag-machines.html">Tag machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-annotate-machines.html">Annotate machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-machine-tags.html">Use machine tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-controller-tags.html">Use controller tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-storage-tags.html">Use storage tags</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-network-tags.html">Use network tags</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-secure-maas.html">Secure MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-improve-maas-security.html">Improve MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="how-to-manage-user-accounts.html">Manage user accounts</a>
+		    </li>
+		    <li>
+		      <a href="how-to-enable-maas-native-tls.html">Enable MAAS native TLS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-use-hashicorp-vault-with-maas.html">Use Vault with MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-set-up-an-air-gapped-maas.html">Set up an air-gapped MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-operate-maas.html">Operate MAAS</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-find-machines.html">Find machines</a>
+		    </li>
+		    <li>
+		      <a href="how-to-back-up-maas.html">Back up MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-monitor-maas.html">Monitor MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-audit-maas.html">Audit MAAS</a>
+		    </li>
+		    <li>
+		      <a href="how-to-troubleshoot-maas">Troubleshoot MAAS</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+	      <li>
+		<details>
+                  <summary><a href="how-to-give-and-receive-help.html">Give and receive help</a></summary>
+		  <ul>
+		    <li>
+		      <a href=.html"how-to-use-the-maas-discourse-forum.html">Use our discourse forum</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/pro">Get support</a>
+		    </li>
+		    <li>
+		      <a href="how-to-request-new-features.html">Request new features</a>
+		    </li>
+		    <li>
+		      <a href="how-to-review-and-report-bugs.html">Review and report bugs</a>
+		    </li>
+		    <li>
+		      <a href="how-to-contribute-documentation.html">Contribute documentation</a>
+		    </li>
+		  </ul>
+		</details>
+              </li>
+            </ul>
+          </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+          <details>
+            <summary><a href="reference.html">Reference</a></summary>
+            <ul>
+	      <details>
+		<summary><a href="maas-release-notes.html">Release notes</a></summary>
+		<ul>
+		  <li>
+		    <a href="what-is-new-with-maas-3-4.html">MAAS 3.4 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-3.html">MAAS 3.3 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-2.html">MAAS 3.2 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-1.html">MAAS 3.1 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-3-0.html">MAAS 3.0 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-9.html">MAAS 2.9 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-8.html">MAAS 2.8 release notes</a>
+              	  </li>
+		  <li>
+              	    <a href="what-is-new-with-maas-2-7.html">MAAS 2.7 release notes</a>
+              	  </li>
+		</ul>
+	      </details>
+              <li>
+		<details>
+                  <summary><a href="general-reference.html">General</a></summary>
+		  <ul>
+		    <li>
+		      <a href="installation-requirements.html">Installation requirements</a>
+		    </li>
+		    <li>
+		      <a href="maas-settings-reference.html">MAAS settings</a>
+		    </li>
+		    <li>
+		      <a href="https://launchpad.net/maas">Source code</a>
+		    </li>
+		    <li>
+		      <a href="maas-documentation-style-guide.html">Doc style guide</a>
+		    </li>
+		    <li>
+		      <a href="maas-glossary.html">Glossary</a>
+		    </li>
+		    <li>
+		      <a href="https://ubuntu.com/community/code-of-conduct">Code of conduct</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+              <li>
+		<details>
+		  <summary><a href="api.html">API</a></summary>
+		  <ul>
+		    <li>
+                      <a href="api-authentication-reference.html">API authentication</a>
+                    </li>
+		    <li>
+                      <a href="python-api-client-reference.html">Python API client</a>
+                    </li>
+		    <li>
+                      <a href="/docs/api">API documentation</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="scripts-reference.html">Scripts</a></summary>
+		  <ul>
+		    <li>
+                      <a href="commissioning-scripts-reference.html">Commissioning scripts</a>
+                    </li>
+		    <li>
+                      <a href="hardware-test-scripts-reference.html">Hardware test scripts</a>
+                    </li>
+		    <li>
+                      <a href="maas-terraform-reference.html">Terraform</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="log-reference.html">Logging</a></summary>
+		  <ul>
+		    <li>
+                      <a href="event-logs-reference.html">Event logs</a>
+                    </li>
+		    <li>
+                      <a href="audit-event-logs-reference.html">Audit event logs</a>
+                    </li>
+		    <li>
+                      <a href="commissioning-logs-reference.html">Commissioning logs</a>
+                    </li>
+		    <li>
+                      <a href="testing-logs-reference.html">Testing logs</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+              <li>
+		<details>
+		  <summary><a href="machine-parameters-reference.html">machine-parameters</a></summary>
+		  <ul>
+		    <li>
+                      <a href=.html"power-drivers-reference.html">Power drivers</a>
+                    </li>
+		    <li>
+                      <a href="storage-layouts-reference.html">Storage layouts</a>
+                    </li>
+		    <li>
+                      <a href="device-labelling-reference.html">Device labelling</a>
+                    </li>
+		  </ul>
+		</details>
+              </li>
+	    </ul>
+	  </details>
+	</li>
+	<hr style="margin-top:15px;">
+	<li>
+	  <details>
+	    <summary><a href="explanation.html">Explanation</a></summary>
+	    <ul>
+	      <li>
+		<a href="about-maas.html">About MAAS</a>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Networking</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-networks.html">MAAS networks</a>
+		    </li>
+		    <li>
+		      <a href="about-tcp-ip-networks.html">TCP/IP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-dhcp.html">DHCP primer</a>
+		    </li>
+		    <li>
+		      <a href="about-cloud-networking.html">Cloud networking primer</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<a href="about-images.html">Images</a>
+              </li>
+	      <li>
+		<details>
+		  <summary>Controllers</summary>
+		  <ul>
+		    <li>
+		      <a href="about-region-and-rack-controllers.html">Region and rack controllers</a>
+		    </li>
+		    <li>
+		      <a href="about-high-availability.html">High availability</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Machines and devices</summary>
+		  <ul>
+		    <li>
+		      <a href="about-machines.html">Machines</a>
+		    </li>
+		    <li>
+		      <a href="about-virtual-machines.html">Virtual machines</a>
+		    </li>
+		    <li>
+		      <a href="device-labels.html">Device labels</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	      <li>
+		<details>
+		  <summary>Events and logging</summary>
+		  <ul>
+		    <li>
+		      <a href="about-maas-events.html">MAAS events</a>
+		    </li>
+		    <li>
+		      <a href="about-audit-events.html">Audit events</a>
+		    </li>
+		    <li>
+		      <a href="about-log-files.html">MAAS logging</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-security.html">MAAS security</a>
+		    </li>
+		    <li>
+		      <a href="about-maas-performance.html">MAAS performance</a>
+		    </li>
+		    <li>
+		      <a href="about-ansible.html">Ansible</a>
+		    </li>
+		  </ul>
+		</details>
+	      </li>
+	    </ul>
+	  </details>
+	</li>
+      </ul>
+    </div>
+    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
+      <h1>What is new with MAAS 3.4</h1><!-- "What is new with MAAS 3.4" -->
+
+<p>Here you will find release notes for the Beta version(s) of MAAS 3.4.</p>
+<p><a href="#heading--MAAS-3-4-Beta2-has-been-released"><h2 id="heading--MAAS-3-4-Beta2-has-been-released">MAAS 3.4 Beta2 has been released</h2></a></p>
+<p>We are happy to announce that MAAS 3.4 Beta1 has been released with <a href="#heading--MAAS-3-4-Beta2-bug-list">more bug fixes</a>.</p>
+<p><a href="#heading--MAAS-3-4-beta-1-has-been-released"><h2 id="heading--MAAS-3-4-beta-1-has-been-released">MAAS 3.4 Beta1 has been released</h2></a></p>
+<p>We are happy to announce that MAAS 3.4 Beta1 has been released, with <a href="#heading--MAAS-3-4-beta-1-bug-list">many bug fixes</a>.</p>
+<p><a href="#heading--MAAS-3-4-beta-1-features"><h2 id="heading--MAAS-3-4-beta-1-features">MAAS 3.4 Beta 1 features</h2></a></p>
+<p>The following visible new features are a part of MAAS 3.4 Beta 1:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Redesigned UI: Navigation is moved from the top of the screen to the left side, and made more comprehensive, while at the same time being more compact.  Navigation within panels is handled by discreet, pop-up boxes to avoid disoriented the user.</li>
+</ul>
+<!--
+- DGX kernel support: There’s ongoing work from Canonical to provide an optimised kernel for Nvidia DGX machines. We want to promote that and make sure that DGX machines use that optimised kernel by default, without the user having to do any special configuration.
+-->
+
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Configurable session timeout: Users are able to fully configure their session timeouts.</p>
+</li>
+<li>
+<p>Ansible HA PostgreSQL playbook enhancements: PostgreSQL HA setup is now fully possible with Ansible.</p>
+</li>
+<li>
+<p>Ansible observability playbook: Users can now configure O11y with Ansible.</p>
+</li>
+<li>
+<p>Allow sorting images by last deployed: Users can now sort out which images they most recently used.</p>
+</li>
+<li>
+<p>Packer MAAS - SLES: We&rsquo;ve added support for SLES to our Packer repertoire, and done some touch-ups on RHEL.</p>
+</li>
+</ul>
+<p><a href="#heading--How-to-install-MAAS-3-4-Beta-1"><h2 id="heading--How-to-install-MAAS-3-4-Beta-1">How to install MAAS 3.4 Beta1</h2></a></p>
+<p>MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-requirements.html">you can always double-check</a>.</p>
+<p><strong>NOTE:</strong> 
+<strong>NOTE</strong> Support for PostgreSQL 12 has been discontinued in MAAS 3.4.  Postgres 14 does not run on Focal 20.04 LTS.</p>
+<p><a href="#heading--fresh-install-3-4-beta-1-snap"><h3 id="heading--fresh-install-3-4-beta-1-snap">How to do a fresh snap install of MAAS 3.4 Beta1</h3></a></p>
+<p>To install MAAS 3.4 Beta1 from a snap, simply enter the following:</p>
+<pre><code>$ sudo snap install --channel=latest/edge maas
+</code></pre>
+<p>After entering your password, the snap will download and install from the 3.4 Beta channel.</p>
+<p><a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h3 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h3></a></p>
+<p>Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.4 Beta1 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
+<pre><code>$ sudo snap refresh --channel=latest/edge maas
+</code></pre>
+<p>After entering your password, the snap will refresh from the 3.4 Beta1 candidate channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
+<p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
+<p><a href="#heading--init-maas-poc"><h3 id="heading--init-maas-poc">How to initialise MAAS 3.4 snap for a test or POC environment</h3></a></p>
+<p>You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called <code>maas-test-db</code>, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.</p>
+<p>Once MAAS is installed, you can use the <code>--help</code> flag with <code>maas init</code> to get relevant instructions:</p>
+<pre><code>$ sudo maas init --help
+usage: maas init [-h] {region+rack,region,rack} . . .
+
+Initialise MAAS in the specified run mode.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+run modes:
+  {region+rack,region,rack}
+    region+rack         Both region and rack controllers
+    region              Region controller only
+    rack                Rack controller only
+
+When installing region or rack+region modes, MAAS needs a
+PostgreSQL database to connect to.
+
+If you want to set up PostgreSQL for a non-production deployment on
+this machine, and configure it for use with MAAS, you can install
+the maas-test-db snap before running 'maas init':
+    sudo snap install maas-test-db
+    sudo maas init region+rack --database-uri maas-test-db:///
+</code></pre>
+<p>We&rsquo;ll quickly walk through these instructions to confirm your understanding.  First, install the <code>maas-test-db</code> snap:</p>
+<pre><code>sudo snap install maas-test-db
+</code></pre>
+<p>Note that this step installs a a running PostgreSQL and a MAAS-ready database instantiation.  When it&rsquo;s done, you can double check with a built-in PostgreSQL shell:</p>
+<pre><code>$ sudo maas-test-db.psql
+psql (12.4)
+Type "help" for help.
+
+postgres=# \l
+</code></pre>
+<p>This will produce a list of databases, one of which will be <code>maasdb</code>, owned by <code>maas</code>.  Note that this database is still empty because MAAS is not yet initialised and, hence, is not yet using the database.  Once this is done, you can run the <code>maas init</code> command:</p>
+<pre><code>sudo maas init region+rack --database-uri maas-test-db:///
+</code></pre>
+<p>After running for a moment, the command will prompt you for a MAAS URL; typically, you can use the default:</p>
+<pre><code>MAAS URL [default=http://10.45.222.159:5240/MAAS]:
+</code></pre>
+<p>When you&rsquo;ve entered a suitable URL, or accepted the default, the following prompt will appear:</p>
+<pre><code>MAAS has been set up.
+
+If you want to configure external authentication or use
+MAAS with Canonical RBAC, please run
+
+  sudo maas configauth
+
+To create admins when not using external authentication, run
+
+  sudo maas createadmin
+</code></pre>
+<p>Let&rsquo;s assume you just want a local testing user named <code>admin</code>:</p>
+<pre><code>$ sudo maas createadmin
+Username: admin
+Password: ******
+Again: ******
+Email: admin@example.com
+Import SSH keys [] (lp:user-id or gh:user-id): gh:yourusername
+</code></pre>
+<p>At this point, MAAS is basically set up and running.  You can confirm this with <code>sudo maas status</code>.  If you need an API key, you can obtain this with <code>sudo maas apikey --username yourusername</code>.  Now you will be able to test and evaluate MAAS by going to the URL you entered or accepted above and entering your <code>admin</code> username and password.</p>
+<p><a href="#heading--init-maas-production"><h3 id="heading--init-maas-production">Initialise MAAS for a production configuration</h3></a></p>
+<p>To install MAAS in a production configuration, you need to setup PostgreSQL, as described below.</p>
+<p><a href="#heading--pg-setup"><h4 id="heading--pg-setup">Setting up PostgreSQL from scratch</h4></a></p>
+<p>To set up PostgreSQL, even if it&rsquo;s running on a different machine, you can use the following procedure:</p>
+<ol>
+<li>
+<p>You will need to install PostgreSQL on the machine where you want to keep the database.  This can be the same machine as the MAAS region/rack controllers or a totally separate machine.  If PostgreSQL (version 14) is already running on your target machine, you can skip this step. To install PostgreSQL, run these commands:</p>
+<pre><code>sudo apt update
+sudo apt install -y postgresql
+</code></pre>
+</li>
+<li>
+<p>You want to make sure you have a suitable PostgreSQL user, which can be accomplished with the following command, where <code>$MAAS_DBUSER</code> is your desired database username, and <code>$MAAS_DBPASS</code> is the intended password for that username.  Note that if you&rsquo;re executing this step in a LXD container (as root, which is the default), you may get a minor error, but the operation will still complete correctly.</p>
+<pre><code>sudo -u postgres psql -c "CREATE USER \"$MAAS_DBUSER\" WITH ENCRYPTED PASSWORD '$MAAS_DBPASS'"
+</code></pre>
+</li>
+<li>
+<p>Create the MAAS database with the following command, where <code>$MAAS_DBNAME</code> is your desired name for the MAAS database (typically known as <code>maas</code>). Again, if you&rsquo;re executing this step in a LXD container as root, you can ignore the minor error that results.</p>
+<pre><code>sudo -u postgres createdb -O "$MAAS_DBUSER" "$MAAS_DBNAME"
+</code></pre>
+</li>
+<li>
+<p>Edit <code>/etc/postgresql/14/main/pg_hba.conf</code> and add a line for the newly created database, replacing the variables with actual  names. You can limit access to a specific network by using a different CIDR than <code>0/0</code>.</p>
+<pre><code>host    $MAAS_DBNAME    $MAAS_DBUSER    0/0     md5
+</code></pre>
+</li>
+<li>
+<p>You can then initialise MAAS via the following command:</p>
+<pre><code>sudo maas init region+rack --database-uri "postgres://$MAAS_DBUSER:$MAAS_DBPASS@$HOSTNAME/$MAAS_DBNAME"
+</code></pre>
+</li>
+</ol>
+<p><strong>NOTE:</strong>  You should use <code>localhost</code> for <code>$HOSTNAME</code> if you&rsquo;re running PostgreSQL on the same box as MAAS. </p>
+<p>Don&rsquo;t worry; if you leave out any of the database parameters, you&rsquo;ll be prompted for those details.</p>
+<p><a href="#heading--fresh-install-3-3-packages"><h3 id="heading--fresh-install-3-3-packages">How to do a fresh install of MAAS 3.3 from packages</h3></a></p>
+<p>MAAS 3.3 from packages runs on 22.04 LTS only.  The recommended way to set up an initial MAAS environment is to put everything on one machine:</p>
+<pre><code class="language-bash">sudo add-apt-repository ppa:maas/3.4-next
+sudo apt update
+sudo apt-get -y install maas
+</code></pre>
+<p>Executing this command leads you to a list of dependent packages to be installed, and a summary prompt that lets you choose whether to continue with the install. Choosing &ldquo;Y&rdquo; proceeds with a standard <code>apt</code> package install.</p>
+<h4>Distributed environment</h4>
+
+<p>For a more distributed environment, you can place the region controller on one machine:</p>
+
+<pre><code class="language-bash">sudo apt install maas-region-controller
+</code></pre>
+<p>and the rack controller on another:</p>
+<pre><code class="language-bash">sudo apt install maas-rack-controller
+sudo maas-rack register
+</code></pre>
+<p>These two steps will lead you through two similar <code>apt</code> install sequences.</p>
+<!-- "3.2 or lower upgrade to 3.4
+<a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h3 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h3></a>
+
+If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
+
+
+<pre><code class="language-nohighlight">lsb_release -a
+</code></pre>
+
+The response should look something like this:
+
+
+<pre><code class="language-nohighlight">Distributor ID: Ubuntu
+Description:    Ubuntu xx.yy
+Release:    xx.yy
+Codename:   $RELEASE_NAME
+</code></pre>
+
+
+The required “xx.yy” required for MAAS 3.3 is “22.04,” code-named “jammy”.
+
+If you are currently running Ubuntu focal 20.04 LTS, you can upgrade to jammy 22.04 LTS with the following procedure:
+
+Upgrade the release:
+
+
+<pre><code class="language-nohighlight">sudo do-release-upgrade --allow-third-party
+</code></pre>
+
+
+Accept the defaults for any questions asked by the upgrade script.
+
+Reboot the machine when requested.
+
+Check whether the upgrade was successful:
+
+
+<pre><code class="language-nohighlight">lsb_release -a
+</code></pre>
+
+
+A successful upgrade should respond with output similar to the following:
+
+
+<pre><code class="language-nohighlight">Distributor ID: Ubuntu
+Description:    Ubuntu 20.04(.nn) LTS
+Release:    20.04
+Codename:   focal
+</code></pre>
+
+
+If you’re upgrading from MAAS version 2.8 or lower to version 3.3: While the following procedures should work, note that they are untested. Use at your own risk. Start by making a verifiable backup; see step 1, below.
+
+Back up your MAAS server completely; the tools and media are left entirely to your discretion. Just be sure that you can definitely restore your previous configuration, should this procedure fail to work correctly.
+
+Add the MAAS 3.3 PPA to your repository list with the following command, ignoring any apparent error messages:
+
+
+<pre><code class="language-nohighlight">sudo apt-add-repository ppa:maas/3.3
+</code></pre>
+
+
+Run the release upgrade like this, answering any questions with the given default values:
+
+
+<pre><code class="language-nohighlight">sudo do-release-upgrade --allow-third-party
+</code></pre>
+
+
+Check whether your upgrade has been successful by entering:
+
+
+<pre><code class="language-nohighlight">lsb_release -a
+</code></pre>
+
+
+If the ugprade was successful, this command should yield output similar to the following:
+
+
+<pre><code class="language-nohighlight">No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04(.nn) LTS
+Release:    20.04
+Codename:   focal
+</code></pre>
+
+
+Check your running MAAS install (by looking at the information on the bottom of the machine list) to make sure you’re running the 3.3 release.
+
+If this didn’t work, you will need to restore from the backup you made in step 1, and consider obtaining separate hardware to install MAAS 3.3.
+
+-->
+
+<p><a href="#heading--MAAS-3-4-beta-1-bug-list"><h2 id="heading--MAAS-3-4-beta-1-bug-list">MAAS 3.4 Beta1 bug list</h2></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/bugs/1999160">1999160</a><code>↗</code>:    Region controller fails to run commissioning scripts in proxied environment     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1999191">1999191</a><code>↗</code>:    bad interaction between Colorama and the CLI        </li>
+<li><a href="https://bugs.launchpad.net/bugs/1999557">1999557</a><code>↗</code>:    MAAS fails to startup when installed from deb package and vault is enabled      </li>
+<li><a href="https://bugs.launchpad.net/bugs/2002109">2002109</a><code>↗</code>:    Migration of BMC power credentials fails with manual driver     </li>
+<li><a href="https://bugs.launchpad.net/bugs/2002111">2002111</a><code>↗</code>:    Connection to local Vault fails if proxy is configured      </li>
+<li><a href="https://bugs.launchpad.net/bugs/2003888">2003888</a><code>↗</code>:    Grouped machine list view: Inconsistent display when machine state changes      </li>
+<li><a href="https://bugs.launchpad.net/bugs/1743648">1743648</a><code>↗</code>:    Image import fails      </li>
+<li><a href="https://bugs.launchpad.net/bugs/1811799">1811799</a><code>↗</code>:    Normal users can read machine details of owned machines     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1812377">1812377</a><code>↗</code>:    An admin is allowed to create raids for an Allocated node in the UI, but not the API        </li>
+<li><a href="https://bugs.launchpad.net/bugs/1958451">1958451</a><code>↗</code>:    power_driver parameter is not preserved     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1990172">1990172</a><code>↗</code>:    &ldquo;20-maas-03-machine-resources&rdquo; commissioning script improperly reports a Pass when the test fails       </li>
+<li><a href="https://bugs.launchpad.net/bugs/1995084">1995084</a><code>↗</code>:    MAAS TLS sets HSTS forcibly and with too short value        </li>
+<li><a href="https://bugs.launchpad.net/bugs/1999147">1999147</a><code>↗</code>:    [3.3.0-candidate] failure when arch is requested as a filter        </li>
+<li><a href="https://bugs.launchpad.net/bugs/1999368">1999368</a><code>↗</code>:    [3.3.0 RC] wrong DNS records        </li>
+<li><a href="https://bugs.launchpad.net/bugs/1999579">1999579</a><code>↗</code>:    MAAS OpenAPI docs are not available in air-gapped mode      </li>
+<li><a href="https://bugs.launchpad.net/bugs/2001546">2001546</a><code>↗</code>:    Server reboot will make subnet entries disappear from zone.maas-internal        </li>
+<li><a href="https://bugs.launchpad.net/bugs/2003310">2003310</a><code>↗</code>:    Refresh scripts are not re-run if they pass, but fail to report the results to the region       </li>
+<li><a href="https://bugs.launchpad.net/bugs/2003940">2003940</a><code>↗</code>:    MAAS 3.3 RC shows incorrect storage amount      </li>
+<li><a href="https://bugs.launchpad.net/bugs/2008275">2008275</a><code>↗</code>:    Intel AMT support is broken in MAAS 3.3.0       </li>
+<li><a href="https://bugs.launchpad.net/bugs/2009137">2009137</a><code>↗</code>:    MAAS OpenApi Schema missing parameters      </li>
+<li><a href="https://bugs.launchpad.net/bugs/2009186">2009186</a><code>↗</code>:    CLI results in connection timed out when behind haproxy and 5240 is blocked     </li>
+<li><a href="https://bugs.launchpad.net/bugs/2009805">2009805</a><code>↗</code>:    machine deploy install_kvm=True fails       </li>
+<li><a href="https://bugs.launchpad.net/bugs/2011274">2011274</a><code>↗</code>:    MAAS 3.4: Deployment fails on LXD VMs       </li>
+<li><a href="https://bugs.launchpad.net/bugs/2011822">2011822</a><code>↗</code>:    Reverse DNS resolution fails for some machines      </li>
+<li><a href="https://bugs.launchpad.net/bugs/2012139">2012139</a><code>↗</code>:    maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled        </li>
+<li><a href="https://bugs.launchpad.net/bugs/2017504">2017504</a><code>↗</code>:    Cannot deploy from the cli when &ldquo;Allow DNS resolution&rdquo; is set on minimal subnet     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1696108">1696108</a><code>↗</code>:    Interface model validates the MAC address twice     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1773150">1773150</a><code>↗</code>:    smartctl verify fails due to Unicode in Disk Vendor Name        </li>
+<li><a href="https://bugs.launchpad.net/bugs/1773671">1773671</a><code>↗</code>:    MAC address column should use mono font     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1959648">1959648</a><code>↗</code>:    Websocket vlan handler should include associated subnet ids     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1979403">1979403</a><code>↗</code>:    commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled        </li>
+<li><a href="https://bugs.launchpad.net/bugs/1986590">1986590</a><code>↗</code>:    maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named &lsquo;provisioningserver&rsquo;     </li>
+<li><a href="https://bugs.launchpad.net/bugs/1990416">1990416</a><code>↗</code>:    MAAS reports invalid command to run when maas-url is incorrect      </li>
+<li><a href="https://bugs.launchpad.net/bugs/1993618">1993618</a><code>↗</code>:    Web UI redirection policy can invalidate HAProxy and/or TLS setup       </li>
+<li><a href="https://bugs.launchpad.net/bugs/1994945">1994945</a><code>↗</code>:    Failure to create ephemeral VM when no architectures are found on the VM host       </li>
+<li><a href="https://bugs.launchpad.net/bugs/1996997">1996997</a><code>↗</code>:    LXD resources fails on a Raspberry Pi with no Ethernet      </li>
+<li><a href="https://bugs.launchpad.net/bugs/1999064">1999064</a><code>↗</code>:    <code>maas_run_scripts.py</code> does not clean up temporary directory     </li>
+<li><a href="https://bugs.launchpad.net/bugs/2002550">2002550</a><code>↗</code>:    Controller type displays as &ldquo;Undefined&rdquo;     </li>
+<li><a href="https://bugs.launchpad.net/bugs/2007297">2007297</a><code>↗</code>:    LXD REST API connection goes via proxy      </li>
+<li><a href="https://bugs.launchpad.net/bugs/2009045">2009045</a><code>↗</code>:    WebSocket API to report reasons for failure for machine bulk actions        </li>
+<li><a href="https://bugs.launchpad.net/bugs/2009140">2009140</a><code>↗</code>:    MAAS OpenApi Schema cutoff variable names       </li>
+<li><a href="https://bugs.launchpad.net/bugs/2012054">2012054</a><code>↗</code>:    RPC logging when debug is too verbose</li>
+</ul>
+<p><a href="#heading--MAAS-3-4-Beta2-bug-list"><h2 id="heading--MAAS-3-4-Beta2-bug-list">MAAS 3.4 Beta2 bug list</h2></a></p>
+<h1>heading&ndash;MAAS-3-4-beta-2-bug-list.</h1>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/bugs/1974050">1974050</a><code>↗</code>: Vmware no longer supports image cloning</li>
+<li><a href="https://bugs.launchpad.net/bugs/2009209">2009209</a><code>↗</code>: snap deployed maas is not able to use openstack nova power type due to missing python3-novaclient dependency</li>
+<li><a href="https://bugs.launchpad.net/bugs/1830619">1830619</a><code>↗</code>: The &ldquo;authoritative&rdquo; field value is ignored when creating/editing domains</li>
+<li><a href="https://bugs.launchpad.net/bugs/1914762">1914762</a><code>↗</code>: test network configuration broken with openvswitch bridge</li>
+<li><a href="https://bugs.launchpad.net/bugs/1999668">1999668</a><code>↗</code>: reverse DNS not working for some interfaces</li>
+<li><a href="https://bugs.launchpad.net/bugs/2016908">2016908</a><code>↗</code>: udev fails to make prctl() syscall with apparmor=0 (as used by maas by default)</li>
+<li><a href="https://bugs.launchpad.net/bugs/2019229">2019229</a><code>↗</code>: 3.4.0~beta1 maas-region-api fails to start with pylxd 2.3.2~alpha1-420-10-g.72426bf~ubuntu22.04.1</li>
+<li><a href="https://bugs.launchpad.net/bugs/1818672">1818672</a><code>↗</code>: Option to show full name of a user in the UI</li>
+<li><a href="https://bugs.launchpad.net/bugs/1823153">1823153</a><code>↗</code>: maas init doesn&rsquo;t check if the user or email already exists</li>
+<li><a href="https://bugs.launchpad.net/bugs/1876365">1876365</a><code>↗</code>: host passthrough not working with KVMs</li>
+<li><a href="https://bugs.launchpad.net/bugs/2018149">2018149</a><code>↗</code>: MAAS generates netplan with illegal autoconf and accept_ra flags for 22.04</li>
+<li><a href="https://bugs.launchpad.net/bugs/2020427">2020427</a><code>↗</code>: crash importing large database dump into maas-test-db</li>
+</ul>
+    </div>
+  </body>
+</html>
