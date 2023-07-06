@@ -511,62 +511,23 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>About ansible</h1><!-- "About ansible" -->
-
-<p><a href="https://github.com/maas/MAAS-ansible-playbook">Ansible playbooks</a> are now available for MAAS. These extended YAML files automate various routine aspects of MAAS setup and configuration.  Automate the drudgery of installing and configuring MAAS with Ansible.  </p>
-<p>With MAAS 3.3, playbooks are available to install and configure MAAS, including regions and racks.  There is also a set of groups that will automate setting up specific sections of MAAS. For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.</p>
-<p>After installing Ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
-<p><a href="#heading--Ansible-basics"><h2 id="heading--Ansible-basics">Ansible basics</h2></a></p>
-<p>A user should probably have a solid grasp of the Ansible standard terminology:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>Playbooks / plays</li>
-<li>Hosts and groups</li>
-<li>Inventory</li>
-</ul>
-<p><a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">Ansible</a><code>↗</code> is a sophisticated IT automation tool that allows users to set up <a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">playbooks</a><code>↗</code>, which automate complex, repetitive (or error-prone)<code>↗</code> setup activities.  While we won&rsquo;t provide a detailed tutorial on Ansible here, there is a bit of terminology you should master before trying to use Ansible with MAAS:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#modules">Modules</a><code>↗</code></strong> are binaries (or even pieces of code)<code>↗</code> that Ansible can run on a managed node.  These modules can be grouped into named collections.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#tasks">Tasks</a><code>↗</code></strong> are individual operations with one or more modules; each task generally accomplishes some otherwise-human-driven function, such as &ldquo;partition and format /sda&rdquo;.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#plays">Plays</a><code>↗</code></strong> are sequences of tasks that Ansible will execute to accomplish larger operations, e.g., &ldquo;install the OS&rdquo; ==&gt; &ldquo;partition and format /sda&rdquo;, &ldquo;install binary x.7.iso&rdquo;, etc.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html">Playbooks</a><code>↗</code></strong> are YAML files that run plays in a specific order; for example, &ldquo;install the OS&rdquo;, &ldquo;install MAAS&rdquo;, &ldquo;create a region controller&rdquo;, &ldquo;sync images&rdquo;, etc.</li>
-<li><strong><a href="https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#id3">Inventory</a><code>↗</code></strong> is a source(s)<code>↗</code> of managed nodes; also called a &ldquo;hostfile&rdquo;.</li>
-</ul>
-<p>These simple descriptions do not fully explain the terms, so it is worthwhile to consult the referenced links, if necessary, before proceeding.  You will also want to understand how Ansible uses the terms &ldquo;<a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">hosts and groups</a><code>↗</code>&rdquo;, since these are applied somewhat differently than we use them in MAAS.</p>
-<p><a href="#heading--MAAS-Ansible-playbooks"><h2 id="heading--MAAS-Ansible-playbooks">MAAS Ansible playbooks</h2></a></p>
-<p>Playbooks are available to automate the setup for:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p><a href="how-to-spin-up-maas-with-ansible.html#heading--MAAS-region-controller">MAAS region controllers</a>: install and configure a MAAS region on a targeted host; running the playbook on hosts with a MAAS region will upgrade it.</p>
-</li>
-<li>
-<p><a href="how-to-spin-up-maas-with-ansible.html#heading--MAAS-rack-controller">MAAS rack controllers</a>: install and configure a MAAS rack.</p>
-</li>
-<li>
-<p><a href="how-to-spin-up-maas-with-ansible.html#heading--MAAS-de-installation">MAAS de-installation</a>: remove MAAS from a targeted host.</p>
-</li>
-<li>
-<p><a href="how-to-spin-up-maas-with-ansible.html#heading--MAAS-high-availability">MAAS high availability</a>: install and configure the HA proxy.</p>
-</li>
-<li>
-<p><a href="how-to-spin-up-maas-with-ansible.html#heading--PostgreSQL-primary-role">PostgreSQL primary role</a>: setup the postgres primary role.</p>
-</li>
-<li>
-<p><a href="how-to-spin-up-maas-with-ansible.html#heading--PostgreSQL-secondary-role">PostgreSQL secondary role</a>: setup the postgres secondary role.</p>
-</li>
-<li>
-<p><a href="how-to-spin-up-maas-with-ansible.html#heading--Firewall-rules">Firewall rules</a>: setup firewall rules.</p>
-</li>
-</ul>
-<p>MAAS Playbooks will eventually be available through Ansible Galaxy.</p>
-<p>There is also a set of groups that will automate setting up specific sections of MAAS.  For example, there is a PostgreSQL group that sets up the primary and secondary PostgreSQL roles, bypassing the need to run both playbooks individually.  These groups include:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="how-to-spin-up-maas-with-ansible.html#heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</a></li>
-<li>?? (there must be more, huh?)</li>
-</ul>
-<p>After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.</p>
-<p><a href="#heading--Running-a-MAAS-Ansible-playbook"><h2 id="heading--Running-a-MAAS-Ansible-playbook">Running a MAAS Ansible playbook</h2></a></p>
-<p>In general terms, you can run any of the MAAS Ansible playbooks with a command of this form:</p>
-<pre><code class="language-nohighlight">ansible-playbook -i hosts \
---extra_vars \
+<p>Ansible is a powerful and widely used IT automation tool that simplifies the management and configuration of systems. It allows users to define their infrastructure as code using YAML-based playbooks, making it easier to automate complex tasks, deploy applications, and manage configurations.</p>
+<p>Ansible playbooks are at the core of Ansible&rsquo;s automation capabilities. They are written in YAML, which is a human-readable data serialization format. Playbooks define a set of tasks to be executed on remote systems or managed nodes. These tasks can include various actions such as installing packages, copying files, executing commands, and more. Playbooks provide a declarative approach to system configuration, where users specify the desired state of their systems rather than writing procedural scripts.</p>
+<p><a href="#heading--ansible-modules"><h2 id="heading--ansible-modules">Ansible modules</h2></a></p>
+<p>Modules are the building blocks of Ansible playbooks. They are standalone scripts or programs that Ansible runs on managed nodes to perform specific tasks. Modules can manage system components, install software, interact with APIs, and more. Ansible provides a rich set of modules that cover a wide range of use cases. These modules are executed remotely on managed nodes, allowing users to perform actions on multiple systems simultaneously.</p>
+<p><a href="#heading--ansible-roles"><h2 id="heading--ansible-roles">Ansible roles</h2></a></p>
+<p>Roles are a way to organize and package related tasks, variables, and files into reusable components. They provide a higher level of abstraction and allow for modular and structured playbook development. Roles help in creating more maintainable and scalable playbooks by promoting code reuse and separation of concerns. They are particularly useful when managing complex systems with multiple components and configurations.</p>
+<p><a href="#heading--inventory"><h2 id="heading--inventory">Inventory</h2></a></p>
+<p>The Ansible Inventory is a file or collection of files that specify the managed nodes or hosts on which Ansible tasks are executed. It defines the hosts and groups of hosts that Ansible can connect to and manage. The inventory file can be static or dynamic, allowing for dynamic inventory management based on external sources such as cloud providers, configuration management systems, or custom scripts.</p>
+<p><a href="#heading--using-ansible-with-maas"><h2 id="heading--using-ansible-with-maas">Using Ansible with MAAS</h2></a></p>
+<p>MAAS provides Ansible playbooks that automate various aspects of MAAS setup and configuration. These playbooks simplify the process of installing and configuring MAAS components such as regions and racks. By leveraging Ansible, MAAS administrators can automate the drudgery of setting up MAAS and ensure consistent deployments across their infrastructure.</p>
+<p>The MAAS Ansible playbooks enable users to define the desired state of their MAAS environment and automate the necessary steps to achieve that state. The playbooks take care of tasks such as installing dependencies, configuring networking, setting up databases, and more. They provide a streamlined and repeatable approach to MAAS deployment, reducing the time and effort required for manual setup.</p>
+<p>By using Ansible with MAAS, administrators can benefit from the flexibility and scalability of Ansible&rsquo;s automation capabilities. They can easily customize the playbooks to suit their specific requirements, add additional tasks or roles, and integrate MAAS into their broader infrastructure management workflows.</p>
+<p>With the release of MAAS 3.3, Ansible playbooks are available to install and configure MAAS, including regions and racks. These playbooks automate the setup process, saving administrators from manual configuration steps. Additionally, there are specific groups within the playbooks that automate the setup of different sections of MAAS, such as the PostgreSQL group that sets up primary and secondary PostgreSQL roles. By utilizing these playbooks, users can easily automate the installation and configuration of MAAS.</p>
+<p><a href="#heading--running-maas-ansible-playbooks"><h2 id="heading--running-maas-ansible-playbooks">Running MAAS Ansible playbooks</h2></a></p>
+<p>To run a MAAS Ansible playbook, you use a command structure similar to this:</p>
+<pre><code class="language-bash">ansible-playbook -i hosts \
+--extra-vars \
 &quot;maas_version=$MAAS_VERSION 
 maas_postgres_password=$MAAS_PG_PASSWORD 
 maas_postgres_replication_password=$MAAS_PG_REP_PASSWORD 
@@ -574,30 +535,30 @@ maas_installation_type=&lt;deb|snap&gt;
 maas_url=$MAAS_URL&quot; \
 ./site.yaml
 </code></pre>
-<p>A command of this form will run all of the plays below (i.e., the entire playbook).  If you want to run the tasks for one particular role (or roles), you can use the form  <code>--tags &lt;target role(s)&gt;</code> to limit which parts of the MAAS Ansible playbook run.  Consult the Ansible documentation for more details on additional options and command structure.</p>
-<p><a href="#heading--Ansible-playbooks-and-MAAS-Observability"><h2 id="heading--Ansible-playbooks-and-MAAS-Observability">Ansible playbooks and MAAS Observability</h2></a></p>
-<p>There is a set of Ansible playbooks that allows you to configure monitoring for MAAS controllers and their dependencies, such as PostgreSQL, with high availability capabilities. Monitoring is crucial for operating any modern system, especially complex systems like HA MAAS. As the installation and configuration of MAAS are made easier through Ansible playbooks, it is important to provide users with a similar means to guarantee reliable monitoring.</p>
-<p>The O11y (Observability) for HA MAAS playbooks are designed to be used alongside the official MAAS playbooks. They inherit the inventory and definitions from the official playbooks wherever that&rsquo;s possible.  Following are some example use cases.</p>
-<p><a href="#heading--Single-Grafana-agent-per-host"><h3 id="heading--Single-Grafana-agent-per-host">Single Grafana agent per host</h3></a></p>
-<p>Suppose an operator is running a single grafana-agent per host, managed with Ansible.  O11y playbooks enable the installation of a single grafana-agent process per host to push metrics and logs to Prometheus and Loki services respectively. The agent configuration file combines all metrics and logs sources into a single configuration file based on the roles assigned to the host. You must define the Prometheus or Loki endpoints to trigger the inclusion of the <code>maas_grafana_agent</code> task, which installs and configures the agent to scrape all available metrics endpoints and collect logs from all available sources on the host.</p>
-<p><a href="#heading--Exporting-metrics-from-all-MAAS-region-controllers"><h3 id="heading--Exporting-metrics-from-all-MAAS-region-controllers">Exporting metrics from all MAAS region controllers</h3></a></p>
-<p>If you want to export metrics from all MAAS region controllers installed by Ansible, you can do so.  The playbooks enable the installation and configuration of a grafana agent on hosts running region controllers, allowing them to export server metrics.  When running the <code>maas_grafana_agent</code> task on hosts with the <code>maas_region_controller role</code>, Ansible helps by configuring MAAS to export server metrics and defining the appropriate job configurations in the grafana agent configuration file.</p>
-<p><a href="#heading--Export-metrics-from-all-MAAS-rack-controllers"><h3 id="heading--Export-metrics-from-all-MAAS-rack-controllers">Export metrics from all MAAS rack controllers</h3></a></p>
-<p>It&rsquo;s also possible to export metrics from all MAAS rack controllers installed by Ansible.  The appropriate playbooks allow you to easily install and configure a grafana agent on hosts running rack controllers, so that they can export server metrics.  When running the <code>maas_grafana_agent</code> task on hosts with the <code>maas_rack_controller</code> role, playbooks will configure MAAS to export server metrics and defining appropriate job configurations.</p>
-<p><a href="#heading--Exporting-logs-from-all-MAAS-region-controllers"><h3 id="heading--Exporting-logs-from-all-MAAS-region-controllers">Exporting logs from all MAAS region controllers</h3></a></p>
-<p>You can also export logs from all MAAS region controllers that were installed by Ansible.  The playbooks enable the installation and configuration of a grafana agent on hosts running region controllers to export logs to Loki.  Ansible will run the <code>maas_grafana_agent</code> task on hosts with the <code>maas_region_controller</code> role, defining the log scrap job configurations in grafana configuration file, as necessary to export the logs.</p>
-<p><a href="#heading--Exporting-logs-from-all-MAAS-rack-controllers"><h3 id="heading--Exporting-logs-from-all-MAAS-rack-controllers">Exporting logs from all MAAS rack controllers</h3></a></p>
-<p>The playbooks also facilitate exporting logs from all MAAS Rack controllers installed by Ansible, by installing and configuring of a grafana agent on hosts running rack controllers in way that allows them  to export logs to Loki.  These playbooks define the log scrap job configurations needed in the grafana agent configuration file.</p>
-<p><a href="#heading--Exporting-PostgreSQL-metrics-from-Ansible-installed-database-software"><h3 id="heading--Exporting-PostgreSQL-metrics-from-Ansible-installed-database-software">Exporting PostgreSQL metrics from Ansible-installed database software</h3></a></p>
-<p>We provide playbooks that enable installation and configuration of the Postgres-Exporter agent to export PostgreSQL metrics to Prometheus, by installing the Postgres-Exporter agent on hosts with the <code>maas_postgres role</code>, running the <code>maas_grafana_agent</code> task, and defining the appropriate job configuration in the final grafana agent configuration file.</p>
-<p><a href="#heading--Exporting-logs-from-Ansible-installed-PostgreSQL"><h3 id="heading--Exporting-logs-from-Ansible-installed-PostgreSQL">Exporting logs from Ansible-installed PostgreSQL</h3></a></p>
-<p>We also provide playbooks that will export logs from a PostgreSQL database installed by Ansible.  These playbooks facilitate the installation and configuration of a grafana agent on hosts with the <code>maas_postgres</code> role to export PostgreSQL logs to Loki.  Ansible will run the <code>maas_grafana_agent</code> task on hosts with the <code>maas_postgres</code> role, defining the log scrap job configurations in the final grafana agent configuration file.</p>
-<p><a href="#heading--Installing-alert-rules-to-the-existing-O11y-stack"><h3 id="heading--Installing-alert-rules-to-the-existing-O11y-stack">Installing alert rules to the existing O11y stack</h3></a></p>
-<p>Ansible can install alert rules into your existing observability stack, by downloading MAAS-curated alert rules for Prometheus and Loki.  The playbooks will download and compile alert rules for Prometheus and Loki, which can be copied to a directory of the operator&rsquo;s choice for integration with your O11y stack.</p>
-<p><a href="#heading--Exporting-metrics-from-Pacemaker-and-Corosync"><h3 id="heading--Exporting-metrics-from-Pacemaker-and-Corosync">Exporting metrics from Pacemaker and Corosync</h3></a></p>
-<p>If Ansible has been used to install Pacemaker and Corosync services, our playbooks can further install and configure the HA Cluster exporter to collect Pacemaker and Corosync metrics and use a grafana agent to send metrics to Prometheus.</p>
-<p><a href="#heading--Exporting-logs-from-PAF-Pacemaker-and-Corosync"><h3 id="heading--Exporting-logs-from-PAF-Pacemaker-and-Corosync">Exporting logs from PAF, Pacemaker, and Corosync</h3></a></p>
-<p>If Ansible has been used to install PAF, Pacemaker, and Corosync, our playbooks can further install and configure a grafana agent on hosts with the <code>maas_ha_postgres</code> role to allow them to export logs from PAF, Pacemaker, and Corosync services to Loki.</p>
+<p>This command typically runs the entire playbook, executing all the plays within it. If you want to run specific tasks for a particular role, you can use the <code>--tags</code> option to limit the execution to specific parts of the playbook. For additional options and command structures, consult the Ansible documentation.</p>
+<p><a href="#heading--maas-ansible-playbooks-and-maas-observability"><h2 id="heading--maas-ansible-playbooks-and-maas-observability">MAAS Ansible playbooks and MAAS observability</h2></a></p>
+<p>In addition to the basic MAAS Ansible playbooks, there is a set of Ansible playbooks designed to configure monitoring for MAAS controllers and their dependencies, such as PostgreSQL, with high availability capabilities. These playbooks enable the installation and configuration of monitoring agents, such as Grafana agents, to export metrics and logs from MAAS controllers.</p>
+<p>Here are some example use cases for the observability playbooks:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>
+<p>Single Grafana agent per host: These playbooks allow the installation of a single Grafana agent per host, which pushes metrics and logs to Prometheus and Loki services, respectively. The agent configuration file combines all metrics and logs sources into a single configuration file based on the assigned host roles.</p>
+</li>
+<li>
+<p>Exporting metrics from MAAS controllers: The playbooks enable the installation and configuration of a Grafana agent on hosts running MAAS region controllers or rack controllers. This allows the export of server metrics from these controllers, providing insights into their performance and health.</p>
+</li>
+<li>
+<p>Exporting logs from MAAS controllers: Playbooks facilitate the installation and configuration of a Grafana agent on hosts with MAAS region controllers or rack controllers to export logs to Loki. This enables centralized log collection and analysis for troubleshooting and monitoring purposes.</p>
+</li>
+<li>
+<p>Exporting PostgreSQL metrics and logs: The PostgreSQL group in the Ansible playbooks introduces a playbook specifically designed for high availability (HA) failover of PostgreSQL within MAAS. This playbook utilizes Corosync and Pacemaker to automate the failover process and ensure continuous availability of the PostgreSQL database.</p>
+</li>
+</ul>
+<p><a href="#heading--technical-details-of-the-postgresql-ha-playbook"><h2 id="heading--technical-details-of-the-postgresql-ha-playbook">Technical details of the PostgreSQL HA playbook</h2></a></p>
+<p>The PostgreSQL HA playbook enhances the reliability and availability of the MAAS PostgreSQL database. It automates the failover process using Corosync and Pacemaker, which manage failure detection and election. The playbook refactors the PostgreSQL roles to remove the distinction between &ldquo;primary&rdquo; and &ldquo;secondary&rdquo; roles. Instead, an Ansible Fact is utilized to track the primary status dynamically.</p>
+<p>During execution, the playbook sets up Corosync as the messaging layer for communication between the nodes in the cluster. It establishes a reliable and fault-tolerant network connection, allowing the nodes to exchange heartbeat messages and monitor each other&rsquo;s health. Pacemaker serves as the cluster resource manager, leveraging the information from Corosync to determine the cluster&rsquo;s state and manage the failover of resources, including the primary role for PostgreSQL.</p>
+<p>The PostgreSQL HA playbook also handles the installation and configuration of the HAProxy Postgres proxy, ensuring continuous connectivity and flexible cluster topology management for region controllers. By automating the failover process and utilizing the refactored PostgreSQL roles, the playbook enables seamless transition to a secondary PostgreSQL instance in the event of a primary failure, maintaining uninterrupted service.</p>
+<p>The execution of the PostgreSQL HA playbook is integrated with the overall MAAS Ansible playbooks set. By running the playbook on a blank machine, administrators can perform a fresh install of MAAS with HA failover capability for PostgreSQL. The playbook automates the setup of a region and rack on the host machine, ensuring a fully functional MAAS deployment.</p>
+<p>The availability of the PostgreSQL HA playbook within the MAAS Ansible playbooks enhances the reliability and availability of the MAAS PostgreSQL database. By utilizing Corosync and Pacemaker, the playbook automates the failover process, ensuring continuous operation even in the event of a primary failure. It simplifies administration, improves data integrity, and provides a solid foundation for building high-performance and resilient infrastructures using MAAS.</p>
     </div>
   </body>
 </html>
