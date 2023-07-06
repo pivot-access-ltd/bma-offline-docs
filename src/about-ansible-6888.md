@@ -36,9 +36,9 @@ Playbooks are available to automate the setup for:
 
 - [MAAS high availability](/t/how-to-spin-up-maas-with-ansible/6367#heading--MAAS-high-availability): install and configure the HA proxy.
 
-- [PostgreSQL primary role](/t/how-to-spin-up-maas-with-ansible/6367#heading--PostgreSQL-primary-role): setup the PostgreSQL primary role.
+- [PostgreSQL primary role](/t/how-to-spin-up-maas-with-ansible/6367#heading--PostgreSQL-primary-role): setup the postgres primary role.
 
-- [PostgreSQL secondary role](/t/how-to-spin-up-maas-with-ansible/6367#heading--PostgreSQL-secondary-role): setup the PostgreSQL secondary role.
+- [PostgreSQL secondary role](/t/how-to-spin-up-maas-with-ansible/6367#heading--PostgreSQL-secondary-role): setup the postgres secondary role.
 
 - [Firewall rules](/t/how-to-spin-up-maas-with-ansible/6367#heading--Firewall-rules): setup firewall rules.
 
@@ -49,7 +49,7 @@ There is also a set of groups that will automate setting up specific sections of
 - [PostgreSQL role bundling scripts](/t/how-to-spin-up-maas-with-ansible/6367#heading--PostgreSQL-role-bundling-scripts)
 - ?? (there must be more, huh?)
 
-After installing Ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.
+After installing ansible, running each of the playbooks on a blank machine will have a fresh install of MAAS ready to go. For example, running the region+rack will setup a region+rack on the host machine.
 
 <a href="#heading--Running-a-MAAS-Ansible-playbook"><h2 id="heading--Running-a-MAAS-Ansible-playbook">Running a MAAS Ansible playbook</h2></a>
 
