@@ -518,6 +518,7 @@
 <li><a href="#heading--machine-life-cycle-failures">Machine life-cycle failures</a></li>
 <li><a href="#heading--custom-image-creation-problems">Custom image creation problems</a></li>
 <li><a href="#heading--session-timeout-issues">Session timeout issues</a></li>
+<li><a href="#heading--ansible-postgresql-ha-issues">Ansible PostgreSQL HA issues</a></li>
 <li><a href="#heading--misc-issues">Miscellaneous issues</a></li>
 </ul>
 <p><a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key"><h2 id="heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</h2></a></p>
@@ -760,6 +761,36 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 <p>Currently, MAAS provides a global session timeout configuration that applies to all users. You can customize session timeout durations for specific user groups or roles by creating separate MAAS deployments with different configurations, but you cannot customize timeouts by group.</p>
 <p><a href="#heading--cant-extend-an-active-session"><h3 id="heading--cant-extend-an-active-session">I can&rsquo;t seem to extend sessions beyond the timeout</h3></a></p>
 <p>The session timeout duration is determined at the time of authentication, but it&rsquo;s a timeout, not a fixed interval timer.  As long as the user does something that causes MAAS to updated, the timeout clock will restart from zero.  To extend an active session, users simply need to refresh or reload the page before the timeout period expires. This action will restart the session timer.</p>
+<p><a href="#heading--ansible-postgresql-ha-issues"><h2 id="heading--ansible-postgresql-ha-issues">Ansible PostgreSQL HA issues</h2></a></p>
+<p>The following issues may occur when using the Ansible PostgreSQL HA configuration setup.</p>
+<p><a href="#heading--postgres-cluster-fails-to-start"><h3 id="heading--postgres-cluster-fails-to-start">PostgreSQL cluster fails to start after installation</h3></a></p>
+<p>If the Ansible-created PostgreSQL cluster fails to start after installation, try these steps:</p>
+<ol>
+<li>
+<p>Check that the required Ansible variables for the PostgreSQL role are correctly set in the hosts file.</p>
+</li>
+<li>
+<p>Verify that the hosts assigned to the <code>maas_postgres</code> group have the necessary network connectivity and meet the system requirements for running PostgreSQL.</p>
+</li>
+<li>
+<p>Review the playbook output and log files for any error messages that could indicate the cause of the failure. Ensure all dependencies are properly installed.</p>
+</li>
+</ol>
+<p><a href="#heading--cluster-failover-not-happening"><h3 id="heading--cluster-failover-not-happening">PostgreSQL cluster failover is not occurring as expected</h3></a></p>
+<p>If the cluster failover is not occurring as expected, try the following:</p>
+<ol>
+<li>
+<p>Confirm that Corosync and Pacemaker are correctly configured and running on the designated hosts.</p>
+</li>
+<li>
+<p>Ensure that the <code>maas_postgres</code> hosts have reliable network communication and can reach each other and the Corosync/Pacemaker services.</p>
+</li>
+<li>
+<p>Check the settings for <code>maas_postgres_floating_ip</code> and <code>maas_postgres_floating_ip_prefix_len</code> to ensure they match the desired configuration.</p>
+</li>
+</ol>
+<p><a href="#heading--need-to-add-more-postgres-cluster-hosts"><h3 id="#heading--need-to-add-more-postgres-cluster-hosts">I need to add PostgreSQL cluster hosts to a running cluster</h3></a></p>
+<p>You can add additional hosts to an exiostding PostgreSQL cluster by adding them to the <code>maas_postgres</code> group in your hosts file and running the playbook again. The new hosts will be integrated into the cluster.</p>
 <p><a href="#heading--misc-issues"><h2 id="heading--misc-issues">Miscellaneous issues</h2></a></p>
 <p>Finally, you may be facing an issue which doesn&rsquo;t fit into any category, such as one of these:</p>
 <ul style="margin-left:4px; list-style-type:disc;">

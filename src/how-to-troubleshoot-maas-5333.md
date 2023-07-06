@@ -6,6 +6,7 @@ This article may help you deal with some common problems.  It is organised by to
 - [Machine life-cycle failures](#heading--machine-life-cycle-failures)
 - [Custom image creation problems](#heading--custom-image-creation-problems)
 - [Session timeout issues](#heading--session-timeout-issues)
+- [Ansible PostgreSQL HA issues](#heading--ansible-postgresql-ha-issues)
 - [Miscellaneous issues](#heading--misc-issues)
 
 <a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key"><h2 id="heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</h2></a>
@@ -344,6 +345,34 @@ Currently, MAAS provides a global session timeout configuration that applies to 
 
 The session timeout duration is determined at the time of authentication, but it's a timeout, not a fixed interval timer.  As long as the user does something that causes MAAS to updated, the timeout clock will restart from zero.  To extend an active session, users simply need to refresh or reload the page before the timeout period expires. This action will restart the session timer.
 
+<a href="#heading--ansible-postgresql-ha-issues"><h2 id="heading--ansible-postgresql-ha-issues">Ansible PostgreSQL HA issues</h2></a>
+
+The following issues may occur when using the Ansible PostgreSQL HA configuration setup.
+
+<a href="#heading--postgres-cluster-fails-to-start"><h3 id="heading--postgres-cluster-fails-to-start">PostgreSQL cluster fails to start after installation</h3></a>
+
+If the Ansible-created PostgreSQL cluster fails to start after installation, try these steps:
+
+1. Check that the required Ansible variables for the PostgreSQL role are correctly set in the hosts file.
+
+2. Verify that the hosts assigned to the `maas_postgres` group have the necessary network connectivity and meet the system requirements for running PostgreSQL.
+
+3. Review the playbook output and log files for any error messages that could indicate the cause of the failure. Ensure all dependencies are properly installed.
+
+<a href="#heading--cluster-failover-not-happening"><h3 id="heading--cluster-failover-not-happening">PostgreSQL cluster failover is not occurring as expected</h3></a>
+
+If the cluster failover is not occurring as expected, try the following:
+
+1. Confirm that Corosync and Pacemaker are correctly configured and running on the designated hosts.
+
+2. Ensure that the `maas_postgres` hosts have reliable network communication and can reach each other and the Corosync/Pacemaker services.
+
+3. Check the settings for `maas_postgres_floating_ip` and `maas_postgres_floating_ip_prefix_len` to ensure they match the desired configuration.
+
+<a href="#heading--need-to-add-more-postgres-cluster-hosts"><h3 id="#heading--need-to-add-more-postgres-cluster-hosts">I need to add PostgreSQL cluster hosts to a running cluster</h3></a>
+
+You can add additional hosts to an exiostding PostgreSQL cluster by adding them to the `maas_postgres` group in your hosts file and running the playbook again. The new hosts will be integrated into the cluster.
+
 <a href="#heading--misc-issues"><h2 id="heading--misc-issues">Miscellaneous issues</h2></a>
 
 Finally, you may be facing an issue which doesn't fit into any category, such as one of these:
@@ -553,3 +582,4 @@ It's a good idea to keep your most important machine tag first, as it's the firs
      .tag_names[0] // "-", .pool.name,
      .boot_interface.vlan.name, .boot_interface.vlan.fabric,
      .boot_interface.links[0].subnet.name]) | @tsv' | column -t
+
