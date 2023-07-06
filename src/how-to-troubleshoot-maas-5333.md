@@ -5,6 +5,8 @@ This article may help you deal with some common problems.  It is organised by to
 - [Networking issues](#heading--networking-issues)
 - [Machine life-cycle failures](#heading--machine-life-cycle-failures)
 - [Custom image creation problems](#heading--custom-image-creation-problems)
+- [Session timeout issues](#heading--session-timeout-issues)
+- [Miscellaneous issues](#heading--misc-issues)
 
 <a href="#heading--Find-and-fix-a-leaked-MAAS-admin-API-key"><h2 id="heading--Find-and-fix-a-leaked-MAAS-admin-API-key">Find and fix a leaked MAAS admin API key</h2></a>
 
@@ -304,7 +306,45 @@ Build 'qemu' errored after 880 microseconds: Failed creating Qemu driver: exec: 
 
 then you have forgotten to [install a needed dependency](https://maas.io/docs/how-to-customise-images#heading--how-to-install-packer)`↗`.
 
-<a href="#heading--misc-problems"><h2 id="heading--misc-problems">Miscellaneous issues</h2></a>
+<a href="#heading--session-timeout-issues><h2 id="heading--session-timeout-issues">Session timeout issues</h2></a>
+
+There are a few issues that come up around session timeout.
+
+<a href="#heading--timeout-changes-not-taking-effect"><h3 id="heading--timeout-changes-not-taking-effect">Timeout changes not taking effect</h3></a>
+
+If session timeout changes do not appear to be taking effect, check the following:
+
+1. Ensure that you have administrative access to the MAAS web interface to modify the session timeout settings.
+
+2. After making changes to the session timeout duration, remember to save the configuration to apply the new settings.
+
+3. Clear your browser cache and cookies, as they might be storing the previous session timeout settings. Restart your browser and try again.
+
+<a href="#heading--users-logged-out-early"><h3 id="heading--users-logged-out-early">Users are logged out before timeout expires</h3></a>
+
+If you've set the session timeout, but users are still logged out before the specified timeout duration, there are a few things to check:
+
+1. Verify that you entered the session timeout duration using the appropriate units, e.g., weeks, days, hours, or minutes.  Errors often result when expressing longer timeouts in short units, for example, meaning to express "1 week" as "168 hours," but instead entered "40 hours".
+2. Check if there are any conflicting settings for the server running MAAS that cause earlier session timeouts, for example, the window manager logout settings in Ubuntu.
+3. If you are using a load balancer or proxy server, confirm that it is not introducing additional timeouts that might conflict with the MAAS configuration.
+
+<a href="#heading--cant-set-infinite-timeout"><h3 id="heading--cant-set-infinite-timeout">I can't set an infinite session timeout</h3></a>
+
+The session timeout feature in MAAS allows for a maximum duration of 14 days or 2 weeks. This limitation is in place to balance security and user convenience. It cannot be turned off or set to "infinite" timeout.
+
+<a href="#heading--users-are-suddenly-logged-out"><h3 id="heading--users-are-suddenly-logged-out">Users are suddenly logged out</h3></a>
+
+When a user's session reaches the configured timeout duration, MAAS will automatically log them out for security purposes. If the timeout is particularly short, users may be logged out while in the middle of an operation, meaning the user will need to re-authenticate to access the MAAS web interface again.  If this happens too often,  you should increase the timeout value to avoid unwanted "idle-time" logouts.
+
+<a href="#heading--cant-set-timeouts-by-user-group"><h3 id="heading--cant-set-timeouts-by-user-group">I can't set different timeouts for different user groups</h3></a>
+
+Currently, MAAS provides a global session timeout configuration that applies to all users. You can customize session timeout durations for specific user groups or roles by creating separate MAAS deployments with different configurations, but you cannot customize timeouts by group.
+
+<a href="#heading--cant-extend-an-active-session"><h3 id="heading--cant-extend-an-active-session">I can't seem to extend sessions beyond the timeout</h3></a>
+
+The session timeout duration is determined at the time of authentication, but it's a timeout, not a fixed interval timer.  As long as the user does something that causes MAAS to updated, the timeout clock will restart from zero.  To extend an active session, users simply need to refresh or reload the page before the timeout period expires. This action will restart the session timer.
+
+<a href="#heading--misc-issues"><h2 id="heading--misc-issues">Miscellaneous issues</h2></a>
 
 Finally, you may be facing an issue which doesn't fit into any category, such as one of these:
 
@@ -513,3 +553,4 @@ It's a good idea to keep your most important machine tag first, as it's the firs
      .tag_names[0] // "-", .pool.name,
      .boot_interface.vlan.name, .boot_interface.vlan.fabric,
      .boot_interface.links[0].subnet.name]) | @tsv' | column -t
+
