@@ -484,13 +484,38 @@ ansible-playbook --extra-vars="o11y_alertrules_dest=/tmp" ./alertrules.yaml
 
 The resulting files (`loki-alert-rules.yml` and `prometheus-alert-rules.yml`) should be installed in the Loki and Prometheus servers respectively. See https://maas.io/docs/how-to-monitor-maas for a basic observability stack setup.
 
+<a href="#heading--observability-examples"><h2 id="heading--observability-examples">Observability examples</h2></a>
+
+There are many different ways to set up MAAS observability using Ansible.  Here are just a few thumbnail examples.
+
+<a href="#heading--exporting-metrics-from-maas-region-controllers"><h3 id="heading--exporting-metrics-from-maas-region-controllers">Exporting metrics from MAAS region controllers</h3></a>
+
+If you want to monitor the performance of your MAAS region controllers, then you can run the observability playbook, specifying the Prometheus endpoint.  All hosts running MAAS region controllers install and configure the Grafana agent, allowing for the export of server metrics to Prometheus. 
+
+<a href="#heading--exporting-logs-from-maas-rack-controllers"><h3 id="heading--exporting-logs-from-maas-rack-controllers">Exporting logs from MAAS rack controllers</h3></a>
+
+To centralize the logs from MAAS rack controllers for easier troubleshooting, just runs the observability playbook, providing the Loki endpoint.  The Grafana agent is installed and configured on hosts running MAAS rack controllers, allowing the export of logs to Loki. You can then access and analyze logs from all MAAS rack controllers in a unified location.
+
+<a href="#heading--exporting-postgresql-metrics-to-prometheus"><h3 id="heading--exporting-postgresql-metrics-to-prometheus">Exporting PostgreSQL metrics to prometheus</h3></a>
+
+Assume you want to monitor the performance of your PostgreSQL database, which was installed by Ansible. You can run the observability playbook, specifying the Prometheus endpoint.  This will export PostgreSQL metrics to Prometheus, allowing you to monitor database performance, identify bottlenecks, and optimize the MAAS instance.
+
+<a href="#heading--exporting-logs-from-postgresql-to-loki"><h3 id="heading--exporting-logs-from-postgresql-to-loki">Exporting logs from PostgreSQL to Loki</h3></a>
+
+An operator wants to consolidate logs from their PostgreSQL database for better visibility and analysis. The operator runs the observability playbook, providing the Loki endpoint.
+The Grafana agent is installed and configured on hosts with the PostgreSQL role, enabling the export of database logs to Loki. The operator can now access and search PostgreSQL logs alongside other log sources, simplifying troubleshooting and analysis.
+
+<a href="#heading--integrating-alert-rules-into-the-existing-observability-stack"><h3 id="heading--integrating-alert-rules-into-the-existing-observability-stack">Integrating alert rules into the existing observability stack</h3></a>
+
+Suppose that you already has an observability stack in place and want to incorporate MAAS-specific alerts. You can runs the observability playbook, downloading and compiling MAAS-curated alert rules.  These rules are integrated into the existing observability stack, enabling proactive notifications, so that you can take timely actions based on these alerts.
+
 <!--
 <a href="#heading--Firewall-rules"><h2 id="heading--Firewall-rules">Firewall rules</h2></a>
 
 As a operator, you want to be able to setup MAAS in a secure way, following best practices and operational guidance on securing MAAS. In order to make a MAAS setup secure, I would Ansible playbooks to configure firewalls and file permissions based on https://maas.io/docs/how-to-secure-maas.
 
  
-<a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
+<a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a>" -->
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 Ansible makes it easy to install and configure MAAS 3.2 and above.  Our Ansible playbooks have not been tested or vetted with MAAS versions 3.1 or lower.  If you want to take advantage of Ansible, we strongly recommend upgrading to MAAS 3.2 or higher.
