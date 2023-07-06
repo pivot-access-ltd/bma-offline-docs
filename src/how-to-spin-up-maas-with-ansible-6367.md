@@ -490,7 +490,7 @@ The resulting files (`loki-alert-rules.yml` and `prometheus-alert-rules.yml`) sh
 As a operator, you want to be able to setup MAAS in a secure way, following best practices and operational guidance on securing MAAS. In order to make a MAAS setup secure, I would Ansible playbooks to configure firewalls and file permissions based on https://maas.io/docs/how-to-secure-maas.
 
  
-<a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a>" -->
+<a href="#heading--PostgreSQL-role-bundling-scripts"><h2 id="heading--PostgreSQL-role-bundling-scripts">PostgreSQL role bundling scripts</h2></a> -->
 [/tab]
 [tab version="v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages"]
 Ansible makes it easy to install and configure MAAS 3.2 and above.  Our Ansible playbooks have not been tested or vetted with MAAS versions 3.1 or lower.  If you want to take advantage of Ansible, we strongly recommend upgrading to MAAS 3.2 or higher.
