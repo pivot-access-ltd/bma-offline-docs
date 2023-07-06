@@ -1,10 +1,14 @@
-<!-- "What is new with MAAS 3.4" -->
+<!-- "What is new with MAAS 3.4 Beta" -->
 
 Here you will find release notes for the Beta version(s) of MAAS 3.4.
 
+<a href="#heading--MAAS-3-4-Beta3-has-been-released"><h2 id="heading--MAAS-3-4-Beta3-has-been-released">MAAS 3.4 Beta3 has been released</h2></a>
+
+We are happy to announce that MAAS 3.4 Beta3 has been released with [more bug fixes](#heading--MAAS-3-4-Beta3-bug-list).
+
 <a href="#heading--MAAS-3-4-Beta2-has-been-released"><h2 id="heading--MAAS-3-4-Beta2-has-been-released">MAAS 3.4 Beta2 has been released</h2></a>
 
-We are happy to announce that MAAS 3.4 Beta1 has been released with [more bug fixes](#heading--MAAS-3-4-Beta2-bug-list).
+We are happy to announce that MAAS 3.4 Beta2 has been released with [more bug fixes](#heading--MAAS-3-4-Beta2-bug-list).
 
 <a href="#heading--MAAS-3-4-beta-1-has-been-released"><h2 id="heading--MAAS-3-4-beta-1-has-been-released">MAAS 3.4 Beta1 has been released</h2></a>
 
@@ -191,7 +195,7 @@ sudo maas-rack register
 
 These two steps will lead you through two similar <code>apt</code> install sequences.
 
-<!-- "3.2 or lower upgrade to 3.4
+<!-- 3.2 or lower upgrade to 3.4
 <a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h3 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h3></a>
 
 If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
@@ -321,7 +325,6 @@ If this didn’t work, you will need to restore from the backup you made in step
 - [2012054](https://bugs.launchpad.net/bugs/2012054)`↗`:	RPC logging when debug is too verbose
 
 <a href="#heading--MAAS-3-4-Beta2-bug-list"><h2 id="heading--MAAS-3-4-Beta2-bug-list">MAAS 3.4 Beta2 bug list</h2></a>
-#heading--MAAS-3-4-beta-2-bug-list.
 
 - [1974050](https://bugs.launchpad.net/bugs/1974050)`↗`: Vmware no longer supports image cloning
 - [2009209](https://bugs.launchpad.net/bugs/2009209)`↗`: snap deployed maas is not able to use openstack nova power type due to missing python3-novaclient dependency
@@ -335,3 +338,17 @@ If this didn’t work, you will need to restore from the backup you made in step
 - [1876365](https://bugs.launchpad.net/bugs/1876365)`↗`: host passthrough not working with KVMs
 - [2018149](https://bugs.launchpad.net/bugs/2018149)`↗`: MAAS generates netplan with illegal autoconf and accept_ra flags for 22.04
 - [2020427](https://bugs.launchpad.net/bugs/2020427)`↗`: crash importing large database dump into maas-test-db
+
+<a href="#heading--MAAS-3-4-Beta3-bug-list"><h2 id="heading--MAAS-3-4-Beta3-bug-list">MAAS 3.4 Beta3 bug list</h2></a>
+
+- [2020882](https://bugs.launchpad.net/maas/+bug/2020882)`↗`: Machine config hints FileNotFoundError
+- [2022833](https://bugs.launchpad.net/maas/+bug/2022833)`↗`: machine-config-hints fails on Power machines
+- [1835153](https://bugs.launchpad.net/maas/+bug/1835153)`↗`: Ephemeral deployment creates pending ScriptResult
+- [1996204](https://bugs.launchpad.net/maas/+bug/1996204)`↗`: failing metrics cause 500 error
+- [2011841](https://bugs.launchpad.net/maas/+bug/2011841)`↗`: DNS resolution fails
+- [2013529](https://bugs.launchpad.net/maas/+bug/2013529)`↗`: Nodes stuck in Failed Disk Erasing due to wrong ipxe boot file
+- [2021965](https://bugs.launchpad.net/maas/+bug/2021965)`↗`: MAAS Settings (sidebar) scroll issue
+- [1807725](https://bugs.launchpad.net/maas/+bug/1807725)`↗`: Machine interfaces allow '_' character, results on a interface based domain breaking bind (as it doesn't allow it for the host part).
+- [2006497](https://bugs.launchpad.net/maas/+bug/2006497)`↗`: unsupported configuration in virsh command
+- [2011853](https://bugs.launchpad.net/maas/+bug/2011853)`↗`: Auto-discovered subnet does not get correct VLAN 
+- [2020865](https://bugs.launchpad.net/maas/+bug/2020865)`↗`: flaky test: src/tests/maasperf/cli/test_machines.py::test_perf_list_machines_CLI
