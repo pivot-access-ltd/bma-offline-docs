@@ -1,4 +1,4 @@
-<!-- "What is new with MAAS 3.4 Beta" -->
+<!-- "What is new with MAAS 3.4" -->
 
 Here you will find release notes for the Beta version(s) of MAAS 3.4.
 
@@ -14,27 +14,39 @@ We are happy to announce that MAAS 3.4 Beta2 has been released with [more bug fi
 
 We are happy to announce that MAAS 3.4 Beta1 has been released, with [many bug fixes](#heading--MAAS-3-4-beta-1-bug-list).
 
-<a href="#heading--MAAS-3-4-beta-1-features"><h2 id="heading--MAAS-3-4-beta-1-features">MAAS 3.4 Beta 1 features</h2></a>
+<a href="#heading--MAAS-3-4-features"><h2 id="heading--MAAS-3-4-features">MAAS 3.4 Beta 1 features</h2></a>
 
-The following visible new features are a part of MAAS 3.4 Beta 1:
+MAAS 3.4 provides several new features.
 
-- Redesigned UI: Navigation is moved from the top of the screen to the left side, and made more comprehensive, while at the same time being more compact.  Navigation within panels is handled by discreet, pop-up boxes to avoid disoriented the user.
+<a href="#heading--redesigned-ui"><h3 id="heading--redesigned-ui">Redesigned UI</h3></a>
+
+With the new MAAS 3.4 release, we've made some significant  user-interface changes to improve user experience. A key transformation? We’ve shifted navigation from the top to the left side of the screen. This placement better uses space and presents a more logical workflow, making it easy for users to find and access the features they need. We've also introduced discreet pop-up boxes that manage panel navigation. These boxes emerge only when needed to maintain focus, creating a more compact and comprehensive interface. Revamping the UI should make MAAS 3.4 more user-friendly and intuitive. Shifting navigation to the left matches a common user-design pattern. Likewise, the introduction of discreet pop-up boxes maintains your orientation and minimizes clutter making it easier to navigate the software.
 
 <!--
 - DGX kernel support: There’s ongoing work from Canonical to provide an optimised kernel for Nvidia DGX machines. We want to promote that and make sure that DGX machines use that optimised kernel by default, without the user having to do any special configuration.
 -->
 
-- Configurable session timeout: Users are able to fully configure their session timeouts.
+<a href="#heading--Configurable-session-timeout"><h3 id="heading--Configurable-session-timeout">Configurable session timeout</h3></a>
 
-- Ansible HA PostgreSQL playbook enhancements: PostgreSQL HA setup is now fully possible with Ansible.
+In MAAS 3.4, we've introduced the Configurable Session Timeout feature, offering better control over session length. This feature allows you to set a personalized duration for your sessions, hopefully avoiding abrupt disconnections or lingering sessions.  If you're a user who has login repeatedly, due to short session defaults, or you're concerned about leaving your session accessible for too long, setting a custom timeout is useful and potentially more secure.
 
-- Ansible observability playbook: Users can now configure O11y with Ansible.
+<a href="#heading--Ansible-HA-PostgreSQL-playbook-enhancements"><h3 id="heading--Ansible-HA-PostgreSQL-playbook-enhancements">Ansible HA PostgreSQL playbook enhancements</h3></a>
 
+With the latest iteration of MAAS 3.4, we have made significant enhancements to the Ansible playbook, enabling a full High Availability (HA) setup for PostgreSQL. Users can now configure a PostgreSQL cluster with failover and redundancy capabilities directly through the Ansible playbook. This streamlined method incorporates tools such as PAF, corosync, and pacemaker.  With PostgreSQL HA enabled, traffic will automatically redirect to a standby database. This can significantly improve system load balancing. 
+
+<a href="#heading--Ansible-observability-playbook"><h3 id="heading--Ansible-observability-playbook">Ansible observability playbook</h3></a>
+
+In MAAS 3.4, we've introduced an Ansible Observability (O11y) playbook, allowing users to configure O11y using Ansible. This playbook configures metrics collection, log management, and other key O11y features. Users can easily deploy and manage observability.  Ansible also enables version control for configurations, making it easier to track changes and roll back if necessary.
+
+<!--
 - Allow sorting images by last deployed: Users can now sort out which images they most recently used.
+-->
 
-- Packer MAAS - SLES: We've added support for SLES to our Packer repertoire, and done some touch-ups on RHEL.
+<a href="#heading--Packer-MAAS---SLES"><h3 id="heading--Packer-MAAS---SLES">Packer MAAS - SLES</h3></a>
 
-<a href="#heading--How-to-install-MAAS-3-4-Beta-1"><h2 id="heading--How-to-install-MAAS-3-4-Beta-1">How to install MAAS 3.4 Beta1</h2></a>
+The MAAS 3.4 release expands Packer support to include SUSE Linux Enterprise Server (SLES), expanding the the list of deployable Linux distributions.  We also support openSUSE and openSUSE Tumbleweed. And we’ve added a template for Red Hat Enterprise Linux (RHEL) version 9.
+
+<a href="#heading--How-to-install-MAAS-3-4-Beta"><h2 id="heading--How-to-install-MAAS-3-4-Beta">How to install MAAS 3.4 Beta</h2></a>
 
 MAAS will run on just about any modern hardware configuration, even a development laptop.  If you're not sure whether your target server will handle MAAS, [you can always double-check](/t/maas-installation-requirements/6233).
 
@@ -44,7 +56,7 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 
 <a href="#heading--fresh-install-3-4-beta-1-snap"><h3 id="heading--fresh-install-3-4-beta-1-snap">How to do a fresh snap install of MAAS 3.4 Beta1</h3></a>
 
-To install MAAS 3.4 Beta1 from a snap, simply enter the following:
+To install MAAS 3.4 Beta from a snap, simply enter the following:
 
     $ sudo snap install --channel=latest/edge maas
 
@@ -56,7 +68,7 @@ Maybe instead of a fresh install, you want to upgrade from a earlier snap versio
 
     $ sudo snap refresh --channel=latest/edge maas
 
-After entering your password, the snap will refresh from the 3.4 Beta1 candidate channel.  You will **not** need to re-initialise MAAS.
+After entering your password, the snap will refresh from the 3.4 Beta channel.  You will **not** need to re-initialise MAAS.
 
 If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.
 

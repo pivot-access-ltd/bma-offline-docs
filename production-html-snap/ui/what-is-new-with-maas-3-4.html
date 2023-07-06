@@ -513,42 +513,38 @@
       <h1>What is new with MAAS 3.4</h1><!-- "What is new with MAAS 3.4" -->
 
 <p>Here you will find release notes for the Beta version(s) of MAAS 3.4.</p>
+<p><a href="#heading--MAAS-3-4-Beta3-has-been-released"><h2 id="heading--MAAS-3-4-Beta3-has-been-released">MAAS 3.4 Beta3 has been released</h2></a></p>
+<p>We are happy to announce that MAAS 3.4 Beta3 has been released with <a href="#heading--MAAS-3-4-Beta3-bug-list">more bug fixes</a>.</p>
 <p><a href="#heading--MAAS-3-4-Beta2-has-been-released"><h2 id="heading--MAAS-3-4-Beta2-has-been-released">MAAS 3.4 Beta2 has been released</h2></a></p>
-<p>We are happy to announce that MAAS 3.4 Beta1 has been released with <a href="#heading--MAAS-3-4-Beta2-bug-list">more bug fixes</a>.</p>
+<p>We are happy to announce that MAAS 3.4 Beta2 has been released with <a href="#heading--MAAS-3-4-Beta2-bug-list">more bug fixes</a>.</p>
 <p><a href="#heading--MAAS-3-4-beta-1-has-been-released"><h2 id="heading--MAAS-3-4-beta-1-has-been-released">MAAS 3.4 Beta1 has been released</h2></a></p>
 <p>We are happy to announce that MAAS 3.4 Beta1 has been released, with <a href="#heading--MAAS-3-4-beta-1-bug-list">many bug fixes</a>.</p>
-<p><a href="#heading--MAAS-3-4-beta-1-features"><h2 id="heading--MAAS-3-4-beta-1-features">MAAS 3.4 Beta 1 features</h2></a></p>
-<p>The following visible new features are a part of MAAS 3.4 Beta 1:</p>
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>Redesigned UI: Navigation is moved from the top of the screen to the left side, and made more comprehensive, while at the same time being more compact.  Navigation within panels is handled by discreet, pop-up boxes to avoid disoriented the user.</li>
-</ul>
+<p><a href="#heading--MAAS-3-4-features"><h2 id="heading--MAAS-3-4-features">MAAS 3.4 Beta 1 features</h2></a></p>
+<p>MAAS 3.4 provides several new features.</p>
+<p><a href="#heading--redesigned-ui"><h3 id="heading--redesigned-ui">Redesigned UI</h3></a></p>
+<p>With the new MAAS 3.4 release, we&rsquo;ve made some significant  user-interface changes to improve user experience. A key transformation? We’ve shifted navigation from the top to the left side of the screen. This placement better uses space and presents a more logical workflow, making it easy for users to find and access the features they need. We&rsquo;ve also introduced discreet pop-up boxes that manage panel navigation. These boxes emerge only when needed to maintain focus, creating a more compact and comprehensive interface. Revamping the UI should make MAAS 3.4 more user-friendly and intuitive. Shifting navigation to the left matches a common user-design pattern. Likewise, the introduction of discreet pop-up boxes maintains your orientation and minimizes clutter making it easier to navigate the software.</p>
 <!--
 - DGX kernel support: There’s ongoing work from Canonical to provide an optimised kernel for Nvidia DGX machines. We want to promote that and make sure that DGX machines use that optimised kernel by default, without the user having to do any special configuration.
 -->
 
-<ul style="margin-left:4px; list-style-type:disc;">
-<li>
-<p>Configurable session timeout: Users are able to fully configure their session timeouts.</p>
-</li>
-<li>
-<p>Ansible HA PostgreSQL playbook enhancements: PostgreSQL HA setup is now fully possible with Ansible.</p>
-</li>
-<li>
-<p>Ansible observability playbook: Users can now configure O11y with Ansible.</p>
-</li>
-<li>
-<p>Allow sorting images by last deployed: Users can now sort out which images they most recently used.</p>
-</li>
-<li>
-<p>Packer MAAS - SLES: We&rsquo;ve added support for SLES to our Packer repertoire, and done some touch-ups on RHEL.</p>
-</li>
-</ul>
-<p><a href="#heading--How-to-install-MAAS-3-4-Beta-1"><h2 id="heading--How-to-install-MAAS-3-4-Beta-1">How to install MAAS 3.4 Beta1</h2></a></p>
+<p><a href="#heading--Configurable-session-timeout"><h3 id="heading--Configurable-session-timeout">Configurable session timeout</h3></a></p>
+<p>In MAAS 3.4, we&rsquo;ve introduced the Configurable Session Timeout feature, offering better control over session length. This feature allows you to set a personalized duration for your sessions, hopefully avoiding abrupt disconnections or lingering sessions.  If you&rsquo;re a user who has login repeatedly, due to short session defaults, or you&rsquo;re concerned about leaving your session accessible for too long, setting a custom timeout is useful and potentially more secure.</p>
+<p><a href="#heading--Ansible-HA-PostgreSQL-playbook-enhancements"><h3 id="heading--Ansible-HA-PostgreSQL-playbook-enhancements">Ansible HA PostgreSQL playbook enhancements</h3></a></p>
+<p>With the latest iteration of MAAS 3.4, we have made significant enhancements to the Ansible playbook, enabling a full High Availability (HA) setup for PostgreSQL. Users can now configure a PostgreSQL cluster with failover and redundancy capabilities directly through the Ansible playbook. This streamlined method incorporates tools such as PAF, corosync, and pacemaker.  With PostgreSQL HA enabled, traffic will automatically redirect to a standby database. This can significantly improve system load balancing. </p>
+<p><a href="#heading--Ansible-observability-playbook"><h3 id="heading--Ansible-observability-playbook">Ansible observability playbook</h3></a></p>
+<p>In MAAS 3.4, we&rsquo;ve introduced an Ansible Observability (O11y) playbook, allowing users to configure O11y using Ansible. This playbook configures metrics collection, log management, and other key O11y features. Users can easily deploy and manage observability.  Ansible also enables version control for configurations, making it easier to track changes and roll back if necessary.</p>
+<!--
+- Allow sorting images by last deployed: Users can now sort out which images they most recently used.
+-->
+
+<p><a href="#heading--Packer-MAAS---SLES"><h3 id="heading--Packer-MAAS---SLES">Packer MAAS - SLES</h3></a></p>
+<p>The MAAS 3.4 release expands Packer support to include SUSE Linux Enterprise Server (SLES), expanding the the list of deployable Linux distributions.  We also support openSUSE and openSUSE Tumbleweed. And we’ve added a template for Red Hat Enterprise Linux (RHEL) version 9.</p>
+<p><a href="#heading--How-to-install-MAAS-3-4-Beta"><h2 id="heading--How-to-install-MAAS-3-4-Beta">How to install MAAS 3.4 Beta</h2></a></p>
 <p>MAAS will run on just about any modern hardware configuration, even a development laptop.  If you&rsquo;re not sure whether your target server will handle MAAS, <a href="maas-installation-requirements.html">you can always double-check</a>.</p>
 <p><strong>NOTE:</strong> 
 <strong>NOTE</strong> Support for PostgreSQL 12 has been discontinued in MAAS 3.4.  Postgres 14 does not run on Focal 20.04 LTS.</p>
 <p><a href="#heading--fresh-install-3-4-beta-1-snap"><h3 id="heading--fresh-install-3-4-beta-1-snap">How to do a fresh snap install of MAAS 3.4 Beta1</h3></a></p>
-<p>To install MAAS 3.4 Beta1 from a snap, simply enter the following:</p>
+<p>To install MAAS 3.4 Beta from a snap, simply enter the following:</p>
 <pre><code>$ sudo snap install --channel=latest/edge maas
 </code></pre>
 <p>After entering your password, the snap will download and install from the 3.4 Beta channel.</p>
@@ -556,7 +552,7 @@
 <p>Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.4 Beta1 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
 <pre><code>$ sudo snap refresh --channel=latest/edge maas
 </code></pre>
-<p>After entering your password, the snap will refresh from the 3.4 Beta1 candidate channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
+<p>After entering your password, the snap will refresh from the 3.4 Beta channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
 <p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>
 <p><a href="#heading--init-maas-poc"><h3 id="heading--init-maas-poc">How to initialise MAAS 3.4 snap for a test or POC environment</h3></a></p>
 <p>You can initialise MAAS as a compact version for testing.  To achieve this, we provide a separate snap, called <code>maas-test-db</code>, which contains a PostgreSQL database for use in testing and evaluating MAAS.   The following instructions will help you take advantage of this test configuration.</p>
@@ -673,7 +669,7 @@ sudo apt-get -y install maas
 sudo maas-rack register
 </code></pre>
 <p>These two steps will lead you through two similar <code>apt</code> install sequences.</p>
-<!-- "3.2 or lower upgrade to 3.4
+<!-- 3.2 or lower upgrade to 3.4
 <a href="#heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3"><h3 id="heading--How-to-upgrade-from-3-2-or-lower-to-MAAS-3-3">How to upgrade from 3.2 or lower to MAAS 3.3</h3></a>
 
 If you are running MAAS 3.2 or lower, you can upgrade directly to MAAS 3.3. You must first make sure that the target system is running Ubuntu 22.04 LTS by executing the following command:
@@ -812,7 +808,6 @@ If this didn’t work, you will need to restore from the backup you made in step
 <li><a href="https://bugs.launchpad.net/bugs/2012054">2012054</a><code>↗</code>:    RPC logging when debug is too verbose</li>
 </ul>
 <p><a href="#heading--MAAS-3-4-Beta2-bug-list"><h2 id="heading--MAAS-3-4-Beta2-bug-list">MAAS 3.4 Beta2 bug list</h2></a></p>
-<h1>heading&ndash;MAAS-3-4-beta-2-bug-list.</h1>
 <ul style="margin-left:4px; list-style-type:disc;">
 <li><a href="https://bugs.launchpad.net/bugs/1974050">1974050</a><code>↗</code>: Vmware no longer supports image cloning</li>
 <li><a href="https://bugs.launchpad.net/bugs/2009209">2009209</a><code>↗</code>: snap deployed maas is not able to use openstack nova power type due to missing python3-novaclient dependency</li>
@@ -826,6 +821,20 @@ If this didn’t work, you will need to restore from the backup you made in step
 <li><a href="https://bugs.launchpad.net/bugs/1876365">1876365</a><code>↗</code>: host passthrough not working with KVMs</li>
 <li><a href="https://bugs.launchpad.net/bugs/2018149">2018149</a><code>↗</code>: MAAS generates netplan with illegal autoconf and accept_ra flags for 22.04</li>
 <li><a href="https://bugs.launchpad.net/bugs/2020427">2020427</a><code>↗</code>: crash importing large database dump into maas-test-db</li>
+</ul>
+<p><a href="#heading--MAAS-3-4-Beta3-bug-list"><h2 id="heading--MAAS-3-4-Beta3-bug-list">MAAS 3.4 Beta3 bug list</h2></a></p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="https://bugs.launchpad.net/maas/+bug/2020882">2020882</a><code>↗</code>: Machine config hints FileNotFoundError</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2022833">2022833</a><code>↗</code>: machine-config-hints fails on Power machines</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1835153">1835153</a><code>↗</code>: Ephemeral deployment creates pending ScriptResult</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1996204">1996204</a><code>↗</code>: failing metrics cause 500 error</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2011841">2011841</a><code>↗</code>: DNS resolution fails</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2013529">2013529</a><code>↗</code>: Nodes stuck in Failed Disk Erasing due to wrong ipxe boot file</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2021965">2021965</a><code>↗</code>: MAAS Settings (sidebar) scroll issue</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/1807725">1807725</a><code>↗</code>: Machine interfaces allow &lsquo;_&rsquo; character, results on a interface based domain breaking bind (as it doesn&rsquo;t allow it for the host part).</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2006497">2006497</a><code>↗</code>: unsupported configuration in virsh command</li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2011853">2011853</a><code>↗</code>: Auto-discovered subnet does not get correct VLAN </li>
+<li><a href="https://bugs.launchpad.net/maas/+bug/2020865">2020865</a><code>↗</code>: flaky test: src/tests/maasperf/cli/test_machines.py::test_perf_list_machines_CLI</li>
 </ul>
     </div>
   </body>
