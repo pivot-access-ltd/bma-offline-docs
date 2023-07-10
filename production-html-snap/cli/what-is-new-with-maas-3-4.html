@@ -579,12 +579,12 @@
 <strong>NOTE</strong> Support for PostgreSQL 12 has been discontinued in MAAS 3.4.  Postgres 14 does not run on Focal 20.04 LTS.</p>
 <p><a href="#heading--fresh-install-3-4-beta-1-snap"><h3 id="heading--fresh-install-3-4-beta-1-snap">How to do a fresh snap install of MAAS 3.4 Beta1</h3></a></p>
 <p>To install MAAS 3.4 Beta from a snap, simply enter the following:</p>
-<pre><code>$ sudo snap install --channel=latest/edge maas
+<pre><code>$ sudo snap install --channel=3.4/beta maas
 </code></pre>
 <p>After entering your password, the snap will download and install from the 3.4 Beta channel.</p>
 <p><a href="#heading--upgrade-from-earlier-version-to-snap-3-3"><h3 id="heading--upgrade-from-earlier-version-to-snap-3-3">How to upgrade from an earlier snap version to MAAS 3.3</h3></a></p>
 <p>Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.4 Beta1 snap, and you are using a <code>region+rack</code> configuration, use this command:</p>
-<pre><code>$ sudo snap refresh --channel=latest/edge maas
+<pre><code>$ sudo snap refresh --channel=3.4/beta maas
 </code></pre>
 <p>After entering your password, the snap will refresh from the 3.4 Beta channel.  You will <strong>not</strong> need to re-initialise MAAS.</p>
 <p>If you are using a multi-node maas deployment with separate regions and racks, you should first run the upgrade command above for rack nodes, then for region nodes.</p>

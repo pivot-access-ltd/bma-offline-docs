@@ -82,7 +82,7 @@ MAAS will run on just about any modern hardware configuration, even a developmen
 
 To install MAAS 3.4 Beta from a snap, simply enter the following:
 
-    $ sudo snap install --channel=latest/edge maas
+    $ sudo snap install --channel=3.4/beta maas 
 
 After entering your password, the snap will download and install from the 3.4 Beta channel.
 
@@ -90,7 +90,7 @@ After entering your password, the snap will download and install from the 3.4 Be
 
 Maybe instead of a fresh install, you want to upgrade from a earlier snap version to the 3.4 Beta1 snap, and you are using a `region+rack` configuration, use this command:
 
-    $ sudo snap refresh --channel=latest/edge maas
+    $ sudo snap refresh --channel=3.4/beta maas
 
 After entering your password, the snap will refresh from the 3.4 Beta channel.  You will **not** need to re-initialise MAAS.
 
