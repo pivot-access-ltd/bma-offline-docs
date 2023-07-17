@@ -6,7 +6,7 @@ On 24 August 2020, MAAS 2.7.3 was released, replacing the `2.7/stable` channel i
 
     snap refresh --channel=2.7/stable
 
-or by using the aforementioned PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.3rc1)`↗` -- there were no changes to MAAS since RC1.
+or by using the PPA.  The focus for this release has been [bugfixing](https://launchpad.net/maas/+milestone/2.7.3rc1)`↗` -- there were no changes to MAAS since RC1.
 
 Thanks to everyone who reported the issues with previous 2.7 releases and helped us with the logs.
 
