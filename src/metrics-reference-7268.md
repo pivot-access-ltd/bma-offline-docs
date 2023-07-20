@@ -656,3 +656,4 @@ Time required to transfer a file to a machine using TFTP
    | host | controller IP address |
    | maas_id | MAAS cluster UUID |
    | filename | file requested |
+   [/details]
