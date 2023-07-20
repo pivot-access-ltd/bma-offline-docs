@@ -6,11 +6,12 @@ The number of machines known by MAAS, by status
 
 * Type: Gauge
 * Unit: Count of machines
-
+* [details="Labels"]
 | Label | Description |
 | --- | --- |
 | maas_id | MAAS cluster UUID |
 | status | machine status |
+    [/details]
 
 <a href="#heading--maas_nodes"><h3 id="heading--maas_nodes">maas_nodes</h3></a>
 
