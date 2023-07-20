@@ -6,7 +6,26 @@ The number of machines known by MAAS, by status
 
 * Type: Gauge
 * Unit: Count of machines
+</blockquote>
+
+
+* Type: Histogram
+* Unit: Seconds
 * [details="Labels"]
+
+    | Label | Description |
+    | --- | --- |
+    | host | controller IP address |
+    | maas_id | MAAS cluster UUID |
+    | method | HTTP method |
+    | op | REST API operation name |
+    | path | REST API endpoint |
+    | status | HTTP response status code |
+    [/details]
+
+</blockquote>
+* [details="Labels"]
+
 | Label | Description |
 | --- | --- |
 | maas_id | MAAS cluster UUID |
