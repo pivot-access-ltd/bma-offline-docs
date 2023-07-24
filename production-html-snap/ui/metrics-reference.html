@@ -510,7 +510,59 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>#heading--cluster-metrics</h1><p><a href="#heading--cluster-metrics"><h2 id="heading--cluster-metrics">Cluster metrics</h2></a></p>
+      <h1>Metrics reference</h1><!-- "Metrics reference" -->
+<p>This document provides detailed reference information for the available MAAS metrics. </p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><a href="#heading--cluster-metrics">Cluster metrics</a></li>
+<li><a href="#heading--maas_machines">maas_machines</a></li>
+<li><a href="#heading--maas_nodes">maas_nodes</a></li>
+<li><a href="#heading--maas_net_spaces">maas_net_spaces</a></li>
+<li><a href="#heading--maas_net_fabrics">maas_net_fabrics</a></li>
+<li><a href="#heading--maas_net_vlans">maas_net_vlans</a></li>
+<li><a href="#heading--maas_net_subnets_v4">maas_net_subnets_v4</a></li>
+<li><a href="#heading--maas_net_subnets_v6">maas_net_subnets_v6</a></li>
+<li><a href="#heading--maas_net_subnet_ip_count">maas_net_subnet_ip_count</a></li>
+<li><a href="#heading--maas_net_subnet_ip_dynamic">maas_net_subnet_ip_dynamic</a></li>
+<li><a href="#heading--maas_net_subnet_ip_reserved">maas_net_subnet_ip_reserved</a></li>
+<li><a href="#heading--maas_net_subnet_ip_static">maas_net_subnet_ip_static</a></li>
+<li><a href="#heading--maas_machines_total_mem">maas_machines_total_mem</a></li>
+<li><a href="#heading--maas_machines_total_cpu">maas_machines_total_cpu</a></li>
+<li><a href="#heading--maas_machines_total_storage">maas_machines_total_storage</a></li>
+<li><a href="#heading--maas_kvm_pods">maas_kvm_pods</a></li>
+<li><a href="#heading--maas_kvm_machines">maas_kvm_machines</a></li>
+<li><a href="#heading--maas_kvm_cores">maas_kvm_cores</a></li>
+<li><a href="#heading--maas_kvm_memory">maas_kvm_memory</a></li>
+<li><a href="#heading--maas_kvm_storage">maas_kvm_storage</a></li>
+<li><a href="#heading--maas_kvm_overcommit_cores">maas_kvm_overcommit_cores</a></li>
+<li><a href="#heading--maas_kvm_overcommit_memory">maas_kvm_overcommit_memory</a></li>
+<li><a href="#heading--maas_machine_arches">maas_machine_arches</a></li>
+<li><a href="#heading--maas_custom_static_images_uploaded">maas_custom_static_images_uploaded</a></li>
+<li><a href="#heading--maas_custom_static_images_deployed">maas_custom_static_images_deployed</a></li>
+<li><a href="#heading--maas_vmcluster_projects">maas_vmcluster_projects</a></li>
+<li><a href="#heading--maas_vmcluster_hosts">maas_vmcluster_hosts</a></li>
+<li><a href="#heading--maas_vmcluster_vms">maas_vmcluster_vms</a></li>
+<li><a href="#heading--performance-metrics">Performance metrics</a></li>
+<li><a href="#heading--maas_http_request_latency">maas_http_request_latency</a></li>
+<li><a href="#heading--maas_http_response_size">maas_http_response_size</a></li>
+<li><a href="#heading--maas_http_request_query_count">maas_http_request_query_count</a></li>
+<li><a href="#heading--maas_http_request_query_latency">maas_http_request_query_latency</a></li>
+<li><a href="#heading--maas_rack_region_rpc_call_latency">maas_rack_region_rpc_call_latency</a></li>
+<li><a href="#heading--maas_region_rack_rpc_call_latency">maas_region_rack_rpc_call_latency</a></li>
+<li><a href="#heading--maas_websocket_call_query_count">maas_websocket_call_query_count</a></li>
+<li><a href="#heading--maas_websocket_call_query_latency">maas_websocket_call_query_latency</a></li>
+<li><a href="#heading--maas_websocket_call_latency">maas_websocket_call_latency</a></li>
+<li><a href="#heading--maas_dns_update_latency">maas_dns_update_latency</a></li>
+<li><a href="#heading--maas_dns_full_zonefile_write_count">maas_dns_full_zonefile_write_count</a></li>
+<li><a href="#heading--maas_dns_dynamic_update_count">maas_dns_dynamic_update_count</a></li>
+<li><a href="#heading--maas_rpc_pool_exhaustion_count">maas_rpc_pool_exhaustion_count</a></li>
+<li><a href="#heading--maas_lxd_fetch_machine_failure">maas_lxd_fetch_machine_failure</a></li>
+<li><a href="#heading--maas_lxd_disk_creation_failure">maas_lxd_disk_creation_failure</a></li>
+<li><a href="#heading--maas_virsh_storage_pool_creation_failure">maas_virsh_storage_pool_creation_failure</a></li>
+<li><a href="#heading--maas_virsh_fetch_mac_failure">maas_virsh_fetch_mac_failure</a></li>
+<li><a href="#heading--maas_virsh_fetch_description_failure">maas_virsh_fetch_description_failure</a></li>
+<li><a href="#heading--maas_tftp_file_transfer_latency">maas_tftp_file_transfer_latency</a></li>
+</ul>
+<p><a href="#heading--cluster-metrics"><h2 id="heading--cluster-metrics">Cluster metrics</h2></a></p>
 <p><a href="#heading--maas_machines"><h3 id="heading--maas_machines">maas_machines</h3></a></p>
 <p>The number of machines known by MAAS, by status</p>
 <ul style="margin-left:4px; list-style-type:disc;">
