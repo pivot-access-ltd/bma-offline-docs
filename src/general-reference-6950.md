@@ -6,7 +6,7 @@ This section provides general reference information about MAAS.
 
 - [Installation requirements](/t/maas-installation-requirements/6233): MAAS has some minimal installation requirements that you'll want to follow.
 
-- [MAAS settings](/t/how-to-change-maas-settings/6347): Many things about MAAS can be customised.
+- [MAAS settings](/t/maas-settings-reference/6347): Many things about MAAS can be customised.
 
 - [MAAS source code](https://launchpad.net/maas): If you're interested in how MAAS works, the source code is available.
 
