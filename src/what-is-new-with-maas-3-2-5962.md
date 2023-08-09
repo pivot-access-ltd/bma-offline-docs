@@ -4,9 +4,13 @@
 
 Here you will find release notes for all releases under the 3.2 version.
 
+<a href="#heading--MAAS-3-2-8-release-notes"><h2 id="heading--MAAS-3-2-8-release-notes">MAAS 3.2.8 release notes</h2></a>
+
+We are happy to announce that MAAS 3.2.8 has been released.  This point release of MAAS 3.2 provides a number of [high-profile bug fixes](#heading--MAAS-3-2-8-bug-fixes).
+
 <a href="#heading--MAAS-3-2-7-release-notes"><h2 id="heading--MAAS-3-2-7-release-notes">MAAS 3.2.7 release notes</h2></a>
 
-We are happy to announce that MAAS 3.2.7 has been released.  This point releease of MAAS 3.2 provides a number of [high-profile bug fixes](#heading--MAAS-3-2-7-bug-fixes).
+We are happy to announce that MAAS 3.2.7 has been released.  This point release of MAAS 3.2 provides a number of [high-profile bug fixes](#heading--MAAS-3-2-7-bug-fixes).
 
 <a href="#heading--3-2-6-maas-release-notes"><h2 id="heading--3-2-6-maas-release-notes">MAAS 3.2.6 release notes</h2></a>
 
@@ -133,6 +137,17 @@ sudo apt upgrade maas
 ```
 
 At this point, proceed with a normal installation.
+
+<a href="#heading--MAAS-3-2-8-bug-fixes"><h2 id="heading--MAAS-3-2-8-bug-fixes">MAAS 3.2.8 bug fixes</h2></a>
+
+The following bugs have been fixed in MAAS 3.2.8:
+
+- [2009186](https://bugs.launchpad.net/maas/+bug/2009186)`↗`: CLI results in connection timed out when behind haproxy and 5240 is blocked 
+- [2009805](https://bugs.launchpad.net/maas/+bug/2009805)`↗`: machine deploy install_kvm=True fails 
+- [2012139](https://bugs.launchpad.net/maas/+bug/2012139)`↗`: maas commands occasionally fail with NO_CERTIFICATE_OR_CRL_FOUND when TLS is enabled 
+- [1807725](https://bugs.launchpad.net/maas/+bug/1807725)`↗`: Machine interfaces allow '_' character, results on a interface based domain breaking bind (as it doesn't allow it for the host part). 
+- [1979403](https://bugs.launchpad.net/maas/+bug/1979403)`↗`: commission failed with MAAS 3.1 when BMC has multiple channels but the first channel is disabled 
+- [1986590](https://bugs.launchpad.net/maas/+bug/1986590)`↗`: maas-cli from PPA errors out with traceback - ModuleNotFoundError: No module named 'provisioningserver'
 
 <a href="#heading--MAAS-3-2-7-bug-fixes"><h2 id="heading--MAAS-3-2-7-bug-fixes">MAAS 3.2.7 bug fixes</h2></a>
 
