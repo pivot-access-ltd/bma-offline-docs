@@ -1,21 +1,19 @@
 <!-- "Bootstrap MAAS" -->
-Welcome to the “Bootstrap MAAS” tutorial. By following this comprehensive guide, you will successfully set up and configure MAAS, a powerful tool for managing physical servers and data centres. During this tutorial, you will achieve the following:
+This guide will take you through getting MAAS set up to manage your physical servers and data centers.
 
-- **Installation**: You will learn how to install MAAS on your system, ensuring a solid foundation for managing your infrastructure.
+- **Installation**: We'll install the MAAS software on your target server along with any needed dependencies. 
 
-- **Database Setup**: You will create a secure PostgreSQL user and set up the MAAS database, enabling efficient management of your resources.
+- **Database setup**: Next, we'll configure a PostgreSQL database and user account for MAAS to use.
 
-- **Enhancing Security and Connectivity**: You will make necessary changes to enhance security and connectivity, ensuring a robust and protected environment.
+- **Security and connectivity enhancements**: We'll lock things down by enabling SSL encryption for the web UI and setting up VLAN connections to your servers. 
 
-- **MAAS Configuration**: You will configure MAAS according to your specific needs, including setting up DNS forwarders, selecting Ubuntu images, and more.
+- **Tweaking the MAAS configuration**: Once that foundation is in place, we can customize the MAAS config. We'll point it to the Ubuntu images you want, configure DNS and proxy settings, and so forth.
 
-- **SSH Access**: You will set up SSH access for admin users, allowing secure communication and administration of your infrastructure.
+- **Enabling SSH access**: We'll also enable SSH access so admin users can securely manage MAAS and the nodes.
 
-- **LXD Installation**: You will install LXD, a container hypervisor, and configure it to work seamlessly with MAAS, providing additional flexibility and resource management capabilities.
+- **LXD installation**: Finally, we'll install LXD containers and integrate them with MAAS. This lets you manage containers right next to physical boxes. We'll make sure LXD networking syncs up with MAAS DHCP too.
 
-- **DHCP Enablement**: You will enable DHCP communication with the LXD bridge, ensuring seamless networking for your virtual machines.
-
-By the end of this tutorial, you will have a fully operational MAAS setup. Let’s dive in and get started.
+When we're done, you'll have a full MAAS deployment ready for provisioning resources, and hopefully a pretty good overview of what it takes to get MAAS running.
 
 <a href="#heading--Activity-0-Preparing-the-Host-System"><h2 id="heading--Activity-0-Preparing-the-Host-System">Activity 0: Preparing the Host System</h2></a>
 
