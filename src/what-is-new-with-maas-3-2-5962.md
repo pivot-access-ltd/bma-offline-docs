@@ -4,6 +4,10 @@
 
 Here you will find release notes for all releases under the 3.2 version.
 
+<a href="#heading--maas-3-2-9-release-notes"><h2 id="heading--maas-3-2-9-release-notes">MAAS 3.2.9 release notes</h2></a>
+
+We are happy to announce that MAAS 3.2.9 has been released.  This point release of MAAS 3.2 provides four [high-profile bug fixes](#heading--MAAS-3-2-9-bug-fixes).
+
 <a href="#heading--MAAS-3-2-8-release-notes"><h2 id="heading--MAAS-3-2-8-release-notes">MAAS 3.2.8 release notes</h2></a>
 
 We are happy to announce that MAAS 3.2.8 has been released.  This point release of MAAS 3.2 provides a number of [high-profile bug fixes](#heading--MAAS-3-2-8-bug-fixes).
@@ -137,6 +141,15 @@ sudo apt upgrade maas
 ```
 
 At this point, proceed with a normal installation.
+
+<a href="#heading--MAAS-3-2-9-bug-fixes"><h2 id="heading--MAAS-3-2-9-bug-fixes">MAAS 3.2.9 bug fixes</h2></a>
+
+The following high-profile bugs have been fixed in MAAS 3.2.9:
+
+- [2027735](https://bugs.launchpad.net/maas/+bug/2027735)`↗`: Concurrent API calls don't get balanced between regiond processes
+- [2020397](https://bugs.launchpad.net/maas/+bug/2020397)`↗`: Custom images which worked ok is not working with 3.2
+- [2022926](https://bugs.launchpad.net/maas/+bug/2022926)`↗`: Wrong metadata url in enlist cloud-config
+- [2027621](https://bugs.launchpad.net/maas/+bug/2027621)`↗`: ipv6 addresses in dhcpd.conf
 
 <a href="#heading--MAAS-3-2-8-bug-fixes"><h2 id="heading--MAAS-3-2-8-bug-fixes">MAAS 3.2.8 bug fixes</h2></a>
 
