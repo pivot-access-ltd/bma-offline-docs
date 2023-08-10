@@ -1,11 +1,31 @@
-<!-- "A TCP/IP primer" -->
-Understanding networking fundamentals is essential for designing, operating, and troubleshooting MAAS networks. This tutorial offers a concise but hands-on overview of TCP/IP networking, covering the evolution of networks and the resilience of the OSI model. Whether you want to reinforce your knowledge or fill in gaps, this tutorial provides a customizable learning experience.
+<!-- "Demystifying TCP/IP Networking" -->
 
-Let's get started!
+Understanding networking fundamentals is essential for designing, operating, and troubleshooting MAAS networks. TCP/IP networking can seem complex at first, but by breaking it down into layers and core concepts, we can gain a solid understanding of how it works. In this hands-on tutorial, we'll cover:
+
+- [A brief history of networking](#heading--First-a-little-background)
+- [The OSI model](#heading--The-OSI-model)
 
 <a href="#heading--First-a-little-background"><h2 id="heading--First-a-little-background">First, a little background</h2></a>
 
-The history of the internet traces back to the mid-20th century, when computer networking began to take shape. Its origins are closely intertwined with the Plain Old Telephone System (POTS), the traditional landline telephone system, which served as the communications infrastructure before the internet era. Initially relying on circuit-switched networks, POTS faced limitations in data transmission, leading to the birth of packet-switched networks that formed the foundation of the internet.
+Centuries ago, John Milton wrote, "I cannot praise a fugitive and cloistered virtue," referring, at least in part, to those who keep their intelligence to themselves. Without some form of communication -- without manifesting that intelligence in word or deed -- there is generally no evidence of intelligence or intelligent life. Our knowledge must create ripples in space and time if it is to be shared, and it must be shared to benefit others.
+
+For this reason, we create networks, which might be defined as "channels of sharing". All virtue and all goodness is valued only in sharing, whether by having mercy on another person or communicating the answer to life, the universe, and everything. Only by sharing do we come to the notice of others, and only with the help of others do we share the load of living.
+
+<a href="#heading--channels-of-sharing-are-complicated"><h3 id="heading--channels-of-sharing-are-complicated">Channels of sharing are complicated</h3></a>
+
+Sharing involves risk. Will the other person understand? Will they accept what I've shared, or turn against me? Will they appreciate what I have shared, or judge me harshly? All communication involves the risks of misunderstanding, judgement, and ridicule. We must choose carefully when sharing information, tools, knowledge -- even compassion, love, loyalty, and devotion. In a way, that's one of the "equations" of living in a society, although public social media platforms have made that more, er, interesting.
+
+Often we segregate our sharing based on some measurable characteristic. For example, we share with people of our own race, gender, color, or national origin, but not with the "others". And we share in different ways with different social groups. In fact, you might say that the average person has as many personalities as there are groups of people whose opinions they care about: we are one person at home, another at the office, still another on the Internet, and yet another when we're golfing, as examples. Each of these channels can have different rules, mores, idioms, dialects, and vocabulary.
+
+As we grow up, we learn to be one self, sharing with everyone in very much the same way, restricting only what we share, not how we share it. You begin to deeply understand the basics of human communication. If you're serious about it, you begin to try to normalise your messaging to include less moody prejudice and more honest opinion, modulated only by personal privacy.
+
+Thus it has been with computer networks. For a very long time, there were at least as many network protocols -- selves -- as there were brands and styles of computers. Different methods were needed to share information from one system to another, sometimes even involving specially-crafted physical interface cables to handle the translation.
+
+Eventually, though, computer networks began to gravitate toward a standard approach, "one self to rule them all", as it were. This singular personality is known as TCP/IP.
+
+<a href="#heading--pots"><h3 id="heading--pots">POTS</h3></a>
+
+The history of the internet traces back to the mid-20th century, when computer networking began to take shape. Its origins are closely intertwined with the Plain Old Telephone System (POTS) -- the traditional landline telephone network -- which served as the communications infrastructure before the internet era. Initially relying on circuit-switched networks, POTS faced limitations in data transmission, leading to the birth of packet-switched networks that formed the foundation of the internet.
 
 In the 1960s, the U.S. Department of Defense's Advanced Research Projects Agency (ARPA) pioneered a decentralized communication network, resulting in the creation of ARPANET in 1969. ARPANET utilized packet-switching technology to transmit data packets across interconnected computers. As ARPANET expanded, the need for standardized protocols emerged, leading to the development of the Transmission Control Protocol/Internet Protocol (TCP/IP) in the 1970s. TCP/IP established a common language for diverse computer systems to communicate and laid the groundwork for the modern internet.
 
@@ -13,9 +33,17 @@ Later on, the internet evolved and became more accessible. The emergence of comm
 
 <a href="#heading--The-OSI-model"><h2 id="heading--The-OSI-model">The OSI model</h2></a>
 
-Let's dive in head-first: the pool might be very cold, but we'll quickly warm up to it!  Before we can try things, we need to get a quick grasp of the OSI model.
+The OSI (Open Systems Interconnection) model provides a conceptual framework for network communication by dividing it into 7 layers:
 
-The standardized OSI (Open Systems Interconnection) model divides network functions into seven layers.  Developed in the late 1970s, it consists of seven layers, namely: Physical, Data Link, Network, Transport, Session, Presentation, and Application. The bottom three layers (Physical, Data Link, and Network) handle data transmission and routing. The Physical layer manages the physical transmission of bits over a medium. The Data Link layer ensures reliable data frame transmission between directly connected devices. The Network layer handles addressing, routing, and logical organization across networks.
+- Physical - Transmits raw bit streams over a physical medium. Concerned with voltages, frequencies, cable types, connector pins, etc.
+- Data Link - Provides node-to-node data transfer across a network medium. Handles MAC addressing, framing, error checking, and flow control.
+- Network - Handles logical addressing and routing of data packets over multiple networks. IP and routing protocols like ARP operate here.
+- Transport - Manages end-to-end transmission and integrity of data. TCP and UDP operate at this layer.
+- Session - Establishes, maintains, and terminates sessions between local and remote applications. Handles session multiplexing.
+- Presentation - Formats and encrypts data for the application layer. Deals with syntax and semantics.
+- Application - Provides network services directly to end user applications. HTTP, FTP, SMTP etc. operate at this layer.
+
+This standardized model promotes modular design and interoperability between diverse systems. Developed in the late 1970s, it consists of seven layers, namely: Physical, Data Link, Network, Transport, Session, Presentation, and Application. The bottom three layers (Physical, Data Link, and Network) handle data transmission and routing. The Physical layer manages the physical transmission of bits over a medium. The Data Link layer ensures reliable data frame transmission between directly connected devices. The Network layer handles addressing, routing, and logical organization across networks.
 
 The Transport layer focuses on end-to-end data delivery, dividing data into segments and ensuring reliable transport between source and destination. It manages error recovery and flow control. The top three layers (Session, Presentation, and Application) are responsible for user interactions and application-specific functions. The Session layer establishes, maintains, and terminates communication sessions. The Presentation layer handles data formatting, encryption, and compression. The Application layer provides access to network services such as email, web browsing, and file transfer.
 

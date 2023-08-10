@@ -510,22 +510,313 @@
       </ul>
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>About TCP/IP networks</h1><!-- "About TCP/IP networks" -->
-<p>Good understanding of networking fundamentals makes it much easier to design, operate, and debug MAAS networks. You may have a good grasp of these fundamentals, but not everyone does, and that&rsquo;s perfectly normal.  Here&rsquo;s a quick refresher on TCP/IP networking, with references.  Feel free to pick and choose sections as you need them.</p>
-<p>TCP/IP networks evolved to meet a specific need: How can we keep a network functioning if important nodes go offline?  Well, you build the ARPAnet &ndash; now called the Internet &ndash; which relies heavily on TCP/IP networks.  The OSI model underlying TCP/IP can adapt to changing loads, handle significant failures, and strictly limit the network &ldquo;blast radius&rdquo; (yes, that&rsquo;s what it&rsquo;s called) when things go wrong.   </p>
-<p>This article is designed to help you learn:</p>
+      <h1>Demystifying TCP/IP Networking</h1><!-- "Demystifying TCP/IP Networking" -->
+
+<p>Understanding networking fundamentals is essential for designing, operating, and troubleshooting MAAS networks. TCP/IP networking can seem complex at first, but by breaking it down into layers and core concepts, we can gain a solid understanding of how it works. In this hands-on tutorial, we&rsquo;ll cover:</p>
 <ul style="margin-left:4px; list-style-type:disc;">
-<li><a href="#heading--about-the-internet">About the Internet</a></li>
-<li><a href="#heading--about-the-osi-model">About the OSI model</a></li>
-<li><a href="#heading--about-bond-interfaces">About bond interfaces</a></li>
-<li><a href="#heading--about-bridge-interfaces">About bridge interfaces</a></li>
-<li><a href="#heading--about-arp">About ARP</a></li>
-<li><a href="#heading--about-tcp">About TCP</a></li>
-<li><a href="#heading--about-dns">About DNS</a></li>
-<li><a href="#heading--other-network-elements">About other network elements</a></li>
+<li><a href="#heading--First-a-little-background">A brief history of networking</a></li>
+<li><a href="#heading--The-OSI-model">The OSI model</a></li>
 </ul>
+<p><a href="#heading--First-a-little-background"><h2 id="heading--First-a-little-background">First, a little background</h2></a></p>
+<p>Centuries ago, John Milton wrote, &ldquo;I cannot praise a fugitive and cloistered virtue,&rdquo; referring, at least in part, to those who keep their intelligence to themselves. Without some form of communication &ndash; without manifesting that intelligence in word or deed &ndash; there is generally no evidence of intelligence or intelligent life. Our knowledge must create ripples in space and time if it is to be shared, and it must be shared to benefit others.</p>
+<p>For this reason, we create networks, which might be defined as &ldquo;channels of sharing&rdquo;. All virtue and all goodness is valued only in sharing, whether by having mercy on another person or communicating the answer to life, the universe, and everything. Only by sharing do we come to the notice of others, and only with the help of others do we share the load of living.</p>
+<p><a href="#heading--channels-of-sharing-are-complicated"><h3 id="heading--channels-of-sharing-are-complicated">Channels of sharing are complicated</h3></a></p>
+<p>Sharing involves risk. Will the other person understand? Will they accept what I&rsquo;ve shared, or turn against me? Will they appreciate what I have shared, or judge me harshly? All communication involves the risks of misunderstanding, judgement, and ridicule. We must choose carefully when sharing information, tools, knowledge &ndash; even compassion, love, loyalty, and devotion. In a way, that&rsquo;s one of the &ldquo;equations&rdquo; of living in a society, although public social media platforms have made that more, er, interesting.</p>
+<p>Often we segregate our sharing based on some measurable characteristic. For example, we share with people of our own race, gender, color, or national origin, but not with the &ldquo;others&rdquo;. And we share in different ways with different social groups. In fact, you might say that the average person has as many personalities as there are groups of people whose opinions they care about: we are one person at home, another at the office, still another on the Internet, and yet another when we&rsquo;re golfing, as examples. Each of these channels can have different rules, mores, idioms, dialects, and vocabulary.</p>
+<p>As we grow up, we learn to be one self, sharing with everyone in very much the same way, restricting only what we share, not how we share it. You begin to deeply understand the basics of human communication. If you&rsquo;re serious about it, you begin to try to normalise your messaging to include less moody prejudice and more honest opinion, modulated only by personal privacy.</p>
+<p>Thus it has been with computer networks. For a very long time, there were at least as many network protocols &ndash; selves &ndash; as there were brands and styles of computers. Different methods were needed to share information from one system to another, sometimes even involving specially-crafted physical interface cables to handle the translation.</p>
+<p>Eventually, though, computer networks began to gravitate toward a standard approach, &ldquo;one self to rule them all&rdquo;, as it were. This singular personality is known as TCP/IP.</p>
+<p><a href="#heading--pots"><h3 id="heading--pots">POTS</h3></a></p>
+<p>The history of the internet traces back to the mid-20th century, when computer networking began to take shape. Its origins are closely intertwined with the Plain Old Telephone System (POTS) &ndash; the traditional landline telephone network &ndash; which served as the communications infrastructure before the internet era. Initially relying on circuit-switched networks, POTS faced limitations in data transmission, leading to the birth of packet-switched networks that formed the foundation of the internet.</p>
+<p>In the 1960s, the U.S. Department of Defense&rsquo;s Advanced Research Projects Agency (ARPA) pioneered a decentralized communication network, resulting in the creation of ARPANET in 1969. ARPANET utilized packet-switching technology to transmit data packets across interconnected computers. As ARPANET expanded, the need for standardized protocols emerged, leading to the development of the Transmission Control Protocol/Internet Protocol (TCP/IP) in the 1970s. TCP/IP established a common language for diverse computer systems to communicate and laid the groundwork for the modern internet.</p>
+<p>Later on, the internet evolved and became more accessible. The emergence of commercial ISPs in the 1990s brought internet access to the general public, while the World Wide Web introduced a user-friendly interface for browsing and accessing information. Today, the internet connects billions of devices globally, facilitating communication, information sharing, e-commerce, and more. The transformation of POTS from circuit-switched to packet-switched networks played a pivotal role in paving the way for the creation of the internet, revolutionizing our modern digital landscape.</p>
+<p><a href="#heading--The-OSI-model"><h2 id="heading--The-OSI-model">The OSI model</h2></a></p>
+<p>The OSI (Open Systems Interconnection) model provides a conceptual framework for network communication by dividing it into 7 layers:</p>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li>Physical - Transmits raw bit streams over a physical medium. Concerned with voltages, frequencies, cable types, connector pins, etc.</li>
+<li>Data Link - Provides node-to-node data transfer across a network medium. Handles MAC addressing, framing, error checking, and flow control.</li>
+<li>Network - Handles logical addressing and routing of data packets over multiple networks. IP and routing protocols like ARP operate here.</li>
+<li>Transport - Manages end-to-end transmission and integrity of data. TCP and UDP operate at this layer.</li>
+<li>Session - Establishes, maintains, and terminates sessions between local and remote applications. Handles session multiplexing.</li>
+<li>Presentation - Formats and encrypts data for the application layer. Deals with syntax and semantics.</li>
+<li>Application - Provides network services directly to end user applications. HTTP, FTP, SMTP etc. operate at this layer.</li>
+</ul>
+<p>This standardized model promotes modular design and interoperability between diverse systems. Developed in the late 1970s, it consists of seven layers, namely: Physical, Data Link, Network, Transport, Session, Presentation, and Application. The bottom three layers (Physical, Data Link, and Network) handle data transmission and routing. The Physical layer manages the physical transmission of bits over a medium. The Data Link layer ensures reliable data frame transmission between directly connected devices. The Network layer handles addressing, routing, and logical organization across networks.</p>
+<p>The Transport layer focuses on end-to-end data delivery, dividing data into segments and ensuring reliable transport between source and destination. It manages error recovery and flow control. The top three layers (Session, Presentation, and Application) are responsible for user interactions and application-specific functions. The Session layer establishes, maintains, and terminates communication sessions. The Presentation layer handles data formatting, encryption, and compression. The Application layer provides access to network services such as email, web browsing, and file transfer.</p>
+<p>While real-world protocols may not strictly adhere to the OSI model, it help a lot in understanding network communication by breaking it down into discrete layers. The model promotes standardization, modularity, and interoperability in networking protocols, facilitating troubleshooting and development.</p>
+<p><a href="#heading--Enough-talk-lets-do-something"><h3 id="heading--Enough-talk-lets-do-something">Enough talk, let&rsquo;s do something</h3></a></p>
+<p>Here&rsquo;s a <code>ping</code> exercise that demonstrates the network layer functionality in the OSI model:</p>
+<ol>
+<li>
+<p>Open the command prompt or terminal (hint: on Ubuntu, press <code>Ctrl + Alt + T</code> &ndash; this works even if you&rsquo;re running Emacs!):</p>
+</li>
+<li>
+<p>Type &ldquo;ping www.google.com&rdquo; and press <code>Enter</code>; <code>ping</code> is used to test connectivity and measure the round-trip time (RTT) between your computer and a remote host. By specifying &ldquo;www.google.com&rdquo; as the destination, you are pinging Google&rsquo;s server.</p>
+</li>
+<li>
+<p>Observe the output, which will display information about the ICMP packets sent and received. Each line represents a round-trip time (RTT) measurement. <code>ping</code> sends ICMP <em>Echo Request</em> packets to the destination, and if the remote server is reachable, it responds with ICMP <em>Echo Reply</em> packets.  The output will show the RTT in milliseconds (ms) for each packet sent and received, along with statistics about packet loss and round-trip times, something like this:</p>
+</li>
+</ol>
+<pre><code class="language-nohighlight">Pinging www.google.com [172.217.169.132] with 32 bytes of data:
+Reply from 172.217.169.132: bytes=32 time=13ms TTL=56
+Reply from 172.217.169.132: bytes=32 time=12ms TTL=56
+Reply from 172.217.169.132: bytes=32 time=14ms TTL=56
+Reply from 172.217.169.132: bytes=32 time=11ms TTL=56
+
+Ping statistics for 172.217.169.132:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milliseconds:
+    Minimum = 11ms, Maximum = 14ms, Average = 12ms
+</code></pre>
+<h4>What you just did</h4>
+<ul style="margin-left:4px; list-style-type:disc;">
+<li><code>ping</code> operates at the Network layer (Layer 3) of the OSI model. It uses ICMP (Internet Control Message Protocol) packets to test connectivity and measure the RTT between your computer and the destination host.</li>
+<li>When you execute the command, your computer constructs an ICMP Echo Request packet and sends it to the destination (in this case, www.google.com).</li>
+<li>If the destination host is reachable and not blocking ICMP traffic, it will respond with an ICMP Echo Reply packet, indicating that the destination is reachable.</li>
+<li>The output displays information about the packets sent and received, including the RTT, TTL (Time-to-Live), and packet size.</li>
+<li>The statistics section at the end provides a summary of the ping session, including the number of packets sent, received, and lost, as well as the minimum, maximum, and average RTT.</li>
+</ul>
+<p>By using the &ldquo;ping&rdquo; command, you can verify network connectivity, diagnose network issues, and measure the latency between your computer and a remote host, showcasing the functionality of the Network layer in the OSI model.</p>
+<p><a href="#heading--Let's-go-up-a-few-levels"><h3 id="heading--Let's-go-up-a-few-levels">Let&rsquo;s go up a few levels</h3></a></p>
+<p>Let&rsquo;s access a chess server, in the terminal, using ASCII:</p>
+<ol>
+<li>
+<p>Open the command prompt or terminal.</p>
+</li>
+<li>
+<p>Type &ldquo;telnet freechess.org 5000&rdquo; and press Enter.</p>
+</li>
+<li>
+<p>Watch as you receive a login prompt for an online, ASCII chess server.</p>
+</li>
+</ol>
+<h4>What you just did</h4>
+<p>The &ldquo;telnet&rdquo; command establishes a Telnet session with the specified host (freechess.org in this case) at a specific port (5000, in this case). Telnet is an <em>application layer</em> protocol that allows you to remotely access and control another computer or device. This exercise demonstrates how applications can use the Application layer (Layer 7) of the OSI model to provide specific services.</p>
+<p><a href="#heading--The-Physical-layer-Layer-1"><h3 id="heading--The-Physical-layer-Layer-1">The Physical layer (Layer 1)</h3></a></p>
+<ol>
+<li>
+<p>Open the terminal: Press Ctrl + Alt + T to open the terminal.</p>
+</li>
+<li>
+<p>Use the ip command to gather information about network interfaces:</p>
+</li>
+</ol>
+<pre><code class="language-nohighlight">ip link show
+</code></pre>
+<h4>What you just did</h4>
+<p>In networking, Layer 1 refers to the Physical layer of the OSI model. It is the lowest layer and deals with the physical transmission of data. Layer 1 interfaces provide the means to connect devices to a network and transfer data in the form of electrical, optical, or radio signals. This command <code>ip link show</code> displays a list of network interfaces &ndash; links &ndash; on your system along with their state, MAC address, and other details. Each network interface &ndash; each &ldquo;link&rdquo; &ndash; operates at the Physical layer (Layer 1) of the OSI model.</p>
+<p>Here are some more revelant details on the links you might find at this level:</p>
+<ol>
+<li>
+<p><strong>Network Interface Card (NIC)</strong>: A Network Interface Card, commonly known as a NIC or network adapter, is a hardware component that allows a device to connect to a network. It can be an Ethernet card, Wi-Fi card, or other types of interface.  The NIC is responsible for converting data from the device into a format suitable for transmission over the network medium, such as electrical signals for wired connections or radio waves for wireless connections. Examples of NICs include Ethernet cards for wired connections or Wi-Fi cards for wireless connections.</p>
+</li>
+<li>
+<p><strong>Ethernet Cable</strong>: Ethernet cables are used for wired network connections and are commonly used in home and office environments.  They consist of copper wires inside an insulated casing and come in different categories such as Cat 5, Cat 6, or Cat 7, offering varying levels of performance.  Ethernet cables connect devices, such as computers or routers, to Ethernet ports on NICs, switches, or routers, enabling the transmission of data at high speeds.</p>
+</li>
+<li>
+<p><strong>Fiber Optic Cable</strong>:  Fiber optic cables use thin strands of glass or plastic to transmit data as pulses of light.  They offer high-speed and long-distance data transmission capabilities, making them ideal for high-bandwidth applications or for connecting geographically distant locations.  Fiber optic cables are used in various networking environments, including telecommunications networks, data centers, and high-speed internet connections.</p>
+</li>
+<li>
+<p><strong>Wireless Interfaces</strong>: Wireless interfaces, such as Wi-Fi or Bluetooth, enable wireless communication between devices.  Wi-Fi interfaces use radio waves to transmit data over the air, allowing devices to connect to a wireless network and access the internet or communicate with other devices.  Bluetooth interfaces are used for short-range wireless connections between devices, such as connecting a smartphone to a wireless headset or a laptop to a wireless mouse.</p>
+</li>
+<li>
+<p><strong>Network Connectors</strong>: Network connectors are physical connectors that join network cables to networking devices or interfaces. Common network connectors include RJ-45 connectors for Ethernet cables, which are commonly used for wired connections, and various connectors such as LC or SC connectors for fiber optic cables.  These connectors ensure a secure and reliable connection between the cable and the networking device.</p>
+</li>
+</ol>
+<p>Layer 1 interfaces, such as NICs, cables, and connectors, play a crucial role in establishing the physical connectivity required for network communication. They handle the transmission of signals, whether electrical, optical, or radio waves, to ensure that data can be sent and received across the network. Understanding Layer 1 interfaces is fundamental in comprehending how devices connect and interact within a network infrastructure.</p>
+<p><a href="#heading--The-Data-Link-layer-Layer-2"><h3 id="heading--The-Data-Link-layer-Layer-2">The Data Link layer (Layer 2)</h3></a></p>
+<p>Let&rsquo;s explore the Data Link layer &ndash; Layer 2 &ndash; which is the next layer up.</p>
+<h4>MAC addresses</h4>
+<p>Run the following command:</p>
+<pre><code class="language-nohighlight">ifconfig
+</code></pre>
+<h4>What you just did</h4>
+<p>Running the ifconfig command on Linux/macOS or ipconfig on Windows will display the network interface configuration, including the MAC (Media Access Control) address of each interface.  You may see the MAC address labeled as <code>ether</code>.  The MAC address, also known as the hardware address, is a unique identifier assigned to the network interface card (NIC) at the Data Link layer (Layer 2) of the OSI model.  </p>
+<p>By &ldquo;unique&rdquo;, we mean that no other Internet-facing device has the same address, so network devices can find that MAC address in exactly one place in the world.  For example, when someone puts your unique street address, city, state, and zipcode on a letter, it means that (theoretically) it should only be delivered to one mailbox in the world.  By examining the MAC addresses, you can identify the devices or interfaces on the local network, but by their global addresses.</p>
+<p>You might notice that the <code>lo</code> (loopback) address doesn&rsquo;t have a MAC address.  This is because the loopback is an internal connection that never ventures onto the internet.  Think of this like telling someone that &ldquo;the mail is on the kitchen table&rdquo; &ndash; it works fine if you&rsquo;re in your own house, but it would only cause confusion if you used &ldquo;kitchen table&rdquo; in the outside world.</p>
+<h4>arp</h4>
+<p>Type the following command (on Ubuntu):</p>
+<pre><code class="language-nohighlight">arp -n
+</code></pre>
+<p>You&rsquo;ll probably get an output something like this:</p>
+<pre><code class="language-nohighlight">$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.156.28.2              ether   00:16:3e:f6:8b:90   C                     lxdbr0
+192.168.1.1              ether   d0:76:8f:e6:94:1a   C                     enx606d3c64581d
+192.168.1.101                    (incomplete)                              enx606d3c64581d
+192.168.1.247            ether   0c:8b:7d:f1:51:d3   C                     enx606d3c64581d
+192.168.1.245            ether   ca:29:14:2b:92:39   C                     enx606d3c64581d
+192.168.122.72                   (incomplete)                              virbr0
+192.168.1.184            ether   8c:19:b5:b6:d3:c1   C                     enx606d3c64581d
+</code></pre>
+<h4>What you just did</h4>
+<p>The arp (Address Resolution Protocol) command displays and manages the ARP cache, which is used to map IP addresses to MAC addresses.
+Running arp -a on Windows or arp -n on Linux/macOS will show the current entries in the ARP cache, including IP addresses and associated MAC addresses.
+The ARP protocol operates at the Data Link layer (Layer 2) and is responsible for resolving IP addresses to MAC addresses within the local network.</p>
+<p>Well, we say &ldquo;operates at Layer 2&rdquo;, but in fact, as you can see from the listing above, it&rsquo;s the go-between for Layer 2 (MAC addresses) and Layer 3 (TCP/IP addresses).  More on this later, maybe.</p>
+<h4>Screwdriver and pliers together</h4>
+<p>Let&rsquo;s try using the output of <code>ifconfig</code> and feeding it to another tool (<code>ethtool</code>) to get details.  Enter this command:</p>
+<pre><code class="language-nohighlight">ifconfig | grep -m 1 &quot;^[a-z0-9]*:&quot; | sed -e's/\(^[a-z0-9]*\):.*$/\1/' | xargs -I {} sh -c &quot;ethtool {}&quot;
+</code></pre>
+<p>The output might look something like this, depending upon which of your links is found first by <code>ifconfig</code>:</p>
+<pre><code class="language-nohighlight">Settings for enx606d3c64581d:
+    Supported ports: [ TP    MII ]
+    Supported link modes:   10baseT/Half 10baseT/Full
+                            100baseT/Half 100baseT/Full
+                            1000baseT/Half 1000baseT/Full
+    Supported pause frame use: No
+    Supports auto-negotiation: Yes
+    Supported FEC modes: Not reported
+    Advertised link modes:  10baseT/Half 10baseT/Full
+                            100baseT/Half 100baseT/Full
+                            1000baseT/Full
+    Advertised pause frame use: No
+    Advertised auto-negotiation: Yes
+    Advertised FEC modes: Not reported
+    Link partner advertised link modes:  10baseT/Half 10baseT/Full
+                                         100baseT/Half 100baseT/Full
+                                         1000baseT/Full
+    Link partner advertised pause frame use: Symmetric Receive-only
+    Link partner advertised auto-negotiation: Yes
+    Link partner advertised FEC modes: Not reported
+    Speed: 1000Mb/s
+    Duplex: Full
+    Auto-negotiation: on
+    Port: MII
+    PHYAD: 32
+    Transceiver: internal
+netlink error: Operation not permitted
+        Current message level: 0x00007fff (32767)
+                               drv probe link timer ifdown ifup rx_err tx_err tx_queued intr tx_done rx_status pktdata hw wol
+    Link detected: yes
+</code></pre>
+<h4>What you just did</h4>
+<p>Apart from a little Rube Goldberg CLI magic, this command runs <code>ethtool</code> on a specific link to gather its details.  The <code>ethtool</code> command provides information and configuration options for Ethernet interfaces.  Running <code>ethtool &lt;interface_name&gt;</code> will &ndash; as you see &ndash; display details such as link status, speed, duplex mode, and supported features of the interface.  This command allows you to retrieve information about the Ethernet interface&rsquo;s capabilities and link status at the Data Link layer (Layer 2).</p>
+<h4>Layer 2 x-ray machine</h4>
+<p>Try the following command:</p>
+<pre><code class="language-nohighlight">ifconfig | grep -m 1 &quot;^[a-z0-9]*:&quot; | sed -e's/\(^[a-z0-9]*\):.*$/\1/' | xargs -I {} sh -c &quot;sudo tcpdump -i {}&quot;
+</code></pre>
+<p>You&rsquo;ll get a never-ending stream of network information (you can stop it by typing <code>Ctrl-c</code>; here&rsquo;s a typical digest of the first few lines:</p>
+<pre><code class="language-nohighlight">tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enx606d3c64581d, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+17:54:37.754586 IP ys-in-f102.1e100.net.https &gt; neuromancer.home.32874: UDP, length 261
+17:54:37.755120 IP neuromancer.home.32874 &gt; ys-in-f102.1e100.net.https: UDP, length 35
+17:54:37.755358 IP ys-in-f102.1e100.net.https &gt; neuromancer.home.32874: UDP, length 1250
+17:54:37.755358 IP ys-in-f102.1e100.net.https &gt; neuromancer.home.32874: UDP, length 181
+17:54:37.770914 IP neuromancer.home.52240 &gt; router.home.domain: 20554+ [1au] PTR? 100.1.168.192.in-addr.arpa. (55)
+17:54:37.772523 IP router.home.domain &gt; neuromancer.home.52240: 20554* 1/0/1 PTR neuromancer.home. (85)
+17:54:37.773830 IP neuromancer.home.59034 &gt; router.home.domain: 38747+ [1au] PTR? 102.124.253.172.in-addr.arpa. (57)
+17:54:37.790499 IP neuromancer.home.32874 &gt; ys-in-f102.1e100.net.https: UDP, length 32
+17:54:37.792160 IP router.home.domain &gt; neuromancer.home.59034: 38747 1/0/1 PTR ys-in-f102.1e100.net. (91)
+17:54:37.799052 IP ys-in-f102.1e100.net.https &gt; neuromancer.home.32874: UDP, length 24
+17:54:37.805083 IP ys-in-f102.1e100.net.https &gt; neuromancer.home.32874: UDP, length 1218
+17:54:37.805454 IP neuromancer.home.32874 &gt; ys-in-f102.1e100.net.https: UDP, length 33
+17:54:37.866323 IP neuromancer.home.46036 &gt; router.home.domain: 55474+ [1au] PTR? 1.1.168.192.in-addr.arpa. (53)
+17:54:37.868183 IP router.home.domain &gt; neuromancer.home.46036: 55474* 1/0/1 PTR router.home. (78)
+17:54:38.004210 d0:76:8f:e6:94:1a (oui Unknown) &gt; 01:80:c2:00:00:13 (oui Unknown), ethertype IEEE1905.1 (0x893a), length 64: 
+    0x0000:  0000 0000 6128 0080 0100 06d0 768f e694  ....a(......v...
+    0x0010:  1a02 0006 d076 8fe6 941c 0000 0000 0000  .....v..........
+    0x0020:  0000 0000 0000 0000 0000 0000 0000 0000  ................
+    0x0030:  0000                                     ..
+17:54:38.531517 IP6 neuromancer.dhcpv6-client &gt; ff02::1:2.dhcpv6-server: dhcp6 solicit
+17:54:38.533668 IP6 fe80::d276:8fff:fee6:941a.dhcpv6-server &gt; neuromancer.dhcpv6-client: dhcp6 reply
+17:54:38.594705 IP neuromancer.home.40063 &gt; router.home.domain: 20998+ [1au] PTR? 2.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa. (101)
+17:54:38.614325 IP router.home.domain &gt; neuromancer.home.40063: 20998 NXDomain 0/1/1 (165)
+17:54:38.614802 IP neuromancer.home.40063 &gt; router.home.domain: 20998+ PTR? 2.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa. (90)
+17:54:38.616383 IP router.home.domain &gt; neuromancer.home.40063: 20998 NXDomain 0/0/0 (90)
+17:54:38.895465 IP neuromancer.home.34598 &gt; 192.168.1.247.8009: Flags [P.], seq 1620890202:1620890312, ack 1698989308, win 524, options [nop,nop,TS val 1031552033 ecr 2257976407], length 110
+17:54:38.899322 IP 192.168.1.247.8009 &gt; neuromancer.home.34598: Flags [P.], seq 1:111, ack 110, win 677, options [nop,nop,TS val 2257981415 ecr 1031552033], length 110
+17:54:38.899435 IP neuromancer.home.34598 &gt; 192.168.1.247.8009: Flags [.], ack 111, win 524, options [nop,nop,TS val 1031552037 ecr 2257981415], length 0
+17:54:38.906072 IP neuromancer.home.33717 &gt; router.home.domain: 50660+ [1au] PTR? 247.1.168.192.in-addr.arpa. (55)
+17:54:38.907992 IP router.home.domain &gt; neuromancer.home.33717: 50660 NXDomain* 0/0/1 (55)
+17:54:38.908297 IP neuromancer.home.33717 &gt; router.home.domain: 50660+ PTR? 247.1.168.192.in-addr.arpa. (44)
+17:54:38.909967 IP router.home.domain &gt; neuromancer.home.33717: 50660 NXDomain* 0/0/0 (44)
+17:54:39.216802 STP 802.1d, Config, Flags [none], bridge-id 0000.d0:76:8f:e6:94:1a.8003, length 35
+17:54:39.810480 IP neuromancer.home.42579 &gt; yi-in-f100.1e100.net.https: UDP, length 176
+17:54:39.828278 IP yi-in-f100.1e100.net.https &gt; neuromancer.home.42579: UDP, length 28
+17:54:39.839019 IP neuromancer.home.42579 &gt; yi-in-f100.1e100.net.https: UDP, length 33
+17:54:39.846436 IP neuromancer.home.44791 &gt; router.home.domain: 8318+ [1au] PTR? 100.138.125.74.in-addr.arpa. (56)
+17:54:39.865344 IP router.home.domain &gt; neuromancer.home.44791: 8318 1/0/1 PTR yi-in-f100.1e100.net. (90)
+17:54:39.871586 IP yi-in-f100.1e100.net.https &gt; neuromancer.home.42579: UDP, length 619
+17:54:39.871586 IP yi-in-f100.1e100.net.https &gt; neuromancer.home.42579: UDP, length 35
+17:54:39.871586 IP yi-in-f100.1e100.net.https &gt; neuromancer.home.42579: UDP, length 252
+17:54:39.872203 IP neuromancer.home.42579 &gt; yi-in-f100.1e100.net.https: UDP, length 36
+17:54:39.876566 IP neuromancer.home.42579 &gt; yi-in-f100.1e100.net.https: UDP, length 33
+</code></pre>
+<h4>What you just did</h4>
+<p>The tcpdump command is a packet analyzer available on various Unix-like systems. By using specific filters, such as capturing packets on a specific interface (<code>-i &lt;interface_name&gt;</code>) or based on specific protocols, you can examine Layer 2 frames and their contents in real-time.  <code>tcpdump</code> allows you to capture and analyze network traffic, including Ethernet frames, providing insights into the communication at the Data Link layer (Layer 2).</p>
+<p>These command line commands provide visibility into Layer 2 aspects of networking, such as MAC addresses, ARP cache, Ethernet interface configuration, and packet analysis. They can help you understand and troubleshoot issues related to Layer 2 connectivity, addressing, and protocols.  We&rsquo;ll come back to some of these tools much later on.</p>
+<p><a href="#heading--Investigate-IP-addresses-and-routing"><h3 id="heading--Investigate-IP-addresses-and-routing">Investigate IP addresses and routing</h3></a></p>
+<p>Type the following command and press Enter:</p>
+<pre><code class="language-nohighlight">ip address show
+</code></pre>
+<h4>What you just did</h4>
+<p>This command will show the IP addresses assigned to your network interfaces. IP addresses operate at the Network layer (Layer 3) of the OSI model. You can see the assigned IP addresses, subnet masks, and other related information.</p>
+<p>IP addresses are fundamental to network communication and are used at the Network layer (Layer 3) of the OSI model. An IP address is a unique numerical identifier assigned to each device connected to a network. It allows devices to send and receive data across networks, enabling communication between different devices and networks on the internet.</p>
+<p>IP addresses consist of a series of numbers separated by periods (IPv4) or a combination of numbers and letters (IPv6). IPv4 addresses are widely used and typically written as four sets of numbers ranging from 0 to 255, such as &ldquo;192.168.0.1&rdquo;. IPv6 addresses are becoming more prevalent and have a different format, represented as eight groups of four hexadecimal digits, separated by colons.</p>
+<p>Now, type the following command and press Enter:</p>
+<pre><code class="language-nohighlight">ip route show
+</code></pre>
+<h4>What you just did:</h4>
+<p>This command will display the routing table, which lists the available routes to different networks. It includes information about the destination network, gateway, and interface used for routing. Routing operates at the Network layer (Layer 3) of the OSI model.</p>
+<p>Routing is the process of directing data packets from a source device to a destination device across interconnected networks. It occurs at the Network layer (Layer 3) of the OSI model. Routers, which operate at this layer, play a crucial role in the routing process.</p>
+<p>When a device sends data to a destination, the data is divided into packets, each containing the source and destination IP addresses. Routers examine the destination IP address of each packet and determine the best path or route to reach the destination network. They make routing decisions based on routing tables, which contain information about available routes and associated metrics.</p>
+<p>Routers use protocols such as OSPF (Open Shortest Path First) or BGP (Border Gateway Protocol) to exchange routing information and update their routing tables dynamically. This enables routers to adapt to changes in network topology, find the most efficient routes, and ensure that data packets are delivered accurately and efficiently across the network. Routing allows devices on different networks to communicate with each other, enabling data to traverse multiple networks and reach its intended destination.</p>
+<p><a href="#heading--The-Transport-layer-Layer-4"><h3 id="heading--The-Transport-layer-Layer-4">The Transport layer (Layer 4)</h3></a></p>
+<p>Type the following command and press <code>Enter</code>:</p>
+<pre><code class="language-nohighlight">ss -tunap
+</code></pre>
+<p>You&rsquo;ll see output that looks similar to this:</p>
+<pre><code class="language-nohighlight">tcp   LISTEN     0      128                                           [::]:17500                       [::]:*        users:((&quot;dropbox&quot;,pid=2746,fd=59))         
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   LISTEN     0      10     [fe80::b9e0:1f84:f462:319a]%enx606d3c64581d:53                          [::]:*                                                   
+tcp   ESTAB      0      0                         [fd42:60eb:6f56:329a::1]:5251    [fd42:60eb:6f56:329a::1]:44536                         
+</code></pre>
+<h4>What you just did</h4>
+<p>This command will show active TCP and UDP connections on your system, along with their respective protocol information. TCP and UDP operate at the Transport layer (Layer 4) of the OSI model. You can see the local and remote IP addresses, port numbers, and connection states.</p>
 <p><strong>NOTE:</strong> 
-While some standard networking concepts, such as PXE booting, RPC, subnets, power drivers, and proxies are not unique to MAAS, they are sometimes used in a unique way by MAAS &ndash; so we explain these concepts in the article entitled &ldquo;<a href="#heading--How-MAAS-networks">About MAAS networking</a>&rdquo;.</p>
+There&rsquo;s an old joke you can use to remember these options to <code>ss</code>: &ldquo;You can tune a piano, but you can&rsquo;t tuna fish&rdquo; (<code>ss -tunap</code>).</p>
+<p><a href="#heading--Higher-layer-protocols"><h3 id="heading--Higher-layer-protocols">Higher layer protocols</h3></a></p>
+<p>Layer 5 of the OSI model, the Session layer, primarily handles session establishment, maintenance, and termination between communicating systems. It is responsible for managing dialogue coordination and synchronization. However, the Session layer is more abstract and typically implemented within the application layer protocols rather than being directly accessed through command-line commands. Layer 6 of the OSI model, the Presentation layer, is responsible for the representation and transformation of data in a manner that is independent of the application layer syntax. It focuses on ensuring that data from the application layer of one system can be properly interpreted by the application layer of another system.  Sadly, there are no specific command-line commands that provide direct, basic tutorial insight into Layer 5 and 6 functionalities. </p>
+<p>But we can certainly take a good look at Layer 7.  Type the following command and press <code>Enter</code>:</p>
+<pre><code class="language-nolighlight">sudo lsof -i
+</code></pre>
+<p>Representative output would look something like this, roughly:</p>
+<pre><code class="language-nohighlight">COMMAND      PID            USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+systemd        1            root  106u  IPv6   34911      0t0  TCP *:ssh (LISTEN)
+systemd-r    948 systemd-resolve   13u  IPv4   31933      0t0  UDP localhost:domain 
+avahi-dae   1116           avahi   12u  IPv4   28216      0t0  UDP *:mdns 
+NetworkMa   1191            root   27u  IPv4   33515      0t0  UDP neuromancer.home:bootpc-&gt;router.home:bootps 
+postgres    1379        postgres    3u  IPv4   35163      0t0  TCP localhost:postgresql (LISTEN)
+dnsmasq     1744 libvirt-dnsmasq    3u  IPv4   38180      0t0  UDP *:bootps 
+tor         1836      debian-tor    6u  IPv4   33600      0t0  TCP localhost:9050 (LISTEN)
+slapd       1866        openldap    9u  IPv6   33551      0t0  TCP *:ldap (LISTEN)
+proton-br   2680      stormrider   14u  IPv4   41368      0t0  TCP localhost:1143 (LISTEN)
+dropbox     2746      stormrider   40u  IPv4 8770210      0t0  TCP neuromancer.home:46568-&gt;162.125.21.2:https (ESTABLISHED)
+lxd         3550            root   20u  IPv6   41323      0t0  TCP *:8443 (LISTEN)
+sshd      221835            root    3u  IPv6   34911      0t0  TCP *:ssh (LISTEN)
+cupsd     328391            root    7u  IPv6 6125279      0t0  TCP ip6-localhost:ipp (LISTEN)
+cupsd     328391            root    8u  IPv4 6125280      0t0  TCP localhost:ipp (LISTEN)
+postgres  372592        postgres    5u  IPv4 7066887      0t0  TCP localhost:5434 (
+chrome    405575      stormrider  310u  IPv4 8285829      0t0  UDP 224.0.0.251:mdns 
+ssh       407687      stormrider    3u  IPv4 7680407      0t0  TCP neuromancer.home:57418-&gt;stormrider:ssh (ESTABLISHED)
+python3   417174            root    9u  IPv6 7864004      0t0  TCP *:5249 (LISTEN)
+rsyslogd  417289            root    5u  IPv4 7869618      0t0  TCP *:5247 (LISTEN)
+chronyd   417291            root    3u  IPv4 7866040      0t0  UDP localhost:323 
+named     417334            root   40u  IPv4 7867212      0t0  TCP localhost:954 (LISTEN)
+squid     417573     snap_daemon    8u  IPv6 7868077      0t0  UDP *:48082 
+nginx     417623            root    5u  IPv6 7873193      0t0  TCP *:5248 (LISTEN)
+dhcpd     417667            root    9u  IPv4 7873979      0t0  UDP *:bootps 
+</code></pre>
+<p>As you can see, <code>lsof</code> lists open network connections and the associated processes on your system. It can help identify higher layer protocols and services running on specific ports. Protocols such as HTTP, FTP, SSH, or DNS operate at the Application layer (Layer 7) of the OSI model.  Understand that is isn&rsquo;t a process list, just a list of processes that are actively using network connections.</p>
+<p><a href="#heading--Now-some-network-theory"><h2 id="heading--Now-some-network-theory">Now some network theory</h2></a></p>
+<p>Now that you have some tools we can use to prove our points, let&rsquo;s back up and walk through the theory of TCP/IP networks, a little more slowly this time.</p>
 <p><a href="#heading--about-the-internet"><h3 id="heading--about-the-internet">About the Internet</h3></a></p>
 <p>A network could be nothing more than a bunch of computers connected with wires. This isn&rsquo;t efficient or affordable.  Obviously, many wires are hard to keep straight. Also, impedance would dampen the signals after a relatively short run of wire.  An easier way is the Internet infrastructure, which is an <a href="https://www.cisco.com/c/en/us/td/docs/solutions/Enterprise/Data_Center/DC_Infra2_5/DCInfra_2.html">access-aggregation-core (AAC)</a><code>↗</code> network.  AAC looks something like this: </p>
 <p><a href="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg" target="_blank"><img src="https://discourse.maas.io/uploads/default/original/2X/e/e15a35da43b2788883ec014efb1832b8f641e872.jpeg"></a></p>
