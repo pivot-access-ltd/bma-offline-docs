@@ -3,11 +3,11 @@
 The following technical explanations will help you learn about various
 features and prerequisites of MAAS:
 
-- [MAAS]((/t/-/6678): A general overview of MAAS itself, for those new to
+- [MAAS](/t/-/6678): A general overview of MAAS itself, for those new to
   the product.
 - \[High availability\](/t/-/6992): A quick spin on how MAAS does HA, much
   of which is automatic.
-- [MAAS networks](/t/-/5084): Details on MAAS networking; these are the
+- \[MAAS networks\](/t/-/5084): Details on MAAS networking; these are the
   concepts and applications that are relatively unique to MAAS instances.
 - [TCP/IP primer](/t/-/6683): Basic explanations of TCP/IP network basics,
   for those who want to level up. Hey, no judgment!
