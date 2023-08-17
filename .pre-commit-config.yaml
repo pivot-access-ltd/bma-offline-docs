@@ -1,9 +1,9 @@
 repos:
 -   repo: local
     hooks:
-    -   id: spell
-        name: spell
-        entry: spell
+    -   id: markdown-link-check
+        name: markdown-link-check
+        entry: markdown-link-check
         language: system
         files: \.md$
 
