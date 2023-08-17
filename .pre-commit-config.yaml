@@ -1,10 +1,9 @@
 repos:
 -   repo: local
     hooks:
-    -   id: hunspell
-        args: [-a]
-        name: hunspell
-        entry: hunspell
+    -   id: spell
+        name: spell
+        entry: spell
         language: system
         files: \.md$
 
