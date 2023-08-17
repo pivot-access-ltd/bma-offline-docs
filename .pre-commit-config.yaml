@@ -1,9 +1,10 @@
-files: ^(.*\.(md))$
 repos:
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.5
+-   repo: local
     hooks:
-      - id: codespell
-        args: [--toml, pyproject-codespell.precommit-toml]
-        additional_dependencies:
-          - tomli
+    -   id: hunspell
+        args: [-a]
+        name: hunspell
+        entry: hunspell
+        language: system
+        files: \.md$
+
