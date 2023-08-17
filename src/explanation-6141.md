@@ -1,6 +1,6 @@
 <!-- "Explanation" -->
 
-The following techinical explanations will help you learn about various
+The follwing technical explanations will help you learn about various
 features and prerequisites of MAAS:
 
 - [MAAS](/t/-/6678): A general overview of MAAS itself, for those new to
