@@ -1,9 +1,9 @@
 repos:
 -   repo: local
     hooks:
-    -   id: markdown-link-check
-        name: markdown-link-check
-        entry: markdown-link-check
+    -   id: spellit
+        name: spellit
+        entry: /home/stormrider/bin/spellit
         language: system
         files: \.md$
 
