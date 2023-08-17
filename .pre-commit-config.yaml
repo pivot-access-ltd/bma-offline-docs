@@ -1,88 +1,44 @@
----
-files: ^(.*\.(py|json|md|sh|yaml|yml|in|cfg|txt|rst|toml|precommit-toml|wordlist))$
-exclude: ^(\.[^/]*cache/.*)$
 repos:
-  - repo: https://github.com/executablebooks/mdformat
-    # Do this before other tools "fixing" the line endings
-    rev: 0.7.16
-    hooks:
-      - id: mdformat
-        name: Format Markdown
-        entry: mdformat  # Executable to run, with fixed options
-        language: python
-        types: [markdown]
-        args: [--wrap, '75', --number]
-        additional_dependencies:
-          - mdformat-toc
-          - mdformat-beautysh
-          # -mdformat-shfmt
-          # -mdformat-tables
-          - mdformat-config
-          - mdformat-black
-          - mdformat-web
-          - mdformat-gfm
-  - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
-    rev: v1.0.1
-    hooks:
-      - id: rst-linter
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
-    hooks:
-      - id: no-commit-to-branch
-        args: [--branch, main]
-      - id: check-yaml
-        args: [--unsafe]
-      - id: debug-statements
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: check-json
-      - id: mixed-line-ending
-      - id: check-builtin-literals
-      - id: check-ast
-      - id: check-merge-conflict
-      - id: check-executables-have-shebangs
-      - id: check-shebang-scripts-are-executable
-      - id: check-docstring-first
-      - id: fix-byte-order-marker
-      - id: check-case-conflict
-      - id: check-toml
-      - id: file-contents-sorter
-        files: dictionary.*\.txt$|\.wordlist$
-        args: [--ignore-case]
-  - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.32.0
-    hooks:
-      - id: yamllint
-        args:
-          - --no-warnings
-          - -d
-          - '{extends: relaxed, rules: {line-length: {max: 90}}}'
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.0.284
-    hooks:
-      - id: ruff
-  - repo:  https://github.com/PyCQA/autoflake
-    rev: v2.2.0
-    hooks:
-      - id: autoflake
-  - repo: https://github.com/psf/black
-    rev: 23.7.0
-    hooks:
-      - id: black
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.5
-    hooks:
-      - id: codespell
-        args: [--toml, pyproject-codespell.precommit-toml]
-  - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.13
-    hooks:
-      - id: validate-pyproject
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.5.0
-    hooks:
-      - id: mypy
-        args: ["--config-file", "pyproject.toml"]
-        additional_dependencies:
-          - pytest
-          - types-chardet
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: f71fa2c1f9cf5cb705f73dffe4b21f7c61470ba9  # frozen: v4.4.0
+  hooks:
+  - id: check-yaml
+  - id: check-toml
+- repo: https://github.com/pre-commit/pygrep-hooks
+  rev: 3a6eb0fadf60b3cccfd80bad9dbb6fae7e47b316  # frozen: v1.10.0
+  hooks:
+  - id: python-use-type-annotations
+  - id: python-check-blanket-noqa
+  - id: python-check-blanket-type-ignore
+- repo: https://github.com/asottile/yesqa
+  rev: f2ae90cf9e1661ade79d0881186ce4fd7ba6ee79  # frozen: v1.5.0
+  hooks:
+  - id: yesqa
+    additional_dependencies:
+    - flake8-bugbear
+    - flake8-builtins
+    - flake8-comprehensions
+- repo: https://github.com/MarcoGorelli/absolufy-imports
+  rev: 1683a63d850e065495c05b771e4a20db010a58e7  # frozen: v0.3.1
+  hooks:
+  - id: absolufy-imports
+- repo: https://github.com/PyCQA/isort
+  rev: dbf82f2dd09ae41d9355bcd7ab69187a19e6bf2f  # frozen: 5.12.0
+  hooks:
+  - id: isort
+- repo: https://github.com/psf/black
+  rev: 193ee766ca496871f93621d6b58d57a6564ff81b  # frozen: 23.7.0
+  hooks:
+  - id: black
+- repo: https://github.com/myint/docformatter
+  rev: dfefe062799848234b4cd60b04aa633c0608025e  # frozen: v1.7.5
+  hooks:
+  - id: docformatter
+- repo: https://github.com/PyCQA/flake8
+  rev: 10f4af6dbcf93456ba7df762278ae61ba3120dc6  # frozen: 6.1.0
+  hooks:
+  - id: flake8
+    additional_dependencies:
+    - flake8-bugbear
+    - flake8-builtins
+    - flake8-comprehensions
