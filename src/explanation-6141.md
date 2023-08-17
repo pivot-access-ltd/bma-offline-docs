@@ -3,7 +3,7 @@
 The following technical explanations will help you learn about various
 features and prerequisites of MAAS:
 
-- [MAAS](/t/-/6678): A general overview of MAAS itself, for those new to
+- [MAAS]((/t/-/6678): A general overview of MAAS itself, for those new to
   the product.
 - \[High availability\](/t/-/6992): A quick spin on how MAAS does HA, much
   of which is automatic.
