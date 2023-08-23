@@ -1,5 +1,5 @@
 <!-- "MAAS documentation" -->
-MAAS is **Metal As A Service**, a tool that treats physical servers like virtual machines -- instances -- in the cloud.
+MAAS is **Metal As A Service**, a service that treats physical servers like virtual machines -- instances -- in the cloud.
 
 No need to manage servers individually: MAAS turns bare metal into an elastic, cloud-like resource. Enlist and deploy standard or customised operating systems to hardware and virtual machines -- remotely.  Monitor, manage, and secure your metal infrastructure easily and efficiently.
 
@@ -26,7 +26,7 @@ MAAS is a member of the Ubuntu family. It’s an open source project that warmly
 - [Learn about MAAS performance](/t/about-maas-performance/6178)
 - [Join our online chat](/t/how-to-use-the-maas-discourse-forum/6802)
 - [Contribute code](https://launchpad.net/maas)`↗`
-- [Improve our doc](/t/how-to-contribute-documentation/6949)
+- [Improve our documentation](/t/how-to-contribute-documentation/6949)
 - [Request a feature](/t/how-to-request-features/4447)
 - [Report a bug](/t/how-to-report-a-bug/4446)
 
