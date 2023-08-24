@@ -44,7 +44,7 @@ As a MAAS administrator, you have the critical responsibility of hardening your 
 </tbody>
 </table>
 
-Consider setting your [firewall ](https://ubuntu.com/server/docs/security-firewall)`↗` on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed `ufw`, you could execute:
+Consider setting your [firewall](https://ubuntu.com/server/docs/security-firewall)`↗` on your rack and region controllers to disallow communication on all ports except those used by MAAS. For example, assuming you have installed `ufw`, you could execute:
 
     sudo ufw enable
     sudo ufw default deny incoming
