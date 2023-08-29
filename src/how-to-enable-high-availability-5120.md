@@ -118,6 +118,8 @@ MAAS stores all state information in the PostgreSQL database. It is therefore re
 
 Each region controller uses up to 40 connections to PostgreSQL in high load situations. Running two region controllers requires no modifications to the `max_connections` in `postgresql.conf`. More than two region controllers require that `max_connections` be adjusted to add 40 more connections per added region controller.
 
+You can also use [Ansible](https://maas.io/docs/how-to-spin-up-maas-with-ansible#heading--Installing-HA-PostgreSQL) to set up HA PostgreSQL.
+
 <a href="#heading--secondary-api-servers"><h3 id="heading--secondary-api-servers">How to enable highly-available API services</h3></a>
 
 [tabs]
