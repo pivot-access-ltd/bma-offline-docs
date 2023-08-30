@@ -1,0 +1,104 @@
+#!/usr/bin/python3
+
+import argparse
+import os
+import filecmp
+import markdown2
+import re
+import requests
+import yaml
+
+from collections import OrderedDict
+from git import Repo
+from pathlib import Path
+from discourse_api import DiscourseAPI  # Import the DiscourseAPI class
+
+
+def load_config(config_file):
+    with config_file.open() as f:
+        return yaml.safe_load(f)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Post HTML table to Discourse")
+    parser.add_argument(
+        "-t",
+        "--topic_id",
+        type=int,
+        required=True,
+        help="The Discourse topic ID to post the HTML content",
+    )
+    args = parser.parse_args()
+
+    cfgfile = Path.home() / ".config/maas-doc/maas-doc.yaml"
+    config = load_config(cfgfile)
+    base_url = config.get("base_url")
+    api_key = config.get("api_key")
+    api_username = config.get("api_username")
+    personal_access_token = config.get("personal_access_token")
+
+    # URL of the YAML file on GitHub
+    github_url = "https://raw.githubusercontent.com/maas/MAAS-Image-Results/main/image_results.yaml"
+
+    # Set up headers with the personal access token
+    headers = {"Authorization": f"Bearer {personal_access_token}"}
+
+    # Fetch the YAML content from GitHub
+    try:
+        response = requests.get(github_url, headers=headers)
+        if response.status_code == 200:
+            yaml_content = response.text
+        else:
+            print("Error fetching YAML content:", response.status_code)
+            exit()
+    except Exception as e:
+        print("Error fetching YAML content:", e)
+        exit()
+
+    # Parse the YAML data
+    data = yaml.safe_load(yaml_content)
+
+    # Create page content with intro paragraph
+    html_table = "Here is the current automated testing status of images in the [packer-maas repository](https://github.com/canonical/packer-maas).  Not all images have been automatically tested.  This page is automatically updated whenever test are run."
+
+    # Create HTML table header
+    html_table += "<table>\n<tr><th>Image Name</th><th>Deployable</th><th>Storage Configuration</th><th>Arch</th><th style='text-align:center'>MAAS Version</th><th style='text-align:center'>Packer Versions</th><th>Summary</th></tr>\n"
+
+    # Loop through the images
+    for image_name, image_data in data["images"].items():
+        architectures = ", ".join(image_data.get("architectures", []))
+        maas_version = ", ".join(image_data.get("maas_version", []))
+        packer_versions = ", ".join(image_data.get("packer_versions", []))
+        summary = image_data.get("summary", "Unknown Error")
+
+        deployable_info = image_data.get("Deployable", {}).get("info", "N/A")
+        storage_info = image_data.get("Storage Configuration", {}).get("info", "N/A")
+
+        # Convert multi-line entries to HTML format
+        storage_info = storage_info.replace("\n", "<br>")
+        deployable_info = deployable_info.replace("\n", "<br>")
+
+        # Add a row for each image
+        row = f"<tr><td>{image_name}</td><td>{deployable_info}</td><td>{storage_info}</td><td>{architectures}</td><td style='text-align:center'>{maas_version}</td><td style='text-align:center'>{packer_versions}</td><td>{summary}</td></tr>\n"
+        html_table += row
+
+    # Close HTML table
+    html_table += "</table>"
+
+    # Create a DiscourseAPI instance
+    api = DiscourseAPI(base_url, {"api_key": api_key})
+
+    try:
+        response = api.update_topic_content(args.topic_id, html_table)
+        if response is None:
+            print("Error: No response received from API")
+        elif response == 200:
+            print("HTML table posted to Discourse successfully")
+        else:
+            print("Error posting HTML table to Discourse, Status Code:", response)
+    except requests.exceptions.RequestException as e:
+        print("Error making API request:", e)
+
+
+if __name__ == "__main__":
+    main()
