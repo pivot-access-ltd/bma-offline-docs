@@ -20,8 +20,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>How to configure controllers</h1>  <!-- Set the extracted title as H1 -->
-      <!-- "How to configure controllers" -->
-<p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
+      <p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
 <p>By contrast, a region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  </p>
 <p>This article will help you learn:</p>
 <ul>
@@ -37,8 +36,9 @@
 </ul>
 <p><a href="#heading--install-a-rack-controller"><h2 id="heading--install-a-rack-controller">How to install a rack controller</h2></a></p>
 <p>To install and register a rack controller with the MAAS:</p>
-<p><code>sudo apt install maas-rack-controller
-sudo maas-rack register --url $MAAS_URL --secret $SECRET</code></p>
+<pre><code>sudo apt install maas-rack-controller
+sudo maas-rack register --url $MAAS_URL --secret $SECRET
+</code></pre>
 <p>[note]
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
 [/note]</p>
@@ -76,7 +76,8 @@ The register command is not required when you are adding a rack controller to a 
 <p>In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
 <p>For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:</p>
-<p><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS</code></p>
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
 <p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
 <p>Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--about-moving-rack-controller"><h3 id="heading--about-moving-rack-controller">About moving a rack controller from one MAAS instance to another</h3></a></p>
@@ -85,7 +86,8 @@ The register command is not required when you are adding a rack controller to a 
 <p>To move a rack controller using the MAAS UI, first, delete the rack controller.  In the "Controllers" tab in the UI, select the rack controller you with to delete, choose "Take action" and select "Delete."  You will be asked to confirm with a red button, entitled "Delete 1 controller."</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
 <p>For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:</p>
-<p><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS</code></p>
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
 <p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
 <p>Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">How to set up PostgreSQL for the region</h2></a></p>

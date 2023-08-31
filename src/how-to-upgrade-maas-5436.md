@@ -1,4 +1,4 @@
-<!-- "How to upgrade MAAS" -->
+<!-- How to upgrade MAAS -->
 This article gives instructions for upgrading your MAAS installation.  Please also check the [installation notes](#heading--installation-notes) at the end of this document.
 
 [tabs]
@@ -437,4 +437,3 @@ sudo systemctl disable --now systemd-timesyncd
 ```
 
 Also note that support for PostgreSQL 12 has been deprecated in MAAS 3.3 and will be discontinued in MAAS 3.5.
-

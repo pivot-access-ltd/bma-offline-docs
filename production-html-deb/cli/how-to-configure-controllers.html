@@ -20,8 +20,7 @@
     </div>
     <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
       <h1>How to configure controllers</h1>  <!-- Set the extracted title as H1 -->
-      <!-- "How to configure controllers" -->
-<p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
+      <p>A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.</p>
 <p>By contrast, a region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  </p>
 <p>This article will help you learn:</p>
 <ul>
@@ -37,8 +36,9 @@
 </ul>
 <p><a href="#heading--install-a-rack-controller"><h2 id="heading--install-a-rack-controller">How to install a rack controller</h2></a></p>
 <p>To install and register a rack controller with the MAAS:</p>
-<p><code>sudo apt install maas-rack-controller
-sudo maas-rack register --url $MAAS_URL --secret $SECRET</code></p>
+<pre><code>sudo apt install maas-rack-controller
+sudo maas-rack register --url $MAAS_URL --secret $SECRET
+</code></pre>
 <p>[note]
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
 [/note]</p>
@@ -46,8 +46,7 @@ The register command is not required when you are adding a rack controller to a 
 <p>Note that on the UI, you can find complete instructions for adding a rack controller under the "Controllers" tab.  Simply click on the button labelled, "Add rack controller" and choose the instructions relevant to your build model (snap or packages).  The commands there will already include the correct MAAS URL and secret, so you can cut and paste them at the command line.</p>
 <p><a href="#heading--list-rack-controllers"><h2 id="heading--list-rack-controllers">How to list rack controllers</h2></a></p>
 <p>You can also list and confirm all registered rack controllers:</p>
-<p><code>bash
-maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4</code></p>
+<p>maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4</p>
 <p>Note that you will need multiple rack controllers to achieve specific <a href="how-to-enable-high-availability-5120.html">high availability</a> configurations.</p>
 <div class="p-notification">
 <p class="p-notification__response">If you are using VM nodes, you must ensure that the new rack controller can communicate with the VM host.</p>
@@ -77,26 +76,32 @@ maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4</code></p>
 <p>Take these warnings to heart.  It may seem like a faster approach to "bridge" your existing rack controllers from one MAAS to another -- or from one version of MAAS to another -- while they're running.  Ultimately, though, it will probably result in more work than just following the recommended approach.</p>
 <p><a href="#heading--move-rack-controller"><h2 id="heading--move-rack-controller">How to move a rack controller from one MAAS instance to another</h2></a></p>
 <p>In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:</p>
-<p><code>maas $PROFILE rack-controller delete $SYSTEM_ID</code></p>
+<pre><code>maas $PROFILE rack-controller delete $SYSTEM_ID
+</code></pre>
 <p>where <code>$PROFILE</code> is your admin profile name, and <code>$SYSTEM_ID</code> can be found by examining the output of the command:</p>
-<p><code>maas $PROFILE rack-controllers read</code></p>
+<pre><code>maas $PROFILE rack-controllers read
+</code></pre>
 <p>There is no confirmation step, so make sure you have the right rack controller before proceeding.</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
 <p>For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:</p>
-<p><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS</code></p>
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
 <p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
 <p>Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--about-moving-rack-controller"><h3 id="heading--about-moving-rack-controller">About moving a rack controller from one MAAS instance to another</h3></a></p>
 <p>In the course of normal operations, you may wish to move a device acting as a rack controller from one MAAS instance to another.  From the point of view of MAAS, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance. From your perspective, of course, you are moving one box performing rack controller functions, either physically or network-wise, from one MAAS to another. </p>
 <p><a href="#heading--How-to-move-the-controller"><h3 id="heading--How-to-move-the-controller">How to move the controller</h3></a></p>
 <p>In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:</p>
-<p><code>maas $PROFILE rack-controller delete $SYSTEM_ID</code></p>
+<pre><code>maas $PROFILE rack-controller delete $SYSTEM_ID
+</code></pre>
 <p>where <code>$PROFILE</code> is your admin profile name, and <code>$SYSTEM_ID</code> can be found by examining the output of the command:</p>
-<p><code>maas $PROFILE rack-controllers read</code></p>
+<pre><code>maas $PROFILE rack-controllers read
+</code></pre>
 <p>There is no confirmation step, so make sure you have the right rack controller before proceeding.</p>
 <p>Next, you must register a new rack controller, which is always done from the command line.</p>
 <p>For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:</p>
-<p><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS</code></p>
+<pre><code>sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
+</code></pre>
 <p>where the secret is found in <code>/var/lib/maas/secret</code>.</p>
 <p>Note that in the UI, if you go to the "Controllers" tab and press the button entitled, "Add rack controller," at the top of the Controllers screen, MAAS will give you a complete command string, including the correct URL and secret values.  Simply cut and paste that string to move the rack controller, paying attention to whether you are using snap or package build modes.</p>
 <p><a href="#heading--postgresql-setup"><h2 id="heading--postgresql-setup">How to set up PostgreSQL for the region</h2></a></p>
