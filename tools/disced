@@ -3,7 +3,7 @@
 import argparse
 import os
 import filecmp
-import markdown2
+import markdown
 import re
 import shutil
 import subprocess
@@ -12,6 +12,7 @@ import yaml
 
 from collections import OrderedDict
 from git import Repo
+from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
 from discourse_api import DiscourseAPI  # Import the DiscourseAPI class
 
@@ -93,28 +94,6 @@ def extract_sections(file_content, version, view):
     return continuous_buffer
 
 
-# def extract_tab_versions(markdown_content):
-#     # Regular expression pattern to match the tab versions label
-#     version_pattern = r'\[tab version="([^"]+)"\]'
-
-#     # Find all matches using regex
-#     matches = re.findall(version_pattern, markdown_content)
-
-#     # Split compound versions and add each version to the list
-#     tab_versions = []
-#     for match in matches:
-#         versions = match.split(",")
-#         tab_versions.extend(versions)
-
-#     # Remove duplicates by converting the list to a set and then back to a list
-#     unique_versions = list(set(tab_versions))
-
-#     # Sort the unique versions list in alphabetical order (descending)
-#     sorted_versions = sorted(unique_versions, reverse=True)
-
-#     return sorted_versions
-
-
 def extract_tab_versions(markdown_content):
     # Regular expression pattern to match the tab versions label
     version_pattern = r'\[tab version="v([\d.]+)(?: (?:Snap|Packages))?"\]'
@@ -138,50 +117,114 @@ def find_file(directory, topic_number):
     return None
 
 
-def generate_html_from_markdown_with_title(markdown_content, title, css_filename):
+def generate_html_from_markdown_with_title(
+    markdown_content,
+    title,
+    css_filename,
+    version,
+    is_ui_view,
+    repo_base,
+    html_filename,
+):
     # Convert Markdown to HTML
-    html_content = markdown2.markdown(markdown_content)
+    html_content = markdown.markdown(markdown_content)
 
-    # Embed a link to the CSS stylesheet
-    css_link = f'<link rel="stylesheet" type="text/css" href="{css_filename}" />'
+    # Read the custom CSS and HTML content from your files
+    custom_css_path = os.path.join(repo_base, "html-support/css/custom.css")
+    with open(custom_css_path, "r") as css_file:
+        custom_css = css_file.read()
 
-    # Replace the specific link format with desired links
-    html_content = replace_custom_links(html_content)
+    custom_html_path = os.path.join(repo_base, "html-support/templates/custom.html")
+    with open(custom_html_path, "r") as custom_html_file:
+        custom_html = custom_html_file.read()
 
-    # Construct the complete HTML content with embedded styles and title
-    complete_html_content = f"""<!DOCTYPE html>
-<html>
-  <head>
-    <title>{title}</title>
-    {css_link}
-    <style>
-      #selector a:link{{color:black;}}
-      #selector a:visited{{color:black;}}
-      #selector a:active{{color:black;}}
-      #selector a:hover{{color:blue;}}
-      /* ... (other CSS rules) ... */
-    </style>
-  </head>
-  <body>
-    <div id="selector" style="top:0; position:fixed; float:right; background-color:#d9d9d9; width:100%;border-bottom:1px solid black;">
-      <!-- ... (content for the selector div) ... -->
-    </div>
-    <div id="sidebar" style="float:left; width:25%;margin-top:40px; margin-left:20px">
-      <!-- ... (content for the sidebar div) ... -->
-    </div>
-    <div class="container" style="float:right; width:65%; margin-top:40px; margin-right:30px">
-      <h1>{title}</h1>  <!-- Set the extracted title as H1 -->
-      {html_content}
-    </div>
-  </body>
-</html>"""
+    # Load the Jinja2 template
+    jinja2_template_path = os.path.join(repo_base, "html-support/templates")
+    env = Environment(loader=FileSystemLoader(jinja2_template_path))
+    template = env.get_template("template.html")
 
-    return complete_html_content
+    # Load sidebar content from files in a known directory structure
+    sidebar_content_path = os.path.join(repo_base, "html-support/templates/")
+    sidebar_content = load_sidebar_content(sidebar_content_path)
+
+    # Render the template with the data
+    rendered_html = template.render(
+        title=title,
+        css_filename=css_filename,
+        custom_css=custom_css,
+        custom_html=custom_html,
+        version=version,
+        is_ui_view=is_ui_view,
+        sidebar_content=sidebar_content,
+        default_sidebar_content="Default sidebar content",
+        html_content=html_content,
+        html_filename=html_filename,
+    )
+
+    return rendered_html
 
 
 def load_config(config_file):
     with config_file.open() as f:
         return yaml.safe_load(f)
+
+
+def load_sidebar_content(directory):
+    sidebar_content_file = os.path.join(directory, "sidebar-content.html")
+    if os.path.exists(sidebar_content_file):
+        with open(sidebar_content_file, "r") as file:
+            sidebar_content = file.read()
+            return sidebar_content
+
+
+def make_html(
+    markdown_content,
+    version,
+    packaging_format,
+    view,
+    topic_title,
+    css_filename,
+    repo_base,
+    filename,
+):
+    if "Packages" in packaging_format:
+        package_format = "deb"
+    else:
+        package_format = "snap"
+
+    extracted_sections = extract_sections(
+        markdown_content, "v" + version + " " + packaging_format, view
+    )
+    if "UI" in view:
+        is_ui_view = True
+    else:
+        is_ui_view = False
+    html_dir = os.path.join(
+        repo_base, f"production-html-{package_format}/{view.lower()}"
+    )
+    os.makedirs(html_dir, exist_ok=True)
+    filename_without_extension = os.path.splitext(filename)[0]
+
+    # Remove the last hyphen and the digits after it, if present
+    filename_without_extension = "-".join(filename_without_extension.split("-")[:-1])
+
+    html_filename = os.path.join(html_dir, f"{filename_without_extension}.html")
+
+    html_template_filename = f"{filename_without_extension}.html"
+
+    html_content = generate_html_from_markdown_with_title(
+        extracted_sections,
+        topic_title,
+        css_filename,
+        version,
+        is_ui_view,
+        repo_base,
+        html_template_filename,
+    )
+
+    with open(html_filename, "w") as file:
+        file.write(html_content)
+        print(f"Created HTML version: {version} {view}")
 
 
 def parse_sections(file_content):
@@ -209,45 +252,6 @@ def parse_sections(file_content):
 def print_config(config):
     for key, value in config.items():
         print(f"Key: {key}, Value: {value}")
-
-
-def make_html(
-    markdown_content,
-    version,
-    packaging_format,
-    view,
-    topic_title,
-    css_filename,
-    output_dir,
-    filename,
-):
-    if "Packages" in packaging_format:
-        package_format = "deb"
-    else:
-        package_format = "snap"
-
-    extracted_sections = extract_sections(
-        markdown_content, "v" + version + " " + packaging_format, view
-    )
-    html_content = generate_html_from_markdown_with_title(
-        extracted_sections, topic_title, css_filename
-    )
-
-    html_dir = os.path.join(
-        output_dir, f"production-html-{package_format}/{view.lower()}"
-    )
-    os.makedirs(html_dir, exist_ok=True)
-
-    filename_without_extension = os.path.splitext(filename)[0]
-
-    # Remove the last hyphen and the digits after it, if present
-    filename_without_extension = "-".join(filename_without_extension.split("-")[:-1])
-
-    html_filename = os.path.join(html_dir, f"{filename_without_extension}.html")
-
-    with open(html_filename, "w") as file:
-        file.write(html_content)
-        print(f"Created HTML version: {version} {view}")
 
 
 def pull_file_from_repo(file_url, destination_path):
