@@ -1,4 +1,3 @@
-<!-- "How to configure controllers" -->
 A rack controller can connect to multiple VLANs, each from a different network interface. A rack controller can only connect to one MAAS instance at any given time, and must connect to an instance that matches its MAAS version (major and minor).  This configuration provides a scaling factor that can help as a network architecture grows in size.
 
 By contrast, a region controller manages communication with the user, via the Web UI/API, as well as managing the rack controller(s) in your system.  The MAAS postgres database is also managed by the region controller.  Typical region-level responsibilities include requesting that a rack controller boot a machine, and providing the ephemeral Ubuntu image needed to commission or enlist a machine.  
@@ -21,20 +20,17 @@ This article will help you learn:
 [tab version="v3.4 Snap,v3.3 Snap"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo snap install maas
-sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
-```
+    sudo snap install maas
+    sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
+
 
 The $SECRET is stored in file `/var/snap/maas/common/maas/secret` on the API server.
 [/tab]
 [tab version="v3.4 Packages,v3.3 Packages"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register --url $MAAS_URL --secret $SECRET
-```
+    sudo apt install maas-rack-controller
+    sudo maas-rack register --url $MAAS_URL --secret $SECRET
 
 [note]
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
@@ -45,20 +41,16 @@ The $SECRET is stored in file `/var/lib/maas/secret` on the API server.
 [tab version="v3.2 Snap"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo snap install maas
-sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
-```
+    sudo snap install maas
+    sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
 
 The $SECRET is stored in file `/var/snap/maas/common/maas/secret` on the API server.
 [/tab]
 [tab version="v3.2 Packages"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register --url $MAAS_URL --secret $SECRET
-```
+    sudo apt install maas-rack-controller
+    sudo maas-rack register --url $MAAS_URL --secret $SECRET
 
 [note]
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
@@ -69,20 +61,16 @@ The $SECRET is stored in file `/var/lib/maas/secret` on the API server.
 [tab version="v3.1 Snap"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo snap install maas
-sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
-```
+    sudo snap install maas
+    sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
 
 The $SECRET is stored in file `/var/snap/maas/common/maas/secret` on the API server.
 [/tab]
 [tab version="v3.1 Packages"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register --url $MAAS_URL --secret $SECRET
-```
+    sudo apt install maas-rack-controller
+    sudo maas-rack register --url $MAAS_URL --secret $SECRET
 
 [note]
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
@@ -93,20 +81,16 @@ The $SECRET is stored in file `/var/lib/maas/secret` on the API server.
 [tab version="v3.0 Snap"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo snap install maas
-sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
-```
+    sudo snap install maas
+    sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
 
 The $SECRET is stored in file `/var/snap/maas/common/maas/secret` on the API server.
 [/tab]
 [tab version="v3.0 Packages"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register --url $MAAS_URL --secret $SECRET
-```
+    sudo apt install maas-rack-controller
+    sudo maas-rack register --url $MAAS_URL --secret $SECRET
 
 [note]
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
@@ -117,20 +101,16 @@ The $SECRET is stored in file `/var/lib/maas/secret` on the API server.
 [tab version="v2.9 Snap"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo snap install maas
-sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
-```
+    sudo snap install maas
+    sudo maas init rack --maas-url $MAAS_URL --secret $SECRET
 
 The $SECRET is stored in file `/var/snap/maas/common/maas/secret` on the API server.
 [/tab]
 [tab version="v2.9 Packages"]
 To install and register a rack controller with the MAAS:
 
-``` bash
-sudo apt install maas-rack-controller
-sudo maas-rack register --url $MAAS_URL --secret $SECRET
-```
+    sudo apt install maas-rack-controller
+    sudo maas-rack register --url $MAAS_URL --secret $SECRET
 
 [note]
 The register command is not required when you are adding a rack controller to a system that already houses an API server.
@@ -151,9 +131,7 @@ You can also list and confirm all registered rack controllers via the CLI; selec
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 You can also list and confirm all registered rack controllers:
 
-``` bash
-maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
-```
+   maas $PROFILE rack-controllers read | grep hostname | cut -d '"' -f 4
 
 Note that you will need multiple rack controllers to achieve specific [high availability](/t/how-to-enable-high-availability/5120) configurations.
 [/tab]
@@ -210,15 +188,11 @@ In effect, there is no such action as moving a rack controller, although you can
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
 
-```
-maas $PROFILE rack-controller delete $SYSTEM_ID
-```
+    maas $PROFILE rack-controller delete $SYSTEM_ID
 
 where `$PROFILE` is your admin profile name, and `$SYSTEM_ID` can be found by examining the output of the command:
 
-```
-maas $PROFILE rack-controllers read
-```
+    maas $PROFILE rack-controllers read
 
 There is no confirmation step, so make sure you have the right rack controller before proceeding.
 [/tab]
@@ -230,90 +204,70 @@ Next, you must register a new rack controller, which is always done from the com
 [tab version="v3.4 Snap,v3.3 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.3 Packages,v3.3 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v3.2 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.2 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v3.1 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.1 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v3.0 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.0 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v2.9 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v2.9 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
@@ -334,15 +288,11 @@ To move a rack controller using the MAAS UI, first, delete the rack controller. 
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap,v3.3 Packages,v3.2 Snap,v3.2 Packages,v3.1 Snap,v3.1 Packages,v3.0 Snap,v3.0 Packages,v2.9 Snap,v2.9 Packages" view="CLI"]
 In effect, there is no such action as moving a rack controller, although you can delete a rack controller from one MAAS and reinstantiate the same controller (binary-wise) on another MAAS instance.  First, delete the rack controller, with the command:
 
-```
-maas $PROFILE rack-controller delete $SYSTEM_ID
-```
+    maas $PROFILE rack-controller delete $SYSTEM_ID
 
 where `$PROFILE` is your admin profile name, and `$SYSTEM_ID` can be found by examining the output of the command:
 
-```
-maas $PROFILE rack-controllers read
-```
+    maas $PROFILE rack-controllers read
 
 There is no confirmation step, so make sure you have the right rack controller before proceeding.
 [/tab]
@@ -354,90 +304,70 @@ Next, you must register a new rack controller, which is always done from the com
 [tab version="v3.4 Snap,v3.4 Packages,v3.3 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.3 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v3.2 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.2 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v3.1 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.1 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v3.0 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v3.0 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
 [tab version="v2.9 Snap"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas init rack --maas-url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/snap/maas/common/maas/secret`.
 [/tab]
 [tab version="v2.9 Packages"]
 For this exercise, we're assuming you are using the already installed rack controller code that was previously running on the "from" MAAS instance.  All that's necessary is that you register a new rack controller with the "to" MAAS instance, like this:
 
-```
-sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
-```
+    sudo maas-rack register --url $MAAS_URL_OF_NEW_MAAS --secret $SECRET_FOR_NEW_MAAS
 
 where the secret is found in `/var/lib/maas/secret`.
 [/tab]
